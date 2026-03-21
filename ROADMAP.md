@@ -1,0 +1,210 @@
+# 🗺️ Roadmap
+
+> "The secret of getting ahead is getting started." - Mark Twain
+
+This document outlines the current state of git-unlocked, what is being worked on and what is planned. It is a living document and will be updated as the project grows.
+
+---
+
+## 📋 Table of Contents
+
+- [Current Status](#-current-status)
+- [Phase 1 - Foundation](#-phase-1---foundation)
+- [Phase 2 - Core Git Content](#-phase-2---core-git-content)
+- [Phase 3 - Platform Content](#-phase-3---platform-content)
+- [Phase 4 - Tools and Environment](#-phase-4---tools-and-environment)
+- [Phase 5 - Real World and Reference](#-phase-5---real-world-and-reference)
+- [Phase 6 - Community and Polish](#-phase-6---community-and-polish)
+- [Future Ideas](#-future-ideas)
+- [How to Suggest Something](#-how-to-suggest-something)
+
+---
+
+## 📊 Current Status
+
+**Version:** 0.1.0
+**Stage:** Phase 1 in progress
+**Started:** March 2026
+
+| Section             | Status         |
+| ------------------- | -------------- |
+| Repository setup    | ✅ Complete    |
+| README              | ✅ Complete    |
+| CONTRIBUTING        | ✅ Complete    |
+| CHANGELOG           | ✅ Complete    |
+| ROADMAP             | ✅ Complete    |
+| FAQ                 | 🔄 In progress |
+| HALL_OF_FAME        | 🔄 In progress |
+| introduction/       | ⏳ Planned     |
+| git/                | ⏳ Planned     |
+| github/             | ⏳ Planned     |
+| gitlab/             | ⏳ Planned     |
+| vscode/             | ⏳ Planned     |
+| terminal/           | ⏳ Planned     |
+| real-world/         | ⏳ Planned     |
+| reference/          | ⏳ Planned     |
+| resources/          | ⏳ Planned     |
+| first-contribution/ | ⏳ Planned     |
+| assets/             | ⏳ Planned     |
+
+---
+
+## 🏗️ Phase 1 - Foundation
+
+Getting the structure, branding and core files in place.
+
+- [x] Create repository
+- [x] README
+- [x] MIT licence
+- [x] CONTRIBUTING.md
+- [x] CHANGELOG.md
+- [x] ROADMAP.md
+- [ ] FAQ.md
+- [ ] HALL_OF_FAME.md
+- [ ] Folder structure
+- [ ] introduction/ files
+- [ ] Banner and assets
+- [ ] first-contribution/ sandbox
+- [ ] GitHub Discussions enabled
+- [ ] GitHub Project board set up
+
+---
+
+## 📝 Phase 2 - Core Git Content
+
+Everything about Git itself - beginner to advanced, Windows, Mac and Linux throughout.
+
+- [ ] What is version control
+- [ ] Installing Git
+- [ ] How Git works
+- [ ] Core concepts
+- [ ] Basic commands
+- [ ] Branching
+- [ ] Merging
+- [ ] Merge conflicts
+- [ ] Remote repositories
+- [ ] .gitignore
+- [ ] Stash
+- [ ] Rebase
+- [ ] Cherry-pick
+- [ ] Reset and revert
+- [ ] Tags and releases
+- [ ] Submodules
+- [ ] Hooks
+- [ ] Bisect
+- [ ] All Git commands reference
+
+---
+
+## 🐙 Phase 3 - Platform Content
+
+Everything about GitHub and GitLab - history, features, workflows and security.
+
+**GitHub**
+
+- [ ] What is GitHub
+- [ ] Creating an account
+- [ ] Repositories
+- [ ] Issues
+- [ ] Pull requests
+- [ ] GitHub Actions
+- [ ] GitHub Pages
+- [ ] Discussions
+- [ ] Projects and boards
+- [ ] Security features
+- [ ] Profile and README
+- [ ] Badges and achievements
+- [ ] GitHub advanced
+
+**GitLab**
+
+- [ ] What is GitLab
+- [ ] GitLab vs GitHub
+- [ ] Creating an account
+- [ ] GitLab basics
+- [ ] Merge requests
+- [ ] GitLab CI/CD
+- [ ] GitLab advanced
+
+---
+
+## 💻 Phase 4 - Tools and Environment
+
+Using Git with VS Code and the terminal on every operating system.
+
+- [ ] Git in VS Code
+- [ ] VS Code extensions
+- [ ] VS Code shortcuts
+- [ ] Using the terminal without Git
+- [ ] Windows Command Prompt
+- [ ] Windows PowerShell
+- [ ] Mac Terminal
+- [ ] Linux Bash
+
+---
+
+## 🌍 Phase 5 - Real World and Reference
+
+Real scenarios, reference material and curated resources.
+
+- [ ] Team workflows
+- [ ] Contributing to open source
+- [ ] Recovering from mistakes
+- [ ] Git in industry
+- [ ] Cheatsheet
+- [ ] Keyboard shortcuts
+- [ ] Glossary
+- [ ] Common mistakes
+- [ ] Tools
+- [ ] Curated videos
+- [ ] Books
+- [ ] Practice platforms
+
+---
+
+## 🌐 Phase 6 - Community and Polish
+
+Growing the community and making the course as good as it can be.
+
+- [ ] Diagrams for all visual concepts
+- [ ] Course completion badge
+- [ ] Translations - French, Spanish and Arabic to start
+- [ ] Reach 100 stars
+- [ ] Reach 10 contributors
+- [ ] Submit to awesome-lists and developer communities
+- [ ] Tag v1.0.0 stable release
+- [ ] Share on Reddit, Dev.to, Hashnode and LinkedIn
+
+---
+
+## 💡 Future Ideas
+
+Ideas being considered for after v1.0.0:
+
+- Interactive knowledge quizzes after each section
+- Short video walkthroughs for each file
+- Git workflows guide - Gitflow, trunk-based development, feature branching
+- Git for specific stacks - Python, Node.js, Arduino, web projects
+- University edition structured for coursework
+- Multilingual expansion beyond the initial three languages
+
+---
+
+## 💬 How to Suggest Something
+
+1. Go to [github.com/zaccessss/git-unlocked/issues](https://github.com/zaccessss/git-unlocked/issues)
+2. Click **New Issue**
+3. Use the title format: `suggestion: your idea here`
+4. Describe your idea and why it would help learners
+
+The best suggestions will be added to the roadmap and credited to you.
+
+---
+
+<div align="center">
+
+Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+
+**Access Granted. Success Unlocked.**
+
+</div>
