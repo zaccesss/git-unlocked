@@ -23,11 +23,6 @@
 
 <br />
 
-> **Created by [Zaccess (Isaac Adjei)](https://zacess.com)**
-> Access Granted. Success Unlocked.
-
-<br />
-
 [🚀 Start Learning](#-start-here) · [🗺️ Learning Path](#-learning-path) · [📚 Course Structure](#-course-structure) · [🤝 Contribute](CONTRIBUTING.md) · [💬 Discussions](https://github.com/zaccessss/git-unlocked/discussions) · [🏆 Hall of Fame](HALL_OF_FAME.md) · [❓ FAQ](FAQ.md)
 
 </div>
@@ -198,11 +193,11 @@ Pure Git - works on any platform, any host.
 
 ### 💻 VS Code
 
-| File                                              | Topic                                                 | Level |
-| ------------------------------------------------- | ----------------------------------------------------- | ----- |
-| [01-git-in-vscode.md](vscode/01-git-in-vscode.md) | Using the built-in Git UI in VS Code                  | 🟢    |
-| [02-extensions.md](vscode/02-extensions.md)       | GitLens, Git Graph, Git History, GitHub Pull Requests | 🟢    |
-| [03-shortcuts.md](vscode/03-shortcuts.md)         | VS Code keyboard shortcuts for Git                    | 🟢    |
+| File                                              | Topic                                                    | Level |
+| ------------------------------------------------- | -------------------------------------------------------- | ----- |
+| [01-git-in-vscode.md](vscode/01-git-in-vscode.md) | Using the built-in Git UI in VS Code                     | 🟢    |
+| [02-extensions.md](vscode/02-extensions.md)       | GitLens, Git Graph, Git History and GitHub Pull Requests | 🟢    |
+| [03-shortcuts.md](vscode/03-shortcuts.md)         | VS Code keyboard shortcuts for Git                       | 🟢    |
 
 ---
 
@@ -284,9 +279,9 @@ Everyone who contributes gets listed in [HALL_OF_FAME.md](HALL_OF_FAME.md).
 
 ---
 
-## 📜 License
+## 📜 Licence
 
-This course is licensed under the [MIT License](LICENSE). You are free to use, share, adapt and build on it - just give credit where it is due.
+This course is licensed under the [MIT Licence](LICENSE). You are free to use, share, adapt and build on it - just give credit where it is due.
 
 ---
 
@@ -300,7 +295,7 @@ Common questions answered in [FAQ.md](FAQ.md). If your question is not there, op
 
 <br />
 
-Made with 🔓 by [Zaccess (Isaac Adjei)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 
 **Access Granted. Success Unlocked.**
 
