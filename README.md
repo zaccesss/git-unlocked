@@ -14,7 +14,7 @@
 [![Issues](https://img.shields.io/github/issues/zaccesss/git-unlocked)](https://github.com/zaccesss/git-unlocked/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-**Created by [zaccess (Isaac Adjei)](https://zaccess.com) · Access Granted. Success Unlocked.**
+**Created by [zaccess (Isaac Adjei)](https://zacess.com) · Access Granted. Success Unlocked.**
 
 [🚀 Start Learning](#-learning-path) · [📚 Browse Topics](#-course-structure) · [🤝 Contribute](CONTRIBUTING.md) · [💬 Discussions](https://github.com/zaccesss/git-unlocked/discussions) · [🏆 Hall of Fame](HALL_OF_FAME.md)
 
@@ -224,7 +224,7 @@ This course is licensed under the [MIT License](LICENSE). You are free to use, s
 
 <div align="center">
 
-Made with 🔓 by [zaccess (Isaac Adjei)](https://zaccess.com)
+Made with 🔓 by [zaccess (Isaac Adjei)](https://zacess.com)
 
 **Access Granted. Success Unlocked.**
 
