@@ -260,7 +260,7 @@ Throughout every file in this course you will see these callouts:
 |---|---|
 | `> [!NOTE]` | Something worth knowing |
 | `> [!TIP]` | A helpful technique or shortcut |
-| `> [!IMPORTANT]` | A pro tip that will level up your workflow |
+| `> [!IMPORTANT]` | Critical information you must not overlook |
 | `> [!WARNING]` | Read this carefully before continuing |
 | `> [!CAUTION]` | Security note -keep your credentials and data safe |
 
