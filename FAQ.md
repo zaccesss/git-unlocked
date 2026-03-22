@@ -3,7 +3,7 @@
 **Difficulty:** 🟢 Beginner to 🔴 Advanced
 **Time to read:** As needed - jump to your question
 
-Got a question? The answer is probably here. If it is not, open a [Discussion](https://github.com/zaccessss/git-unlocked/discussions) or an [Issue](https://github.com/zaccessss/git-unlocked/issues).
+Got a question? The answer is probably here. If it is not, open a [Discussion](https://github.com/zaccesss/git-unlocked/discussions) or an [Issue](https://github.com/zaccesss/git-unlocked/issues).
 
 ---
 

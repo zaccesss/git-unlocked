@@ -12,7 +12,7 @@ Thank you. Genuinely.
 
 | Name | GitHub | Website | Role |
 |---|---|---|---|
-| Isaac Adjei (Zaccess) | [@zaccessss](https://github.com/zaccessss) | [zacess.com](https://zacess.com) | Creator and maintainer |
+| Isaac Adjei (Zaccess) | [@zaccesss](https://github.com/zaccesss) | [zacess.com](https://zacess.com) | Creator and maintainer |
 
 ---
 

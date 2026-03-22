@@ -197,7 +197,7 @@ Ideas being considered for after v1.0.0:
 
 ## 💬 How to Suggest Something
 
-1. Go to [github.com/zaccessss/git-unlocked/issues](https://github.com/zaccessss/git-unlocked/issues)
+1. Go to [github.com/zaccesss/git-unlocked/issues](https://github.com/zaccesss/git-unlocked/issues)
 2. Click **New Issue**
 3. Use the title format: `suggestion: your idea here`
 4. Describe your idea and why it would help learners

@@ -38,7 +38,7 @@ Changes that are in progress or planned but not yet in a release.
 ## [0.1.0] - 2026-03-22
 
 ### Added
-- Initial repository created at [github.com/zaccessss/git-unlocked](https://github.com/zaccessss/git-unlocked)
+- Initial repository created at [github.com/zaccesss/git-unlocked](https://github.com/zaccesss/git-unlocked)
 - `README.md` - full course structure, learning path, callout key and branding
 - `LICENSE` - MIT licence
 - `CONTRIBUTING.md` - full contribution guide including style guide, naming conventions and commit format
