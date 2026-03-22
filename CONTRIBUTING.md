@@ -1,6 +1,6 @@
 # Contributing to git-unlocked
 
-Thank you for being here. Every contribution, no matter how small, makes this course better for everyone — whether you are fixing a typo, improving an explanation, adding an exercise or suggesting a new topic.
+Thank you for being here. Every contribution, no matter how small, makes this course better for everyone - whether you are fixing a typo, improving an explanation, adding an exercise or suggesting a new topic.
 
 Please read this guide fully before opening a pull request.
 
@@ -11,7 +11,7 @@ Please read this guide fully before opening a pull request.
 - [Code of Conduct](#code-of-conduct)
 - [What you can contribute](#what-you-can-contribute)
 - [Before you start](#before-you-start)
-- [How to contribute — step by step](#how-to-contribute--step-by-step)
+- [How to contribute - step by step](#how-to-contribute--step-by-step)
 - [Writing style guide](#writing-style-guide)
 - [File and folder naming](#file-and-folder-naming)
 - [Commit message format](#commit-message-format)
@@ -28,34 +28,34 @@ This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.
 
 ## What You Can Contribute
 
-- **Fix a typo or grammar mistake** — small but very appreciated
-- **Improve an explanation** — if something was unclear to you, it is unclear to others too
-- **Add a missing command or example** — if something should be here and is not, add it
-- **Add a real-world scenario** — practical examples make concepts stick
-- **Add or improve a Try It Yourself exercise** — hands-on practice is core to this course
-- **Add a curated video or resource** — must be from a verified, reputable source
-- **Translate a file** — help make this course accessible in more languages
-- **Suggest a new topic** — open an issue first to discuss it
-- **Report an error** — open an issue describing what is wrong and where
+- **Fix a typo or grammar mistake** - small but very appreciated
+- **Improve an explanation** - if something was unclear to you, it is unclear to others too
+- **Add a missing command or example** - if something should be here and is not, add it
+- **Add a real-world scenario** - practical examples make concepts stick
+- **Add or improve a Try It Yourself exercise** - hands-on practice is core to this course
+- **Add a curated video or resource** - must be from a verified, reputable source
+- **Translate a file** - help make this course accessible in more languages
+- **Suggest a new topic** - open an issue first to discuss it
+- **Report an error** - open an issue describing what is wrong and where
 
 ---
 
 ## Before You Start
 
-1. Check **[open issues](https://github.com/zaccessss/git-unlocked/issues)** to see if someone is already working on it
-2. Check **[open pull requests](https://github.com/zaccessss/git-unlocked/pulls)** to avoid duplicating work
-3. **Open an issue first** if you are planning a large change — this saves everyone time
+1. Check **[open issues](https://github.com/zaccesss/git-unlocked/issues)** to see if someone is already working on it
+2. Check **[open pull requests](https://github.com/zaccesss/git-unlocked/pulls)** to avoid duplicating work
+3. **Open an issue first** if you are planning a large change - this saves everyone time
 4. Read the **writing style guide** below before writing anything
 
 ---
 
-## How to Contribute — Step by Step
+## How to Contribute - Step by Step
 
-### Step 1 — Fork the repo
+### Step 1 - Fork the repo
 
-Go to [github.com/zaccessss/git-unlocked](https://github.com/zaccessss/git-unlocked) and click **Fork**.
+Go to [github.com/zaccesss/git-unlocked](https://github.com/zaccesss/git-unlocked) and click **Fork**.
 
-### Step 2 — Clone your fork
+### Step 2 - Clone your fork
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/git-unlocked.git
@@ -65,7 +65,7 @@ git clone https://github.com/YOUR_USERNAME/git-unlocked.git
 cd git-unlocked
 ```
 
-### Step 3 — Create a branch
+### Step 3 - Create a branch
 
 Never work directly on `main`. Create a descriptive branch:
 
@@ -77,11 +77,11 @@ git checkout -b fix/typo-in-branching-file
 git checkout -b add/cherry-pick-exercise
 ```
 
-### Step 4 — Make your changes
+### Step 4 - Make your changes
 
 Open the project in your editor and make your changes following the writing style guide below.
 
-### Step 5 — Commit your changes
+### Step 5 - Commit your changes
 
 ```bash
 git add .
@@ -91,13 +91,13 @@ git add .
 git commit -m "fix: correct typo in git/06-branching.md"
 ```
 
-### Step 6 — Push to your fork
+### Step 6 - Push to your fork
 
 ```bash
 git push origin your-branch-name
 ```
 
-### Step 7 — Open a pull request
+### Step 7 - Open a pull request
 
 Go to your fork on GitHub and click **Compare & pull request**. Fill in the PR template and submit.
 
@@ -109,13 +109,13 @@ All content in this course follows these rules exactly. Please match them.
 
 ### Language and tone
 
-- Write in **UK English** — colour, organise, practise, licence (noun), recognise
-- Write as if explaining to a friend — friendly but professional
+- Write in **UK English** - colour, organise, practise, licence (noun), recognise
+- Write as if explaining to a friend - friendly but professional
 - Assume the reader has zero prior knowledge unless the file is marked 🟡 or 🔴
 - Do not talk down to the reader
 - Do not use jargon without explaining it first
-- **No Oxford commas** — "Git, GitHub and GitLab" not "Git, GitHub, and GitLab"
-- **No em dashes** — use hyphens where necessary
+- **No Oxford commas** - "Git, GitHub and GitLab" not "Git, GitHub, and GitLab"
+- **No em dashes** - use hyphens where necessary
 - Correct grammar and spelling throughout
 
 ### Emoji policy
@@ -123,11 +123,13 @@ All content in this course follows these rules exactly. Please match them.
 This is important. Emoji use is minimal and functional only.
 
 **Always keep:**
+
 - 🟢🟡🔴 difficulty labels
 - 🪟🍎🐧 OS labels (functional and instantly recognisable)
 - 🔓 in the footer only (brand symbol)
 
 **Never use:**
+
 - Emoji in body text paragraphs
 - Emoji as bullet point markers
 - Emoji in section headings
@@ -151,18 +153,18 @@ Use GitHub's native alert syntax instead of emoji callouts. This renders properl
 > Read this carefully before continuing.
 
 > [!CAUTION]
-> A security note — credentials, data, accounts.
+> A security note - credentials, data, accounts.
 ```
 
 Do **not** use `💡 **Tip:**`, `⚠️ **Warning:**`, `🔥 **Pro tip:**` or `🔒` in body text. Use the alert syntax above instead.
 
 ### Branding
 
-- Author name: **Isaac Adjei (Zaccess)** — always in this order
+- Author name: **Isaac Adjei (Zaccess)** - always in this order
 - Website: [zacess.com](https://zacess.com)
-- GitHub: [github.com/zaccessss](https://github.com/zaccessss) — **zaccessss with three s's**
+- GitHub: [github.com/zaccesss](https://github.com/zaccesss) - **zaccesss with three s's**
 - Branding line: **Access Granted. Success Unlocked.**
-- Branding goes at the **bottom of every file only** — never at the top
+- Branding goes at the **bottom of every file only** - never at the top
 
 ### Structure
 
@@ -207,7 +209,7 @@ Key takeaways...
 
 ## Sources and Further Reading
 
-- [Link title](URL) — brief description of what this link is for
+- [Link title](URL) - brief description of what this link is for
 
 ---
 
@@ -234,7 +236,7 @@ If a command is identical on all three, show it once without labels.
 
 ### Where to type commands
 
-Every command block must specify where to type it — either in the OS label or in a sentence before the code block. Never leave the reader wondering.
+Every command block must specify where to type it - either in the OS label or in a sentence before the code block. Never leave the reader wondering.
 
 ### Bold and italic
 
@@ -244,14 +246,14 @@ Every command block must specify where to type it — either in the OS label or 
 
 ### Links
 
-- Use descriptive link text — never "click here" or "read more"
+- Use descriptive link text - never "click here" or "read more"
 - Every link in Sources and Further Reading must include a brief description of what it is for
 
 ---
 
 ## File and Folder Naming
 
-- All file names: **lowercase and hyphens only** — no spaces, underscores or capitals
+- All file names: **lowercase and hyphens only** - no spaces, underscores or capitals
 - Follow the existing numbering: `01-`, `02-`, `03-` etc.
 - Correct folder: `git/`, `github/`, `gitlab/`, `ides/`, `terminal/`, `real-world/`, `reference/` or `resources/`
 - Do not create new top-level folders without discussing it in an issue first
@@ -267,13 +269,13 @@ Every command block must specify where to type it — either in the OS label or 
 type: short description of what you did
 ```
 
-| Type | When to use |
-|---|---|
-| `add` | Adding new content or files |
-| `fix` | Fixing a typo, error or broken link |
+| Type     | When to use                             |
+| -------- | --------------------------------------- |
+| `add`    | Adding new content or files             |
+| `fix`    | Fixing a typo, error or broken link     |
 | `update` | Improving or expanding existing content |
-| `remove` | Removing something |
-| `rename` | Renaming a file or folder |
+| `remove` | Removing something                      |
+| `rename` | Renaming a file or folder               |
 
 **Examples:**
 
@@ -292,14 +294,14 @@ git commit -m "update: improve merge conflict explanation"
 - Link related issues using `Closes #123` or `Relates to #123`
 - Make sure your changes follow the writing style guide
 - Check for typos and grammar errors before submitting
-- Keep PRs focused — one topic per PR is much easier to review
+- Keep PRs focused - one topic per PR is much easier to review
 
 ---
 
 ## What Happens After You Submit
 
-1. Your PR will be reviewed by [Isaac Adjei (Zaccess)](https://github.com/zaccessss)
-2. You may receive feedback or requests for changes — this is normal and not personal
+1. Your PR will be reviewed by [Isaac Adjei (Zaccess)](https://github.com/zaccesss)
+2. You may receive feedback or requests for changes - this is normal and not personal
 3. Once approved, your PR will be merged into `main`
 4. Your name will be added to [HALL_OF_FAME.md](HALL_OF_FAME.md)
 

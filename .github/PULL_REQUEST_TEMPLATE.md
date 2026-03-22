@@ -17,7 +17,7 @@ Before submitting, please confirm the following:
 - [ ] I have not used emoji in body text (functional labels like 🟢🟡🔴 are fine)
 - [ ] I have used GitHub alert syntax (`> [!NOTE]`, `> [!TIP]` etc.) instead of emoji callouts
 - [ ] All links are working and point to the correct pages
-- [ ] The username `zaccessss` (3 s's) is used for GitHub links, `zacess.com` for the website
+- [ ] The username `zaccesss` (3 s's) is used for GitHub links, `zacess.com` for the website
 - [ ] I have checked for typos and grammar errors
 - [ ] My commit message follows the format `type: description`
 

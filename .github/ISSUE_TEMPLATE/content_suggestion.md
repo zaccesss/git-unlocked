@@ -1,9 +1,9 @@
 ---
 name: Content suggestion
 about: Suggest a new topic, section or improvement to the course
-title: 'suggestion: '
+title: "suggestion: "
 labels: enhancement
-assignees: zaccessss
+assignees: zaccesss
 ---
 
 ## What would you like to see added or improved?
