@@ -109,13 +109,10 @@ All content in this course follows these rules exactly. Please match them.
 
 ### Language and tone
 
-- Write in **UK English** - colour, organise, practise, licence (noun), recognise
-- Write as if explaining to a friend - friendly but professional
+- Write in **English** 
 - Assume the reader has zero prior knowledge unless the file is marked 🟡 or 🔴
 - Do not talk down to the reader
 - Do not use jargon without explaining it first
-- **No Oxford commas** - "Git, GitHub and GitLab" not "Git, GitHub, and GitLab"
-- **No em dashes** - use hyphens where necessary
 - Correct grammar and spelling throughout
 
 ### Emoji policy
