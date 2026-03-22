@@ -192,7 +192,7 @@ The 🔒 security callouts throughout this course are not optional extras. Accid
 
 ### Enable GitHub Discussions
 
-If you have a question that is not covered in the FAQ, open a [Discussion](https://github.com/zaccessss/git-unlocked/discussions). Other learners and contributors will help, and good questions get added to the FAQ.
+If you have a question that is not covered in the FAQ, open a [Discussion](https://github.com/zaccesss/git-unlocked/discussions). Other learners and contributors will help, and good questions get added to the FAQ.
 
 ---
 
@@ -215,8 +215,8 @@ Everyone who contributes gets listed in the [Hall of Fame](../HALL_OF_FAME.md).
 | Term definition | [reference/glossary.md](../reference/glossary.md) |
 | Something went wrong | [reference/common-mistakes.md](../reference/common-mistakes.md) |
 | Visual explanation | [resources/videos.md](../resources/videos.md) |
-| Ask a question | [GitHub Discussions](https://github.com/zaccessss/git-unlocked/discussions) |
-| Report an error | [GitHub Issues](https://github.com/zaccessss/git-unlocked/issues) |
+| Ask a question | [GitHub Discussions](https://github.com/zaccesss/git-unlocked/discussions) |
+| Report an error | [GitHub Issues](https://github.com/zaccesss/git-unlocked/issues) |
 
 ---
 

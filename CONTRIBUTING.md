@@ -46,7 +46,7 @@ You can contribute in any of the following ways:
 
 ## 🔍 Before You Start
 
-1. **Check open issues** at [github.com/zaccessss/git-unlocked/issues](https://github.com/zaccessss/git-unlocked/issues) to see if someone is already working on it
+1. **Check open issues** at [github.com/zaccesss/git-unlocked/issues](https://github.com/zaccesss/git-unlocked/issues) to see if someone is already working on it
 2. **Check open pull requests** to avoid duplicating work
 3. **Open an issue first** if you are planning a large change - this saves everyone time
 4. **Read the writing style guide below** before writing anything
@@ -57,7 +57,7 @@ You can contribute in any of the following ways:
 
 ### Step 1 - Fork the repo
 
-Go to [github.com/zaccessss/git-unlocked](https://github.com/zaccessss/git-unlocked) and click **Fork** in the top right corner. This creates your own copy of the repo.
+Go to [github.com/zaccesss/git-unlocked](https://github.com/zaccesss/git-unlocked) and click **Fork** in the top right corner. This creates your own copy of the repo.
 
 ### Step 2 - Clone your fork
 
@@ -137,7 +137,7 @@ All content in this course follows these rules. Please match them exactly.
 
 - Always refer to the author as **Isaac Adjei (Zaccess)**
 - Website: [zacess.com](https://zacess.com)
-- GitHub: [github.com/zaccessss](https://github.com/zaccessss)
+- GitHub: [github.com/zaccesss](https://github.com/zaccesss)
 - Branding line: **Access Granted. Success Unlocked.**
 - The 🔓 padlock is the course symbol - it represents knowledge being unlocked
 - Branding goes at the **bottom** of every file only - never at the top
@@ -291,7 +291,7 @@ When opening a pull request:
 
 ## 🔄 What Happens After You Submit
 
-1. Your PR will be reviewed by [Isaac Adjei (Zaccess)](https://github.com/zaccessss)
+1. Your PR will be reviewed by [Isaac Adjei (Zaccess)](https://github.com/zaccesss)
 2. You may receive feedback or requests for changes - this is normal and not personal
 3. Once approved, your PR will be merged into `main`
 4. Your name will be added to [HALL_OF_FAME.md](HALL_OF_FAME.md)
