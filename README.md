@@ -7,7 +7,7 @@
 
 # 🔓 git-unlocked
 
-### Everything you need to know about Git, GitHub and GitLab.
+### Everything you need to know about Version Control, Git, GitHub and GitLab.
 
 ### From absolute zero to industry-level advanced - on Windows, Mac and Linux.
 
