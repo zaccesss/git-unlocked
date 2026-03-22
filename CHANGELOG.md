@@ -22,11 +22,10 @@ PATCH - typo fixes, small corrections, link updates
 
 Changes that are in progress or planned but not yet in a release.
 
-- Introduction folder content
 - All git/ folder content
 - All github/ folder content
 - All gitlab/ folder content
-- All vscode/ folder content
+- All ides/ folder content
 - All terminal/ folder content
 - All real-world/ folder content
 - All reference/ folder content
@@ -36,19 +35,21 @@ Changes that are in progress or planned but not yet in a release.
 
 ---
 
-## [0.1.0] - 2026-03-21
+## [0.1.0] - 2026-03-22
 
 ### Added
-
 - Initial repository created at [github.com/zaccessss/git-unlocked](https://github.com/zaccessss/git-unlocked)
 - `README.md` - full course structure, learning path, callout key and branding
 - `LICENSE` - MIT licence
 - `CONTRIBUTING.md` - full contribution guide including style guide, naming conventions and commit format
 - `CHANGELOG.md` - this file
 - `ROADMAP.md` - long-term vision and planned content
-- `FAQ.md` - common questions answered
+- `FAQ.md` - detailed FAQ covering Git, GitHub, GitLab, security and mindset
 - `HALL_OF_FAME.md` - contributors list
-- Folder structure created: `git/`, `github/`, `gitlab/`, `vscode/`, `terminal/`, `real-world/`, `reference/`, `resources/`, `assets/`, `first-contribution/`, `introduction/`
+- Folder structure created: `git/`, `github/`, `gitlab/`, `ides/`, `terminal/`, `real-world/`, `reference/`, `resources/`, `assets/`, `first-contribution/`, `introduction/`
+- `introduction/01-welcome.md` - course welcome with industry context and encouragement
+- `introduction/02-how-to-use-this-course.md` - navigation guide, callout key, IDE and OS coverage
+- `introduction/03-setting-up.md` - full installation and configuration guide for Windows, Mac and Linux across all major IDEs
 
 ---
 
@@ -56,13 +57,13 @@ Changes that are in progress or planned but not yet in a release.
 
 Each release is listed with the date and a breakdown of what changed:
 
-| Tag       | Meaning                                 |
-| --------- | --------------------------------------- |
-| `Added`   | New files or sections added             |
-| `Updated` | Existing content improved or expanded   |
-| `Fixed`   | Typos, errors or broken links corrected |
-| `Removed` | Content removed                         |
-| `Renamed` | Files or folders renamed                |
+| Tag | Meaning |
+|---|---|
+| `Added` | New files or sections added |
+| `Updated` | Existing content improved or expanded |
+| `Fixed` | Typos, errors or broken links corrected |
+| `Removed` | Content removed |
+| `Renamed` | Files or folders renamed |
 
 ---
 

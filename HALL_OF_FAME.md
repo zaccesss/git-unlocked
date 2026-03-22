@@ -10,8 +10,8 @@ Thank you. Genuinely.
 
 ## 🌟 Creator
 
-| Name                  | GitHub                                     | Website                          | Role                   |
-| --------------------- | ------------------------------------------ | -------------------------------- | ---------------------- |
+| Name | GitHub | Website | Role |
+|---|---|---|---|
 | Isaac Adjei (Zaccess) | [@zaccessss](https://github.com/zaccessss) | [zacess.com](https://zacess.com) | Creator and maintainer |
 
 ---
@@ -20,9 +20,9 @@ Thank you. Genuinely.
 
 Want your name here? Read [CONTRIBUTING.md](CONTRIBUTING.md) and open a pull request. Every contribution counts - no matter how small.
 
-| Name                      | GitHub | Contribution |
-| ------------------------- | ------ | ------------ |
-| _Your name could be here_ |        |              |
+| Name | GitHub | Contribution |
+|---|---|---|
+| *Your name could be here* | | |
 
 ---
 
