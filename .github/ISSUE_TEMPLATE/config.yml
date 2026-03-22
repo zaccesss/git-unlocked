@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Ask a question
+    url: https://github.com/zaccessss/git-unlocked/discussions
+    about: Use GitHub Discussions for questions about the course content
+  - name: Security issue
+    url: https://zacess.com
+    about: Report security issues privately — do not open a public issue

@@ -1,146 +1,168 @@
-# 🤝 Contributing to git-unlocked
+# Contributing to git-unlocked
 
-Thank you for being here. Every contribution, no matter how small, makes this course better for everyone. Whether you are fixing a typo, improving an explanation, adding an exercise or suggesting a whole new topic - you are welcome here.
+Thank you for being here. Every contribution, no matter how small, makes this course better for everyone — whether you are fixing a typo, improving an explanation, adding an exercise or suggesting a new topic.
 
-This guide explains how to contribute properly.
-
----
-
-## 📋 Table of Contents
-
-- [Code of Conduct](#-code-of-conduct)
-- [What You Can Contribute](#-what-you-can-contribute)
-- [Before You Start](#-before-you-start)
-- [How to Contribute - Step by Step](#-how-to-contribute---step-by-step)
-- [Writing Style Guide](#-writing-style-guide)
-- [File and Folder Naming](#-file-and-folder-naming)
-- [Commit Message Format](#-commit-message-format)
-- [Pull Request Guidelines](#-pull-request-guidelines)
-- [What Happens After You Submit](#-what-happens-after-you-submit)
+Please read this guide fully before opening a pull request.
 
 ---
 
-## 🧭 Code of Conduct
+## Table of Contents
 
-This project is for everyone. Be respectful, be kind and be constructive. Discrimination, harassment or gatekeeping of any kind will not be tolerated.
-
-If something does not feel right, open an issue or contact [Isaac Adjei (Zaccess)](https://zacess.com).
-
----
-
-## ✅ What You Can Contribute
-
-You can contribute in any of the following ways:
-
-- **Fix a typo or grammar mistake** - small but very appreciated
-- **Improve an explanation** - if something was unclear to you, it is unclear to others too
-- **Add a missing command or example** - if something is missing, add it
-- **Add a real world scenario** - practical examples make concepts stick
-- **Add or improve a Try It Yourself exercise** - hands-on practice is core to this course
-- **Add a curated video or resource** - must be from a verified, reputable source
-- **Translate a file** - help make this course accessible in more languages
-- **Suggest a new topic** - open an issue first to discuss it
-- **Report an error** - open an issue describing what is wrong and where
+- [Code of Conduct](#code-of-conduct)
+- [What you can contribute](#what-you-can-contribute)
+- [Before you start](#before-you-start)
+- [How to contribute — step by step](#how-to-contribute--step-by-step)
+- [Writing style guide](#writing-style-guide)
+- [File and folder naming](#file-and-folder-naming)
+- [Commit message format](#commit-message-format)
+- [Pull request guidelines](#pull-request-guidelines)
+- [What happens after you submit](#what-happens-after-you-submit)
 
 ---
 
-## 🔍 Before You Start
+## Code of Conduct
 
-1. **Check open issues** at [github.com/zaccesss/git-unlocked/issues](https://github.com/zaccesss/git-unlocked/issues) to see if someone is already working on it
-2. **Check open pull requests** to avoid duplicating work
-3. **Open an issue first** if you are planning a large change - this saves everyone time
-4. **Read the writing style guide below** before writing anything
+This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating you agree to uphold it. Be respectful, be kind and be constructive.
 
 ---
 
-## 🛠️ How to Contribute - Step by Step
+## What You Can Contribute
 
-### Step 1 - Fork the repo
+- **Fix a typo or grammar mistake** — small but very appreciated
+- **Improve an explanation** — if something was unclear to you, it is unclear to others too
+- **Add a missing command or example** — if something should be here and is not, add it
+- **Add a real-world scenario** — practical examples make concepts stick
+- **Add or improve a Try It Yourself exercise** — hands-on practice is core to this course
+- **Add a curated video or resource** — must be from a verified, reputable source
+- **Translate a file** — help make this course accessible in more languages
+- **Suggest a new topic** — open an issue first to discuss it
+- **Report an error** — open an issue describing what is wrong and where
 
-Go to [github.com/zaccesss/git-unlocked](https://github.com/zaccesss/git-unlocked) and click **Fork** in the top right corner. This creates your own copy of the repo.
+---
 
-### Step 2 - Clone your fork
+## Before You Start
 
-Open your terminal and type these commands one at a time. Replace `YOUR_USERNAME` with your GitHub username:
+1. Check **[open issues](https://github.com/zaccessss/git-unlocked/issues)** to see if someone is already working on it
+2. Check **[open pull requests](https://github.com/zaccessss/git-unlocked/pulls)** to avoid duplicating work
+3. **Open an issue first** if you are planning a large change — this saves everyone time
+4. Read the **writing style guide** below before writing anything
 
-```
+---
+
+## How to Contribute — Step by Step
+
+### Step 1 — Fork the repo
+
+Go to [github.com/zaccessss/git-unlocked](https://github.com/zaccessss/git-unlocked) and click **Fork**.
+
+### Step 2 — Clone your fork
+
+```bash
 git clone https://github.com/YOUR_USERNAME/git-unlocked.git
 ```
 
-Then:
-```
+```bash
 cd git-unlocked
 ```
 
-### Step 3 - Create a branch
+### Step 3 — Create a branch
 
-Always create a new branch for your changes. Never work directly on `main`.
+Never work directly on `main`. Create a descriptive branch:
 
-```
+```bash
 git checkout -b fix/typo-in-branching-file
 ```
 
-Use a descriptive branch name. Examples:
-```
+```bash
 git checkout -b add/cherry-pick-exercise
 ```
-```
-git checkout -b improve/merge-conflict-explanation
-```
 
-### Step 4 - Make your changes
+### Step 4 — Make your changes
 
-Open the project in VS Code or your preferred editor and make your changes. Follow the writing style guide below.
+Open the project in your editor and make your changes following the writing style guide below.
 
-### Step 5 - Commit your changes
+### Step 5 — Commit your changes
 
-```
+```bash
 git add .
 ```
 
-Then:
-```
+```bash
 git commit -m "fix: correct typo in git/06-branching.md"
 ```
 
-Follow the commit message format described below.
+### Step 6 — Push to your fork
 
-### Step 6 - Push to your fork
-
-```
+```bash
 git push origin your-branch-name
 ```
 
-### Step 7 - Open a pull request
+### Step 7 — Open a pull request
 
-Go to your fork on GitHub and click **Compare & pull request**. Fill in the PR template clearly and submit.
+Go to your fork on GitHub and click **Compare & pull request**. Fill in the PR template and submit.
 
 ---
 
-## ✍️ Writing Style Guide
+## Writing Style Guide
 
-All content in this course follows these rules. Please match them exactly.
+All content in this course follows these rules exactly. Please match them.
 
 ### Language and tone
 
-- Write in clear, plain **UK English** - colour, organise, practise, licence, recognise etc.
-- Write as if you are explaining to a friend - friendly but professional
+- Write in **UK English** — colour, organise, practise, licence (noun), recognise
+- Write as if explaining to a friend — friendly but professional
 - Assume the reader has zero prior knowledge unless the file is marked 🟡 or 🔴
 - Do not talk down to the reader
 - Do not use jargon without explaining it first
-- No Oxford commas - "Git, GitHub and GitLab" not "Git, GitHub, and GitLab"
-- No em dashes - use hyphens only when necessary
-- Use correct grammar and spelling throughout
-- Quotes and motivation only where they naturally fit - not forced
+- **No Oxford commas** — "Git, GitHub and GitLab" not "Git, GitHub, and GitLab"
+- **No em dashes** — use hyphens where necessary
+- Correct grammar and spelling throughout
 
-### Name and branding
+### Emoji policy
 
-- Always refer to the author as **Isaac Adjei (Zaccess)**
+This is important. Emoji use is minimal and functional only.
+
+**Always keep:**
+- 🟢🟡🔴 difficulty labels
+- 🪟🍎🐧 OS labels (functional and instantly recognisable)
+- 🔓 in the footer only (brand symbol)
+
+**Never use:**
+- Emoji in body text paragraphs
+- Emoji as bullet point markers
+- Emoji in section headings
+- Decorative emoji anywhere
+
+### Callout boxes
+
+Use GitHub's native alert syntax instead of emoji callouts. This renders properly on GitHub and is accessible to screen readers.
+
+```markdown
+> [!NOTE]
+> Something worth knowing.
+
+> [!TIP]
+> A helpful technique or shortcut.
+
+> [!IMPORTANT]
+> A pro tip that will level up workflow.
+
+> [!WARNING]
+> Read this carefully before continuing.
+
+> [!CAUTION]
+> A security note — credentials, data, accounts.
+```
+
+Do **not** use `💡 **Tip:**`, `⚠️ **Warning:**`, `🔥 **Pro tip:**` or `🔒` in body text. Use the alert syntax above instead.
+
+### Branding
+
+- Author name: **Isaac Adjei (Zaccess)** — always in this order
 - Website: [zacess.com](https://zacess.com)
-- GitHub: [github.com/zaccesss](https://github.com/zaccesss)
+- GitHub: [github.com/zaccessss](https://github.com/zaccessss) — **zaccessss with three s's**
 - Branding line: **Access Granted. Success Unlocked.**
-- The 🔓 padlock is the course symbol - it represents knowledge being unlocked
-- Branding goes at the **bottom** of every file only - never at the top
+- Branding goes at the **bottom of every file only** — never at the top
 
 ### Structure
 
@@ -149,41 +171,43 @@ Every content file must follow this structure:
 ```markdown
 # Title
 
-> Optional relevant quote
+**Difficulty:** 🟢 / 🟡 / 🔴 | **Time:** X minutes
 
-**Difficulty:** 🟢 / 🟡 / 🔴
-**Time to complete:** X minutes
-
-Brief one or two sentence description of what this file covers.
+One or two sentence description.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 ---
 
-## Section 1
-...content...
+## Section heading
+
+Content...
 
 ---
 
-## 🛠️ Try It Yourself
-...exercise...
+## Try It Yourself
+
+Exercise...
 
 ---
 
-## ❌ Common Mistakes
-...mistakes and fixes...
+## Common Mistakes
+
+Mistakes and fixes...
 
 ---
 
-## 📖 Summary
-...key takeaways...
+## Summary
+
+Key takeaways...
 
 ---
 
-## 🔗 Sources and Further Reading
-- [Link title](URL) - brief description of what this link is for
+## Sources and Further Reading
+
+- [Link title](URL) — brief description of what this link is for
 
 ---
 
@@ -198,57 +222,46 @@ Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 
 ### OS coverage
 
-Every command must be shown for all three operating systems using this format:
+Show commands for all three operating systems. Label them clearly:
 
 ```
-🪟 **Windows - Command Prompt or PowerShell:**
-(command here)
-
-🍎 **Mac - Terminal:**
-(command here)
-
-🐧 **Linux - Terminal:**
-(command here)
+**Windows (Command Prompt or PowerShell):**
+**Mac (Terminal):**
+**Linux (Terminal):**
 ```
 
-If a command is identical on all three systems, show it once without OS labels.
+If a command is identical on all three, show it once without labels.
 
 ### Where to type commands
 
-Every command block must specify where to type it. Either include it in the OS label (as above) or add a sentence before the code block like "Type the following in your terminal:"
+Every command block must specify where to type it — either in the OS label or in a sentence before the code block. Never leave the reader wondering.
 
-### Callouts
+### Bold and italic
 
-Use these callout icons consistently:
+- **Bold** for key terms, warnings, important values and emphasis
+- _Italic_ for technical terms on first use, titles and light emphasis
+- Never use bold or italic decoratively
 
-| Icon | Use for |
-|---|---|
-| 💡 | Tips and helpful insights |
-| ⚠️ | Warnings - things people must not skip |
-| 🔥 | Pro tips for more advanced users |
-| 🔒 | Security notes - credential safety, dangerous commands |
-| ⌨️ | Keyboard shortcuts |
-| 🎥 | Curated video links |
-| 🛠️ | Try it yourself exercises |
-| ❌ | Common mistakes and their fixes |
+### Links
+
+- Use descriptive link text — never "click here" or "read more"
+- Every link in Sources and Further Reading must include a brief description of what it is for
 
 ---
 
-## 📁 File and Folder Naming
+## File and Folder Naming
 
-- All file names use **lowercase** and **hyphens** only - no spaces, no underscores, no capitals
-- Follow the existing numbering format: `01-`, `02-`, `03-` etc.
-- Place files in the correct folder: `git/`, `github/`, `gitlab/`, `ides/`, `terminal/`, `real-world/`, `reference/` or `resources/`
+- All file names: **lowercase and hyphens only** — no spaces, underscores or capitals
+- Follow the existing numbering: `01-`, `02-`, `03-` etc.
+- Correct folder: `git/`, `github/`, `gitlab/`, `ides/`, `terminal/`, `real-world/`, `reference/` or `resources/`
 - Do not create new top-level folders without discussing it in an issue first
 
-✅ Correct: `git/06-branching.md`
-❌ Wrong: `git/Branching.md`, `git/branching_guide.md`, `git/branchingGuide.md`
+**Correct:** `git/06-branching.md`
+**Wrong:** `git/Branching.md`, `git/branching_guide.md`, `git/branchingGuide.md`
 
 ---
 
-## 📝 Commit Message Format
-
-Use this format for all commits:
+## Commit Message Format
 
 ```
 type: short description of what you did
@@ -264,39 +277,33 @@ type: short description of what you did
 
 **Examples:**
 
-```
+```bash
 git commit -m "add: cherry-pick exercise to git/13-cherry-pick.md"
-```
-```
 git commit -m "fix: correct typo in github/04-issues.md"
-```
-```
-git commit -m "update: improve merge conflict explanation with diagram"
+git commit -m "update: improve merge conflict explanation"
 ```
 
 ---
 
-## 🔀 Pull Request Guidelines
+## Pull Request Guidelines
 
-When opening a pull request:
-
-- Give it a clear title that describes what you changed
+- Give it a clear title describing what you changed
 - Explain what you changed and why in the description
-- Link any related issues using `Closes #123` or `Relates to #123`
+- Link related issues using `Closes #123` or `Relates to #123`
 - Make sure your changes follow the writing style guide
 - Check for typos and grammar errors before submitting
-- Keep PRs focused - one topic per PR is much easier to review
+- Keep PRs focused — one topic per PR is much easier to review
 
 ---
 
-## 🔄 What Happens After You Submit
+## What Happens After You Submit
 
-1. Your PR will be reviewed by [Isaac Adjei (Zaccess)](https://github.com/zaccesss)
-2. You may receive feedback or requests for changes - this is normal and not personal
+1. Your PR will be reviewed by [Isaac Adjei (Zaccess)](https://github.com/zaccessss)
+2. You may receive feedback or requests for changes — this is normal and not personal
 3. Once approved, your PR will be merged into `main`
 4. Your name will be added to [HALL_OF_FAME.md](HALL_OF_FAME.md)
 
-Thank you for helping make git-unlocked better. 🔓
+Thank you for helping make git-unlocked better.
 
 ---
 
