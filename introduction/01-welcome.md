@@ -1,10 +1,13 @@
 # 👋 Welcome to git-unlocked
 
-> "The beginning is the most important part of the work." - Plato
+> "The secret of getting ahead is getting started." - Mark Twain
+
+**Difficulty:** 🟢 Beginner
+**Time to complete:** 5 minutes
 
 Welcome. You are in the right place.
 
-Whether you have never heard of Git before, have been struggling with it for months or are a developer looking to finally go beyond the basics - this course was built for you.
+Whether you have never heard of Git before, have been struggling with it for months or are a developer who wants to finally go beyond the basics - this course was built for you.
 
 ---
 
@@ -13,6 +16,7 @@ Whether you have never heard of Git before, have been struggling with it for mon
 - [What is this course?](#-what-is-this-course)
 - [Who is this for?](#-who-is-this-for)
 - [What will you learn?](#-what-will-you-learn)
+- [Why Git and GitHub matter](#-why-git-and-github-matter)
 - [A word of encouragement](#-a-word-of-encouragement)
 - [How this course is different](#-how-this-course-is-different)
 - [Before you start](#-before-you-start)
@@ -37,9 +41,10 @@ This course is for everyone.
 | You are... | This course will... |
 |---|---|
 | A complete beginner who has never used Git | Start from zero and build you up step by step |
-| A student who needs Git for university projects | Give you everything you need for real academic and team work |
+| A student who needs Git for university projects | Give you everything you need for academic and team work |
 | A developer who knows the basics but wants to go deeper | Cover branching strategies, rebasing, hooks, CI/CD and more |
 | Someone who uses GitHub but does not really understand Git | Explain what is actually happening under the hood |
+| A data scientist, DevOps engineer or researcher | Show you how Git applies to your field specifically |
 | An experienced developer who wants a solid reference | Give you a cheatsheet, glossary and advanced command reference |
 
 If you have ever deleted a repo out of frustration, copy-pasted Git commands from Stack Overflow without understanding them, or avoided branching because it seemed too complicated - this course is for you.
@@ -50,7 +55,7 @@ If you have ever deleted a repo out of frustration, copy-pasted Git commands fro
 
 By the end of this course you will be able to:
 
-- Understand exactly what Git is doing and why
+- Understand exactly what Git is doing and why, including its full history
 - Set up Git on Windows, Mac and Linux
 - Create and manage repositories confidently
 - Write clear, meaningful commit messages
@@ -60,6 +65,33 @@ By the end of this course you will be able to:
 - Use Git safely - protecting credentials and sensitive data
 - Apply advanced techniques like rebase, cherry-pick, bisect and hooks
 - Understand CI/CD pipelines on GitHub Actions and GitLab CI/CD
+- Use Git inside VS Code, JetBrains, Visual Studio, Xcode and other editors
+
+---
+
+## 💼 Why Git and GitHub Matter
+
+Git is not just a developer tool. Understanding it will genuinely change your career prospects regardless of what you do.
+
+**The numbers tell the story:**
+
+- Git is used by approximately **94% of developers worldwide** - making it one of the most universally adopted technologies in history
+- **180 million developers** use GitHub, with a new developer joining every second
+- **67% of software developer job listings** mention Git or version control as a required skill
+- **90% of Fortune 100 companies** use GitHub
+- **83% of technical hiring managers** view a GitHub profile as more reliable than a traditional CV
+
+**It is not just for developers.** Git is used in:
+
+- **Data science** - tracking notebooks, models and data pipelines
+- **DevOps and cloud** - GitOps treats Git as the source of truth for infrastructure
+- **Academic research** - papers at Harvard, MIT and universities worldwide cite Git for reproducibility
+- **Technical writing** - documentation teams use Git workflows for collaborative writing
+- **Government** - the US government's code.gov policy requires agencies to publish code on GitHub, and France has published its legal codes as a GitHub repository
+
+If you work with files that change over time - and everyone does - version control is relevant to you.
+
+💡 **Tip:** Git was invented in just **10 days** in April 2005 by Linus Torvalds, the same person who created Linux. It was born out of necessity when the Linux kernel team lost access to their previous version control tool. Today it powers the entire software world.
 
 ---
 
@@ -89,10 +121,12 @@ Most Git tutorials give you a list of commands to memorise. This course explains
 | Mac or Linux only | Windows, Mac and Linux throughout |
 | Beginner only | Beginner to advanced in one place |
 | Git only | Git, GitHub and GitLab all covered |
-| No security guidance | Security woven in throughout |
+| No security guidance | Security woven in throughout every file |
 | Generic examples | Real world scenarios at every level |
 | No exercises | Hands-on Try It Yourself sections |
 | No mistakes section | Common mistakes and fixes in every file |
+| No history | Full history of version control included |
+| VS Code only | VS Code, JetBrains, Visual Studio, Xcode and more |
 
 ---
 
@@ -110,9 +144,9 @@ If you are in a hurry and just want to get started, head straight to [What is Ve
 
 This course was created by **Isaac Adjei (Zaccess)** - an electronic engineering and computer science student based in the United Kingdom, and the founder of [Zaccess](https://zacess.com).
 
-> "Access Granted. Success Unlocked."
+git-unlocked started as a personal Git reference and grew into something worth sharing with everyone. It is MIT licenced, open source and built to last.
 
-git-unlocked started as a personal Git reference and grew into something worth sharing with everyone. It is MIT licenced, open source and built to last. If it helps you, please star the repository and share it with someone who needs it.
+If it helps you, please star the repository and share it with someone who needs it.
 
 If you want to contribute - fix a typo, improve an explanation, add a translation or suggest a new topic - read [CONTRIBUTING.md](../CONTRIBUTING.md). Every contribution is welcome and every contributor is listed in the [Hall of Fame](../HALL_OF_FAME.md).
 
@@ -130,11 +164,13 @@ When you are ready:
 
 ## 🔗 Sources and Further Reading
 
-- [Official Git documentation](https://git-scm.com/doc)
-- [GitHub official documentation](https://docs.github.com)
-- [GitLab official documentation](https://docs.gitlab.com)
-- [Git on Wikipedia](https://en.wikipedia.org/wiki/Git) - history and background
-- [Oh Shit, Git!?!](https://ohshitgit.com) - honest fixes for when things go wrong
+- [Official Git documentation](https://git-scm.com/doc) - the complete reference for all Git commands and concepts
+- [GitHub official documentation](https://docs.github.com) - everything about using GitHub
+- [GitLab official documentation](https://docs.gitlab.com) - everything about using GitLab
+- [Git on Wikipedia](https://en.wikipedia.org/wiki/Git) - history, background and technical overview
+- [Git turns 20: A Q&A with Linus Torvalds](https://github.blog/open-source/git/git-turns-20-a-qa-with-linus-torvalds/) - Linus Torvalds discusses Git's creation in his own words (GitHub Blog, 2025)
+- [GitHub Octoverse 2025](https://github.blog/news-insights/octoverse/) - the annual report on developer trends and GitHub statistics
+- [Oh Shit, Git!?!](https://ohshitgit.com) - honest, practical fixes for when things go wrong
 
 ---
 

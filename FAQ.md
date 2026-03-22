@@ -1,861 +1,562 @@
 # ❓ Frequently Asked Questions
 
-> "The only stupid question is the one you were afraid to ask." - Unknown
+**Difficulty:** 🟢 Beginner to 🔴 Advanced
+**Time to read:** As needed - jump to your question
 
-Every question here is one that real developers - beginners and seniors alike - have actually asked on Stack Overflow, Reddit, GitHub Discussions, freeCodeCamp forums and developer communities around the world. If you are confused about something, you are not alone. Git confuses everyone at first, and even experienced developers still Google some of these regularly.
-
-If your question is not here, open a [Discussion](https://github.com/zaccessss/git-unlocked/discussions) and we will answer it and add it.
+Got a question? The answer is probably here. If it is not, open a [Discussion](https://github.com/zaccessss/git-unlocked/discussions) or an [Issue](https://github.com/zaccessss/git-unlocked/issues).
 
 ---
 
 ## 📋 Table of Contents
 
-- [The Basics](#-the-basics)
-- [Git vs GitHub vs GitLab](#-git-vs-github-vs-gitlab)
-- [Everyday Git Operations](#-everyday-git-operations)
-- [Undoing Things](#-undoing-things)
-- [Branches and Merging](#-branches-and-merging)
-- [Remote Repositories](#-remote-repositories)
-- [Common Error Messages](#-common-error-messages)
-- [GitHub Questions](#-github-questions)
-- [GitLab Questions](#-gitlab-questions)
-- [Security Questions](#-security-questions)
-- [Advanced Git Questions](#-advanced-git-questions)
-- [Mindset and Motivation](#-mindset-and-motivation)
+- [Git basics](#-git-basics)
+- [Installation and setup](#-installation-and-setup)
+- [Commands and workflow](#-commands-and-workflow)
+- [GitHub](#-github)
+- [GitLab](#-gitlab)
+- [Branching and merging](#-branching-and-merging)
+- [Undoing things](#-undoing-things)
+- [Security and credentials](#-security-and-credentials)
+- [IDEs and editors](#-ides-and-editors)
+- [Career and industry](#-career-and-industry)
+- [Common errors](#-common-errors)
+- [Git 3.0 and what is coming](#-git-30-and-what-is-coming)
 
 ---
 
-## 🟢 The Basics
+## 🔰 Git Basics
 
 ### What is Git?
 
-Git is a version control system. It tracks every change you make to your files over time, so you can see what changed, when it changed, who changed it and go back to any earlier version if something breaks.
+Git is a **distributed version control system** - software that tracks every change you make to your files over time. It lets you save snapshots of your work (called commits), go back to any previous snapshot, work on multiple versions simultaneously (called branches) and collaborate with others without overwriting each other's work.
 
-Think of it like this: imagine you are writing an essay and you save a new copy every hour - `essay_v1.docx`, `essay_v2.docx`, `essay_final.docx`, `essay_final_REAL.docx`. Git does that automatically, but in a much smarter and more organised way.
+Git was created by **Linus Torvalds** in April 2005 - the same person who created Linux. He built it in roughly 10 days after the Linux kernel team lost access to their previous version control tool.
 
-Git was created by Linus Torvalds in April 2005 - the same person who created the Linux operating system. He built it in just two weeks to manage contributions to the Linux kernel after the team's previous tool became unavailable. The name "git" is British slang for an unpleasant person. Torvalds joked: "I'm an egotistical bastard, and I name all my projects after myself. First Linux, now git."
-
-### What is a repository?
-
-A repository (or "repo") is a folder that Git is tracking. It contains all your project files and a hidden `.git` folder where Git stores the entire history of every change ever made.
-
-When you run `git init` in a folder, that folder becomes a repository. When you `git clone` a project from GitHub, you are downloading a repository to your computer.
-
-### What is a commit?
-
-A commit is a saved snapshot of your project at a specific point in time. Every commit has a unique ID, a message describing what changed, the author's name and email, and a timestamp.
-
-A commit is not the same as saving a file. When you save a file, only that file is updated on your computer. When you commit, Git takes a snapshot of everything you have staged and permanently records it in the project history.
-
-### What is the staging area? Why do I have to `git add` before `git commit`?
-
-This is one of the most common sources of confusion for beginners - and it is a fair one.
-
-The staging area (also called the index or cache) is a middle step between your working files and your commit history. It lets you choose exactly which changes to include in your next commit.
-
-For example, you might have changed five files but only want to commit three of them together because they are related. You `git add` those three files to the staging area, then `git commit` to save just those three as one snapshot. The other two stay as uncommitted changes.
-
-```
-Working directory  →  git add  →  Staging area  →  git commit  →  Repository history
-```
-
-### What is HEAD?
-
-HEAD is simply a pointer to the commit you are currently looking at - almost always the latest commit on your current branch. Think of it as "where you are right now" in your project history.
-
-When you switch branches, HEAD moves to point to the latest commit on that branch. When you check out an old commit, HEAD points directly to that commit and you are in what Git calls a "detached HEAD state."
-
-### What is a branch?
-
-A branch is an independent line of development. It lets you work on a new feature or fix a bug without affecting the main codebase until you are ready.
-
-Technically, a branch is just a lightweight pointer to a specific commit. Creating a branch costs almost nothing in Git - it is just a tiny file. This is very different from older version control systems where branching was slow and expensive.
-
-### What is .gitignore and what does it do?
-
-`.gitignore` is a plain text file you place in your repository that tells Git which files and folders to ignore completely - they will never be tracked, staged or committed.
-
-Common things to ignore:
-
-- `node_modules/` - installed packages (huge, should never be committed)
-- `.env` - environment files containing secrets and API keys
-- `*.log` - log files
-- `.DS_Store` - Mac system files
-- `__pycache__/` - Python cache files
-- `dist/` or `build/` - compiled output
-
-⚠️ **Important:** If a file was already committed before you added it to `.gitignore`, Git will continue tracking it. You need to run `git rm --cached filename` to stop tracking it without deleting it from your computer.
-
----
-
-## 🟢 Git vs GitHub vs GitLab
+💡 "Git" is British slang for an unpleasant or contemptible person. Torvalds named it as a self-deprecating joke. Depending on your mood it also stands for "Global Information Tracker" or "Goddamn Idiotic Truckload of sh*t."
 
 ### What is the difference between Git and GitHub?
 
-This is the most asked question about Git across every platform.
+This is the most common misconception in all of version control.
 
-**Git** is the tool. It is free, open source software you install on your computer. It tracks changes to your files locally. It has nothing to do with the internet.
+**Git** is software installed on your computer. It runs locally and tracks changes to your files. It has nothing to do with the internet.
 
-**GitHub** is a website. It hosts Git repositories online so you can back them up, share them and collaborate with others. GitHub is owned by Microsoft (acquired in 2018 for $7.5 billion).
+**GitHub** is a website and cloud platform where you can store your Git repositories online, share them with others and collaborate. GitHub did not exist until 2008 - three years after Git was created.
 
-The analogy: Git is like Microsoft Word - the software you use to write. GitHub is like Google Drive - the place you store and share your documents online.
+You can use Git without GitHub entirely. You can also use GitHub with other version control systems, though nobody really does.
 
-You can use Git without GitHub. You can also use GitHub without knowing much Git (though you will be limited). Learning both together is the best approach.
+**GitLab** is a different company and platform that does similar things to GitHub, with a stronger focus on built-in CI/CD and self-hosting for enterprise use.
 
-### What is GitLab?
+### Why should I learn Git?
 
-GitLab is a competitor to GitHub. It is also a website that hosts Git repositories but it was built with a stronger focus on the entire DevOps lifecycle - particularly CI/CD (automating testing and deployment).
+- Approximately **94% of developers worldwide** use Git - it is the most universally adopted developer technology in history
+- **67% of software developer job listings** specifically mention Git or version control
+- **90% of Fortune 100 companies** use GitHub
+- Git is used beyond software development in data science, DevOps, academic research, technical writing and government
+- GitHub profiles are reviewed by **83% of technical hiring managers** - a strong profile genuinely helps your career
 
-GitLab was founded in 2011 by Dmitriy Zaporozhets and Sytse "Sid" Sijbrandij in Ukraine. Unlike GitHub, GitLab's core product is open source (Community Edition, MIT licenced) meaning you can download it and host it yourself for free on your own server. GitLab went public on the NASDAQ stock exchange in October 2021.
+Even if you work alone on personal projects, Git protects your work, lets you experiment safely and gives you a full history of everything you have ever built.
 
-Key differences:
+### Is Git free?
 
-- GitLab calls pull requests "merge requests"
-- GitLab has built-in CI/CD that many consider more powerful than GitHub Actions
-- GitLab can be self-hosted for free
-- GitHub has a larger open source community and more developers use it publicly
-- Both are excellent - the choice usually comes down to your team or company's preference
+Yes. Git is completely free and open source, released under the GNU General Public Licence version 2.
 
-### Is GitHub free?
+GitHub is free for individuals with unlimited public and private repositories. Paid plans add team features, more Actions minutes and enterprise features. GitLab also has a generous free tier with 400 CI/CD minutes per month.
 
-Yes. GitHub has a generous free tier that includes unlimited public and private repositories, GitHub Actions minutes, GitHub Pages and more. Paid plans (Pro, Team, Enterprise) add features like advanced security, more Actions minutes and team management tools.
+### What is version control?
 
-### Is GitLab free?
+Version control is a system that records changes to files over time so you can recall specific versions later. Think of it like a very detailed save history for your entire project - not just the latest version, but every version you have ever saved, who saved it and when.
 
-Yes. GitLab.com has a free tier and GitLab Community Edition is free to self-host. Paid tiers (Premium and Ultimate) add advanced features.
-
----
-
-## 🟢 Everyday Git Operations
-
-### How do I check which branch I am on?
-
-```bash
-git status
-```
-
-The first line will tell you which branch you are on. You can also run:
-
-```bash
-git branch
-```
-
-The branch with an asterisk `*` next to it is your current branch.
-
-### How do I see my commit history?
-
-```bash
-git log
-```
-
-For a cleaner, more readable view:
-
-```bash
-git log --oneline
-```
-
-For a visual graph of branches:
-
-```bash
-git log --oneline --graph --all
-```
-
-⌨️ Press `q` to exit the log view in the terminal.
-
-### What is the difference between `git fetch` and `git pull`?
-
-This is one of the most searched Git questions of all time.
-
-**`git fetch`** downloads changes from the remote repository to your computer but does NOT apply them to your working files. It updates your knowledge of what is on the remote without touching anything you are working on.
-
-**`git pull`** downloads the changes AND immediately merges them into your current branch. It is essentially `git fetch` followed by `git merge`.
-
-💡 **Tip:** Using `git fetch` first lets you inspect what changed before merging. Many experienced developers prefer this workflow to avoid surprises.
-
-### How do I save my work without committing?
-
-Use `git stash`. It temporarily shelves your changes so you can switch to something else, then come back later.
-
-```bash
-git stash          # save your changes
-git stash pop      # bring them back
-git stash list     # see all stashes
-```
-
-### How do I write a good commit message?
-
-A good commit message explains what changed and why - not how (the code shows the how).
-
-✅ Good:
-
-```
-fix: correct calculation error in invoice total
-add: user profile image upload feature
-update: improve error message clarity on login failure
-```
-
-❌ Bad:
-
-```
-fix stuff
-update
-asdfgh
-changes
-WIP
-```
-
-A widely used format is Conventional Commits:
-
-```
-type: short description
-
-Optional longer description explaining why this change
-was made and any relevant context.
-```
-
-Common types: `add`, `fix`, `update`, `remove`, `refactor`, `docs`, `test`
+The three main types are local (only on your computer - like RCS), centralised (one shared server - like SVN) and distributed (every developer has a full copy - like Git). Git is distributed, which means every clone of a repository is a complete backup of the entire history.
 
 ---
 
-## 🟡 Undoing Things
+## ⚙️ Installation and Setup
 
-> "In Git, almost nothing is truly lost. The reflog is your safety net." - Common developer wisdom
+### What version of Git should I install?
 
-### How do I undo my last commit?
+The current stable release is **Git 2.53.0** (February 2026). Always install the latest stable version from [git-scm.com/downloads](https://git-scm.com/downloads).
 
-This is the single most searched Git question in history with over 14 million views on Stack Overflow.
+If you are on Windows and use `winget`, run: `winget install --id Git.Git -e --source winget`
 
-It depends on what you want to do:
+💡 Git 3.0 is expected later in 2026. It will change the default branch name to `main` and switch to SHA-256 hashing. Setting `git config --global init.defaultBranch main` now future-proofs your setup.
 
-**Keep the changes but undo the commit (most common):**
+### Why does Git say "Author identity unknown" when I commit?
 
-```bash
-git reset --soft HEAD~1
+You have not told Git who you are. Run these two commands in your terminal, one at a time:
+
+```
+git config --global user.name "Your Name"
+```
+```
+git config --global user.email "your@email.com"
 ```
 
-Your files stay exactly as they are. The commit is undone but your changes remain staged.
+Use the same email as your GitHub or GitLab account.
 
-**Undo the commit and unstage the changes:**
+### What is the difference between `--global` and `--local` config?
 
-```bash
-git reset HEAD~1
+`--global` applies to all repositories on your computer. `--local` (or no flag) applies only to the current repository. Use `--global` for your name, email and default branch. Use `--local` only when you need different settings for a specific project - for example a work email on a work repo.
+
+### What editor should I use for Git commit messages?
+
+Set it in your terminal with:
+
+```
+git config --global core.editor "code --wait"
 ```
 
-Your files stay as they are but the changes are no longer staged.
+Replace `code --wait` with `nano` if you want a simpler terminal editor, or `notepad` on Windows if you prefer a GUI. If Git ever opens Vim unexpectedly and you want to escape, type `:q!` and press Enter.
 
-**Undo the commit AND discard all the changes:**
+### My Git is installed but the terminal says command not found or not recognized
 
-```bash
-git reset --hard HEAD~1
-```
+🪟 **Windows:** Close and reopen your terminal. The PATH update only applies to new terminal sessions. If still failing, reinstall using `winget install --id Git.Git -e --source winget`.
 
-⚠️ **Warning:** This permanently deletes your changes. Use with caution.
+🍎 **Mac:** Run `xcode-select --install`. After macOS updates, the developer tools path often breaks.
 
-### How do I undo `git add` before committing?
-
-```bash
-git restore --staged filename
-```
-
-Or to unstage everything:
-
-```bash
-git restore --staged .
-```
-
-### How do I discard changes to a file I have not committed?
-
-```bash
-git restore filename
-```
-
-⚠️ **Warning:** This permanently discards your uncommitted changes to that file. They cannot be recovered.
-
-### What is the difference between `git reset` and `git revert`?
-
-**`git reset`** moves the branch pointer backwards in history, effectively removing commits. It rewrites history. Never use it on commits that have already been pushed to a shared remote branch.
-
-**`git revert`** creates a new commit that undoes the changes from a previous commit. It does not rewrite history - it adds to it. This is the safe way to undo a change that has already been pushed.
-
-If the commit is only local: `git reset` is fine.
-If the commit has been pushed and others may have pulled it: use `git revert`.
-
-### How do I recover something I accidentally deleted with `git reset --hard`?
-
-Use `git reflog`. Git keeps a local log of everywhere HEAD has pointed for about 30 days.
-
-```bash
-git reflog
-```
-
-Find the commit you want to recover, copy its hash, then:
-
-```bash
-git checkout -b recovery-branch abc1234
-```
-
-This creates a new branch from that commit so you can get your work back.
+🐧 **Linux:** Run `which git`. If empty, install with `sudo apt install git` (Ubuntu) or the equivalent for your distribution.
 
 ---
 
-## 🟡 Branches and Merging
+## ⌨️ Commands and Workflow
 
-### How do I create a new branch?
+### What are the most important Git commands to know first?
 
-```bash
-git checkout -b branch-name
-```
+For day-to-day work you need roughly 10 commands. Start with these:
 
-Or using the newer syntax:
+| Command | What it does |
+|---|---|
+| `git init` | Create a new repository in the current folder |
+| `git clone URL` | Download an existing repository |
+| `git status` | See what has changed |
+| `git add .` | Stage all changes ready to commit |
+| `git commit -m "message"` | Save a snapshot with a message |
+| `git push` | Upload your commits to GitHub or GitLab |
+| `git pull` | Download the latest changes |
+| `git log --oneline` | See your commit history |
+| `git switch branch-name` | Switch to a different branch |
+| `git branch` | List all branches |
 
-```bash
-git switch -c branch-name
-```
+### What is `git switch` and should I use it instead of `git checkout`?
 
-### How do I delete a branch?
+`git switch` was introduced in Git 2.23 (2019) to do one thing clearly - switch branches. `git checkout` does multiple things (switching branches, restoring files, detaching HEAD) which makes it confusing for beginners.
 
-Locally:
+As of **Git 2.51 (August 2025), `git switch` and `git restore` are officially stable** - no longer experimental. They are now the recommended way to switch branches and restore files. `git checkout` is NOT deprecated and will not be removed - all three commands will continue to work.
 
-```bash
-git branch -d branch-name      # safe delete - only if merged
-git branch -D branch-name      # force delete
-```
+Use `git switch` for new work. The full course uses both, always explaining what each does.
 
-On the remote:
+### What is the staging area and why does it exist?
 
-```bash
-git push origin --delete branch-name
-```
+The staging area (also called the index) is a preparation zone between your working directory and your commits. You choose exactly which changes to include in a commit using `git add` before running `git commit`.
 
-### What is the difference between `git merge` and `git rebase`?
+This gives you precise control. If you changed three files but only two are ready, you can stage and commit just those two. The third stays unstaged for the next commit.
 
-Both combine changes from one branch into another but they do it differently.
+Think of it like packing a box: your working directory is the room full of stuff, staging is putting things in the box, and committing is sealing and labelling the box.
 
-**`git merge`** creates a new "merge commit" that joins the histories of both branches. The history shows exactly what happened and when. It is non-destructive.
+### What makes a good commit message?
 
-**`git rebase`** moves your commits to sit on top of another branch as if you had started your work from there. It creates a cleaner, linear history but rewrites commit history.
+A good commit message answers the question "what does this commit do?" in under 72 characters. Be specific.
 
-```
-Merge result:
-A --- B --- C --- M  (main)
-          /
-    D --- E  (feature)
+❌ Bad: `update stuff`, `fix`, `changes`, `WIP`
+✅ Good: `fix: resolve null pointer on user login`, `add: dark mode toggle to settings page`
 
-Rebase result:
-A --- B --- C --- D' --- E'  (feature, now on top of main)
-```
+This course follows the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) format: `type: description`. Common types are `add`, `fix`, `update`, `remove` and `rename`.
 
-💡 **General rule:** Use merge for shared branches. Use rebase to clean up your own local work before sharing it.
+### How often should I commit?
 
-⚠️ **Never rebase a branch that others are working on.** It rewrites history and causes serious problems for everyone else.
+Commit every time you complete a small, logical unit of work. Do not wait until a feature is entirely finished to commit. Small, frequent commits make it easier to understand history, easier to revert if something breaks and easier to review in pull requests.
 
-### How do I resolve a merge conflict?
-
-A merge conflict happens when two branches have changed the same part of the same file and Git cannot automatically decide which version to keep.
-
-Git marks the conflict in the file like this:
-
-```
-<<<<<<< HEAD
-This is the version from your current branch
-=======
-This is the version from the branch being merged
->>>>>>> feature-branch
-```
-
-To resolve it:
-
-1. Open the file
-2. Decide which version to keep (or combine them)
-3. Delete the conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
-4. Save the file
-5. Run `git add filename`
-6. Run `git commit`
-
-💡 VS Code has a built-in merge conflict editor that makes this much easier - it shows both versions side by side with buttons to accept one or both.
-
-### I accidentally committed to main. How do I move that commit to a feature branch?
-
-```bash
-# Create a new branch pointing to your current commit
-git branch feature-branch
-
-# Move main back one commit
-git reset --hard HEAD~1
-
-# Switch to your feature branch
-git checkout feature-branch
-```
+A rough rule: if you would feel anxious losing the last 30 minutes of work, commit now.
 
 ---
 
-## 🟡 Remote Repositories
+## 🐙 GitHub
 
-### What is "origin"?
+### What is GitHub?
 
-`origin` is just the default name Git gives to the remote repository you cloned from. It is not a special word - it is just a nickname (called a "remote") that points to a URL.
+GitHub is the world's largest platform for hosting Git repositories and collaborating on code. Founded in **April 2008** by Tom Preston-Werner, Chris Wanstrath, P.J. Hyett and Scott Chacon, it was acquired by **Microsoft in June 2018** for $7.5 billion.
 
-When you clone a repository, Git automatically sets up `origin` to point to that URL. You can rename it, add other remotes or remove it.
+GitHub has **180 million developers** across **630 million repositories** as of 2025. A new developer joins every second. **90% of Fortune 100 companies** use GitHub.
 
-```bash
-git remote -v          # see all remotes and their URLs
-git remote add upstream https://github.com/someone/repo.git  # add another remote
+### What is the difference between GitHub Free and GitHub Pro?
+
+GitHub Free includes unlimited public and private repositories, GitHub Actions (2,000 minutes per month), GitHub Pages, Discussions, Issues, basic security features and a Copilot free tier (2,000 completions and 50 chat requests per month).
+
+GitHub Pro (currently $4 per month) adds more Actions minutes, larger file storage, GitHub Advanced Insights and priority support. Most individual developers do not need Pro.
+
+### What is GitHub Copilot and is it free?
+
+GitHub Copilot is an AI coding assistant that suggests code as you type. It has a **free tier** (as of December 2024) with 2,000 completions and 50 chat requests per month, available to all GitHub users at no cost.
+
+Copilot Pro is $10/month for 300 premium requests. Copilot Pro+ is $39/month. Verified students get Copilot Pro free through the GitHub Student Developer Pack.
+
+### What is the GitHub Student Developer Pack?
+
+A free pack of tools and services for verified students - worth approximately $45,000 in total value. It includes GitHub Copilot Pro, free access to JetBrains IDEs, domain names, cloud credits and over 100 other offers.
+
+Apply at [education.github.com](https://education.github.com) with a school email or student ID. Approval usually takes 1-3 days.
+
+### How do I push my first project to GitHub?
+
+1. Create a repository on GitHub (click the `+` button, choose New repository)
+2. Do not initialise it with a README if you already have local files
+3. In your terminal, inside your project folder, run these commands one at a time:
+
 ```
-
-### What is the difference between `origin` and `upstream`?
-
-**`origin`** is your fork - the copy of the repository on your GitHub account.
-
-**`upstream`** is the original repository you forked from - the one maintained by the project owner.
-
-This matters when contributing to open source. You pull updates from `upstream` to keep your fork current and push your changes to `origin` to then open a pull request.
-
-### How do I push my code to GitHub for the first time?
-
-```bash
-git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
-git branch -M main
-git push -u origin main
-```
-
-The `-u` flag sets `origin main` as the default for future pushes so you can just type `git push` afterwards.
-
-### How do I force push safely?
-
-A regular `git push --force` can overwrite work that someone else has pushed since your last pull. Use `--force-with-lease` instead - it will only force push if nobody else has pushed since you last fetched:
-
-```bash
-git push --force-with-lease
-```
-
-⚠️ **Never force push to a shared branch like `main` or `develop`.** Only force push to your own personal branches.
-
----
-
-## 🔴 Common Error Messages
-
-### `fatal: not a git repository`
-
-You are running a Git command in a folder that is not a Git repository. Either navigate to the correct folder or run `git init` to initialise one.
-
-```bash
-cd path/to/your/project
 git init
 ```
-
-### `fatal: Authentication failed`
-
-GitHub removed password authentication in August 2021. You need to use either SSH keys or a Personal Access Token instead of your password.
-
-- Set up SSH: `ssh-keygen -t ed25519 -C "your_email@example.com"` then add the public key to GitHub Settings
-- Or create a Personal Access Token at github.com/settings/tokens and use it as your password
-
-### `error: failed to push some refs`
-
-Someone else has pushed to the remote since your last pull. You need to pull their changes first:
-
-```bash
-git pull --rebase origin main
-git push
 ```
-
-### `fatal: refusing to merge unrelated histories`
-
-You are trying to merge two repositories that do not share a common commit history. This often happens when you initialise a local repo and also create one on GitHub separately.
-
-```bash
-git pull origin main --allow-unrelated-histories
-```
-
-Then resolve any conflicts and commit.
-
-### `error: Your local changes would be overwritten by merge`
-
-You have uncommitted changes that conflict with incoming changes. Either commit your changes first or stash them:
-
-```bash
-git stash
-git pull
-git stash pop
-```
-
-### `error: src refspec main does not match any`
-
-You have not made any commits yet so the `main` branch does not exist. Make at least one commit first:
-
-```bash
 git add .
+```
+```
 git commit -m "initial commit"
+```
+```
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+```
+```
+git branch -M main
+```
+```
 git push -u origin main
 ```
-
----
-
-## 🟢 GitHub Questions
-
-### How do I create a repository on GitHub?
-
-1. Go to [github.com/new](https://github.com/new)
-2. Give it a name
-3. Choose public or private
-4. Optionally add a README, .gitignore and licence
-5. Click **Create repository**
 
 ### What is a pull request?
 
-A pull request (PR) is a way of saying "I have made some changes on my branch - please review them and merge them into the main codebase."
+A pull request (PR) is a way of proposing changes. You work on a branch, push it to GitHub, then open a PR to ask someone to review and merge your changes into the main branch. Pull requests are where code review happens - comments, suggestions, approvals and ultimately merging.
 
-It is not a Git feature - it is a GitHub (and GitLab) feature built on top of Git. GitLab calls them "merge requests" which is arguably a better name since that is literally what they do.
+On GitLab the same thing is called a **merge request** (MR). Same concept, different name.
 
-### What is forking?
+### What are GitHub badges and achievements?
 
-Forking creates your own copy of someone else's repository on your GitHub account. You can make changes to your fork without affecting the original. When you want to contribute your changes back, you open a pull request from your fork to the original.
-
-Forking is different from cloning. Cloning downloads a repository to your computer. Forking creates a server-side copy on GitHub.
-
-### How do I keep my fork up to date?
-
-```bash
-# Add the original repo as upstream (only needed once)
-git remote add upstream https://github.com/ORIGINAL_OWNER/REPO.git
-
-# Fetch the latest changes from upstream
-git fetch upstream
-
-# Merge upstream changes into your main branch
-git checkout main
-git merge upstream/main
-
-# Push the updated main to your fork
-git push origin main
-```
-
-### How do I set up SSH for GitHub?
-
-**Step 1 - Generate an SSH key:**
-
-🪟 **Windows / 🍎 Mac / 🐧 Linux:**
-
-```bash
-ssh-keygen -t ed25519 -C "your_email@example.com"
-```
-
-Press Enter to accept the default location. Add a passphrase for extra security.
-
-**Step 2 - Copy the public key:**
-
-🪟 **Windows:**
-
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
-
-🍎 **Mac:**
-
-```bash
-pbcopy < ~/.ssh/id_ed25519.pub
-```
-
-🐧 **Linux:**
-
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
-
-**Step 3 - Add to GitHub:**
-
-1. Go to github.com/settings/keys
-2. Click **New SSH key**
-3. Paste your public key
-4. Click **Add SSH key**
-
-**Step 4 - Test it:**
-
-```bash
-ssh -T git@github.com
-```
-
-You should see: `Hi USERNAME! You've successfully authenticated.`
-
-### What is a Personal Access Token?
-
-A Personal Access Token (PAT) is a password replacement for GitHub. Since GitHub removed support for password authentication in August 2021, you need a PAT to push over HTTPS.
-
-To create one:
-
-1. Go to github.com/settings/tokens
-2. Click **Generate new token**
-3. Select scopes (at minimum: `repo`)
-4. Copy the token immediately - you will not see it again
-
-⚠️ **Treat your PAT like a password.** Never commit it to a repository. Store it in a password manager.
-
-### What is GitHub Pages?
-
-GitHub Pages is a free hosting service built into GitHub. It serves static websites (HTML, CSS and JavaScript) directly from a repository. It is perfect for portfolios, project documentation and simple websites.
-
-To enable it: go to your repository Settings → Pages → choose your branch → save.
-
-Your site will be live at `https://USERNAME.github.io/REPO-NAME`.
+GitHub badges are little icons that appear on your profile for doing specific things. Current badges include Pull Shark (opening merged pull requests), YOLO (merging a PR without review), Quickdraw (closing an issue or PR within 5 minutes of opening it), Pair Extraordinaire (co-authoring merged commits), Galaxy Brain (getting an accepted answer on a Discussion) and Starstruck (having a repository receive 16 or more stars). Some badges have tiers - bronze, silver and gold based on how many times you earn them.
 
 ---
 
-## 🟢 GitLab Questions
+## 🦊 GitLab
 
-### What is the difference between a pull request and a merge request?
+### What is GitLab?
 
-They are the same thing. GitHub calls them pull requests. GitLab calls them merge requests. The name "merge request" is arguably clearer since that is exactly what you are asking someone to do - review your changes and merge them.
+GitLab is a complete DevSecOps platform that includes Git hosting, CI/CD pipelines, container registry, security scanning, issue tracking and more - all in one application. The current version is **GitLab 18.10** (March 2026).
 
-### What is GitLab CI/CD?
+GitLab was founded in **2011** by Dmitriy Zaporozhets and Sid Sijbrandij in Ukraine and the Netherlands. It is available as a cloud service at gitlab.com or as a self-hosted Community Edition (free and open source under MIT licence).
 
-CI/CD stands for Continuous Integration and Continuous Delivery/Deployment. It is the practice of automatically running tests, checks and deployments every time you push code.
+### What is the difference between GitHub and GitLab?
 
-GitLab has CI/CD built directly into the platform. You define your pipeline in a file called `.gitlab-ci.yml` at the root of your repository. When you push, GitLab reads that file and runs your pipeline automatically.
+Both host Git repositories and support collaboration. The main differences:
 
-GitHub has a similar feature called GitHub Actions, defined in `.github/workflows/`.
+| Feature | GitHub | GitLab |
+|---|---|---|
+| Best for | Open source, broad collaboration | Enterprise, regulated industries, self-hosting |
+| CI/CD | GitHub Actions (modular, marketplace) | Built-in pipelines (more integrated) |
+| Free CI/CD minutes | 2,000/month | 400/month |
+| Self-hosting | Enterprise Server only (paid) | Community Edition (free and open source) |
+| Security scanning | Dependabot, CodeQL, secret scanning | Built-in SAST, DAST, secret detection |
+| AI assistant | GitHub Copilot (mature, widely adopted) | GitLab Duo (newer, integrated into DevSecOps) |
+| Free private repos | Unlimited | Unlimited |
 
-### What is a GitLab Runner?
+### Does GitLab have a free tier?
 
-A GitLab Runner is a programme that runs your CI/CD pipeline jobs. When you trigger a pipeline, GitLab sends the jobs to a runner which executes them.
-
-GitLab.com provides shared runners for free. You can also install your own runner on your own machine or server for more control.
+Yes. GitLab Free includes unlimited private repositories, 400 CI/CD minutes per month on shared runners, the container registry, GitLab Pages, basic SAST and secret detection (as pipeline artifacts), and up to 5 users per private group.
 
 ### Can I self-host GitLab?
 
-Yes. GitLab Community Edition (CE) is open source and free to self-host. This means you can run your own private GitLab instance on your own server with no subscription cost. This is one of the main reasons companies choose GitLab over GitHub.
+Yes. GitLab Community Edition is free and open source under the MIT licence. You can run it on your own server using Linux packages (Omnibus), Docker or Kubernetes. Minimum requirements are 4 CPU cores and 4 GB RAM (8 GB recommended). This is the main reason regulated industries - defence, finance, healthcare, government - choose GitLab over GitHub.
 
-### What are the user roles in GitLab?
+### What is GitLab CI/CD?
 
-GitLab has five permission levels for project members:
-
-| Role       | What they can do                             |
-| ---------- | -------------------------------------------- |
-| Guest      | View issues and code (if public)             |
-| Reporter   | Clone repo, create issues, view CI/CD        |
-| Developer  | Push code, create branches, run pipelines    |
-| Maintainer | Manage members, protected branches, settings |
-| Owner      | Full control including deletion              |
+GitLab CI/CD is a built-in system for automating testing, building and deploying your code. You define your pipeline in a file called `.gitlab-ci.yml` at the root of your repository. Every time you push code, GitLab runs your pipeline automatically. Full coverage is in [gitlab/06-gitlab-ci-cd.md](gitlab/06-gitlab-ci-cd.md).
 
 ---
 
-## 🔒 Security Questions
+## 🌿 Branching and Merging
 
-### I accidentally pushed a password or API key to GitHub. What do I do?
+### What is a branch?
 
-Act immediately - bots scan GitHub for exposed credentials within seconds of a push.
+A branch is a separate line of development. Technically it is just a lightweight pointer (40 bytes) to a specific commit - creating a branch is nearly instantaneous and uses almost no disk space.
 
-**Step 1 - Revoke the credential first.** Go to wherever the key was issued (AWS, GitHub, Google etc.) and invalidate it immediately. This is the most important step.
+Branches let you work on a new feature or fix without touching the main codebase. When you are done, you merge your branch back in. If something goes wrong you can delete the branch without affecting anything else.
 
-**Step 2 - Remove it from your repository:**
+### What is the difference between merge and rebase?
 
-```bash
-# Add the file to .gitignore
-echo "filename" >> .gitignore
+Both merge and rebase are ways of combining work from different branches.
 
-# Remove the file from tracking
-git rm --cached filename
+**Merge** creates a new "merge commit" that joins two branches together. It preserves the exact history of when things happened. It is safe and non-destructive. Recommended for beginners and shared branches.
 
-# Commit the change
-git commit -m "remove: accidentally committed credential"
+**Rebase** moves your commits on top of another branch, rewriting them as if they happened after the latest commit on that branch. It creates a cleaner, linear history but rewrites commit SHAs. Never rebase branches that other people are using.
 
-# Push
-git push
+### What is a merge conflict and how do I fix one?
+
+A merge conflict happens when two branches changed the same lines of the same file differently, and Git does not know which version to keep. Git pauses the merge and marks the conflicting sections in the file like this:
+
+```
+<<<<<<< HEAD
+this is the version from your current branch
+=======
+this is the version from the branch being merged
+>>>>>>> feature-branch
 ```
 
-**Step 3 - Remove it from history.** Simply deleting the file is not enough - the credential is still in your commit history. Use `git filter-repo` to permanently remove it:
+To fix it: open the file, choose which version to keep (or combine them), delete the `<<<<<<<`, `=======` and `>>>>>>>` markers, save the file and run `git add` followed by `git commit`.
 
-```bash
-# Install git-filter-repo first
+Most IDEs - VS Code, JetBrains, Visual Studio - have a visual merge conflict editor that makes this much easier than editing raw text.
+
+---
+
+## ↩️ Undoing Things
+
+### How do I undo my last commit?
+
+This is the most searched Git question on Stack Overflow with over 14 million views.
+
+**If you want to undo the commit but keep the changes in your files (most common):**
+```
+git reset --soft HEAD~1
+```
+
+**If you want to undo the commit and unstage the changes but keep the files:**
+```
+git reset HEAD~1
+```
+
+**If you want to undo the commit and delete the changes completely (destructive - cannot be undone):**
+```
+git reset --hard HEAD~1
+```
+
+⚠️ Only use `--hard` if you are absolutely sure you do not need those changes.
+
+### How do I undo a commit that I already pushed?
+
+If you have already pushed to a shared branch, the safest approach is `git revert`. This creates a new commit that undoes the changes without rewriting history:
+
+```
+git revert HEAD
+```
+
+This is safe to push because it does not change existing commits - it adds a new one.
+
+⚠️ Do not force-push a rewritten branch to a shared remote unless you have coordinated with your team. It will cause serious problems for anyone else who has pulled that branch.
+
+### I accidentally committed a file I should not have. How do I remove it?
+
+If you have not pushed yet:
+```
+git reset HEAD~1
+```
+
+Then add the file to `.gitignore` before committing again.
+
+If you have already pushed and the file contains sensitive data (like a password or API key), see the security section below. Removing it from the history requires `git filter-repo` and force-pushing - and you must also **revoke and rotate the compromised credential immediately**.
+
+---
+
+## 🔒 Security and Credentials
+
+### I accidentally pushed my API key or password to GitHub. What do I do?
+
+**Do this immediately - in this order:**
+
+1. **Revoke the compromised credential right now.** Go to whatever service the key belongs to and invalidate it. This is urgent - bots scan GitHub for secrets continuously and will use your key within minutes of it being public.
+2. **Generate a new credential** on that service.
+3. **Remove the secret from your repository history** using `git filter-repo` (see below).
+4. **Force-push** to overwrite the remote history.
+5. **Contact GitHub support** - they can help if the repo is public.
+
+The file being removed from the current commit is not enough. The secret will still be visible in the git history to anyone who clones or has cloned the repo.
+
+💡 GitHub's secret scanning automatically detects common token patterns (covering 39+ token types as of March 2026) in public repositories and alerts the service provider. GitHub Copilot can also detect generic passwords with AI. This is helpful but you should not rely on it - prevent commits first.
+
+### How do I remove a sensitive file from Git history?
+
+Use `git-filter-repo` - the officially recommended tool (endorsed by Git's own documentation):
+
+Install it:
+```
 pip install git-filter-repo
-
-# Remove the file from all history
-git filter-repo --path filename --invert-paths
 ```
 
-Then force push the cleaned history:
-
-```bash
-git push --force-with-lease
+Remove the file from all history:
+```
+git filter-repo --path secretfile.env --invert-paths
 ```
 
-⚠️ If the repository is public and even one person has cloned or forked it, assume the credential is compromised regardless. Always revoke it.
-
-### What should I never commit to a repository?
-
-Never commit:
-
-- Passwords of any kind
-- API keys and tokens (AWS, Google, Stripe, GitHub PATs etc.)
-- Private SSH keys (files ending in no extension or `.pem`)
-- `.env` files containing real values
-- Database connection strings with credentials
-- OAuth client secrets
-- Certificate private keys
-
-Always use environment variables or a secrets manager for sensitive values, and always add these files to `.gitignore` before writing any real values into them.
-
-### What is a `.env` file and why must it be ignored?
-
-A `.env` file stores environment variables - configuration values your application needs to run, like database URLs, API keys and secret keys. They are used so you do not hardcode these values into your source code.
-
-Because `.env` files contain sensitive information, they must always be in `.gitignore`. A safe practice is to commit a `.env.example` file with placeholder values to show others what variables are needed, but never the actual values.
-
-```bash
-# .gitignore
-.env
-.env.local
-.env.production
+Then force-push all branches:
+```
+git push origin --force --all
 ```
 
-### How do I check if I have accidentally committed something sensitive?
+⚠️ This rewrites history. Anyone who has cloned the repo will have diverged history and will need to re-clone. Coordinate with your team before doing this.
 
-Search your commit history:
+### How do I prevent committing secrets in the first place?
 
-```bash
-git log --all --full-history -- "*.env"
-git grep "API_KEY" $(git rev-list --all)
-```
+Three layers of prevention:
 
-You can also use tools like `git-secrets` or `truffleHog` which scan repositories for accidentally committed credentials.
+1. **Always add `.env` to `.gitignore` before your first commit.** Never commit `.env`, `*.pem`, `*.key`, `config.secret` or any file containing credentials.
 
-### Is it safe to commit to a private repository?
+2. **Use a pre-commit hook or scanning tool** to catch secrets before they are committed. TruffleHog (open source, 800+ secret types) and GitHub's built-in push protection (free for public repos) are both effective.
 
-Private repositories are not visible to the public but that does not make them completely safe for storing credentials. Team members, GitHub staff and anyone with access to the repository can see the history. If the repository is ever made public or if an account is compromised, those credentials are exposed.
+3. **Never hardcode credentials in your code.** Use environment variables or a secrets manager (AWS Secrets Manager, HashiCorp Vault, Doppler).
 
-The rule is simple: never commit credentials anywhere, public or private.
+### Should I use SSH or HTTPS for authentication?
+
+Both work. SSH is more convenient for regular use once set up - no passwords or tokens to manage. HTTPS is slightly easier to set up for beginners.
+
+For SSH, use an **ed25519 key** - it is the current best practice. The older RSA key type still works but ed25519 is faster and more secure.
+
+For HTTPS, use a **fine-grained Personal Access Token** (not a classic token, and never your account password which has not worked for Git since August 2021).
+
+🔥 **Easiest option for beginners:** Install the GitHub CLI (`gh`) and run `gh auth login`. It handles everything through your browser and securely stores credentials automatically.
 
 ---
 
-## 🔴 Advanced Git Questions
+## 💻 IDEs and Editors
 
-### What is an interactive rebase?
+### Do I need to use the terminal? Can I use Git entirely through VS Code?
 
-Interactive rebase (`git rebase -i`) lets you rewrite your commit history before sharing it. You can squash multiple commits into one, reorder commits, edit commit messages or drop commits entirely.
+You do not need to use the terminal once you are set up. VS Code's Source Control panel (`Ctrl + Shift + G` / `Cmd + Shift + G`) handles staging, committing, pushing, pulling, branch switching and merge conflicts visually.
 
-```bash
-git rebase -i HEAD~3    # interactively rebase the last 3 commits
-```
+However, learning the terminal commands first is strongly recommended. It teaches you what is actually happening, and you will inevitably encounter situations where the terminal is the only option. This course teaches both.
 
-This opens an editor where you can change the instruction before each commit:
+### What is the best VS Code extension for Git?
 
-- `pick` - keep the commit as is
-- `reword` - keep the commit but edit the message
-- `squash` - combine with the previous commit
-- `drop` - remove the commit entirely
+**GitLens** by GitKraken (46 million+ downloads) is the most popular Git extension for VS Code. The free tier shows who wrote each line, lets you explore commit history and navigate the repository visually. GitLens Pro adds a full visual Commit Graph, Worktrees, Visual File History and AI features.
 
-### What is `git cherry-pick`?
+**GitHub Pull Requests** by GitHub (31 million+ downloads) lets you review and manage pull requests and issues directly inside VS Code.
 
-Cherry-pick lets you apply a specific commit from one branch onto another without merging the entire branch.
+Note: **Git Graph** (13 million+ downloads) still works but is no longer actively maintained. VS Code's built-in **Source Control Graph** (introduced in version 1.93) now provides visual branch history natively.
 
-```bash
-git cherry-pick abc1234
-```
+### Which JetBrains IDE should I use?
 
-It is useful when you want one specific fix from a feature branch but are not ready to merge the whole thing.
+It depends on your language:
 
-### What is `git bisect`?
+| Language | IDE |
+|---|---|
+| Java or Kotlin | IntelliJ IDEA (Community edition is free) |
+| Python | PyCharm (Community edition is free) |
+| JavaScript or TypeScript | WebStorm |
+| C or C++ | CLion |
+| C# or .NET | Rider |
+| Go | GoLand |
 
-Bisect uses binary search to find which commit introduced a bug. You tell Git which commit is known-good and which is known-bad, and Git checks out the commit halfway between them. You test it, tell Git if it is good or bad, and Git narrows it down until it finds the exact commit that broke things.
-
-```bash
-git bisect start
-git bisect bad              # current commit is broken
-git bisect good v1.0        # version 1.0 was fine
-# Git checks out a commit halfway between - test it, then:
-git bisect good             # or git bisect bad
-# Repeat until Git identifies the culprit
-git bisect reset            # return to HEAD when done
-```
-
-### What is `git reflog`?
-
-The reflog is Git's diary - it records every time HEAD has moved, including checkouts, resets and rebases. It keeps entries for about 30 days and is your best tool for recovering from mistakes.
-
-```bash
-git reflog
-```
-
-If you accidentally ran `git reset --hard` and lost commits, the reflog will show you the commit hash you were on before and you can recover your work.
-
-### What is the difference between `HEAD^` and `HEAD~`?
-
-Both refer to parent commits but they differ when a commit has more than one parent (i.e. a merge commit).
-
-- `HEAD~1` = one commit back following the first parent
-- `HEAD~2` = two commits back following first parents
-- `HEAD^1` = same as `HEAD~1` (first parent)
-- `HEAD^2` = the second parent of a merge commit
-
-For everyday use `HEAD~1`, `HEAD~2` etc. is what you need. The `^` notation only matters when navigating merge commits.
+All JetBrains IDEs share the same Git integration. If you do not know what you want yet, IntelliJ IDEA Community edition is a safe choice.
 
 ---
 
-## 💪 Mindset and Motivation
+## 💼 Career and Industry
 
-### Is Git really this confusing for everyone?
+### Is a GitHub profile important for getting a job?
 
-Yes - genuinely. "How do I undo my last commit" has been the most searched Git question on Stack Overflow for over a decade with more than 14 million views. Developers with 10 years of experience still Google it.
+It helps significantly at tech-focused companies. **83% of technical hiring managers** view GitHub profiles as more reliable than traditional CVs. Recruiters look for: consistent contribution activity, clear READMEs, meaningful commit messages, code quality and open source involvement.
 
-Git was originally built by Linus Torvalds to manage the Linux kernel - one of the most complex software projects in human history with thousands of contributors. It was not designed with beginners in mind. It was designed for power and flexibility at extreme scale.
+That said, an empty GitHub profile will not necessarily disqualify you - many excellent developers work on private company repositories and have little public activity. It matters most at startups and tech-first companies.
 
-The good news is you only need to know about 10 commands for 90% of daily work. The rest you can look up as you need it.
+### Does Git/GitHub matter for fields other than software development?
 
-### Why does everyone seem to know Git except me?
+Yes, significantly:
 
-They do not. Most developers know a small set of commands and Google everything else. The developer who looks most confident with Git in your team almost certainly has ohshitgit.com bookmarked.
+- **Data science** - tracking Jupyter notebooks, ML models, data pipelines and experiment results
+- **DevOps and cloud** - GitOps (using Git as the source of truth for infrastructure) is used by over 64% of surveyed organisations as of 2025
+- **Academic research** - Git enables reproducible research. Published papers from Johns Hopkins, MIT and other universities document integrating GitHub into statistics and data science courses
+- **Technical writing** - documentation teams use Git branching and pull requests for collaborative writing and review
+- **Government** - the US federal government requires agencies to publish at least 20% of custom code as open source. France has published its entire legal code on GitHub
 
-As one developer put it: "Most developers don't actually know Git that well. They know 10-15 commands and Google the rest."
+### What about GitOps? What is it?
 
-### I feel like I am going to break everything. Is that normal?
+GitOps is a practice where your entire infrastructure (servers, cloud resources, Kubernetes deployments) is defined in Git repositories. Instead of manually running commands to deploy, every change goes through a Git pull request and an automated system applies it. It extends Git workflows from software development into operations. Popular tools include ArgoCD and Flux.
 
-Completely normal. The fear of breaking things is one of the most common feelings beginners report. Here is the truth: Git makes it very hard to permanently lose work. Almost everything is recoverable using the reflog, stash or by simply checking out an older commit.
+---
 
-The worst thing you can do is avoid committing because you are afraid. Commit often. The more commits you have, the more checkpoints you have to go back to.
+## 🚨 Common Errors
 
-> "Every expert was once a beginner. Every professional was once an amateur." - Robin Sharma
+### `fatal: not a git repository`
 
-### What is the minimum I need to know to use Git day to day?
+You are trying to run a Git command in a folder that does not have a Git repository. Either:
+- Run `git init` to create a new one here, or
+- `cd` into the correct project folder first
 
-These 10 commands cover the vast majority of everyday Git usage:
+### `error: src refspec main does not match any`
 
-```bash
-git init                    # start tracking a folder
-git clone URL               # download a repository
-git status                  # see what has changed
-git add .                   # stage all changes
-git commit -m "message"     # save a snapshot
-git push                    # upload to remote
-git pull                    # download and merge from remote
-git branch                  # list branches
-git checkout -b name        # create and switch to a branch
-git merge branch-name       # merge a branch into current
+You tried to push a branch called `main` but your local branch is still called `master`. Fix it:
+```
+git branch -M main
+```
+Then push again.
+
+### `rejected - non-fast-forward`
+
+Someone else pushed commits to the remote that you do not have locally. Pull first:
+```
+git pull
 ```
 
-Everything else - rebase, cherry-pick, bisect, hooks - you can learn as you need it.
+Resolve any conflicts, then push again.
 
-### How long does it take to get comfortable with Git?
+### `CONFLICT - Automatic merge failed`
 
-With daily practice, most people feel comfortable with the basics within two to four weeks. Getting confident with branching, merging and remote workflows takes a few months of real project use. Advanced features like interactive rebase and bisect come with time and specific need.
+A merge conflict. Open the flagged files, find the `<<<<<<<` markers, choose which changes to keep, save and then:
+```
+git add .
+```
+```
+git commit
+```
 
-The fastest way to learn is to use it on a real project every day - even if it is just your own personal projects. That is exactly what this course is designed to help you do.
+### `Permission denied (publickey)`
 
-> "The expert in anything was once a beginner." - Helen Hayes
+Your SSH key is not set up correctly. Check:
+1. Your key exists: run `ls ~/.ssh/` and look for `id_ed25519` and `id_ed25519.pub`
+2. The agent is running: `eval "$(ssh-agent -s)"` then `ssh-add ~/.ssh/id_ed25519`
+3. Your public key is added to GitHub at https://github.com/settings/keys
+
+### `HEAD detached at abc1234`
+
+You checked out a specific commit directly rather than a branch. You are in "detached HEAD" state - you can look around but commits here will not be saved to any branch. To get back safely:
+```
+git switch main
+```
+
+Or create a new branch from here to save your work:
+```
+git switch -c my-new-branch
+```
+
+---
+
+## 🔮 Git 3.0 and What is Coming
+
+### What is Git 3.0?
+
+Git 3.0 has **not been released yet**. Developers are targeting **late 2026**. It will be the first intentionally backwards-incompatible version of Git. Key planned changes:
+
+- **Default hash algorithm changes from SHA-1 to SHA-256** for new repositories
+- **Default ref storage changes from files to reftable** for new repositories
+- **Default branch name becomes `main`** (currently `master` in older Git installs without configuration)
+- **Rust becomes a mandatory build dependency**
+- **Removal of deprecated commands**: `git whatchanged`, `git pack-redundant`, graft support
+
+Note: SHA-256 repositories are not yet supported by GitHub, so the migration will not be seamless on day one.
+
+### Should I worry about Git 3.0?
+
+Not right now. Existing repositories will continue to work. The changes mostly affect new repositories created after upgrading. Setting `git config --global init.defaultBranch main` already matches the new default, so that part will be invisible.
+
+When Git 3.0 releases, this course will be updated with migration guidance.
 
 ---
 
 ## 🔗 Sources and Further Reading
 
-- [Official Git documentation](https://git-scm.com/doc)
-- [GitHub official documentation](https://docs.github.com)
-- [GitLab official documentation](https://docs.gitlab.com)
-- [GitHub Security best practices](https://docs.github.com/en/code-security)
-- [Oh Shit, Git!?! - Katie Sylor-Miller](https://ohshitgit.com) - honest, practical fixes for common Git mistakes
-- [Confusing Git Terminology - Julia Evans](https://jvns.ca/blog/2023/11/01/confusing-git-terminology/) - a developer survey on what confuses people most
-- [git-filter-repo](https://github.com/newren/git-filter-repo) - the recommended tool for removing sensitive data from history
-- [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) - a simpler alternative for cleaning history
-- [Conventional Commits](https://www.conventionalcommits.org) - a standard for writing commit messages
-- [First Contributions](https://github.com/firstcontributions/first-contributions) - a beginner-friendly open source project to practise on
-- [Git History on Wikipedia](https://en.wikipedia.org/wiki/Git) - full history of how Git was created
+- [Official Git documentation](https://git-scm.com/doc) - the complete reference for all Git commands and concepts
+- [Pro Git book](https://git-scm.com/book/en/v2) - the free official Git book, available online in multiple languages
+- [GitHub official documentation](https://docs.github.com) - everything about using GitHub
+- [GitLab official documentation](https://docs.gitlab.com) - everything about using GitLab
+- [Git BreakingChanges documentation](https://git-scm.com/docs/BreakingChanges) - the official list of what will change in Git 3.0
+- [Oh Shit, Git!?!](https://ohshitgit.com) - practical fixes for common Git disasters, also available profanity-free at dangitgit.com
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - the widely-adopted standard for structured commit messages
+- [GitHub Octoverse 2025](https://github.blog/news-insights/octoverse/) - the annual report on the state of open source and developer trends
+- [Git turns 20: A Q&A with Linus Torvalds](https://github.blog/open-source/git/git-turns-20-a-qa-with-linus-torvalds/) - Linus Torvalds on Git's creation, in his own words
+- [TruffleHog](https://github.com/trufflesecurity/trufflehog) - the leading open source secret scanning tool
+- [git-filter-repo](https://github.com/newren/git-filter-repo) - the officially recommended tool for rewriting Git history
 
 ---
 

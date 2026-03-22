@@ -2,6 +2,9 @@
 
 > "Give me six hours to chop down a tree and I will spend the first four sharpening the axe." - Abraham Lincoln
 
+**Difficulty:** 🟢 Beginner
+**Time to complete:** 5 minutes
+
 Taking five minutes to understand how this course is structured will save you hours of confusion later. This file explains everything you need to know before diving in.
 
 ---
@@ -13,7 +16,8 @@ Taking five minutes to understand how this course is structured will save you ho
 - [Difficulty levels](#-difficulty-levels)
 - [Callout key](#-callout-key)
 - [OS coverage](#-os-coverage)
-- [IDE coverage](#-ide-coverage)
+- [IDE and editor coverage](#-ide-and-editor-coverage)
+- [Where to type commands](#-where-to-type-commands)
 - [How to get the most out of this course](#-how-to-get-the-most-out-of-this-course)
 - [How to contribute](#-how-to-contribute)
 - [Getting help](#-getting-help)
@@ -30,7 +34,7 @@ git-unlocked is split into folders. Each folder covers a specific area:
 | `git/` | Everything about Git itself - beginner to advanced |
 | `github/` | Everything about GitHub - accounts, repos, PRs, Actions and more |
 | `gitlab/` | Everything about GitLab - basics, merge requests, CI/CD and more |
-| `ides/` | Using Git inside VS Code, JetBrains, Visual Studio, Xcode and others |
+| `ides/` | Using Git inside VS Code, JetBrains, Visual Studio, Xcode and other editors |
 | `terminal/` | Using Git in the terminal - CMD, PowerShell, Bash and Zsh |
 | `real-world/` | Real scenarios - team workflows, open source, industry practices |
 | `reference/` | Cheatsheet, glossary, keyboard shortcuts, common mistakes and tools |
@@ -108,7 +112,7 @@ Throughout this course you will see these callout icons. They are used consisten
 | 🎥 | Watch this - a curated video that explains the topic visually |
 | 🛠️ | Try it yourself - a hands-on exercise |
 | ❌ | Common mistake - and exactly how to fix it |
-| 🔒 | Security note - something important to keep your work safe |
+| 🔒 | Security note - something important to keep your work and credentials safe |
 
 ---
 
@@ -117,28 +121,50 @@ Throughout this course you will see these callout icons. They are used consisten
 Every command in this course is shown for all three major operating systems. You will always see the relevant section for your system clearly marked.
 
 🪟 **Windows** - both Command Prompt and PowerShell where they differ
-🍎 **Mac** - Terminal (Bash and Zsh)
+🍎 **Mac** - Terminal (Bash and Zsh, including Apple Silicon notes where relevant)
 🐧 **Linux** - Bash (applicable to most distributions including Ubuntu, Debian, Fedora and Arch)
 
 If a command is identical across all three operating systems it is shown once without a label.
 
 ---
 
-## 💻 IDE Coverage
+## 💻 IDE and Editor Coverage
 
-This course covers Git inside all major code editors and IDEs - not just VS Code. The `ides/` folder has dedicated files for each:
+This course covers Git inside all major code editors and IDEs - not just VS Code. The `ides/` folder has a dedicated file for each:
 
 | IDE / Editor | Coverage |
 |---|---|
-| VS Code | Full coverage - built-in Git UI, extensions (GitLens, Git Graph etc.), shortcuts |
-| JetBrains IDEs | IntelliJ IDEA, PyCharm, WebStorm, CLion, Rider, GoLand and others |
-| Visual Studio | Full Git integration for Windows and Mac users |
-| Xcode | Git setup and usage for Apple platform developers |
-| Neovim / Vim | Git plugins and terminal-based workflow |
-| Sublime Text | Git integration options |
+| VS Code | Full coverage - built-in Source Control panel, Source Control Graph, extensions (GitLens, GitHub Pull Requests etc.), shortcuts |
+| JetBrains IDEs | IntelliJ IDEA, PyCharm, WebStorm, CLion, Rider, GoLand and all other JetBrains products |
+| Visual Studio 2026 | Full Git integration for Windows developers |
+| Xcode 26 | Git setup and usage for Apple platform developers |
+| Neovim and Vim | Fugitive, Gitsigns, Neogit and LazyGit |
+| Sublime Text | GitSavvy plugin |
 | Other editors | General guidance applicable to any editor |
 
-💡 **Tip:** Even if you prefer using Git in the terminal, knowing how Git works inside your IDE will make you faster. Most modern IDEs show you diffs, blame views and branch history without leaving the editor.
+💡 **What is an IDE?** An IDE (Integrated Development Environment) is an all-in-one application that combines a code editor, debugger, terminal and version control integration in one window. Think of it as a super word processor for code. You do not need to know what an IDE is to use this course - it is explained fully in [ides/01-what-is-an-ide.md](../ides/01-what-is-an-ide.md).
+
+---
+
+## ⌨️ Where to Type Commands
+
+This is one of the most important things to understand as a beginner. When this course shows you a command, it always tells you exactly where to type it.
+
+Commands in this course are typed in one of these places:
+
+**A terminal (also called command line or shell):**
+
+🪟 **Windows** - open **Command Prompt** (search for `cmd`) or **PowerShell** (search for `powershell`) or **Windows Terminal**
+🍎 **Mac** - open **Terminal** (search in Spotlight with `Cmd + Space`, then type `Terminal`)
+🐧 **Linux** - open your **Terminal** application (usually `Ctrl + Alt + T`)
+
+**Inside VS Code:**
+Open the integrated terminal with `` Ctrl + ` `` (Windows/Linux) or `` Cmd + ` `` (Mac). Commands typed here work exactly the same as in a standalone terminal.
+
+**Inside JetBrains IDEs:**
+Open the terminal panel at the bottom with `Alt + F12` (Windows/Linux) or `Option + F12` (Mac).
+
+⚠️ **Important for beginners:** Type commands one at a time. Do not paste a block of multiple commands at once until you are comfortable with what each one does. One command, read the output, then the next.
 
 ---
 
@@ -160,13 +186,13 @@ The [first-contribution](../first-contribution/README.md) folder is a real repos
 
 The ❌ Common Mistakes sections in every file are based on real questions from Stack Overflow, Reddit and developer forums. These are the things that trip everyone up. Reading them before you encounter them will save you a lot of frustration.
 
+### Read the security notes
+
+The 🔒 security callouts throughout this course are not optional extras. Accidentally pushing a password or API key to a public GitHub repository is a real thing that happens to real developers regularly. The security guidance will protect you.
+
 ### Enable GitHub Discussions
 
 If you have a question that is not covered in the FAQ, open a [Discussion](https://github.com/zaccessss/git-unlocked/discussions). Other learners and contributors will help, and good questions get added to the FAQ.
-
-### Read the security notes
-
-The 🔒 security callouts throughout this course are not optional extras. Accidentally pushing a password to a public GitHub repository is a real thing that happens to real developers regularly. The security guidance will protect you.
 
 ---
 
@@ -202,10 +228,10 @@ Head to [Setting Up](03-setting-up.md) to get Git installed and configured on yo
 
 ## 🔗 Sources and Further Reading
 
-- [Official Git documentation](https://git-scm.com/doc)
-- [GitHub official documentation](https://docs.github.com)
-- [GitLab official documentation](https://docs.gitlab.com)
-- [Conventional Commits](https://www.conventionalcommits.org)
+- [Official Git documentation](https://git-scm.com/doc) - the authoritative reference for all Git commands
+- [GitHub official documentation](https://docs.github.com) - everything about using GitHub
+- [GitLab official documentation](https://docs.gitlab.com) - everything about using GitLab
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - the widely-adopted standard for writing commit messages
 
 ---
 

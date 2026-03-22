@@ -23,29 +23,29 @@ This document outlines the current state of git-unlocked, what is being worked o
 ## 📊 Current Status
 
 **Version:** 0.1.0
-**Stage:** Phase 1 in progress
+**Stage:** Phase 1 complete - Phase 2 starting
 **Started:** March 2026
 
-| Section             | Status         |
-| ------------------- | -------------- |
-| Repository setup    | ✅ Complete    |
-| README              | ✅ Complete    |
-| CONTRIBUTING        | ✅ Complete    |
-| CHANGELOG           | ✅ Complete    |
-| ROADMAP             | ✅ Complete    |
-| FAQ                 | 🔄 In progress |
-| HALL_OF_FAME        | 🔄 In progress |
-| introduction/       | ⏳ Planned     |
-| git/                | ⏳ Planned     |
-| github/             | ⏳ Planned     |
-| gitlab/             | ⏳ Planned     |
-| vscode/             | ⏳ Planned     |
-| terminal/           | ⏳ Planned     |
-| real-world/         | ⏳ Planned     |
-| reference/          | ⏳ Planned     |
-| resources/          | ⏳ Planned     |
-| first-contribution/ | ⏳ Planned     |
-| assets/             | ⏳ Planned     |
+| Section | Status |
+|---|---|
+| Repository setup | ✅ Complete |
+| README | ✅ Complete |
+| CONTRIBUTING | ✅ Complete |
+| CHANGELOG | ✅ Complete |
+| ROADMAP | ✅ Complete |
+| FAQ | ✅ Complete |
+| HALL_OF_FAME | ✅ Complete |
+| introduction/ | ✅ Complete |
+| git/ | ⏳ Planned |
+| github/ | ⏳ Planned |
+| gitlab/ | ⏳ Planned |
+| ides/ | ⏳ Planned |
+| terminal/ | ⏳ Planned |
+| real-world/ | ⏳ Planned |
+| reference/ | ⏳ Planned |
+| resources/ | ⏳ Planned |
+| first-contribution/ | ⏳ Planned |
+| assets/ | ⏳ Planned |
 
 ---
 
@@ -59,10 +59,12 @@ Getting the structure, branding and core files in place.
 - [x] CONTRIBUTING.md
 - [x] CHANGELOG.md
 - [x] ROADMAP.md
-- [ ] FAQ.md
-- [ ] HALL_OF_FAME.md
-- [ ] Folder structure
-- [ ] introduction/ files
+- [x] FAQ.md
+- [x] HALL_OF_FAME.md
+- [x] Folder structure
+- [x] introduction/01-welcome.md
+- [x] introduction/02-how-to-use-this-course.md
+- [x] introduction/03-setting-up.md
 - [ ] Banner and assets
 - [ ] first-contribution/ sandbox
 - [ ] GitHub Discussions enabled
@@ -72,7 +74,7 @@ Getting the structure, branding and core files in place.
 
 ## 📝 Phase 2 - Core Git Content
 
-Everything about Git itself - beginner to advanced, Windows, Mac and Linux throughout.
+Everything about Git itself - beginner to advanced, Windows, Mac and Linux throughout. Includes full history of version control, security coverage and real world examples.
 
 - [ ] What is version control
 - [ ] Installing Git
@@ -101,7 +103,6 @@ Everything about Git itself - beginner to advanced, Windows, Mac and Linux throu
 Everything about GitHub and GitLab - history, features, workflows and security.
 
 **GitHub**
-
 - [ ] What is GitHub
 - [ ] Creating an account
 - [ ] Repositories
@@ -117,7 +118,6 @@ Everything about GitHub and GitLab - history, features, workflows and security.
 - [ ] GitHub advanced
 
 **GitLab**
-
 - [ ] What is GitLab
 - [ ] GitLab vs GitHub
 - [ ] Creating an account
@@ -130,11 +130,16 @@ Everything about GitHub and GitLab - history, features, workflows and security.
 
 ## 💻 Phase 4 - Tools and Environment
 
-Using Git with VS Code and the terminal on every operating system.
+Using Git with IDEs and the terminal on every operating system.
 
+- [ ] What is an IDE
 - [ ] Git in VS Code
-- [ ] VS Code extensions
-- [ ] VS Code shortcuts
+- [ ] Git in JetBrains IDEs
+- [ ] Git in Visual Studio 2026
+- [ ] Git in Xcode 26
+- [ ] Git in Neovim and other editors
+- [ ] Extensions and plugins
+- [ ] Shortcuts by IDE
 - [ ] Using the terminal without Git
 - [ ] Windows Command Prompt
 - [ ] Windows PowerShell

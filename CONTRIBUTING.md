@@ -61,9 +61,14 @@ Go to [github.com/zaccessss/git-unlocked](https://github.com/zaccessss/git-unloc
 
 ### Step 2 - Clone your fork
 
-```bash
-# Replace YOUR_USERNAME with your GitHub username
+Open your terminal and type these commands one at a time. Replace `YOUR_USERNAME` with your GitHub username:
+
+```
 git clone https://github.com/YOUR_USERNAME/git-unlocked.git
+```
+
+Then:
+```
 cd git-unlocked
 ```
 
@@ -71,21 +76,30 @@ cd git-unlocked
 
 Always create a new branch for your changes. Never work directly on `main`.
 
-```bash
-# Use a descriptive branch name
+```
 git checkout -b fix/typo-in-branching-file
+```
+
+Use a descriptive branch name. Examples:
+```
 git checkout -b add/cherry-pick-exercise
+```
+```
 git checkout -b improve/merge-conflict-explanation
 ```
 
 ### Step 4 - Make your changes
 
-Open the project in VS Code and make your changes. Follow the writing style guide below.
+Open the project in VS Code or your preferred editor and make your changes. Follow the writing style guide below.
 
 ### Step 5 - Commit your changes
 
-```bash
+```
 git add .
+```
+
+Then:
+```
 git commit -m "fix: correct typo in git/06-branching.md"
 ```
 
@@ -93,7 +107,7 @@ Follow the commit message format described below.
 
 ### Step 6 - Push to your fork
 
-```bash
+```
 git push origin your-branch-name
 ```
 
@@ -111,11 +125,13 @@ All content in this course follows these rules. Please match them exactly.
 
 - Write in clear, plain **UK English** - colour, organise, practise, licence, recognise etc.
 - Write as if you are explaining to a friend - friendly but professional
+- Assume the reader has zero prior knowledge unless the file is marked 🟡 or 🔴
 - Do not talk down to the reader
 - Do not use jargon without explaining it first
 - No Oxford commas - "Git, GitHub and GitLab" not "Git, GitHub, and GitLab"
 - No em dashes - use hyphens only when necessary
 - Use correct grammar and spelling throughout
+- Quotes and motivation only where they naturally fit - not forced
 
 ### Name and branding
 
@@ -124,6 +140,7 @@ All content in this course follows these rules. Please match them exactly.
 - GitHub: [github.com/zaccessss](https://github.com/zaccessss)
 - Branding line: **Access Granted. Success Unlocked.**
 - The 🔓 padlock is the course symbol - it represents knowledge being unlocked
+- Branding goes at the **bottom** of every file only - never at the top
 
 ### Structure
 
@@ -132,49 +149,41 @@ Every content file must follow this structure:
 ```markdown
 # Title
 
-> One sentence description of what this file covers.
+> Optional relevant quote
 
-**Difficulty:** 🟢 Beginner / 🟡 Intermediate / 🔴 Advanced  
+**Difficulty:** 🟢 / 🟡 / 🔴
 **Time to complete:** X minutes
+
+Brief one or two sentence description of what this file covers.
 
 ---
 
 ## 📋 Table of Contents
 
-- [Section 1](#section-1)
-- [Section 2](#section-2)
-
 ---
 
 ## Section 1
-
 ...content...
 
 ---
 
 ## 🛠️ Try It Yourself
-
 ...exercise...
 
 ---
 
 ## ❌ Common Mistakes
-
 ...mistakes and fixes...
 
 ---
 
 ## 📖 Summary
-
 ...key takeaways...
 
 ---
 
 ## 🔗 Sources and Further Reading
-
-- [Official Git docs](https://git-scm.com/doc)
-- [GitHub docs](https://docs.github.com)
-- [GitLab docs](https://docs.gitlab.com)
+- [Link title](URL) - brief description of what this link is for
 
 ---
 
@@ -189,29 +198,24 @@ Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 
 ### OS coverage
 
-Every command must be shown for all three operating systems:
-
-````markdown
-🪟 **Windows - Command Prompt / PowerShell**
-
-```bash
-git init
-```
-````
-
-🍎 **Mac - Terminal**
-
-```bash
-git init
-```
-
-🐧 **Linux - Bash**
-
-```bash
-git init
-```
+Every command must be shown for all three operating systems using this format:
 
 ```
+🪟 **Windows - Command Prompt or PowerShell:**
+(command here)
+
+🍎 **Mac - Terminal:**
+(command here)
+
+🐧 **Linux - Terminal:**
+(command here)
+```
+
+If a command is identical on all three systems, show it once without OS labels.
+
+### Where to type commands
+
+Every command block must specify where to type it. Either include it in the OS label (as above) or add a sentence before the code block like "Type the following in your terminal:"
 
 ### Callouts
 
@@ -222,6 +226,7 @@ Use these callout icons consistently:
 | 💡 | Tips and helpful insights |
 | ⚠️ | Warnings - things people must not skip |
 | 🔥 | Pro tips for more advanced users |
+| 🔒 | Security notes - credential safety, dangerous commands |
 | ⌨️ | Keyboard shortcuts |
 | 🎥 | Curated video links |
 | 🛠️ | Try it yourself exercises |
@@ -233,7 +238,7 @@ Use these callout icons consistently:
 
 - All file names use **lowercase** and **hyphens** only - no spaces, no underscores, no capitals
 - Follow the existing numbering format: `01-`, `02-`, `03-` etc.
-- Place files in the correct folder - `git/`, `github/`, `gitlab/`, `vscode/`, `terminal/`, `real-world/`, `reference/` or `resources/`
+- Place files in the correct folder: `git/`, `github/`, `gitlab/`, `ides/`, `terminal/`, `real-world/`, `reference/` or `resources/`
 - Do not create new top-level folders without discussing it in an issue first
 
 ✅ Correct: `git/06-branching.md`
@@ -246,10 +251,8 @@ Use these callout icons consistently:
 Use this format for all commits:
 
 ```
-
 type: short description of what you did
-
-````
+```
 
 | Type | When to use |
 |---|---|
@@ -261,12 +264,15 @@ type: short description of what you did
 
 **Examples:**
 
-```bash
+```
 git commit -m "add: cherry-pick exercise to git/13-cherry-pick.md"
+```
+```
 git commit -m "fix: correct typo in github/04-issues.md"
+```
+```
 git commit -m "update: improve merge conflict explanation with diagram"
-git commit -m "add: translate introduction/01-welcome.md to French"
-````
+```
 
 ---
 
@@ -278,7 +284,7 @@ When opening a pull request:
 - Explain what you changed and why in the description
 - Link any related issues using `Closes #123` or `Relates to #123`
 - Make sure your changes follow the writing style guide
-- Make sure you have checked for typos and grammar errors
+- Check for typos and grammar errors before submitting
 - Keep PRs focused - one topic per PR is much easier to review
 
 ---

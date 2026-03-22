@@ -3,9 +3,9 @@
 > "Well begun is half done." - Aristotle
 
 **Difficulty:** 🟢 Beginner
-**Time to complete:** 20-40 minutes depending on your operating system and IDE
+**Time to complete:** 20-40 minutes
 
-This file gets you fully set up before you write a single Git command. By the end you will have Git installed, configured with your identity, connected to GitHub or GitLab and set up inside your code editor.
+This file gets you fully set up before you write a single Git command. By the end you will have Git installed, configured with your identity, connected to GitHub or GitLab, and set up inside your code editor or IDE.
 
 Do not skip this file. A properly configured Git setup prevents a huge number of the errors beginners run into.
 
@@ -13,15 +13,73 @@ Do not skip this file. A properly configured Git setup prevents a huge number of
 
 ## 📋 Table of Contents
 
+- [What is a terminal?](#-what-is-a-terminal)
+- [What is an IDE?](#-what-is-an-ide)
 - [Step 1 - Check if Git is already installed](#-step-1---check-if-git-is-already-installed)
 - [Step 2 - Install Git](#-step-2---install-git)
 - [Step 3 - Configure Git for the first time](#-step-3---configure-git-for-the-first-time)
-- [Step 4 - Set up authentication with GitHub or GitLab](#-step-4---set-up-authentication-with-github-or-gitlab)
+- [Step 4 - Set up authentication](#-step-4---set-up-authentication)
 - [Step 5 - Set up Git in your IDE](#-step-5---set-up-git-in-your-ide)
-- [Step 6 - Verify everything is working](#-step-6---verify-everything-is-working)
-- [Common Setup Mistakes](#-common-setup-mistakes)
+- [Step 6 - Quick test to verify everything works](#-step-6---quick-test-to-verify-everything-works)
+- [Common setup mistakes](#-common-setup-mistakes)
 - [Summary](#-summary)
 - [Sources and Further Reading](#-sources-and-further-reading)
+
+---
+
+## 🖥️ What is a Terminal?
+
+Before anything else - what is a terminal and where do you find it?
+
+A **terminal** (also called command line, command prompt, shell or console) is a text-based window where you type commands one line at a time and press Enter to run them. It is like talking directly to your computer in a language it understands.
+
+You do not need to be a hacker to use a terminal. You just need to type the right words.
+
+**How to open a terminal:**
+
+🪟 **Windows:**
+- Press the **Windows key**, type `cmd` and press Enter to open Command Prompt
+- Or type `powershell` and press Enter to open PowerShell (more modern - recommended)
+- Or type `Windows Terminal` if you have it installed (best option for Windows)
+
+🍎 **Mac:**
+- Press `Cmd + Space` to open Spotlight, type `Terminal` and press Enter
+- Or go to **Applications → Utilities → Terminal**
+
+🐧 **Linux:**
+- Press `Ctrl + Alt + T` on most distributions
+- Or right-click the desktop and choose "Open Terminal"
+
+⚠️ **Tip for beginners:** Type commands **one at a time**. Press Enter after each one. Read the output before typing the next command. Never paste a block of multiple commands until you understand what each one does.
+
+---
+
+## 💻 What is an IDE?
+
+An **IDE (Integrated Development Environment)** is an all-in-one application for writing and managing code. Think of it as a "super word processor for code" that combines:
+
+- A **code editor** with syntax highlighting and auto-completion
+- A **file explorer** to navigate your project
+- A **terminal** so you can run commands without switching windows
+- **Debugger** tools to find and fix errors
+- **Git integration** so you can manage version control visually without the terminal
+
+**Popular IDEs in 2026 (by developer usage):**
+
+| IDE | Best for | Price |
+|---|---|---|
+| **VS Code** | Everything - most popular by far | Free |
+| **IntelliJ IDEA** | Java and Kotlin | Free (Community) / Paid (Ultimate) |
+| **PyCharm** | Python | Free (Community) / Paid (Pro) |
+| **WebStorm** | JavaScript and TypeScript | Paid |
+| **Visual Studio 2026** | C# and .NET on Windows | Free (Community) / Paid |
+| **Xcode 26** | iOS, macOS and Apple platforms | Free (Mac App Store) |
+| **CLion** | C and C++ | Paid |
+| **Rider** | .NET and Unreal Engine | Paid |
+
+💡 **Recommendation:** If you are new to development, start with **VS Code**. It is free, works on Windows, Mac and Linux, has an enormous extension ecosystem and is used by over 75% of developers worldwide.
+
+A **text editor** like Notepad is simpler than an IDE - it only edits text with no understanding of code. A **terminal** is a command-line interface with no graphical editor. An IDE combines all three.
 
 ---
 
@@ -29,31 +87,31 @@ Do not skip this file. A properly configured Git setup prevents a huge number of
 
 Before installing anything, check if Git is already on your machine. Many computers come with Git pre-installed, especially Macs and Linux machines.
 
-Open your terminal or command prompt and run:
+Open your terminal and type the following command, then press Enter:
 
-🪟 **Windows - Command Prompt or PowerShell:**
-```bash
+🪟 **Windows (Command Prompt or PowerShell):**
+```
 git --version
 ```
 
-🍎 **Mac - Terminal:**
-```bash
+🍎 **Mac (Terminal):**
+```
 git --version
 ```
 
-🐧 **Linux - Terminal:**
-```bash
+🐧 **Linux (Terminal):**
+```
 git --version
 ```
 
 If Git is installed you will see something like:
 ```
-git version 2.43.0
+git version 2.53.0
 ```
 
-If you see an error like `'git' is not recognized` or `command not found`, Git is not installed. Continue to Step 2.
+If you see `'git' is not recognized` (Windows) or `command not found` (Mac/Linux), Git is not installed. Continue to Step 2.
 
-💡 **Tip:** Even if Git is installed, check the version. If it is older than version 2.28 it is worth updating - some features in this course use newer Git behaviour.
+💡 **Tip:** Even if Git is installed, check the version number. The current stable release is **Git 2.53.0** (February 2026). If your version is older than 2.28, it is worth updating - some features in this course use newer Git behaviour. Git 3.0 is expected later in 2026 and will bring significant changes including defaulting to `main` as the branch name.
 
 ---
 
@@ -61,40 +119,45 @@ If you see an error like `'git' is not recognized` or `command not found`, Git i
 
 ### 🪟 Windows
 
-You have several options on Windows. Git for Windows is the most straightforward.
-
 **Option A - Git for Windows (recommended for beginners):**
 
-1. Go to [git-scm.com/download/win](https://git-scm.com/download/win)
-2. The download should start automatically
-3. Run the installer
-4. During installation, the default options are fine for most people but pay attention to these:
-   - **Default editor:** Change this to your preferred editor (VS Code, Notepad++ etc.) instead of Vim if you are not comfortable with Vim
-   - **Default branch name:** Select "Override the default branch name for new repositories" and type `main` - this matches GitHub and GitLab's default
-   - **PATH environment:** Choose "Git from the command line and also from 3rd-party software" - this makes Git available everywhere
-   - **Line ending conversions:** Choose "Checkout Windows-style, commit Unix-style line endings" - this prevents issues when collaborating across operating systems
-   - **Terminal emulator:** Choose "Use Windows' default console window" if you want to use PowerShell or CMD, or "Use MinTTY" if you prefer the Git Bash terminal
-5. Complete the installation
-6. Open a new Command Prompt or PowerShell window and run `git --version` to confirm
+1. Open your web browser and go to: **https://git-scm.com/install/windows**
+2. The download should start automatically. If not, click the link for the 64-bit installer
+3. Run the downloaded file (it will be named something like `Git-2.53.0-64-bit.exe`)
+4. Click through the installer. The default options are fine for most people, but pay attention to these specific screens:
+
+   - **Default editor:** Change from Vim to your preferred editor. If you have VS Code, choose "Use Visual Studio Code as Git's default editor". If you are not sure, choose Nano - it is much easier for beginners than Vim
+   - **Initial branch name:** Select "Override the default branch name for new repositories" and type `main`. This matches GitHub and GitLab's default
+   - **PATH environment:** Choose "Git from the command line and also from 3rd-party software" - this makes Git available in Command Prompt, PowerShell and anywhere else
+   - **Line ending conversions:** Choose "Checkout Windows-style, commit Unix-style line endings" - this prevents problems when sharing code across operating systems
+   - **Terminal emulator:** Choose "Use Windows' default console window" to use PowerShell/CMD, or "Use MinTTY" for Git Bash (a Unix-style terminal)
+
+5. Click **Install** and wait for it to finish
+6. Click **Finish**
+7. **Close and reopen** any terminal windows. Git will not be recognised in terminals that were already open before installation
 
 **Option B - winget (Windows Package Manager):**
-```powershell
+
+Open PowerShell and type this command, then press Enter:
+```
 winget install --id Git.Git -e --source winget
 ```
 
-**Option C - Chocolatey:**
-```powershell
+**Option C - Chocolatey (if you have Chocolatey installed):**
+
+Open PowerShell as Administrator and type:
+```
 choco install git
 ```
 
-**Option D - Scoop:**
-```powershell
+**Option D - Scoop (if you have Scoop installed):**
+```
 scoop install git
 ```
 
-💡 **Tip:** Git for Windows also installs Git Bash - a terminal that lets you use Unix-style commands on Windows. Many developers prefer it for Git work.
+💡 **Git for Windows also installs Git Bash** - a terminal that lets you use Unix-style commands on Windows. Many developers prefer it for Git work.
 
-⚠️ **After installing on Windows:** Close and reopen any terminal windows so the new PATH is loaded. Git will not be recognised in terminals that were already open.
+⚠️ **After installing on Windows:** Always close and reopen your terminal after installation. The new PATH only takes effect in new terminal windows.
 
 ---
 
@@ -102,318 +165,380 @@ scoop install git
 
 **Option A - Homebrew (recommended):**
 
-Homebrew is a package manager for Mac. If you do not have it, install it first:
-```bash
+Homebrew is a package manager for Mac - it lets you install developer tools with simple commands. If you do not have Homebrew yet, install it first.
+
+Open Terminal and type this command, then press Enter:
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-Then install Git:
-```bash
+Follow the on-screen prompts. It will ask for your Mac password.
+
+⚠️ **Apple Silicon Macs (M1, M2, M3, M4 or M5 chip):** After Homebrew installs, you must run these two commands or it will not work:
+```
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+```
+Then:
+```
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+Once Homebrew is installed, install Git by typing:
+```
 brew install git
 ```
 
 **Option B - Xcode Command Line Tools:**
 
-If you use Xcode or develop for Apple platforms, the Command Line Tools include Git:
-```bash
+If you use Xcode or develop for Apple platforms, the Command Line Tools include Git. Type this in Terminal:
+```
 xcode-select --install
 ```
 
-A dialog will appear asking you to install - click Install. This takes a few minutes.
+A dialog will appear - click **Install**. This takes a few minutes.
 
 **Option C - Official installer:**
 
-Download the macOS installer from [git-scm.com/download/mac](https://git-scm.com/download/mac) and follow the prompts.
+Go to **https://git-scm.com/install/mac** in your browser and download the installer.
 
-💡 **Tip:** Homebrew is strongly recommended for Mac developers. It makes installing and updating developer tools much easier. Once you have it, you can install almost any developer tool with a single command.
-
-⚠️ **Apple Silicon (M1/M2/M3/M4 Macs):** Homebrew installs to `/opt/homebrew/` on Apple Silicon rather than `/usr/local/`. If you get a "command not found" error after installing, add Homebrew to your PATH:
-```bash
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-```
+💡 **Which Mac do I have?** Click the Apple logo (top left) → About This Mac. If it says "Apple M1", "M2", "M3", "M4" or "M5" you have Apple Silicon. If it says "Intel" you have an Intel Mac.
 
 ---
 
 ### 🐧 Linux
 
-Use your distribution's package manager:
+Use your distribution's package manager. Type the command for your distribution, press Enter, and enter your password when asked:
 
-**Ubuntu / Debian / Linux Mint:**
-```bash
+**Ubuntu, Debian or Linux Mint:**
+```
 sudo apt update
+```
+Then:
+```
 sudo apt install git
 ```
 
 **Fedora:**
-```bash
+```
 sudo dnf install git
 ```
 
-**Arch Linux / Manjaro:**
-```bash
+**Arch Linux or Manjaro:**
+```
 sudo pacman -S git
 ```
 
 **openSUSE:**
-```bash
+```
 sudo zypper install git
 ```
 
-**CentOS / RHEL / AlmaLinux:**
-```bash
+**CentOS, RHEL or AlmaLinux:**
+```
 sudo yum install git
 ```
 
-💡 **Tip:** The version of Git in your package manager may be slightly behind the latest release. For most users this does not matter. If you need the very latest version, you can build from source or use a PPA (Ubuntu) or COPR (Fedora).
+**Alpine Linux:**
+```
+apk add git
+```
+
+💡 **Ubuntu tip:** For the very latest Git version, add the official PPA first:
+```
+sudo add-apt-repository ppa:git-core/ppa
+```
+Then:
+```
+sudo apt update
+```
+Then:
+```
+sudo apt install git
+```
 
 ---
 
 ## ⚙️ Step 3 - Configure Git for the First Time
 
-This is the step most tutorials rush through. Do not skip it. Git uses this configuration to identify who made each commit - it appears in your project history, on GitHub and on GitLab.
+This step is essential. Without it, Git cannot create commits because it does not know who you are.
 
-### Set your name and email
+Run each command below one at a time. Replace the example values with your actual name and email.
 
-These must match the name and email on your GitHub or GitLab account for your commits to be linked to your profile.
+### Set your name
 
-```bash
+🪟 **Windows (Command Prompt or PowerShell) / 🍎 Mac (Terminal) / 🐧 Linux (Terminal):**
+```
 git config --global user.name "Your Name"
+```
+
+For example:
+```
+git config --global user.name "Isaac Adjei"
+```
+
+### Set your email
+
+```
 git config --global user.email "your.email@example.com"
 ```
 
-Replace `Your Name` and `your.email@example.com` with your actual name and email.
-
-The `--global` flag means this applies to all repositories on your computer. You can override it for a specific repository by running the same command without `--global` inside that repository.
+⚠️ **Use the same email address you use (or will use) for your GitHub or GitLab account.** This is how your commits get linked to your profile.
 
 ### Set your default branch name
 
-GitHub and GitLab both default to `main` as the primary branch name. Set Git to match:
-
-```bash
+```
 git config --global init.defaultBranch main
 ```
 
-⚠️ **Why this matters:** Older versions of Git default to `master`. If yours does not match GitHub or GitLab you will get confusing errors when pushing for the first time.
+This sets `main` as the name of the first branch in every new repository you create - matching GitHub and GitLab's default. Without this, older versions of Git use `master`, which causes confusing errors when pushing to GitHub.
 
-### Set your default editor
+### Set your default pull behaviour
 
-When Git needs you to write a message (such as for a merge commit), it opens a text editor. Set this to an editor you are comfortable with:
-
-**VS Code:**
-```bash
-git config --global core.editor "code --wait"
 ```
-
-**Notepad++ (Windows):**
-```bash
-git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
-```
-
-**Nano (good default for terminal users):**
-```bash
-git config --global core.editor "nano"
-```
-
-**Vim (if you know Vim):**
-```bash
-git config --global core.editor "vim"
-```
-
-**JetBrains IDEs** handle commit messages inside the IDE itself so the terminal editor matters less, but setting nano or VS Code is still a good fallback.
-
-💡 **Tip:** If you have never used Vim and Git opens it unexpectedly, type `:q!` and press Enter to exit without saving. Then set a different editor using the commands above.
-
-### Set line ending behaviour
-
-Line endings differ between operating systems. This setting prevents those differences from causing problems when collaborating.
-
-🪟 **Windows:**
-```bash
-git config --global core.autocrlf true
-```
-
-🍎 **Mac / 🐧 Linux:**
-```bash
-git config --global core.autocrlf input
-```
-
-### Set a default pull behaviour
-
-This prevents a common warning Git shows when you pull:
-
-```bash
 git config --global pull.rebase false
 ```
 
-This tells Git to use merge (not rebase) when pulling. You can change this later once you understand the difference between the two.
+This tells Git to use merge (not rebase) when pulling changes. For beginners, merge is simpler and easier to understand. You can change this later once you know the difference.
+
+### Set line ending behaviour
+
+Line endings work differently on different operating systems. This setting prevents problems when sharing code across platforms.
+
+🪟 **Windows only:**
+```
+git config --global core.autocrlf true
+```
+
+🍎 **Mac only:**
+```
+git config --global core.autocrlf input
+```
+
+🐧 **Linux only:**
+```
+git config --global core.autocrlf input
+```
+
+### Set your default editor (optional but recommended)
+
+When Git needs you to write a message (for example during a merge), it opens a text editor. Set this to an editor you are comfortable with.
+
+**VS Code:**
+```
+git config --global core.editor "code --wait"
+```
+
+**Nano (good beginner-friendly option for terminal users):**
+```
+git config --global core.editor "nano"
+```
+
+💡 **If Git ever opens Vim unexpectedly** and you do not know how to exit, type `:q!` and press Enter to quit without saving. Then set a different editor using one of the commands above.
 
 ### Verify your configuration
 
-Check everything looks correct:
-
-```bash
+Check everything looks correct by typing:
+```
 git config --global --list
 ```
 
-You should see your name, email, default branch, editor and other settings listed.
-
-Your global configuration is stored in a file called `.gitconfig` in your home directory. You can open and edit it directly if needed:
-
-🪟 **Windows:**
-```
-C:\Users\YourUsername\.gitconfig
-```
-
-🍎 **Mac / 🐧 Linux:**
-```
-~/.gitconfig
-```
+You should see your name, email, default branch name and other settings listed.
 
 ---
 
-## 🔐 Step 4 - Set up Authentication with GitHub or GitLab
+## 🔐 Step 4 - Set up Authentication
 
-To push code to GitHub or GitLab you need to prove who you are. There are two ways to do this: SSH keys or HTTPS with a Personal Access Token. SSH is more secure and more convenient once set up.
+To push code to GitHub or GitLab you need to prove who you are. There are three main ways to do this. **Option A (GitHub CLI) is the easiest for beginners.**
 
-### Option A - SSH Keys (recommended)
+---
 
-SSH keys work like a lock and key. You generate a key pair - a private key that stays on your computer and a public key that you give to GitHub or GitLab. When you connect, they match without you needing to type a password.
+### Option A - GitHub CLI (easiest - recommended for beginners)
+
+The GitHub CLI (`gh`) handles authentication automatically through your browser. No SSH keys or tokens to manage manually.
+
+**Install GitHub CLI:**
+
+🪟 **Windows:**
+```
+winget install --id GitHub.cli
+```
+
+🍎 **Mac:**
+```
+brew install gh
+```
+
+🐧 **Linux (Ubuntu/Debian):**
+```
+sudo apt install gh
+```
+
+**Authenticate:**
+
+Type this command:
+```
+gh auth login
+```
+
+Follow the prompts:
+- Choose `GitHub.com`
+- Choose `HTTPS` or `SSH` (either works)
+- Choose `Login with a web browser`
+- Copy the one-time code shown, press Enter
+- Your browser opens - paste the code and authorise
+
+That is it. GitHub CLI securely stores your credentials and you will never need to enter a password for Git operations again.
+
+---
+
+### Option B - SSH Keys (secure, recommended for regular use)
+
+SSH keys work like a lock and key. You generate a key pair - a private key that stays on your computer and a public key that you give to GitHub or GitLab. They match without you ever typing a password.
 
 **Step 1 - Generate an SSH key:**
 
-🪟 **Windows (Git Bash or PowerShell) / 🍎 Mac / 🐧 Linux:**
-```bash
+🪟 **Windows (Git Bash or PowerShell) / 🍎 Mac (Terminal) / 🐧 Linux (Terminal):**
+```
 ssh-keygen -t ed25519 -C "your.email@example.com"
 ```
 
 Replace the email with the one on your GitHub or GitLab account.
 
-When asked where to save the key, press Enter to accept the default location (`~/.ssh/id_ed25519`).
+When asked "Enter file in which to save the key" - press **Enter** to accept the default location.
 
-When asked for a passphrase, either press Enter for no passphrase or enter one for extra security. A passphrase is recommended.
+When asked for a passphrase - either press **Enter** for no passphrase or type one for extra security. A passphrase is recommended.
 
-**Step 2 - Start the SSH agent:**
-
-🪟 **Windows (PowerShell - run as Administrator):**
-```powershell
-Get-Service -Name ssh-agent | Set-Service -StartupType Manual
-Start-Service ssh-agent
-ssh-add $env:USERPROFILE\.ssh\id_ed25519
-```
+**Step 2 - Start the SSH agent and add your key:**
 
 🪟 **Windows (Git Bash):**
-```bash
+```
 eval "$(ssh-agent -s)"
+```
+Then:
+```
 ssh-add ~/.ssh/id_ed25519
 ```
 
+🪟 **Windows (PowerShell - run as Administrator):**
+```
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+```
+Then:
+```
+Start-Service ssh-agent
+```
+Then:
+```
+ssh-add $env:USERPROFILE\.ssh\id_ed25519
+```
+
 🍎 **Mac:**
-```bash
+```
 eval "$(ssh-agent -s)"
+```
+Then:
+```
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
 
 🐧 **Linux:**
-```bash
+```
 eval "$(ssh-agent -s)"
+```
+Then:
+```
 ssh-add ~/.ssh/id_ed25519
 ```
 
 **Step 3 - Copy your public key:**
 
 🪟 **Windows (PowerShell):**
-```powershell
+```
 Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub | clip
 ```
 
-🪟 **Windows (Git Bash):**
-```bash
-cat ~/.ssh/id_ed25519.pub
-```
-Select the output and copy it manually.
-
 🍎 **Mac:**
-```bash
+```
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 🐧 **Linux:**
-```bash
+```
 cat ~/.ssh/id_ed25519.pub
 ```
-Select the output and copy it manually, or install `xclip`:
-```bash
-xclip -selection clipboard < ~/.ssh/id_ed25519.pub
-```
+Select all the output and copy it manually.
 
-**Step 4 - Add the key to GitHub:**
+**Step 4 - Add your key to GitHub:**
 
-1. Go to [github.com/settings/keys](https://github.com/settings/keys)
+1. Open your browser and go to **https://github.com/settings/keys**
 2. Click **New SSH key**
-3. Give it a title (e.g. "My Laptop")
-4. Paste your public key
-5. Click **Add SSH key**
+3. Give it a title (e.g. `My Laptop`)
+4. Choose **Authentication Key** as the type
+5. Paste your public key
+6. Click **Add SSH key**
 
-**Add the key to GitLab:**
+**Add your key to GitLab:**
 
-1. Go to [gitlab.com/-/profile/keys](https://gitlab.com/-/profile/keys)
+1. Go to **https://gitlab.com/-/user_settings/ssh_keys**
 2. Paste your public key
 3. Give it a title
 4. Click **Add key**
 
 **Step 5 - Test the connection:**
 
-GitHub:
-```bash
+🪟 **Windows / 🍎 Mac / 🐧 Linux:**
+
+For GitHub:
+```
 ssh -T git@github.com
 ```
 
-GitLab:
-```bash
+You should see: `Hi YOUR_USERNAME! You've successfully authenticated, but GitHub does not provide shell access.`
+
+For GitLab:
+```
 ssh -T git@gitlab.com
 ```
 
-You should see a success message with your username. If you set a passphrase you will be asked for it.
+You should see: `Welcome to GitLab, @your_username!`
 
 ---
 
-### Option B - HTTPS with a Personal Access Token
+### Option C - Personal Access Token (HTTPS alternative)
 
-If you prefer HTTPS over SSH, you need a Personal Access Token (PAT) instead of your password. GitHub removed password authentication in August 2021 and GitLab followed a similar path.
+Since August 2021, GitHub no longer accepts your account password for Git operations. If you prefer HTTPS over SSH, you need a Personal Access Token (PAT).
 
-**GitHub:**
+**Create a fine-grained token on GitHub (recommended):**
 
-1. Go to [github.com/settings/tokens](https://github.com/settings/tokens)
-2. Click **Generate new token (classic)**
-3. Give it a name (e.g. "My Laptop")
-4. Set an expiry date
-5. Select the `repo` scope at minimum
-6. Click **Generate token**
-7. Copy the token immediately - you will not see it again
+1. Go to **https://github.com/settings/tokens**
+2. Click **Generate new token → Fine-grained token**
+3. Give it a name (e.g. `My Laptop`)
+4. Set an expiry date (shorter is more secure)
+5. Under Repository access, choose **All repositories** or select specific ones
+6. Under Permissions → Contents → choose **Read and write**
+7. Click **Generate token**
+8. **Copy the token immediately** - you will not see it again
 
-⚠️ **Store your token safely.** Use a password manager. Never paste it into a file in your repository.
+⚠️ **Treat your token like a password.** Store it in a password manager. Never write it in a file in your repository.
 
-When Git asks for your password, use the token instead.
-
-To avoid entering it every time, set up a credential helper:
+**Set up a credential helper so you do not have to paste it every time:**
 
 🪟 **Windows:**
-```bash
-git config --global credential.helper wincred
+```
+git config --global credential.helper manager
 ```
 
 🍎 **Mac:**
-```bash
+```
 git config --global credential.helper osxkeychain
 ```
 
 🐧 **Linux:**
-```bash
-git config --global credential.helper store
+```
+git config --global credential.helper libsecret
 ```
 
-⚠️ **Linux note:** `credential.helper store` saves your token in plain text at `~/.git-credentials`. It is convenient but less secure. Consider using `libsecret` if available on your distribution.
+The next time you push, Git will ask for your username and token, then save them securely.
 
 ---
 
@@ -421,234 +546,297 @@ git config --global credential.helper store
 
 ### VS Code
 
-VS Code has Git support built in - no extensions needed to get started.
+VS Code has full Git support built in - no extensions needed for basic use.
 
 1. Open VS Code
-2. Open any folder that is a Git repository (or run `git init` in a folder first)
-3. Click the **Source Control** icon in the left sidebar (it looks like a branch with dots - or press `Ctrl + Shift + G` on Windows/Linux, `Cmd + Shift + G` on Mac)
-4. VS Code will automatically detect Git and show your changes
-
-**Recommended extensions:**
-- **GitLens** - shows who wrote each line, commit history, blame annotations and much more. One of the most popular VS Code extensions
-- **Git Graph** - visual branch graph inside VS Code
-- **Git History** - view file history and compare commits
-- **GitHub Pull Requests** - manage pull requests without leaving VS Code
-
-To install an extension: press `Ctrl + Shift + X` (Windows/Linux) or `Cmd + Shift + X` (Mac), search the extension name and click Install.
+2. Open any folder by clicking **File → Open Folder**
+3. Press `Ctrl + Shift + G` (Windows/Linux) or `Cmd + Shift + G` (Mac) to open the **Source Control** panel
+4. VS Code automatically detects Git and shows your changes
 
 **Set VS Code as your Git editor (if not done in Step 3):**
-```bash
+```
 git config --global core.editor "code --wait"
 ```
 
+**Recommended extensions:**
+
+Install extensions by pressing `Ctrl + Shift + X` (Windows/Linux) or `Cmd + Shift + X` (Mac), then searching by name:
+
+- **GitLens** by GitKraken - the most popular Git extension (46 million+ downloads). Shows who wrote each line, full commit history, visual branch graph and much more. The free tier is generous
+- **GitHub Pull Requests** by GitHub - manage pull requests without leaving VS Code
+
+💡 **Note on Git Graph:** Git Graph is still available with 13 million+ downloads but is no longer actively maintained. VS Code's built-in **Source Control Graph** (added in version 1.93) now handles visual branch history and largely replaces it.
+
 ---
 
-### JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm, CLion, Rider, GoLand, RubyMine, PhpStorm)
+### JetBrains IDEs (IntelliJ IDEA, PyCharm, WebStorm, CLion, Rider, GoLand)
 
-All JetBrains IDEs share the same Git integration - once you know it in one, you know it in all of them.
+All JetBrains IDEs share the same Git integration.
 
-**Setting up Git in a JetBrains IDE:**
-
+**Setting up Git:**
 1. Open your IDE
-2. Go to **File → Settings** (Windows/Linux) or **IDE Name → Preferences** (Mac)
-3. Navigate to **Version Control → Git**
-4. The IDE will usually auto-detect Git. If not, click the folder icon next to the Path to Git executable field and locate Git:
-   - 🪟 **Windows:** Usually `C:\Program Files\Git\bin\git.exe`
-   - 🍎 **Mac:** Usually `/usr/bin/git` or `/opt/homebrew/bin/git`
-   - 🐧 **Linux:** Usually `/usr/bin/git`
-5. Click **Test** to verify
+2. Open Settings: `Ctrl + Alt + S` (Windows/Linux) or `Cmd + ,` (Mac)
+3. Go to **Version Control → Git**
+4. The IDE usually detects Git automatically. If not, click the folder icon and find it:
+   - 🪟 Windows: usually `C:\Program Files\Git\bin\git.exe`
+   - 🍎 Mac: usually `/opt/homebrew/bin/git` or `/usr/bin/git`
+   - 🐧 Linux: usually `/usr/bin/git`
+5. Click **Test** to confirm it works
 6. Click **OK**
 
-**Connecting to GitHub or GitLab:**
-1. Go to **File → Settings → Version Control → GitHub** (or GitLab)
-2. Click the `+` button
-3. Log in with your account or paste a token
+**Connect to GitHub:**
+Settings → Version Control → **GitHub** → click `+` → click **Log In via GitHub** → authorise in your browser
 
-**Using Git in JetBrains:**
-- The **Git** menu at the top gives access to all operations
-- The **Commit** tool window (usually bottom left) shows your changes
-- `Alt + 9` (Windows/Linux) or `Cmd + 9` (Mac) opens the Git tool window with log, branches and remotes
-- Right-click any file for Git options
+**Connect to GitLab:**
+Settings → Version Control → **GitLab** → click `+` → enter your GitLab server URL → paste a Personal Access Token
 
-💡 **Tip:** JetBrains IDEs have one of the best merge conflict editors available. The three-panel view (your version, base version, incoming version) makes resolving conflicts much more visual and intuitive than the terminal.
+**Useful shortcuts:**
+
+| Action | Windows/Linux | Mac |
+|---|---|---|
+| Open commit window | `Ctrl + K` | `Cmd + K` |
+| Push | `Ctrl + Shift + K` | `Cmd + Shift + K` |
+| Pull/Update | `Ctrl + T` | `Cmd + T` |
+| Open Git log | `Alt + 9` | `Cmd + 9` |
+| VCS operations popup | `` Alt + ` `` | `Ctrl + V` |
 
 ---
 
-### Visual Studio (Windows and Mac)
+### Visual Studio 2026 (Windows)
 
-Visual Studio (not VS Code - these are different products) has deep Git integration built in.
+Visual Studio 2026 has full Git support built in. No extensions needed.
 
-**Windows:**
-1. Open Visual Studio
+1. Open Visual Studio 2026
 2. Go to **View → Git Changes** (or press `Ctrl + 0, Ctrl + G`)
-3. If working on an existing repository, Visual Studio detects it automatically
-4. To clone a repository: **File → Clone Repository** or use the start screen
+3. Visual Studio detects your repository automatically
 
-**Connecting to GitHub:**
-1. Go to **File → Account Settings**
-2. Click **Add** under GitHub
-3. Sign in with your GitHub account
+**Connect to GitHub:**
+Go to **Git → GitHub → Add Account** and sign in via your browser.
 
-**Mac (Visual Studio for Mac - now discontinued but still used):**
-Git is integrated similarly. Go to **View → Pads → Version Control**.
-
-💡 **Tip:** Visual Studio's Team Explorer and Git Changes panels handle most everyday Git operations well. For advanced operations you may still want to use the terminal alongside it.
+**Connect to GitLab:**
+Go to **Git → Manage Remotes** and add your GitLab repository URL manually.
 
 ---
 
-### Xcode (Mac only)
+### Xcode 26 (Mac)
 
-Xcode is Apple's IDE for building iOS, macOS, watchOS and tvOS apps. It has Git integration built in.
+1. Open Xcode 26
+2. When creating a new project, check **Create Git repository on my Mac** to set it up automatically
+3. For existing projects: go to **Integrate → Create Git Repositories**
 
-**Setting up:**
-1. Open Xcode
-2. When creating a new project, check **Create Git repository on my Mac** to initialise Git automatically
-3. For existing projects: **Source Control → Create Git Repositories**
-
-**Connecting to GitHub:**
-1. Open **Xcode → Settings → Accounts**
+**Connect to GitHub or GitLab:**
+1. Go to **Xcode → Settings → Accounts**
 2. Click the `+` button
-3. Choose **GitHub** and sign in
+3. Choose **GitHub** (or enter your GitLab server URL)
+4. Sign in
 
-**Everyday use:**
-- **Source Control Navigator** (left sidebar, cloud icon) shows commits, branches and remotes
-- **Source Control → Commit** to stage and commit changes
-- Inline change indicators appear in the code editor next to modified lines
+The **Source Control Navigator** (`Cmd + 2`) shows your branches, commits and remote repositories.
 
 ---
 
-### Neovim and Vim
+### Neovim or Vim
 
-If you use Neovim or Vim, you likely prefer doing most things in the terminal. Git works perfectly from the terminal alongside any editor. However, several plugins bring Git integration inside the editor:
+If you use Neovim or Vim, Git works perfectly from any terminal alongside the editor. Recommended plugins:
 
-**Popular Git plugins for Neovim:**
-- **Fugitive** (`tpope/vim-fugitive`) - the most popular Git plugin for Vim/Neovim. Run Git commands directly from inside Vim with `:Git`
-- **Gitsigns** (`lewis6991/gitsigns.nvim`) - shows added, changed and removed lines in the sign column
-- **Neogit** (`NeogitOrg/neogit`) - a Neovim-native Git interface inspired by Magit (Emacs)
-- **LazyGit** - a terminal UI for Git that works alongside any editor including Neovim
-
-Install plugins using your plugin manager (Lazy.nvim, Packer, vim-plug etc.).
+- **vim-fugitive** - the gold standard Git plugin for Vim/Neovim. Run any Git command with `:Git` or `:G`
+- **gitsigns.nvim** - shows added/changed/deleted lines in the editor margin
+- **Neogit** - a full interactive Git interface inside Neovim
+- **LazyGit** - opens the LazyGit terminal UI in a floating window (`brew install lazygit` first)
 
 ---
 
 ### Sublime Text
 
-Sublime Text does not have built-in Git support but the **GitSavvy** package adds comprehensive Git integration.
+Install the **GitSavvy** package via Package Control:
+1. Press `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac)
+2. Type `Package Control: Install Package` and press Enter
+3. Search for `GitSavvy` and press Enter to install
 
-1. Open the Command Palette: `Ctrl + Shift + P` (Windows/Linux) or `Cmd + Shift + P` (Mac)
-2. Type `Package Control: Install Package`
-3. Search for `GitSavvy` and install it
-4. Use `Ctrl + Shift + P` and type `GitSavvy` to access all Git commands
-
----
-
-### Other Editors
-
-If your editor is not listed here, check its documentation for Git integration. Most modern editors either have built-in Git support or a plugin available. The underlying Git commands are the same regardless of editor - the IDE just provides a visual interface for them.
-
-For any editor, Git always works perfectly from the terminal running alongside it.
+Access all Git commands through the Command Palette with `Ctrl + Shift + P` and type `git:`.
 
 ---
 
-## ✅ Step 6 - Verify Everything is Working
+## ✅ Step 6 - Quick Test to Verify Everything Works
 
-Run through this checklist to confirm your setup is complete:
+Run these commands one at a time to confirm your setup is complete.
 
-**Git installation:**
-```bash
+**Test 1 - Git is installed:**
+```
 git --version
 ```
-Expected: `git version 2.x.x` (any recent version)
+Expected output: `git version 2.53.0` (or similar)
 
-**Your identity:**
-```bash
+**Test 2 - Your name is set:**
+```
 git config --global user.name
+```
+Expected output: your name
+
+**Test 3 - Your email is set:**
+```
 git config --global user.email
 ```
-Expected: Your name and email
+Expected output: your email address
 
-**Default branch:**
-```bash
+**Test 4 - Default branch is set:**
+```
 git config --global init.defaultBranch
 ```
-Expected: `main`
+Expected output: `main`
 
-**SSH connection to GitHub:**
-```bash
+**Test 5 - SSH connection to GitHub (if you set up SSH in Step 4):**
+```
 ssh -T git@github.com
 ```
-Expected: `Hi YOUR_USERNAME! You've successfully authenticated.`
+Expected output: `Hi YOUR_USERNAME! You've successfully authenticated...`
 
-**SSH connection to GitLab:**
-```bash
-ssh -T git@gitlab.com
+**Test 6 - Create a test repository and make a commit:**
+
+🪟 **Windows (PowerShell):**
 ```
-Expected: `Welcome to GitLab, @YOUR_USERNAME!`
-
-**Create a test repository:**
-```bash
 mkdir git-test
-cd git-test
-git init
-echo "hello git" > README.md
-git add .
-git commit -m "initial commit"
-git log
 ```
-Expected: A commit log entry showing your name, email and message
+```
+cd git-test
+```
+```
+git init
+```
+```
+echo "hello git" > README.md
+```
+```
+git add .
+```
+```
+git commit -m "initial commit"
+```
+```
+git log --oneline
+```
 
-If all of these work, you are fully set up. 🎉
+🍎 **Mac / 🐧 Linux:**
+```
+mkdir git-test
+```
+```
+cd git-test
+```
+```
+git init
+```
+```
+echo "hello git" > README.md
+```
+```
+git add .
+```
+```
+git commit -m "initial commit"
+```
+```
+git log --oneline
+```
+
+Expected output from `git log --oneline`: a line showing a short commit hash and the message `initial commit` with your name as the author.
+
+**Clean up the test folder:**
+
+🪟 **Windows:**
+```
+cd ..
+```
+```
+rmdir /s /q git-test
+```
+
+🍎 **Mac / 🐧 Linux:**
+```
+cd ..
+```
+```
+rm -rf git-test
+```
+
+If all six tests pass, you are fully set up. 🎉
 
 ---
 
 ## ❌ Common Setup Mistakes
 
+**`'git' is not recognized` on Windows after installation**
+
+You need to open a new terminal window. Close Command Prompt or PowerShell completely and reopen it. The PATH update only applies to new terminal sessions.
+
+If it still does not work, Git may not have been added to PATH during installation. Reinstall using `winget install Git.Git` which handles PATH automatically.
+
+**`git push` asks for a password then fails**
+
+GitHub no longer accepts account passwords for Git operations (removed August 2021). You need to use either SSH keys (Step 4, Option B) or a Personal Access Token (Step 4, Option C).
+
+**`ssh -T git@github.com` returns "Permission denied (publickey)"**
+
+Check that:
+- Your key files exist: run `ls ~/.ssh/` and look for `id_ed25519` and `id_ed25519.pub`
+- The SSH agent is running: run `eval "$(ssh-agent -s)"` then `ssh-add ~/.ssh/id_ed25519`
+- Your public key was added to GitHub at https://github.com/settings/keys
+- You copied the public key (the `.pub` file), not the private key
+
+**`xcrun: error: invalid active developer path` on Mac after an OS update**
+
+This happens after nearly every major macOS update. Run:
+```
+xcode-select --install
+```
+
+**`zsh: command not found: brew` on Apple Silicon Mac**
+
+Homebrew is not in your PATH. Run:
+```
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+```
+Then:
+```
+source ~/.zprofile
+```
+
+**`Author identity unknown` error when committing**
+
+Git cannot commit without a name and email. Run:
+```
+git config --global user.name "Your Name"
+```
+Then:
+```
+git config --global user.email "your@email.com"
+```
+
 **My commits show the wrong name or email**
 
-You either skipped Step 3 or used different details. Fix it:
-```bash
+You set them incorrectly or set them for a different scope. Fix them:
+```
 git config --global user.name "Correct Name"
+```
+```
 git config --global user.email "correct@email.com"
 ```
-Note: This only affects future commits. To fix past commits see [git/14-reset-and-revert.md](../git/14-reset-and-revert.md).
 
-**`git push` asks for a password and then fails**
+Note: this only affects future commits. To fix past commits see [git/14-reset-and-revert.md](../git/14-reset-and-revert.md).
 
-GitHub no longer accepts passwords. You need SSH keys (Step 4, Option A) or a Personal Access Token (Step 4, Option B).
+**Git opens Vim and I cannot exit**
 
-**`ssh -T git@github.com` gives "Permission denied"**
-
-Your public key was not added to GitHub correctly, or the SSH agent is not running. Go back through Step 4 and make sure:
-- You copied the public key (ending in `.pub`), not the private key
-- The SSH agent is running and your key is added to it
-- The key appears in your GitHub settings at github.com/settings/keys
-
-**Git opens Vim and I do not know how to exit**
-
-Type `:q!` and press Enter. Then set a different editor:
-```bash
+Type `:q!` and press Enter. This quits without saving. Then set a different editor:
+```
 git config --global core.editor "nano"
 ```
 
 **VS Code says "Git not found"**
 
-Git was installed after VS Code was opened. Restart VS Code completely.
+Git was installed after VS Code was opened. Close VS Code completely and reopen it.
 
 **JetBrains IDE shows "Git executable not found"**
 
-Go to **File → Settings → Version Control → Git** and manually set the path to your Git executable.
-
-**On Mac, `brew` command not found after installing Homebrew**
-
-Your shell profile was not updated. Run:
-```bash
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-source ~/.zprofile
-```
-
-**Windows: Git not recognised after installation**
-
-You need to open a new terminal window. The PATH is only updated for new terminal sessions.
+Go to **File → Settings → Version Control → Git** and manually set the path to your Git executable (see Step 5 above for the correct path per OS).
 
 ---
 
@@ -659,10 +847,10 @@ By now you should have:
 - ✅ Git installed and up to date
 - ✅ Your name and email configured
 - ✅ Default branch set to `main`
-- ✅ Your preferred editor set
-- ✅ Line ending behaviour configured
-- ✅ SSH keys set up for GitHub and/or GitLab
-- ✅ Git working inside your IDE
+- ✅ Pull behaviour configured
+- ✅ Line endings configured correctly for your OS
+- ✅ Authentication set up (GitHub CLI, SSH or PAT)
+- ✅ Git working inside your IDE or editor
 - ✅ A successful test commit
 
 You are ready to start learning Git properly.
@@ -677,18 +865,19 @@ Head to [What is Version Control?](../git/01-what-is-version-control.md) to begi
 
 ## 🔗 Sources and Further Reading
 
-- [Official Git download page](https://git-scm.com/downloads)
-- [Git first-time setup documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
-- [GitHub SSH key documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh)
-- [GitLab SSH key documentation](https://docs.gitlab.com/ee/user/ssh.html)
-- [GitHub Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)
-- [GitLab Personal Access Tokens](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)
-- [Homebrew](https://brew.sh) - package manager for Mac
-- [Git for Windows](https://gitforwindows.org)
-- [GitLens extension for VS Code](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
-- [Fugitive - Git plugin for Vim/Neovim](https://github.com/tpope/vim-fugitive)
-- [JetBrains Git integration documentation](https://www.jetbrains.com/help/idea/using-git-integration.html)
-- [Xcode Source Control documentation](https://developer.apple.com/documentation/xcode/source-control-management)
+- [Official Git download page](https://git-scm.com/downloads) - always get the latest version here
+- [Git first-time setup documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) - the official guide to first-time configuration
+- [GitHub SSH key documentation](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) - step-by-step SSH setup from GitHub
+- [GitLab SSH key documentation](https://docs.gitlab.com/user/ssh/) - step-by-step SSH setup from GitLab
+- [GitHub Personal Access Tokens](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) - how to create and manage tokens
+- [GitHub CLI documentation](https://cli.github.com/manual/) - the full reference for the `gh` command
+- [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager) - the cross-platform credential helper bundled with Git for Windows
+- [Homebrew](https://brew.sh) - the package manager for Mac
+- [Git for Windows](https://gitforwindows.org) - the official Git installer for Windows
+- [VS Code Source Control documentation](https://code.visualstudio.com/docs/sourcecontrol/overview) - the official VS Code guide to Git integration
+- [JetBrains Git integration documentation](https://www.jetbrains.com/help/idea/using-git-integration.html) - the official JetBrains guide
+- [Xcode Source Control documentation](https://developer.apple.com/xcode/) - Apple's official Xcode page
+- [GitLens extension](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - the most popular Git extension for VS Code
 
 ---
 
