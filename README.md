@@ -14,16 +14,16 @@
 <br />
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/zaccessss/git-unlocked?style=for-the-badge&logo=github)](https://github.com/zaccessss/git-unlocked/stargazers)
-[![Forks](https://img.shields.io/github/forks/zaccessss/git-unlocked?style=for-the-badge&logo=github)](https://github.com/zaccessss/git-unlocked/network/members)
-[![Last Updated](https://img.shields.io/github/last-commit/zaccessss/git-unlocked?style=for-the-badge)](https://github.com/zaccessss/git-unlocked/commits/main)
-[![Contributors](https://img.shields.io/github/contributors/zaccessss/git-unlocked?style=for-the-badge)](https://github.com/zaccessss/git-unlocked/graphs/contributors)
-[![Issues](https://img.shields.io/github/issues/zaccessss/git-unlocked?style=for-the-badge)](https://github.com/zaccessss/git-unlocked/issues)
+[![Stars](https://img.shields.io/github/stars/zaccesss/git-unlocked?style=for-the-badge&logo=github)](https://github.com/zaccesss/git-unlocked/stargazers)
+[![Forks](https://img.shields.io/github/forks/zaccesss/git-unlocked?style=for-the-badge&logo=github)](https://github.com/zaccesss/git-unlocked/network/members)
+[![Last Updated](https://img.shields.io/github/last-commit/zaccesss/git-unlocked?style=for-the-badge)](https://github.com/zaccesss/git-unlocked/commits/main)
+[![Contributors](https://img.shields.io/github/contributors/zaccesss/git-unlocked?style=for-the-badge)](https://github.com/zaccesss/git-unlocked/graphs/contributors)
+[![Issues](https://img.shields.io/github/issues/zaccesss/git-unlocked?style=for-the-badge)](https://github.com/zaccesss/git-unlocked/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
 
 <br />
 
-[🚀 Start Learning](#-start-here) · [🗺️ Learning Path](#-learning-path) · [📚 Course Structure](#-course-structure) · [🤝 Contribute](CONTRIBUTING.md) · [💬 Discussions](https://github.com/zaccessss/git-unlocked/discussions) · [🏆 Hall of Fame](HALL_OF_FAME.md) · [❓ FAQ](FAQ.md)
+[🚀 Start Learning](#-start-here) · [🗺️ Learning Path](#-learning-path) · [📚 Course Structure](#-course-structure) · [🤝 Contribute](CONTRIBUTING.md) · [💬 Discussions](https://github.com/zaccesss/git-unlocked/discussions) · [🏆 Hall of Fame](HALL_OF_FAME.md) · [❓ FAQ](FAQ.md)
 
 </div>
 
@@ -287,7 +287,7 @@ This course is licensed under the [MIT Licence](LICENSE). You are free to use, s
 
 ## ❓ FAQ
 
-Common questions answered in [FAQ.md](FAQ.md). If your question is not there, open a [Discussion](https://github.com/zaccessss/git-unlocked/discussions).
+Common questions answered in [FAQ.md](FAQ.md). If your question is not there, open a [Discussion](https://github.com/zaccesss/git-unlocked/discussions).
 
 ---
 
@@ -306,7 +306,7 @@ Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 <br />
 
 [![zacess.com](https://img.shields.io/badge/zacess.com-000000?style=for-the-badge)](https://zacess.com)
-[![GitHub](https://img.shields.io/badge/github-zaccessss-181717?style=for-the-badge&logo=github)](https://github.com/zaccessss)
+[![GitHub](https://img.shields.io/badge/github-zaccesss-181717?style=for-the-badge&logo=github)](https://github.com/zaccesss)
 [![LinkedIn](https://img.shields.io/badge/linkedin-isaacadjei-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/isaacadjei)
 
 </div>
