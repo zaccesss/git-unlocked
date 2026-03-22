@@ -1,13 +1,13 @@
 <div align="center">
 
-<img src="assets/banner.png" alt="git-unlocked — Access Granted. Success Unlocked." width="100%">
+<img src="assets/banner.png" alt="git-unlocked -Access Granted. Success Unlocked." width="100%">
 
 <br />
 
 # git-unlocked
 
 ### The complete open source course for Git, GitHub and GitLab.
-### From absolute zero to industry-level advanced — on Windows, Mac and Linux.
+### From absolute zero to industry-level advanced -on Windows, Mac and Linux.
 
 <br />
 
@@ -34,7 +34,7 @@
 
 ## Who This Is For
 
-This is not just another Git cheatsheet. This is a complete, structured course — built to take anyone from never having heard of version control all the way to using Git, GitHub and GitLab confidently in real teams and real companies.
+This is not just another Git cheatsheet. This is a complete, structured course -built to take anyone from never having heard of version control all the way to using Git, GitHub and GitLab confidently in real teams and real companies.
 
 Every file covers **Windows, Mac and Linux** side by side. Every topic includes real examples, step-by-step exercises and a dedicated section on common mistakes. Nothing is assumed. Nothing is skipped.
 
@@ -66,8 +66,8 @@ BEGINNER
 ├── 01. What is version control?
 ├── 02. Installing Git (Windows / Mac / Linux)
 ├── 03. How Git works under the hood
-├── 04. Core concepts — repos, commits, branches, staging
-├── 05. Basic commands — init, add, commit, status, log, diff
+├── 04. Core concepts -repos, commits, branches, staging
+├── 05. Basic commands -init, add, commit, status, log, diff
 ├── 06. What is GitHub?
 ├── 07. Creating your GitHub account
 └── 08. Pushing your first repository to GitHub
@@ -77,26 +77,26 @@ INTERMEDIATE
 ├── 09. Branching and switching
 ├── 10. Merging branches
 ├── 11. Merge conflicts and how to fix them
-├── 12. Remote repositories — origin and upstream
+├── 12. Remote repositories -origin and upstream
 ├── 13. Pull requests
 ├── 14. .gitignore
 └── 15. Stashing work in progress
 
 ADVANCED
 │
-├── 16. Rebase — interactive rebase vs merge
-├── 17. Cherry-pick — grabbing specific commits
-├── 18. Reset and revert — undoing things safely
+├── 16. Rebase -interactive rebase vs merge
+├── 17. Cherry-pick -grabbing specific commits
+├── 18. Reset and revert -undoing things safely
 ├── 19. Tags and releases
 ├── 20. Submodules
-├── 21. Git hooks — automating your workflow
-└── 22. Bisect — finding which commit broke something
+├── 21. Git hooks -automating your workflow
+└── 22. Bisect -finding which commit broke something
 
 GITHUB
 │
 ├── Repositories, issues and pull requests
-├── GitHub Actions — CI/CD pipelines
-├── GitHub Pages — free website hosting
+├── GitHub Actions -CI/CD pipelines
+├── GitHub Pages -free website hosting
 ├── Projects, discussions and security features
 └── Profile README, badges and achievements
 
@@ -132,7 +132,7 @@ Start here if you are completely new.
 
 ### Git
 
-Pure Git — works on any platform, any host.
+Pure Git -works on any platform, any host.
 
 | File | Topic | Level |
 |---|---|---|
@@ -145,11 +145,11 @@ Pure Git — works on any platform, any host.
 | [07-merging.md](git/07-merging.md) | Merging branches together | 🟡 |
 | [08-merge-conflicts.md](git/08-merge-conflicts.md) | What conflicts are and how to fix them | 🟡 |
 | [09-remote-repos.md](git/09-remote-repos.md) | origin, upstream and working with multiple remotes | 🟡 |
-| [10-gitignore.md](git/10-gitignore.md) | Ignoring files and folders — including security uses | 🟡 |
+| [10-gitignore.md](git/10-gitignore.md) | Ignoring files and folders -including security uses | 🟡 |
 | [11-stash.md](git/11-stash.md) | Saving work without committing | 🟡 |
 | [12-rebase.md](git/12-rebase.md) | Rebase vs merge and interactive rebase | 🔴 |
 | [13-cherry-pick.md](git/13-cherry-pick.md) | Picking specific commits across branches | 🔴 |
-| [14-reset-and-revert.md](git/14-reset-and-revert.md) | Undoing changes safely — soft, mixed and hard reset | 🔴 |
+| [14-reset-and-revert.md](git/14-reset-and-revert.md) | Undoing changes safely -soft, mixed and hard reset | 🔴 |
 | [15-tags-and-releases.md](git/15-tags-and-releases.md) | Tagging versions and creating releases | 🔴 |
 | [16-submodules.md](git/16-submodules.md) | Embedding repos inside repos | 🔴 |
 | [17-hooks.md](git/17-hooks.md) | Automating actions with Git hooks | 🔴 |
@@ -183,7 +183,7 @@ Pure Git — works on any platform, any host.
 | File | Topic | Level |
 |---|---|---|
 | [01-what-is-gitlab.md](gitlab/01-what-is-gitlab.md) | What GitLab is, its history and how it differs from GitHub | 🟢 |
-| [02-gitlab-vs-github.md](gitlab/02-gitlab-vs-github.md) | Side by side comparison — when to use which | 🟢 |
+| [02-gitlab-vs-github.md](gitlab/02-gitlab-vs-github.md) | Side by side comparison -when to use which | 🟢 |
 | [03-creating-an-account.md](gitlab/03-creating-an-account.md) | Setting up your GitLab account step by step | 🟢 |
 | [04-gitlab-basics.md](gitlab/04-gitlab-basics.md) | Repos, commits and pushing on GitLab | 🟢 |
 | [05-merge-requests.md](gitlab/05-merge-requests.md) | GitLab's version of pull requests | 🟡 |
@@ -223,7 +223,7 @@ Pure Git — works on any platform, any host.
 
 | File | Topic | Level |
 |---|---|---|
-| [01-team-workflows.md](real-world/01-team-workflows.md) | Working on a team with Git — real scenarios | 🟡 |
+| [01-team-workflows.md](real-world/01-team-workflows.md) | Working on a team with Git -real scenarios | 🟡 |
 | [02-open-source-contributing.md](real-world/02-open-source-contributing.md) | How to contribute to open source projects | 🟡 |
 | [03-recovering-from-mistakes.md](real-world/03-recovering-from-mistakes.md) | Fixing things when they go wrong | 🟡 |
 | [04-git-in-industry.md](real-world/04-git-in-industry.md) | How real companies and teams use Git | 🔴 |
@@ -262,7 +262,7 @@ Throughout every file in this course you will see these callouts:
 | `> [!TIP]` | A helpful technique or shortcut |
 | `> [!IMPORTANT]` | A pro tip that will level up your workflow |
 | `> [!WARNING]` | Read this carefully before continuing |
-| `> [!CAUTION]` | Security note — keep your credentials and data safe |
+| `> [!CAUTION]` | Security note -keep your credentials and data safe |
 
 OS-specific instructions are marked with **Windows**, **Mac** or **Linux** labels. Difficulty levels use 🟢 Beginner, 🟡 Intermediate and 🔴 Advanced.
 
@@ -276,7 +276,7 @@ The best way to learn Git is to use it on a real project. The [first-contributio
 
 ## Contributing
 
-This course is open source and built for the community. If you want to fix a typo, improve an explanation, add a translation or suggest a new topic — you are welcome here.
+This course is open source and built for the community. If you want to fix a typo, improve an explanation, add a translation or suggest a new topic -you are welcome here.
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) first and then open a pull request. Everyone who contributes gets listed in [HALL_OF_FAME.md](HALL_OF_FAME.md). Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
 
@@ -284,7 +284,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) first and then open a pull request. Ever
 
 ## Licence
 
-This course is licensed under the [MIT Licence](LICENSE). You are free to use, share, adapt and build on it — just give credit where it is due.
+This course is licensed under the [MIT Licence](LICENSE). You are free to use, share, adapt and build on it -just give credit where it is due.
 
 ---
 
