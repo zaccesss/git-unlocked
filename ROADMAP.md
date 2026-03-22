@@ -1,55 +1,59 @@
-# 🗺️ Roadmap
+# Roadmap
 
-> "The secret of getting ahead is getting started." - Mark Twain
-
-This document outlines the current state of git-unlocked, what is being worked on and what is planned. It is a living document and will be updated as the project grows.
+This document outlines the current state of git-unlocked, what is being built and what is planned. It is updated as the project grows.
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Current Status](#-current-status)
-- [Phase 1 - Foundation](#-phase-1---foundation)
-- [Phase 2 - Core Git Content](#-phase-2---core-git-content)
-- [Phase 3 - Platform Content](#-phase-3---platform-content)
-- [Phase 4 - Tools and Environment](#-phase-4---tools-and-environment)
-- [Phase 5 - Real World and Reference](#-phase-5---real-world-and-reference)
-- [Phase 6 - Community and Polish](#-phase-6---community-and-polish)
-- [Future Ideas](#-future-ideas)
-- [How to Suggest Something](#-how-to-suggest-something)
+- [Current status](#current-status)
+- [Phase 1 — Foundation](#phase-1--foundation)
+- [Phase 2 — Core Git content](#phase-2--core-git-content)
+- [Phase 3 — Platform content](#phase-3--platform-content)
+- [Phase 4 — Tools and environment](#phase-4--tools-and-environment)
+- [Phase 5 — Real world and reference](#phase-5--real-world-and-reference)
+- [Phase 6 — Community and polish](#phase-6--community-and-polish)
+- [Future ideas](#future-ideas)
+- [How to suggest something](#how-to-suggest-something)
 
 ---
 
-## 📊 Current Status
+## Current Status
 
-**Version:** 0.1.0
-**Stage:** Phase 1 complete - Phase 2 starting
+**Version:** 0.2.0
+**Stage:** Phase 1 complete — Phase 2 starting
 **Started:** March 2026
 
 | Section | Status |
 |---|---|
-| Repository setup | ✅ Complete |
-| README | ✅ Complete |
-| CONTRIBUTING | ✅ Complete |
-| CHANGELOG | ✅ Complete |
-| ROADMAP | ✅ Complete |
-| FAQ | ✅ Complete |
-| HALL_OF_FAME | ✅ Complete |
-| introduction/ | ✅ Complete |
-| git/ | ⏳ Planned |
-| github/ | ⏳ Planned |
-| gitlab/ | ⏳ Planned |
-| ides/ | ⏳ Planned |
-| terminal/ | ⏳ Planned |
-| real-world/ | ⏳ Planned |
-| reference/ | ⏳ Planned |
-| resources/ | ⏳ Planned |
-| first-contribution/ | ⏳ Planned |
-| assets/ | ⏳ Planned |
+| Repository setup | Complete |
+| README | Complete |
+| CONTRIBUTING | Complete |
+| CODE_OF_CONDUCT | Complete |
+| SECURITY | Complete |
+| SUPPORT | Complete |
+| CHANGELOG | Complete |
+| ROADMAP | Complete |
+| FAQ | Complete |
+| HALL_OF_FAME | Complete |
+| .github/ templates and workflows | Complete |
+| .editorconfig | Complete |
+| .markdownlint.json | Complete |
+| introduction/ | Complete |
+| git/ | Planned |
+| github/ | Planned |
+| gitlab/ | Planned |
+| ides/ | Planned |
+| terminal/ | Planned |
+| real-world/ | Planned |
+| reference/ | Planned |
+| resources/ | Planned |
+| first-contribution/ | Planned |
+| assets/ | Planned |
 
 ---
 
-## 🏗️ Phase 1 - Foundation
+## Phase 1 — Foundation
 
 Getting the structure, branding and core files in place.
 
@@ -57,24 +61,32 @@ Getting the structure, branding and core files in place.
 - [x] README
 - [x] MIT licence
 - [x] CONTRIBUTING.md
+- [x] CODE_OF_CONDUCT.md (Contributor Covenant 3.0)
+- [x] SECURITY.md
+- [x] SUPPORT.md
 - [x] CHANGELOG.md
 - [x] ROADMAP.md
 - [x] FAQ.md
 - [x] HALL_OF_FAME.md
 - [x] Folder structure
+- [x] .github/ issue templates and PR template
+- [x] .github/workflows/ — markdownlint and link checker CI
+- [x] .editorconfig
+- [x] .markdownlint.json
 - [x] introduction/01-welcome.md
 - [x] introduction/02-how-to-use-this-course.md
 - [x] introduction/03-setting-up.md
 - [ ] Banner and assets
 - [ ] first-contribution/ sandbox
 - [ ] GitHub Discussions enabled
-- [ ] GitHub Project board set up
+- [ ] GitHub Project board
+- [ ] Template repository enabled
 
 ---
 
-## 📝 Phase 2 - Core Git Content
+## Phase 2 — Core Git Content
 
-Everything about Git itself - beginner to advanced, Windows, Mac and Linux throughout. Includes full history of version control, security coverage and real world examples.
+Everything about Git — beginner to advanced, all three operating systems throughout.
 
 - [ ] What is version control
 - [ ] Installing Git
@@ -98,9 +110,9 @@ Everything about Git itself - beginner to advanced, Windows, Mac and Linux throu
 
 ---
 
-## 🐙 Phase 3 - Platform Content
+## Phase 3 — Platform Content
 
-Everything about GitHub and GitLab - history, features, workflows and security.
+Everything about GitHub and GitLab — history, features, workflows and security.
 
 **GitHub**
 - [ ] What is GitHub
@@ -128,9 +140,9 @@ Everything about GitHub and GitLab - history, features, workflows and security.
 
 ---
 
-## 💻 Phase 4 - Tools and Environment
+## Phase 4 — Tools and Environment
 
-Using Git with IDEs and the terminal on every operating system.
+Git in IDEs and the terminal on every operating system.
 
 - [ ] What is an IDE
 - [ ] Git in VS Code
@@ -148,7 +160,7 @@ Using Git with IDEs and the terminal on every operating system.
 
 ---
 
-## 🌍 Phase 5 - Real World and Reference
+## Phase 5 — Real World and Reference
 
 Real scenarios, reference material and curated resources.
 
@@ -167,39 +179,38 @@ Real scenarios, reference material and curated resources.
 
 ---
 
-## 🌐 Phase 6 - Community and Polish
+## Phase 6 — Community and Polish
 
 Growing the community and making the course as good as it can be.
 
-- [ ] Diagrams for all visual concepts
-- [ ] Course completion badge
-- [ ] Translations - French, Spanish and Arabic to start
+- [ ] Diagrams for visual concepts
+- [ ] Translations — French, Spanish and Arabic to start
 - [ ] Reach 100 stars
 - [ ] Reach 10 contributors
-- [ ] Submit to awesome-lists and developer communities
-- [ ] Tag v1.0.0 stable release
+- [ ] Submit to awesome-lists
 - [ ] Share on Reddit, Dev.to, Hashnode and LinkedIn
+- [ ] Tag v1.0.0 stable release
 
 ---
 
-## 💡 Future Ideas
+## Future Ideas
 
 Ideas being considered for after v1.0.0:
 
-- Interactive knowledge quizzes after each section
-- Short video walkthroughs for each file
-- Git workflows guide - Gitflow, trunk-based development, feature branching
-- Git for specific stacks - Python, Node.js, Arduino, web projects
+- Interactive quizzes after each section
+- Short video walkthroughs
+- Git workflows guide — Gitflow, trunk-based development, feature branching
+- Git for specific stacks — Python, Node.js, Arduino, web projects
 - University edition structured for coursework
-- Multilingual expansion beyond the initial three languages
+- Multilingual expansion
 
 ---
 
-## 💬 How to Suggest Something
+## How to Suggest Something
 
-1. Go to [github.com/zaccesss/git-unlocked/issues](https://github.com/zaccesss/git-unlocked/issues)
+1. Go to [github.com/zaccessss/git-unlocked/issues](https://github.com/zaccessss/git-unlocked/issues)
 2. Click **New Issue**
-3. Use the title format: `suggestion: your idea here`
+3. Use the title format `suggestion: your idea here`
 4. Describe your idea and why it would help learners
 
 The best suggestions will be added to the roadmap and credited to you.

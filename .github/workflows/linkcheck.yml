@@ -1,0 +1,31 @@
+name: Check Links
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  linkchecker:
+    name: Check for broken links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --exclude-mail
+            --exclude 'localhost'
+            --exclude 'github.com/settings'
+            --exclude 'gitlab.com/-/user_settings'
+            '**/*.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
