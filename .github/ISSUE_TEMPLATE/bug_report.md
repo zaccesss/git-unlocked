@@ -1,9 +1,9 @@
 ---
 name: Error or bug in content
 about: Report incorrect information, a broken command or a misleading explanation
-title: 'fix: '
+title: "fix: "
 labels: bug
-assignees: zaccessss
+assignees: zaccesss
 ---
 
 ## What file is the problem in?

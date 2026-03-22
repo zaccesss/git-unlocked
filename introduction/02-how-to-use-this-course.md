@@ -25,20 +25,20 @@ Taking five minutes to understand how this course is structured will save you ho
 
 git-unlocked is split into folders. Each folder covers a specific area:
 
-| Folder | What is inside |
-|---|---|
-| `introduction/` | Start here — welcome, setup and how to navigate |
-| `git/` | Everything about Git itself — beginner to advanced |
-| `github/` | Everything about GitHub — accounts, repos, PRs, Actions and more |
-| `gitlab/` | Everything about GitLab — basics, merge requests, CI/CD and more |
-| `ides/` | Using Git inside VS Code, JetBrains, Visual Studio, Xcode and other editors |
-| `terminal/` | Using Git in the terminal — CMD, PowerShell, Bash and Zsh |
-| `real-world/` | Real scenarios — team workflows, open source, industry practices |
-| `reference/` | Cheatsheet, glossary, keyboard shortcuts, common mistakes and tools |
-| `resources/` | Curated videos, books and practice platforms |
-| `first-contribution/` | Make your very first pull request here as practice |
+| Folder                | What is inside                                                              |
+| --------------------- | --------------------------------------------------------------------------- |
+| `introduction/`       | Start here - welcome, setup and how to navigate                             |
+| `git/`                | Everything about Git itself - beginner to advanced                          |
+| `github/`             | Everything about GitHub - accounts, repos, PRs, Actions and more            |
+| `gitlab/`             | Everything about GitLab - basics, merge requests, CI/CD and more            |
+| `ides/`               | Using Git inside VS Code, JetBrains, Visual Studio, Xcode and other editors |
+| `terminal/`           | Using Git in the terminal - CMD, PowerShell, Bash and Zsh                   |
+| `real-world/`         | Real scenarios - team workflows, open source, industry practices            |
+| `reference/`          | Cheatsheet, glossary, keyboard shortcuts, common mistakes and tools         |
+| `resources/`          | Curated videos, books and practice platforms                                |
+| `first-contribution/` | Make your very first pull request here as practice                          |
 
-Files are numbered within each folder so you always know the recommended reading order. You do not have to follow it — jump to whatever you need.
+Files are numbered within each folder so you always know the recommended reading order. You do not have to follow it - jump to whatever you need.
 
 ---
 
@@ -55,18 +55,18 @@ Files are numbered within each folder so you always know the recommended reading
 
 **Know the basics but want to go further?**
 
-- [Branching](../git/06-branching.md) — work on features without breaking things
-- [Merging](../git/07-merging.md) — combine your work back together
-- [Pull Requests](../github/05-pull-requests.md) — collaborate professionally
-- [GitLab Basics](../gitlab/04-gitlab-basics.md) — if you also need GitLab
+- [Branching](../git/06-branching.md) - work on features without breaking things
+- [Merging](../git/07-merging.md) - combine your work back together
+- [Pull Requests](../github/05-pull-requests.md) - collaborate professionally
+- [GitLab Basics](../gitlab/04-gitlab-basics.md) - if you also need GitLab
 
 **Ready for advanced topics?**
 
-- [Rebase](../git/12-rebase.md) — rewrite history cleanly
-- [Cherry-pick](../git/13-cherry-pick.md) — grab specific commits
-- [Reset and Revert](../git/14-reset-and-revert.md) — undo things safely
-- [GitHub Actions](../github/06-github-actions.md) — automate everything
-- [GitLab CI/CD](../gitlab/06-gitlab-ci-cd.md) — pipelines and deployment
+- [Rebase](../git/12-rebase.md) - rewrite history cleanly
+- [Cherry-pick](../git/13-cherry-pick.md) - grab specific commits
+- [Reset and Revert](../git/14-reset-and-revert.md) - undo things safely
+- [GitHub Actions](../github/06-github-actions.md) - automate everything
+- [GitLab CI/CD](../gitlab/06-gitlab-ci-cd.md) - pipelines and deployment
 
 **Just need a quick answer?**
 
@@ -81,11 +81,11 @@ Files are numbered within each folder so you always know the recommended reading
 
 Every file is marked with a difficulty level at the top:
 
-| Level | Means |
-|---|---|
-| 🟢 Beginner | No prior knowledge needed |
-| 🟡 Intermediate | Comfortable with basic Git and GitHub |
-| 🔴 Advanced | Confident with everyday Git, ready to go deeper |
+| Level           | Means                                           |
+| --------------- | ----------------------------------------------- |
+| 🟢 Beginner     | No prior knowledge needed                       |
+| 🟡 Intermediate | Comfortable with basic Git and GitHub           |
+| 🔴 Advanced     | Confident with everyday Git, ready to go deeper |
 
 The levels are a guide, not a gate. Do not let them stop you from reading ahead.
 
@@ -96,7 +96,7 @@ The levels are a guide, not a gate. Do not let them stop you from reading ahead.
 Throughout this course you will see GitHub-native alert boxes for important information:
 
 > [!NOTE]
-> Something worth knowing — background information or context.
+> Something worth knowing - background information or context.
 
 > [!TIP]
 > A helpful technique, shortcut or best practice.
@@ -105,10 +105,10 @@ Throughout this course you will see GitHub-native alert boxes for important info
 > A pro tip that will meaningfully improve your workflow.
 
 > [!WARNING]
-> Read this before continuing — skipping it commonly causes problems.
+> Read this before continuing - skipping it commonly causes problems.
 
 > [!CAUTION]
-> A security note — something that protects your credentials, data or accounts.
+> A security note - something that protects your credentials, data or accounts.
 
 OS-specific instructions are clearly labelled as **Windows**, **Mac** or **Linux**.
 
@@ -118,9 +118,9 @@ OS-specific instructions are clearly labelled as **Windows**, **Mac** or **Linux
 
 Every command in this course is shown for all three major operating systems:
 
-- **Windows** — both Command Prompt and PowerShell where they differ
-- **Mac** — Terminal (Bash and Zsh, including Apple Silicon notes where relevant)
-- **Linux** — Bash (applicable to Ubuntu, Debian, Fedora, Arch and most major distributions)
+- **Windows** - both Command Prompt and PowerShell where they differ
+- **Mac** - Terminal (Bash and Zsh, including Apple Silicon notes where relevant)
+- **Linux** - Bash (applicable to Ubuntu, Debian, Fedora, Arch and most major distributions)
 
 If a command is identical across all three systems, it is shown once without a label.
 
@@ -128,16 +128,16 @@ If a command is identical across all three systems, it is shown once without a l
 
 ## IDE and Editor Coverage
 
-This course covers Git inside all major code editors and IDEs — not just VS Code:
+This course covers Git inside all major code editors and IDEs - not just VS Code:
 
-| IDE / Editor | What is covered |
-|---|---|
-| VS Code | Built-in Source Control panel, Source Control Graph, extensions, shortcuts |
-| JetBrains | IntelliJ IDEA, PyCharm, WebStorm, CLion, Rider, GoLand and all other JetBrains products |
-| Visual Studio 2026 | Full Git integration for Windows developers |
-| Xcode 26 | Git setup and usage for Apple platform developers |
-| Neovim and Vim | Fugitive, Gitsigns, Neogit and LazyGit |
-| Sublime Text | GitSavvy plugin |
+| IDE / Editor       | What is covered                                                                         |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| VS Code            | Built-in Source Control panel, Source Control Graph, extensions, shortcuts              |
+| JetBrains          | IntelliJ IDEA, PyCharm, WebStorm, CLion, Rider, GoLand and all other JetBrains products |
+| Visual Studio 2026 | Full Git integration for Windows developers                                             |
+| Xcode 26           | Git setup and usage for Apple platform developers                                       |
+| Neovim and Vim     | Fugitive, Gitsigns, Neogit and LazyGit                                                  |
+| Sublime Text       | GitSavvy plugin                                                                         |
 
 > [!NOTE]
 > An **IDE (Integrated Development Environment)** is an all-in-one application that combines a code editor, debugger, terminal and version control in one window. It is fully explained in [ides/01-what-is-an-ide.md](../ides/01-what-is-an-ide.md).
@@ -150,9 +150,9 @@ This is one of the most important things to understand as a beginner. When this 
 
 **In a terminal:**
 
-- **Windows** — open **Command Prompt** (search `cmd`) or **PowerShell** (search `powershell`) or **Windows Terminal**
-- **Mac** — open **Terminal** (press `Cmd + Space`, type `Terminal`, press Enter)
-- **Linux** — open your **Terminal** application (usually `Ctrl + Alt + T`)
+- **Windows** - open **Command Prompt** (search `cmd`) or **PowerShell** (search `powershell`) or **Windows Terminal**
+- **Mac** - open **Terminal** (press `Cmd + Space`, type `Terminal`, press Enter)
+- **Linux** - open your **Terminal** application (usually `Ctrl + Alt + T`)
 
 **Inside VS Code:**
 Open the integrated terminal with `` Ctrl + ` `` (Windows/Linux) or `` Cmd + ` `` (Mac). Commands work exactly the same as in a standalone terminal.
@@ -173,7 +173,7 @@ Open the terminal panel with `Alt + F12` (Windows/Linux) or `Option + F12` (Mac)
 
 **Use the first-contribution sandbox.** The [first-contribution](../first-contribution/README.md) folder is where you can make your first pull request safely. It is designed for absolute beginners and takes less than five minutes.
 
-**Do not skip the Common Mistakes sections.** These are based on real questions from Stack Overflow, Reddit and developer forums — the things that trip everyone up. Reading them before you encounter them will save you a lot of time.
+**Do not skip the Common Mistakes sections.** These are based on real questions from Stack Overflow, Reddit and developer forums - the things that trip everyone up. Reading them before you encounter them will save you a lot of time.
 
 **Read the security callouts.** Accidentally pushing a password or API key to a public GitHub repository happens to real developers regularly. The security guidance will protect you.
 
@@ -181,14 +181,14 @@ Open the terminal panel with `Alt + F12` (Windows/Linux) or `Option + F12` (Mac)
 
 ## Getting Help
 
-| Need | Where to go |
-|---|---|
-| Quick answer | [FAQ.md](../FAQ.md) |
-| Command reference | [reference/cheatsheet.md](../reference/cheatsheet.md) |
-| Term definition | [reference/glossary.md](../reference/glossary.md) |
-| Something went wrong | [reference/common-mistakes.md](../reference/common-mistakes.md) |
-| Ask a question | [GitHub Discussions](https://github.com/zaccessss/git-unlocked/discussions) |
-| Report an error | [GitHub Issues](https://github.com/zaccessss/git-unlocked/issues) |
+| Need                 | Where to go                                                                |
+| -------------------- | -------------------------------------------------------------------------- |
+| Quick answer         | [FAQ.md](../FAQ.md)                                                        |
+| Command reference    | [reference/cheatsheet.md](../reference/cheatsheet.md)                      |
+| Term definition      | [reference/glossary.md](../reference/glossary.md)                          |
+| Something went wrong | [reference/common-mistakes.md](../reference/common-mistakes.md)            |
+| Ask a question       | [GitHub Discussions](https://github.com/zaccesss/git-unlocked/discussions) |
+| Report an error      | [GitHub Issues](https://github.com/zaccesss/git-unlocked/issues)           |
 
 ---
 
@@ -200,10 +200,10 @@ Head to [Setting Up](03-setting-up.md) to get your accounts created, Git install
 
 ## Sources and Further Reading
 
-- [Official Git documentation](https://git-scm.com/doc) — the authoritative reference for all Git commands
-- [GitHub documentation](https://docs.github.com) — everything about using GitHub
-- [GitLab documentation](https://docs.gitlab.com) — everything about using GitLab
-- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) — the widely-adopted standard for structured commit messages
+- [Official Git documentation](https://git-scm.com/doc) - the authoritative reference for all Git commands
+- [GitHub documentation](https://docs.github.com) - everything about using GitHub
+- [GitLab documentation](https://docs.gitlab.com) - everything about using GitLab
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - the widely-adopted standard for structured commit messages
 
 ---
 

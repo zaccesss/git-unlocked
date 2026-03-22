@@ -50,7 +50,7 @@ This Code of Conduct applies within all project spaces, including the repository
 
 Instances of abusive, harassing or otherwise unacceptable behaviour may be reported to the project maintainer at:
 
-**Isaac Adjei (Zaccess)** — via [zacess.com](https://zacess.com)
+**Isaac Adjei (Zaccess)** - via [zacess.com](https://zacess.com)
 
 All complaints will be reviewed and investigated promptly and fairly. The maintainer is obligated to maintain confidentiality with regard to the reporter of an incident.
 

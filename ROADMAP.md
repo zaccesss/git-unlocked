@@ -7,12 +7,12 @@ This document outlines the current state of git-unlocked, what is being built an
 ## Table of Contents
 
 - [Current status](#current-status)
-- [Phase 1 — Foundation](#phase-1--foundation)
-- [Phase 2 — Core Git content](#phase-2--core-git-content)
-- [Phase 3 — Platform content](#phase-3--platform-content)
-- [Phase 4 — Tools and environment](#phase-4--tools-and-environment)
-- [Phase 5 — Real world and reference](#phase-5--real-world-and-reference)
-- [Phase 6 — Community and polish](#phase-6--community-and-polish)
+- [Phase 1 - Foundation](#phase-1--foundation)
+- [Phase 2 - Core Git content](#phase-2--core-git-content)
+- [Phase 3 - Platform content](#phase-3--platform-content)
+- [Phase 4 - Tools and environment](#phase-4--tools-and-environment)
+- [Phase 5 - Real world and reference](#phase-5--real-world-and-reference)
+- [Phase 6 - Community and polish](#phase-6--community-and-polish)
 - [Future ideas](#future-ideas)
 - [How to suggest something](#how-to-suggest-something)
 
@@ -21,39 +21,39 @@ This document outlines the current state of git-unlocked, what is being built an
 ## Current Status
 
 **Version:** 0.2.0
-**Stage:** Phase 1 complete — Phase 2 starting
+**Stage:** Phase 1 complete - Phase 2 starting
 **Started:** March 2026
 
-| Section | Status |
-|---|---|
-| Repository setup | Complete |
-| README | Complete |
-| CONTRIBUTING | Complete |
-| CODE_OF_CONDUCT | Complete |
-| SECURITY | Complete |
-| SUPPORT | Complete |
-| CHANGELOG | Complete |
-| ROADMAP | Complete |
-| FAQ | Complete |
-| HALL_OF_FAME | Complete |
+| Section                          | Status   |
+| -------------------------------- | -------- |
+| Repository setup                 | Complete |
+| README                           | Complete |
+| CONTRIBUTING                     | Complete |
+| CODE_OF_CONDUCT                  | Complete |
+| SECURITY                         | Complete |
+| SUPPORT                          | Complete |
+| CHANGELOG                        | Complete |
+| ROADMAP                          | Complete |
+| FAQ                              | Complete |
+| HALL_OF_FAME                     | Complete |
 | .github/ templates and workflows | Complete |
-| .editorconfig | Complete |
-| .markdownlint.json | Complete |
-| introduction/ | Complete |
-| git/ | Planned |
-| github/ | Planned |
-| gitlab/ | Planned |
-| ides/ | Planned |
-| terminal/ | Planned |
-| real-world/ | Planned |
-| reference/ | Planned |
-| resources/ | Planned |
-| first-contribution/ | Planned |
-| assets/ | Planned |
+| .editorconfig                    | Complete |
+| .markdownlint.json               | Complete |
+| introduction/                    | Complete |
+| git/                             | Planned  |
+| github/                          | Planned  |
+| gitlab/                          | Planned  |
+| ides/                            | Planned  |
+| terminal/                        | Planned  |
+| real-world/                      | Planned  |
+| reference/                       | Planned  |
+| resources/                       | Planned  |
+| first-contribution/              | Planned  |
+| assets/                          | Planned  |
 
 ---
 
-## Phase 1 — Foundation
+## Phase 1 - Foundation
 
 Getting the structure, branding and core files in place.
 
@@ -70,7 +70,7 @@ Getting the structure, branding and core files in place.
 - [x] HALL_OF_FAME.md
 - [x] Folder structure
 - [x] .github/ issue templates and PR template
-- [x] .github/workflows/ — markdownlint and link checker CI
+- [x] .github/workflows/ - markdownlint and link checker CI
 - [x] .editorconfig
 - [x] .markdownlint.json
 - [x] introduction/01-welcome.md
@@ -84,9 +84,9 @@ Getting the structure, branding and core files in place.
 
 ---
 
-## Phase 2 — Core Git Content
+## Phase 2 - Core Git Content
 
-Everything about Git — beginner to advanced, all three operating systems throughout.
+Everything about Git - beginner to advanced, all three operating systems throughout.
 
 - [ ] What is version control
 - [ ] Installing Git
@@ -110,11 +110,12 @@ Everything about Git — beginner to advanced, all three operating systems throu
 
 ---
 
-## Phase 3 — Platform Content
+## Phase 3 - Platform Content
 
-Everything about GitHub and GitLab — history, features, workflows and security.
+Everything about GitHub and GitLab - history, features, workflows and security.
 
 **GitHub**
+
 - [ ] What is GitHub
 - [ ] Creating an account
 - [ ] Repositories
@@ -130,6 +131,7 @@ Everything about GitHub and GitLab — history, features, workflows and security
 - [ ] GitHub advanced
 
 **GitLab**
+
 - [ ] What is GitLab
 - [ ] GitLab vs GitHub
 - [ ] Creating an account
@@ -140,7 +142,7 @@ Everything about GitHub and GitLab — history, features, workflows and security
 
 ---
 
-## Phase 4 — Tools and Environment
+## Phase 4 - Tools and Environment
 
 Git in IDEs and the terminal on every operating system.
 
@@ -160,7 +162,7 @@ Git in IDEs and the terminal on every operating system.
 
 ---
 
-## Phase 5 — Real World and Reference
+## Phase 5 - Real World and Reference
 
 Real scenarios, reference material and curated resources.
 
@@ -179,12 +181,12 @@ Real scenarios, reference material and curated resources.
 
 ---
 
-## Phase 6 — Community and Polish
+## Phase 6 - Community and Polish
 
 Growing the community and making the course as good as it can be.
 
 - [ ] Diagrams for visual concepts
-- [ ] Translations — French, Spanish and Arabic to start
+- [ ] Translations - French, Spanish and Arabic to start
 - [ ] Reach 100 stars
 - [ ] Reach 10 contributors
 - [ ] Submit to awesome-lists
@@ -199,8 +201,8 @@ Ideas being considered for after v1.0.0:
 
 - Interactive quizzes after each section
 - Short video walkthroughs
-- Git workflows guide — Gitflow, trunk-based development, feature branching
-- Git for specific stacks — Python, Node.js, Arduino, web projects
+- Git workflows guide - Gitflow, trunk-based development, feature branching
+- Git for specific stacks - Python, Node.js, Arduino, web projects
 - University edition structured for coursework
 - Multilingual expansion
 
@@ -208,7 +210,7 @@ Ideas being considered for after v1.0.0:
 
 ## How to Suggest Something
 
-1. Go to [github.com/zaccessss/git-unlocked/issues](https://github.com/zaccessss/git-unlocked/issues)
+1. Go to [github.com/zaccesss/git-unlocked/issues](https://github.com/zaccesss/git-unlocked/issues)
 2. Click **New Issue**
 3. Use the title format `suggestion: your idea here`
 4. Describe your idea and why it would help learners

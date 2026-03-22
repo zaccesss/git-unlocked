@@ -1,24 +1,24 @@
 # Hall of Fame
 
-Every person listed here has contributed to making git-unlocked better for everyone. Whether you fixed a typo, improved an explanation, added a translation or built an entire section — you are part of this. Thank you.
+Every person listed here has contributed to making git-unlocked better for everyone. Whether you fixed a typo, improved an explanation, added a translation or built an entire section - you are part of this. Thank you.
 
 ---
 
 ## Creator
 
-| Name | GitHub | Website | Role |
-|---|---|---|---|
-| Isaac Adjei (Zaccess) | [@zaccessss](https://github.com/zaccessss) | [zacess.com](https://zacess.com) | Creator and maintainer |
+| Name                  | GitHub                                   | Website                          | Role                   |
+| --------------------- | ---------------------------------------- | -------------------------------- | ---------------------- |
+| Isaac Adjei (Zaccess) | [@zaccesss](https://github.com/zaccesss) | [zacess.com](https://zacess.com) | Creator and maintainer |
 
 ---
 
 ## Contributors
 
-Want your name here? Read [CONTRIBUTING.md](CONTRIBUTING.md) and open a pull request. Every contribution counts — no matter how small. All contributors are listed in the order their first pull request was merged.
+Want your name here? Read [CONTRIBUTING.md](CONTRIBUTING.md) and open a pull request. Every contribution counts - no matter how small. All contributors are listed in the order their first pull request was merged.
 
-| Name | GitHub | Contribution |
-|---|---|---|
-| _Your name could be here_ | | |
+| Name                      | GitHub | Contribution |
+| ------------------------- | ------ | ------------ |
+| _Your name could be here_ |        |              |
 
 ---
 
