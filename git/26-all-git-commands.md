@@ -762,33 +762,33 @@ git check-ignore -v .           # check all files in current directory
 
 The commands used most often in everyday work:
 
-| Command | What it does |
-|---|---|
-| `git status` | See what has changed |
-| `git add .` | Stage all changes |
-| `git commit -m "message"` | Save a snapshot |
-| `git push` | Upload to remote |
-| `git pull` | Download from remote |
-| `git switch -c branch-name` | Create and switch to a branch |
-| `git switch main` | Switch to main |
-| `git merge feature` | Merge a branch into current |
-| `git log --oneline` | View compact commit history |
-| `git log --oneline --graph --all` | Visual branch graph |
-| `git diff` | See unstaged changes |
-| `git diff --staged` | See staged changes |
-| `git blame filename` | See who wrote each line |
-| `git stash` | Save work in progress |
-| `git stash pop` | Restore stashed work |
-| `git reset --soft HEAD~1` | Undo last commit (keep changes) |
-| `git revert HEAD` | Safely undo a pushed commit |
-| `git restore --staged .` | Unstage everything |
-| `git restore .` | Discard all working directory changes |
-| `git remote -v` | See configured remotes |
-| `git fetch --prune` | Update remote references |
-| `git tag -a v1.0.0 -m "msg"` | Create a release tag |
-| `git reflog` | Find lost commits |
-| `git bisect start` | Begin binary search for a bug |
-| `git archive --format=zip HEAD > out.zip` | Export repo as zip |
+| Command                                   | What it does                          |
+| ----------------------------------------- | ------------------------------------- |
+| `git status`                              | See what has changed                  |
+| `git add .`                               | Stage all changes                     |
+| `git commit -m "message"`                 | Save a snapshot                       |
+| `git push`                                | Upload to remote                      |
+| `git pull`                                | Download from remote                  |
+| `git switch -c branch-name`               | Create and switch to a branch         |
+| `git switch main`                         | Switch to main                        |
+| `git merge feature`                       | Merge a branch into current           |
+| `git log --oneline`                       | View compact commit history           |
+| `git log --oneline --graph --all`         | Visual branch graph                   |
+| `git diff`                                | See unstaged changes                  |
+| `git diff --staged`                       | See staged changes                    |
+| `git blame filename`                      | See who wrote each line               |
+| `git stash`                               | Save work in progress                 |
+| `git stash pop`                           | Restore stashed work                  |
+| `git reset --soft HEAD~1`                 | Undo last commit (keep changes)       |
+| `git revert HEAD`                         | Safely undo a pushed commit           |
+| `git restore --staged .`                  | Unstage everything                    |
+| `git restore .`                           | Discard all working directory changes |
+| `git remote -v`                           | See configured remotes                |
+| `git fetch --prune`                       | Update remote references              |
+| `git tag -a v1.0.0 -m "msg"`              | Create a release tag                  |
+| `git reflog`                              | Find lost commits                     |
+| `git bisect start`                        | Begin binary search for a bug         |
+| `git archive --format=zip HEAD > out.zip` | Export repo as zip                    |
 
 ---
 
