@@ -109,11 +109,11 @@ All content in this course follows these rules exactly. Please match them.
 
 ### Language and tone
 
-- Write in **English** 
+- Write in **UK English** — colour, organise, practise, licence (noun), recognise
+- Maintain a clear, professional and accessible tone throughout
 - Assume the reader has zero prior knowledge unless the file is marked 🟡 or 🔴
-- Do not talk down to the reader
 - Do not use jargon without explaining it first
-- Correct grammar and spelling throughout
+- Use correct grammar and spelling throughout
 
 ### Emoji policy
 
