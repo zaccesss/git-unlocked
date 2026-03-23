@@ -7,12 +7,12 @@ This document outlines the current state of git-unlocked, what is being built an
 ## Table of Contents
 
 - [Current status](#current-status)
-- [Phase 1 - Foundation](#phase-1--foundation)
-- [Phase 2 - Core Git content](#phase-2--core-git-content)
-- [Phase 3 - Platform content](#phase-3--platform-content)
-- [Phase 4 - Tools and environment](#phase-4--tools-and-environment)
-- [Phase 5 - Real world and reference](#phase-5--real-world-and-reference)
-- [Phase 6 - Community and polish](#phase-6--community-and-polish)
+- [Phase 1 - Foundation](#phase-1---foundation)
+- [Phase 2 - Core Git content](#phase-2---core-git-content)
+- [Phase 3 - Platform content](#phase-3---platform-content)
+- [Phase 4 - Tools and environment](#phase-4---tools-and-environment)
+- [Phase 5 - Real world and reference](#phase-5---real-world-and-reference)
+- [Phase 6 - Community and polish](#phase-6---community-and-polish)
 - [Future ideas](#future-ideas)
 - [How to suggest something](#how-to-suggest-something)
 
@@ -21,35 +21,35 @@ This document outlines the current state of git-unlocked, what is being built an
 ## Current Status
 
 **Version:** 0.2.0
-**Stage:** Phase 1 complete - Phase 2 starting
+**Stage:** Phase 1 complete, Phase 2 in progress
 **Started:** March 2026
 
-| Section                          | Status   |
-| -------------------------------- | -------- |
-| Repository setup                 | Complete |
-| README                           | Complete |
-| CONTRIBUTING                     | Complete |
-| CODE_OF_CONDUCT                  | Complete |
-| SECURITY                         | Complete |
-| SUPPORT                          | Complete |
-| CHANGELOG                        | Complete |
-| ROADMAP                          | Complete |
-| FAQ                              | Complete |
-| HALL_OF_FAME                     | Complete |
+| Section | Status |
+|---|---|
+| Repository setup | Complete |
+| README | Complete |
+| CONTRIBUTING | Complete |
+| CODE_OF_CONDUCT | Complete |
+| SECURITY | Complete |
+| SUPPORT | Complete |
+| CHANGELOG | Complete |
+| ROADMAP | Complete |
+| FAQ | Complete |
+| HALL_OF_FAME | Complete |
 | .github/ templates and workflows | Complete |
-| .editorconfig                    | Complete |
-| .markdownlint.json               | Complete |
-| introduction/                    | Complete |
-| git/                             | Planned  |
-| github/                          | Planned  |
-| gitlab/                          | Planned  |
-| ides/                            | Planned  |
-| terminal/                        | Planned  |
-| real-world/                      | Planned  |
-| reference/                       | Planned  |
-| resources/                       | Planned  |
-| first-contribution/              | Planned  |
-| assets/                          | Planned  |
+| .editorconfig | Complete |
+| .markdownlint.json | Complete |
+| introduction/ | Complete |
+| git/ | In progress |
+| github/ | Planned |
+| gitlab/ | Planned |
+| ides/ | Planned |
+| terminal/ | Planned |
+| real-world/ | Planned |
+| reference/ | Planned |
+| resources/ | Planned |
+| first-contribution/ | Planned |
+| assets/ | Planned |
 
 ---
 
@@ -88,25 +88,32 @@ Getting the structure, branding and core files in place.
 
 Everything about Git - beginner to advanced, all three operating systems throughout.
 
-- [ ] What is version control
-- [ ] Installing Git
-- [ ] How Git works
-- [ ] Core concepts
-- [ ] Basic commands
-- [ ] Branching
-- [ ] Merging
-- [ ] Merge conflicts
-- [ ] Remote repositories
-- [ ] .gitignore
-- [ ] Stash
-- [ ] Rebase
-- [ ] Cherry-pick
-- [ ] Reset and revert
-- [ ] Tags and releases
-- [ ] Submodules
-- [ ] Hooks
-- [ ] Bisect
-- [ ] All Git commands reference
+- [x] 01 - What is version control
+- [x] 02 - Installing Git
+- [x] 03 - How Git works
+- [x] 04 - Core concepts
+- [ ] 05 - Basic commands
+- [ ] 06 - Branching
+- [ ] 07 - Merging
+- [ ] 08 - Merge conflicts
+- [ ] 09 - Remote repositories
+- [ ] 10 - .gitignore
+- [ ] 11 - Stash
+- [ ] 12 - Git workflows (Gitflow, trunk-based, GitHub Flow, feature branching)
+- [ ] 13 - Rebase
+- [ ] 14 - Cherry-pick
+- [ ] 15 - Reset and revert
+- [ ] 16 - Tags and releases
+- [ ] 17 - Submodules
+- [ ] 18 - Hooks
+- [ ] 19 - Bisect
+- [ ] 20 - Signing commits (GPG and SSH)
+- [ ] 21 - Advanced Git config (aliases, conditional includes)
+- [ ] 22 - Large repositories (Git LFS, sparse checkout, shallow clones)
+- [ ] 23 - Monorepos
+- [ ] 24 - GitOps
+- [ ] 25 - Git internals advanced (packfiles, reflog, gc)
+- [ ] 26 - All Git commands reference
 
 ---
 
@@ -115,7 +122,6 @@ Everything about Git - beginner to advanced, all three operating systems through
 Everything about GitHub and GitLab - history, features, workflows and security.
 
 **GitHub**
-
 - [ ] What is GitHub
 - [ ] Creating an account
 - [ ] Repositories
@@ -131,7 +137,6 @@ Everything about GitHub and GitLab - history, features, workflows and security.
 - [ ] GitHub advanced
 
 **GitLab**
-
 - [ ] What is GitLab
 - [ ] GitLab vs GitHub
 - [ ] Creating an account
@@ -201,16 +206,15 @@ Ideas being considered for after v1.0.0:
 
 - Interactive quizzes after each section
 - Short video walkthroughs
-- Git workflows guide - Gitflow, trunk-based development, feature branching
 - Git for specific stacks - Python, Node.js, Arduino, web projects
 - University edition structured for coursework
-- Multilingual expansion
+- Multilingual expansion beyond initial three languages
 
 ---
 
 ## How to Suggest Something
 
-1. Go to [github.com/zaccesss/git-unlocked/issues](https://github.com/zaccesss/git-unlocked/issues)
+1. Go to [github.com/zaccessss/git-unlocked/issues](https://github.com/zaccessss/git-unlocked/issues)
 2. Click **New Issue**
 3. Use the title format `suggestion: your idea here`
 4. Describe your idea and why it would help learners
