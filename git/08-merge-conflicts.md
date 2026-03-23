@@ -56,9 +56,9 @@ Here is what a conflicted file looks like:
 # Contact Page
 
 <<<<<<< HEAD
-Email us at: hello@zacess.com
+Email us at: hello@example.com
 =======
-Email us at: support@zacess.com
+Email us at: support@example.com
 >>>>>>> feature/update-contact
 ```
 
