@@ -92,28 +92,28 @@ Everything about Git - beginner to advanced, all three operating systems through
 - [x] 02 - Installing Git
 - [x] 03 - How Git works
 - [x] 04 - Core concepts
-- [ ] 05 - Basic commands
-- [ ] 06 - Branching
-- [ ] 07 - Merging
-- [ ] 08 - Merge conflicts
-- [ ] 09 - Remote repositories
-- [ ] 10 - .gitignore
-- [ ] 11 - Stash
-- [ ] 12 - Git workflows (Gitflow, trunk-based, GitHub Flow, feature branching)
-- [ ] 13 - Rebase
-- [ ] 14 - Cherry-pick
-- [ ] 15 - Reset and revert
-- [ ] 16 - Tags and releases
-- [ ] 17 - Submodules
-- [ ] 18 - Hooks
-- [ ] 19 - Bisect
-- [ ] 20 - Signing commits (GPG and SSH)
-- [ ] 21 - Advanced Git config (aliases, conditional includes)
-- [ ] 22 - Large repositories (Git LFS, sparse checkout, shallow clones)
-- [ ] 23 - Monorepos
-- [ ] 24 - GitOps
-- [ ] 25 - Git internals advanced (packfiles, reflog, gc)
-- [ ] 26 - All Git commands reference
+- [x] 05 - Basic commands
+- [x] 06 - Branching
+- [x] 07 - Merging
+- [x] 08 - Merge conflicts
+- [x] 09 - Remote repositories
+- [x] 10 - .gitignore
+- [x] 11 - Stash
+- [x] 12 - Git workflows (Gitflow, trunk-based, GitHub Flow, feature branching)
+- [x] 13 - Rebase
+- [x] 14 - Cherry-pick
+- [x] 15 - Reset and revert
+- [x] 16 - Tags and releases
+- [x] 17 - Submodules
+- [x] 18 - Hooks
+- [x] 19 - Bisect
+- [x] 20 - Signing commits (GPG and SSH)
+- [x] 21 - Advanced Git config (aliases, conditional includes)
+- [x] 22 - Large repositories (Git LFS, sparse checkout, shallow clones)
+- [x] 23 - Monorepos
+- [x] 24 - GitOps
+- [x] 25 - Git internals advanced (packfiles, reflog, gc)
+- [x] 26 - All Git commands reference
 
 ---
 
