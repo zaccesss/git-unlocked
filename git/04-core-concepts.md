@@ -170,7 +170,7 @@ git remote -v
 **Cloning** is the act of downloading a complete copy of a remote repository to your local machine.
 
 ```bash
-git clone https://github.com/zaccessss/git-unlocked.git
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 ```
 
 This does three things:

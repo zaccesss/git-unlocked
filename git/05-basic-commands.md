@@ -101,7 +101,7 @@ git clone <url>
 **Clone into a folder with the repository's name (most common):**
 
 ```bash
-git clone https://github.com/zaccessss/git-unlocked.git
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
 ```
 
 This creates a folder called `git-unlocked` in your current directory.
@@ -109,13 +109,13 @@ This creates a folder called `git-unlocked` in your current directory.
 **Clone into a specific folder name:**
 
 ```bash
-git clone https://github.com/zaccessss/git-unlocked.git my-folder-name
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git my-folder-name
 ```
 
 **Clone using SSH (if you have SSH set up):**
 
 ```bash
-git clone git@github.com:zaccessss/git-unlocked.git
+git clone git@github.com:YOUR_USERNAME/YOUR_REPO.git
 ```
 
 > [!TIP]
@@ -346,7 +346,7 @@ This is extremely useful for understanding how branches relate to each other. Th
 **Show commits by a specific author:**
 
 ```bash
-git log --author="Isaac Adjei"
+git log --author="Your Name"
 ```
 
 **Show commits containing a specific word in the message:**

@@ -65,8 +65,8 @@ git remote -v
 Output:
 
 ```
-origin  https://github.com/zaccessss/git-unlocked.git (fetch)
-origin  https://github.com/zaccessss/git-unlocked.git (push)
+origin  https://github.com/YOUR_USERNAME/YOUR_REPO.git (fetch)
+origin  https://github.com/YOUR_USERNAME/YOUR_REPO.git (push)
 ```
 
 Each remote shows two URLs - one for fetch and one for push. In most cases they are identical. You can configure them separately if you need to fetch from one URL and push to another, but this is rare.
@@ -78,7 +78,7 @@ Each remote shows two URLs - one for fetch and one for push. In most cases they 
 **Add a new remote:**
 
 ```bash
-git remote add origin https://github.com/zaccessss/git-unlocked.git
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
 ```
 
 The syntax is `git remote add <name> <url>`.
@@ -86,7 +86,7 @@ The syntax is `git remote add <name> <url>`.
 **Add a remote using SSH:**
 
 ```bash
-git remote add origin git@github.com:zaccessss/git-unlocked.git
+git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
 ```
 
 HTTPS and SSH are both valid. Use whichever authentication method you have configured. SSH is more convenient for regular use once set up.
@@ -480,8 +480,8 @@ Output:
 
 ```
 * remote origin
-  Fetch URL: https://github.com/zaccessss/git-unlocked.git
-  Push  URL: https://github.com/zaccessss/git-unlocked.git
+  Fetch URL: https://github.com/YOUR_USERNAME/YOUR_REPO.git
+  Push  URL: https://github.com/YOUR_USERNAME/YOUR_REPO.git
   HEAD branch: main
   Remote branches:
     main                    tracked
@@ -622,7 +622,7 @@ If you are on `feature/login` and run `git pull`, Git fetches and merges the tra
 The URL format for HTTPS (`https://github.com/...`) and SSH (`git@github.com:...`) are different. If you cloned with HTTPS but have SSH set up, you can switch the remote URL:
 
 ```bash
-git remote set-url origin git@github.com:zaccessss/git-unlocked.git
+git remote set-url origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
 ```
 
 ---

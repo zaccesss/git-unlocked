@@ -131,8 +131,8 @@ A commit object looks roughly like this internally:
 ```
 tree   4b825dc642cb6eb9a060e54bf8d69288fbee4904
 parent a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2
-author Isaac Adjei <isaac@zacess.com> 1711234567 +0000
-committer Isaac Adjei <isaac@zacess.com> 1711234567 +0000
+author Your Name <your@email.com> 1711234567 +0000
+committer Your Name <your@email.com> 1711234567 +0000
 
 add: initial project structure
 ```

@@ -24,32 +24,32 @@ This document outlines the current state of git-unlocked, what is being built an
 **Stage:** Phase 1 complete, Phase 2 in progress
 **Started:** March 2026
 
-| Section | Status |
-|---|---|
-| Repository setup | Complete |
-| README | Complete |
-| CONTRIBUTING | Complete |
-| CODE_OF_CONDUCT | Complete |
-| SECURITY | Complete |
-| SUPPORT | Complete |
-| CHANGELOG | Complete |
-| ROADMAP | Complete |
-| FAQ | Complete |
-| HALL_OF_FAME | Complete |
-| .github/ templates and workflows | Complete |
-| .editorconfig | Complete |
-| .markdownlint.json | Complete |
-| introduction/ | Complete |
-| git/ | In progress |
-| github/ | Planned |
-| gitlab/ | Planned |
-| ides/ | Planned |
-| terminal/ | Planned |
-| real-world/ | Planned |
-| reference/ | Planned |
-| resources/ | Planned |
-| first-contribution/ | Planned |
-| assets/ | Planned |
+| Section                          | Status      |
+| -------------------------------- | ----------- |
+| Repository setup                 | Complete    |
+| README                           | Complete    |
+| CONTRIBUTING                     | Complete    |
+| CODE_OF_CONDUCT                  | Complete    |
+| SECURITY                         | Complete    |
+| SUPPORT                          | Complete    |
+| CHANGELOG                        | Complete    |
+| ROADMAP                          | Complete    |
+| FAQ                              | Complete    |
+| HALL_OF_FAME                     | Complete    |
+| .github/ templates and workflows | Complete    |
+| .editorconfig                    | Complete    |
+| .markdownlint.json               | Complete    |
+| introduction/                    | Complete    |
+| git/                             | In progress |
+| github/                          | Planned     |
+| gitlab/                          | Planned     |
+| ides/                            | Planned     |
+| terminal/                        | Planned     |
+| real-world/                      | Planned     |
+| reference/                       | Planned     |
+| resources/                       | Planned     |
+| first-contribution/              | Planned     |
+| assets/                          | Planned     |
 
 ---
 
@@ -122,6 +122,7 @@ Everything about Git - beginner to advanced, all three operating systems through
 Everything about GitHub and GitLab - history, features, workflows and security.
 
 **GitHub**
+
 - [ ] What is GitHub
 - [ ] Creating an account
 - [ ] Repositories
@@ -137,6 +138,7 @@ Everything about GitHub and GitLab - history, features, workflows and security.
 - [ ] GitHub advanced
 
 **GitLab**
+
 - [ ] What is GitLab
 - [ ] GitLab vs GitHub
 - [ ] Creating an account
