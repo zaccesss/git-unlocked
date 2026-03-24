@@ -37,7 +37,9 @@ If you are brand new, start at file 01 and work forward. If you are looking for 
 | [23-monorepos.md](23-monorepos.md) | Managing multiple packages in one repository with Turborepo, Nx and more | 🔴 |
 | [24-gitops.md](24-gitops.md) | Git as the source of truth for infrastructure and deployments | 🔴 |
 | [25-git-internals-advanced.md](25-git-internals-advanced.md) | Packfiles, reflog, garbage collection and the object model in depth | 🔴 |
-| [26-all-git-commands.md](26-all-git-commands.md) | Complete reference for every Git command with common options and examples | 🟢🟡🔴 |
+| [26-gitattributes.md](26-gitattributes.md) | Controlling line endings, diffs, merges, exports and language stats per file type | 🟡 |
+| [27-git-worktree.md](27-git-worktree.md) | Checking out multiple branches simultaneously in separate directories | 🔴 |
+| [28-all-git-commands.md](28-all-git-commands.md) | Complete reference for every Git command with common options and examples | 🟢🟡🔴 |
 
 ---
 
@@ -75,6 +77,8 @@ Start here:
 - [18 - Hooks](18-hooks.md) - automate your workflow
 - [19 - Bisect](19-bisect.md) - find bugs with binary search
 - [21 - Advanced config](21-advanced-config.md) - aliases and power settings
+- [26 - .gitattributes](26-gitattributes.md) - control how Git handles your files
+- [27 - Git worktree](27-git-worktree.md) - work on multiple branches at once
 
 ### Working in a professional or enterprise context
 
@@ -83,10 +87,11 @@ Start here:
 - [22 - Large repos](22-large-repos.md) - Git LFS, sparse checkout
 - [23 - Monorepos](23-monorepos.md) - multi-package repositories
 - [24 - GitOps](24-gitops.md) - Git-driven infrastructure
+- [26 - .gitattributes](26-gitattributes.md) - line endings and cross-platform teams
 
 ### Just need a quick answer
 
-- [26 - All Git commands](26-all-git-commands.md) - complete command reference
+- [28 - All Git commands](28-all-git-commands.md) - complete command reference
 - [../reference/cheatsheet.md](../reference/cheatsheet.md) - one-page quick reference
 - [../reference/common-mistakes.md](../reference/common-mistakes.md) - fixes for common problems
 - [../FAQ.md](../FAQ.md) - frequently asked questions
