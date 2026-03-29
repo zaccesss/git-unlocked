@@ -20,8 +20,8 @@ This document outlines the current state of git-unlocked, what is being built an
 
 ## Current Status
 
-**Version:** 0.2.0
-**Stage:** Phase 1 complete, Phase 2 in progress
+**Version:** 0.3.0
+**Stage:** Phase 1 complete, Phase 2 complete, Phase 3 in progress
 **Started:** March 2026
 
 | Section                          | Status      |
@@ -40,8 +40,8 @@ This document outlines the current state of git-unlocked, what is being built an
 | .editorconfig                    | Complete    |
 | .markdownlint.json               | Complete    |
 | introduction/                    | Complete    |
-| git/                             | In progress |
-| github/                          | Planned     |
+| git/                             | Complete    |
+| github/                          | Complete    |
 | gitlab/                          | Planned     |
 | ides/                            | Planned     |
 | terminal/                        | Planned     |
@@ -113,7 +113,9 @@ Everything about Git - beginner to advanced, all three operating systems through
 - [x] 23 - Monorepos
 - [x] 24 - GitOps
 - [x] 25 - Git internals advanced (packfiles, reflog, gc)
-- [x] 26 - All Git commands reference
+- [x] 26 - Gitattributes
+- [x] 27 - Git worktree
+- [x] 28 - All Git commands reference
 
 ---
 
@@ -123,19 +125,34 @@ Everything about GitHub and GitLab - history, features, workflows and security.
 
 **GitHub**
 
-- [ ] What is GitHub
-- [ ] Creating an account
-- [ ] Repositories
-- [ ] Issues
-- [ ] Pull requests
-- [ ] GitHub Actions
-- [ ] GitHub Pages
-- [ ] Discussions
-- [ ] Projects and boards
-- [ ] Security features
-- [ ] Profile and README
-- [ ] Badges and achievements
-- [ ] GitHub advanced
+- [x] 00 - GitHub folder overview
+- [x] 01 - What is GitHub
+- [x] 02 - Creating an account
+- [x] 03 - GitHub Desktop
+- [x] 04 - Repositories
+- [x] 05 - Forking
+- [x] 06 - Editing on GitHub
+- [x] 07 - Issues
+- [x] 08 - Pull requests
+- [x] 09 - Branch protection and rulesets
+- [x] 10 - GitHub Actions
+- [x] 11 - GitHub Pages
+- [x] 12 - Discussions
+- [x] 13 - Projects and boards
+- [x] 14 - GitHub Releases
+- [x] 15 - GitHub Packages
+- [x] 16 - Security features
+- [x] 17 - Profile and README
+- [x] 18 - Badges and achievements
+- [x] 19 - Copilot
+- [x] 20 - Education
+- [x] 21 - GitHub CLI
+- [x] 22 - GitHub Mobile
+- [x] 23 - Collaborators, teams and organisations
+- [x] 24 - Advanced features
+- [x] 25 - What should not be on GitHub
+- [x] 26 - Platform comparison
+- [x] 27 - All GitHub features reference
 
 **GitLab**
 

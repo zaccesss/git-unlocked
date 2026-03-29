@@ -30,8 +30,6 @@ PATCH - typo fixes, small corrections, link updates
 
 In progress or planned - not yet in a release.
 
-- All `git/` folder content
-- All `github/` folder content
 - All `gitlab/` folder content
 - All `ides/` folder content
 - All `terminal/` folder content
@@ -40,6 +38,27 @@ In progress or planned - not yet in a release.
 - All `resources/` folder content
 - `first-contribution/` sandbox
 - `assets/` banner and diagrams
+
+---
+
+## [0.3.0] - 2026-03-29
+
+### Added
+
+- `github/18-badges-and-achievements.md` - every GitHub achievement, all tier thresholds and step-by-step guides to earn Quickdraw, YOLO and Pull Shark on a brand new account
+- `github/19-copilot.md` - GitHub Copilot plans, model selection, setup in VS Code/JetBrains/Neovim/Visual Studio, Chat, context variables, Copilot Edits, agent mode, Workspace, custom instructions, content exclusions and limitations
+- `github/20-education.md` - Student Developer Pack full offer list with redemption steps, GitHub Classroom autograding, Campus Expert program and Octernships
+- `github/21-cli.md` - complete GitHub CLI reference covering every command group with real examples, JSON scripting, extensions and multi-step workflows
+- `github/22-mobile.md` - GitHub Mobile setup, built-in 2FA authenticator, notification triage, PR review on mobile and organisation management
+- `github/23-collaborators-teams-orgs.md` - collaborators, deploy keys, outside collaborators, organisations, teams, nested teams, CODEOWNERS, org-level Actions policies, verified domains and audit log
+- `github/24-advanced.md` - REST API, GraphQL API, PATs, webhooks with signature verification, GitHub Apps, OAuth Apps, Sponsors, Wikis, Gists and advanced search
+- `github/25-what-should-not-be-on-github.md` - what never to commit, cleaning secrets with git filter-repo and BFG, gitleaks pre-commit hooks, detect-secrets, push protection and the .env pattern
+- `github/26-platform-comparison.md` - full feature matrix for Web, Desktop, Mobile, CLI, github.dev and Codespaces with setup instructions and recommendations by developer type
+- `github/27-all-github-features-reference.md` - complete reference for every GitHub feature with descriptions, settings paths and links to course files
+
+### Updated
+
+- `github/00-github-overview.md` - rewritten to cover all 27 files with full descriptions, additional learning paths and notes on pricing and OS coverage
 
 ---
 
@@ -74,7 +93,7 @@ In progress or planned - not yet in a release.
 
 ### Added
 
-- Initial repository at [github.com/zaccesss/git-unlocked](https://github.com/zaccesss/git-unlocked)
+- Initial repository at [github.com/zaccessss/git-unlocked](https://github.com/zaccessss/git-unlocked)
 - `README.md`, `LICENSE`, `CONTRIBUTING.md`, `CHANGELOG.md`, `ROADMAP.md`, `FAQ.md`, `HALL_OF_FAME.md`
 - All folder structure with `.gitkeep` files
 - `introduction/01-welcome.md`
