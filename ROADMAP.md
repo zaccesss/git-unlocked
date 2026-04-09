@@ -20,8 +20,8 @@ This document outlines the current state of git-unlocked, what is being built an
 
 ## Current Status
 
-**Version:** 0.3.0
-**Stage:** Phase 1 complete, Phase 2 complete, Phase 3 in progress
+**Version:** 0.4.0
+**Stage:** Phase 3 in progress - git/ complete, github/ complete, gitlab/ complete, ides/ next
 **Started:** March 2026
 
 | Section                          | Status      |
@@ -42,8 +42,8 @@ This document outlines the current state of git-unlocked, what is being built an
 | introduction/                    | Complete    |
 | git/                             | Complete    |
 | github/                          | Complete    |
-| gitlab/                          | Planned     |
-| ides/                            | Planned     |
+| gitlab/                          | Complete    |
+| ides/                            | Next        |
 | terminal/                        | Planned     |
 | real-world/                      | Planned     |
 | reference/                       | Planned     |
@@ -78,167 +78,190 @@ Getting the structure, branding and core files in place.
 - [x] introduction/03-setting-up.md
 - [ ] Banner and assets
 - [ ] first-contribution/ sandbox
-- [ ] GitHub Discussions enabled
-- [ ] GitHub Project board
-- [ ] Template repository enabled
 
 ---
 
-## Phase 2 - Core Git Content
+## Phase 2 - Core Git content
 
-Everything about Git - beginner to advanced, all three operating systems throughout.
+The `git/` folder covering Git from zero to advanced.
 
-- [x] 01 - What is version control
-- [x] 02 - Installing Git
-- [x] 03 - How Git works
-- [x] 04 - Core concepts
-- [x] 05 - Basic commands
-- [x] 06 - Branching
-- [x] 07 - Merging
-- [x] 08 - Merge conflicts
-- [x] 09 - Remote repositories
-- [x] 10 - .gitignore
-- [x] 11 - Stash
-- [x] 12 - Git workflows (Gitflow, trunk-based, GitHub Flow, feature branching)
-- [x] 13 - Rebase
-- [x] 14 - Cherry-pick
-- [x] 15 - Reset and revert
-- [x] 16 - Tags and releases
-- [x] 17 - Submodules
-- [x] 18 - Hooks
-- [x] 19 - Bisect
-- [x] 20 - Signing commits (GPG and SSH)
-- [x] 21 - Advanced Git config (aliases, conditional includes)
-- [x] 22 - Large repositories (Git LFS, sparse checkout, shallow clones)
-- [x] 23 - Monorepos
-- [x] 24 - GitOps
-- [x] 25 - Git internals advanced (packfiles, reflog, gc)
-- [x] 26 - Gitattributes
-- [x] 27 - Git worktree
-- [x] 28 - All Git commands reference
+- [x] 00-git-overview.md
+- [x] 01-what-is-version-control.md
+- [x] 02-installing-git.md
+- [x] 03-how-git-works.md
+- [x] 04-core-concepts.md
+- [x] 05-basic-commands.md
+- [x] 06-branching.md
+- [x] 07-merging.md
+- [x] 08-merge-conflicts.md
+- [x] 09-remote-repos.md
+- [x] 10-gitignore.md
+- [x] 11-stash.md
+- [x] 12-git-workflows.md
+- [x] 13-rebase.md
+- [x] 14-cherry-pick.md
+- [x] 15-reset-and-revert.md
+- [x] 16-tags-and-releases.md
+- [x] 17-submodules.md
+- [x] 18-hooks.md
+- [x] 19-bisect.md
+- [x] 20-signing-commits.md
+- [x] 21-advanced-config.md
+- [x] 22-large-repos.md
+- [x] 23-monorepos.md
+- [x] 24-gitops.md
+- [x] 25-git-internals-advanced.md
+- [x] 26-gitattributes.md
+- [x] 27-git-worktree.md
+- [x] 28-all-git-commands.md
 
----
-
-## Phase 3 - Platform Content
-
-Everything about GitHub and GitLab - history, features, workflows and security.
-
-**GitHub**
-
-- [x] 00 - GitHub folder overview
-- [x] 01 - What is GitHub
-- [x] 02 - Creating an account
-- [x] 03 - GitHub Desktop
-- [x] 04 - Repositories
-- [x] 05 - Forking
-- [x] 06 - Editing on GitHub
-- [x] 07 - Issues
-- [x] 08 - Pull requests
-- [x] 09 - Branch protection and rulesets
-- [x] 10 - GitHub Actions
-- [x] 11 - GitHub Pages
-- [x] 12 - Discussions
-- [x] 13 - Projects and boards
-- [x] 14 - GitHub Releases
-- [x] 15 - GitHub Packages
-- [x] 16 - Security features
-- [x] 17 - Profile and README
-- [x] 18 - Badges and achievements
-- [x] 19 - Copilot
-- [x] 20 - Education
-- [x] 21 - GitHub CLI
-- [x] 22 - GitHub Mobile
-- [x] 23 - Collaborators, teams and organisations
-- [x] 24 - Advanced features
-- [x] 25 - What should not be on GitHub
-- [x] 26 - Platform comparison
-- [x] 27 - All GitHub features reference
-
-**GitLab**
-
-- [ ] What is GitLab
-- [ ] GitLab vs GitHub
-- [ ] Creating an account
-- [ ] GitLab basics
-- [ ] Merge requests
-- [ ] GitLab CI/CD
-- [ ] GitLab advanced
+**Status: Complete (29 files)**
 
 ---
 
-## Phase 4 - Tools and Environment
+## Phase 3 - Platform content
 
-Git in IDEs and the terminal on every operating system.
+The `github/` and `gitlab/` folders covering the two main Git hosting platforms.
 
-- [ ] What is an IDE
-- [ ] Git in VS Code
-- [ ] Git in JetBrains IDEs
-- [ ] Git in Visual Studio 2026
-- [ ] Git in Xcode 26
-- [ ] Git in Neovim and other editors
-- [ ] Extensions and plugins
-- [ ] Shortcuts by IDE
-- [ ] Using the terminal without Git
-- [ ] Windows Command Prompt
-- [ ] Windows PowerShell
-- [ ] Mac Terminal
-- [ ] Linux Bash
+### github/ folder
 
----
+- [x] 00-github-overview.md
+- [x] 01-what-is-github.md
+- [x] 02-creating-an-account.md
+- [x] 03-github-desktop.md
+- [x] 04-repositories.md
+- [x] 05-forking.md
+- [x] 06-editing-on-github.md
+- [x] 07-issues.md
+- [x] 08-pull-requests.md
+- [x] 09-branch-protection-and-rulesets.md
+- [x] 10-github-actions.md
+- [x] 11-github-pages.md
+- [x] 12-discussions.md
+- [x] 13-projects-and-boards.md
+- [x] 14-github-releases.md
+- [x] 15-github-packages.md
+- [x] 16-security-features.md
+- [x] 17-profile-and-readme.md
+- [x] 18-badges-and-achievements.md
+- [x] 19-copilot.md
+- [x] 20-education.md
+- [x] 21-cli.md
+- [x] 22-mobile.md
+- [x] 23-collaborators-teams-orgs.md
+- [x] 24-advanced.md
+- [x] 25-what-should-not-be-on-github.md
+- [x] 26-platform-comparison.md
+- [x] 27-all-github-features-reference.md
 
-## Phase 5 - Real World and Reference
+**Status: Complete (28 files)**
 
-Real scenarios, reference material and curated resources.
+### gitlab/ folder
 
-- [ ] Team workflows
-- [ ] Contributing to open source
-- [ ] Recovering from mistakes
-- [ ] Git in industry
-- [ ] Cheatsheet
-- [ ] Keyboard shortcuts
-- [ ] Glossary
-- [ ] Common mistakes
-- [ ] Tools
-- [ ] Curated videos
-- [ ] Books
-- [ ] Practice platforms
+- [x] 00-gitlab-overview.md
+- [x] 01-what-is-gitlab.md
+- [x] 02-creating-an-account.md
+- [x] 03-gitlab-vs-github.md
+- [x] 04-projects-and-namespaces.md
+- [x] 05-merge-requests.md
+- [x] 06-gitlab-cicd.md
+- [x] 07-gitlab-pages.md
+- [x] 08-issues-and-planning.md
+- [x] 09-security-features.md
+- [x] 10-gitlab-duo.md
+- [x] 11-self-hosting.md
+- [x] 12-gitlab-cli.md
+- [x] 13-groups-and-permissions.md
+- [x] 14-gitlab-api-and-integrations.md
+- [x] 15-all-gitlab-features-reference.md
 
----
-
-## Phase 6 - Community and Polish
-
-Growing the community and making the course as good as it can be.
-
-- [ ] Diagrams for visual concepts
-- [ ] Translations - French, Spanish and Arabic to start
-- [ ] Reach 100 stars
-- [ ] Reach 10 contributors
-- [ ] Submit to awesome-lists
-- [ ] Share on Reddit, Dev.to, Hashnode and LinkedIn
-- [ ] Tag v1.0.0 stable release
-
----
-
-## Future Ideas
-
-Ideas being considered for after v1.0.0:
-
-- Interactive quizzes after each section
-- Short video walkthroughs
-- Git for specific stacks - Python, Node.js, Arduino, web projects
-- University edition structured for coursework
-- Multilingual expansion beyond initial three languages
+**Status: Complete (16 files)**
 
 ---
 
-## How to Suggest Something
+## Phase 4 - Tools and environment
 
-1. Go to [github.com/zaccessss/git-unlocked/issues](https://github.com/zaccessss/git-unlocked/issues)
-2. Click **New Issue**
-3. Use the title format `suggestion: your idea here`
-4. Describe your idea and why it would help learners
+The `ides/` folder covering IDEs and editors, and the `terminal/` folder covering the command line.
 
-The best suggestions will be added to the roadmap and credited to you.
+### ides/ folder (next)
+
+Planned files:
+- 00-ides-overview.md
+- 01-vs-code.md - Git integration, GitLens, GitHub extension, GitLab extension, Copilot, Duo
+- 02-jetbrains.md - IntelliJ/PyCharm/WebStorm, built-in Git, GitHub and GitLab plugins
+- 03-neovim.md - fugitive.vim, gitsigns.nvim, GitHub/GitLab CLI integration
+- 04-github-desktop.md - visual Git client for beginners
+- 05-other-editors.md - Sublime Text, Zed, Cursor, Helix
+
+Note: IDE files can reference both GitHub and GitLab features accurately now that both platform folders are complete.
+
+### terminal/ folder
+
+Planned files covering shell setup, Git configuration, aliases, productivity tools (fzf, bat, delta, lazygit) and terminal-based Git workflows.
+
+---
+
+## Phase 5 - Real world and reference
+
+### real-world/ folder
+
+Practical scenarios combining everything:
+- Contributing to open source (fork, branch, PR, iterate)
+- Working in a team (branching strategies, code review norms, CI/CD)
+- GitOps workflows
+- Monorepo patterns
+- Migrating from GitHub to GitLab and back
+- Recovering from common disasters
+
+### reference/ folder
+
+Quick lookup resources:
+- Cheatsheet (all essential commands on one page)
+- Glossary (every term defined)
+- Common mistakes (the most frequent errors and how to fix them)
+
+### resources/ folder
+
+Curated external links:
+- Official documentation
+- Books and courses
+- Useful tools and plugins
+- Community forums
+
+---
+
+## Phase 6 - Community and polish
+
+The finishing touches that make the course complete.
+
+- [ ] `introduction/02-how-to-use-this-course.md` - full rewrite once all folders are complete (deliberately deferred to avoid repeated rewrites as content grows)
+- [ ] Root-level Codespaces dev container setup
+- [ ] Root-level setup documentation for all tools
+- [ ] Banner image and visual assets
+- [ ] `first-contribution/` sandbox project for practising open source contributions
+- [ ] Cross-reference audit (check all internal links are correct)
+- [ ] Accessibility review of all content
+
+---
+
+## Future ideas
+
+Ideas that may be added after the core course is complete. Not committed to.
+
+- Video walkthroughs for key topics
+- Interactive exercises using GitLab CI/CD within the repository itself
+- Translations (starting with Spanish and French)
+- `bitbucket/` folder (lower priority - Bitbucket has smaller market share)
+- `github-actions-advanced/` folder (deep dive beyond the github/ intro)
+- `gitlab-cicd-advanced/` folder (deep dive beyond the gitlab/ intro)
+
+---
+
+## How to suggest something
+
+Open a Discussion on GitHub, open an issue using the content suggestion template, or open a pull request directly.
+
+All suggestions welcome. Priority is given to: correcting factual errors, updating outdated information, improving clarity on confusing topics and adding missing OS coverage (Windows/Mac/Linux).
 
 ---
 
