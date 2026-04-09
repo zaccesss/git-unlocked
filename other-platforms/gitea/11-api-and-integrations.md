@@ -849,9 +849,9 @@ curl -X POST \
 
 ## Common Mistakes
 
-**Using the token without the `token ` prefix in the Authorization header**
+**Using the token without the `token` prefix in the Authorization header**
 
-The header must be `Authorization: token YOUR_TOKEN`, not `Authorization: YOUR_TOKEN`. The `token ` prefix is required. Omitting it results in 401 errors.
+The header must be `Authorization: token YOUR_TOKEN`, not `Authorization: YOUR_TOKEN`. The `token` keyword prefix is required. Omitting it results in 401 errors.
 
 **Not URL-encoding repository names with special characters**
 
