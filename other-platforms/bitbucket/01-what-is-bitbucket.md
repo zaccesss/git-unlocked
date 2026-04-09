@@ -288,7 +288,7 @@ You do not need to install anything to complete these exercises - Bitbucket is a
 
 **Exercise 4 - Browse the Atlassian Marketplace**
 
-1. Visit marketplace.atlassian.com
+1. Visit [marketplace.atlassian.com](https://marketplace.atlassian.com)
 2. Filter by "Bitbucket" in the product filter
 3. Browse the available apps to get a sense of what integrations exist
 4. Note that many apps work across multiple Atlassian products simultaneously
@@ -339,16 +339,16 @@ Bitbucket is not the right choice for open source projects, teams that do not us
 
 ## Sources
 
-- Atlassian: Bitbucket pricing - atlassian.com/software/bitbucket/pricing
-- Atlassian: Sunsetting Mercurial support in Bitbucket - atlassian.com/blog/bitbucket/sunsetting-mercurial-support-in-bitbucket
-- Atlassian: Bitbucket Cloud transitions to API tokens - atlassian.com/blog/bitbucket/bitbucket-cloud-transitions-to-api-tokens-enhancing-security-with-app-password-deprecation
-- Atlassian: Bitbucket Data Center 10.2 release notes - confluence.atlassian.com/bitbucketserver/bitbucket-data-center-10-2-release-notes
-- Atlassian: Announcing the next chapter for Bitbucket Pipelines runners - atlassian.com/blog/bitbucket/announcing-the-next-chapter-for-bitbucket-pipelines-runners
-- Atlassian: The 2025 year in review - atlassian.com/blog/bitbucket/the-2025-year-in-review-and-whats-coming-soon
-- Atlassian: Bitbucket end of support announcements - confluence.atlassian.com/bitbucketserver/end-of-support-announcements
-- Atlassian Community: Bitbucket Data Center 2026 LTS release announcement - community.atlassian.com
-- Atlassian: What is Atlassian Guard - atlassian.com/software/access
-- Packt: Bitbucket to no longer support Mercurial - packtpub.com
+- [Atlassian: Bitbucket pricing](https://www.atlassian.com/software/bitbucket/pricing)
+- [Atlassian: Sunsetting Mercurial support in Bitbucket](https://www.atlassian.com/blog/bitbucket/sunsetting-mercurial-support-in-bitbucket)
+- [Atlassian: Bitbucket Cloud transitions to API tokens](https://www.atlassian.com/blog/bitbucket/bitbucket-cloud-transitions-to-api-tokens-enhancing-security-with-app-password-deprecation)
+- [Atlassian: Bitbucket Data Center 10.2 release notes](https://confluence.atlassian.com/bitbucketserver/bitbucket-data-center-10-2-release-notes-1738146526.html)
+- [Atlassian: Announcing the next chapter for Bitbucket Pipelines runners](https://www.atlassian.com/blog/bitbucket/announcing-the-next-chapter-for-bitbucket-pipelines-runners)
+- [Atlassian: The 2025 year in review](https://www.atlassian.com/blog/bitbucket/the-2025-year-in-review-and-whats-coming-soon)
+- [Atlassian: Bitbucket end of support announcements](https://confluence.atlassian.com/bitbucketserver/end-of-support-announcements-776640855.html)
+- [Atlassian Community: Bitbucket Data Center 2026 LTS release announcement](https://community.atlassian.com/forums/Data-Center-articles/Announcing-New-Bitbucket-Data-Center-Long-Term-Support-LTS/ba-p/3200774)
+- [Atlassian: What is Atlassian Guard](https://www.atlassian.com/software/access)
+- [Packt: Bitbucket to no longer support Mercurial](https://www.packtpub.com/en-us/learning/how-to-tutorials/bitbucket-to-no-longer-support-mercurial-users-must-migrate-to-git-by-may-2020)
 
 ---
 
