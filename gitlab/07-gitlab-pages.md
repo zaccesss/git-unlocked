@@ -34,22 +34,25 @@ This file covers everything from your first HTML deployment to framework-specifi
 
 ## What is GitLab Pages?
 
-GitLab Pages hosts **static websites** — sites composed of HTML, CSS, JavaScript and static assets with no server-side processing at request time. The site files are pre-built (either by hand or by a static site generator) and served directly from GitLab's infrastructure.
+GitLab Pages hosts **static websites** - sites composed of HTML, CSS, JavaScript and static assets with no server-side processing at request time. The site files are pre-built (either by hand or by a static site generator) and served directly from GitLab's infrastructure.
 
 **What it is:**
-- Free on all GitLab plans — Free, Premium, Ultimate
+
+- Free on all GitLab plans - Free, Premium, Ultimate
 - Available on GitLab.com and on self-managed instances (admin must enable it)
 - Triggered automatically by your CI/CD pipeline on every push to the default branch
-- Compatible with any static site generator: Jekyll, Hugo, Gatsby, MkDocs, Eleventy, Sphinx, Pelican, Middleman, Hexo, Astro, VitePress, plain HTML — anything that produces static files
+- Compatible with any static site generator: Jekyll, Hugo, Gatsby, MkDocs, Eleventy, Sphinx, Pelican, Middleman, Hexo, Astro, VitePress, plain HTML - anything that produces static files
 - Custom domain capable with automatic HTTPS via Let's Encrypt
-- Access-controllable — restrict a Pages site to project members only
+- Access-controllable - restrict a Pages site to project members only
 
 **What it is not:**
+
 - A server for dynamic applications (no Node.js, Django, Rails, PHP at runtime)
 - A substitute for a backend API
-- A paid hosting service — it is a free feature included with every project
+- A paid hosting service - it is a free feature included with every project
 
 **Common uses:**
+
 - Project documentation (auto-generated from code comments or written in Markdown)
 - Personal developer portfolios and CVs
 - Course or tutorial sites (like git-unlocked itself could use)
@@ -65,7 +68,7 @@ GitLab Pages hosts **static websites** — sites composed of HTML, CSS, JavaScri
 The mechanism is straightforward:
 
 1. Your CI/CD pipeline runs a job that produces a directory called `public/` containing your site files
-2. That job has `pages: true` set (since GitLab 17.5) — or was historically named `pages`
+2. That job has `pages: true` set (since GitLab 17.5) - or was historically named `pages`
 3. The job declares `public/` as an artifact
 4. When the pipeline completes, GitLab takes the contents of `public/` and deploys them to the Pages server
 5. Your site becomes accessible at `https://NAMESPACE.gitlab.io/PROJECT-NAME`
@@ -80,7 +83,7 @@ The entire deployment happens through your standard CI/CD pipeline. There is no 
 If either of these is missing, the deployment does not happen even if the pipeline passes.
 
 > [!NOTE]
-> Pages deployments only go live from the **default branch** (usually `main`). Pipeline jobs on other branches can build and test the site, but they do not update the live Pages deployment. This is intentional — only tested, reviewed code should appear on the live site.
+> Pages deployments only go live from the **default branch** (usually `main`). Pipeline jobs on other branches can build and test the site, but they do not update the live Pages deployment. This is intentional - only tested, reviewed code should appear on the live site.
 
 ---
 
@@ -103,17 +106,17 @@ my-site/
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitLab Pages Site</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Hello from GitLab Pages</h1>
-  <p>This site is deployed automatically every time I push to main.</p>
-  <p>No server configuration. No hosting bill. Just a pipeline.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My GitLab Pages Site</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Hello from GitLab Pages</h1>
+    <p>This site is deployed automatically every time I push to main.</p>
+    <p>No server configuration. No hosting bill. Just a pipeline.</p>
+  </body>
 </html>
 ```
 
@@ -121,13 +124,15 @@ my-site/
 
 ```css
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
   color: #333;
 }
-h1 { color: #6b4fbb; }
+h1 {
+  color: #6b4fbb;
+}
 ```
 
 **Step 4.** Create `.gitlab-ci.yml`:
@@ -168,7 +173,7 @@ Understanding this history prevents confusion when reading older tutorials.
 In older configurations, GitLab required the deployment job to be named exactly `pages`. The job name was the signal that triggered Pages deployment:
 
 ```yaml
-# Old syntax — still works but not recommended for new projects
+# Old syntax - still works but not recommended for new projects
 pages:
   script:
     - echo "Deploy"
@@ -182,7 +187,7 @@ pages:
 Since GitLab 17.5 (released August 2025), you can name the job anything and add `pages: true` to trigger Pages deployment. This is the recommended approach for new projects:
 
 ```yaml
-# New syntax — any job name, uses pages: true
+# New syntax - any job name, uses pages: true
 deploy-to-pages:
   script:
     - echo "Deploy"
@@ -226,7 +231,7 @@ When all your site files are already in `public/` and need no processing:
 deploy-pages:
   stage: deploy
   script:
-    - echo "No build step needed — deploying static files"
+    - echo "No build step needed - deploying static files"
   pages: true
   artifacts:
     paths:
@@ -305,7 +310,7 @@ deploy-pages:
 
 ### Hugo
 
-Hugo is a Go-based static site generator — one of the fastest available. Build times are typically under a second even for large sites.
+Hugo is a Go-based static site generator - one of the fastest available. Build times are typically under a second even for large sites.
 
 ```yaml
 image: registry.gitlab.com/pages/hugo:latest
@@ -315,7 +320,7 @@ stages:
   - deploy
 
 variables:
-  GIT_SUBMODULE_STRATEGY: recursive   # required if your theme is a submodule
+  GIT_SUBMODULE_STRATEGY: recursive # required if your theme is a submodule
 
 # Test build on MRs
 test-build:
@@ -343,7 +348,7 @@ deploy-pages:
 ```
 
 > [!NOTE]
-> Hugo outputs to `public/` by default — no `-d` flag needed. The `--minify` flag compresses HTML, CSS and JS output. Set `--baseURL` to your actual Pages URL so internal links work correctly.
+> Hugo outputs to `public/` by default - no `-d` flag needed. The `--minify` flag compresses HTML, CSS and JS output. Set `--baseURL` to your actual Pages URL so internal links work correctly.
 
 ### MkDocs
 
@@ -389,7 +394,7 @@ deploy-pages:
 ```
 
 > [!TIP]
-> `--strict` causes MkDocs to fail on warnings (broken links, missing files). This is strongly recommended — it catches broken internal links before they reach the live site.
+> `--strict` causes MkDocs to fail on warnings (broken links, missing files). This is strongly recommended - it catches broken internal links before they reach the live site.
 
 ### Gatsby
 
@@ -407,7 +412,7 @@ cache:
   key: $CI_COMMIT_REF_SLUG
   paths:
     - node_modules/
-    - .cache/           # Gatsby build cache — dramatically speeds up repeat builds
+    - .cache/ # Gatsby build cache - dramatically speeds up repeat builds
 
 install:
   stage: install
@@ -469,7 +474,7 @@ before_script:
 test-build:
   stage: test
   script:
-    - sphinx-build -b html docs/ test-site/ -W   # -W treats warnings as errors
+    - sphinx-build -b html docs/ test-site/ -W # -W treats warnings as errors
   artifacts:
     paths:
       - test-site/
@@ -549,7 +554,7 @@ stages:
   - test
   - deploy
 
-# Test job — runs on MRs, builds to test-site/ (not public/)
+# Test job - runs on MRs, builds to test-site/ (not public/)
 test-build:
   stage: test
   image: python:3.12-slim
@@ -563,7 +568,7 @@ test-build:
   rules:
     - if: $CI_PIPELINE_SOURCE == "merge_request_event"
 
-# Deploy job — runs only on default branch, builds to public/
+# Deploy job - runs only on default branch, builds to public/
 deploy-pages:
   stage: deploy
   image: python:3.12-slim
@@ -592,10 +597,12 @@ https://NAMESPACE.gitlab.io/PROJECT-SLUG
 ```
 
 Where:
+
 - `NAMESPACE` is your username or group name
 - `PROJECT-SLUG` is your project's URL slug
 
 **Examples:**
+
 - Username `zaccess`, project `my-portfolio` → `https://zaccess.gitlab.io/my-portfolio`
 - Group `acme-corp`, project `documentation` → `https://acme-corp.gitlab.io/documentation`
 
@@ -628,7 +635,7 @@ The path-based URL `namespace.gitlab.io/project` shares the root domain `namespa
 
 Unique domains isolate each project on its own subdomain, eliminating this risk entirely.
 
-Both the unique domain and the path-based URL work simultaneously. You do not need to choose one — both serve the same site. The unique domain is enabled by default for all new projects.
+Both the unique domain and the path-based URL work simultaneously. You do not need to choose one - both serve the same site. The unique domain is enabled by default for all new projects.
 
 ---
 
@@ -641,6 +648,7 @@ Replace the default `.gitlab.io` URL with your own domain (e.g. `docs.example.co
 Left sidebar → **Deploy → Pages** → **New domain**
 
 Enter your domain name. GitLab immediately shows you:
+
 1. A **TXT verification record** to prove you own the domain
 2. DNS configuration instructions
 
@@ -649,17 +657,19 @@ Enter your domain name. GitLab immediately shows you:
 **For a subdomain** (e.g. `docs.example.com`):
 
 Add a CNAME record at your DNS provider:
+
 ```
 docs.example.com.    CNAME    NAMESPACE.gitlab.io.
 ```
 
 **For an apex/root domain** (e.g. `example.com`):
 
-Add an A record pointing to GitLab's Pages IP addresses. Check `docs.gitlab.com/user/project/pages/custom_domains_ssl_tls_certification/` for the current IPs — they can change and must be kept up to date.
+Add an A record pointing to GitLab's Pages IP addresses. Check `docs.gitlab.com/user/project/pages/custom_domains_ssl_tls_certification/` for the current IPs - they can change and must be kept up to date.
 
 Alternatively, use an ALIAS or ANAME record if your DNS provider supports it (same effect as CNAME but works for apex domains).
 
 **Add the TXT verification record** (required for all domains):
+
 ```
 _gitlab-pages-verification-code.docs.example.com.    TXT    "gitlab-pages-verification-code=YOURCODE"
 ```
@@ -687,11 +697,13 @@ Left sidebar → **Deploy → Pages** → click a domain → **Set as primary do
 ### Automatic Let's Encrypt (default and recommended)
 
 GitLab automatically provisions free SSL certificates from Let's Encrypt for all verified custom domains. Certificates are:
+
 - **Issued**: within minutes of domain verification
 - **Renewed**: automatically, typically 60 days before expiry (Let's Encrypt certificates last 90 days)
 - **Zero configuration**: nothing to do after adding and verifying your domain
 
 **Requirements for Let's Encrypt to work:**
+
 - DNS must point to GitLab's servers (Let's Encrypt verifies via HTTP challenge)
 - The domain must be verified in GitLab first
 
@@ -716,7 +728,7 @@ The certificate must be in PEM format. Include the full certificate chain (your 
 
 ## Access Control
 
-By default, a GitLab Pages site is **publicly accessible** — anyone with the URL can visit it, regardless of whether the underlying project is private.
+By default, a GitLab Pages site is **publicly accessible** - anyone with the URL can visit it, regardless of whether the underlying project is private.
 
 This is appropriate for most documentation and portfolio sites. But for internal documentation, staging sites or anything you want to keep internal, you can restrict Pages access.
 
@@ -725,6 +737,7 @@ This is appropriate for most documentation and portfolio sites. But for internal
 Settings → General → Visibility, project features, permissions → **Pages** → change from **Everyone** to **Project members**.
 
 With this restriction:
+
 - Visitors must be signed in to a GitLab account
 - The signed-in account must have at least Guest access to the project (either directly or via a group)
 - Unauthenticated visitors see a sign-in prompt, not the site content
@@ -745,15 +758,16 @@ With this restriction:
 
 ### Limits on GitLab.com
 
-| Limit | Value |
-|---|---|
-| Maximum unpacked site size | 100 MiB (approximately 100 MB) |
-| Maximum number of files | 200,000 |
-| Maximum single file size | 100 MiB |
-| HTTPS | Required (HTTP redirected to HTTPS) |
-| Custom domains per project | Unlimited |
+| Limit                      | Value                               |
+| -------------------------- | ----------------------------------- |
+| Maximum unpacked site size | 100 MiB (approximately 100 MB)      |
+| Maximum number of files    | 200,000                             |
+| Maximum single file size   | 100 MiB                             |
+| HTTPS                      | Required (HTTP redirected to HTTPS) |
+| Custom domains per project | Unlimited                           |
 
 The 100 MiB limit catches teams off-guard more often than expected. Common culprits:
+
 - Uncompressed images (compress before adding to the repository)
 - Videos embedded directly (use YouTube/Vimeo embeds instead)
 - Large downloadable assets (consider a file host or GitLab releases for large downloads)
@@ -764,6 +778,7 @@ On self-managed GitLab, all of these limits are configurable by the administrato
 ### Cache-Control headers
 
 GitLab Pages serves files with:
+
 ```
 Cache-Control: max-age=600, s-maxage=600, public
 ```
@@ -773,6 +788,7 @@ This tells browsers and CDNs to cache content for 10 minutes. For most documenta
 ### Viewing Pages settings
 
 Left sidebar → **Deploy → Pages** shows:
+
 - All active Pages URLs (default and custom)
 - Access control setting
 - Custom domain list with verification status
@@ -811,21 +827,21 @@ Each project's Pages site then gets a URL like `https://namespace.pages.example.
 
 Both platforms offer free static site hosting, but they differ in meaningful ways.
 
-| Feature | GitLab Pages | GitHub Pages |
-|---|---|---|
-| **Cost** | Free (all tiers) | Free |
-| **Build system** | Full CI/CD pipeline | GitHub Actions or built-in Jekyll |
-| **Framework flexibility** | Any framework (via CI/CD pipeline) | Any via Actions; Jekyll only with built-in builder |
-| **Custom domains** | Yes, with DNS verification | Yes |
-| **HTTPS** | Automatic Let's Encrypt | Automatic |
-| **Force HTTPS** | Yes (toggle in settings) | Yes |
-| **Access control** | Restrict to project members (free) | Public only; private Pages requires GitHub Enterprise |
-| **Maximum site size** | **100 MiB** | **1 GiB** |
-| **Maximum files** | 200,000 | No published limit |
-| **Pipeline integration** | Native — Pages is a CI/CD job | Via GitHub Actions |
-| **Build time limit** | Standard job timeout (60 min default) | 10 minutes per build |
-| **Private project + public Pages** | Supported (Pages can be public even if project is private) | Not supported (Pages mirrors repo visibility) |
-| **Self-hosted** | Yes (GitLab CE/EE) | No (GitHub Enterprise Server supports it) |
+| Feature                            | GitLab Pages                                               | GitHub Pages                                          |
+| ---------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------- |
+| **Cost**                           | Free (all tiers)                                           | Free                                                  |
+| **Build system**                   | Full CI/CD pipeline                                        | GitHub Actions or built-in Jekyll                     |
+| **Framework flexibility**          | Any framework (via CI/CD pipeline)                         | Any via Actions; Jekyll only with built-in builder    |
+| **Custom domains**                 | Yes, with DNS verification                                 | Yes                                                   |
+| **HTTPS**                          | Automatic Let's Encrypt                                    | Automatic                                             |
+| **Force HTTPS**                    | Yes (toggle in settings)                                   | Yes                                                   |
+| **Access control**                 | Restrict to project members (free)                         | Public only; private Pages requires GitHub Enterprise |
+| **Maximum site size**              | **100 MiB**                                                | **1 GiB**                                             |
+| **Maximum files**                  | 200,000                                                    | No published limit                                    |
+| **Pipeline integration**           | Native - Pages is a CI/CD job                              | Via GitHub Actions                                    |
+| **Build time limit**               | Standard job timeout (60 min default)                      | 10 minutes per build                                  |
+| **Private project + public Pages** | Supported (Pages can be public even if project is private) | Not supported (Pages mirrors repo visibility)         |
+| **Self-hosted**                    | Yes (GitLab CE/EE)                                         | No (GitHub Enterprise Server supports it)             |
 
 **Key practical differences:**
 
@@ -944,16 +960,16 @@ Create a new branch, make a change, push and open a merge request. The test job 
 
 ## Summary
 
-- GitLab Pages hosts any static site for free on all plans — no separate hosting account or monthly fee
+- GitLab Pages hosts any static site for free on all plans - no separate hosting account or monthly fee
 - Deploy by producing a `public/` directory in a CI/CD job with `pages: true` and declaring it as an artifact
 - Since GitLab 17.5, any job name works with `pages: true`. Before 17.5, the job had to be named exactly `pages`
 - Deployments only go live from the **default branch**. MR pipelines can test the build without deploying
-- Compatible with any static site generator: Jekyll, Hugo, Gatsby, MkDocs, Eleventy, Sphinx, Astro, plain HTML — anything that produces static files
+- Compatible with any static site generator: Jekyll, Hugo, Gatsby, MkDocs, Eleventy, Sphinx, Astro, plain HTML - anything that produces static files
 - Always add a separate test job that builds to a different directory (not `public/`) and runs on MR pipelines to catch errors before they reach the live site
 - Default URL: `https://NAMESPACE.gitlab.io/PROJECT-SLUG`. Unique random domain also provided automatically since 15.11
 - Custom domains: add via **Deploy → Pages → New domain**, configure DNS (CNAME or A record), add TXT verification record, then verify
 - HTTPS: automatic via Let's Encrypt after domain verification. Enable **Force HTTPS** to redirect HTTP visitors
-- Access control: restrict Pages to project members only (free feature — GitHub requires Enterprise for this)
+- Access control: restrict Pages to project members only (free feature - GitHub requires Enterprise for this)
 - Size limits: 100 MiB maximum site size, 200,000 maximum files. Significantly smaller than GitHub Pages (1 GiB)
 - Key advantage over GitHub Pages: access control is free; private project with public Pages is supported; full CI/CD pipeline flexibility
 

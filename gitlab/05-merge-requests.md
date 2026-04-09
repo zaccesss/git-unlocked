@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 40 minutes
 
-A merge request (MR) is how code gets reviewed and merged on GitLab. If you are coming from GitHub, the concept is identical to a pull request — you push a branch, open a merge request, a colleague reviews it, and it gets merged into the target branch. The name "merge request" is actually more accurate than "pull request": you are requesting that your changes be merged, not pulling anything.
+A merge request (MR) is how code gets reviewed and merged on GitLab. If you are coming from GitHub, the concept is identical to a pull request - you push a branch, open a merge request, a colleague reviews it, and it gets merged into the target branch. The name "merge request" is actually more accurate than "pull request": you are requesting that your changes be merged, not pulling anything.
 
 But GitLab's merge requests go significantly beyond the basics. They integrate directly with CI/CD pipelines, support multiple merge methods including fast-forward and squash, have merge trains for high-traffic repositories, support required approvals (Premium), connect to CODEOWNERS for automatic reviewer assignment (Premium) and can be converted to and from issues with a single click. This file covers everything from opening your first MR to the most advanced merge workflows.
 
@@ -51,7 +51,7 @@ The merge request is where everything comes together:
 The result is that a merge request is not just a code review. It is the complete record of why a change was made, who reviewed it, what concerns were raised, how they were resolved and when it landed. That history lives permanently in the project even after the branch is deleted.
 
 > [!NOTE]
-> If you are coming from GitHub: a GitLab merge request is exactly a GitHub pull request. Every concept maps directly — branch → branch, PR → MR, reviewer → reviewer, check → pipeline. The main differences are in features: some things are more capable on GitLab (merge trains, merge methods), some are paywalled (approvals, CODEOWNERS enforcement).
+> If you are coming from GitHub: a GitLab merge request is exactly a GitHub pull request. Every concept maps directly - branch → branch, PR → MR, reviewer → reviewer, check → pipeline. The main differences are in features: some things are more capable on GitLab (merge trains, merge methods), some are paywalled (approvals, CODEOWNERS enforcement).
 
 ---
 
@@ -77,15 +77,15 @@ Click or copy that URL. It opens a pre-filled MR creation form with your branch 
 
 ### From the GitLab UI
 
-**Method 1 — from the merge requests list:**
+**Method 1 - from the merge requests list:**
 Left sidebar → **Code → Merge requests** → **New merge request**
 
 Select source branch (your feature branch) and target branch (usually `main` or `develop`) → **Compare branches and continue**.
 
-**Method 2 — from the repository branch list:**
+**Method 2 - from the repository branch list:**
 Left sidebar → **Code → Repository** → click the **Branches** tab → find your branch → click **Create merge request**.
 
-**Method 3 — from a branch push notification:**
+**Method 3 - from a branch push notification:**
 After pushing a branch, a yellow banner appears at the top of the project page: "You pushed to branch-name. Create merge request?" Click the button.
 
 ### From an issue
@@ -95,6 +95,7 @@ If an issue describes the work you have done, you can create a branch and MR dir
 On any issue page → **Create merge request** (dropdown button on the right side).
 
 Options:
+
 - **Create merge request and branch**: creates a new branch named after the issue (e.g. `1-add-dark-mode`) and opens a draft MR. The branch name includes the issue number so GitLab auto-links them.
 - **Create branch**: creates the branch only, no MR yet
 
@@ -124,9 +125,9 @@ When creating an MR, the form contains:
 
 **Title**: a clear, specific description of what this MR does. Follow Conventional Commits style: `feat: add dark mode toggle`, `fix: resolve null pointer on login`, `docs: update contributing guide`.
 
-**Description**: explain the *why* behind the change, any context reviewers need, screenshots for UI changes, testing instructions. GitLab supports full Markdown including tables, code blocks and images. If your project has an MR template, the description is pre-filled from it.
+**Description**: explain the _why_ behind the change, any context reviewers need, screenshots for UI changes, testing instructions. GitLab supports full Markdown including tables, code blocks and images. If your project has an MR template, the description is pre-filled from it.
 
-**Assignees**: who is responsible for this MR (usually yourself — the author). Not the same as reviewers.
+**Assignees**: who is responsible for this MR (usually yourself - the author). Not the same as reviewers.
 
 **Reviewers**: who you are asking to review the code. Add reviewers before submitting. They receive a notification.
 
@@ -136,7 +137,7 @@ When creating an MR, the form contains:
 
 **Due date**: optional deadline for the review.
 
-**Delete source branch when merge request is accepted**: highly recommended — keeps the branch list clean.
+**Delete source branch when merge request is accepted**: highly recommended - keeps the branch list clean.
 
 **Squash commits**: choose whether to squash all commits in this branch into one when merging.
 
@@ -149,11 +150,12 @@ Once created, the MR has four tabs:
 ### Overview tab
 
 The main tab. Shows:
+
 - The MR description
 - All comments and discussion threads in chronological order
 - Pipeline status (with a direct link to the pipeline and each job)
-- Approval status — who has approved and how many are required (Premium)
-- The merge request widget at the bottom — the big button that controls merging
+- Approval status - who has approved and how many are required (Premium)
+- The merge request widget at the bottom - the big button that controls merging
 
 The widget at the bottom of the Overview shows the current merge status: green if everything is ready, yellow if there are warnings (unresolved threads, missing approvals) and red if there are blockers (failing pipeline, merge conflicts).
 
@@ -170,6 +172,7 @@ Every pipeline that has run against this MR, including the current status, when 
 The full diff of every changed file. This is where code review happens.
 
 Navigation:
+
 - File list on the left shows every changed file with `+` and `-` counts
 - Click a filename to jump directly to that diff
 - Toggle between **side-by-side** (two-column) and **inline** (single-column) diff view
@@ -187,6 +190,7 @@ A draft MR signals that the work is not yet ready for review. Reviewers can see 
 ### Marking as draft
 
 **In the title**: prefix the MR title with any of:
+
 - `Draft:` (current standard)
 - `[Draft]`
 - `(Draft)`
@@ -203,7 +207,7 @@ A draft MR signals that the work is not yet ready for review. Reviewers can see 
 - Use the `/ready` quick action in a comment
 
 > [!TIP]
-> Opening MRs as draft immediately after pushing is a good habit. It signals "I am still working on this — no review needed yet" while still giving teammates visibility into what is in progress. Mark it ready when you want eyes on it.
+> Opening MRs as draft immediately after pushing is a good habit. It signals "I am still working on this - no review needed yet" while still giving teammates visibility into what is in progress. Mark it ready when you want eyes on it.
 
 ---
 
@@ -214,9 +218,10 @@ A draft MR signals that the work is not yet ready for review. Reviewers can see 
 On the **Changes** tab, hover over any line number and click the blue speech bubble icon to start a thread on that line. You can also click and drag across multiple lines to comment on a range.
 
 Write your comment in Markdown. You can:
+
 - Ask a question: `What happens if this value is null?`
 - Request a change: `This should use the existing `formatDate` utility rather than reimplementing it`
-- Approve a specific approach: `This is cleaner than the previous implementation — nice`
+- Approve a specific approach: `This is cleaner than the previous implementation - nice`
 - Suggest a specific fix (see [Suggested changes](#suggested-changes) below)
 
 After writing, choose **Start a review** (queues your comment as part of a batch review, invisible to the author until you submit) or **Add comment now** (immediately visible).
@@ -239,7 +244,7 @@ GitLab does not have GitHub's explicit "Request changes" / "Approve" / "Comment"
 
 ## Suggested Changes
 
-Suggested changes let reviewers propose exact code replacements directly in the diff. The MR author can apply the suggestion with one click — no need to switch to their editor, make the change, commit and push.
+Suggested changes let reviewers propose exact code replacements directly in the diff. The MR author can apply the suggestion with one click - no need to switch to their editor, make the change, commit and push.
 
 ### Creating a suggestion
 
@@ -264,7 +269,7 @@ const fontSize = userPreferences.fontSize ?? 'medium';
 ```
 ````
 
-The `-0+2` means "replace 0 lines above the selected line and 2 lines below" — adjust the numbers to cover the lines you want to replace.
+The `-0+2` means "replace 0 lines above the selected line and 2 lines below" - adjust the numbers to cover the lines you want to replace.
 
 ### Applying suggestions
 
@@ -273,7 +278,7 @@ The `-0+2` means "replace 0 lines above the selected line and 2 lines below" —
 **As a batch**: tick the checkbox on each suggestion you want to apply → **Apply suggestions** button → write a custom commit message → commit all selected suggestions in one commit.
 
 > [!NOTE]
-> Suggestions can only be applied by someone with push access to the source branch (typically the MR author). If you are reviewing a fork, you cannot apply suggestions directly — the author must do it.
+> Suggestions can only be applied by someone with push access to the source branch (typically the MR author). If you are reviewing a fork, you cannot apply suggestions directly - the author must do it.
 
 ---
 
@@ -293,7 +298,7 @@ Configure this in project settings: **Settings → Merge requests → Merge chec
 
 When enabled, the merge button is disabled until every thread is resolved. The MR widget shows a count of unresolved threads and a link to each one.
 
-This is a good default for team projects — it prevents code from merging with unanswered review questions.
+This is a good default for team projects - it prevents code from merging with unanswered review questions.
 
 ### Navigating unresolved threads
 
@@ -304,7 +309,7 @@ In the MR Overview, unresolved threads are listed below the description. Click a
 ## Merge Request Approvals
 
 > [!IMPORTANT]
-> Required merge request approvals are a **Premium feature** ($29/user/month on GitLab.com). On the Free tier, approvals are optional and advisory only — any Developer can click Approve but it does not block merging.
+> Required merge request approvals are a **Premium feature** ($29/user/month on GitLab.com). On the Free tier, approvals are optional and advisory only - any Developer can click Approve but it does not block merging.
 
 ### How approvals work
 
@@ -319,7 +324,7 @@ With Premium, you can configure rules that require a minimum number of approvals
 - **Group**: N approvals from members of a specific group
 - **CODEOWNERS**: approvals required from owners of the files changed (see [CODEOWNERS](#codeowners) below)
 
-You can have multiple rules — for example: "2 approvals from the backend team, AND 1 approval from the security team for changes touching `/auth/`".
+You can have multiple rules - for example: "2 approvals from the backend team, AND 1 approval from the security team for changes touching `/auth/`".
 
 ### Approval settings (Premium)
 
@@ -344,7 +349,7 @@ The approval status shows who has approved, when, and whether the required thres
 ## CODEOWNERS
 
 > [!IMPORTANT]
-> CODEOWNERS **enforcement** — automatically requiring code owners to approve changes to their files — is a **Premium feature**. The CODEOWNERS file itself can exist on any tier, but enforcement as a merge requirement costs money.
+> CODEOWNERS **enforcement** - automatically requiring code owners to approve changes to their files - is a **Premium feature**. The CODEOWNERS file itself can exist on any tier, but enforcement as a merge requirement costs money.
 
 ### What CODEOWNERS does
 
@@ -358,7 +363,7 @@ GitLab checks for the CODEOWNERS file in this order (uses the first one found):
 
 1. `CODEOWNERS` (repository root)
 2. `docs/CODEOWNERS`
-3. `.gitlab/CODEOWNERS` (recommended location — keeps it with other GitLab configuration)
+3. `.gitlab/CODEOWNERS` (recommended location - keeps it with other GitLab configuration)
 
 ### CODEOWNERS syntax
 
@@ -375,7 +380,7 @@ GitLab checks for the CODEOWNERS file in this order (uses the first one found):
 *.go                        @go-team
 Dockerfile                  @devops-team
 
-# Multiple owners — all must approve (or any, depending on settings)
+# Multiple owners - all must approve (or any, depending on settings)
 /src/payments/              @payments-team @cto
 
 # GitLab groups (using group path)
@@ -387,12 +392,13 @@ Dockerfile                  @devops-team
 *.js
 *.css
 
-# Optional sections (not blocking — ^ prefix)
+# Optional sections (not blocking - ^ prefix)
 ^[Documentation] @docs-team
 /docs/
 ```
 
 **Key rules:**
+
 - Patterns follow `.gitignore` syntax
 - More specific rules take precedence over less specific ones
 - Paths starting with `/` are relative to the repository root
@@ -400,7 +406,7 @@ Dockerfile                  @devops-team
 - `@group/subgroup` references a GitLab group
 - `[Section name]` groups related rules (Premium)
 - `[Section][N]` requires N approvals from the section's owners (Premium)
-- `^[Optional section]` makes the entire section optional — it shows in the approvals panel but does not block merging
+- `^[Optional section]` makes the entire section optional - it shows in the approvals panel but does not block merging
 
 ### Enforcing CODEOWNERS
 
@@ -447,7 +453,7 @@ A hybrid: requires the source branch to be up-to-date with the target before mer
 ```
 
 **Pro**: cleaner history than pure merge commits. No criss-crossing merge lines.
-**Con**: requires rebasing before merging — more steps for contributors.
+**Con**: requires rebasing before merging - more steps for contributors.
 
 **Best for**: teams that want visible merge commits but also want clean, linear feature branch histories.
 
@@ -480,12 +486,13 @@ Available in combination with any of the above methods. Combines all commits on 
 The squashed commit's message is typically the MR title plus description. GitLab can suggest a commit message based on the MR title.
 
 **Squash options** (configurable per project):
+
 - **Do not allow**: squashing is never done
 - **Allow**: author decides per MR (checkbox on the MR creation form)
 - **Encourage**: default is on, author can opt out
-- **Require**: always squash — individual commits are never preserved in the target branch
+- **Require**: always squash - individual commits are never preserved in the target branch
 
-**Pro**: keeps the target branch history clean — one commit per feature.
+**Pro**: keeps the target branch history clean - one commit per feature.
 **Con**: individual commit messages are lost. If a feature introduced a bug in commit 4 of 7, `git bisect` cannot identify it after squashing.
 
 **Best for**: teams that use the MR title as the unit of history and want a clean, one-feature-one-commit main branch.
@@ -497,6 +504,7 @@ The squashed commit's message is typically the MR title plus description. GitLab
 Auto-merge tells GitLab: "merge this MR as soon as all the conditions are met, without me having to come back and click the button."
 
 Conditions checked before auto-merge executes:
+
 - All required pipelines pass
 - All required approvals are present (Premium)
 - All threads are resolved (if configured)
@@ -506,7 +514,7 @@ Conditions checked before auto-merge executes:
 
 In the MR widget at the bottom of the Overview tab, click the dropdown arrow next to the **Merge** button → **Set to auto-merge**.
 
-Once set, the MR widget shows "Auto-merge enabled" with the conditions that are still pending. As each condition is met, it is checked off. When all conditions pass, GitLab merges the MR automatically — no further action needed.
+Once set, the MR widget shows "Auto-merge enabled" with the conditions that are still pending. As each condition is met, it is checked off. When all conditions pass, GitLab merges the MR automatically - no further action needed.
 
 ### Cancelling auto-merge
 
@@ -518,7 +526,7 @@ Auto-merge is cancelled automatically if new commits are pushed to the source br
 
 ## Merged Results Pipelines
 
-By default, an MR pipeline runs against the source branch alone — it tests your feature branch as it currently exists, not as it will exist after merging.
+By default, an MR pipeline runs against the source branch alone - it tests your feature branch as it currently exists, not as it will exist after merging.
 
 **Merged results pipelines** test the hypothetical merge result: what the target branch would look like if your MR were merged right now. This catches integration problems that would not be visible if only your branch is tested.
 
@@ -545,7 +553,7 @@ In a busy repository, multiple developers merge code to `main` constantly. Witho
 1. Developer A opens MR-1. Pipeline passes. MR-1 is approved.
 2. Developer B opens MR-2. Pipeline passes. MR-2 is approved.
 3. Developer A merges MR-1. `main` now has new commits.
-4. Developer B merges MR-2. But MR-2's pipeline ran against the old `main` — it never tested with MR-1's changes. If MR-1 and MR-2 interact badly, `main` is now broken.
+4. Developer B merges MR-2. But MR-2's pipeline ran against the old `main` - it never tested with MR-1's changes. If MR-1 and MR-2 interact badly, `main` is now broken.
 
 Merge trains solve this by queueing MRs and testing each one against the result of all the MRs ahead of it in the queue.
 
@@ -574,6 +582,7 @@ View all MRs in the train: Code → Merge requests → **Merge trains** tab.
 ### When to use merge trains
 
 Merge trains are valuable when:
+
 - Your default branch deploys to production automatically after every merge
 - Your team merges many MRs per day
 - Merge conflicts or breaking interactions between concurrent MRs are a real problem
@@ -600,11 +609,13 @@ Create a Markdown file in `.gitlab/merge_request_templates/` on the default bran
 ## Why is it needed?
 
 <!-- Link to the issue or explain the motivation -->
+
 Closes #
 
 ## How to test
 
 <!-- Steps for the reviewer to verify the change works -->
+
 1.
 2.
 3.
@@ -679,7 +690,7 @@ Fixes #50 and resolves #51
 
 ### When issues close
 
-Issues referenced with closing keywords close **only when the MR merges into the default branch**. If you merge into a non-default branch (e.g. `develop`), the issue stays open. This is intentional — issues should only be closed when the work lands in production-ready code.
+Issues referenced with closing keywords close **only when the MR merges into the default branch**. If you merge into a non-default branch (e.g. `develop`), the issue stays open. This is intentional - issues should only be closed when the work lands in production-ready code.
 
 If you merge into a non-default branch and the work is complete, close the issue manually or use `/close` in a comment.
 
@@ -692,7 +703,7 @@ If you merge into a non-default branch and the work is complete, close the issue
 
 MR dependencies let you mark one merge request as blocked by another. An MR cannot be merged until all its blocking MRs have been merged first.
 
-**Use case**: you are building a feature that spans three MRs — a database migration, an API change and a frontend update. The API cannot merge until the migration is merged. The frontend cannot merge until the API is merged. MR dependencies enforce this order.
+**Use case**: you are building a feature that spans three MRs - a database migration, an API change and a frontend update. The API cannot merge until the migration is merged. The frontend cannot merge until the API is merged. MR dependencies enforce this order.
 
 ### Setting a dependency
 
@@ -706,10 +717,11 @@ Enter the MR number or URL. The MR is now blocked. The merge button shows "Merge
 
 After an MR is merged, you can create a revert MR that undoes all its changes in a single click.
 
-On the merged MR page, click **Revert** (in the merged MR timeline). GitLab creates a new branch and a new MR that is the exact inverse of the original — every addition becomes a deletion and vice versa.
+On the merged MR page, click **Revert** (in the merged MR timeline). GitLab creates a new branch and a new MR that is the exact inverse of the original - every addition becomes a deletion and vice versa.
 
 This is safer than `git revert` on the command line because:
-- GitLab creates the revert MR ready for review — the revert goes through your normal code review process
+
+- GitLab creates the revert MR ready for review - the revert goes through your normal code review process
 - The new MR is linked to the original, providing clear audit trail: "This reverts MR !42 because..."
 - No risk of reverting the wrong commits or making a mistake with commit ranges
 
@@ -785,13 +797,14 @@ git commit -m "docs: add contributing section to README"
 git push origin feature/update-readme
 ```
 
-**Step 2.** Create the MR — use the URL printed in the terminal output, or:
+**Step 2.** Create the MR - use the URL printed in the terminal output, or:
 
 ```bash
 glab mr create --fill --target-branch main
 ```
 
 **Step 3.** On the MR page:
+
 - Go to the **Changes** tab and review the diff
 - Click the speech bubble on a line to add an inline comment
 - Try a suggested change: in your comment, write ` ```suggestion ` on a new line, add your suggested replacement text, then close with ` ``` `
@@ -809,17 +822,17 @@ glab mr create --fill --target-branch main
 
 **Not using draft MRs during development.** Opening a final-state MR and immediately asking for review is fine. But if you push a branch mid-development to get early feedback, always mark it as draft. Reviewers seeing a non-draft MR assume it is ready for final review and may leave detailed comments on code you are still changing.
 
-**Confusing assignee and reviewer.** The assignee is the person responsible for the MR — usually the author. The reviewer is who you are asking to review the code. They are different people. Many teams use assignee as "whoever is working on this" and reviewer as "whoever should approve it".
+**Confusing assignee and reviewer.** The assignee is the person responsible for the MR - usually the author. The reviewer is who you are asking to review the code. They are different people. Many teams use assignee as "whoever is working on this" and reviewer as "whoever should approve it".
 
 **Not resolving threads before merging.** Even if your project does not require thread resolution before merge, leaving comment threads unresolved is poor hygiene. Future readers of the MR cannot tell whether the concern was addressed or forgotten. Resolve threads when you have addressed the feedback, or reply explaining why you chose a different approach.
 
-**Approving your own MR (Free tier).** On the Free tier, any Developer can click Approve including the MR author. This is meaningless — it just increments a number. On Premium, you can configure the project to prevent self-approval. On Free, simply do not approve your own MRs.
+**Approving your own MR (Free tier).** On the Free tier, any Developer can click Approve including the MR author. This is meaningless - it just increments a number. On Premium, you can configure the project to prevent self-approval. On Free, simply do not approve your own MRs.
 
 **Force-pushing to a branch with an open MR.** Force-pushing (rewriting history on a branch that has an open MR) confuses reviewers. Their comments reference specific commit SHAs that no longer exist. GitLab handles this gracefully but it is disorienting. If you need to rebase interactively, do it before opening the MR or after communicating with reviewers.
 
 **Not understanding that issue closing only works on the default branch.** A very common confusion: you merge a branch into `develop`, expect the linked issue to close, and it does not. Issues with `Closes #N` in the MR description only close when the MR merges into the **default branch**. If your workflow uses a `develop` branch as an integration branch before `main`, issues stay open until they eventually land in `main`.
 
-**Using squash when you should not.** Squashing is excellent for cleaning up "WIP commit", "fix typo", "oops" commits. It is harmful when the individual commits tell an important story — if each commit is a meaningful, atomic change, squashing destroys that information. Use squash selectively based on whether the commit history is worth preserving.
+**Using squash when you should not.** Squashing is excellent for cleaning up "WIP commit", "fix typo", "oops" commits. It is harmful when the individual commits tell an important story - if each commit is a meaningful, atomic change, squashing destroys that information. Use squash selectively based on whether the commit history is worth preserving.
 
 ---
 
@@ -834,9 +847,9 @@ glab mr create --fill --target-branch main
 - **Approvals** (Premium): configure minimum required approvals, from specific users or groups. Settings for self-approval prevention and reset-on-push
 - **CODEOWNERS** (enforcement Premium): `.gitlab/CODEOWNERS` maps file paths to responsible owners who are auto-added as reviewers
 - **Merge methods**: merge commit (default), semi-linear, fast-forward (cleanest history), squash. Squash options: Do not allow, Allow, Encourage, Require
-- **Auto-merge**: merge automatically when all conditions are met — pipeline, approvals, resolved threads
+- **Auto-merge**: merge automatically when all conditions are met - pipeline, approvals, resolved threads
 - **Merged results pipelines**: test the hypothetical merge result rather than just the source branch
-- **Merge trains** (Premium): queue MRs and test each against all ahead of it in the queue — prevents broken main branches from concurrent MR interactions
+- **Merge trains** (Premium): queue MRs and test each against all ahead of it in the queue - prevents broken main branches from concurrent MR interactions
 - **MR templates**: store in `.gitlab/merge_request_templates/`. `Default.md` auto-applies. Multiple templates shown in a selector
 - **Closing issues**: use `Closes #N` in the MR description. Issues close when the MR merges into the default branch only
 - **Reverting**: click **Revert** on any merged MR to create a revert MR that undoes all its changes
