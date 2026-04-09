@@ -521,6 +521,7 @@ Bitbucket Data Center users have additional security responsibilities since they
 Work through this checklist for any production Bitbucket workspace:
 
 ### Account security
+
 - [ ] All team members have 2FA enabled
 - [ ] 2FA enforcement is enabled at the workspace level
 - [ ] No shared accounts
@@ -528,6 +529,7 @@ Work through this checklist for any production Bitbucket workspace:
 - [ ] Active sessions reviewed periodically
 
 ### Authentication
+
 - [ ] API tokens in use (no app passwords)
 - [ ] All tokens have expiry dates set
 - [ ] Tokens created with minimum necessary permissions
@@ -535,6 +537,7 @@ Work through this checklist for any production Bitbucket workspace:
 - [ ] Unused SSH keys and repository access keys removed
 
 ### Code protection
+
 - [ ] `main` and release branches have write restrictions (no direct pushes)
 - [ ] Force push protection enabled on all permanent branches
 - [ ] Branch delete restriction on permanent branches
@@ -543,6 +546,7 @@ Work through this checklist for any production Bitbucket workspace:
 - [ ] Author cannot approve their own PRs
 
 ### Secret management
+
 - [ ] No secrets in committed files
 - [ ] `.gitignore` covers secret-containing file patterns
 - [ ] Secret scanning enabled (Standard/Premium)
@@ -550,11 +554,13 @@ Work through this checklist for any production Bitbucket workspace:
 - [ ] CI/CD pipelines use OIDC where supported
 
 ### Access control
+
 - [ ] Repository access follows least privilege
 - [ ] Groups used for access management (not individual permissions)
 - [ ] Leaver process includes Bitbucket account revocation
 
 ### Enterprise (if applicable)
+
 - [ ] Atlassian Guard connected for SSO
 - [ ] SCIM provisioning configured
 - [ ] IP allowlisting configured (Premium)
