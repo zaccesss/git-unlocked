@@ -849,6 +849,57 @@ curl -X POST \
 
 ## Common Mistakes
 
-- **Incorrect Token Usage**: Ensure you're using the correct `token` and not `token`.
+**Using the token without the `token ` prefix in the Authorization header**
 
-... (res
+The header must be `Authorization: token YOUR_TOKEN`, not `Authorization: YOUR_TOKEN`. The `token ` prefix is required. Omitting it results in 401 errors.
+
+**Not URL-encoding repository names with special characters**
+
+Repository names with spaces or special characters must be URL-encoded in API paths. Gitea discourages special characters in repo names but they are technically allowed. Encode with `%20` for spaces, `%2F` for slashes (not needed in the path segments themselves).
+
+**Treating the list endpoints as returning all results**
+
+By default, list endpoints return 20 items. If a repository has 200 issues, the first response only contains the first 20. Always check `X-Total-Count` in the response headers and paginate to retrieve all data.
+
+**Not validating webhook signatures**
+
+Accepting webhook payloads without verifying the HMAC signature means anyone who knows your endpoint URL can send forged events. Always verify the `X-Gitea-Signature` header against the expected signature.
+
+**Using a full-access token in CI/CD pipelines**
+
+CI/CD pipelines typically need only `repository:write` or specific scopes. Using a token with full access in a pipeline expands the blast radius if the pipeline is compromised. Create pipeline-specific tokens with minimum required scopes.
+
+---
+
+## Summary
+
+Gitea's REST API is accessible at `/api/v1/` with Swagger documentation at `/api/swagger`. Authenticate with an access token in the `Authorization: token TOKEN` header.
+
+Core API areas: repositories (create, read, update, delete, browse files, manage branches), issues (create, update, close, comment), pull requests (create, review, merge) and users/organisations (create teams, manage members).
+
+Webhooks deliver event payloads to your endpoints on push, PR and issue events. Always verify the `X-Gitea-Signature` header using your webhook secret. Common webhook payloads include `ref`, `commits`, `repository` and `pusher` objects.
+
+Third-party integrations include Drone CI (native Gitea support), Jenkins (via plugin), ArgoCD (as a Git source), Renovate (dependency updates) and Terraform (via community provider).
+
+Paginate list responses using `page` and `limit` parameters. Check `X-Total-Count` to know the total number of items and loop until all pages are retrieved.
+
+---
+
+## Sources
+
+- [Gitea: API documentation](https://docs.gitea.com/api/1.20/)
+- [Gitea: Swagger UI](https://gitea.example.com/api/swagger) (replace with your instance URL)
+- [Gitea: Webhooks](https://docs.gitea.com/usage/webhooks)
+- [Drone CI: Gitea integration](https://docs.drone.io/server/provider/gitea/)
+- [Renovate: Gitea support](https://docs.renovatebot.com/modules/platform/gitea/)
+- [Terraform Gitea provider](https://registry.terraform.io/providers/Lerentis/gitea/)
+
+---
+
+<div align="center">
+
+Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+
+**Access Granted. Success Unlocked.**
+
+</div>
