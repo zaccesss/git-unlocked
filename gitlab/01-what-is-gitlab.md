@@ -74,15 +74,15 @@ GitLab responded to this distributed reality by building one of the most compreh
 
 ### Funding timeline
 
-| Round | Date | Amount | Notable investors | Valuation |
-|---|---|---|---|---|
-| Seed | Jul 2015 | $1.5M | Khosla Ventures, 500 Startups | — |
-| Series A | Sep 2015 | $4M | Khosla Ventures | — |
-| Series B | Sep 2016 | $20M | August Capital | ~$100M |
-| Series C | Oct 2017 | $20M | GV (Google Ventures) | ~$400M |
-| Series D | Sep 2018 | $100M | ICONIQ Capital | **$1B (unicorn)** |
-| Series E | Jan 2019 | $268M | Goldman Sachs, ICONIQ | $2.75B |
-| **Total raised** | | **~$435M** | 51 investors | — |
+| Round            | Date     | Amount     | Notable investors             | Valuation         |
+| ---------------- | -------- | ---------- | ----------------------------- | ----------------- |
+| Seed             | Jul 2015 | $1.5M      | Khosla Ventures, 500 Startups | -                 |
+| Series A         | Sep 2015 | $4M        | Khosla Ventures               | -                 |
+| Series B         | Sep 2016 | $20M       | August Capital                | ~$100M            |
+| Series C         | Oct 2017 | $20M       | GV (Google Ventures)          | ~$400M            |
+| Series D         | Sep 2018 | $100M      | ICONIQ Capital                | **$1B (unicorn)** |
+| Series E         | Jan 2019 | $268M      | Goldman Sachs, ICONIQ         | $2.75B            |
+| **Total raised** |          | **~$435M** | 51 investors                  | -                 |
 
 The Series D in September 2018 made GitLab a unicorn - valued at over one billion dollars. The timing of this round was not coincidental. Three months earlier, something had happened that transformed GitLab's trajectory.
 
@@ -131,20 +131,21 @@ As of April 2026, GitLab is one of the most significant infrastructure companies
 
 **Platform statistics:**
 
-| Metric | Figure |
-|---|---|
-| Registered users | 40M+ (some sources cite 50M+ as of late 2025) |
-| Fortune 100 customers | More than 50% |
-| Paying customers ($5K+ ARR) | 10,475 (Q3 FY2026) |
-| Paying customers ($100K+ ARR) | 1,405 (Q3 FY2026, +23% year-over-year) |
-| FY2025 revenue | $759.2M (+31% year-over-year) |
-| Q3 FY2026 revenue | $244.4M (+25% year-over-year) |
-| Employees | ~2,000 across 60+ countries |
-| Open source contributors | 3,300+ |
-| Current version | GitLab 18.10 (19 March 2026) |
-| NASDAQ ticker | GTLB |
+| Metric                        | Figure                                        |
+| ----------------------------- | --------------------------------------------- |
+| Registered users              | 40M+ (some sources cite 50M+ as of late 2025) |
+| Fortune 100 customers         | More than 50%                                 |
+| Paying customers ($5K+ ARR)   | 10,475 (Q3 FY2026)                            |
+| Paying customers ($100K+ ARR) | 1,405 (Q3 FY2026, +23% year-over-year)        |
+| FY2025 revenue                | $759.2M (+31% year-over-year)                 |
+| Q3 FY2026 revenue             | $244.4M (+25% year-over-year)                 |
+| Employees                     | ~2,000 across 60+ countries                   |
+| Open source contributors      | 3,300+                                        |
+| Current version               | GitLab 18.10 (19 March 2026)                  |
+| NASDAQ ticker                 | GTLB                                          |
 
 **Awards and recognition (2025):**
+
 - Gartner Magic Quadrant: **Leader in DevOps Platforms** (third consecutive year)
 - Gartner Magic Quadrant: **Leader in AI Code Assistants** (second consecutive year)
 
@@ -276,11 +277,11 @@ GitLab is available in two editions and three pricing tiers. Understanding both 
 
 ### GitLab.com pricing tiers (as of April 2026)
 
-| Tier | Monthly cost (annual billing) | Key limits | Key features |
-|---|---|---|---|
-| **Free** | $0 | 5 users/private group, 400 compute mins/month, 10 GiB/project | Unlimited projects, basic SAST, secret detection, container/package registries, Service Desk, GitLab Pages |
-| **Premium** | $29/user/month | 10,000 compute mins/month, 500 GiB/project | Merge request approvals, CODEOWNERS enforcement, epics, roadmaps, iterations, scoped labels, merge trains, SAML SSO, priority support |
-| **Ultimate** | ~$99/user/month (contact sales) | 50,000 compute mins/month, 500 GiB/project | Advanced SAST, DAST, fuzz testing, license compliance, vulnerability management, security policies, compliance framework, value stream analytics |
+| Tier         | Monthly cost (annual billing)   | Key limits                                                    | Key features                                                                                                                                     |
+| ------------ | ------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Free**     | $0                              | 5 users/private group, 400 compute mins/month, 10 GiB/project | Unlimited projects, basic SAST, secret detection, container/package registries, Service Desk, GitLab Pages                                       |
+| **Premium**  | $29/user/month                  | 10,000 compute mins/month, 500 GiB/project                    | Merge request approvals, CODEOWNERS enforcement, epics, roadmaps, iterations, scoped labels, merge trains, SAML SSO, priority support            |
+| **Ultimate** | ~$99/user/month (contact sales) | 50,000 compute mins/month, 500 GiB/project                    | Advanced SAST, DAST, fuzz testing, license compliance, vulnerability management, security policies, compliance framework, value stream analytics |
 
 > [!IMPORTANT]
 > All paid plans are **annual billing only** - there is no monthly option. A team of five on Premium commits $1,740 upfront per year. Ultimate pricing moved to "contact sales" in 2024; it was previously listed at $99/user/month.
@@ -292,11 +293,11 @@ GitLab is available in two editions and three pricing tiers. Understanding both 
 
 **AI add-ons (on top of base plan)**:
 
-| Add-on | Price | Requires | Includes |
-|---|---|---|---|
-| Duo Core | Included | Premium or Ultimate (18.0+) | Basic Code Suggestions, Duo Chat |
-| Duo Pro | $19/user/month | Premium or Ultimate | Advanced Code Suggestions, test generation, MR summaries, Agent Platform |
-| Duo Enterprise | $39/user/month | Ultimate | Everything in Pro, plus root cause analysis, vulnerability explanation and resolution, AI code review |
+| Add-on         | Price          | Requires                    | Includes                                                                                              |
+| -------------- | -------------- | --------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Duo Core       | Included       | Premium or Ultimate (18.0+) | Basic Code Suggestions, Duo Chat                                                                      |
+| Duo Pro        | $19/user/month | Premium or Ultimate         | Advanced Code Suggestions, test generation, MR summaries, Agent Platform                              |
+| Duo Enterprise | $39/user/month | Ultimate                    | Everything in Pro, plus root cause analysis, vulnerability explanation and resolution, AI code review |
 
 ---
 

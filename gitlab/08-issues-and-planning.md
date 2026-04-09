@@ -38,9 +38,9 @@ This file covers the complete picture: creating and managing issues, the quick a
 
 ## Issues
 
-Issues are the primary unit of work tracking in GitLab. They represent features, bugs, tasks, questions, improvement ideas — any discrete unit of work that needs to be planned, discussed, tracked and completed.
+Issues are the primary unit of work tracking in GitLab. They represent features, bugs, tasks, questions, improvement ideas - any discrete unit of work that needs to be planned, discussed, tracked and completed.
 
-Every issue lives in a project and has a project-scoped number (IID) — `#1`, `#2`, `#42`. These numbers are used in references throughout GitLab: mention `#42` in a commit message, a merge request description or another issue and GitLab automatically creates a hyperlink.
+Every issue lives in a project and has a project-scoped number (IID) - `#1`, `#2`, `#42`. These numbers are used in references throughout GitLab: mention `#42` in a commit message, a merge request description or another issue and GitLab automatically creates a hyperlink.
 
 Issues are part of GitLab's unified **work items** framework (GA in GitLab 18.7), which provides a consistent interface across different work item types: Issues, Tasks, Incidents, Epics, Objectives and Key Results.
 
@@ -93,7 +93,7 @@ The title should be specific and action-oriented. "Login fails on Safari 17" is 
 
 ### Assignee
 
-Who is responsible for working on this issue. Multiple assignees are supported — useful when an issue requires collaboration between two team members.
+Who is responsible for working on this issue. Multiple assignees are supported - useful when an issue requires collaboration between two team members.
 
 Assign from the right sidebar → **Assignees** → search for a username. Or use the quick action `/assign @username`.
 
@@ -138,6 +138,7 @@ Confidential issues are visible only to project members with Reporter access or 
 **Create confidential**: on the issue creation form, check **This issue is confidential**. Or use the quick action `/confidential` on an existing issue.
 
 **Use cases:**
+
 - Security vulnerability reports (before a fix is ready and disclosed)
 - Internal HR-related issues
 - Customer complaint investigations
@@ -157,6 +158,7 @@ Issues can have child issues (sub-issues), creating a hierarchical relationship.
 **Add a child issue**: on the issue page, look for **Child items** section → **Add** → search for existing issues or create a new one.
 
 Sub-issues are useful for breaking a large feature into trackable pieces:
+
 ```
 Issue #42: Implement user authentication
 ├── #43: Design login form UI
@@ -191,14 +193,15 @@ Issues can be related to each other in several ways. Set from the right sidebar 
 
 **Relationship types:**
 
-| Type | Meaning |
-|---|---|
-| **Relates to** | General relationship — these issues are connected |
-| **Blocks** | This issue must be resolved before the linked issue can be worked on |
-| **Is blocked by** | This issue cannot proceed until the linked issue is resolved |
-| **Cloned from / clones** | This issue is a copy of another |
+| Type                     | Meaning                                                              |
+| ------------------------ | -------------------------------------------------------------------- |
+| **Relates to**           | General relationship - these issues are connected                    |
+| **Blocks**               | This issue must be resolved before the linked issue can be worked on |
+| **Is blocked by**        | This issue cannot proceed until the linked issue is resolved         |
+| **Cloned from / clones** | This issue is a copy of another                                      |
 
 **Quick actions for relationships:**
+
 ```
 /relate #42          - add a "relates to" relationship
 /blocks #42          - mark this issue as blocking #42
@@ -241,13 +244,13 @@ Multiple `/spend` entries accumulate. GitLab shows total time spent vs estimate 
 ```
 
 > [!NOTE]
-> Time tracking data is visible on the issue page and aggregated in milestone and group reporting. It is purely informational — GitLab does not enforce time limits or trigger actions based on logged time.
+> Time tracking data is visible on the issue page and aggregated in milestone and group reporting. It is purely informational - GitLab does not enforce time limits or trigger actions based on logged time.
 
 ---
 
 ## Quick Actions
 
-Quick actions are slash commands that perform operations on issues and merge requests from the comment box, without navigating to separate settings panels. They execute when you submit the comment — the quick action itself is not visible in the comment thread, only the result is shown.
+Quick actions are slash commands that perform operations on issues and merge requests from the comment box, without navigating to separate settings panels. They execute when you submit the comment - the quick action itself is not visible in the comment thread, only the result is shown.
 
 You can combine multiple quick actions in a single comment:
 
@@ -262,95 +265,95 @@ This issue has been reviewed and categorised. Assigning to the team for sprint p
 
 ### State actions
 
-| Action | Effect |
-|---|---|
-| `/close` | Close the issue or MR |
-| `/reopen` | Reopen a closed issue or MR |
-| `/merge` | Merge the MR (if conditions are met) |
-| `/draft` | Mark the MR as draft |
-| `/ready` | Remove draft status from MR |
+| Action    | Effect                               |
+| --------- | ------------------------------------ |
+| `/close`  | Close the issue or MR                |
+| `/reopen` | Reopen a closed issue or MR          |
+| `/merge`  | Merge the MR (if conditions are met) |
+| `/draft`  | Mark the MR as draft                 |
+| `/ready`  | Remove draft status from MR          |
 
 ### Assignment
 
-| Action | Effect |
-|---|---|
-| `/assign @user` | Assign user (adds to existing assignees) |
-| `/assign @me` | Assign yourself |
-| `/assign_reviewer @user` | Add reviewer to an MR |
-| `/unassign @user` | Remove a specific assignee |
-| `/reassign @user` | Replace all assignees with this user |
-| `/unassign_reviewer @user` | Remove a reviewer from an MR |
+| Action                     | Effect                                   |
+| -------------------------- | ---------------------------------------- |
+| `/assign @user`            | Assign user (adds to existing assignees) |
+| `/assign @me`              | Assign yourself                          |
+| `/assign_reviewer @user`   | Add reviewer to an MR                    |
+| `/unassign @user`          | Remove a specific assignee               |
+| `/reassign @user`          | Replace all assignees with this user     |
+| `/unassign_reviewer @user` | Remove a reviewer from an MR             |
 
 ### Labels
 
-| Action | Effect |
-|---|---|
-| `/label ~name` | Add a label |
-| `/unlabel ~name` | Remove a specific label |
+| Action           | Effect                           |
+| ---------------- | -------------------------------- |
+| `/label ~name`   | Add a label                      |
+| `/unlabel ~name` | Remove a specific label          |
 | `/relabel ~name` | Replace all labels with this one |
 
 ### Planning
 
-| Action | Effect |
-|---|---|
-| `/milestone %"Sprint 14"` | Set milestone |
-| `/remove_milestone` | Clear milestone |
-| `/due 2026-05-01` | Set due date |
-| `/remove_due_date` | Clear due date |
-| `/weight 5` | Set weight (Premium) |
-| `/clear_weight` | Clear weight (Premium) |
-| `/iteration *iteration:"Sprint 14"` | Set iteration (Premium) |
-| `/remove_iteration` | Clear iteration (Premium) |
-| `/health_status on_track` | Set health status (options: `on_track`, `needs_attention`, `at_risk`) |
-| `/clear_health_status` | Clear health status |
+| Action                              | Effect                                                                |
+| ----------------------------------- | --------------------------------------------------------------------- |
+| `/milestone %"Sprint 14"`           | Set milestone                                                         |
+| `/remove_milestone`                 | Clear milestone                                                       |
+| `/due 2026-05-01`                   | Set due date                                                          |
+| `/remove_due_date`                  | Clear due date                                                        |
+| `/weight 5`                         | Set weight (Premium)                                                  |
+| `/clear_weight`                     | Clear weight (Premium)                                                |
+| `/iteration *iteration:"Sprint 14"` | Set iteration (Premium)                                               |
+| `/remove_iteration`                 | Clear iteration (Premium)                                             |
+| `/health_status on_track`           | Set health status (options: `on_track`, `needs_attention`, `at_risk`) |
+| `/clear_health_status`              | Clear health status                                                   |
 
 ### Relationships
 
-| Action | Effect |
-|---|---|
-| `/relate #42` | Mark as related to issue #42 |
-| `/blocks #42` | Mark this as blocking #42 |
-| `/blocked_by #42` | Mark this as blocked by #42 |
-| `/add_child #42` | Add #42 as a child issue |
-| `/set_parent #42` | Set #42 as this issue's parent |
+| Action             | Effect                                  |
+| ------------------ | --------------------------------------- |
+| `/relate #42`      | Mark as related to issue #42            |
+| `/blocks #42`      | Mark this as blocking #42               |
+| `/blocked_by #42`  | Mark this as blocked by #42             |
+| `/add_child #42`   | Add #42 as a child issue                |
+| `/set_parent #42`  | Set #42 as this issue's parent          |
 | `/promote_to Epic` | Convert this issue to an epic (Premium) |
 
 ### Time tracking
 
-| Action | Effect |
-|---|---|
-| `/estimate 8h` | Set time estimate |
-| `/spend 2h 30m` | Log time spent |
-| `/remove_estimate` | Clear estimate |
+| Action               | Effect                |
+| -------------------- | --------------------- |
+| `/estimate 8h`       | Set time estimate     |
+| `/spend 2h 30m`      | Log time spent        |
+| `/remove_estimate`   | Clear estimate        |
 | `/remove_time_spent` | Clear all logged time |
 
 ### Issue management
 
-| Action | Effect |
-|---|---|
-| `/confidential` | Make the issue confidential |
-| `/lock` | Lock the issue (prevent new comments except from members) |
-| `/unlock` | Unlock the issue |
-| `/subscribe` | Subscribe to notifications |
-| `/unsubscribe` | Unsubscribe from notifications |
-| `/todo` | Add to your To-Do list |
-| `/done` | Mark your To-Do as done |
-| `/copy_metadata #42` | Copy labels, milestone and assignees from issue #42 |
-| `/duplicate #42` | Mark this issue as a duplicate of #42 and close it |
-| `/move namespace/project` | Move the issue to another project |
+| Action                     | Effect                                                     |
+| -------------------------- | ---------------------------------------------------------- |
+| `/confidential`            | Make the issue confidential                                |
+| `/lock`                    | Lock the issue (prevent new comments except from members)  |
+| `/unlock`                  | Unlock the issue                                           |
+| `/subscribe`               | Subscribe to notifications                                 |
+| `/unsubscribe`             | Unsubscribe from notifications                             |
+| `/todo`                    | Add to your To-Do list                                     |
+| `/done`                    | Mark your To-Do as done                                    |
+| `/copy_metadata #42`       | Copy labels, milestone and assignees from issue #42        |
+| `/duplicate #42`           | Mark this issue as a duplicate of #42 and close it         |
+| `/move namespace/project`  | Move the issue to another project                          |
 | `/clone namespace/project` | Clone the issue to another project (keeping this one open) |
 
 ### MR-specific
 
-| Action | Effect |
-|---|---|
-| `/approve` | Approve the MR |
-| `/unapprove` | Remove your approval |
-| `/rebase` | Rebase the source branch on the target |
-| `/target_branch main` | Change the MR target branch |
+| Action                | Effect                                 |
+| --------------------- | -------------------------------------- |
+| `/approve`            | Approve the MR                         |
+| `/unapprove`          | Remove your approval                   |
+| `/rebase`             | Rebase the source branch on the target |
+| `/target_branch main` | Change the MR target branch            |
 
 > [!TIP]
-> Quick actions work in **issue descriptions**, **MR descriptions** and **any comment**. They also work in **issue and MR templates** — quick actions embedded in a template execute automatically when the issue or MR is created from that template.
+> Quick actions work in **issue descriptions**, **MR descriptions** and **any comment**. They also work in **issue and MR templates** - quick actions embedded in a template execute automatically when the issue or MR is created from that template.
 
 ---
 
@@ -372,6 +375,7 @@ Project: **Manage → Labels** → **New label**
 Group: Group → **Manage → Labels** → **New label**
 
 Fields:
+
 - **Title**: the label name (e.g. `bug`, `priority::high`, `workflow::in-review`)
 - **Description**: optional explanation of when to use this label
 - **Colour**: pick from presets or enter a hex code. GitLab chooses a text colour automatically for contrast.
@@ -416,9 +420,9 @@ type::documentation
 
 ### How they work
 
-Apply `priority::low` to an issue. Later, apply `priority::high` to the same issue. GitLab automatically removes `priority::low` — you cannot have both `priority::low` and `priority::high` simultaneously. This makes scoped labels behave like enum/radio-button fields rather than free-form tags.
+Apply `priority::low` to an issue. Later, apply `priority::high` to the same issue. GitLab automatically removes `priority::low` - you cannot have both `priority::low` and `priority::high` simultaneously. This makes scoped labels behave like enum/radio-button fields rather than free-form tags.
 
-Without scoped labels, a team might accidentally apply both `priority::low` and `priority::high` to the same issue. With scoped labels, this is impossible — the second one replaces the first.
+Without scoped labels, a team might accidentally apply both `priority::low` and `priority::high` to the same issue. With scoped labels, this is impossible - the second one replaces the first.
 
 ### Creating scoped labels
 
@@ -427,6 +431,7 @@ In the label creation form, simply name your label with `::` in the title: `prio
 ### Common scoped label schemas
 
 **Workflow state:**
+
 ```
 workflow::backlog
 workflow::planning
@@ -437,6 +442,7 @@ workflow::done
 ```
 
 **Priority:**
+
 ```
 priority::critical
 priority::high
@@ -445,6 +451,7 @@ priority::low
 ```
 
 **Type:**
+
 ```
 type::bug
 type::feature
@@ -454,6 +461,7 @@ type::security
 ```
 
 **Team:**
+
 ```
 team::frontend
 team::backend
@@ -465,7 +473,7 @@ team::design
 
 ## Milestones
 
-Milestones represent a goal with a deadline — a sprint, a release version, a project phase. Issues and merge requests are assigned to milestones, and GitLab tracks progress.
+Milestones represent a goal with a deadline - a sprint, a release version, a project phase. Issues and merge requests are assigned to milestones, and GitLab tracks progress.
 
 ### Creating a milestone
 
@@ -473,6 +481,7 @@ Milestones represent a goal with a deadline — a sprint, a release version, a p
 **Group milestone**: Group → **Plan → Milestones** → **New milestone**
 
 Fields:
+
 - **Title**: the milestone name (e.g. "Sprint 14", "v2.0.0 Release", "Q2 2026")
 - **Description**: optional context or goals
 - **Start date**: optional start date
@@ -481,9 +490,10 @@ Fields:
 ### Milestone progress
 
 The milestone detail page shows:
+
 - **Progress bar**: percentage of assigned issues that are closed
-- **Burndown chart**: issues closed per day over the milestone's duration — shows whether the team is on track to complete all work by the deadline
-- **Burnup chart**: shows total scope (issues added) vs completed issues — useful when scope changes during a milestone
+- **Burndown chart**: issues closed per day over the milestone's duration - shows whether the team is on track to complete all work by the deadline
+- **Burnup chart**: shows total scope (issues added) vs completed issues - useful when scope changes during a milestone
 - **Open issues and MRs**: list of all open work still assigned to the milestone
 - **Closed issues and MRs**: completed work in this milestone
 
@@ -511,18 +521,19 @@ The default board has three lists: **Open**, **In Progress** and **Closed**. Thi
 
 ### List types
 
-| List type | Column contains |
-|---|---|
-| **Label** | Issues with a specific label. Moving a card adds that label; moving out removes it. |
-| **Assignee** | Issues assigned to a specific person |
-| **Milestone** | Issues in a specific milestone |
-| **Iteration** (Premium) | Issues in a specific iteration |
+| List type               | Column contains                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------------- |
+| **Label**               | Issues with a specific label. Moving a card adds that label; moving out removes it. |
+| **Assignee**            | Issues assigned to a specific person                                                |
+| **Milestone**           | Issues in a specific milestone                                                      |
+| **Iteration** (Premium) | Issues in a specific iteration                                                      |
 
 ### Customising the board
 
 Add a list: **Create list** button at the top of the board → choose the list type and value.
 
 **Example: workflow board using scoped labels:**
+
 ```
 Backlog | In Progress | In Review | Done
 (workflow::backlog) | (workflow::in-progress) | (workflow::in-review) | (closed)
@@ -544,9 +555,10 @@ Set scope: on the board page, click **Edit board** → configure scope filters.
 ### Multiple boards
 
 Projects and groups can have multiple boards. For example:
-- "Sprint Board" — scoped to the current iteration, workflow state columns
-- "Bug Triage Board" — only issues labelled `bug`, severity columns
-- "Feature Backlog" — only issues labelled `feature`, priority columns
+
+- "Sprint Board" - scoped to the current iteration, workflow state columns
+- "Bug Triage Board" - only issues labelled `bug`, severity columns
+- "Feature Backlog" - only issues labelled `feature`, priority columns
 
 Create additional boards: Plan → Boards → the dropdown showing current board name → **Create new board**.
 
@@ -566,6 +578,7 @@ Epics are large work items that span multiple issues and potentially multiple mi
 Group → Plan → Work items → **New work item** → select **Epic**
 
 Fields:
+
 - **Title**: the initiative name
 - **Description**: context, goals, success criteria
 - **Start date**: optional
@@ -575,7 +588,7 @@ Fields:
 
 ### Epic hierarchy
 
-Epics can be nested — child epics under parent epics — creating a full hierarchy:
+Epics can be nested - child epics under parent epics - creating a full hierarchy:
 
 ```
 Epic: Improve developer experience (Q2 2026)
@@ -602,6 +615,7 @@ From quick action in a comment: `/relate` then link manually, or set the parent 
 ### Epic progress
 
 The epic page shows:
+
 - A progress bar based on percentage of child issues closed
 - List of all child issues and child epics with their status
 - Combined milestone and date tracking
@@ -619,13 +633,15 @@ The Roadmap is a timeline (Gantt-style) view of epics. It shows which epics are 
 
 ### Configuring the roadmap view
 
-Timeline presets — choose what each column represents:
+Timeline presets - choose what each column represents:
+
 - **Quarters** (3-month periods)
 - **Months** (one column per month)
 - **Weeks** (one column per week)
 - **Days** (for short-range tactical planning)
 
 Filter options:
+
 - Filter by label: show only epics with specific labels (e.g. show only `team::frontend` epics)
 - Filter by milestone: show only epics associated with a specific milestone
 - Filter by assignee: show epics assigned to a specific user
@@ -644,7 +660,7 @@ Click any epic bar to open a summary panel with description, child progress and 
 > [!IMPORTANT]
 > Iterations are a **Premium feature**.
 
-Iterations are GitLab's sprint system — time-boxed periods of work with defined start and end dates. They are organised into **iteration cadences** (a sequence of iterations following a regular cadence: weekly, bi-weekly, monthly).
+Iterations are GitLab's sprint system - time-boxed periods of work with defined start and end dates. They are organised into **iteration cadences** (a sequence of iterations following a regular cadence: weekly, bi-weekly, monthly).
 
 **Navigate**: Plan → **Iterations** (project level)
 
@@ -653,6 +669,7 @@ Iterations are GitLab's sprint system — time-boxed periods of work with define
 Group → Plan → **Iterations** → **New iteration cadence**
 
 Configure:
+
 - **Title**: e.g. "Engineering sprints"
 - **Start date**: when the first iteration begins
 - **Duration**: 1 week, 2 weeks, 3 weeks or 4 weeks
@@ -672,6 +689,7 @@ From a quick action: `/iteration *iteration:"Sprint Apr 7-21, 2026"`
 ### Iteration reports
 
 Each iteration has:
+
 - **Burndown chart**: issues closed per day, showing whether the team is on track
 - **Burnup chart**: scope vs completed
 - **Open/closed issue list**: what remains and what is done
@@ -695,9 +713,9 @@ Create Markdown files in `.gitlab/issue_templates/` on the default branch.
 
 ## Steps to reproduce
 
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ## Expected behaviour
 
@@ -709,9 +727,9 @@ Create Markdown files in `.gitlab/issue_templates/` on the default branch.
 
 ## Environment
 
-- **OS**: 
-- **Browser**: 
-- **GitLab version** (if self-managed): 
+- **OS**:
+- **Browser**:
+- **GitLab version** (if self-managed):
 
 ## Screenshots or logs
 
@@ -738,9 +756,9 @@ Create Markdown files in `.gitlab/issue_templates/` on the default branch.
 
 ## Acceptance criteria
 
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ]
+- [ ]
+- [ ]
 
 ## Alternatives considered
 
@@ -750,7 +768,7 @@ Create Markdown files in `.gitlab/issue_templates/` on the default branch.
 /label ~"needs-discussion"
 ```
 
-**`.gitlab/issue_templates/Default.md`** — automatically applied to all new issues unless another template is selected.
+**`.gitlab/issue_templates/Default.md`** - automatically applied to all new issues unless another template is selected.
 
 ### MR templates
 
@@ -766,18 +784,19 @@ Create Markdown files in `.gitlab/merge_request_templates/`.
 ## Why?
 
 <!-- Motivation or link to issue -->
+
 Closes #
 
 ## How to test
 
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ## Screenshots (for UI changes)
 
 | Before | After |
-|--------|-------|
+| ------ | ----- |
 |        |       |
 
 ## Checklist
@@ -798,7 +817,7 @@ When creating an issue or MR, a **Choose a template** dropdown appears above the
 
 ## Service Desk
 
-Service Desk is a built-in customer support system. Customers email a unique project address, and their emails automatically become confidential issues. Your team responds through issue comments, and the customer receives those responses by email — all without the customer needing a GitLab account.
+Service Desk is a built-in customer support system. Customers email a unique project address, and their emails automatically become confidential issues. Your team responds through issue comments, and the customer receives those responses by email - all without the customer needing a GitLab account.
 
 **Tier**: Free (all plans)
 
@@ -807,6 +826,7 @@ Service Desk is a built-in customer support system. Customers email a unique pro
 Settings → General → **Service Desk** → toggle **Enable Service Desk** → save.
 
 After enabling, GitLab generates a unique email address:
+
 ```
 your-project-abcd1234@incoming.gitlab.com
 ```
@@ -821,7 +841,7 @@ Share this address with customers as your support contact.
 4. Your team sees the issue in the issue tracker, works on it and responds by leaving a comment on the issue
 5. GitLab emails the customer with your comment (they see a clean email, not the GitLab UI)
 6. If the customer replies to the email, their reply becomes another comment on the issue
-7. When resolved, close the issue — GitLab notifies the customer that their request is closed
+7. When resolved, close the issue - GitLab notifies the customer that their request is closed
 
 ### Service Desk templates
 
@@ -845,6 +865,7 @@ By default, responses come from `gitlab@mg.gitlab.com`. You can configure a cust
 ### Converting issues to Service Desk tickets
 
 Any existing issue can be linked to a customer email using the quick action:
+
 ```
 /convert_to_ticket user@example.com
 ```
@@ -855,7 +876,7 @@ This links the issue to the customer's email and enables the email-based reply w
 
 ## GitLab Wiki
 
-Every project has a built-in wiki for documentation. The wiki is a separate Git repository linked to the project — it can be cloned, edited locally and pushed just like any other repository.
+Every project has a built-in wiki for documentation. The wiki is a separate Git repository linked to the project - it can be cloned, edited locally and pushed just like any other repository.
 
 **Navigate**: Plan → **Wiki**
 
@@ -871,7 +892,7 @@ Add a custom sidebar by creating a page titled `_sidebar`. This appears in the r
 
 ### Wiki footer
 
-Create a page titled `_footer` to add content that appears at the bottom of every wiki page — useful for copyright notices or contact information.
+Create a page titled `_footer` to add content that appears at the bottom of every wiki page - useful for copyright notices or contact information.
 
 ### Cloning and editing the wiki locally
 
@@ -903,7 +924,7 @@ Snippets are versioned, shareable code fragments. They are GitLab's equivalent o
 
 Click **New snippet** → add title, description, one or more files → set visibility → **Create snippet**.
 
-**Visibility options**: Public (anyone can see), Internal (self-managed only — authenticated users), Private (only you and explicitly shared users).
+**Visibility options**: Public (anyone can see), Internal (self-managed only - authenticated users), Private (only you and explicitly shared users).
 
 ### Multi-file snippets
 
@@ -915,7 +936,7 @@ Unlike GitHub Gists which are single-file, GitLab Snippets support up to **10 fi
 - **Syntax highlighting**: automatic based on file extension
 - **Embed on external sites**: each snippet has an embed code you can use to display it in a README, blog post or documentation page with syntax highlighting
 - **Clone as a repository**: `git clone https://gitlab.com/-/snippets/SNIPPET_ID`
-- **Raw view**: direct URL to the raw file content — useful for `curl` scripting
+- **Raw view**: direct URL to the raw file content - useful for `curl` scripting
 
 ### Snippet size limits
 
@@ -929,7 +950,7 @@ Maximum 50 MB total per snippet. Maximum 10 files. Files with binary content are
 
 1. Create these labels in your project: `bug`, `feature`, `priority::high`, `priority::low`, `workflow::backlog`, `workflow::in-progress`
 2. Create an issue template at `.gitlab/issue_templates/Default.md` with at minimum a Summary and Steps sections
-3. Create a new issue — notice the template auto-populates the description
+3. Create a new issue - notice the template auto-populates the description
 4. Apply labels: `bug` and `priority::high`
 5. Set a due date one week from today
 6. In a comment, use quick actions: `/assign @me` and `/label ~"workflow::in-progress"`
@@ -940,13 +961,13 @@ Maximum 50 MB total per snippet. Maximum 10 files. Files with binary content are
 2. Click **Create list** → choose Label → select `workflow::backlog`
 3. Create lists for `workflow::in-progress` and `workflow::in-review`
 4. Create three test issues and assign labels to place them in different columns
-5. Drag a card from **Backlog** to **In Progress** — observe the label update on the issue
+5. Drag a card from **Backlog** to **In Progress** - observe the label update on the issue
 
 **Exercise 3: Create and use a wiki page**
 
 1. Navigate to Plan → Wiki → New page
 2. Title it "Getting Started" and write a short guide
-3. Create another page titled "_sidebar" with links to important pages
+3. Create another page titled "\_sidebar" with links to important pages
 4. Notice the sidebar now appears on all wiki pages
 
 ---
@@ -979,7 +1000,7 @@ Maximum 50 MB total per snippet. Maximum 10 files. Files with binary content are
 - **Time tracking**: `/estimate` to set estimate; `/spend` to log time; visible in sidebar and reporting
 - **Quick actions**: slash commands in any comment that execute operations without navigating separate UI panels. Dozens available covering assignment, labels, planning, time tracking, state and relationships
 - **Labels**: project or group scope, colour-coded, freely applied. Group labels ensure consistent vocabulary
-- **Scoped labels** (Premium): `key::value` format; only one value per scope can be active at a time — behave like enum fields
+- **Scoped labels** (Premium): `key::value` format; only one value per scope can be active at a time - behave like enum fields
 - **Milestones**: goals with optional dates. Burndown and burnup charts. Use for sprints and releases
 - **Boards**: Kanban view with draggable cards. Lists based on labels, assignees, milestones or iterations. Board scope filters which issues appear
 - **Epics** (Premium): large initiatives spanning multiple issues. Hierarchical (epics within epics). Progress tracking
