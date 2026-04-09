@@ -20,8 +20,8 @@ This document outlines the current state of git-unlocked, what is being built an
 
 ## Current Status
 
-**Version:** 0.4.0
-**Stage:** Phase 3 in progress - git/ complete, github/ complete, gitlab/ complete, other-platforms/ next
+**Version:** 0.9.0
+**Stage:** Phase 3 complete - git/ done, github/ done, gitlab/ done, other-platforms/ done. Phase 4 (ides/) next.
 **Started:** March 2026
 
 | Section                          | Status      |
@@ -43,8 +43,12 @@ This document outlines the current state of git-unlocked, what is being built an
 | git/                             | Complete    |
 | github/                          | Complete    |
 | gitlab/                          | Complete    |
-| other-platforms/                 | In progress |
-| ides/                            | Planned     |
+| other-platforms/bitbucket/       | Complete    |
+| other-platforms/azure-devops/    | Complete    |
+| other-platforms/gitea/           | Complete    |
+| other-platforms/forgejo/         | Complete    |
+| other-platforms/codeberg/        | Complete    |
+| ides/                            | In progress |
 | terminal/                        | Planned     |
 | real-world/                      | Planned     |
 | reference/                       | Planned     |
@@ -77,6 +81,7 @@ Getting the structure, branding and core files in place.
 - [x] introduction/01-welcome.md
 - [x] introduction/02-how-to-use-this-course.md
 - [x] introduction/03-setting-up.md
+- [ ] introduction/04-version-control-concepts.md - planned new file covering what version control is, why it matters and how Git fits in, before the git/ folder begins
 - [ ] Banner and assets
 - [ ] first-contribution/ sandbox
 
@@ -180,91 +185,86 @@ The `github/`, `gitlab/` and `other-platforms/` folders covering every major Git
 
 ### other-platforms/ folder
 
-Each platform has its own subfolder at full depth - same standard as github/ and gitlab/.
+Each platform has its own subfolder at full depth.
 
-#### other-platforms/bitbucket/
+#### other-platforms/bitbucket/ - Complete (14 files)
 
-Planned files:
-- 00-bitbucket-overview.md
-- 01-what-is-bitbucket.md - founding (2008), Atlassian acquisition (2010), Cloud vs Data Center, Mercurial dropped (2020)
-- 02-creating-an-account.md - Atlassian account, 2FA, SSH keys, app passwords, free tier (5 users, 50 pipeline minutes)
-- 03-bitbucket-vs-github-vs-gitlab.md - three-way comparison, pricing, CI/CD, self-hosting, Atlassian ecosystem
-- 04-repositories.md - creating repos, Projects (container above repos), visibility, forking, LFS
-- 05-pull-requests.md - creating PRs, reviewers, inline comments, merge strategies, default reviewers
-- 06-bitbucket-pipelines.md - full bitbucket-pipelines.yml guide, steps, stages, parallel, services, caches, artifacts, pipes, runners
-- 07-branch-permissions.md - branch restrictions, merge checks, required builds, default reviewers
-- 08-jira-integration.md - smart commits, development panel, automating transitions, linking issues
-- 09-security-features.md - IP allowlisting, 2FA enforcement, secret scanning, merge checks
-- 10-bitbucket-cloud-vs-data-center.md - when to self-host, Data Center licensing, installation, migration
-- 11-workspaces-and-permissions.md - Workspaces, projects, user roles, repository permissions
-- 12-api-and-integrations.md - Bitbucket REST API v2, webhooks, app passwords, Atlassian marketplace
-- 13-all-bitbucket-features-reference.md
+- [x] 00-bitbucket-overview.md
+- [x] 01-what-is-bitbucket.md
+- [x] 02-creating-an-account.md
+- [x] 03-bitbucket-vs-github-vs-gitlab.md
+- [x] 04-repositories.md
+- [x] 05-pull-requests.md
+- [x] 06-bitbucket-pipelines.md
+- [x] 07-branch-permissions.md
+- [x] 08-jira-integration.md
+- [x] 09-security-features.md
+- [x] 10-bitbucket-cloud-vs-data-center.md
+- [x] 11-workspaces-and-permissions.md
+- [x] 12-api-and-integrations.md
+- [x] 13-all-bitbucket-features-reference.md
 
-#### other-platforms/azure-devops/
+#### other-platforms/azure-devops/ - Complete (15 files)
 
-Planned files:
-- 00-azure-devops-overview.md
-- 01-what-is-azure-devops.md - history (VSS to TFS to VSTS to Azure DevOps 2018), five services, Services vs Server
-- 02-creating-an-account.md - Azure/Microsoft account, organisations and projects, PATs, SSH keys, free tier
-- 03-azure-repos.md - Git repos, branch policies, pull requests, code review, TFVC vs Git
-- 04-azure-boards.md - work items (Epic/Feature/User Story/Task/Bug), Kanban, sprints, backlogs, queries
-- 05-azure-pipelines.md - full azure-pipelines.yml guide, triggers, stages, jobs, steps, tasks, variables, environments, agents
-- 06-azure-artifacts.md - package feeds (npm/NuGet/PyPI/Maven/Cargo), upstream sources, feed permissions
-- 07-azure-test-plans.md - manual test plans, test suites, exploratory testing
-- 08-branch-policies.md - requiring PRs, minimum reviewers, build validation, comment resolution
-- 09-security-and-permissions.md - organisation/project/team/repo permissions, security groups
-- 10-azure-devops-server.md - on-premises installation, requirements, licensing, upgrading from TFS
-- 11-extensions-and-marketplace.md - Azure DevOps Marketplace, popular extensions
-- 12-azure-devops-cli.md - az devops CLI, installation, authentication, commands
-- 13-api-and-integrations.md - REST API, service hooks, GitHub integration, service connections
-- 14-all-azure-devops-features-reference.md
+- [x] 00-azure-devops-overview.md
+- [x] 01-what-is-azure-devops.md
+- [x] 02-creating-an-account.md
+- [x] 03-azure-repos.md
+- [x] 04-azure-boards.md
+- [x] 05-azure-pipelines.md
+- [x] 06-azure-artifacts.md
+- [x] 07-azure-test-plans.md
+- [x] 08-branch-policies.md
+- [x] 09-security-and-permissions.md
+- [x] 10-azure-devops-server.md
+- [x] 11-extensions-and-marketplace.md
+- [x] 12-azure-devops-cli.md
+- [x] 13-api-and-integrations.md
+- [x] 14-all-azure-devops-features-reference.md
 
-#### other-platforms/gitea/
+#### other-platforms/gitea/ - Complete (13 files)
 
-Planned files:
-- 00-gitea-overview.md
-- 01-what-is-gitea.md - fork of Gogs (2016), Go-based, lightweight, Gitea Ltd controversy (2022), current version
-- 02-installation.md - binary/Docker/packages on all three OS, very low system requirements, app.ini, initial setup
-- 03-creating-an-account.md - registration, SSH keys, access tokens, 2FA, OAuth2 providers
-- 04-repositories.md - creating repos, mirroring from GitHub/GitLab, LFS, releases, topics
-- 05-pull-requests-and-code-review.md - PRs, reviewers, inline comments, protected branches
-- 06-gitea-actions.md - GitHub Actions compatible, act_runner installation, workflow syntax, differences
-- 07-issues-and-projects.md - issues, labels, milestones, Kanban projects, issue templates
-- 08-packages.md - package registry (Docker/npm/PyPI/Maven/NuGet/Cargo/Helm)
-- 09-administration.md - admin panel, user management, instance settings, LDAP/SAML/OAuth2
-- 10-gitea-vs-forgejo.md - the 2022 split, what diverged, which to choose
-- 11-api-and-integrations.md - REST API (Swagger at /api/swagger), webhooks
-- 12-all-gitea-features-reference.md
+- [x] 00-gitea-overview.md
+- [x] 01-what-is-gitea.md
+- [x] 02-installation.md
+- [x] 03-creating-an-account.md
+- [x] 04-repositories.md
+- [x] 05-pull-requests-and-code-review.md
+- [x] 06-gitea-actions.md
+- [x] 07-issues-and-projects.md
+- [x] 08-packages.md
+- [x] 09-administration.md
+- [x] 10-gitea-vs-forgejo.md
+- [x] 11-api-and-integrations.md
+- [x] 12-all-gitea-features-reference.md
 
-#### other-platforms/forgejo/
+#### other-platforms/forgejo/ - Complete (10 files)
 
-Planned files:
-- 00-forgejo-overview.md
-- 01-what-is-forgejo.md - the 2022 governance controversy, community fork, Forgejo e.V., relationship with Codeberg
-- 02-installation.md - installing Forgejo, differences from Gitea installation
-- 03-creating-an-account.md - registration, SSH keys, access tokens, 2FA
-- 04-repositories-and-features.md - what Forgejo has that Gitea does not, federation, unique features
-- 05-forgejo-actions.md - Actions runner, workflow syntax, GitHub Actions compatibility
-- 06-federation.md - ActivityPub support, F3 format, what federation means for Git hosting
-- 07-forgejo-vs-gitea.md - feature comparison, governance comparison, migration between the two
-- 08-api-and-administration.md - API (compatible with Gitea), admin panel, webhooks
-- 09-all-forgejo-features-reference.md
+- [x] 00-forgejo-overview.md
+- [x] 01-what-is-forgejo.md
+- [x] 02-installation.md
+- [x] 03-creating-an-account.md
+- [x] 04-repositories-and-code-review.md
+- [x] 05-forgejo-actions.md
+- [x] 06-issues-packages-and-federation.md
+- [x] 07-administration.md
+- [x] 08-api-and-integrations.md
+- [x] 09-all-forgejo-features-reference.md
 
-#### other-platforms/codeberg/
+#### other-platforms/codeberg/ - Complete (10 files)
 
-Planned files:
-- 00-codeberg-overview.md
-- 01-what-is-codeberg.md - Codeberg e.V. (nonprofit, Berlin), founded 2019, runs Forgejo, mission, GDPR compliance, statistics
-- 02-creating-an-account.md - signup, no phone/credit card required, SSH keys, access tokens, 2FA, free for open source
-- 03-repositories-and-features.md - creating repos, organisations, topics, releases, package registry
-- 04-codeberg-pages.md - free static site hosting, branch-based, custom domains, HTTPS, comparison with GitHub Pages
-- 05-ci-cd-on-codeberg.md - no built-in CI/CD, Woodpecker CI (recommended), Forgejo Actions, other options
-- 06-community-and-philosophy.md - FOSS principles, no ads/tracking/VC money, who should use Codeberg
-- 07-codeberg-vs-github.md - feature comparison, what Codeberg lacks, what it offers instead
-- 08-api-and-integrations.md - Forgejo-compatible API, webhooks, integrations
-- 09-all-codeberg-features-reference.md
+- [x] 00-codeberg-overview.md
+- [x] 01-what-is-codeberg.md
+- [x] 02-creating-an-account.md
+- [x] 03-repositories-and-code-review.md
+- [x] 04-issues-and-projects.md
+- [x] 05-codeberg-ci.md
+- [x] 06-pages.md
+- [x] 07-packages-and-releases.md
+- [x] 08-organisations-and-teams.md
+- [x] 09-all-codeberg-features-reference.md
 
-**Status: In progress**
+**Phase 3 Status: Complete (82 files across github/ + gitlab/ + 5 other-platforms/)**
 
 ---
 
@@ -272,21 +272,20 @@ Planned files:
 
 The `ides/` folder covering IDEs and editors, and the `terminal/` folder covering the command line.
 
-Note: ides/ files can reference all platforms accurately now that all platform folders will be complete.
+Note: ides/ files can reference all platforms accurately now that all platform folders are complete.
 
 ### ides/ folder
 
-Planned files:
-- 00-ides-overview.md
-- 01-vs-code.md - Git integration, GitLens, GitHub extension, GitLab extension, Copilot, Duo
-- 02-jetbrains.md - IntelliJ/PyCharm/WebStorm, built-in Git, GitHub and GitLab plugins
-- 03-neovim.md - fugitive.vim, gitsigns.nvim, GitHub/GitLab CLI integration
-- 04-github-desktop.md - visual Git client for beginners
-- 05-other-editors.md - Sublime Text, Zed, Cursor, Helix
+- [ ] 00-ides-overview.md
+- [ ] 01-vs-code.md - Git integration (source control panel, timeline, inline blame), GitLens, GitHub Pull Requests extension, GitLab Workflow extension, GitHub Copilot in VS Code, Duo in VS Code
+- [ ] 02-jetbrains.md - built-in Git (IntelliJ/PyCharm/WebStorm/Rider/GoLand), GitHub plugin, GitLab plugin, commit tool window, interactive rebase, shelving
+- [ ] 03-neovim.md - fugitive.vim, gitsigns.nvim, neogit, GitHub/GitLab CLI integration from terminal
+- [ ] 04-github-desktop.md - visual Git client for beginners, cloning, committing, branching, pull requests without CLI
+- [ ] 05-other-editors.md - Sublime Text (GitSavvy), Zed (built-in Git), Cursor (AI-first with Git), Helix (no built-in, terminal workflow)
 
 ### terminal/ folder
 
-Planned files covering shell setup, Git configuration, aliases, productivity tools (fzf, bat, delta, lazygit) and terminal-based Git workflows.
+- [ ] Planned: shell setup, Git configuration, aliases, productivity tools (fzf, bat, delta, lazygit), terminal-based Git workflows
 
 ---
 
@@ -324,6 +323,7 @@ Curated external links:
 The finishing touches that make the course complete.
 
 - [ ] `introduction/02-how-to-use-this-course.md` - full rewrite once all folders are complete (deliberately deferred to avoid repeated rewrites as content grows)
+- [ ] `introduction/04-version-control-concepts.md` - new file explaining version control concepts in plain language before the Git folder begins
 - [ ] Root-level Codespaces dev container setup
 - [ ] Root-level setup documentation for all tools
 - [ ] Banner image and visual assets
