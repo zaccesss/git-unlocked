@@ -220,8 +220,8 @@ On the **Changes** tab, hover over any line number and click the blue speech bub
 Write your comment in Markdown. You can:
 
 - Ask a question: `What happens if this value is null?`
-- Request a change: `This should use the existing `formatDate` utility rather than reimplementing it`
-- Approve a specific approach: `This is cleaner than the previous implementation - nice`
+- Request a change: "This should use the existing `formatDate` utility rather than reimplementing it"
+- Approve a specific approach: "This is cleaner than the previous implementation - nice"
 - Suggest a specific fix (see [Suggested changes](#suggested-changes) below)
 
 After writing, choose **Start a review** (queues your comment as part of a batch review, invisible to the author until you submit) or **Add comment now** (immediately visible).
