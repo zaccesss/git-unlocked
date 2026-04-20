@@ -218,7 +218,7 @@ The **Log tab** in the Version Control tool window (`Alt+9`) is the most powerfu
 
 ## 9. Branching and remotes
 
-**The Branches popup**: press `Ctrl+Shift+\`` `` (backtick) on Windows/Linux or `Ctrl+G` on Mac to open the Branches popup, which lists all local and remote branches. Start typing to filter. Press Enter or double-click to checkout. The current branch is shown at the top.
+**The Branches popup**: press `Ctrl+Shift` + backtick on Windows/Linux or `Ctrl+G` on Mac to open the Branches popup, which lists all local and remote branches. Start typing to filter. Press Enter or double-click to checkout. The current branch is shown at the top.
 
 **Creating a branch**: from the Branches popup, click **+ New Branch**. Enter the name and choose whether to checkout immediately. JetBrains runs `git checkout -b <name>` behind the scenes.
 
