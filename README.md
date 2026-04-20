@@ -124,7 +124,8 @@ OTHER PLATFORMS
 
 IDEs AND TERMINAL
 |
-+-- Git in VS Code, JetBrains, Neovim and GitHub Desktop
++-- Git in VS Code, JetBrains, Neovim, GitHub Desktop and more
++-- Cursor, Windsurf, Antigravity, Kiro and AI-first editors
 +-- Extensions and plugins for every editor
 ```
 
@@ -331,19 +332,24 @@ Pure Git - works on any platform, any host.
 
 ---
 
-### IDEs
-
-> [!NOTE]
-> This section is currently in progress.
+### IDEs and Editors
 
 | File | Topic | Level |
 | ---- | ----- | ----- |
-| 00-ides-overview.md | Folder overview | 🟢 |
-| 01-vs-code.md | Git in VS Code, GitLens, GitHub and GitLab extensions | 🟢 |
-| 02-jetbrains.md | Git in IntelliJ, PyCharm, WebStorm and other JetBrains IDEs | 🟢 |
-| 03-neovim.md | fugitive.vim, gitsigns.nvim and CLI integration | 🟡 |
-| 04-github-desktop.md | The GitHub Desktop visual client | 🟢 |
-| 05-other-editors.md | Sublime Text, Zed, Cursor and Helix | 🟢 |
+| [00-ides-overview.md](ides-and-editors/00-ides-overview.md) | Landscape overview, three generations of Git tooling, how to choose | 🟢 |
+| [01-vs-code.md](ides-and-editors/01-vs-code.md) | Source Control panel, GitLens, GitHub Pull Requests, GitLab Workflow, Copilot | 🟢 |
+| [02-jetbrains.md](ides-and-editors/02-jetbrains.md) | Built-in Git, changelists, shelving, interactive rebase, merge tool | 🟢 |
+| [03-neovim.md](ides-and-editors/03-neovim.md) | vim-fugitive, gitsigns.nvim, neogit, diffview.nvim, lazy.nvim | 🔴 |
+| [04-github-desktop.md](ides-and-editors/04-github-desktop.md) | Visual Git client, line staging, Copilot commit messages | 🟢 |
+| [05-cursor.md](ides-and-editors/05-cursor.md) | VS Code fork, Cursor Blame, Agent mode, Cloud Agents, .cursor/rules | 🟡 |
+| [06-windsurf.md](ides-and-editors/06-windsurf.md) | Cascade agent, Flow awareness, Git worktrees, Agent Command Center | 🟡 |
+| [07-antigravity.md](ides-and-editors/07-antigravity.md) | Google AI IDE, dual-view architecture, Artifacts system, Manager view | 🟡 |
+| [08-kiro.md](ides-and-editors/08-kiro.md) | AWS IDE, spec-driven development, Git event Hooks, GitHub Autonomous Agent | 🟡 |
+| [09-zed.md](ides-and-editors/09-zed.md) | GPU-accelerated Rust editor, native Git, Diff View, multiplayer | 🟡 |
+| [10-helix.md](ides-and-editors/10-helix.md) | Minimal terminal editor, gutter indicators, lazygit via tmux popup | 🔴 |
+| [11-sublime-text.md](ides-and-editors/11-sublime-text.md) | GitSavvy plugin, status dashboard, Repo History, interactive rebase | 🟡 |
+| [12-other-editors.md](ides-and-editors/12-other-editors.md) | Emacs/Magit, Visual Studio, Xcode, Android Studio, Eclipse, Nova, Vim | 🟢 |
+| [13-all-ides-features-reference.md](ides-and-editors/13-all-ides-features-reference.md) | Complete comparison tables, pricing, decision guide | 🟢 |
 
 ---
 

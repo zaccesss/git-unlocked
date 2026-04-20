@@ -20,8 +20,8 @@ This document outlines the current state of git-unlocked, what is being built an
 
 ## Current Status
 
-**Version:** 0.9.0
-**Stage:** Phase 3 complete - git/ done, github/ done, gitlab/ done, other-platforms/ done. Phase 4 (ides/) next.
+**Version:** 1.0.0
+**Stage:** Phase 4 complete - ides-and-editors/ done. Phase 5 (terminal/) next.
 **Started:** March 2026
 
 | Section                          | Status      |
@@ -48,8 +48,8 @@ This document outlines the current state of git-unlocked, what is being built an
 | other-platforms/gitea/           | Complete    |
 | other-platforms/forgejo/         | Complete    |
 | other-platforms/codeberg/        | Complete    |
-| ides/                            | In progress |
-| terminal/                        | Planned     |
+| ides-and-editors/                | Complete    |
+| terminal/                        | Next        |
 | real-world/                      | Planned     |
 | reference/                       | Planned     |
 | resources/                       | Planned     |
@@ -129,163 +129,54 @@ The `git/` folder covering Git from zero to advanced.
 
 The `github/`, `gitlab/` and `other-platforms/` folders covering every major Git hosting platform.
 
-### github/ folder
+### github/ folder - Complete (28 files)
 
-- [x] 00-github-overview.md
-- [x] 01-what-is-github.md
-- [x] 02-creating-an-account.md
-- [x] 03-github-desktop.md
-- [x] 04-repositories.md
-- [x] 05-forking.md
-- [x] 06-editing-on-github.md
-- [x] 07-issues.md
-- [x] 08-pull-requests.md
-- [x] 09-branch-protection-and-rulesets.md
-- [x] 10-github-actions.md
-- [x] 11-github-pages.md
-- [x] 12-discussions.md
-- [x] 13-projects-and-boards.md
-- [x] 14-github-releases.md
-- [x] 15-github-packages.md
-- [x] 16-security-features.md
-- [x] 17-profile-and-readme.md
-- [x] 18-badges-and-achievements.md
-- [x] 19-copilot.md
-- [x] 20-education.md
-- [x] 21-cli.md
-- [x] 22-mobile.md
-- [x] 23-collaborators-teams-orgs.md
-- [x] 24-advanced.md
-- [x] 25-what-should-not-be-on-github.md
-- [x] 26-platform-comparison.md
-- [x] 27-all-github-features-reference.md
+- [x] 00-github-overview.md through 27-all-github-features-reference.md
 
-**Status: Complete (28 files)**
+### gitlab/ folder - Complete (16 files)
 
-### gitlab/ folder
+- [x] 00-gitlab-overview.md through 15-all-gitlab-features-reference.md
 
-- [x] 00-gitlab-overview.md
-- [x] 01-what-is-gitlab.md
-- [x] 02-creating-an-account.md
-- [x] 03-gitlab-vs-github.md
-- [x] 04-projects-and-namespaces.md
-- [x] 05-merge-requests.md
-- [x] 06-gitlab-cicd.md
-- [x] 07-gitlab-pages.md
-- [x] 08-issues-and-planning.md
-- [x] 09-security-features.md
-- [x] 10-gitlab-duo.md
-- [x] 11-self-hosting.md
-- [x] 12-gitlab-cli.md
-- [x] 13-groups-and-permissions.md
-- [x] 14-gitlab-api-and-integrations.md
-- [x] 15-all-gitlab-features-reference.md
+### other-platforms/ folder - Complete (62 files across 5 subfolders)
 
-**Status: Complete (16 files)**
+- [x] bitbucket/ - 14 files (00-13)
+- [x] azure-devops/ - 15 files (00-14)
+- [x] gitea/ - 13 files (00-12)
+- [x] forgejo/ - 10 files (00-09)
+- [x] codeberg/ - 10 files (00-09)
 
-### other-platforms/ folder
-
-Each platform has its own subfolder at full depth.
-
-#### other-platforms/bitbucket/ - Complete (14 files)
-
-- [x] 00-bitbucket-overview.md
-- [x] 01-what-is-bitbucket.md
-- [x] 02-creating-an-account.md
-- [x] 03-bitbucket-vs-github-vs-gitlab.md
-- [x] 04-repositories.md
-- [x] 05-pull-requests.md
-- [x] 06-bitbucket-pipelines.md
-- [x] 07-branch-permissions.md
-- [x] 08-jira-integration.md
-- [x] 09-security-features.md
-- [x] 10-bitbucket-cloud-vs-data-center.md
-- [x] 11-workspaces-and-permissions.md
-- [x] 12-api-and-integrations.md
-- [x] 13-all-bitbucket-features-reference.md
-
-#### other-platforms/azure-devops/ - Complete (15 files)
-
-- [x] 00-azure-devops-overview.md
-- [x] 01-what-is-azure-devops.md
-- [x] 02-creating-an-account.md
-- [x] 03-azure-repos.md
-- [x] 04-azure-boards.md
-- [x] 05-azure-pipelines.md
-- [x] 06-azure-artifacts.md
-- [x] 07-azure-test-plans.md
-- [x] 08-branch-policies.md
-- [x] 09-security-and-permissions.md
-- [x] 10-azure-devops-server.md
-- [x] 11-extensions-and-marketplace.md
-- [x] 12-azure-devops-cli.md
-- [x] 13-api-and-integrations.md
-- [x] 14-all-azure-devops-features-reference.md
-
-#### other-platforms/gitea/ - Complete (13 files)
-
-- [x] 00-gitea-overview.md
-- [x] 01-what-is-gitea.md
-- [x] 02-installation.md
-- [x] 03-creating-an-account.md
-- [x] 04-repositories.md
-- [x] 05-pull-requests-and-code-review.md
-- [x] 06-gitea-actions.md
-- [x] 07-issues-and-projects.md
-- [x] 08-packages.md
-- [x] 09-administration.md
-- [x] 10-gitea-vs-forgejo.md
-- [x] 11-api-and-integrations.md
-- [x] 12-all-gitea-features-reference.md
-
-#### other-platforms/forgejo/ - Complete (10 files)
-
-- [x] 00-forgejo-overview.md
-- [x] 01-what-is-forgejo.md
-- [x] 02-installation.md
-- [x] 03-creating-an-account.md
-- [x] 04-repositories-and-code-review.md
-- [x] 05-forgejo-actions.md
-- [x] 06-issues-packages-and-federation.md
-- [x] 07-administration.md
-- [x] 08-api-and-integrations.md
-- [x] 09-all-forgejo-features-reference.md
-
-#### other-platforms/codeberg/ - Complete (10 files)
-
-- [x] 00-codeberg-overview.md
-- [x] 01-what-is-codeberg.md
-- [x] 02-creating-an-account.md
-- [x] 03-repositories-and-code-review.md
-- [x] 04-issues-and-projects.md
-- [x] 05-codeberg-ci.md
-- [x] 06-pages.md
-- [x] 07-packages-and-releases.md
-- [x] 08-organisations-and-teams.md
-- [x] 09-all-codeberg-features-reference.md
-
-**Phase 3 Status: Complete (82 files across github/ + gitlab/ + 5 other-platforms/)**
+**Phase 3 Status: Complete (106 files across github/ + gitlab/ + other-platforms/)**
 
 ---
 
 ## Phase 4 - Tools and environment
 
-The `ides/` folder covering IDEs and editors, and the `terminal/` folder covering the command line.
+The `ides-and-editors/` folder covering IDEs and editors, and the `terminal/` folder covering the command line.
 
-Note: ides/ files can reference all platforms accurately now that all platform folders are complete.
+### ides-and-editors/ folder - Complete (14 files)
 
-### ides/ folder
+Files cover VS Code, JetBrains, Neovim, GitHub Desktop, Cursor, Windsurf, Google Antigravity, AWS Kiro, Zed, Helix, Sublime Text, and a broad other-editors file covering Emacs/Magit, Visual Studio, Xcode, Android Studio, Eclipse, Nova, Vim classic and nano.
 
-- [ ] 00-ides-overview.md
-- [ ] 01-vs-code.md - Git integration (source control panel, timeline, inline blame), GitLens, GitHub Pull Requests extension, GitLab Workflow extension, GitHub Copilot in VS Code, Duo in VS Code
-- [ ] 02-jetbrains.md - built-in Git (IntelliJ/PyCharm/WebStorm/Rider/GoLand), GitHub plugin, GitLab plugin, commit tool window, interactive rebase, shelving
-- [ ] 03-neovim.md - fugitive.vim, gitsigns.nvim, neogit, GitHub/GitLab CLI integration from terminal
-- [ ] 04-github-desktop.md - visual Git client for beginners, cloning, committing, branching, pull requests without CLI
-- [ ] 05-other-editors.md - Sublime Text (GitSavvy), Zed (built-in Git), Cursor (AI-first with Git), Helix (no built-in, terminal workflow)
+- [x] 00-ides-overview.md - landscape overview, three generations of Git tooling, VS Code fork family, how-to-choose guide
+- [x] 01-vs-code.md - Source Control panel, GitLens, GitHub Pull Requests extension, GitLab Workflow extension, Copilot, Duo
+- [x] 02-jetbrains.md - built-in Git, changelists, shelving, Log tab, interactive rebase editor, three-pane merge tool
+- [x] 03-neovim.md - vim-fugitive, gitsigns.nvim, neogit, diffview.nvim, lazygit.nvim, lazy.nvim
+- [x] 04-github-desktop.md - visual Git client, line-level staging, Copilot commit messages, Git hooks support
+- [x] 05-cursor.md - VS Code fork, Cursor Blame, Composer/Agent mode, Background Agents, Cloud Agents, .cursor/rules
+- [x] 06-windsurf.md - Cascade agent, Flow awareness, Wave 13 Git worktrees, Windsurf 2.0 Agent Command Center
+- [x] 07-antigravity.md - Google/ex-Windsurf team, dual-view architecture, Artifacts system, Manager view
+- [x] 08-kiro.md - Code-OSS fork, spec-driven development, Hooks system with Git events, GitHub Autonomous Agent
+- [x] 09-zed.md - GPU-accelerated Rust editor, native Git since March 2025, Diff View, multiplayer Co-Authored-By
+- [x] 10-helix.md - minimal by design, gutter indicators only, lazygit via tmux popup, :sh integration
+- [x] 11-sublime-text.md - GitSavvy, status dashboard, Repo History with interactive rebase, Line History
+- [x] 12-other-editors.md - Emacs/Magit, Visual Studio, Xcode, Android Studio, Eclipse/EGit, Nova, Vim, nano
+- [x] 13-all-ides-features-reference.md - complete comparison tables, platform support, pricing, quick decision guide
 
-### terminal/ folder
+**Phase 4 ides-and-editors/ Status: Complete (14 files)**
 
-- [ ] Planned: shell setup, Git configuration, aliases, productivity tools (fzf, bat, delta, lazygit), terminal-based Git workflows
+### terminal/ folder - Next
+
+Planned files covering shell setup, Git configuration, aliases and productivity tools (fzf, bat, delta, lazygit).
 
 ---
 
