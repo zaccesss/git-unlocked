@@ -535,7 +535,7 @@ Run `git clean -n` first to see what would be deleted. Then run `git clean -fd` 
 
 **Exercise 3 - add history protection to your shell**
 
-Add `HISTCONTROL=ignoreboth:erasedups` to your `~/.bashrc` or the equivalent zsh settings to your `~/.zshrc`. Reload your config. Test that a command starting with a space is not saved: type ` echo secretvalue` (with a leading space). Check `history | tail -5` - the command should not appear.
+Add `HISTCONTROL=ignoreboth:erasedups` to your `~/.bashrc` or the equivalent zsh settings to your `~/.zshrc`. Reload your config. Test that a command starting with a space is not saved: type a space then `echo secretvalue` (with a leading space before the backtick). Check `history | tail -5` - the command should not appear.
 
 **Exercise 4 - create a .env workflow**
 
