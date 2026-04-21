@@ -1,255 +1,126 @@
 # Roadmap
 
-This document outlines the current state of git-unlocked, what is being built and what is planned. It is updated as the project grows.
+This roadmap tracks the development plan for git-unlocked. Completed sections are marked. Planned sections show their intended file structure.
+
+**Current version: v1.1.0**
 
 ---
 
-## Table of Contents
+## Status overview
 
-- [Current status](#current-status)
-- [Phase 1 - Foundation](#phase-1---foundation)
-- [Phase 2 - Core Git content](#phase-2---core-git-content)
-- [Phase 3 - Platform content](#phase-3---platform-content)
-- [Phase 4 - Tools and environment](#phase-4---tools-and-environment)
-- [Phase 5 - Real world and reference](#phase-5---real-world-and-reference)
-- [Phase 6 - Community and polish](#phase-6---community-and-polish)
-- [Future ideas](#future-ideas)
-- [How to suggest something](#how-to-suggest-something)
-
----
-
-## Current Status
-
-**Version:** 1.0.0
-**Stage:** Phase 4 complete - ides-and-editors/ done. Phase 5 (terminal/) next.
-**Started:** March 2026
-
-| Section                          | Status      |
-| -------------------------------- | ----------- |
-| Repository setup                 | Complete    |
-| README                           | Complete    |
-| CONTRIBUTING                     | Complete    |
-| CODE_OF_CONDUCT                  | Complete    |
-| SECURITY                         | Complete    |
-| SUPPORT                          | Complete    |
-| CHANGELOG                        | Complete    |
-| ROADMAP                          | Complete    |
-| FAQ                              | Complete    |
-| HALL_OF_FAME                     | Complete    |
-| .github/ templates and workflows | Complete    |
-| .editorconfig                    | Complete    |
-| .markdownlint.json               | Complete    |
-| introduction/                    | Complete    |
-| git/                             | Complete    |
-| github/                          | Complete    |
-| gitlab/                          | Complete    |
-| other-platforms/bitbucket/       | Complete    |
-| other-platforms/azure-devops/    | Complete    |
-| other-platforms/gitea/           | Complete    |
-| other-platforms/forgejo/         | Complete    |
-| other-platforms/codeberg/        | Complete    |
-| ides-and-editors/                | Complete    |
-| terminal/                        | Next        |
-| real-world/                      | Planned     |
-| reference/                       | Planned     |
-| resources/                       | Planned     |
-| first-contribution/              | Planned     |
-| assets/                          | Planned     |
+| Section | Files | Status |
+|---|---|---|
+| introduction/ | 3 | Complete |
+| git/ | 29 | Complete |
+| github/ | 28 | Complete |
+| gitlab/ | 16 | Complete |
+| other-platforms/bitbucket/ | 14 | Complete |
+| other-platforms/azure-devops/ | 15 | Complete |
+| other-platforms/gitea/ | 13 | Complete |
+| other-platforms/forgejo/ | 10 | Complete |
+| other-platforms/codeberg/ | 10 | Complete |
+| ides-and-editors/ | 14 | Complete |
+| terminal/ | 14 | Complete |
+| real-world/ | 8 | Next |
+| reference/ | 3 | Planned |
+| resources/ | 1 | Planned |
+| first-contribution/ | 1 | Planned |
+| assets/ | TBD | Planned |
 
 ---
 
-## Phase 1 - Foundation
+## Completed
 
-Getting the structure, branding and core files in place.
+### v1.0.0 - Core sections
 
-- [x] Create repository
-- [x] README
-- [x] MIT licence
-- [x] CONTRIBUTING.md
-- [x] CODE_OF_CONDUCT.md (Contributor Covenant 3.0)
-- [x] SECURITY.md
-- [x] SUPPORT.md
-- [x] CHANGELOG.md
-- [x] ROADMAP.md
-- [x] FAQ.md
-- [x] HALL_OF_FAME.md
-- [x] Folder structure
-- [x] .github/ issue templates and PR template
-- [x] .github/workflows/ - markdownlint and link checker CI
-- [x] .editorconfig
-- [x] .markdownlint.json
-- [x] introduction/01-welcome.md
-- [x] introduction/02-how-to-use-this-course.md
-- [x] introduction/03-setting-up.md
-- [ ] introduction/04-version-control-concepts.md - planned new file covering what version control is, why it matters and how Git fits in, before the git/ folder begins
-- [ ] Banner and assets
-- [ ] first-contribution/ sandbox
+- introduction/ (3 files)
+- git/ (29 files)
+- github/ (28 files)
+- gitlab/ (16 files)
+- other-platforms/ - all five subfolders (62 files total)
+- ides-and-editors/ (14 files)
+- Infrastructure: markdownlint CI, link checker CI, issue templates, PR template, all root meta files
+
+### v1.1.0 - Terminal section
+
+- terminal/ (14 files) - full terminal toolchain from shell setup through lazygit, delta, fzf, bat, tig, gitui, starship and zoxide
 
 ---
 
-## Phase 2 - Core Git content
+## Next: real-world/ (v1.2.0)
 
-The `git/` folder covering Git from zero to advanced.
+Practical scenario files showing Git in real professional contexts. Each file follows full house style: 4,000-6,000 words, Windows/Mac/Linux coverage, Try It Yourself, Common Mistakes, Summary, Sources and footer.
 
-- [x] 00-git-overview.md
-- [x] 01-what-is-version-control.md
-- [x] 02-installing-git.md
-- [x] 03-how-git-works.md
-- [x] 04-core-concepts.md
-- [x] 05-basic-commands.md
-- [x] 06-branching.md
-- [x] 07-merging.md
-- [x] 08-merge-conflicts.md
-- [x] 09-remote-repos.md
-- [x] 10-gitignore.md
-- [x] 11-stash.md
-- [x] 12-git-workflows.md
-- [x] 13-rebase.md
-- [x] 14-cherry-pick.md
-- [x] 15-reset-and-revert.md
-- [x] 16-tags-and-releases.md
-- [x] 17-submodules.md
-- [x] 18-hooks.md
-- [x] 19-bisect.md
-- [x] 20-signing-commits.md
-- [x] 21-advanced-config.md
-- [x] 22-large-repos.md
-- [x] 23-monorepos.md
-- [x] 24-gitops.md
-- [x] 25-git-internals-advanced.md
-- [x] 26-gitattributes.md
-- [x] 27-git-worktree.md
-- [x] 28-all-git-commands.md
+```
+real-world/
+├── 00-real-world-overview.md
+├── 01-contributing-to-open-source.md
+├── 02-working-in-a-team.md
+├── 03-gitops-workflows.md
+├── 04-monorepo-patterns.md
+├── 05-migrating-between-platforms.md
+├── 06-recovering-from-disasters.md
+└── 07-all-real-world-reference.md
+```
 
-**Status: Complete (29 files)**
+### File summaries
+
+- `00-real-world-overview.md` - section introduction, how to use these files and reading order
+- `01-contributing-to-open-source.md` - forking, cloning, branching, opening a PR, syncing upstream, handling review feedback
+- `02-working-in-a-team.md` - branching strategies (GitFlow, trunk-based, GitHub Flow), code review etiquette, protected branches, CI/CD integration
+- `03-gitops-workflows.md` - Git as single source of truth for infrastructure, GitOps principles, ArgoCD and Flux patterns, environment promotion
+- `04-monorepo-patterns.md` - managing large multi-package repositories, sparse checkout, partial clone, tooling (Nx, Turborepo, Bazel)
+- `05-migrating-between-platforms.md` - moving repositories with full history between GitHub, GitLab, Gitea and others; mirror remotes, LFS migration
+- `06-recovering-from-disasters.md` - step-by-step recovery for the most common Git disasters: lost commits, bad merges, corrupted repos, force-push accidents
+- `07-all-real-world-reference.md` - consolidated quick-reference for every command and pattern introduced in this section
 
 ---
 
-## Phase 3 - Platform content
+## Planned: reference/ (v1.3.0)
 
-The `github/`, `gitlab/` and `other-platforms/` folders covering every major Git hosting platform.
+```
+reference/
+├── cheatsheet.md
+├── glossary.md
+└── common-mistakes.md
+```
 
-### github/ folder - Complete (28 files)
-
-- [x] 00-github-overview.md through 27-all-github-features-reference.md
-
-### gitlab/ folder - Complete (16 files)
-
-- [x] 00-gitlab-overview.md through 15-all-gitlab-features-reference.md
-
-### other-platforms/ folder - Complete (62 files across 5 subfolders)
-
-- [x] bitbucket/ - 14 files (00-13)
-- [x] azure-devops/ - 15 files (00-14)
-- [x] gitea/ - 13 files (00-12)
-- [x] forgejo/ - 10 files (00-09)
-- [x] codeberg/ - 10 files (00-09)
-
-**Phase 3 Status: Complete (106 files across github/ + gitlab/ + other-platforms/)**
+- `cheatsheet.md` - every essential Git command on one page, organised by task
+- `glossary.md` - every term defined: HEAD, index, blob, tree, pack, reflog and more
+- `common-mistakes.md` - the most frequent Git errors with exact fix commands
 
 ---
 
-## Phase 4 - Tools and environment
+## Planned: resources/ (v1.3.0)
 
-The `ides-and-editors/` folder covering IDEs and editors, and the `terminal/` folder covering the command line.
+```
+resources/
+└── index.md
+```
 
-### ides-and-editors/ folder - Complete (14 files)
-
-Files cover VS Code, JetBrains, Neovim, GitHub Desktop, Cursor, Windsurf, Google Antigravity, AWS Kiro, Zed, Helix, Sublime Text, and a broad other-editors file covering Emacs/Magit, Visual Studio, Xcode, Android Studio, Eclipse, Nova, Vim classic and nano.
-
-- [x] 00-ides-overview.md - landscape overview, three generations of Git tooling, VS Code fork family, how-to-choose guide
-- [x] 01-vs-code.md - Source Control panel, GitLens, GitHub Pull Requests extension, GitLab Workflow extension, Copilot, Duo
-- [x] 02-jetbrains.md - built-in Git, changelists, shelving, Log tab, interactive rebase editor, three-pane merge tool
-- [x] 03-neovim.md - vim-fugitive, gitsigns.nvim, neogit, diffview.nvim, lazygit.nvim, lazy.nvim
-- [x] 04-github-desktop.md - visual Git client, line-level staging, Copilot commit messages, Git hooks support
-- [x] 05-cursor.md - VS Code fork, Cursor Blame, Composer/Agent mode, Background Agents, Cloud Agents, .cursor/rules
-- [x] 06-windsurf.md - Cascade agent, Flow awareness, Wave 13 Git worktrees, Windsurf 2.0 Agent Command Center
-- [x] 07-antigravity.md - Google/ex-Windsurf team, dual-view architecture, Artifacts system, Manager view
-- [x] 08-kiro.md - Code-OSS fork, spec-driven development, Hooks system with Git events, GitHub Autonomous Agent
-- [x] 09-zed.md - GPU-accelerated Rust editor, native Git since March 2025, Diff View, multiplayer Co-Authored-By
-- [x] 10-helix.md - minimal by design, gutter indicators only, lazygit via tmux popup, :sh integration
-- [x] 11-sublime-text.md - GitSavvy, status dashboard, Repo History with interactive rebase, Line History
-- [x] 12-other-editors.md - Emacs/Magit, Visual Studio, Xcode, Android Studio, Eclipse/EGit, Nova, Vim, nano
-- [x] 13-all-ides-features-reference.md - complete comparison tables, platform support, pricing, quick decision guide
-
-**Phase 4 ides-and-editors/ Status: Complete (14 files)**
-
-### terminal/ folder - Next
-
-Planned files covering shell setup, Git configuration, aliases and productivity tools (fzf, bat, delta, lazygit).
+- `index.md` - curated links to official documentation, books, interactive tools, video courses and community resources
 
 ---
 
-## Phase 5 - Real world and reference
+## Planned: first-contribution/ (v1.3.0)
 
-### real-world/ folder
-
-Practical scenarios combining everything:
-- Contributing to open source (fork, branch, PR, iterate)
-- Working in a team (branching strategies, code review norms, CI/CD)
-- GitOps workflows
-- Monorepo patterns
-- Migrating between platforms (GitHub to GitLab, GitLab to Gitea, etc.)
-- Recovering from common disasters
-
-### reference/ folder
-
-Quick lookup resources:
-- Cheatsheet (all essential commands on one page)
-- Glossary (every term defined)
-- Common mistakes (the most frequent errors and how to fix them)
-
-### resources/ folder
-
-Curated external links:
-- Official documentation
-- Books and courses
-- Useful tools and plugins
-- Community forums
+A safe sandbox for beginners to make their first open source pull request by adding their name to a contributors list.
 
 ---
 
-## Phase 6 - Community and polish
+## Long-term (after all folders complete)
 
-The finishing touches that make the course complete.
-
-- [ ] `introduction/02-how-to-use-this-course.md` - full rewrite once all folders are complete (deliberately deferred to avoid repeated rewrites as content grows)
-- [ ] `introduction/04-version-control-concepts.md` - new file explaining version control concepts in plain language before the Git folder begins
-- [ ] Root-level Codespaces dev container setup
-- [ ] Root-level setup documentation for all tools
-- [ ] Banner image and visual assets
-- [ ] `first-contribution/` sandbox project for practising open source contributions
-- [ ] Cross-reference audit (check all internal links are correct)
-- [ ] Accessibility review of all content
+- Trim README (too long; navigation mixed with course guidance)
+- Full rewrite of `introduction/02-how-to-use-this-course.md`
+- New file `introduction/04-version-control-concepts.md`
+- GitHub Pages setup at zaccessss.github.io/git-unlocked
+- Interactive HTML quiz pages with instant answer checking
+- Animated SVG diagrams for Git concepts
+- Cross-reference audit (all internal links verified)
+- Accessibility review
 
 ---
 
-## Future ideas
+## Contributing
 
-Ideas that may be added after the core course is complete. Not committed to.
-
-- Video walkthroughs for key topics
-- Interactive exercises using GitLab CI/CD within the repository itself
-- Translations (starting with Spanish and French)
-- `github-actions-advanced/` folder (deep dive beyond the github/ intro)
-- `gitlab-cicd-advanced/` folder (deep dive beyond the gitlab/ intro)
-- `bitbucket-pipelines-advanced/` folder
-- `azure-pipelines-advanced/` folder
-
----
-
-## How to suggest something
-
-Open a Discussion on GitHub, open an issue using the content suggestion template, or open a pull request directly.
-
-All suggestions welcome. Priority is given to: correcting factual errors, updating outdated information, improving clarity on confusing topics and adding missing OS coverage (Windows/Mac/Linux).
-
----
-
-<div align="center">
-
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
-
-**Access Granted. Success Unlocked.**
-
-</div>
+See [CONTRIBUTING.md](CONTRIBUTING.md) if you want to help build any of the planned sections.
