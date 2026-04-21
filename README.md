@@ -99,4 +99,8 @@ If this course helped you, please star the repository. It helps others find it.
 [![zacess.com](https://img.shields.io/badge/zacess.com-000000?style=for-the-badge)](https://zacess.com)
 [![GitHub](https://img.shields.io/badge/github-zaccessss-181717?style=for-the-badge&logo=github)](https://github.com/zaccessss)
 
+<br />
+
+![git-unlocked banner](assets/git_unlocked_banner.svg)
+
 </div>
