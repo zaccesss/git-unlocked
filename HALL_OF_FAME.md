@@ -34,7 +34,7 @@ Want your name here? Read [CONTRIBUTING.md](CONTRIBUTING.md) and open a pull req
 
 ## First Contribution Sandbox
 
-Never made a pull request before? The [first-contribution](first-contribution/README.md) folder is a safe place to practise. Add your name to the list there and make your very first open source contribution. It takes less than five minutes.
+Never made a pull request before? The [first-contribution](11-first-contribution/README.md) folder is a safe place to practise. Add your name to the list there and make your very first open source contribution. It takes less than five minutes.
 
 ---
 

@@ -111,7 +111,7 @@ Practical scenarios showing Git in real professional contexts.
 
 #### introduction/ - 3 files
 
-- `introduction/01-welcome.md`, `introduction/02-how-to-use-this-course.md` (initial), `introduction/03-setting-up.md`
+- `00-welcome/README.md`, `introduction/02-how-to-use-this-course.md` (initial), `introduction/03-setting-up.md`
 
 #### git/ - 29 files
 

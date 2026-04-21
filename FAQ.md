@@ -6,6 +6,7 @@
 
 ## Table of Contents
 
+- [About this course](#about-this-course)
 - [Git basics](#git-basics)
 - [Installation and setup](#installation-and-setup)
 - [Commands and workflow](#commands-and-workflow)
@@ -18,6 +19,51 @@
 - [Career and industry](#career-and-industry)
 - [Common errors](#common-errors)
 - [Git 3.0 and what is coming](#git-30-and-what-is-coming)
+
+---
+
+## About This Course
+
+### How is the course structured?
+
+The course is organised into 12 numbered sections, each covering a distinct topic. The numbering reflects the intended reading order for beginners, but experienced learners can jump to any section directly.
+
+| Folder                  | What it covers                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------ |
+| `00-welcome/`           | What this course is and how to get the most from it                            |
+| `01-introduction/`      | What version control is, how to set up Git, and how to navigate the course     |
+| `02-git/`               | Everything Git — from `git init` through internals, hooks, worktrees and more  |
+| `03-github/`            | Full GitHub platform — issues, Actions, Copilot, security, releases and more   |
+| `04-gitlab/`            | Full GitLab platform — pipelines, merge requests, runners, self-hosting        |
+| `05-other-platforms/`   | Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg                           |
+| `06-ides-and-editors/`  | VS Code, JetBrains, Neovim, Cursor, Zed and more                               |
+| `07-terminal/`          | Shell setup, lazygit, delta, fzf, bat, tig, gitui, starship and zoxide         |
+| `08-real-world/`        | Open source contribution, team workflows, GitOps, monorepos, disaster recovery |
+| `09-reference/`         | Cheatsheet, glossary, common mistakes, security reference                      |
+| `10-resources/`         | 120+ curated books, videos, tools and communities                              |
+| `11-first-contribution/`| A safe sandbox for making your very first open source pull request             |
+
+Every content file includes a difficulty label (🟢 Beginner / 🟡 Intermediate / 🔴 Advanced) and covers Windows, Mac and Linux commands side by side.
+
+### Where should I start if I already know basic Git?
+
+Skip `01-introduction/` and go straight to whichever platform or topic you want to deepen. Good entry points for experienced users:
+
+- **Strengthen Git fundamentals** — `02-git/12-git-workflows.md` through `02-git/25-git-internals-advanced.md`
+- **Learn GitHub deeply** — start at `03-github/00-github-overview.md`
+- **Terminal-first workflow** — start at `07-terminal/00-terminal-overview.md`
+- **Real-world team practices** — `08-real-world/02-working-in-a-team.md`
+- **Quick reference** — `09-reference/cheatsheet.md` has every Git command in one place
+
+### Is the entire course free?
+
+Yes. Every file, every section and all future updates are free under the [MIT Licence](LICENSE). You can use, share, adapt and build on the material as long as you give credit. There is no paid tier, no email gate and no premium content.
+
+### How do I contribute to this course?
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. The short version: fork the repo, create a branch, make your change following the writing style guide, and open a pull request. Your name gets added to [HALL_OF_FAME.md](HALL_OF_FAME.md) once your first PR is merged.
+
+If you have never opened a pull request before, start at [11-first-contribution/](11-first-contribution/README.md) — it is a sandbox designed for exactly that.
 
 ---
 
@@ -245,7 +291,7 @@ Yes. GitLab Community Edition is free and open source. You can run it on your ow
 
 ### What is GitLab CI/CD?
 
-GitLab CI/CD is a built-in system for automating testing, building and deploying your code. You define your pipeline in a `.gitlab-ci.yml` file at the root of your repository. Every time you push code, GitLab runs your pipeline automatically. Full coverage is in [gitlab/06-gitlab-ci-cd.md](gitlab/06-gitlab-ci-cd.md).
+GitLab CI/CD is a built-in system for automating testing, building and deploying your code. You define your pipeline in a `.gitlab-ci.yml` file at the root of your repository. Every time you push code, GitLab runs your pipeline automatically. Full coverage is in [04-gitlab/06-gitlab-ci-cd.md](04-gitlab/06-gitlab-ci-cd.md).
 
 ---
 
