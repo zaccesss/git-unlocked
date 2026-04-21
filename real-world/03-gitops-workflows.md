@@ -1,6 +1,6 @@
 # GitOps workflows
 
-🟡 Intermediate - 🔴 Advanced
+**Difficulty:** 🟡 Intermediate to 🔴 Advanced | **Time:** 45 minutes
 
 ---
 
@@ -497,7 +497,7 @@ The recommended environment promotion pattern is folder-per-environment with Kus
 
 ---
 
-## Sources
+## Sources and Further Reading
 
 - [OpenGitOps principles](https://github.com/open-gitops/documents/blob/main/PRINCIPLES.md)
 - [opengitops.dev](https://opengitops.dev/)
@@ -512,6 +512,10 @@ The recommended environment promotion pattern is folder-per-environment with Kus
 
 ---
 
+<div align="center">
+
 Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 
 **Access Granted. Success Unlocked.**
+
+</div>
