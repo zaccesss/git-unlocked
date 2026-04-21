@@ -2,7 +2,7 @@
 
 Thank you for being here. Every contribution, no matter how small, makes this course better for everyone - whether you are fixing a typo, improving an explanation, adding an exercise or suggesting a new topic.
 
-Please read this guide fully before opening a pull request.
+Please read this guide carefully before opening a pull request.
 
 ---
 
