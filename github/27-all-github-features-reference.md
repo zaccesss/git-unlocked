@@ -79,6 +79,7 @@ Enforce requirements before code can be merged to a protected branch.
 **Access:** Settings → Branches → Add branch protection rule
 
 **Common rules:**
+
 - Require pull request before merging (with N required approvals)
 - Require status checks to pass (CI must pass before merge)
 - Require branches to be up to date before merging
@@ -248,7 +249,7 @@ Automatically assign reviewers to a PR based on which files it modifies.
 
 ```
 # Pattern → Owner(s)
-*.py              @zaccessss
+*.py              @zaccesss
 /docs/            @org/technical-writers
 src/auth/         @org/security-team @leaddev
 ```
@@ -549,6 +550,7 @@ Flexible project boards with table, board and roadmap views.
 **Create:** Profile/organisation page → **Projects** → **New project** | A repository's **Projects** tab
 
 **Views:**
+
 - **Board:** Kanban-style columns. Drag cards between columns.
 - **Table:** Spreadsheet-style with sortable columns. Good for filtering and bulk editing.
 - **Roadmap:** Timeline view with date ranges. For release planning and sprints.
@@ -723,15 +725,15 @@ Badges earned by performing specific activities on GitHub.
 
 **Earnable achievements:**
 
-| Achievement | Requirement |
-|---|---|
-| Pull Shark | 2 PRs merged (tiers: 16, 128, 1024) |
-| YOLO | Merge a PR with no review |
-| Quickdraw | Close an issue or PR within 5 min of opening |
-| Pair Extraordinaire | 1 co-authored PR merged (tiers: 10, 24, 48) |
-| Starstruck | 16 stars on one repository (tiers: 128, 512, 4096) |
-| Galaxy Brain | 1 accepted Discussion answer (tiers: 8, 16, 32) |
-| Public Sponsor | Make a public GitHub sponsorship |
+| Achievement         | Requirement                                        |
+| ------------------- | -------------------------------------------------- |
+| Pull Shark          | 2 PRs merged (tiers: 16, 128, 1024)                |
+| YOLO                | Merge a PR with no review                          |
+| Quickdraw           | Close an issue or PR within 5 min of opening       |
+| Pair Extraordinaire | 1 co-authored PR merged (tiers: 10, 24, 48)        |
+| Starstruck          | 16 stars on one repository (tiers: 128, 512, 4096) |
+| Galaxy Brain        | 1 accepted Discussion answer (tiers: 8, 16, 32)    |
+| Public Sponsor      | Make a public GitHub sponsorship                   |
 
 **Show/hide:** Settings → Profile → Show achievements on my profile
 
@@ -1025,12 +1027,12 @@ Competitive program for student community leaders.
 
 ## Billing and Plans
 
-| Plan | Price | Key features |
-|---|---|---|
-| **Free** | $0 | Unlimited public and private repos, 2000 Actions minutes/month, 500 MB Packages, 3 collaborators on private repos |
-| **Pro** | $4/month | 3000 Actions minutes, 2 GB Packages, protected branches, required reviewers, GitHub Insights |
-| **Team** | $4/user/month | All Pro features, org features, 3000 minutes, unlimited collaborators |
-| **Enterprise** | $21/user/month | SSO, SAML, audit log streaming, 50000 minutes, GHES, Copilot Enterprise |
+| Plan           | Price          | Key features                                                                                                      |
+| -------------- | -------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Free**       | $0             | Unlimited public and private repos, 2000 Actions minutes/month, 500 MB Packages, 3 collaborators on private repos |
+| **Pro**        | $4/month       | 3000 Actions minutes, 2 GB Packages, protected branches, required reviewers, GitHub Insights                      |
+| **Team**       | $4/user/month  | All Pro features, org features, 3000 minutes, unlimited collaborators                                             |
+| **Enterprise** | $21/user/month | SSO, SAML, audit log streaming, 50000 minutes, GHES, Copilot Enterprise                                           |
 
 **Students:** GitHub Pro free via the Student Developer Pack.
 
@@ -1042,39 +1044,39 @@ Competitive program for student community leaders.
 
 ## Quick Settings Paths
 
-| Setting | URL |
-|---|---|
-| Profile (name, bio, photo) | `github.com/settings/profile` |
-| Account security and 2FA | `github.com/settings/security` |
-| SSH and GPG keys | `github.com/settings/keys` |
-| Personal Access Tokens | `github.com/settings/tokens` |
-| Email addresses | `github.com/settings/emails` |
-| Notification preferences | `github.com/settings/notifications` |
-| GitHub Copilot | `github.com/settings/copilot` |
-| Billing and plans | `github.com/settings/billing` |
-| Installed applications | `github.com/settings/applications` |
-| OAuth Apps you created | `github.com/settings/developers` |
-| GitHub Apps you created | `github.com/settings/apps` |
-| Blocked users | `github.com/settings/blocked_users` |
-| Codespaces settings | `github.com/settings/codespaces` |
-| **Repository: General** | `github.com/OWNER/REPO/settings` |
-| **Repository: Branches** | `github.com/OWNER/REPO/settings/branches` |
-| **Repository: Actions secrets** | `github.com/OWNER/REPO/settings/secrets/actions` |
-| **Repository: Actions variables** | `github.com/OWNER/REPO/settings/variables/actions` |
-| **Repository: Environments** | `github.com/OWNER/REPO/settings/environments` |
-| **Repository: Pages** | `github.com/OWNER/REPO/settings/pages` |
-| **Repository: Webhooks** | `github.com/OWNER/REPO/settings/hooks` |
-| **Repository: Deploy keys** | `github.com/OWNER/REPO/settings/keys` |
-| **Repository: Collaborators** | `github.com/OWNER/REPO/settings/access` |
-| **Repository: Code security** | `github.com/OWNER/REPO/settings/security_analysis` |
-| **Organisation: General** | `github.com/organizations/ORG/settings/profile` |
-| **Organisation: Members** | `github.com/orgs/ORG/people` |
-| **Organisation: Teams** | `github.com/orgs/ORG/teams` |
-| **Organisation: Billing** | `github.com/organizations/ORG/settings/billing/overview` |
-| **Organisation: Audit log** | `github.com/organizations/ORG/settings/audit-log` |
-| **Organisation: Actions** | `github.com/organizations/ORG/settings/actions/general` |
-| **Organisation: Secrets** | `github.com/organizations/ORG/settings/secrets/actions` |
-| **Organisation: Copilot** | `github.com/organizations/ORG/settings/copilot/policy` |
+| Setting                           | URL                                                      |
+| --------------------------------- | -------------------------------------------------------- |
+| Profile (name, bio, photo)        | `github.com/settings/profile`                            |
+| Account security and 2FA          | `github.com/settings/security`                           |
+| SSH and GPG keys                  | `github.com/settings/keys`                               |
+| Personal Access Tokens            | `github.com/settings/tokens`                             |
+| Email addresses                   | `github.com/settings/emails`                             |
+| Notification preferences          | `github.com/settings/notifications`                      |
+| GitHub Copilot                    | `github.com/settings/copilot`                            |
+| Billing and plans                 | `github.com/settings/billing`                            |
+| Installed applications            | `github.com/settings/applications`                       |
+| OAuth Apps you created            | `github.com/settings/developers`                         |
+| GitHub Apps you created           | `github.com/settings/apps`                               |
+| Blocked users                     | `github.com/settings/blocked_users`                      |
+| Codespaces settings               | `github.com/settings/codespaces`                         |
+| **Repository: General**           | `github.com/OWNER/REPO/settings`                         |
+| **Repository: Branches**          | `github.com/OWNER/REPO/settings/branches`                |
+| **Repository: Actions secrets**   | `github.com/OWNER/REPO/settings/secrets/actions`         |
+| **Repository: Actions variables** | `github.com/OWNER/REPO/settings/variables/actions`       |
+| **Repository: Environments**      | `github.com/OWNER/REPO/settings/environments`            |
+| **Repository: Pages**             | `github.com/OWNER/REPO/settings/pages`                   |
+| **Repository: Webhooks**          | `github.com/OWNER/REPO/settings/hooks`                   |
+| **Repository: Deploy keys**       | `github.com/OWNER/REPO/settings/keys`                    |
+| **Repository: Collaborators**     | `github.com/OWNER/REPO/settings/access`                  |
+| **Repository: Code security**     | `github.com/OWNER/REPO/settings/security_analysis`       |
+| **Organisation: General**         | `github.com/organizations/ORG/settings/profile`          |
+| **Organisation: Members**         | `github.com/orgs/ORG/people`                             |
+| **Organisation: Teams**           | `github.com/orgs/ORG/teams`                              |
+| **Organisation: Billing**         | `github.com/organizations/ORG/settings/billing/overview` |
+| **Organisation: Audit log**       | `github.com/organizations/ORG/settings/audit-log`        |
+| **Organisation: Actions**         | `github.com/organizations/ORG/settings/actions/general`  |
+| **Organisation: Secrets**         | `github.com/organizations/ORG/settings/secrets/actions`  |
+| **Organisation: Copilot**         | `github.com/organizations/ORG/settings/copilot/policy`   |
 
 ---
 

@@ -50,6 +50,7 @@ curl https://gitea.example.com/api/v1/version
 ```
 
 Response:
+
 ```json
 {
   "version": "1.25.5"
@@ -117,13 +118,13 @@ Within a Gitea Actions workflow, use `${{ secrets.GITEA_TOKEN }}` where a token 
 
 ### HTTP methods
 
-| Method | Use |
-|---|---|
-| `GET` | Retrieve a resource or list |
-| `POST` | Create a resource |
-| `PATCH` | Partially update a resource |
-| `PUT` | Replace or create a resource |
-| `DELETE` | Remove a resource |
+| Method   | Use                          |
+| -------- | ---------------------------- |
+| `GET`    | Retrieve a resource or list  |
+| `POST`   | Create a resource            |
+| `PATCH`  | Partially update a resource  |
+| `PUT`    | Replace or create a resource |
+| `DELETE` | Remove a resource            |
 
 ### Response format
 
@@ -131,8 +132,8 @@ Successful responses return JSON. Lists use arrays directly (not wrapped in a `v
 
 ```json
 [
-  {"id": 1, "name": "repo-one"},
-  {"id": 2, "name": "repo-two"}
+  { "id": 1, "name": "repo-one" },
+  { "id": 2, "name": "repo-two" }
 ]
 ```
 
@@ -149,17 +150,17 @@ Single resources return the object directly:
 
 ### HTTP status codes
 
-| Code | Meaning |
-|---|---|
-| `200 OK` | Success |
-| `201 Created` | Resource created |
-| `204 No Content` | Success, no body (DELETE) |
-| `400 Bad Request` | Invalid request body |
-| `401 Unauthorized` | Missing or invalid token |
-| `403 Forbidden` | Valid token, insufficient permission |
-| `404 Not Found` | Resource does not exist |
-| `409 Conflict` | Resource already exists |
-| `422 Unprocessable Entity` | Validation error |
+| Code                       | Meaning                              |
+| -------------------------- | ------------------------------------ |
+| `200 OK`                   | Success                              |
+| `201 Created`              | Resource created                     |
+| `204 No Content`           | Success, no body (DELETE)            |
+| `400 Bad Request`          | Invalid request body                 |
+| `401 Unauthorized`         | Missing or invalid token             |
+| `403 Forbidden`            | Valid token, insufficient permission |
+| `404 Not Found`            | Resource does not exist              |
+| `409 Conflict`             | Resource already exists              |
+| `422 Unprocessable Entity` | Validation error                     |
 
 ---
 
@@ -510,20 +511,20 @@ curl -X POST \
 
 ### Webhook event types
 
-| Event | When it fires |
-|---|---|
-| `push` | Commit pushed to any branch |
-| `create` | Branch or tag created |
-| `delete` | Branch or tag deleted |
-| `fork` | Repository forked |
-| `issues` | Issue created, edited, closed, reopened |
-| `issue_comment` | Comment on issue or PR |
-| `pull_request` | PR opened, closed, reopened, edited, synchronised |
-| `pull_request_approved` | PR review approved |
-| `pull_request_rejected` | PR review rejected |
-| `release` | Release published |
-| `repository` | Repository created, deleted, archived, made public/private |
-| `wiki` | Wiki page created or updated |
+| Event                   | When it fires                                              |
+| ----------------------- | ---------------------------------------------------------- |
+| `push`                  | Commit pushed to any branch                                |
+| `create`                | Branch or tag created                                      |
+| `delete`                | Branch or tag deleted                                      |
+| `fork`                  | Repository forked                                          |
+| `issues`                | Issue created, edited, closed, reopened                    |
+| `issue_comment`         | Comment on issue or PR                                     |
+| `pull_request`          | PR opened, closed, reopened, edited, synchronised          |
+| `pull_request_approved` | PR review approved                                         |
+| `pull_request_rejected` | PR review rejected                                         |
+| `release`               | Release published                                          |
+| `repository`            | Repository created, deleted, archived, made public/private |
+| `wiki`                  | Wiki page created or updated                               |
 
 ### Webhook payload structure
 
@@ -542,7 +543,7 @@ A `push` event payload:
       "author": {
         "name": "Isaac Adjei",
         "email": "isaac@example.com",
-        "username": "zaccessss"
+        "username": "zaccesss"
       },
       "added": ["src/auth.go"],
       "removed": [],
@@ -626,6 +627,7 @@ Configure Drone to use Gitea as the source at `https://drone.example.com` > Sett
 ### Jenkins
 
 Use the [Gitea plugin for Jenkins](https://plugins.jenkins.io/gitea/):
+
 1. Install the Gitea plugin in Jenkins
 2. Configure a Gitea server connection in Jenkins settings
 3. Use a **Gitea Multibranch Pipeline** job type
@@ -657,10 +659,10 @@ Renovate automates dependency updates. Configure it for Gitea in `config.js`:
 
 ```javascript
 module.exports = {
-  platform: 'gitea',
-  endpoint: 'https://gitea.example.com',
+  platform: "gitea",
+  endpoint: "https://gitea.example.com",
   token: process.env.RENOVATE_TOKEN,
-  repositories: ['username/my-project']
+  repositories: ["username/my-project"],
 };
 ```
 
@@ -669,6 +671,7 @@ Run Renovate as a scheduled Gitea Actions workflow or as a standalone process.
 ### VS Code Gitea extension
 
 The **Gitea** extension for VS Code provides:
+
 - Repository browsing from VS Code
 - Issue and PR viewing
 - Clone from Gitea directly
@@ -735,6 +738,7 @@ curl -H "Authorization: token TOKEN" \
 ```
 
 Check the response headers for pagination metadata:
+
 - `X-Total-Count`: total number of items
 - `X-Page`: current page number
 - `X-Perpage`: items per page
@@ -744,6 +748,7 @@ Check the response headers for pagination metadata:
 ### Iterating all pages in a script
 
 🍎 **Mac / 🐧 Linux** (bash):
+
 ```bash
 #!/bin/bash
 TOKEN="YOUR_TOKEN"
@@ -766,6 +771,7 @@ done
 ```
 
 🪟 **Windows** (PowerShell):
+
 ```powershell
 $token = "YOUR_TOKEN"
 $baseUrl = "https://gitea.example.com/api/v1"
@@ -796,6 +802,7 @@ Every Gitea instance includes interactive API documentation at `/api/swagger`. T
 7. See the actual request URL, response code and response body
 
 The Swagger UI is particularly useful for:
+
 - Discovering less-known endpoints
 - Understanding request body schemas
 - Testing API calls before scripting them

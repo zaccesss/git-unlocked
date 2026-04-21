@@ -86,6 +86,7 @@ cd REPO
 ```
 
 The `--remote=true` flag automatically sets up:
+
 - `origin` pointing to your fork (`https://github.com/YOU/REPO.git`)
 - `upstream` pointing to the original (`https://github.com/OWNER/REPO.git`)
 
@@ -301,14 +302,14 @@ If you disagree with a suggestion, say so politely and explain your reasoning. G
 
 ## Platform differences: GitHub vs GitLab
 
-| Feature | GitHub | GitLab |
-|---|---|---|
-| Term for a contribution request | Pull request (PR) | Merge request (MR) |
-| CLI tool | `gh` | `glab` |
+| Feature                                 | GitHub                                       | GitLab                                                                         |
+| --------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------ |
+| Term for a contribution request         | Pull request (PR)                            | Merge request (MR)                                                             |
+| CLI tool                                | `gh`                                         | `glab`                                                                         |
 | Maintainer can push to your fork branch | Opt-in per PR ("Allow edits by maintainers") | Default-on via "Allow commits from members who can merge to the target branch" |
-| Automatic issue closing | `Closes #123` in PR body | `Closes #123` in MR body or commit message |
-| Draft contributions | Draft PR | Draft MR |
-| Fork sync | `gh repo sync YOU/REPO -b main` or UI button | UI button or `glab repo sync` |
+| Automatic issue closing                 | `Closes #123` in PR body                     | `Closes #123` in MR body or commit message                                     |
+| Draft contributions                     | Draft PR                                     | Draft MR                                                                       |
+| Fork sync                               | `gh repo sync YOU/REPO -b main` or UI button | UI button or `glab repo sync`                                                  |
 
 > [!NOTE]
 > GitHub's "Allow edits by maintainers" setting is silently ignored on PRs from organisation-owned forks. If you fork a repo owned by an organisation (not a personal account), maintainers cannot push to your fork branch even if the option is ticked. This is a known GitHub limitation.
@@ -371,11 +372,11 @@ Bors tests PRs against the current `master` tip before merging, preventing CI fr
 
 ## Try it yourself
 
-This exercise uses the [git-unlocked first-contribution sandbox](https://github.com/zaccessss/git-unlocked/tree/main/first-contribution) - a file specifically set up for this purpose.
+This exercise uses the [git-unlocked first-contribution sandbox](https://github.com/zaccesss/git-unlocked/tree/main/first-contribution) - a file specifically set up for this purpose.
 
 ### Exercise
 
-1. Fork the `git-unlocked` repository using `gh repo fork zaccessss/git-unlocked --clone=true --remote=true`
+1. Fork the `git-unlocked` repository using `gh repo fork zaccesss/git-unlocked --clone=true --remote=true`
 2. Create a branch: `git switch -c add-my-name upstream/main`
 3. Open `first-contribution/contributors.md` and add your GitHub username on a new line
 4. Commit: `git commit -am "docs(first-contribution): add YOUR_USERNAME to contributors"`

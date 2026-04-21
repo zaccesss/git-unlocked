@@ -16,13 +16,13 @@ MINOR - new files, new sections or meaningful content additions
 PATCH - typo fixes, small corrections, link updates
 ```
 
-| Tag | Meaning |
-|---|---|
-| `Added` | New files or sections |
-| `Updated` | Existing content improved or expanded |
-| `Fixed` | Typos, errors or broken links corrected |
-| `Removed` | Content removed |
-| `Renamed` | Files or folders renamed |
+| Tag       | Meaning                                 |
+| --------- | --------------------------------------- |
+| `Added`   | New files or sections                   |
+| `Updated` | Existing content improved or expanded   |
+| `Fixed`   | Typos, errors or broken links corrected |
+| `Removed` | Content removed                         |
+| `Renamed` | Files or folders renamed                |
 
 ---
 
@@ -30,7 +30,7 @@ PATCH - typo fixes, small corrections, link updates
 
 In progress or planned - not yet in a release.
 
-- GitHub Pages site at zaccessss.github.io/git-unlocked
+- GitHub Pages site at zaccesss.github.io/git-unlocked
 - Interactive HTML quiz pages with instant answer checking
 - Animated SVG diagrams for key Git concepts
 - Cross-reference audit of all internal links
@@ -147,7 +147,7 @@ Practical scenarios showing Git in real professional contexts.
 
 ---
 
-[Unreleased]: https://github.com/zaccessss/git-unlocked/compare/v1.2.0...HEAD
-[1.2.0]: https://github.com/zaccessss/git-unlocked/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/zaccessss/git-unlocked/compare/v1.0.0...v1.1.0
-[1.0.0]: https://github.com/zaccessss/git-unlocked/releases/tag/v1.0.0
+[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/zaccesss/git-unlocked/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/zaccesss/git-unlocked/compare/v1.0.0...v1.1.0
+[1.0.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.0.0

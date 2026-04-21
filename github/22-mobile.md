@@ -38,12 +38,14 @@ GitHub Mobile is the official iOS and Android app for GitHub. It lets you manage
 GitHub Mobile is a triage, review and communication tool. Its strengths are:
 
 **Notifications and communication:**
+
 - Receive push notifications for mentions, review requests, CI results, issue comments and security alerts
 - Read and respond to all notifications in a unified feed
 - Bookmark notifications to revisit later
 - Mark notifications as read, done or muted
 
 **Pull request review:**
+
 - Read full PR descriptions and the complete file diff
 - Leave inline comments on specific lines of changed code
 - Add general PR comments
@@ -52,6 +54,7 @@ GitHub Mobile is a triage, review and communication tool. Its strengths are:
 - Check CI status for a PR
 
 **Issues:**
+
 - Create issues with labels, assignees and milestones
 - Comment on issues
 - Close and reopen issues
@@ -59,6 +62,7 @@ GitHub Mobile is a triage, review and communication tool. Its strengths are:
 - Add and remove labels
 
 **Repositories:**
+
 - Browse the file tree of any repository
 - Read file contents with syntax highlighting
 - View commit history and individual commit diffs
@@ -66,21 +70,25 @@ GitHub Mobile is a triage, review and communication tool. Its strengths are:
 - Star and watch/unwatch repositories
 
 **Profile and social:**
+
 - View your contribution graph
 - View your profile, repositories and starred repositories
 - Follow and unfollow users
 - View other developers' profiles
 
 **Organisations:**
+
 - View organisation repositories
 - Manage pending membership invitations (owners)
 - View team memberships
 
 **Security:**
+
 - Built-in TOTP authenticator for two-factor authentication (replaces a separate auth app for GitHub specifically)
 - View Dependabot security alerts
 
 **GitHub Actions:**
+
 - View workflow run status and history
 - View step-by-step logs for workflow runs
 - Re-run failed workflows
@@ -195,6 +203,7 @@ The notification feed is the primary reason most people install GitHub Mobile. I
 **Notification states:**
 
 Each notification can be:
+
 - **Unread** - shown with a blue dot
 - **Read** - visible but no indicator
 - **Bookmarked** - saved separately in the Bookmarks tab for later
@@ -203,6 +212,7 @@ Each notification can be:
 **Quick actions on a notification:**
 
 Swipe left on any notification to reveal action buttons:
+
 - **Done** - archive it (clears from feed, not deleted)
 - **Unsubscribe** - stop receiving notifications for that issue/PR
 - **Mark as read/unread**
@@ -222,6 +232,7 @@ There are two levels of notification configuration: what GitHub generates, and w
 3. Tap **Notifications**
 
 Here you control:
+
 - Whether push notifications appear at all
 - Which types of notifications trigger push alerts (mentions only vs all activity)
 - Whether to receive notifications for participating vs watching
@@ -264,6 +275,7 @@ The notification feed becomes overwhelming if you do not manage it. A practical 
 **Using filters:**
 
 Tap the filter icon at the top of the notification feed to filter by:
+
 - Type (mentions, review requests, issues, PRs, CI)
 - Read/unread
 - Specific repository
@@ -293,6 +305,7 @@ Or from a repository: tap the **Pull requests** tab and browse.
 **Reading the PR:**
 
 The PR view shows:
+
 - Title and description (full Markdown rendered)
 - Status: open/closed/merged/draft
 - Checks summary (CI pass/fail)
@@ -326,6 +339,7 @@ After leaving any comments:
 **Merging a PR:**
 
 Scroll to the bottom of the PR view. If you have permission and checks have passed, you will see a merge button. Tap it and choose the merge strategy:
+
 - Merge commit
 - Squash and merge
 - Rebase and merge
@@ -353,6 +367,7 @@ The PR view shows a summary of all checks (passed/failed/pending). Tap the check
 **Viewing and filtering issues:**
 
 In the Issues tab, use the filter button to filter by:
+
 - State: open / closed
 - Author
 - Label
@@ -468,8 +483,8 @@ The search feature in GitHub Mobile supports the same search syntax as the web.
 
 Tap the search icon at the bottom of the app. The search bar accepts:
 
-- Repository names: `zaccessss/git-unlocked`
-- User names: `zaccessss`
+- Repository names: `zaccesss/git-unlocked`
+- User names: `zaccesss`
 - Issues and PRs: type a search term and tap **Issues** or **Pull requests** in the results
 - Code: limited code search is available
 - Topics: `topic:machine-learning`
@@ -511,6 +526,7 @@ Tap your profile picture → tap your account name → select the organisation. 
 **Viewing your profile:**
 
 Tap the profile icon (bottom-right). Your profile shows:
+
 - Profile photo, name, bio, followers and following counts
 - Your contribution graph (the green squares calendar) for the past year
 - Your pinned repositories
@@ -527,6 +543,7 @@ On any user's profile, tap **Follow**. Following users means their public activi
 **The Explore tab:**
 
 The Explore tab (compass icon) shows:
+
 - Activity from people you follow
 - Trending repositories in languages you use
 - Topics related to your interests
@@ -568,21 +585,25 @@ Access settings by tapping your profile picture → **Settings**.
 **Step 2.** Sign in with your GitHub account.
 
 **Step 3.** Set up GitHub Mobile as a 2FA method:
+
 - Go to **Profile → Settings → Two-factor authentication**
 - Follow the prompts to register your device
 
 **Step 4.** Browse a repository:
-- Tap the search icon and search for `zaccessss/git-unlocked`
+
+- Tap the search icon and search for `zaccesss/git-unlocked`
 - Tap **Code** and browse the folder structure
 - Open any `.md` file and read it
 - Tap the commit count and read through the recent commit history
 
 **Step 5.** Customise your notifications:
+
 - Tap your profile picture → **Settings → Notifications**
 - Turn off push notifications for workflow runs if you find them noisy
 - Go to `github.com/settings/notifications` on a desktop browser and review your watching settings
 
 **Step 6.** If you have an open pull request anywhere:
+
 - Find it from the notification feed or by navigating to the repository
 - Open the **Files changed** tab
 - Tap a line number and leave a test inline comment

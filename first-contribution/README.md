@@ -47,14 +47,14 @@ That is all. You do not need any programming knowledge to complete this exercise
 
 ### Step 1: Fork the repository
 
-Go to [github.com/zaccessss/git-unlocked](https://github.com/zaccessss/git-unlocked) and click **Fork** in the top right corner, then click **Create fork**.
+Go to [github.com/zaccesss/git-unlocked](https://github.com/zaccesss/git-unlocked) and click **Fork** in the top right corner, then click **Create fork**.
 
 This creates a copy of the repository under your own GitHub account. You now have full write access to your copy.
 
 **Using the GitHub CLI (optional but recommended):**
 
 ```bash
-gh repo fork zaccessss/git-unlocked --clone=true --remote=true
+gh repo fork zaccesss/git-unlocked --clone=true --remote=true
 cd git-unlocked
 ```
 
@@ -73,7 +73,7 @@ cd git-unlocked
 Add the original repository as `upstream` so you can sync later:
 
 ```bash
-git remote add upstream https://github.com/zaccessss/git-unlocked.git
+git remote add upstream https://github.com/zaccesss/git-unlocked.git
 git remote -v
 ```
 
@@ -153,7 +153,7 @@ That is it. You have made your first open source contribution.
 
 Your PR will be reviewed and merged. Once merged, your name will appear permanently in [contributors.md](contributors.md) in the main repository.
 
-You will receive a GitHub notification when your PR is merged. You can view the merged PR at any time in the [Pull requests tab](https://github.com/zaccessss/git-unlocked/pulls).
+You will receive a GitHub notification when your PR is merged. You can view the merged PR at any time in the [Pull requests tab](https://github.com/zaccesss/git-unlocked/pulls).
 
 > [!NOTE]
 > PRs that do not follow the format in `contributors.md`, include changes to files other than `contributors.md`, or have commit messages that do not follow the Conventional Commits format may be asked to make changes before merging.
@@ -187,7 +187,7 @@ git switch add-YOUR_USERNAME
 **I cannot find the `upstream` remote.**
 
 ```bash
-git remote add upstream https://github.com/zaccessss/git-unlocked.git
+git remote add upstream https://github.com/zaccesss/git-unlocked.git
 git fetch upstream
 ```
 
@@ -226,6 +226,7 @@ Now that you have made your first contribution, here are some natural next steps
 Read [real-world/01-contributing-to-open-source.md](../real-world/01-contributing-to-open-source.md) for a complete guide to the open source contribution workflow, including how to handle review feedback, sync your fork with upstream over time, and work with projects that have their own specific contribution requirements.
 
 **Find a real project to contribute to**
+
 - [goodfirstissue.dev](https://goodfirstissue.dev) - curated first-timer issues from popular open source projects
 - [firstcontributions.github.io](https://firstcontributions.github.io) - similar sandbox to this one, widely used
 - [up-for-grabs.net](https://up-for-grabs.net) - projects explicitly welcoming new contributors

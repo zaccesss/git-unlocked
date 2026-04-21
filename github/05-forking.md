@@ -43,14 +43,14 @@ Forking is a GitHub concept, not a Git concept. Underneath, a fork is just a Git
 
 This is one of the most common sources of confusion for new GitHub users.
 
-| Feature | Fork | Clone |
-|---|---|---|
-| **Where it lives** | Server-side copy on GitHub under your account | Local copy on your machine |
-| **Purpose** | Contribute to a project you do not have write access to | Work on a project locally |
-| **Connection** | Linked to upstream; can sync and open PRs | Connected to `origin` (wherever you cloned from) |
-| **Visibility** | Visible on your GitHub profile | Only on your machine |
-| **GitHub relationship** | GitHub tracks the fork-upstream connection | No GitHub-level relationship |
-| **When to use** | Contributing to someone else's open source project | Working on a project you have access to |
+| Feature                 | Fork                                                    | Clone                                            |
+| ----------------------- | ------------------------------------------------------- | ------------------------------------------------ |
+| **Where it lives**      | Server-side copy on GitHub under your account           | Local copy on your machine                       |
+| **Purpose**             | Contribute to a project you do not have write access to | Work on a project locally                        |
+| **Connection**          | Linked to upstream; can sync and open PRs               | Connected to `origin` (wherever you cloned from) |
+| **Visibility**          | Visible on your GitHub profile                          | Only on your machine                             |
+| **GitHub relationship** | GitHub tracks the fork-upstream connection              | No GitHub-level relationship                     |
+| **When to use**         | Contributing to someone else's open source project      | Working on a project you have access to          |
 
 **The typical workflow combines both:**
 
@@ -159,6 +159,7 @@ your machine
 ```
 
 Changes flow:
+
 - **upstream → your fork:** You sync/pull to keep your fork current
 - **your fork → upstream:** Via pull request to propose your changes
 - **your fork → local:** `git clone` and `git pull`
@@ -294,7 +295,7 @@ This exercise forks a real public repository, clones it, makes a change and prep
 
 **Step 1.** Fork the `git-unlocked` course repository:
 
-1. Go to `github.com/zaccessss/git-unlocked`
+1. Go to `github.com/zaccesss/git-unlocked`
 2. Click **Fork** in the top-right corner
 3. Leave the defaults and click **Create fork**
 
@@ -324,7 +325,7 @@ cd git-unlocked
 **Step 3.** Add the upstream remote:
 
 ```bash
-git remote add upstream https://github.com/zaccessss/git-unlocked.git
+git remote add upstream https://github.com/zaccesss/git-unlocked.git
 git remote -v
 ```
 

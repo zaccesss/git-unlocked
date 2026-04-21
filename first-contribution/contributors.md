@@ -15,7 +15,7 @@ Everyone who has made their first open source contribution through git-unlocked.
 
 ## A
 
-- [zaccessss](https://github.com/zaccessss)
+- [zaccesss](https://github.com/zaccesss)
 
 ## B
 

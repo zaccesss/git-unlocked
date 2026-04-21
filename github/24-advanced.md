@@ -63,8 +63,8 @@ X-GitHub-Api-Version: 2022-11-28
 You can make unauthenticated requests for public data. These are limited to 60 requests per hour per IP address.
 
 ```bash
-curl https://api.github.com/users/zaccessss
-curl https://api.github.com/repos/zaccessss/git-unlocked
+curl https://api.github.com/users/zaccesss
+curl https://api.github.com/repos/zaccesss/git-unlocked
 ```
 
 **Authenticated requests with a Personal Access Token:**
@@ -97,15 +97,15 @@ In a workflow, the `GITHUB_TOKEN` is available automatically as a secret:
 ```bash
 # Get a user's profile
 curl -H "Authorization: Bearer TOKEN" \
-  https://api.github.com/users/zaccessss
+  https://api.github.com/users/zaccesss
 
 # Get a repository
 curl -H "Authorization: Bearer TOKEN" \
-  https://api.github.com/repos/zaccessss/git-unlocked
+  https://api.github.com/repos/zaccesss/git-unlocked
 
 # Get a repository's open issues
 curl -H "Authorization: Bearer TOKEN" \
-  "https://api.github.com/repos/zaccessss/git-unlocked/issues?state=open&per_page=100"
+  "https://api.github.com/repos/zaccesss/git-unlocked/issues?state=open&per_page=100"
 ```
 
 **POST - create resources:**
@@ -177,19 +177,16 @@ print(f"Created issue #{new_issue.json()['number']}")
 ```javascript
 const TOKEN = process.env.GITHUB_TOKEN;
 const HEADERS = {
-  "Authorization": `Bearer ${TOKEN}`,
+  Authorization: `Bearer ${TOKEN}`,
   "X-GitHub-Api-Version": "2022-11-28",
-  "Accept": "application/vnd.github+json",
-  "Content-Type": "application/json"
+  Accept: "application/vnd.github+json",
+  "Content-Type": "application/json",
 };
 
 // List repositories for an organisation
-const response = await fetch(
-  "https://api.github.com/orgs/ORG_NAME/repos?type=all&per_page=100",
-  { headers: HEADERS }
-);
+const response = await fetch("https://api.github.com/orgs/ORG_NAME/repos?type=all&per_page=100", { headers: HEADERS });
 const repos = await response.json();
-repos.forEach(repo => console.log(repo.full_name));
+repos.forEach((repo) => console.log(repo.full_name));
 ```
 
 **Using Octokit (official GitHub SDK):**
@@ -203,65 +200,65 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 // Create an issue
 const { data: issue } = await octokit.rest.issues.create({
-  owner: "zaccessss",
+  owner: "zaccesss",
   repo: "git-unlocked",
   title: "New issue via Octokit",
   body: "Issue body",
-  labels: ["enhancement"]
+  labels: ["enhancement"],
 });
 console.log(`Created issue #${issue.number}`);
 
 // List pull requests
 const { data: prs } = await octokit.rest.pulls.list({
-  owner: "zaccessss",
+  owner: "zaccesss",
   repo: "git-unlocked",
-  state: "open"
+  state: "open",
 });
-prs.forEach(pr => console.log(`#${pr.number} ${pr.title}`));
+prs.forEach((pr) => console.log(`#${pr.number} ${pr.title}`));
 ```
 
 ---
 
 ## Key REST API Endpoints
 
-| Resource | Method | Endpoint | Description |
-|---|---|---|---|
-| Users | GET | `/users/{username}` | Get a user's public profile |
-| Users | GET | `/user` | Get the authenticated user |
-| Repositories | GET | `/repos/{owner}/{repo}` | Get repository info |
-| Repositories | POST | `/user/repos` | Create a repository |
-| Repositories | GET | `/repos/{owner}/{repo}/contents/{path}` | Get file contents |
-| Issues | GET | `/repos/{owner}/{repo}/issues` | List issues |
-| Issues | POST | `/repos/{owner}/{repo}/issues` | Create an issue |
-| Issues | PATCH | `/repos/{owner}/{repo}/issues/{number}` | Update an issue |
-| Pull Requests | GET | `/repos/{owner}/{repo}/pulls` | List pull requests |
-| Pull Requests | POST | `/repos/{owner}/{repo}/pulls` | Create a pull request |
-| Pull Requests | PUT | `/repos/{owner}/{repo}/pulls/{number}/merge` | Merge a pull request |
-| Reviews | POST | `/repos/{owner}/{repo}/pulls/{number}/reviews` | Create a PR review |
-| Commits | GET | `/repos/{owner}/{repo}/commits` | List commits |
-| Branches | GET | `/repos/{owner}/{repo}/branches` | List branches |
-| Branches | POST | `/repos/{owner}/{repo}/git/refs` | Create a branch |
-| Actions | GET | `/repos/{owner}/{repo}/actions/runs` | List workflow runs |
-| Actions | POST | `/repos/{owner}/{repo}/actions/workflows/{id}/dispatches` | Trigger a workflow |
-| Releases | GET | `/repos/{owner}/{repo}/releases` | List releases |
-| Releases | POST | `/repos/{owner}/{repo}/releases` | Create a release |
-| Organisations | GET | `/orgs/{org}/members` | List org members |
-| Organisations | GET | `/orgs/{org}/repos` | List org repositories |
-| Search | GET | `/search/repositories` | Search repositories |
-| Search | GET | `/search/issues` | Search issues and PRs |
-| Search | GET | `/search/code` | Search code |
+| Resource      | Method | Endpoint                                                  | Description                 |
+| ------------- | ------ | --------------------------------------------------------- | --------------------------- |
+| Users         | GET    | `/users/{username}`                                       | Get a user's public profile |
+| Users         | GET    | `/user`                                                   | Get the authenticated user  |
+| Repositories  | GET    | `/repos/{owner}/{repo}`                                   | Get repository info         |
+| Repositories  | POST   | `/user/repos`                                             | Create a repository         |
+| Repositories  | GET    | `/repos/{owner}/{repo}/contents/{path}`                   | Get file contents           |
+| Issues        | GET    | `/repos/{owner}/{repo}/issues`                            | List issues                 |
+| Issues        | POST   | `/repos/{owner}/{repo}/issues`                            | Create an issue             |
+| Issues        | PATCH  | `/repos/{owner}/{repo}/issues/{number}`                   | Update an issue             |
+| Pull Requests | GET    | `/repos/{owner}/{repo}/pulls`                             | List pull requests          |
+| Pull Requests | POST   | `/repos/{owner}/{repo}/pulls`                             | Create a pull request       |
+| Pull Requests | PUT    | `/repos/{owner}/{repo}/pulls/{number}/merge`              | Merge a pull request        |
+| Reviews       | POST   | `/repos/{owner}/{repo}/pulls/{number}/reviews`            | Create a PR review          |
+| Commits       | GET    | `/repos/{owner}/{repo}/commits`                           | List commits                |
+| Branches      | GET    | `/repos/{owner}/{repo}/branches`                          | List branches               |
+| Branches      | POST   | `/repos/{owner}/{repo}/git/refs`                          | Create a branch             |
+| Actions       | GET    | `/repos/{owner}/{repo}/actions/runs`                      | List workflow runs          |
+| Actions       | POST   | `/repos/{owner}/{repo}/actions/workflows/{id}/dispatches` | Trigger a workflow          |
+| Releases      | GET    | `/repos/{owner}/{repo}/releases`                          | List releases               |
+| Releases      | POST   | `/repos/{owner}/{repo}/releases`                          | Create a release            |
+| Organisations | GET    | `/orgs/{org}/members`                                     | List org members            |
+| Organisations | GET    | `/orgs/{org}/repos`                                       | List org repositories       |
+| Search        | GET    | `/search/repositories`                                    | Search repositories         |
+| Search        | GET    | `/search/issues`                                          | Search issues and PRs       |
+| Search        | GET    | `/search/code`                                            | Search code                 |
 
 ---
 
 ## Rate Limits
 
-| Request type | Limit |
-|---|---|
-| Unauthenticated | 60 requests/hour per IP |
-| Authenticated (PAT or OAuth) | 5000 requests/hour per token |
-| GitHub Actions (GITHUB_TOKEN) | 1000 requests/hour per repository |
-| Search API (authenticated) | 30 requests/minute |
-| GraphQL API | 5000 points/hour (points vary per query complexity) |
+| Request type                  | Limit                                               |
+| ----------------------------- | --------------------------------------------------- |
+| Unauthenticated               | 60 requests/hour per IP                             |
+| Authenticated (PAT or OAuth)  | 5000 requests/hour per token                        |
+| GitHub Actions (GITHUB_TOKEN) | 1000 requests/hour per repository                   |
+| Search API (authenticated)    | 30 requests/minute                                  |
+| GraphQL API                   | 5000 points/hour (points vary per query complexity) |
 
 **Check your current rate limit status:**
 
@@ -321,7 +318,7 @@ const issues = await octokit.paginate(octokit.rest.issues.listForRepo, {
   owner: "OWNER",
   repo: "REPO",
   state: "all",
-  per_page: 100
+  per_page: 100,
 });
 console.log(`Total issues: ${issues.length}`);
 ```
@@ -349,12 +346,14 @@ The GraphQL API (`https://api.github.com/graphql`) allows you to request exactly
 ## GraphQL vs REST - When to Use Each
 
 **Use REST when:**
+
 - You need a simple, single-resource operation (get a user, create an issue)
 - You are building a quick script and do not want to learn GraphQL syntax
 - You are checking rate limits or account status
 - You are working with file contents (REST has better support for base64-encoded file operations)
 
 **Use GraphQL when:**
+
 - You need deeply nested data in one request (e.g. issues → comments → author → following)
 - You are building a dashboard or reporting tool that aggregates data from multiple resources
 - You are working with GitHub Projects v2 (the Projects API is GraphQL-only)
@@ -395,7 +394,7 @@ curl -X POST \
   -H "Content-Type: application/json" \
   -d '{
     "query": "query($owner:String!, $repo:String!) { repository(owner:$owner, name:$repo) { issues(states:OPEN, first:10) { nodes { number title createdAt } } } }",
-    "variables": {"owner": "zaccessss", "repo": "git-unlocked"}
+    "variables": {"owner": "zaccesss", "repo": "git-unlocked"}
   }' \
   https://api.github.com/graphql
 ```
@@ -405,7 +404,7 @@ curl -X POST \
 ```graphql
 query GetOpenIssues($owner: String!, $repo: String!) {
   repository(owner: $owner, name: $repo) {
-    issues(states: OPEN, first: 10, orderBy: {field: CREATED_AT, direction: DESC}) {
+    issues(states: OPEN, first: 10, orderBy: { field: CREATED_AT, direction: DESC }) {
       totalCount
       nodes {
         number
@@ -434,7 +433,7 @@ query GetOpenIssues($owner: String!, $repo: String!) {
 
 ```graphql
 query {
-  user(login: "zaccessss") {
+  user(login: "zaccesss") {
     projectsV2(first: 5) {
       nodes {
         id
@@ -446,11 +445,19 @@ query {
               nodes {
                 ... on ProjectV2ItemFieldTextValue {
                   text
-                  field { ... on ProjectV2FieldCommon { name } }
+                  field {
+                    ... on ProjectV2FieldCommon {
+                      name
+                    }
+                  }
                 }
                 ... on ProjectV2ItemFieldSingleSelectValue {
                   name
-                  field { ... on ProjectV2FieldCommon { name } }
+                  field {
+                    ... on ProjectV2FieldCommon {
+                      name
+                    }
+                  }
                 }
               }
             }
@@ -476,11 +483,7 @@ Mutations create, update or delete data. They use the `mutation` keyword.
 
 ```graphql
 mutation CreateIssue($repoId: ID!, $title: String!, $body: String) {
-  createIssue(input: {
-    repositoryId: $repoId,
-    title: $title,
-    body: $body
-  }) {
+  createIssue(input: { repositoryId: $repoId, title: $title, body: $body }) {
     issue {
       number
       url
@@ -493,10 +496,7 @@ mutation CreateIssue($repoId: ID!, $title: String!, $body: String) {
 
 ```graphql
 mutation AddToProject($projectId: ID!, $contentId: ID!) {
-  addProjectV2ItemById(input: {
-    projectId: $projectId,
-    contentId: $contentId
-  }) {
+  addProjectV2ItemById(input: { projectId: $projectId, contentId: $contentId }) {
     item {
       id
     }
@@ -508,12 +508,7 @@ mutation AddToProject($projectId: ID!, $contentId: ID!) {
 
 ```graphql
 mutation UpdateField($projectId: ID!, $itemId: ID!, $fieldId: ID!, $value: ProjectV2FieldValue!) {
-  updateProjectV2ItemFieldValue(input: {
-    projectId: $projectId,
-    itemId: $itemId,
-    fieldId: $fieldId,
-    value: $value
-  }) {
+  updateProjectV2ItemFieldValue(input: { projectId: $projectId, itemId: $itemId, fieldId: $fieldId, value: $value }) {
     projectV2Item {
       id
     }
@@ -599,18 +594,18 @@ Webhooks allow GitHub to send HTTP POST requests to a URL you control whenever s
 
 **Common events to subscribe to:**
 
-| Event | When it fires |
-|---|---|
-| `push` | Any push to any branch |
-| `pull_request` | PR opened, closed, merged, synchronised, reviewed |
-| `issues` | Issue opened, closed, edited, labelled |
-| `issue_comment` | Comment added to an issue or PR |
-| `workflow_run` | Actions workflow run started, completed, requested |
-| `release` | Release published, edited, deleted |
-| `create` | Branch or tag created |
-| `delete` | Branch or tag deleted |
-| `member` | Collaborator added or removed |
-| `repository` | Repository created, deleted, archived, made public/private |
+| Event           | When it fires                                              |
+| --------------- | ---------------------------------------------------------- |
+| `push`          | Any push to any branch                                     |
+| `pull_request`  | PR opened, closed, merged, synchronised, reviewed          |
+| `issues`        | Issue opened, closed, edited, labelled                     |
+| `issue_comment` | Comment added to an issue or PR                            |
+| `workflow_run`  | Actions workflow run started, completed, requested         |
+| `release`       | Release published, edited, deleted                         |
+| `create`        | Branch or tag created                                      |
+| `delete`        | Branch or tag deleted                                      |
+| `member`        | Collaborator added or removed                              |
+| `repository`    | Repository created, deleted, archived, made public/private |
 
 ---
 
@@ -619,6 +614,7 @@ Webhooks allow GitHub to send HTTP POST requests to a URL you control whenever s
 Every webhook POST request includes:
 
 **Headers:**
+
 ```
 X-GitHub-Event: push
 X-GitHub-Delivery: 72d3162e-cc78-11e3-81ab-4c9367dc0958
@@ -635,7 +631,7 @@ Content-Type: application/json
   "after": "def456",
   "repository": {
     "id": 123456,
-    "full_name": "zaccessss/git-unlocked",
+    "full_name": "zaccesss/git-unlocked",
     "private": false
   },
   "pusher": {
@@ -681,7 +677,7 @@ Content-Type: application/json
     }
   },
   "repository": {
-    "full_name": "zaccessss/git-unlocked"
+    "full_name": "zaccesss/git-unlocked"
   }
 }
 ```
@@ -740,14 +736,8 @@ def webhook():
 const crypto = require("crypto");
 
 function verifySignature(payload, signature, secret) {
-  const expected = "sha256=" + crypto
-    .createHmac("sha256", secret)
-    .update(payload)
-    .digest("hex");
-  return crypto.timingSafeEqual(
-    Buffer.from(expected),
-    Buffer.from(signature)
-  );
+  const expected = "sha256=" + crypto.createHmac("sha256", secret).update(payload).digest("hex");
+  return crypto.timingSafeEqual(Buffer.from(expected), Buffer.from(signature));
 }
 
 app.post("/webhook", express.raw({ type: "application/json" }), (req, res) => {
@@ -816,15 +806,15 @@ Most major GitHub integrations you already use are GitHub Apps: Dependabot, Code
 
 ## GitHub Apps vs OAuth Apps vs PATs
 
-| | PAT (fine-grained) | OAuth App | GitHub App |
-|---|---|---|---|
-| Acts as | A user account | A user account | The app itself |
-| Rate limit | 5000/hour | 5000/hour | 5000-15000/hour |
-| Scope | Per repository | All user repos | Per installation |
-| Token expiry | Set by user | Never (unless revoked) | 1 hour (auto-refresh) |
-| Webhook | No | No | Yes (built-in) |
-| Best for | Personal scripts, CI | Web apps needing user login | Production integrations |
-| Complexity | Low | Medium | High |
+|              | PAT (fine-grained)   | OAuth App                   | GitHub App              |
+| ------------ | -------------------- | --------------------------- | ----------------------- |
+| Acts as      | A user account       | A user account              | The app itself          |
+| Rate limit   | 5000/hour            | 5000/hour                   | 5000-15000/hour         |
+| Scope        | Per repository       | All user repos              | Per installation        |
+| Token expiry | Set by user          | Never (unless revoked)      | 1 hour (auto-refresh)   |
+| Webhook      | No                   | No                          | Yes (built-in)          |
+| Best for     | Personal scripts, CI | Web apps needing user login | Production integrations |
+| Complexity   | Low                  | Medium                      | High                    |
 
 ---
 
@@ -853,6 +843,7 @@ Most major GitHub integrations you already use are GitHub Apps: Dependabot, Code
 **Step 1.** Go to `github.com/settings/apps` and click **New GitHub App**.
 
 **Step 2.** Fill in the basics:
+
 - **GitHub App name** - unique across all of GitHub
 - **Homepage URL** - your app's website or repo
 - **Callback URL** - where to redirect after OAuth (if your app uses user authentication)
@@ -860,6 +851,7 @@ Most major GitHub integrations you already use are GitHub Apps: Dependabot, Code
 - **Webhook secret** - random string for signature verification
 
 **Step 3.** Set permissions. Be as restrictive as possible:
+
 - Repository permissions: Contents, Issues, Pull requests, Actions, etc.
 - Organisation permissions: Members, Teams, etc.
 - Account permissions: Email addresses, Profile, etc.
@@ -867,6 +859,7 @@ Most major GitHub integrations you already use are GitHub Apps: Dependabot, Code
 **Step 4.** Subscribe to events. Only subscribe to events you will handle.
 
 **Step 5.** Set **Where can this GitHub App be installed?** to:
+
 - **Only on this account** - for personal tools
 - **Any account** - for public apps you want others to install
 
@@ -979,6 +972,7 @@ Sponsorships can also be made privately - only you and the maintainer know about
 **For maintainers (receiving sponsorships):**
 
 **Requirements to apply:**
+
 - An active GitHub account with a history of open source contributions
 - Your account must be at least 3 months old (typically)
 - You must reside in a country where GitHub Sponsors payouts are supported
@@ -992,11 +986,11 @@ Sponsorships can also be made privately - only you and the maintainer know about
 
 **Sponsorship tiers - examples:**
 
-| Tier name | Price | Perks |
-|---|---|---|
-| Coffee | $1/month | Thank you message |
-| Supporter | $5/month | Listed in README supporters section |
-| Sustainer | $15/month | Priority GitHub issue responses |
+| Tier name      | Price     | Perks                                        |
+| -------------- | --------- | -------------------------------------------- |
+| Coffee         | $1/month  | Thank you message                            |
+| Supporter      | $5/month  | Listed in README supporters section          |
+| Sustainer      | $15/month | Priority GitHub issue responses              |
 | Team supporter | $50/month | Private Discord channel, monthly update call |
 
 **Perks you can offer:**
@@ -1156,7 +1150,7 @@ GitHub's search is far more powerful than most users realise. It supports qualif
 
 ```
 language:python requests.get                    # Python files containing requests.get
-repo:zaccessss/git-unlocked README             # in a specific repo
+repo:zaccesss/git-unlocked README             # in a specific repo
 path:*.yml workflow_dispatch                    # in YAML files
 path:src/ authentication                        # in the src directory
 extension:json api_key                         # in JSON files
@@ -1168,11 +1162,11 @@ size:>10000                                    # files larger than 10KB
 
 ```
 is:issue is:open label:bug                     # open issues labelled bug
-is:pr is:merged author:zaccessss              # merged PRs by a specific author
+is:pr is:merged author:zaccesss              # merged PRs by a specific author
 is:issue created:>2025-01-01                  # issues created after a date
 is:pr reviewed-by:USERNAME base:main          # PRs reviewed by someone targeting main
 is:issue no:assignee label:good-first-issue   # unassigned beginner issues
-mentions:zaccessss is:open                    # open issues that mention a user
+mentions:zaccesss is:open                    # open issues that mention a user
 is:pr is:open draft:false review:required     # open PRs not in draft requiring review
 linked:pr is:issue                            # issues linked to a PR
 is:issue milestone:"v2.0"                     # issues in a specific milestone
@@ -1198,24 +1192,24 @@ type:org members:>50                          # organisations with 50+ members
 
 **Common qualifier reference:**
 
-| Qualifier | Example | Meaning |
-|---|---|---|
-| `is:` | `is:open` | State filter |
-| `in:title` | `in:title login bug` | Search in title only |
-| `in:body` | `in:body deprecated` | Search in body only |
-| `author:` | `author:@me` | Created by user |
-| `assignee:` | `assignee:@me` | Assigned to user |
-| `label:` | `label:"good first issue"` | Has this label |
-| `language:` | `language:rust` | Repository language |
-| `stars:` | `stars:100..500` | Star count range |
-| `created:` | `created:>2024-06-01` | Created after date |
-| `updated:` | `updated:<2023-01-01` | Last updated before date |
-| `pushed:` | `pushed:>2025-01-01` | Last push date |
-| `org:` | `org:microsoft` | In a specific organisation |
-| `repo:` | `repo:OWNER/NAME` | In a specific repository |
-| `user:` | `user:zaccessss` | Owned by a user |
-| `NOT` | `python NOT django` | Exclude a term |
-| `-label:` | `-label:wontfix` | Without this label |
+| Qualifier   | Example                    | Meaning                    |
+| ----------- | -------------------------- | -------------------------- |
+| `is:`       | `is:open`                  | State filter               |
+| `in:title`  | `in:title login bug`       | Search in title only       |
+| `in:body`   | `in:body deprecated`       | Search in body only        |
+| `author:`   | `author:@me`               | Created by user            |
+| `assignee:` | `assignee:@me`             | Assigned to user           |
+| `label:`    | `label:"good first issue"` | Has this label             |
+| `language:` | `language:rust`            | Repository language        |
+| `stars:`    | `stars:100..500`           | Star count range           |
+| `created:`  | `created:>2024-06-01`      | Created after date         |
+| `updated:`  | `updated:<2023-01-01`      | Last updated before date   |
+| `pushed:`   | `pushed:>2025-01-01`       | Last push date             |
+| `org:`      | `org:microsoft`            | In a specific organisation |
+| `repo:`     | `repo:OWNER/NAME`          | In a specific repository   |
+| `user:`     | `user:zaccesss`            | Owned by a user            |
+| `NOT`       | `python NOT django`        | Exclude a term             |
+| `-label:`   | `-label:wontfix`           | Without this label         |
 
 **Saving searches:**
 
@@ -1232,7 +1226,7 @@ GitHub does not have a built-in saved search feature. Bookmark the search result
 curl https://api.github.com/users/YOUR_USERNAME | python3 -m json.tool
 
 # Get a repository's open issues (no auth needed for public repos)
-curl "https://api.github.com/repos/zaccessss/git-unlocked/issues?state=open" \
+curl "https://api.github.com/repos/zaccesss/git-unlocked/issues?state=open" \
   | python3 -m json.tool
 ```
 
@@ -1252,7 +1246,7 @@ curl "https://api.github.com/repos/zaccessss/git-unlocked/issues?state=open" \
 query {
   viewer {
     login
-    repositories(first: 5, orderBy: {field: STARGAZERS, direction: DESC}) {
+    repositories(first: 5, orderBy: { field: STARGAZERS, direction: DESC }) {
       nodes {
         name
         stargazerCount
