@@ -57,12 +57,14 @@ Access from the organisation profile > **Settings** (visible to owners and admin
 ### Default repository settings
 
 Configure defaults for new repositories created under the organisation:
+
 - Default visibility (public or private)
 - Default branch name
 
 ### Webhooks
 
 Organisation-level webhooks fire for events across all repositories in the organisation. Useful for:
+
 - Posting all repository activity to a team chat
 - Triggering organisation-wide CI or monitoring
 
@@ -84,10 +86,10 @@ Organisation-level webhooks fire for events across all repositories in the organ
 
 ### Organisation roles
 
-| Role | Permissions |
-|---|---|
-| **Owner** | Full control: manage members, teams, settings, all repos |
-| **Member** | Access based on team membership only |
+| Role       | Permissions                                              |
+| ---------- | -------------------------------------------------------- |
+| **Owner**  | Full control: manage members, teams, settings, all repos |
+| **Member** | Access based on team membership only                     |
 
 Owners can do everything. Members' actual permissions are determined by the teams they belong to.
 
@@ -96,6 +98,7 @@ Owners can do everything. Members' actual permissions are determined by the team
 For bus factor resilience, ensure at least two people have owner access. If a project has a single owner who becomes unavailable, recovering ownership is difficult. Add a trusted co-maintainer as owner.
 
 To add an owner:
+
 1. Go to **Members**
 2. Find the member
 3. Change their role to Owner
@@ -118,12 +121,14 @@ When you create an organisation, Codeberg creates a default **Owners** team with
 **Team name**: a descriptive name (e.g. `maintainers`, `contributors`, `ci-bots`).
 
 **Permission level**:
+
 - **None**: no access to any repository unless specifically granted
 - **Read**: clone and view all team repositories
 - **Write**: read + push code, create branches, create PRs
 - **Admin**: write + manage repository settings and branch protection
 
 **Repository access**:
+
 - **All repositories**: the team automatically has access to every repository in the organisation, including future ones
 - **Specific repositories**: explicitly add repositories to the team
 
@@ -133,11 +138,13 @@ When you create an organisation, Codeberg creates a default **Owners** team with
 ### Common team structures
 
 **For a small open source project (2-5 maintainers):**
+
 ```
 Owners team: all maintainers (Write + Admin)
 ```
 
 **For a larger project:**
+
 ```
 Maintainers team: core maintainers (Admin permission, all repos)
 Contributors team: active contributors (Write permission, main repos)
@@ -146,6 +153,7 @@ Docs team: documentation contributors (Write permission, docs repo only)
 ```
 
 **For an organisation with multiple sub-projects:**
+
 ```
 Core team: all repos, Admin
 Project A team: project-a/* repos, Write
@@ -158,6 +166,7 @@ Infrastructure team: infra repos, Admin
 CI systems (Woodpecker, ArgoCD) need access tokens with repository write permission. Instead of using a human's token, create a dedicated bot account on Codeberg, add it to a `ci-bots` team with appropriate permissions and use that account's token in CI secrets.
 
 This way:
+
 - CI tokens are not tied to a specific person's account
 - The bot account can be managed separately
 - Revoking CI access does not affect any human's account
@@ -192,6 +201,7 @@ Move a repository from your personal account to an organisation:
 4. Click **Transfer**
 
 All existing Git remotes break after transfer. Update with:
+
 ```bash
 git remote set-url origin git@codeberg.org:org-name/repo-name.git
 ```
@@ -199,6 +209,7 @@ git remote set-url origin git@codeberg.org:org-name/repo-name.git
 ### Repository visibility in organisations
 
 A repository in an organisation can be:
+
 - **Public**: visible to anyone
 - **Private**: visible only to organisation members with access (requires Codeberg financial support for orgs on the free tier)
 - **Internal**: visible to all authenticated Codeberg users (if enabled by the instance)
@@ -222,6 +233,7 @@ This is the standard open source model. Contributors need no special permissions
 ### Maintaining the contributor funnel
 
 For healthy open source projects, actively maintain the contribution pathway:
+
 - Keep `CONTRIBUTING.md` current
 - Label issues `good first issue` for newcomers
 - Respond to PRs promptly (even with "we will look at this next week")
@@ -252,6 +264,7 @@ These propagate to new repositories automatically.
 ### Organisation-level webhooks
 
 Fire across all repositories in the organisation:
+
 1. Organisation **Settings** > **Webhooks** > **Add Webhook**
 2. Configure the endpoint and events
 
@@ -282,6 +295,7 @@ Secrets defined at the organisation level in Woodpecker CI are available to all 
 ### Private repositories require financial support
 
 Free-tier organisations cannot create private repositories. If your project has sensitive code, internal documentation or pre-release work that needs to be private before public release, either:
+
 - Use a personal account with private repositories
 - Support Codeberg financially (the funds go directly to keeping the platform running)
 - Consider whether the content truly needs to be private on a code hosting platform
@@ -301,7 +315,7 @@ Your organisation name becomes an ActivityPub identity: `@org-name@codeberg.org`
 **Exercise 1 - Create an organisation**
 
 1. Click **+** > **New Organisation**
-2. Name it with your username + `-projects` (e.g. `zaccessss-projects`)
+2. Name it with your username + `-projects` (e.g. `zaccesss-projects`)
 3. Leave visibility as Public
 4. Click **Create Organisation**
 
@@ -318,6 +332,7 @@ Your organisation name becomes an ActivityPub identity: `@org-name@codeberg.org`
 2. Settings > Transfer > enter your organisation name
 3. Type the repo name to confirm and transfer
 4. Update your local remote:
+
 ```bash
 cd hello-codeberg
 git remote set-url origin git@codeberg.org:your-org-name/hello-codeberg.git

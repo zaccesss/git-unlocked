@@ -56,23 +56,23 @@ gh pr view --web                            # gh: open the PR in browser
 
 ## gh vs git - The Difference
 
-| Task | Tool |
-|---|---|
-| Initialise a repository locally | `git init` |
-| Stage and commit changes | `git add` / `git commit` |
-| Push and pull code | `git push` / `git pull` |
-| Manage branches locally | `git branch` / `git checkout` |
-| Create a GitHub repository | `gh repo create` |
-| Clone with auth handled automatically | `gh repo clone` |
-| Open a pull request | `gh pr create` |
-| Review and merge a PR | `gh pr review` / `gh pr merge` |
-| Check out a PR branch locally | `gh pr checkout` |
-| Create and manage issues | `gh issue create` / `gh issue list` |
-| Trigger GitHub Actions workflows | `gh workflow run` |
-| View Actions run logs | `gh run view --log` |
-| Create a release with assets | `gh release create` |
-| Manage SSH keys on your account | `gh ssh-key add` |
-| Manage secrets on a repository | `gh secret set` |
+| Task                                  | Tool                                |
+| ------------------------------------- | ----------------------------------- |
+| Initialise a repository locally       | `git init`                          |
+| Stage and commit changes              | `git add` / `git commit`            |
+| Push and pull code                    | `git push` / `git pull`             |
+| Manage branches locally               | `git branch` / `git checkout`       |
+| Create a GitHub repository            | `gh repo create`                    |
+| Clone with auth handled automatically | `gh repo clone`                     |
+| Open a pull request                   | `gh pr create`                      |
+| Review and merge a PR                 | `gh pr review` / `gh pr merge`      |
+| Check out a PR branch locally         | `gh pr checkout`                    |
+| Create and manage issues              | `gh issue create` / `gh issue list` |
+| Trigger GitHub Actions workflows      | `gh workflow run`                   |
+| View Actions run logs                 | `gh run view --log`                 |
+| Create a release with assets          | `gh release create`                 |
+| Manage SSH keys on your account       | `gh ssh-key add`                    |
+| Manage secrets on a repository        | `gh secret set`                     |
 
 ---
 
@@ -1102,7 +1102,7 @@ gh api repos/OWNER/REPO/issues \
 # GraphQL query
 gh api graphql -f query='
   query {
-    repository(owner: "zaccessss", name: "git-unlocked") {
+    repository(owner: "zaccesss", name: "git-unlocked") {
       issues(states: OPEN, first: 5) {
         nodes {
           number
@@ -1124,7 +1124,7 @@ gh api repos/OWNER/REPO/issues --paginate --jq '.[].title'
 #!/bin/bash
 set -e
 
-REPO="zaccessss/git-unlocked"
+REPO="zaccesss/git-unlocked"
 
 # Get number of open issues
 OPEN_ISSUES=$(gh issue list --repo "$REPO" --state open --json number --jq 'length')

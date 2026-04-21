@@ -28,54 +28,54 @@ GitHub is available on six surfaces: the web browser, GitHub Desktop, the mobile
 
 ## The Six GitHub Surfaces
 
-| Surface | Type | Install required | OS |
-|---|---|---|---|
-| **Web** (`github.com`) | Browser | No | Any |
-| **GitHub Desktop** | App | Yes | 🪟 Windows, 🍎 Mac |
-| **GitHub Mobile** | App | Yes | iOS, Android |
-| **GitHub CLI** (`gh`) | Terminal | Yes | 🪟 Windows, 🍎 Mac, 🐧 Linux |
-| **github.dev** | Browser editor | No | Any |
-| **Codespaces** | Cloud dev environment | No (runs in browser) | Any |
+| Surface                | Type                  | Install required     | OS                           |
+| ---------------------- | --------------------- | -------------------- | ---------------------------- |
+| **Web** (`github.com`) | Browser               | No                   | Any                          |
+| **GitHub Desktop**     | App                   | Yes                  | 🪟 Windows, 🍎 Mac           |
+| **GitHub Mobile**      | App                   | Yes                  | iOS, Android                 |
+| **GitHub CLI** (`gh`)  | Terminal              | Yes                  | 🪟 Windows, 🍎 Mac, 🐧 Linux |
+| **github.dev**         | Browser editor        | No                   | Any                          |
+| **Codespaces**         | Cloud dev environment | No (runs in browser) | Any                          |
 
 ---
 
 ## Feature Matrix - What Works Where
 
-| Task | Web | Desktop | Mobile | CLI | github.dev | Codespaces |
-|---|---|---|---|---|---|---|
-| View repository contents | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Clone a repository | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ |
-| Create a repository | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
-| Stage changes | ❌ | ✅ | ❌ | ❌ (use git) | ✅ | ✅ |
-| Commit changes | ❌ | ✅ | ❌ | ❌ (use git) | ✅ | ✅ |
-| Push and pull | ❌ | ✅ | ❌ | ❌ (use git) | ✅ (commit only) | ✅ |
-| Create a branch | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ |
-| Edit a single file | ✅ | ❌ | ❌ | ❌ | ✅ | ✅ |
-| Edit multiple files | ❌ | ✅ | ❌ | ❌ | ✅ | ✅ |
-| Run a terminal | ❌ | ❌ | ❌ | ✅ (native) | ❌ | ✅ |
-| Install packages | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Run code and tests | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Open a pull request | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ (via web) |
-| Review a pull request | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ (via web) |
-| Inline PR review comments | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ (via web) |
-| Approve/request changes | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ (via web) |
-| Merge a pull request | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ (via web) |
-| Create an issue | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ (via web) |
-| Comment on an issue | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ (via web) |
-| Close an issue | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ (via web) |
-| View Actions run logs | ✅ | ❌ | ✅ | ✅ | ❌ | ✅ (via web) |
-| Trigger a workflow | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| Manage releases | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| Manage Gists | ✅ | ❌ | ❌ | ✅ | ❌ | ✅ |
-| Manage SSH keys on account | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| View notifications | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| View contribution graph | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| Repository settings | ✅ | ❌ | ❌ | ✅ (limited) | ❌ | ❌ |
-| Branch protection | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Organisation/team management | ✅ | ❌ | ✅ (limited) | ❌ | ❌ | ❌ |
-| GitHub Actions configuration | ✅ | ❌ | ❌ | ❌ | ✅ (edit YAML) | ✅ (edit + run) |
-| Advanced search | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ |
-| VS Code extensions | ❌ | ❌ | ❌ | ❌ | ✅ (subset) | ✅ (all) |
+| Task                         | Web | Desktop | Mobile       | CLI          | github.dev       | Codespaces      |
+| ---------------------------- | --- | ------- | ------------ | ------------ | ---------------- | --------------- |
+| View repository contents     | ✅  | ✅      | ✅           | ✅           | ✅               | ✅              |
+| Clone a repository           | ✅  | ✅      | ❌           | ✅           | ❌               | ✅              |
+| Create a repository          | ✅  | ✅      | ❌           | ✅           | ❌               | ❌              |
+| Stage changes                | ❌  | ✅      | ❌           | ❌ (use git) | ✅               | ✅              |
+| Commit changes               | ❌  | ✅      | ❌           | ❌ (use git) | ✅               | ✅              |
+| Push and pull                | ❌  | ✅      | ❌           | ❌ (use git) | ✅ (commit only) | ✅              |
+| Create a branch              | ✅  | ✅      | ❌           | ✅           | ✅               | ✅              |
+| Edit a single file           | ✅  | ❌      | ❌           | ❌           | ✅               | ✅              |
+| Edit multiple files          | ❌  | ✅      | ❌           | ❌           | ✅               | ✅              |
+| Run a terminal               | ❌  | ❌      | ❌           | ✅ (native)  | ❌               | ✅              |
+| Install packages             | ❌  | ❌      | ❌           | ❌           | ❌               | ✅              |
+| Run code and tests           | ❌  | ❌      | ❌           | ❌           | ❌               | ✅              |
+| Open a pull request          | ✅  | ✅      | ❌           | ✅           | ❌               | ✅ (via web)    |
+| Review a pull request        | ✅  | ✅      | ✅           | ✅           | ❌               | ✅ (via web)    |
+| Inline PR review comments    | ✅  | ✅      | ✅           | ✅           | ❌               | ✅ (via web)    |
+| Approve/request changes      | ✅  | ✅      | ✅           | ✅           | ❌               | ✅ (via web)    |
+| Merge a pull request         | ✅  | ❌      | ✅           | ✅           | ❌               | ✅ (via web)    |
+| Create an issue              | ✅  | ❌      | ✅           | ✅           | ❌               | ✅ (via web)    |
+| Comment on an issue          | ✅  | ❌      | ✅           | ✅           | ❌               | ✅ (via web)    |
+| Close an issue               | ✅  | ❌      | ✅           | ✅           | ❌               | ✅ (via web)    |
+| View Actions run logs        | ✅  | ❌      | ✅           | ✅           | ❌               | ✅ (via web)    |
+| Trigger a workflow           | ✅  | ❌      | ❌           | ✅           | ❌               | ❌              |
+| Manage releases              | ✅  | ❌      | ❌           | ✅           | ❌               | ❌              |
+| Manage Gists                 | ✅  | ❌      | ❌           | ✅           | ❌               | ✅              |
+| Manage SSH keys on account   | ✅  | ❌      | ❌           | ✅           | ❌               | ❌              |
+| View notifications           | ✅  | ❌      | ✅           | ❌           | ❌               | ❌              |
+| View contribution graph      | ✅  | ❌      | ✅           | ❌           | ❌               | ❌              |
+| Repository settings          | ✅  | ❌      | ❌           | ✅ (limited) | ❌               | ❌              |
+| Branch protection            | ✅  | ❌      | ❌           | ❌           | ❌               | ❌              |
+| Organisation/team management | ✅  | ❌      | ✅ (limited) | ❌           | ❌               | ❌              |
+| GitHub Actions configuration | ✅  | ❌      | ❌           | ❌           | ✅ (edit YAML)   | ✅ (edit + run) |
+| Advanced search              | ✅  | ❌      | ✅           | ✅           | ❌               | ❌              |
+| VS Code extensions           | ❌  | ❌      | ❌           | ❌           | ✅ (subset)      | ✅ (all)        |
 
 ---
 
@@ -139,6 +139,7 @@ GitHub is available on six surfaces: the web browser, GitHub Desktop, the mobile
 🍎 **Mac** also: `brew install --cask github`
 
 After installation:
+
 1. Open GitHub Desktop
 2. Click **Sign in to GitHub.com**
 3. Complete the browser authentication
@@ -286,11 +287,11 @@ From `github.dev`, press `>` (greater-than sign) to open the command palette and
 
 **Limits:**
 
-| Plan | Free core-hours/month | Storage |
-|---|---|---|
-| Free | 120 core-hours | 15 GB |
-| Pro (and students) | 180 core-hours | 20 GB |
-| Paid | Billed per usage | Billed per GB |
+| Plan               | Free core-hours/month | Storage       |
+| ------------------ | --------------------- | ------------- |
+| Free               | 120 core-hours        | 15 GB         |
+| Pro (and students) | 180 core-hours        | 20 GB         |
+| Paid               | Billed per usage      | Billed per GB |
 
 A 2-core machine uses 1 core-hour per clock hour. So 120 core-hours = 60 hours of runtime on a 2-core machine per month.
 
@@ -321,10 +322,7 @@ A repository can include a `.devcontainer/devcontainer.json` file that configure
   "postCreateCommand": "pip install -r requirements.txt",
   "customizations": {
     "vscode": {
-      "extensions": [
-        "ms-python.python",
-        "github.copilot"
-      ]
+      "extensions": ["ms-python.python", "github.copilot"]
     }
   },
   "forwardPorts": [8000]
@@ -392,24 +390,24 @@ For the best experience, install the **GitHub Codespaces** VS Code extension to 
 
 ## Which Surface for Which Task
 
-| Task | Best surface | Why |
-|---|---|---|
-| Fix a typo in documentation | github.dev (press `.`) | No setup, commit directly, see the whole file |
-| Write and run new code | VS Code locally + git + gh | Full tooling, fastest iteration |
-| Write code without a local setup | Codespaces | Full environment in the browser |
-| Review a PR thoroughly | Web browser | Best context controls, comment threading, approval workflow |
-| Review a small PR away from desk | GitHub Mobile | Push notifications, inline comments on phone |
-| Check CI status on the go | GitHub Mobile | Push notifications, run logs visible |
-| Manage branch protection rules | Web browser | Only available on the web |
-| Create a release with binaries | GitHub CLI | `gh release create v1.0.0 dist/*` in one command |
-| Automate GitHub in a shell script | GitHub CLI | `--json` + `--jq` for scripting |
-| Learn Git visually | GitHub Desktop | Visual diff, staging, commit graph |
-| Configure repository settings | Web browser | All settings only available on the web |
-| Manage organisation members | Web browser (or Mobile for basics) | Full controls only on the web |
-| Quick code edit on a public repo | github.dev | No clone needed, immediate |
-| Contribute to a project with complex deps | Codespaces | Pre-configured dev container |
-| Onboard a new team member | Codespaces with dev container | Instant identical environment for everyone |
-| Batch operations on many repos | GitHub CLI | Scriptable with loops and JSON output |
+| Task                                      | Best surface                       | Why                                                         |
+| ----------------------------------------- | ---------------------------------- | ----------------------------------------------------------- |
+| Fix a typo in documentation               | github.dev (press `.`)             | No setup, commit directly, see the whole file               |
+| Write and run new code                    | VS Code locally + git + gh         | Full tooling, fastest iteration                             |
+| Write code without a local setup          | Codespaces                         | Full environment in the browser                             |
+| Review a PR thoroughly                    | Web browser                        | Best context controls, comment threading, approval workflow |
+| Review a small PR away from desk          | GitHub Mobile                      | Push notifications, inline comments on phone                |
+| Check CI status on the go                 | GitHub Mobile                      | Push notifications, run logs visible                        |
+| Manage branch protection rules            | Web browser                        | Only available on the web                                   |
+| Create a release with binaries            | GitHub CLI                         | `gh release create v1.0.0 dist/*` in one command            |
+| Automate GitHub in a shell script         | GitHub CLI                         | `--json` + `--jq` for scripting                             |
+| Learn Git visually                        | GitHub Desktop                     | Visual diff, staging, commit graph                          |
+| Configure repository settings             | Web browser                        | All settings only available on the web                      |
+| Manage organisation members               | Web browser (or Mobile for basics) | Full controls only on the web                               |
+| Quick code edit on a public repo          | github.dev                         | No clone needed, immediate                                  |
+| Contribute to a project with complex deps | Codespaces                         | Pre-configured dev container                                |
+| Onboard a new team member                 | Codespaces with dev container      | Instant identical environment for everyone                  |
+| Batch operations on many repos            | GitHub CLI                         | Scriptable with loops and JSON output                       |
 
 ---
 
@@ -451,7 +449,7 @@ Open the same repository from four different surfaces and notice what each one s
 **Surface 1 - Web browser:**
 
 ```
-1. Go to github.com/zaccessss/git-unlocked
+1. Go to github.com/zaccesss/git-unlocked
 2. Click around: Issues, Pull requests, Actions, Insights tabs
 3. Open any file and click the pencil (edit) icon - note: this edits one file at a time
 ```
@@ -468,15 +466,15 @@ Open the same repository from four different surfaces and notice what each one s
 **Surface 3 - GitHub CLI:**
 
 ```bash
-gh repo view zaccessss/git-unlocked
-gh issue list --repo zaccessss/git-unlocked --state open
+gh repo view zaccesss/git-unlocked
+gh issue list --repo zaccesss/git-unlocked --state open
 ```
 
 **Surface 4 - GitHub Mobile:**
 
 ```
 1. Open the GitHub app
-2. Search for zaccessss/git-unlocked
+2. Search for zaccesss/git-unlocked
 3. Star the repository
 4. Browse the file list - notice the syntax highlighting
 ```

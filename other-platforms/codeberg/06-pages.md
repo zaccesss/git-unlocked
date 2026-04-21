@@ -30,6 +30,7 @@ Codeberg Pages differs from GitHub Pages in one significant way: deployment come
 Codeberg Pages serves the contents of a special `pages` branch from your repository. When someone visits your Pages URL, Codeberg Pages serves the files from that branch as a static website.
 
 Unlike GitHub Pages, where you can deploy from any branch or a `/docs` folder:
+
 - Codeberg Pages only reads from the `pages` branch (the branch must be named exactly `pages`)
 - There is no option to deploy from the default branch or a subdirectory
 - Deployment is automatic - whenever you push to the `pages` branch, the site updates within a few seconds
@@ -72,6 +73,7 @@ For a personal site or portfolio that lives at `username.codeberg.page`:
 The URL is simply `https://username.codeberg.page`.
 
 For an organisation:
+
 1. Create a repository named **pages** under the organisation
 2. Add files to the `pages` branch
 
@@ -80,11 +82,13 @@ URL: `https://org-name.codeberg.page`
 ### Verifying deployment
 
 After pushing to the `pages` branch:
+
 1. Wait 30-60 seconds
 2. Visit your Pages URL
 3. The site should be live
 
 If the site does not appear, check:
+
 - The branch is named exactly `pages` (lowercase, no typos)
 - There is an `index.html` at the root of the branch
 - The repository is public (Codeberg Pages requires public repositories for free accounts)
@@ -93,17 +97,17 @@ If the site does not appear, check:
 
 ## URL structure
 
-| Repository type | URL pattern |
-|---|---|
-| User repository named `pages` | `https://username.codeberg.page` |
-| Organisation repository named `pages` | `https://org-name.codeberg.page` |
-| Any other user repository | `https://username.codeberg.page/repo-name` |
-| Any other org repository | `https://org-name.codeberg.page/repo-name` |
+| Repository type                       | URL pattern                                |
+| ------------------------------------- | ------------------------------------------ |
+| User repository named `pages`         | `https://username.codeberg.page`           |
+| Organisation repository named `pages` | `https://org-name.codeberg.page`           |
+| Any other user repository             | `https://username.codeberg.page/repo-name` |
+| Any other org repository              | `https://org-name.codeberg.page/repo-name` |
 
 ### Examples
 
-- User `zaccessss`, repository `zaccessss/pages` → `https://zaccessss.codeberg.page`
-- User `zaccessss`, repository `zaccessss/my-project` → `https://zaccessss.codeberg.page/my-project`
+- User `zaccesss`, repository `zaccesss/pages` → `https://zaccesss.codeberg.page`
+- User `zaccesss`, repository `zaccesss/my-project` → `https://zaccesss.codeberg.page/my-project`
 - Org `myteam`, repository `myteam/docs` → `https://myteam.codeberg.page/docs`
 
 ---
@@ -126,7 +130,7 @@ steps:
     image: node:20-alpine
     commands:
       - npm ci
-      - npm run build        # produces output in ./dist/
+      - npm run build # produces output in ./dist/
 
   - name: deploy-pages
     image: alpine/git
@@ -203,6 +207,7 @@ docs.yourproject.org
 ```
 
 For multiple domains:
+
 ```
 docs.yourproject.org
 www.yourproject.org
@@ -214,21 +219,22 @@ Commit and push this file to the `pages` branch.
 
 Add a CNAME record at your DNS provider pointing to Codeberg Pages:
 
-| Type | Name | Value |
-|---|---|---|
+| Type  | Name   | Value                    |
+| ----- | ------ | ------------------------ |
 | CNAME | `docs` | `username.codeberg.page` |
 
 Or for a root/apex domain, use an ALIAS or ANAME record:
 
-| Type | Name | Value |
-|---|---|---|
-| ALIAS | `@` | `username.codeberg.page` |
+| Type  | Name | Value                    |
+| ----- | ---- | ------------------------ |
+| ALIAS | `@`  | `username.codeberg.page` |
 
 DNS propagation typically takes a few minutes to a few hours.
 
 ### Step 3 - HTTPS provisioning
 
 Codeberg Pages automatically provisions a Let's Encrypt certificate for your custom domain once:
+
 - The `.domains` file lists the domain
 - The DNS CNAME/ALIAS record points to `username.codeberg.page`
 - The DNS has propagated
@@ -259,7 +265,7 @@ steps:
       TOKEN:
         from_secret: CODEBERG_TOKEN
     commands:
-      - cd public/    # Hugo outputs to public/ by default
+      - cd public/ # Hugo outputs to public/ by default
       - git init
       - git remote add origin https://username:${TOKEN}@codeberg.org/username/repo.git
       - git checkout -b pages
@@ -272,11 +278,13 @@ steps:
 ```
 
 Hugo configuration (`config.toml`):
+
 ```toml
 baseURL = "https://username.codeberg.page/repo-name/"
 ```
 
 Or for a custom domain:
+
 ```toml
 baseURL = "https://docs.yourproject.org/"
 ```
@@ -289,7 +297,7 @@ steps:
     image: python:3.12-slim
     commands:
       - pip install mkdocs mkdocs-material
-      - mkdocs build    # outputs to site/
+      - mkdocs build # outputs to site/
 
   - name: deploy
     image: alpine/git
@@ -310,6 +318,7 @@ steps:
 ```
 
 `mkdocs.yml`:
+
 ```yaml
 site_url: https://username.codeberg.page/repo-name/
 theme:
@@ -324,7 +333,7 @@ steps:
     image: node:20-alpine
     commands:
       - npm ci
-      - npx @11ty/eleventy    # outputs to _site/
+      - npx @11ty/eleventy # outputs to _site/
 
   - name: deploy
     image: alpine/git
@@ -453,8 +462,8 @@ steps:
       - git config --global user.email "ci@noreply.codeberg.org"
       - git config --global user.name "CI Deploy"
       - git clone --branch pages
-          https://your-username:${TOKEN}@codeberg.org/your-username/hello-codeberg.git
-          deploy
+        https://your-username:${TOKEN}@codeberg.org/your-username/hello-codeberg.git
+        deploy
       - echo "<p>Last deployed at $(date)</p>" >> deploy/index.html
       - cd deploy
       - git add -A

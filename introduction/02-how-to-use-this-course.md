@@ -23,19 +23,19 @@ How git-unlocked is organised, where to start, and how to get the most out of it
 
 git-unlocked is split into folders. Each folder covers a distinct area. You do not have to work through them in order - jump to whatever you need.
 
-| Folder | What is inside |
-|---|---|
-| `introduction/` | Start here - concepts, setup and how to navigate |
-| `git/` | Everything about Git itself, from `git init` to internals |
-| `github/` | Everything about GitHub - accounts, repos, PRs, Actions, security and more |
-| `gitlab/` | Everything about GitLab - merge requests, CI/CD, Duo AI and self-hosting |
-| `other-platforms/` | Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg at full depth |
-| `ides-and-editors/` | Git integration in VS Code, JetBrains, Neovim, Cursor and every other major editor |
-| `terminal/` | Shell setup, Git aliases, lazygit, delta, fzf, bat, tig and the full terminal toolchain |
-| `real-world/` | Practical scenarios - open source contribution, team workflows, GitOps, disaster recovery |
-| `reference/` | Cheatsheet, glossary, common mistakes and security reference |
-| `resources/` | Curated external resources - books, videos, interactive tools, communities |
-| `first-contribution/` | Make your very first pull request here |
+| Folder                | What is inside                                                                            |
+| --------------------- | ----------------------------------------------------------------------------------------- |
+| `introduction/`       | Start here - concepts, setup and how to navigate                                          |
+| `git/`                | Everything about Git itself, from `git init` to internals                                 |
+| `github/`             | Everything about GitHub - accounts, repos, PRs, Actions, security and more                |
+| `gitlab/`             | Everything about GitLab - merge requests, CI/CD, Duo AI and self-hosting                  |
+| `other-platforms/`    | Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg at full depth                        |
+| `ides-and-editors/`   | Git integration in VS Code, JetBrains, Neovim, Cursor and every other major editor        |
+| `terminal/`           | Shell setup, Git aliases, lazygit, delta, fzf, bat, tig and the full terminal toolchain   |
+| `real-world/`         | Practical scenarios - open source contribution, team workflows, GitOps, disaster recovery |
+| `reference/`          | Cheatsheet, glossary, common mistakes and security reference                              |
+| `resources/`          | Curated external resources - books, videos, interactive tools, communities                |
+| `first-contribution/` | Make your very first pull request here                                                    |
 
 Files are numbered within each folder so you always know the recommended reading order. You can follow it or skip around freely.
 
@@ -149,16 +149,16 @@ Callout boxes highlight information that deserves extra attention. The course us
 ## Getting help
 
 **Something is broken or incorrect in the course.**
-Open an issue using the [bug report template](https://github.com/zaccessss/git-unlocked/issues/new?template=bug_report.md).
+Open an issue using the [bug report template](https://github.com/zaccesss/git-unlocked/issues/new?template=bug_report.md).
 
 **You want to suggest new content.**
-Open an issue using the [content suggestion template](https://github.com/zaccessss/git-unlocked/issues/new?template=content_suggestion.md).
+Open an issue using the [content suggestion template](https://github.com/zaccesss/git-unlocked/issues/new?template=content_suggestion.md).
 
 **You are stuck on a Git problem.**
 The [common mistakes](../reference/common-mistakes.md) file covers the most frequent issues with exact fix commands. If your problem is not there, [Stack Overflow's git tag](https://stackoverflow.com/questions/tagged/git) has answers to almost every Git question ever asked. The [GitHub Community Discussions](https://github.com/orgs/community/discussions) board is also active and helpful.
 
 **You want to discuss the course or connect with other learners.**
-The [GitHub Discussions tab](https://github.com/zaccessss/git-unlocked/discussions) on this repository is the right place for questions, ideas and conversation.
+The [GitHub Discussions tab](https://github.com/zaccesss/git-unlocked/discussions) on this repository is the right place for questions, ideas and conversation.
 
 ---
 

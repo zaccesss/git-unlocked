@@ -45,24 +45,24 @@ This file covers the safe migration sequence for every common platform pair, the
 
 Before planning a migration, map out everything your repository relies on. Separate it into what Git carries and what the platform carries.
 
-| Item | Travels with Git? | Notes |
-|---|---|---|
-| Commits, branches, tags | Yes | `git push --mirror` transfers all of these |
-| Git notes | Yes | Included in `refs/notes/*` |
-| Git LFS objects | No | Separate store - requires explicit transfer |
-| Issues | No | Platform database - use platform importer |
-| Pull requests / merge requests | No | Platform database - use platform importer |
-| PR/MR comments | No | Platform database - partial via importer |
-| Labels and milestones | No | Platform database - via importer |
-| Releases | No | Platform database - via importer |
-| Wiki | Partial | Wiki is a separate Git repo - mirror it separately |
-| Webhooks | No | Recreate manually or via Terraform/API |
-| Deploy keys | No | Recreate and rotate |
-| CI/CD secrets | No | Recreate and rotate - never copy old values |
-| Branch protection / Rulesets | No | Recreate from documentation |
-| CI/CD pipeline definitions | Yes | `.github/workflows/`, `.gitlab-ci.yml` etc. are files in Git |
-| Submodules | Partial | Pointers transfer; you must update the URLs |
-| GitHub Actions | Yes (definitions) / No (logs, caches) | Workflow files transfer; run history does not |
+| Item                           | Travels with Git?                     | Notes                                                        |
+| ------------------------------ | ------------------------------------- | ------------------------------------------------------------ |
+| Commits, branches, tags        | Yes                                   | `git push --mirror` transfers all of these                   |
+| Git notes                      | Yes                                   | Included in `refs/notes/*`                                   |
+| Git LFS objects                | No                                    | Separate store - requires explicit transfer                  |
+| Issues                         | No                                    | Platform database - use platform importer                    |
+| Pull requests / merge requests | No                                    | Platform database - use platform importer                    |
+| PR/MR comments                 | No                                    | Platform database - partial via importer                     |
+| Labels and milestones          | No                                    | Platform database - via importer                             |
+| Releases                       | No                                    | Platform database - via importer                             |
+| Wiki                           | Partial                               | Wiki is a separate Git repo - mirror it separately           |
+| Webhooks                       | No                                    | Recreate manually or via Terraform/API                       |
+| Deploy keys                    | No                                    | Recreate and rotate                                          |
+| CI/CD secrets                  | No                                    | Recreate and rotate - never copy old values                  |
+| Branch protection / Rulesets   | No                                    | Recreate from documentation                                  |
+| CI/CD pipeline definitions     | Yes                                   | `.github/workflows/`, `.gitlab-ci.yml` etc. are files in Git |
+| Submodules                     | Partial                               | Pointers transfer; you must update the URLs                  |
+| GitHub Actions                 | Yes (definitions) / No (logs, caches) | Workflow files transfer; run history does not                |
 
 > [!CAUTION]
 > CI/CD secrets must be rotated, not copied. A secret copied from one platform to another was valid on the old platform and may still be valid. Rotation ensures the old value is invalidated and only the new platform holds a working credential.
@@ -275,12 +275,12 @@ The **GitHub Enterprise Importer (GEI)** ([github.com/github/gh-gei](https://git
 
 ### Supported migration paths
 
-| Source | Tool |
-|---|---|
-| GitHub.com or GitHub Enterprise | `gh gei` |
-| Azure DevOps | `gh ado2gh` |
-| Bitbucket Server / Data Center | `gh bbs2gh` |
-| GitLab | Not supported |
+| Source                          | Tool          |
+| ------------------------------- | ------------- |
+| GitHub.com or GitHub Enterprise | `gh gei`      |
+| Azure DevOps                    | `gh ado2gh`   |
+| Bitbucket Server / Data Center  | `gh bbs2gh`   |
+| GitLab                          | Not supported |
 
 > [!IMPORTANT]
 > GEI does not support GitLab to GitHub migration. This is the most commonly missed limitation. Workarounds: use `git push --mirror` for the repository, then manually recreate issues and PRs; or stage through another platform first.
@@ -511,7 +511,7 @@ docker run -d \
 # Generate a token with Repository and Issue scopes
 
 # Step 4: mirror-clone a small public GitHub repository
-git clone --mirror https://github.com/zaccessss/git-unlocked.git
+git clone --mirror https://github.com/zaccesss/git-unlocked.git
 cd git-unlocked.git
 
 # Step 5: create the destination repo on Gitea via API
