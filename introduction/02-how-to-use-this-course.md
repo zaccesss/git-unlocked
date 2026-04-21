@@ -1,209 +1,174 @@
-# How to Use This Course
+# How to use this course
 
 **Difficulty:** 🟢 Beginner | **Time:** 5 minutes
 
-Taking five minutes to understand how this course is structured will save you hours of confusion later.
+How git-unlocked is organised, where to start, and how to get the most out of it.
 
 ---
 
-## Table of Contents
+## Table of contents
 
 - [How the course is organised](#how-the-course-is-organised)
 - [Where to start](#where-to-start)
 - [Difficulty levels](#difficulty-levels)
-- [Callout key](#callout-key)
 - [OS coverage](#os-coverage)
-- [IDE and editor coverage](#ide-and-editor-coverage)
-- [Where to type commands](#where-to-type-commands)
+- [Callout key](#callout-key)
 - [How to get the most out of this course](#how-to-get-the-most-out-of-this-course)
 - [Getting help](#getting-help)
 - [Sources and Further Reading](#sources-and-further-reading)
 
 ---
 
-## How the Course is Organised
+## How the course is organised
 
-git-unlocked is split into folders. Each folder covers a specific area:
+git-unlocked is split into folders. Each folder covers a distinct area. You do not have to work through them in order - jump to whatever you need.
 
-| Folder                | What is inside                                                              |
-| --------------------- | --------------------------------------------------------------------------- |
-| `introduction/`       | Start here - welcome, setup and how to navigate                             |
-| `git/`                | Everything about Git itself - beginner to advanced                          |
-| `github/`             | Everything about GitHub - accounts, repos, PRs, Actions and more            |
-| `gitlab/`             | Everything about GitLab - basics, merge requests, CI/CD and more            |
-| `ides/`               | Using Git inside VS Code, JetBrains, Visual Studio, Xcode and other editors |
-| `terminal/`           | Using Git in the terminal - CMD, PowerShell, Bash and Zsh                   |
-| `real-world/`         | Real scenarios - team workflows, open source, industry practices            |
-| `reference/`          | Cheatsheet, glossary, keyboard shortcuts, common mistakes and tools         |
-| `resources/`          | Curated videos, books and practice platforms                                |
-| `first-contribution/` | Make your very first pull request here as practice                          |
+| Folder | What is inside |
+|---|---|
+| `introduction/` | Start here - concepts, setup and how to navigate |
+| `git/` | Everything about Git itself, from `git init` to internals |
+| `github/` | Everything about GitHub - accounts, repos, PRs, Actions, security and more |
+| `gitlab/` | Everything about GitLab - merge requests, CI/CD, Duo AI and self-hosting |
+| `other-platforms/` | Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg at full depth |
+| `ides-and-editors/` | Git integration in VS Code, JetBrains, Neovim, Cursor and every other major editor |
+| `terminal/` | Shell setup, Git aliases, lazygit, delta, fzf, bat, tig and the full terminal toolchain |
+| `real-world/` | Practical scenarios - open source contribution, team workflows, GitOps, disaster recovery |
+| `reference/` | Cheatsheet, glossary, common mistakes and security reference |
+| `resources/` | Curated external resources - books, videos, interactive tools, communities |
+| `first-contribution/` | Make your very first pull request here |
 
-Files are numbered within each folder so you always know the recommended reading order. You do not have to follow it - jump to whatever you need.
+Files are numbered within each folder so you always know the recommended reading order. You can follow it or skip around freely.
 
 ---
 
-## Where to Start
+## Where to start
 
-**Never used Git before?** Work through these in order:
+**Never used Git or version control before?**
 
-1. [Setting Up](03-setting-up.md)
-2. [What is Version Control?](../git/01-what-is-version-control.md)
-3. [Installing Git](../git/02-installing-git.md)
-4. [How Git Works](../git/03-how-git-works.md)
-5. [Core Concepts](../git/04-core-concepts.md)
-6. [Basic Commands](../git/05-basic-commands.md)
+Work through these in order:
 
-**Know the basics but want to go further?**
+1. [What is version control?](04-version-control-concepts.md) - the concepts before any commands
+2. [Setting up](03-setting-up.md) - install Git and configure your identity
+3. [How Git works](../git/03-how-git-works.md) - the mental model
+4. [Core concepts](../git/04-core-concepts.md) - repository, working tree, staging area, HEAD
+5. [Basic commands](../git/05-basic-commands.md) - your first real Git commands
+
+**Know the basics and want to go further?**
 
 - [Branching](../git/06-branching.md) - work on features without breaking things
 - [Merging](../git/07-merging.md) - combine your work back together
-- [Pull Requests](../github/05-pull-requests.md) - collaborate professionally
-- [GitLab Basics](../gitlab/04-gitlab-basics.md) - if you also need GitLab
+- [Pull requests](../github/08-pull-requests.md) - collaborate professionally on GitHub
+- [Rebase](../git/13-rebase.md) - the most powerful history-management tool
+- [Real-world workflows](../real-world/02-working-in-a-team.md) - how professional teams actually work
 
 **Ready for advanced topics?**
 
-- [Rebase](../git/12-rebase.md) - rewrite history cleanly
-- [Cherry-pick](../git/13-cherry-pick.md) - grab specific commits
-- [Reset and Revert](../git/14-reset-and-revert.md) - undo things safely
-- [GitHub Actions](../github/06-github-actions.md) - automate everything
-- [GitLab CI/CD](../gitlab/06-gitlab-ci-cd.md) - pipelines and deployment
+- [Git internals](../git/25-git-internals-advanced.md) - packfiles, the object model, plumbing commands
+- [GitOps](../real-world/03-gitops-workflows.md) - ArgoCD, Flux and Git as infrastructure source of truth
+- [Monorepo patterns](../real-world/04-monorepo-patterns.md) - partial clone, sparse checkout, Nx, Turborepo, Bazel
+- [Security](../reference/security.md) - gitleaks, TruffleHog, commit signing, supply chain security
+- [Recovering from disasters](../real-world/06-recovering-from-disasters.md) - reflog, lost commits, committed secrets
 
-**Just need a quick answer?**
+**Just need a reference?**
 
-- [FAQ](../FAQ.md)
-- [Cheatsheet](../reference/cheatsheet.md)
-- [Glossary](../reference/glossary.md)
-- [Common Mistakes](../reference/common-mistakes.md)
+- [Cheatsheet](../reference/cheatsheet.md) - every command organised by task
+- [Glossary](../reference/glossary.md) - every term defined
+- [Common mistakes](../reference/common-mistakes.md) - errors and exact fixes
 
----
+**Want to make your first contribution right now?**
 
-## Difficulty Levels
-
-Every file is marked with a difficulty level at the top:
-
-| Level           | Means                                           |
-| --------------- | ----------------------------------------------- |
-| 🟢 Beginner     | No prior knowledge needed                       |
-| 🟡 Intermediate | Comfortable with basic Git and GitHub           |
-| 🔴 Advanced     | Confident with everyday Git, ready to go deeper |
-
-The levels are a guide, not a gate. Do not let them stop you from reading ahead.
+Go to [first-contribution/](../first-contribution/README.md). It takes less than ten minutes and uses a real GitHub workflow.
 
 ---
 
-## Callout Key
+## Difficulty levels
 
-Throughout this course you will see GitHub-native alert boxes for important information:
+Every file is labelled with one or more difficulty markers so you know what to expect before you start reading.
+
+🟢 **Beginner** - no prior experience needed with the topic. Plain language, step-by-step instructions, nothing assumed.
+
+🟡 **Intermediate** - you are comfortable with basic Git commands and can navigate a terminal. Some concepts build on earlier material.
+
+🔴 **Advanced** - production-level depth. Complex scenarios, internals, edge cases. May reference concepts from multiple earlier files.
+
+A file labelled 🟢🟡 covers beginner material first and builds toward intermediate. A file labelled 🟡🔴 starts at intermediate and reaches advanced depth by the end.
+
+---
+
+## OS coverage
+
+Every file in this course covers 🪟 Windows, 🍎 Mac and 🐧 Linux side by side. No platform is treated as the default.
+
+When a command is identical on all three platforms, it appears once without any label. When commands differ, they are labelled clearly:
+
+```bash
+# 🪟 Windows (PowerShell)
+$env:PATH += ";C:\Program Files\Git\bin"
+
+# 🍎 Mac / 🐧 Linux
+export PATH="$PATH:/usr/local/bin"
+```
+
+Every command block specifies where to type it - either in the OS label above it or in a sentence before the block. You will never be left wondering which terminal to use.
+
+---
+
+## Callout key
+
+Callout boxes highlight information that deserves extra attention. The course uses five types:
 
 > [!NOTE]
-> Something worth knowing - background information or context.
+> Worth knowing - useful context that is not critical but often answers a question you are about to have.
 
 > [!TIP]
-> A helpful technique, shortcut or best practice.
+> A technique or shortcut that makes something easier or faster.
 
 > [!IMPORTANT]
-> A pro tip that will meaningfully improve your workflow.
+> A key point that will significantly improve your workflow or understanding.
 
 > [!WARNING]
-> Read this before continuing - skipping it commonly causes problems.
+> Read this before continuing. Ignoring it may cause problems that are annoying to fix.
 
 > [!CAUTION]
-> A security note - something that protects your credentials, data or accounts.
-
-OS-specific instructions are clearly labelled as **Windows**, **Mac** or **Linux**.
+> A security or data safety issue. Ignoring it can lead to lost data, exposed credentials or broken repositories.
 
 ---
 
-## OS Coverage
+## How to get the most out of this course
 
-Every command in this course is shown for all three major operating systems:
+**Type the commands yourself.** Reading about Git is useful. Typing the commands yourself is how you actually learn it. Every file has a Try It Yourself section with practical exercises. Do them.
 
-- **Windows** - both Command Prompt and PowerShell where they differ
-- **Mac** - Terminal (Bash and Zsh, including Apple Silicon notes where relevant)
-- **Linux** - Bash (applicable to Ubuntu, Debian, Fedora, Arch and most major distributions)
+**Use the reference files.** The [cheatsheet](../reference/cheatsheet.md), [glossary](../reference/glossary.md) and [common mistakes](../reference/common-mistakes.md) files are designed to be used repeatedly, not just read once. Bookmark them.
 
-If a command is identical across all three systems, it is shown once without a label.
+**Follow the links.** Files cross-reference each other throughout. When a concept comes from an earlier file, there is a link. Following those links builds a more complete picture than reading any single file in isolation.
 
----
-
-## IDE and Editor Coverage
-
-This course covers Git inside all major code editors and IDEs - not just VS Code:
-
-| IDE / Editor       | What is covered                                                                         |
-| ------------------ | --------------------------------------------------------------------------------------- |
-| VS Code            | Built-in Source Control panel, Source Control Graph, extensions, shortcuts              |
-| JetBrains          | IntelliJ IDEA, PyCharm, WebStorm, CLion, Rider, GoLand and all other JetBrains products |
-| Visual Studio 2026 | Full Git integration for Windows developers                                             |
-| Xcode 26           | Git setup and usage for Apple platform developers                                       |
-| Neovim and Vim     | Fugitive, Gitsigns, Neogit and LazyGit                                                  |
-| Sublime Text       | GitSavvy plugin                                                                         |
-
-> [!NOTE]
-> An **IDE (Integrated Development Environment)** is an all-in-one application that combines a code editor, debugger, terminal and version control in one window. It is fully explained in [ides/01-what-is-an-ide.md](../ides/01-what-is-an-ide.md).
+**Contribute back.** If you spot a mistake, find a better explanation, or want to add content - open a pull request. Read [CONTRIBUTING.md](../CONTRIBUTING.md) first. Everyone who contributes is listed in [HALL_OF_FAME.md](../HALL_OF_FAME.md).
 
 ---
 
-## Where to Type Commands
+## Getting help
 
-This is one of the most important things to understand as a beginner. When this course shows you a command, it always tells you exactly where to type it.
+**Something is broken or incorrect in the course.**
+Open an issue using the [bug report template](https://github.com/zaccessss/git-unlocked/issues/new?template=bug_report.md).
 
-**In a terminal:**
+**You want to suggest new content.**
+Open an issue using the [content suggestion template](https://github.com/zaccessss/git-unlocked/issues/new?template=content_suggestion.md).
 
-- **Windows** - open **Command Prompt** (search `cmd`) or **PowerShell** (search `powershell`) or **Windows Terminal**
-- **Mac** - open **Terminal** (press `Cmd + Space`, type `Terminal`, press Enter)
-- **Linux** - open your **Terminal** application (usually `Ctrl + Alt + T`)
+**You are stuck on a Git problem.**
+The [common mistakes](../reference/common-mistakes.md) file covers the most frequent issues with exact fix commands. If your problem is not there, [Stack Overflow's git tag](https://stackoverflow.com/questions/tagged/git) has answers to almost every Git question ever asked. The [GitHub Community Discussions](https://github.com/orgs/community/discussions) board is also active and helpful.
 
-**Inside VS Code:**
-Open the integrated terminal with `` Ctrl + ` `` (Windows/Linux) or `` Cmd + ` `` (Mac). Commands work exactly the same as in a standalone terminal.
-
-**Inside JetBrains:**
-Open the terminal panel with `Alt + F12` (Windows/Linux) or `Option + F12` (Mac).
-
-> [!WARNING]
-> Type commands **one at a time**. Press Enter after each one and read the output before typing the next command. Do not paste a block of multiple commands at once until you understand what each one does.
-
----
-
-## How to Get the Most Out of This Course
-
-**Do the exercises.** Every file includes a Try It Yourself section. Reading about Git without practising it is like reading about swimming without getting in the water. The exercises use a real repository so everything you do counts toward your GitHub activity.
-
-**Commit as you go.** Use a real repository to practise as you work through the course. You will build a genuine commit history and your GitHub contribution graph will grow alongside your knowledge.
-
-**Use the first-contribution sandbox.** The [first-contribution](../first-contribution/README.md) folder is where you can make your first pull request safely. It is designed for absolute beginners and takes less than five minutes.
-
-**Do not skip the Common Mistakes sections.** These are based on real questions from Stack Overflow, Reddit and developer forums - the things that trip everyone up. Reading them before you encounter them will save you a lot of time.
-
-**Read the security callouts.** Accidentally pushing a password or API key to a public GitHub repository happens to real developers regularly. The security guidance will protect you.
-
----
-
-## Getting Help
-
-| Need                 | Where to go                                                                |
-| -------------------- | -------------------------------------------------------------------------- |
-| Quick answer         | [FAQ.md](../FAQ.md)                                                        |
-| Command reference    | [reference/cheatsheet.md](../reference/cheatsheet.md)                      |
-| Term definition      | [reference/glossary.md](../reference/glossary.md)                          |
-| Something went wrong | [reference/common-mistakes.md](../reference/common-mistakes.md)            |
-| Ask a question       | [GitHub Discussions](https://github.com/zaccesss/git-unlocked/discussions) |
-| Report an error      | [GitHub Issues](https://github.com/zaccesss/git-unlocked/issues)           |
-
----
-
-## Next Step
-
-Head to [Setting Up](03-setting-up.md) to get your accounts created, Git installed and everything configured.
+**You want to discuss the course or connect with other learners.**
+The [GitHub Discussions tab](https://github.com/zaccessss/git-unlocked/discussions) on this repository is the right place for questions, ideas and conversation.
 
 ---
 
 ## Sources and Further Reading
 
 - [Official Git documentation](https://git-scm.com/doc) - the authoritative reference for all Git commands
+- [Pro Git book](https://git-scm.com/book/en/v2) - the free official Git book, available online in multiple languages
 - [GitHub documentation](https://docs.github.com) - everything about using GitHub
 - [GitLab documentation](https://docs.gitlab.com) - everything about using GitLab
-- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) - the widely-adopted standard for structured commit messages
+- [resources/index.md](../resources/index.md) - 120+ curated resources for going further
 
 ---
 
