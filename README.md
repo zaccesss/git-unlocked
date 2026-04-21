@@ -2,7 +2,7 @@
 
 > The most complete open source Git and version control course available. Free forever. MIT licensed.
 
-[![markdownlint](https://github.com/zaccessss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccessss/git-unlocked/actions/workflows/markdownlint.yml)
+[![markdownlint](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccessss/git-unlocked/actions/workflows/markdownlint.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](CHANGELOG.md)
 
@@ -96,6 +96,7 @@ If this course helped you, please star the repository. It helps others find it.
 
 <br />
 
+[![isaacadjei.me](https://img.shields.io/badge/isaacadjei.me-000000?style=for-the-badge)](https://isaacadjei.me)
 [![zacess.com](https://img.shields.io/badge/zacess.com-000000?style=for-the-badge)](https://zacess.com)
 [![GitHub](https://img.shields.io/badge/github-zaccessss-181717?style=for-the-badge&logo=github)](https://github.com/zaccessss)
 
