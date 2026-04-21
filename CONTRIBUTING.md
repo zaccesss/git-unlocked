@@ -252,11 +252,11 @@ Every command block must specify where to type it - either in the OS label or in
 
 - All file names: **lowercase and hyphens only** - no spaces, underscores or capitals
 - Follow the existing numbering: `01-`, `02-`, `03-` etc.
-- Correct folder: `git/`, `github/`, `gitlab/`, `ides/`, `terminal/`, `real-world/`, `reference/` or `resources/`
+- Correct folder: `02-git/`, `03-github/`, `04-gitlab/`, `06-ides-and-editors/`, `07-terminal/`, `08-real-world/`, `09-reference/` or `10-resources/`
 - Do not create new top-level folders without discussing it in an issue first
 
-**Correct:** `git/06-branching.md`
-**Wrong:** `git/Branching.md`, `git/branching_guide.md`, `git/branchingGuide.md`
+**Correct:** `02-git/06-branching.md`
+**Wrong:** `02-git/Branching.md`, `02-git/branching_guide.md`, `02-git/branchingGuide.md`
 
 ---
 
@@ -277,8 +277,8 @@ type: short description of what you did
 **Examples:**
 
 ```bash
-git commit -m "add: cherry-pick exercise to git/13-cherry-pick.md"
-git commit -m "fix: correct typo in github/04-issues.md"
+git commit -m "add: cherry-pick exercise to 02-git/13-cherry-pick.md"
+git commit -m "fix: correct typo in 03-github/04-issues.md"
 git commit -m "update: improve merge conflict explanation"
 ```
 

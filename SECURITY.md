@@ -2,7 +2,7 @@
 
 ## Reporting a Vulnerability
 
-git-unlocked is an educational course repository. It does not contain application code, APIs or user data. However, security matters in two specific ways:
+git-unlocked is an educational course repository. It does not contain application code, APIs, or user data. However, security matters in two specific ways:
 
 1. **Malicious content** - if you find a file that contains harmful, misleading or dangerous instructions that could put a learner at risk
 2. **Credential or sensitive data exposure** - if you find any accidentally committed secrets, tokens or private information in the repository history or files

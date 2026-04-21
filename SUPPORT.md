@@ -9,9 +9,9 @@ There are several ways to get help with git-unlocked depending on what you need.
 Start with the course itself - most questions are answered somewhere in the files.
 
 - **[FAQ.md](FAQ.md)** - the most commonly asked questions, answered in detail
-- **[reference/glossary.md](reference/glossary.md)** - every term defined clearly
-- **[reference/common-mistakes.md](reference/common-mistakes.md)** - common errors and exactly how to fix them
-- **[reference/cheatsheet.md](reference/cheatsheet.md)** - every Git command in one place
+- **[09-reference/glossary.md](09-reference/glossary.md)** - every term defined clearly
+- **[09-reference/common-mistakes.md](09-reference/common-mistakes.md)** - common errors and exactly how to fix them
+- **[09-reference/cheatsheet.md](09-reference/cheatsheet.md)** - every Git command in one place
 
 If your question is not covered, open a **[GitHub Discussion](https://github.com/zaccesss/git-unlocked/discussions)**. Discussions are the right place for questions, ideas and general conversation about the course content.
 
