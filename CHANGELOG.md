@@ -2,160 +2,152 @@
 
 All notable changes to git-unlocked are documented here.
 
-The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and this project uses [Semantic Versioning](https://semver.org/).
+This project follows [Semantic Versioning](https://semver.org). The format is based on [Keep a Changelog](https://keepachangelog.com).
+
+---
+
+## Version format
+
+```
+MAJOR.MINOR.PATCH
+
+MAJOR - significant restructure or complete section overhaul
+MINOR - new files, new sections or meaningful content additions
+PATCH - typo fixes, small corrections, link updates
+```
+
+| Tag | Meaning |
+|---|---|
+| `Added` | New files or sections |
+| `Updated` | Existing content improved or expanded |
+| `Fixed` | Typos, errors or broken links corrected |
+| `Removed` | Content removed |
+| `Renamed` | Files or folders renamed |
 
 ---
 
 ## [Unreleased]
 
-### Planned
+In progress or planned - not yet in a release.
 
-- `real-world/` - practical scenario files (open source contributions, team workflows, GitOps, monorepos, platform migration, disaster recovery)
-- `reference/` - cheatsheet, glossary and common mistakes
-- `resources/` - curated external links index
-- `first-contribution/` - beginner PR sandbox
-- GitHub Pages setup
-- Interactive HTML quiz pages
-- Animated SVG diagrams
-- Cross-reference audit
+- GitHub Pages site at zaccessss.github.io/git-unlocked
+- Interactive HTML quiz pages with instant answer checking
+- Animated SVG diagrams for key Git concepts
+- Cross-reference audit of all internal links
 - Accessibility review
-- README trim and `introduction/02` full rewrite (deferred until all folders complete)
-- New file `introduction/04-version-control-concepts.md`
+- Banner image and assets folder
 
 ---
 
-## [1.1.0] - 2025-07-10
+## [1.2.0] - 2026-04-21
+
+### Added
+
+#### real-world/ - 8 files
+
+Practical scenarios showing Git in real professional contexts.
+
+- `real-world/00-real-world-overview.md` - section map, reading order and the three key themes
+- `real-world/01-contributing-to-open-source.md` - fork workflow, upstream sync, fixup commit review pattern, GitHub vs GitLab differences, Linux/Kubernetes/Rust project flows
+- `real-world/02-working-in-a-team.md` - all four branching strategies, code review, CODEOWNERS, Rulesets, merge queues, real examples from Google/Shopify/Microsoft/Netflix
+- `real-world/03-gitops-workflows.md` - OpenGitOps principles, ArgoCD v3.3.7, Flux v2.8.2, Kustomize overlays, Kargo, real adoption examples
+- `real-world/04-monorepo-patterns.md` - partial clone, sparse-checkout cone mode, fsmonitor, Scalar, Nx 22.x, Turborepo 2.8, Bazel 9/8, real company examples
+- `real-world/05-migrating-between-platforms.md` - mirror clone, Git LFS migration, GitLab importer, GEI toolkit, full checklist, 2017 GitLab DB outage war story
+- `real-world/06-recovering-from-disasters.md` - reflog recovery, bad merge, accidental force push, committed secrets, gitleaks, TruffleHog, revert vs reset rule
+- `real-world/07-all-real-world-reference.md` - consolidated quick-reference for all patterns from the section
+
+#### reference/ - 4 files
+
+- `reference/cheatsheet.md` - every essential Git command organised by task including monorepo and performance commands
+- `reference/glossary.md` - A to W, every term in Git and version control defined plainly
+- `reference/common-mistakes.md` - most frequent Git errors grouped by category with exact fix commands
+- `reference/security.md` - comprehensive security reference: gitleaks, TruffleHog, push protection, signing, Rulesets, SLSA, cosign v3, Trusted Publishing, Dependabot cooldown, SOPS+age, GCM, IDE security, terminal hygiene, five real-world incidents and the five controls that prevent most supply chain compromises
+
+#### resources/ - 1 file
+
+- `resources/index.md` - curated guide to 120+ learning resources: official docs, books with ISBNs, free and paid video courses, interactive platforms, websites, cheatsheets, podcasts, GitHub repositories, GUI clients, communities, newsletters and certifications; recommended paths by level and resources-to-avoid section
+
+#### first-contribution/ - 2 files
+
+- `first-contribution/README.md` - step-by-step guide for making a first open source PR, with troubleshooting
+- `first-contribution/contributors.md` - the file contributors add their name to
+
+#### introduction/ - 2 new files
+
+- `introduction/02-how-to-use-this-course.md` - full rewrite; replaces initial placeholder
+- `introduction/04-version-control-concepts.md` - new bridging file covering what version control is, the history of VCS tools, and the core Git mental model
+
+### Updated
+
+- `README.md` - trimmed and restructured as a pure navigation page; added sections for real-world/, reference/, resources/ and first-contribution/
+- `CHANGELOG.md` - added v1.2.0 entry
+- `ROADMAP.md` - all sections marked complete; long-term items noted
+
+---
+
+## [1.1.0] - 2026-04-20
 
 ### Added
 
 #### terminal/ - 14 files
 
-Complete terminal toolchain section covering shell setup, safety, configuration and every major Git terminal tool across Windows, Mac and Linux.
-
-- `terminal/00-terminal-overview.md` - section introduction and tool map
-- `terminal/01-shell-setup.md` - Bash, Zsh, Fish and PowerShell setup for Git work
-- `terminal/02-git-config-and-aliases.md` - global config, per-project config and alias patterns
-- `terminal/03-terminal-workflow.md` - day-to-day Git in the terminal from clone to push
-- `terminal/04-terminal-safety.md` - preventing disasters: `.gitignore`, credential hygiene, force-push guards
-- `terminal/05-delta.md` - beautiful diffs with the delta pager
-- `terminal/06-lazygit.md` - full-screen terminal UI for Git
-- `terminal/07-fzf.md` - fuzzy finder integrated with Git for branches, logs and stash
-- `terminal/08-bat.md` - syntax-highlighted file viewer as a `cat` replacement
-- `terminal/09-tig.md` - text-mode Git repository browser
-- `terminal/10-gitui.md` - Rust-based terminal UI for Git
-- `terminal/11-starship.md` - cross-shell prompt with Git status integration
-- `terminal/12-zoxide.md` - smarter `cd` for navigating Git projects
-- `terminal/13-complete-terminal-workflow.md` - putting all tools together in a real workflow
+- `terminal/00-terminal-overview.md` through `terminal/13-all-terminal-tools-reference.md`
+- Full terminal toolchain: shell setup, safety, config, aliases, delta, lazygit, fzf, bat, tig, gitui, starship, zoxide, forgit, complete workflow
 
 ### Fixed
 
-- `terminal/04-terminal-safety.md` line 538 - MD038 space inside backtick code span (leading space moved outside backtick)
+- `terminal/04-terminal-safety.md` - MD038 space inside backtick code span
 
 ---
 
-## [1.0.0] - 2025-06-15
+## [1.0.0] - 2026-04-20
 
 ### Added
 
+#### ides-and-editors/ - 14 files
+
+- `ides-and-editors/00-ides-overview.md` through `ides-and-editors/13-all-ides-features-reference.md`
+- VS Code, JetBrains, Neovim, GitHub Desktop, Cursor, Windsurf, Antigravity, Kiro, Zed, Helix, Sublime Text, other editors (Emacs/Magit, Visual Studio, Xcode, Android Studio, Eclipse, Nova, Vim, nano)
+
 #### introduction/ - 3 files
 
-- `introduction/00-introduction-overview.md`
-- `introduction/01-welcome.md`
-- `introduction/02-how-to-use-this-course.md`
+- `introduction/01-welcome.md`, `introduction/02-how-to-use-this-course.md` (initial), `introduction/03-setting-up.md`
 
 #### git/ - 29 files
 
-Complete pure Git coverage from `git init` to internals, packfiles and reflog.
-
-- `git/00-git-overview.md`
-- `git/01-what-is-version-control.md`
-- `git/02-installing-git.md`
-- `git/03-first-time-setup.md`
-- `git/04-your-first-repo.md`
-- `git/05-staging-and-committing.md`
-- `git/06-viewing-history.md`
-- `git/07-undoing-changes.md`
-- `git/08-branching.md`
-- `git/09-merging.md`
-- `git/10-rebasing.md`
-- `git/11-stashing.md`
-- `git/12-tagging.md`
-- `git/13-remote-repos.md`
-- `git/14-fetch-pull-push.md`
-- `git/15-resolving-conflicts.md`
-- `git/16-gitignore.md`
-- `git/17-git-log-advanced.md`
-- `git/18-git-diff.md`
-- `git/19-cherry-pick.md`
-- `git/20-bisect.md`
-- `git/21-submodules.md`
-- `git/22-worktrees.md`
-- `git/23-hooks.md`
-- `git/24-reflog.md`
-- `git/25-internals.md`
-- `git/26-packfiles.md`
-- `git/27-signing-commits.md`
-- `git/28-all-git-reference.md`
+- `git/00-git-overview.md` through `git/28-all-git-commands.md`
+- Complete Git coverage from installation to internals, packfiles and reflog
 
 #### github/ - 28 files
 
-Full GitHub platform coverage including Copilot, Actions, Pages, security and CLI.
-
-- `github/00-github-overview.md` through `github/27-all-github-reference.md`
+- `github/00-github-overview.md` through `github/27-all-github-features-reference.md`
+- Full GitHub platform coverage including Copilot, Actions, Pages, security, CLI and organisations
 
 #### gitlab/ - 16 files
 
-Full GitLab platform coverage including CI/CD, Duo, self-hosting and API.
+- `gitlab/00-gitlab-overview.md` through `gitlab/15-all-gitlab-features-reference.md`
+- Full GitLab coverage including CI/CD, Duo, self-hosting and API
 
-- `gitlab/00-gitlab-overview.md` through `gitlab/15-all-gitlab-reference.md`
+#### other-platforms/ - 62 files
 
-#### other-platforms/bitbucket/ - 14 files
-
-Bitbucket Cloud and Data Center coverage.
-
-- `other-platforms/bitbucket/00-bitbucket-overview.md` through `other-platforms/bitbucket/13-all-bitbucket-reference.md`
-
-#### other-platforms/azure-devops/ - 15 files
-
-Azure DevOps all five services: Boards, Repos, Pipelines, Test Plans and Artifacts.
-
-- `other-platforms/azure-devops/00-azure-devops-overview.md` through `other-platforms/azure-devops/14-all-azure-devops-reference.md`
-
-#### other-platforms/gitea/ - 13 files
-
-Gitea self-hosted Git server coverage.
-
-- `other-platforms/gitea/00-gitea-overview.md` through `other-platforms/gitea/12-all-gitea-reference.md`
-
-#### other-platforms/forgejo/ - 10 files
-
-Forgejo fork with ActivityPub federation coverage.
-
-- `other-platforms/forgejo/00-forgejo-overview.md` through `other-platforms/forgejo/09-all-forgejo-reference.md`
-
-#### other-platforms/codeberg/ - 10 files
-
-Codeberg non-profit Git hosting coverage.
-
-- `other-platforms/codeberg/00-codeberg-overview.md` through `other-platforms/codeberg/09-all-codeberg-reference.md`
-
-#### ides-and-editors/ - 14 files
-
-All major editors and AI IDEs: VS Code, JetBrains, Neovim, GitHub Desktop, Cursor, Windsurf, Antigravity, Kiro, Zed, Helix, Sublime Text, Emacs/Magit, Xcode and Android Studio.
-
-- `ides-and-editors/00-ides-and-editors-overview.md` through `ides-and-editors/13-all-ides-reference.md`
+- `other-platforms/bitbucket/` - 14 files
+- `other-platforms/azure-devops/` - 15 files
+- `other-platforms/gitea/` - 13 files
+- `other-platforms/forgejo/` - 10 files
+- `other-platforms/codeberg/` - 10 files
 
 #### Infrastructure
 
-- markdownlint CI on every push (MD022, MD038 enforcement)
-- Link checker CI (weekly schedule)
-- GitHub issue templates: bug report and content suggestion
-- Pull request template
-- `.editorconfig` and `.markdownlint.json`
-- Root meta files: `CHANGELOG.md`, `ROADMAP.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `FAQ.md`, `HALL_OF_FAME.md`
+- markdownlint CI, link checker CI, issue templates, PR template, `.editorconfig`, `.markdownlint.json`
+- Root meta files: CONTRIBUTING, CODE_OF_CONDUCT, SECURITY, SUPPORT, FAQ, HALL_OF_FAME
+
+### Fixed
+
+- `other-platforms/gitea/11-api-and-integrations.md` - MD038 errors and restored truncated sections
 
 ---
 
-[Unreleased]: https://github.com/zaccessss/git-unlocked/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/zaccessss/git-unlocked/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/zaccessss/git-unlocked/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/zaccessss/git-unlocked/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/zaccessss/git-unlocked/releases/tag/v1.0.0
