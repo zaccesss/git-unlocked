@@ -1,6 +1,6 @@
 # Monorepo patterns
 
-🟡 Intermediate - 🔴 Advanced
+**Difficulty:** 🟡 Intermediate to 🔴 Advanced | **Time:** 45 minutes
 
 ---
 
@@ -561,7 +561,7 @@ Above the Git level, the task runner tier (Nx, Turborepo, Bazel) provides build 
 
 ---
 
-## Sources
+## Sources and Further Reading
 
 - [GitHub: get up to speed with partial clone and shallow clone](https://github.blog/open-source/git/get-up-to-speed-with-partial-clone-and-shallow-clone/)
 - [git-scm.com: partial-clone documentation](https://git-scm.com/docs/partial-clone)
@@ -582,6 +582,10 @@ Above the Git level, the task runner tier (Nx, Turborepo, Bazel) provides build 
 
 ---
 
+<div align="center">
+
 Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 
 **Access Granted. Success Unlocked.**
+
+</div>

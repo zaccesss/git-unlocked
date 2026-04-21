@@ -1,6 +1,6 @@
 # Working in a team
 
-🟡 Intermediate - 🔴 Advanced
+**Difficulty:** 🟡 Intermediate to 🔴 Advanced | **Time:** 40 minutes
 
 ---
 
@@ -460,7 +460,7 @@ Beyond the branching strategy, three practices define high-performance team Git:
 
 ---
 
-## Sources
+## Sources and Further Reading
 
 - [GitHub: about rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
 - [GitHub: managing a merge queue](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue)
@@ -477,6 +477,10 @@ Beyond the branching strategy, three practices define high-performance team Git:
 
 ---
 
+<div align="center">
+
 Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 
 **Access Granted. Success Unlocked.**
+
+</div>

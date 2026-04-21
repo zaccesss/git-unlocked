@@ -1,6 +1,6 @@
 # Real-world Git: overview
 
-🟢 All levels
+**Difficulty:** 🟢 All levels | **Time:** 5 minutes
 
 ---
 
@@ -117,7 +117,7 @@ This section covers the seven scenarios that come up most often when developers 
 
 ---
 
-## Sources
+## Sources and Further Reading
 
 - [git-scm.com](https://git-scm.com/) - official Git documentation
 - [docs.github.com](https://docs.github.com/) - GitHub documentation
@@ -127,6 +127,10 @@ This section covers the seven scenarios that come up most often when developers 
 
 ---
 
+<div align="center">
+
 Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 
 **Access Granted. Success Unlocked.**
+
+</div>

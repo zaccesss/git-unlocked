@@ -1,6 +1,6 @@
 # Contributing to open source
 
-🟢 Beginner - 🟡 Intermediate
+**Difficulty:** 🟢 Beginner to 🟡 Intermediate | **Time:** 30 minutes
 
 ---
 
@@ -427,7 +427,7 @@ Three major projects diverge from the standard model: the Linux kernel uses emai
 
 ---
 
-## Sources
+## Sources and Further Reading
 
 - [GitHub: forking a repository](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo)
 - [GitHub: syncing a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)
@@ -443,6 +443,10 @@ Three major projects diverge from the standard model: the Linux kernel uses emai
 
 ---
 
+<div align="center">
+
 Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
 
 **Access Granted. Success Unlocked.**
+
+</div>
