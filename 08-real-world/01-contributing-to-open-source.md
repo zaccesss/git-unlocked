@@ -372,13 +372,13 @@ Bors tests PRs against the current `master` tip before merging, preventing CI fr
 
 ## Try it yourself
 
-This exercise uses the [git-unlocked first-contribution sandbox](https://github.com/zaccesss/git-unlocked/tree/main/first-contribution) - a file specifically set up for this purpose.
+This exercise uses the [git-unlocked first-contribution sandbox](https://github.com/zaccesss/git-unlocked/tree/main/11-first-contribution) - a file specifically set up for this purpose.
 
 ### Exercise
 
 1. Fork the `git-unlocked` repository using `gh repo fork zaccesss/git-unlocked --clone=true --remote=true`
 2. Create a branch: `git switch -c add-my-name upstream/main`
-3. Open `first-contribution/contributors.md` and add your GitHub username on a new line
+3. Open `11-first-contribution/contributors.md` and add your GitHub username on a new line
 4. Commit: `git commit -am "docs(first-contribution): add YOUR_USERNAME to contributors"`
 5. Push: `git push -u origin add-my-name`
 6. Open a PR: `gh pr create --fill`

@@ -2,13 +2,13 @@
 
 > The most complete open source Git and version control course available. Free forever. MIT licensed.
 
-[![markdownlint](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccessss/git-unlocked/actions/workflows/markdownlint.yml)
+[![markdownlint](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](CHANGELOG.md)
 
 git-unlocked takes you from absolute zero to professional-level Git across every major platform — GitHub, GitLab, Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg. Every file covers Windows, Mac and Linux side by side. Nothing assumed. Nothing skipped.
 
-**202 files. 12 sections. All free.**
+**217 files. 12 sections. All free.**
 
 ---
 
@@ -27,20 +27,20 @@ Want to make your first open source contribution right now? Go to [11-first-cont
 
 ## Course contents
 
-| # | Section | Files | What is inside |
-|---|---|---|---|
-| 00 | [welcome](00-welcome/) | 1 | Introduction to the course |
-| 01 | [introduction](01-introduction/) | 3 | Concepts, setup, how to navigate |
-| 02 | [git](02-git/) | 29 | Everything about Git from `git init` to internals |
-| 03 | [github](03-github/) | 28 | Full GitHub platform coverage |
-| 04 | [gitlab](04-gitlab/) | 16 | Full GitLab platform coverage |
-| 05 | [other-platforms](05-other-platforms/) | 62 | Bitbucket, Azure DevOps, Gitea, Forgejo, Codeberg |
-| 06 | [ides-and-editors](06-ides-and-editors/) | 14 | VS Code, JetBrains, Neovim, Cursor, Zed and more |
-| 07 | [terminal](07-terminal/) | 14 | Shell setup, lazygit, delta, fzf, bat, tig and more |
-| 08 | [real-world](08-real-world/) | 8 | Open source contribution, GitOps, monorepos, disaster recovery |
-| 09 | [reference](09-reference/) | 4 | Cheatsheet, glossary, common mistakes, security |
-| 10 | [resources](10-resources/) | 1 | 120+ curated books, videos, tools and communities |
-| 11 | [first-contribution](11-first-contribution/) | 2 | Make your first open source PR here |
+| #   | Section                                      | Files | What is inside                                                 |
+| --- | -------------------------------------------- | ----- | -------------------------------------------------------------- |
+| 00  | [welcome](00-welcome/)                       | 1     | Introduction to the course                                     |
+| 01  | [introduction](01-introduction/)             | 3     | Concepts, setup, how to navigate                               |
+| 02  | [git](02-git/)                               | 29    | Everything about Git from `git init` to internals              |
+| 03  | [github](03-github/)                         | 28    | Full GitHub platform coverage                                  |
+| 04  | [gitlab](04-gitlab/)                         | 16    | Full GitLab platform coverage                                  |
+| 05  | [other-platforms](05-other-platforms/)       | 62    | Bitbucket, Azure DevOps, Gitea, Forgejo, Codeberg              |
+| 06  | [ides-and-editors](06-ides-and-editors/)     | 14    | VS Code, JetBrains, Neovim, Cursor, Zed and more               |
+| 07  | [terminal](07-terminal/)                     | 14    | Shell setup, lazygit, delta, fzf, bat, tig and more            |
+| 08  | [real-world](08-real-world/)                 | 8     | Open source contribution, GitOps, monorepos, disaster recovery |
+| 09  | [reference](09-reference/)                   | 4     | Cheatsheet, glossary, common mistakes, security                |
+| 10  | [resources](10-resources/)                   | 1     | 120+ curated books, videos, tools and communities              |
+| 11  | [first-contribution](11-first-contribution/) | 2     | Make your first open source PR here                            |
 
 Each section has an overview file (`00-*.md`) with a full table of contents and reading order for that section.
 
@@ -76,8 +76,8 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) first, then open a pull request. Everyon
 
 ## Contributors
 
-<a href="https://github.com/zaccessss/git-unlocked/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zaccessss/git-unlocked" alt="Contributors" />
+<a href="https://github.com/zaccesss/git-unlocked/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=zaccesss/git-unlocked" alt="Contributors" />
 </a>
 
 ---
@@ -98,7 +98,7 @@ If this course helped you, please star the repository. It helps others find it.
 
 [![isaacadjei.me](https://img.shields.io/badge/isaacadjei.me-000000?style=for-the-badge)](https://isaacadjei.me)
 [![zacess.com](https://img.shields.io/badge/zacess.com-000000?style=for-the-badge)](https://zacess.com)
-[![GitHub](https://img.shields.io/badge/github-zaccessss-181717?style=for-the-badge&logo=github)](https://github.com/zaccessss)
+[![GitHub](https://img.shields.io/badge/github-zaccesss-181717?style=for-the-badge&logo=github)](https://github.com/zaccesss)
 
 <br />
 

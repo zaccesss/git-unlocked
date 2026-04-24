@@ -69,8 +69,8 @@ Practical scenarios showing Git in real professional contexts.
 
 #### first-contribution/ - 2 files
 
-- `first-contribution/README.md` - step-by-step guide for making a first open source PR, with troubleshooting
-- `first-contribution/contributors.md` - the file contributors add their name to
+- `11-first-contribution/README.md` - step-by-step guide for making a first open source PR, with troubleshooting
+- `11-first-contribution/contributors.md` - the file contributors add their name to
 
 #### introduction/ - 2 new files
 
