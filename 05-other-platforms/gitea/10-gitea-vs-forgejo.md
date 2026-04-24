@@ -4,7 +4,7 @@
 
 Gitea and Forgejo share a common codebase origin but are now distinct products with different governance, licences, feature priorities and long-term trajectories. Choosing between them is a real decision with lasting consequences - particularly around federation, Windows support, SAML authentication and the open-core vs fully-free software philosophy.
 
-This file explains the history of the split, maps what has diverged, and gives a clear framework for choosing between them in 2026.
+This file explains the history of the split, maps what has diverged and gives a clear framework for choosing between them in 2026.
 
 ---
 
@@ -28,18 +28,18 @@ This file explains the history of the split, maps what has diverged, and gives a
 
 ## The split: a brief timeline
 
-| Date | Event |
-|---|---|
-| Nov 2016 | Gitea forked from Gogs |
-| Oct 2022 | Two Gitea maintainers incorporate Gitea Limited (UK) without community notice; domains transferred to the company |
-| Nov 2022 | Open letter signed by 48 contributors demands return of assets to community control |
-| Dec 2022 | Forgejo announced as a community fork; hosted on Codeberg |
-| Feb 2023 | Codeberg migrates its own instance from Gitea to Forgejo |
-| Nov 2023 | Forgejo becomes a **soft fork** - intentionally diverges from Gitea for the first time |
+| Date     | Event                                                                                                                                             |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nov 2016 | Gitea forked from Gogs                                                                                                                            |
+| Oct 2022 | Two Gitea maintainers incorporate Gitea Limited (UK) without community notice; domains transferred to the company                                 |
+| Nov 2022 | Open letter signed by 48 contributors demands return of assets to community control                                                               |
+| Dec 2022 | Forgejo announced as a community fork; hosted on Codeberg                                                                                         |
+| Feb 2023 | Codeberg migrates its own instance from Gitea to Forgejo                                                                                          |
+| Nov 2023 | Forgejo becomes a **soft fork** - intentionally diverges from Gitea for the first time                                                            |
 | Feb 2024 | Forgejo becomes a **hard fork** - drops Git compatibility with Gitea releases, begins independently developing the federation (ActivityPub) stack |
-| Mar 2024 | CommitGo Inc. (US entity) launches **Gitea Enterprise** with proprietary SAML, audit logs and IP allowlist |
-| Apr 2024 | Forgejo v8.0 released as the first truly independent major release |
-| 2025 | Forgejo reaches v14.x; Gitea at v1.25.x; version numbers no longer meaningful to compare |
+| Mar 2024 | CommitGo Inc. (US entity) launches **Gitea Enterprise** with proprietary SAML, audit logs and IP allowlist                                        |
+| Apr 2024 | Forgejo v8.0 released as the first truly independent major release                                                                                |
+| 2025     | Forgejo reaches v14.x; Gitea at v1.25.x; version numbers no longer meaningful to compare                                                          |
 
 ---
 
@@ -65,15 +65,16 @@ This file explains the history of the split, maps what has diverged, and gives a
 
 ## Licence differences
 
-| Aspect | Gitea | Forgejo |
-|---|---|---|
-| Community edition licence | MIT | MIT (through v8.x), then GPLv3+ from v9.0 |
-| Enterprise tier | Proprietary (CommitGo) | Does not exist |
-| Can you fork and commercialise? | Yes (MIT) | MIT code: yes. GPLv3+ code: modifications must remain GPLv3+ |
+| Aspect                          | Gitea                  | Forgejo                                                      |
+| ------------------------------- | ---------------------- | ------------------------------------------------------------ |
+| Community edition licence       | MIT                    | MIT (through v8.x), then GPLv3+ from v9.0                    |
+| Enterprise tier                 | Proprietary (CommitGo) | Does not exist                                               |
+| Can you fork and commercialise? | Yes (MIT)              | MIT code: yes. GPLv3+ code: modifications must remain GPLv3+ |
 
 ### What the GPLv3+ licence change means for Forgejo
 
 Starting with Forgejo v9.0, new Forgejo code is licenced under GPLv3+. This means:
+
 - You can self-host Forgejo for free forever
 - You can modify and redistribute it, but modifications must also be GPLv3+
 - You cannot take Forgejo, add proprietary features and sell them without releasing the source (the Gitea/CommitGo model)
@@ -90,7 +91,7 @@ These are the meaningful functional differences between Gitea and Forgejo in 202
 ### Features in Forgejo not in Gitea (community edition)
 
 **ActivityPub federation (F3 / ForgeFed)**
-Forgejo's flagship differentiator. Federation allows Forgejo instances to interact across servers: follow repositories on other Forgejo instances, receive issue notifications across federated instances, and eventually fork across instances. Gitea received NLnet grant funding for federation work but active development stalled and moved primarily to Forgejo.
+Forgejo's flagship differentiator. Federation allows Forgejo instances to interact across servers: follow repositories on other Forgejo instances, receive issue notifications across federated instances and eventually fork across instances. Gitea received NLnet grant funding for federation work but active development stalled and moved primarily to Forgejo.
 
 **SAML authentication**
 Forgejo includes SAML 2.0 SSO in the core, free tier. Gitea's SAML support is Gitea Enterprise (paid). This is one of the most significant practical differences for enterprise deployments that require SSO with Okta, OneLogin, Azure AD or similar SAML identity providers.
@@ -135,6 +136,7 @@ Gitea has been public longer than Forgejo's independent releases. Some third-par
 Both platforms have the same Go-based architecture and similar resource requirements at equivalent loads. Performance differences between a current Gitea and current Forgejo instance of the same version lineage are negligible.
 
 Where you might notice differences:
+
 - **Frontend**: Both completed the HTMX/Tailwind frontend rewrite, but at different paces. Individual releases may have temporary regressions.
 - **Actions**: Forgejo's runner may have specific optimisations for its own instance. In practice, the difference is not observable for most workloads.
 - **Federation overhead**: Forgejo's ActivityPub federation adds processing for instances that have it enabled. This is optional and off by default.
@@ -214,6 +216,7 @@ curl -H "Authorization: token GITEA_TOKEN" \
 ### From Forgejo to Gitea
 
 The reverse process using Gitea's migration tool:
+
 - In Gitea: **+** > **New Migration** > **Gitea** (Gitea can migrate from Forgejo using its Gitea-compatible migration path)
 - Or use the generic Git migration for just the repository data
 
@@ -253,6 +256,7 @@ There is no universally correct answer. The right choice depends on your specifi
 ### If you are starting fresh
 
 For a new self-hosted deployment in 2026 with no existing investment:
+
 - **Linux-only, open source philosophy, no Windows**: Forgejo is the stronger choice. SAML is free, federation is developing and governance is cleaner.
 - **Mixed OS including Windows, or uncertain about Windows needs**: Gitea. You cannot run Forgejo on Windows in production.
 - **Enterprise with budget for SAML/audit features**: Gitea Enterprise if you need the enterprise features; Forgejo free if SAML is all you need.
@@ -264,10 +268,12 @@ For a new self-hosted deployment in 2026 with no existing investment:
 **Exercise 1 - Compare the interfaces**
 
 Open both platforms side by side:
+
 - Gitea: [gitea.com](https://gitea.com)
 - Forgejo: [codeberg.org](https://codeberg.org)
 
 Compare:
+
 - The repository creation flow
 - The issues interface
 - The profile page

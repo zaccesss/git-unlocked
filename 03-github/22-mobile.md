@@ -447,7 +447,7 @@ On Q&A discussion answers, tap the tick icon next to the answer you want to mark
 
 **Creating a discussion:**
 
-Tap the **+** button in the Discussions tab. Choose the category, write the title and body, and post.
+Tap the **+** button in the Discussions tab. Choose the category, write the title and body and post.
 
 ---
 

@@ -35,7 +35,7 @@ Windsurf was created by Codeium, an AI coding company founded in 2022 that initi
 
 The acquisition saga began in mid-2025. OpenAI announced an approximately $3 billion acquisition bid, which collapsed over IP-sharing concerns with Microsoft (OpenAI's primary investor). **On July 11, 2025, Google paid $2.4 billion in a talent deal**: CEO Varun Mohan, co-founder Douglas Chen, and approximately 40 senior researchers joined Google, where they built Google Antigravity (see [07-antigravity.md](07-antigravity.md)). This left approximately 200 remaining Windsurf employees without the founding team. **Cognition AI**, the company behind the Devin autonomous coding agent, acquired what remained - the product, brand, IP and remaining team - for approximately $250 million. Jeff Wang became interim CEO.
 
-Despite the turbulence, Windsurf continued shipping: Wave 13 (December 2025) added Git worktrees and parallel agent sessions; Windsurf 2.0 (April 2026) added the Agent Command Center, Spaces, and Devin integration. As of April 2026, Windsurf Pro has over 350 enterprise customers and more than 800,000 active monthly users.
+Despite the turbulence, Windsurf continued shipping: Wave 13 (December 2025) added Git worktrees and parallel agent sessions; Windsurf 2.0 (April 2026) added the Agent Command Center, Spaces and Devin integration. As of April 2026, Windsurf Pro has over 350 enterprise customers and more than 800,000 active monthly users.
 
 ---
 
@@ -76,7 +76,7 @@ Cascade is Windsurf's built-in agentic AI. It is not a sidebar chatbot bolted on
 
 **Two modes**:
 
-- **Code mode** - Cascade can read, create and edit files, run terminal commands, and take actions. This is the default mode and the one used for Git workflows.
+- **Code mode** - Cascade can read, create and edit files, run terminal commands and take actions. This is the default mode and the one used for Git workflows.
 - **Chat mode** - Cascade answers questions and explains code but does not make changes. Use this for understanding unfamiliar code before deciding what to do.
 
 **Planning mode**: for complex tasks, Cascade creates a Todo list at the start of the conversation outlining the steps it plans to take. You can edit the plan by telling Cascade to modify specific steps. This is particularly useful for multi-step Git workflows where you want to review the plan before execution starts.
@@ -119,11 +119,11 @@ Cascade in Code mode can execute complete Git workflows. Examples:
 
 > "Create a branch called feature/dark-mode, implement a dark mode toggle in src/components/ThemeToggle.tsx, add the necessary CSS in src/styles/themes.css, run the tests to make sure nothing breaks, then commit with a conventional commit message."
 
-Cascade creates the branch, implements the changes, runs `npm test` or your configured test command, fixes failures if it can, and commits.
+Cascade creates the branch, implements the changes, runs `npm test` or your configured test command, fixes failures if it can and commits.
 
 **Reviewing staged changes before committing**:
 
-> "Look at what I have staged and tell me if it is production-ready. Check for: console.log statements, TODO comments, hardcoded credentials, and any obvious bugs."
+> "Look at what I have staged and tell me if it is production-ready. Check for: console.log statements, TODO comments, hardcoded credentials and any obvious bugs."
 
 Cascade runs `git diff --staged` and reports its findings.
 
@@ -145,7 +145,7 @@ Cascade runs `git log main..HEAD` and `git diff main...HEAD`, reads the output a
 
 **Wave 13 (December 24, 2025)** added first-class Git worktree support to Windsurf. Git worktrees allow multiple working trees from the same repository to be checked out simultaneously in different directories - each on a different branch - without interfering with each other.
 
-In Windsurf, each worktree gets its own Cascade session. This enables **true parallel agent development**: you can have one Cascade session working on a feature branch, another on a bug fix branch, and a third on documentation, all at the same time from the same repository, without agents conflicting or stepping on each other's changes.
+In Windsurf, each worktree gets its own Cascade session. This enables **true parallel agent development**: you can have one Cascade session working on a feature branch, another on a bug fix branch and a third on documentation, all at the same time from the same repository, without agents conflicting or stepping on each other's changes.
 
 **Creating a worktree in Windsurf**:
 
@@ -255,28 +255,28 @@ Note that some Copilot-specific features in extensions may not work in Windsurf 
 
 Windsurf inherits all VS Code shortcuts and adds:
 
-| Action | Windows/Linux | Mac |
-|---|---|---|
-| Open Cascade | `Ctrl+L` | `Cmd+L` |
-| New Cascade session | `Ctrl+Shift+L` | `Cmd+Shift+L` |
-| Open Source Control panel | `Ctrl+Shift+G` | `Cmd+Shift+G` |
-| Open terminal | `` Ctrl+` `` | `` Cmd+` `` |
-| Commit | `Ctrl+Enter` (in commit box) | `Cmd+Enter` |
-| Open Command Palette | `Ctrl+Shift+P` | `Cmd+Shift+P` |
-| Accept Cascade suggestion | `Tab` | `Tab` |
-| Stop Cascade | `Esc` (while agent is running) | `Esc` |
-| Open Agent Command Center | `Ctrl+Shift+A` | `Cmd+Shift+A` |
+| Action                    | Windows/Linux                  | Mac           |
+| ------------------------- | ------------------------------ | ------------- |
+| Open Cascade              | `Ctrl+L`                       | `Cmd+L`       |
+| New Cascade session       | `Ctrl+Shift+L`                 | `Cmd+Shift+L` |
+| Open Source Control panel | `Ctrl+Shift+G`                 | `Cmd+Shift+G` |
+| Open terminal             | `` Ctrl+` ``                   | `` Cmd+` ``   |
+| Commit                    | `Ctrl+Enter` (in commit box)   | `Cmd+Enter`   |
+| Open Command Palette      | `Ctrl+Shift+P`                 | `Cmd+Shift+P` |
+| Accept Cascade suggestion | `Tab`                          | `Tab`         |
+| Stop Cascade              | `Esc` (while agent is running) | `Esc`         |
+| Open Agent Command Center | `Ctrl+Shift+A`                 | `Cmd+Shift+A` |
 
 ---
 
 ## 14. Pricing
 
-| Plan | Price | What is included |
-|---|---|---|
-| Free | $0 | 25 Cascade prompt credits/day, Supercomplete |
-| Pro | $15/month | Full Cascade access, premium models, higher limits |
-| Teams | $30/user/month | All Pro features, team management |
-| Enterprise | Custom | SSO, HIPAA, FedRAMP, ITAR, custom contracts |
+| Plan       | Price          | What is included                                   |
+| ---------- | -------------- | -------------------------------------------------- |
+| Free       | $0             | 25 Cascade prompt credits/day, Supercomplete       |
+| Pro        | $15/month      | Full Cascade access, premium models, higher limits |
+| Teams      | $30/user/month | All Pro features, team management                  |
+| Enterprise | Custom         | SSO, HIPAA, FedRAMP, ITAR, custom contracts        |
 
 Windsurf's Pro tier is priced lower than Cursor's Pro tier ($15 vs $20). The free tier is more generous on daily limits than Cursor's Hobby tier, making Windsurf a popular choice for developers evaluating AI IDEs before committing to a subscription.
 
@@ -324,7 +324,7 @@ Assuming the Devin integration in Windsurf 2.0 means Devin is free to use. Devin
 
 ## 17. Summary
 
-Windsurf is a VS Code fork built around Cascade, an agentic AI system that maintains real-time awareness of your edits, terminal commands and clipboard through Flow awareness. It inherits the complete VS Code Git experience and adds AI-driven Git workflows: branch creation, staging, committing, rebasing, conflict resolution and PR description generation, all from natural language instructions. Wave 13 (December 2025) added Git worktrees for parallel agent workflows in the Arena Mode multi-pane UI. Windsurf 2.0 (April 2026) added the Agent Command Center for oversight of multiple concurrent agent sessions, Spaces for project organisation, and Devin integration for delegating tasks to cloud-based autonomous agents. Memories and `.windsurfrules` allow team-level Git conventions to be enforced consistently across all Cascade sessions. Windsurf's Pro tier at $15/month is cheaper than Cursor's $20/month and the free tier is more generous on daily limits, making it a strong choice for developers evaluating AI-first editors.
+Windsurf is a VS Code fork built around Cascade, an agentic AI system that maintains real-time awareness of your edits, terminal commands and clipboard through Flow awareness. It inherits the complete VS Code Git experience and adds AI-driven Git workflows: branch creation, staging, committing, rebasing, conflict resolution and PR description generation, all from natural language instructions. Wave 13 (December 2025) added Git worktrees for parallel agent workflows in the Arena Mode multi-pane UI. Windsurf 2.0 (April 2026) added the Agent Command Center for oversight of multiple concurrent agent sessions, Spaces for project organisation and Devin integration for delegating tasks to cloud-based autonomous agents. Memories and `.windsurfrules` allow team-level Git conventions to be enforced consistently across all Cascade sessions. Windsurf's Pro tier at $15/month is cheaper than Cursor's $20/month and the free tier is more generous on daily limits, making it a strong choice for developers evaluating AI-first editors.
 
 ---
 

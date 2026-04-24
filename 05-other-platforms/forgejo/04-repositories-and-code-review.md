@@ -115,6 +115,7 @@ Fetches only the latest commit. Useful in CI/CD for speed.
 5. Click **Migrate Repository**
 
 Forgejo can import from:
+
 - GitHub
 - GitLab
 - Bitbucket
@@ -130,6 +131,7 @@ Create a mirror that periodically pulls from an external repository:
 3. The mirrored repository is read-only in Forgejo
 
 Use mirrors for:
+
 - Keeping a local backup of external repositories
 - Providing fast internal access to frequently used open source dependencies
 - Air-gapped environments that cannot reach the public internet directly
@@ -157,6 +159,7 @@ Repository > **Branches** shows all branches with last commit author, date and h
 Via web: click the branch dropdown > type a new name > **Create branch from current**.
 
 Via command line:
+
 ```bash
 git checkout -b feature/my-feature
 git push origin feature/my-feature
@@ -177,12 +180,14 @@ Or via web: Branches > trash icon next to the merged branch.
 Tags mark specific commits with a version label. Releases wrap tags with a human-readable description and optional binary assets.
 
 Create a tag:
+
 ```bash
 git tag -a v1.2.0 -m "Release 1.2.0"
 git push origin v1.2.0
 ```
 
 Create a release via web:
+
 1. Repository > **Releases** > **Draft a new release**
 2. Select or create a tag
 3. Add title, description (Markdown supported) and binary attachments
@@ -266,6 +271,7 @@ Create `.forgejo/PULL_REQUEST_TEMPLATE.md` to pre-fill the PR description:
 ### Reading the diff
 
 The **Files Changed** tab shows the complete diff:
+
 - Green lines: additions
 - Red lines: deletions
 - Context lines: unchanged surrounding code
@@ -315,15 +321,15 @@ Protected branches prevent direct pushes and enforce review requirements.
 
 Repository **Settings** > **Protected Branches** > enter a branch name or pattern:
 
-| Setting | Effect |
-|---|---|
-| **Enable push protection** | Blocks all direct pushes; changes must go through PRs |
-| **Enable merge protection** | PRs must satisfy all requirements before merging |
-| **Required approvals** | Minimum number of approvals before merge |
-| **Required reviewers** | Specific users or teams who must approve |
-| **Dismiss stale approvals** | Approvals reset when new commits are pushed |
-| **Required status checks** | Named CI status checks must pass |
-| **Restrict force push** | Prevents `git push --force` on this branch |
+| Setting                     | Effect                                                |
+| --------------------------- | ----------------------------------------------------- |
+| **Enable push protection**  | Blocks all direct pushes; changes must go through PRs |
+| **Enable merge protection** | PRs must satisfy all requirements before merging      |
+| **Required approvals**      | Minimum number of approvals before merge              |
+| **Required reviewers**      | Specific users or teams who must approve              |
+| **Dismiss stale approvals** | Approvals reset when new commits are pushed           |
+| **Required status checks**  | Named CI status checks must pass                      |
+| **Restrict force push**     | Prevents `git push --force` on this branch            |
 
 ### Example: protect main
 
@@ -338,11 +344,12 @@ Required status checks: forgejo-ci/test, forgejo-ci/build
 Restrict force push: enabled
 ```
 
-With this configuration: no direct pushes, PRs need 2 approvals that remain valid after any code changes, and CI must pass.
+With this configuration: no direct pushes, PRs need 2 approvals that remain valid after any code changes and CI must pass.
 
 ### Wildcard patterns
 
 Protect all release branches at once:
+
 - `release/*` - protects any branch starting with `release/`
 - `v*` - protects branches starting with `v` (e.g. version branches)
 
@@ -355,18 +362,21 @@ Protect all release branches at once:
 Git LFS replaces large binary files with pointer files, keeping the Git history compact.
 
 🐧 **Linux**:
+
 ```bash
 sudo apt install git-lfs
 git lfs install
 ```
 
 🍎 **Mac**:
+
 ```bash
 brew install git-lfs
 git lfs install
 ```
 
 Configure tracking:
+
 ```bash
 git lfs track "*.psd"
 git lfs track "assets/**"
@@ -376,6 +386,7 @@ git push
 ```
 
 Forgejo supports LFS natively. Enable in `app.ini`:
+
 ```ini
 [server]
 LFS_START_SERVER = true
@@ -406,6 +417,7 @@ Releases store binary assets separately from the Git repository. No per-project 
 ### Important settings
 
 **Repository Settings** > **Repository**:
+
 - Default branch name
 - Which merge strategies are available (merge commit, squash, rebase)
 - Wiki enabled/disabled
@@ -414,6 +426,7 @@ Releases store binary assets separately from the Git repository. No per-project 
 - Fork policy
 
 **Danger zone:**
+
 - **Archive**: make the repository read-only without deleting
 - **Transfer**: move to a different user or organisation (breaks all existing URLs)
 - **Delete**: permanent, irreversible, no recovery
@@ -502,7 +515,7 @@ With required approvals set to 1 and "allow requestors to approve own changes" o
 
 ## Summary
 
-Forgejo repositories and pull requests work identically to Gitea. Create repositories from the web UI or API, clone via HTTPS or SSH, and use standard Git workflow for branches and commits.
+Forgejo repositories and pull requests work identically to Gitea. Create repositories from the web UI or API, clone via HTTPS or SSH and use standard Git workflow for branches and commits.
 
 Pull requests combine diff, code review, reviewer status, CI results and merge controls. Reviewers comment on specific lines, submit reviews with approve/request-changes verdicts and apply code suggestions. Protected branches enforce quality requirements before merging.
 

@@ -559,7 +559,7 @@ Migrating between Git platforms has two distinct layers: the Git layer (commits,
 
 Git LFS is the most common source of silent data loss. Always check whether the repository uses LFS, always run `git lfs fetch --all` before pushing, and always run `git lfs push --all` separately after the mirror push.
 
-The strongest platform importers are GitLab's GitHub importer (transfers issues, PRs, labels, milestones, releases and comments) and GitHub's GEI toolkit (transfers from GitHub, Azure DevOps and Bitbucket Server, but not GitLab). Work through the migration checklist before, during and after every migration, keep the source repository for at least two weeks after cutover, and rotate all credentials rather than copying them.
+The strongest platform importers are GitLab's GitHub importer (transfers issues, PRs, labels, milestones, releases and comments) and GitHub's GEI toolkit (transfers from GitHub, Azure DevOps and Bitbucket Server, but not GitLab). Work through the migration checklist before, during and after every migration, keep the source repository for at least two weeks after cutover and rotate all credentials rather than copying them.
 
 ---
 

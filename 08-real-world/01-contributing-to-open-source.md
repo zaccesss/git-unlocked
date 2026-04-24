@@ -23,7 +23,7 @@
 
 ## Introduction
 
-Open source contribution is one of the most valuable things a developer can do. You learn from production codebases, build a public record of your work, and directly improve tools that millions of people use. It also has a reputation for being intimidating - complex contribution guides, maintainers requesting changes you do not understand, PRs sitting unanswered for weeks.
+Open source contribution is one of the most valuable things a developer can do. You learn from production codebases, build a public record of your work and directly improve tools that millions of people use. It also has a reputation for being intimidating - complex contribution guides, maintainers requesting changes you do not understand, PRs sitting unanswered for weeks.
 
 This file demystifies the process. The underlying Git workflow is the same on almost every project. Once you understand the fork-and-PR sequence, the `upstream` remote, and how to handle review feedback cleanly, you can contribute to any project on GitHub or GitLab with confidence.
 
@@ -42,9 +42,9 @@ Most open source projects on GitHub and GitLab use the **fork-and-PR model**:
 
 1. You create a personal copy of the repository (a **fork**) under your own account
 2. You clone your fork to your local machine
-3. You create a branch, make changes, and push to your fork
+3. You create a branch, make changes and push to your fork
 4. You open a **pull request** (GitHub) or **merge request** (GitLab) asking the maintainers to pull your changes into the original repository
-5. Maintainers review your changes, request modifications if needed, and eventually merge or close the PR
+5. Maintainers review your changes, request modifications if needed and eventually merge or close the PR
 
 You never push directly to the original repository (called **upstream**). Your fork is your personal workspace. The upstream repository is the source of truth.
 
@@ -178,7 +178,7 @@ glab mr create --fill --draft --remove-source-branch
 
 **Manually via the web:**
 
-After pushing, both GitHub and GitLab will show a banner at the top of your fork with a button to open a PR/MR. Click it, fill in the title and description, and submit.
+After pushing, both GitHub and GitLab will show a banner at the top of your fork with a button to open a PR/MR. Click it, fill in the title and description and submit.
 
 ### Writing a good PR description
 
@@ -278,7 +278,7 @@ git rebase -i --autosquash upstream/main
 git push --force-with-lease
 ```
 
-`--autosquash` moves all `fixup!` commits immediately after their targets and marks them as `fixup` in the interactive rebase editor. You review the result, save, and Git does the rest.
+`--autosquash` moves all `fixup!` commits immediately after their targets and marks them as `fixup` in the interactive rebase editor. You review the result, save and Git does the rest.
 
 > [!TIP]
 > Set `git config --global rebase.autoSquash true` once and you never need to pass `--autosquash` again.

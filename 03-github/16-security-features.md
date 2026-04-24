@@ -61,6 +61,7 @@ GitHub's security features fall into two categories:
 **GHAS restructure (April 2025):**
 
 GitHub Advanced Security was split into two separately purchasable products:
+
 - **GitHub Secret Protection** - $19/month per active committer. Covers secret scanning, push protection, AI detection and custom patterns.
 - **GitHub Code Security** - $30/month per active committer. Covers CodeQL, Copilot Autofix, dependency review and security campaigns.
 
@@ -81,6 +82,7 @@ npm (`package.json`), pip (`requirements.txt`, `setup.py`, `Pipfile`), Maven (`p
 Repository → Insights → Dependency graph.
 
 Shows:
+
 - **Dependencies** - all packages your project depends on, with version and licence
 - **Dependents** - repositories that depend on your project (for libraries)
 
@@ -169,9 +171,9 @@ version: 2
 updates:
   # Keep npm packages up to date
   - package-ecosystem: "npm"
-    directory: "/"              # location of package.json
+    directory: "/" # location of package.json
     schedule:
-      interval: "weekly"        # daily, weekly, or monthly
+      interval: "weekly" # daily, weekly, or monthly
       day: "monday"
       time: "09:00"
       timezone: "Europe/London"
@@ -190,7 +192,7 @@ updates:
     schedule:
       interval: "weekly"
     groups:
-      actions:                  # group all Actions updates into one PR
+      actions: # group all Actions updates into one PR
         patterns:
           - "*"
 
@@ -231,7 +233,7 @@ ignore:
 
 ## Secret Scanning
 
-Secret scanning detects known secret formats that have been committed to your repository. GitHub partnered with 200+ service providers (AWS, Azure, Google Cloud, Stripe, Slack, npm, GitHub itself, and many more) to detect their specific credential formats.
+Secret scanning detects known secret formats that have been committed to your repository. GitHub partnered with 200+ service providers (AWS, Azure, Google Cloud, Stripe, Slack, npm, GitHub itself and many more) to detect their specific credential formats.
 
 **What it scans:**
 
@@ -284,6 +286,7 @@ remote: to review and bypass this protection.
 ```
 
 The push is rejected. You must either:
+
 1. Remove the secret from the commit (and rewrite history with `git filter-repo`)
 2. Bypass the protection with a stated reason (false positive, used in tests, will rotate immediately)
 
@@ -294,6 +297,7 @@ Settings → Security → Secret scanning → Push protection → Enable.
 **Bypassing push protection:**
 
 Click the link in the error message to open a bypass form on GitHub. Select a reason:
+
 - **It's a false positive** - not actually a secret
 - **It's used in tests** - test credential, not real
 - **I'll fix it later** - you acknowledge the risk and will rotate immediately
@@ -336,7 +340,7 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '30 1 * * 0'  # weekly scan
+    - cron: "30 1 * * 0" # weekly scan
 
 jobs:
   analyse:
@@ -358,7 +362,7 @@ jobs:
       - uses: github/codeql-action/init@v3
         with:
           languages: ${{ matrix.language }}
-          queries: security-extended  # or security-and-quality
+          queries: security-extended # or security-and-quality
 
       - uses: github/codeql-action/autobuild@v3
 
@@ -418,6 +422,7 @@ When you discover or are notified of a security vulnerability in your project. T
 Repository → Security → Advisories → New draft security advisory.
 
 Fill in:
+
 - **Title** - brief description
 - **CVE identifier** - leave blank to request one from GitHub, or add an existing CVE
 - **Description** - full details of the vulnerability
@@ -481,9 +486,9 @@ Place in the repository root, `docs/` or `.github/`. GitHub shows a link to it o
 ## Supported versions
 
 | Version | Supported |
-|---------|-----------|
-| 2.x     | ✅ |
-| 1.x     | ❌ |
+| ------- | --------- |
+| 2.x     | ✅        |
+| 1.x     | ❌        |
 
 ## Reporting a vulnerability
 
@@ -496,6 +501,7 @@ Instead, use one of these channels:
 - **Email:** security@example.com (response within 48 hours)
 
 Please include:
+
 - A description of the vulnerability
 - Steps to reproduce
 - Potential impact
@@ -598,7 +604,7 @@ git commit -m "test: try to push a fake secret"
 git push
 ```
 
-The push should be blocked. Delete the file, amend or reset the commit, and push cleanly.
+The push should be blocked. Delete the file, amend or reset the commit and push cleanly.
 
 **Step 5.** Enable code scanning with default setup:
 

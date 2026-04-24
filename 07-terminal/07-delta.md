@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 15 minutes
 
-delta is a syntax-highlighting pager for `git diff`, `git log`, `git show`, `git blame` and `grep` output. It replaces Git's default diff display with one that has language-aware syntax highlighting, word-level diff highlighting, side-by-side view, line numbers, navigation between diff sections, and improved blame output. Installing delta and adding six lines to your `.gitconfig` permanently improves how you read every diff from the terminal.
+delta is a syntax-highlighting pager for `git diff`, `git log`, `git show`, `git blame` and `grep` output. It replaces Git's default diff display with one that has language-aware syntax highlighting, word-level diff highlighting, side-by-side view, line numbers, navigation between diff sections and improved blame output. Installing delta and adding six lines to your `.gitconfig` permanently improves how you read every diff from the terminal.
 
 ---
 

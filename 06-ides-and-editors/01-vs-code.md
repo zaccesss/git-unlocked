@@ -59,7 +59,7 @@ Or download the installer from [code.visualstudio.com](https://code.visualstudio
 brew install --cask visual-studio-code
 ```
 
-Or download the `.zip` from the website, unzip it, and drag the app to your Applications folder. After installing, open the Command Palette (`Cmd+Shift+P`) and run `Shell Command: Install 'code' command in PATH`.
+Or download the `.zip` from the website, unzip it and drag the app to your Applications folder. After installing, open the Command Palette (`Cmd+Shift+P`) and run `Shell Command: Install 'code' command in PATH`.
 
 🐧 **Linux**
 
@@ -209,7 +209,7 @@ The Source Control Graph was promoted out of experimental in VS Code 1.93 (Augus
 
 ## 10. Inline blame and gutter indicators
 
-**Inline blame** shows the commit author, date and message for the current line at the end of the line in faded text, without opening any separate panel. Enable it with `git.blame.editorDecoration.enabled: true` in settings, or toggle it with `Git: Toggle Inline Blame` from the Command Palette. Hovering over the blame annotation shows a popup with the full commit hash, author email, and a **Show Commit** link that opens the diff for that commit.
+**Inline blame** shows the commit author, date and message for the current line at the end of the line in faded text, without opening any separate panel. Enable it with `git.blame.editorDecoration.enabled: true` in settings, or toggle it with `Git: Toggle Inline Blame` from the Command Palette. Hovering over the blame annotation shows a popup with the full commit hash, author email and a **Show Commit** link that opens the diff for that commit.
 
 **Gutter indicators** appear in the thin column between the line numbers and the code:
 
@@ -377,13 +377,13 @@ GitHub Copilot became a built-in feature of VS Code in version 1.116 (February 2
 
 **Pricing**:
 
-| Plan | Price | Premium requests |
-|---|---|---|
-| Free | $0 | 50/month |
-| Pro | $10/month | 300/month |
-| Pro+ | $39/month | 1,500/month |
-| Business | $19/user/month | 300/month |
-| Enterprise | $39/user/month (on top of GitHub Enterprise) | 300/month |
+| Plan       | Price                                        | Premium requests |
+| ---------- | -------------------------------------------- | ---------------- |
+| Free       | $0                                           | 50/month         |
+| Pro        | $10/month                                    | 300/month        |
+| Pro+       | $39/month                                    | 1,500/month      |
+| Business   | $19/user/month                               | 300/month        |
+| Enterprise | $39/user/month (on top of GitHub Enterprise) | 300/month        |
 
 Overages are billed at $0.04 per premium request.
 
@@ -397,29 +397,29 @@ GitLab Duo is available in VS Code through the GitLab Workflow extension. It pro
 
 **Duo Chat for Git questions**: you can ask Duo questions like "explain this merge conflict", "what changed in the last 5 commits?", or "write a commit message for these staged changes". Duo has access to your local file context via the extension.
 
-**Limitations compared to Copilot in VS Code**: Duo does not have an agent mode, cannot run terminal commands, cannot create branches or commits autonomously, and does not have a PR creation workflow inside the IDE. These capabilities live on the GitLab web platform rather than in the VS Code extension. For developers who want IDE-side agentic Git workflows and use GitLab, the common pattern is to use Copilot for in-IDE AI assistance alongside the GitLab platform for MR and CI/CD workflows.
+**Limitations compared to Copilot in VS Code**: Duo does not have an agent mode, cannot run terminal commands, cannot create branches or commits autonomously and does not have a PR creation workflow inside the IDE. These capabilities live on the GitLab web platform rather than in the VS Code extension. For developers who want IDE-side agentic Git workflows and use GitLab, the common pattern is to use Copilot for in-IDE AI assistance alongside the GitLab platform for MR and CI/CD workflows.
 
 ---
 
 ## 18. Key keyboard shortcuts
 
-| Action | Windows/Linux | Mac |
-|---|---|---|
-| Open Source Control panel | `Ctrl+Shift+G` | `Cmd+Shift+G` |
-| Open Command Palette | `Ctrl+Shift+P` | `Cmd+Shift+P` |
-| Open integrated terminal | `` Ctrl+` `` | `` Cmd+` `` |
-| Open Extensions panel | `Ctrl+Shift+X` | `Cmd+Shift+X` |
-| Commit (in commit box) | `Ctrl+Enter` | `Cmd+Enter` |
-| Stage hunk (in diff) | right-click > Stage Hunk | right-click > Stage Hunk |
-| Next change in diff | `F7` | `F7` |
-| Previous change in diff | `Shift+F7` | `Shift+F7` |
-| Next merge conflict | `Alt+F3` | `Opt+F3` |
-| Previous merge conflict | `Shift+Alt+F3` | `Shift+Opt+F3` |
-| Toggle inline blame | Command Palette: `Git: Toggle Inline Blame` | same |
-| Open Copilot chat | `Ctrl+Alt+I` | `Cmd+Alt+I` |
-| Copilot inline chat | `Ctrl+I` | `Cmd+I` |
-| Accept Copilot suggestion | `Tab` | `Tab` |
-| Switch branch (Status Bar) | click branch name | click branch name |
+| Action                     | Windows/Linux                               | Mac                      |
+| -------------------------- | ------------------------------------------- | ------------------------ |
+| Open Source Control panel  | `Ctrl+Shift+G`                              | `Cmd+Shift+G`            |
+| Open Command Palette       | `Ctrl+Shift+P`                              | `Cmd+Shift+P`            |
+| Open integrated terminal   | `` Ctrl+` ``                                | `` Cmd+` ``              |
+| Open Extensions panel      | `Ctrl+Shift+X`                              | `Cmd+Shift+X`            |
+| Commit (in commit box)     | `Ctrl+Enter`                                | `Cmd+Enter`              |
+| Stage hunk (in diff)       | right-click > Stage Hunk                    | right-click > Stage Hunk |
+| Next change in diff        | `F7`                                        | `F7`                     |
+| Previous change in diff    | `Shift+F7`                                  | `Shift+F7`               |
+| Next merge conflict        | `Alt+F3`                                    | `Opt+F3`                 |
+| Previous merge conflict    | `Shift+Alt+F3`                              | `Shift+Opt+F3`           |
+| Toggle inline blame        | Command Palette: `Git: Toggle Inline Blame` | same                     |
+| Open Copilot chat          | `Ctrl+Alt+I`                                | `Cmd+Alt+I`              |
+| Copilot inline chat        | `Ctrl+I`                                    | `Cmd+I`                  |
+| Accept Copilot suggestion  | `Tab`                                       | `Tab`                    |
+| Switch branch (Status Bar) | click branch name                           | click branch name        |
 
 ---
 

@@ -60,7 +60,7 @@ main
    Alice  Bob Alice  Bob Alice
 ```
 
-Everyone clones the repository, makes changes locally, and pushes directly to `main`. When conflicts arise, they are resolved locally before pushing.
+Everyone clones the repository, makes changes locally and pushes directly to `main`. When conflicts arise, they are resolved locally before pushing.
 
 ### The workflow
 
@@ -435,15 +435,15 @@ The flag is turned on for internal testers first, then a percentage of users, th
 
 Use this as a starting point:
 
-| Situation | Recommended workflow |
-|---|---|
-| Solo project | Centralised or feature branch |
-| Small team, web app, continuous deployment | GitHub Flow |
-| Medium to large team, web app | Feature branch workflow |
-| Versioned software with release cycles | Gitflow |
-| Large engineering team with strong CI/CD | Trunk-based development |
-| Open source project | Feature branch workflow |
-| Learning Git | Feature branch workflow |
+| Situation                                  | Recommended workflow          |
+| ------------------------------------------ | ----------------------------- |
+| Solo project                               | Centralised or feature branch |
+| Small team, web app, continuous deployment | GitHub Flow                   |
+| Medium to large team, web app              | Feature branch workflow       |
+| Versioned software with release cycles     | Gitflow                       |
+| Large engineering team with strong CI/CD   | Trunk-based development       |
+| Open source project                        | Feature branch workflow       |
+| Learning Git                               | Feature branch workflow       |
 
 When in doubt, start with the **feature branch workflow**. It is flexible enough for most situations, easy to understand and scales well as your team grows.
 
@@ -451,13 +451,13 @@ When in doubt, start with the **feature branch workflow**. It is flexible enough
 
 ## Workflow Comparison
 
-| Workflow | Branches | Complexity | Deployment | Best for |
-|---|---|---|---|---|
-| Centralised | 1 (main) | Very low | Manual | Solo, tiny teams |
-| Feature branch | main + feature/* | Low | On merge | Most teams |
-| GitHub Flow | main + feature/* | Low | Continuous | Web apps, SaaS |
-| Gitflow | main, develop, feature/*, release/*, hotfix/* | High | Scheduled | Versioned software |
-| Trunk-based | 1 (main) + short feature/* | Medium | Continuous | Large teams, CI/CD |
+| Workflow       | Branches                                       | Complexity | Deployment | Best for           |
+| -------------- | ---------------------------------------------- | ---------- | ---------- | ------------------ |
+| Centralised    | 1 (main)                                       | Very low   | Manual     | Solo, tiny teams   |
+| Feature branch | main + feature/\*                              | Low        | On merge   | Most teams         |
+| GitHub Flow    | main + feature/\*                              | Low        | Continuous | Web apps, SaaS     |
+| Gitflow        | main, develop, feature/_, release/_, hotfix/\* | High       | Scheduled  | Versioned software |
+| Trunk-based    | 1 (main) + short feature/\*                    | Medium     | Continuous | Large teams, CI/CD |
 
 ---
 

@@ -37,7 +37,7 @@ Every term you will encounter in Git, GitHub, GitLab and version control work - 
 ## A
 
 **Annotated tag**
-A tag that stores extra metadata: the tagger's name and email, a timestamp, and a message. Annotated tags are full Git objects and can be signed. Created with `git tag -a`. Compare with lightweight tag.
+A tag that stores extra metadata: the tagger's name and email, a timestamp and a message. Annotated tags are full Git objects and can be signed. Created with `git tag -a`. Compare with lightweight tag.
 
 **Atomic commit**
 A commit that represents a single, complete, self-contained change. The code compiles and tests pass after applying the commit on its own. Atomic commits make `git bisect`, code review and `git revert` dramatically simpler.
@@ -68,7 +68,7 @@ A Git object type that stores the raw content of a file at a specific point in t
 A lightweight, movable pointer to a commit. Creating a branch creates a new pointer; it does not copy any files. The active branch pointer advances automatically when you commit. Branches are nearly free in Git - create them liberally.
 
 **Branch protection**
-Rules that control who can push to a branch, whether PRs are required, whether CI must pass, and whether force pushes are allowed. On GitHub, implemented via Rulesets (current) or classic branch protection (legacy). On GitLab, via protected branches and push rules.
+Rules that control who can push to a branch, whether PRs are required, whether CI must pass and whether force pushes are allowed. On GitHub, implemented via Rulesets (current) or classic branch protection (legacy). On GitLab, via protected branches and push rules.
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 40 minutes
 
-A merge request (MR) is how code gets reviewed and merged on GitLab. If you are coming from GitHub, the concept is identical to a pull request - you push a branch, open a merge request, a colleague reviews it, and it gets merged into the target branch. The name "merge request" is actually more accurate than "pull request": you are requesting that your changes be merged, not pulling anything.
+A merge request (MR) is how code gets reviewed and merged on GitLab. If you are coming from GitHub, the concept is identical to a pull request - you push a branch, open a merge request, a colleague reviews it and it gets merged into the target branch. The name "merge request" is actually more accurate than "pull request": you are requesting that your changes be merged, not pulling anything.
 
 But GitLab's merge requests go significantly beyond the basics. They integrate directly with CI/CD pipelines, support multiple merge methods including fast-forward and squash, have merge trains for high-traffic repositories, support required approvals (Premium), connect to CODEOWNERS for automatic reviewer assignment (Premium) and can be converted to and from issues with a single click. This file covers everything from opening your first MR to the most advanced merge workflows.
 
@@ -342,7 +342,7 @@ To approve: click the **Approve** button in the MR widget on the Overview tab, o
 
 To remove your approval: click **Revoke approval**, or use `/unapprove`.
 
-The approval status shows who has approved, when, and whether the required threshold has been met.
+The approval status shows who has approved, when and whether the required threshold has been met.
 
 ---
 

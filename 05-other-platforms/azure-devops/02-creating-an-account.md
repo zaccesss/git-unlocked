@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 30 minutes
 
-Getting started with Azure DevOps requires a Microsoft account, an Azure DevOps organisation, and at least one project. The process is straightforward but the terminology differs from other platforms - particularly the relationship between organisations, projects and repositories. This file walks through the complete setup: creating your account, configuring your organisation, creating a project, setting up authentication (PATs and SSH keys) and understanding the free tier limits.
+Getting started with Azure DevOps requires a Microsoft account, an Azure DevOps organisation and at least one project. The process is straightforward but the terminology differs from other platforms - particularly the relationship between organisations, projects and repositories. This file walks through the complete setup: creating your account, configuring your organisation, creating a project, setting up authentication (PATs and SSH keys) and understanding the free tier limits.
 
 ---
 
@@ -34,6 +34,7 @@ Azure DevOps authentication works through two identity types. Understanding the 
 A **Microsoft account** (MSA) is a personal identity - the same login you use for Outlook.com, Xbox, OneDrive and consumer Microsoft services. Any email address can be a Microsoft account if you registered it at [account.microsoft.com](https://account.microsoft.com).
 
 Personal Microsoft accounts are suitable for:
+
 - Individual developers
 - Small teams without enterprise IT infrastructure
 - Open source projects
@@ -46,6 +47,7 @@ Personal Microsoft accounts are suitable for:
 Signing in to Azure DevOps with an Azure AD identity (your work email, e.g. `you@yourcompany.com`) connects Azure DevOps to your organisation's identity management: single sign-on, conditional access policies, multi-factor authentication enforcement and automatic deprovisioning when you leave the organisation.
 
 Azure AD is suitable for:
+
 - Enterprise teams with existing Microsoft 365 or Azure subscriptions
 - Teams that need centralised identity management
 - Regulated environments requiring SSO and MFA enforcement
@@ -64,6 +66,7 @@ Go to [dev.azure.com](https://dev.azure.com) and click **Start free**.
 ### Step 2 - Sign in
 
 You are redirected to Microsoft's sign-in page. Sign in with:
+
 - A Microsoft account (personal)
 - An Azure AD work or school account
 - A GitHub account (Microsoft allows GitHub identity for Azure DevOps sign-in)
@@ -109,6 +112,7 @@ Organisation (dev.azure.com/your-org)
 **Recommended approach for most teams:** One project per team or product area. Put multiple repositories inside. This keeps boards, pipelines and access control unified for the team.
 
 **When to create multiple projects:**
+
 - Different security requirements
 - Completely separate teams with no shared backlog
 - Different process templates required
@@ -124,12 +128,14 @@ After creating the organisation, Azure DevOps immediately prompts for a project 
 **Project name**: The name of the team or product area. Appears in URLs.
 
 **Visibility**:
+
 - **Private**: only added members can access the project
 - **Public**: anyone on the internet can view the project. Suitable for open source.
 
 **Version control**: Choose **Git** (recommended) or **Team Foundation Version Control** (TFVC, legacy).
 
 **Work item process**: The template controlling work item types:
+
 - **Agile**: Epics → Features → User Stories → Tasks/Bugs. Most common.
 - **Scrum**: Epics → Features → Product Backlog Items → Tasks/Bugs. Formal Scrum.
 - **CMMI**: More formal, for regulated environments.
@@ -161,13 +167,13 @@ Click **Create project**.
 
 **Scopes**: Always use the minimum required:
 
-| Scope | Use case |
-|---|---|
-| **Code: Read** | Clone and fetch repositories |
-| **Code: Read & Write** | Push commits, create branches |
-| **Work Items: Read & Write** | Create and update work items |
-| **Build: Read & Execute** | View and trigger pipeline runs |
-| **Packaging: Read & Write** | Download and publish Artifacts packages |
+| Scope                        | Use case                                |
+| ---------------------------- | --------------------------------------- |
+| **Code: Read**               | Clone and fetch repositories            |
+| **Code: Read & Write**       | Push commits, create branches           |
+| **Work Items: Read & Write** | Create and update work items            |
+| **Build: Read & Execute**    | View and trigger pipeline runs          |
+| **Packaging: Read & Write**  | Download and publish Artifacts packages |
 
 5. Click **Create**
 6. **Copy the token immediately** - it is shown only once.
@@ -187,6 +193,7 @@ git clone https://dev.azure.com/your-org/your-project/_git/your-repo
 🍎 **Mac** - Git Credential Manager stores PATs in macOS Keychain automatically.
 
 🐧 **Linux**:
+
 ```bash
 git config --global credential.helper 'cache --timeout=3600'
 ```
@@ -204,16 +211,19 @@ SSH keys provide passwordless authentication for Git operations, replacing PAT-b
 ### Generating an SSH key pair
 
 🪟 **Windows** (PowerShell or Git Bash):
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
 
 🍎 **Mac**:
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
 
 🐧 **Linux**:
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
@@ -225,21 +235,25 @@ Accept the default file location (`~/.ssh/id_ed25519`). Add a passphrase to prot
 **Copy the public key:**
 
 🪟 **Windows** (PowerShell):
+
 ```powershell
 Get-Content ~/.ssh/id_ed25519.pub | clip
 ```
 
 🍎 **Mac**:
+
 ```bash
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 🐧 **Linux**:
+
 ```bash
 cat ~/.ssh/id_ed25519.pub
 ```
 
 **Add to Azure DevOps:**
+
 1. Click your avatar > **Security**
 2. Click **+ New Key**
 3. Give the key a name
@@ -253,6 +267,7 @@ ssh -T git@ssh.dev.azure.com
 ```
 
 Expected response:
+
 ```
 remote: Shell access is not supported.
 ```
@@ -269,17 +284,18 @@ git clone git@ssh.dev.azure.com:v3/your-org/your-project/your-repo
 
 ## Free tier limits
 
-| Resource | Free allocation |
-|---|---|
-| Basic users | 5 per organisation |
-| Stakeholder users | Unlimited (free) |
+| Resource                      | Free allocation            |
+| ----------------------------- | -------------------------- |
+| Basic users                   | 5 per organisation         |
+| Stakeholder users             | Unlimited (free)           |
 | Microsoft-hosted parallel job | 1 job, 1,800 minutes/month |
-| Self-hosted parallel jobs | 1 job, unlimited minutes |
-| Artifacts storage | 2 GiB |
-| Repositories | Unlimited |
-| Work items | Unlimited |
+| Self-hosted parallel jobs     | 1 job, unlimited minutes   |
+| Artifacts storage             | 2 GiB                      |
+| Repositories                  | Unlimited                  |
+| Work items                    | Unlimited                  |
 
 **Additional costs:**
+
 - Extra Basic users: $6/user/month
 - Extra Microsoft-hosted parallel jobs: $40/month each
 - Extra self-hosted parallel jobs: $15/month each
@@ -304,11 +320,11 @@ Visual Studio subscribers (any level) receive a Basic licence at no extra cost -
 
 ### Access levels
 
-| Level | Cost | Capabilities |
-|---|---|---|
-| **Stakeholder** | Free | View/update work items, view dashboards. No Repos or Pipelines access. |
-| **Basic** | 5 free, then $6/user/month | Full Repos, Pipelines, Boards and Artifacts. |
-| **Basic + Test Plans** | $52/user/month | Everything plus Test Plans. |
+| Level                  | Cost                       | Capabilities                                                           |
+| ---------------------- | -------------------------- | ---------------------------------------------------------------------- |
+| **Stakeholder**        | Free                       | View/update work items, view dashboards. No Repos or Pipelines access. |
+| **Basic**              | 5 free, then $6/user/month | Full Repos, Pipelines, Boards and Artifacts.                           |
+| **Basic + Test Plans** | $52/user/month             | Everything plus Test Plans.                                            |
 
 > [!NOTE]
 > Stakeholders cannot clone code, push commits or trigger builds. If a developer is added as Stakeholder, they cannot do their job. Use Basic for anyone working with code.
@@ -341,6 +357,7 @@ For personal Microsoft accounts, enable MFA at [account.microsoft.com/security](
 ### Reviewing active tokens
 
 Review PATs periodically:
+
 1. Click your avatar > **Personal access tokens**
 2. Delete tokens no longer in use
 3. Ensure remaining tokens have appropriate expiry and scope

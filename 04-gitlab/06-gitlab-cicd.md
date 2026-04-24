@@ -50,7 +50,7 @@ The flow is straightforward:
 2. GitLab detects the push and reads `.gitlab-ci.yml` from the root of your repository
 3. GitLab creates a **pipeline** - a collection of jobs organised into stages
 4. Jobs are dispatched to **runners** - agents that execute the jobs in isolated environments (usually Docker containers)
-5. Each job runs its commands, reports success or failure, and optionally uploads **artifacts** (files produced by the job for later stages to use)
+5. Each job runs its commands, reports success or failure and optionally uploads **artifacts** (files produced by the job for later stages to use)
 6. The pipeline result (pass/fail) is shown in the MR, on the commit and in the pipeline list
 
 **Key concepts:**

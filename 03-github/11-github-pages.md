@@ -71,11 +71,13 @@ The simplest setup - GitHub serves files directly from a branch in your reposito
 **Step 3.** Under **Build and deployment**, set **Source** to **Deploy from a branch**.
 
 **Step 4.** Choose the **branch** to deploy from:
+
 - `main` - deploy from your main branch
 - `gh-pages` - deploy from a dedicated Pages branch (common for generated sites)
 - Any other branch
 
 **Step 5.** Choose the **folder**:
+
 - `/ (root)` - serve from the root of the branch
 - `/docs` - serve from a `docs/` folder in the root
 
@@ -94,7 +96,7 @@ For more control - using a static site generator, custom build steps or a specif
 
 **Step 1.** In Settings → Pages, set **Source** to **GitHub Actions**.
 
-**Step 2.** GitHub suggests workflow templates. Choose one for your framework (Next.js, Gatsby, Hugo, Astro, Eleventy, Jekyll, Vue, React, plain HTML, and more).
+**Step 2.** GitHub suggests workflow templates. Choose one for your framework (Next.js, Gatsby, Hugo, Astro, Eleventy, Jekyll, Vue, React, plain HTML and more).
 
 **Step 3.** The workflow builds your site and uses the official `actions/upload-pages-artifact` and `actions/deploy-pages` actions to deploy it.
 
@@ -130,7 +132,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public      # the folder containing your built site
+          path: ./public # the folder containing your built site
 
       - id: deployment
         uses: actions/deploy-pages@v4
@@ -163,7 +165,7 @@ jobs:
       - uses: actions/configure-pages@v5
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: "3.2"
           bundler-cache: true
       - run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
@@ -263,16 +265,16 @@ remote_theme: pages-themes/cayman@v0.2.0
 
 **Other static site generators** (require GitHub Actions workflow):
 
-| Generator | Language | Best for |
-|---|---|---|
-| Hugo | Go | Speed, simplicity |
-| Astro | JavaScript | Modern web, content sites |
-| Eleventy | JavaScript | Flexibility |
-| Docusaurus | React | Project documentation |
-| VitePress | Vue | Documentation |
-| Gatsby | React | Content-heavy sites |
-| Next.js | React | Static export |
-| MkDocs | Python | Documentation |
+| Generator  | Language   | Best for                  |
+| ---------- | ---------- | ------------------------- |
+| Hugo       | Go         | Speed, simplicity         |
+| Astro      | JavaScript | Modern web, content sites |
+| Eleventy   | JavaScript | Flexibility               |
+| Docusaurus | React      | Project documentation     |
+| VitePress  | Vue        | Documentation             |
+| Gatsby     | React      | Content-heavy sites       |
+| Next.js    | React      | Static export             |
+| MkDocs     | Python     | Documentation             |
 
 ---
 
@@ -381,13 +383,13 @@ Once HTTPS is enforced, HTTP requests redirect automatically to HTTPS. The **Enf
 
 ## Pages Limits
 
-| Limit | Value |
-|---|---|
-| Recommended repository size | Under 1 GB |
-| Published site maximum size | 1 GB |
-| Bandwidth (soft limit) | 100 GB per month |
-| Builds per hour (branch deployment) | 10 |
-| Build timeout | 10 minutes |
+| Limit                               | Value            |
+| ----------------------------------- | ---------------- |
+| Recommended repository size         | Under 1 GB       |
+| Published site maximum size         | 1 GB             |
+| Bandwidth (soft limit)              | 100 GB per month |
+| Builds per hour (branch deployment) | 10               |
+| Build timeout                       | 10 minutes       |
 
 If your site exceeds the bandwidth soft limit, GitHub contacts you rather than taking your site offline immediately.
 
@@ -414,23 +416,32 @@ cd YOUR_USERNAME.github.io
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YOUR_NAME - Developer</title>
-  <style>
-    body { font-family: sans-serif; max-width: 800px; margin: 4rem auto; padding: 0 1rem; }
-    h1 { color: #0d1117; }
-    a { color: #0366d6; }
-  </style>
-</head>
-<body>
-  <h1>Hi, I am YOUR_NAME</h1>
-  <p>I am learning Git, GitHub and software development.</p>
-  <p>
-    <a href="https://github.com/YOUR_USERNAME">My GitHub</a>
-  </p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YOUR_NAME - Developer</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 4rem auto;
+        padding: 0 1rem;
+      }
+      h1 {
+        color: #0d1117;
+      }
+      a {
+        color: #0366d6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi, I am YOUR_NAME</h1>
+    <p>I am learning Git, GitHub and software development.</p>
+    <p>
+      <a href="https://github.com/YOUR_USERNAME">My GitHub</a>
+    </p>
+  </body>
 </html>
 ```
 

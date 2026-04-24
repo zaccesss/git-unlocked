@@ -30,7 +30,7 @@ Step-by-step recovery for the most common Git disasters - from lost commits to c
 
 Most Git disasters are recoverable. Git's design as an append-only content-addressed store means that data is almost never truly deleted - it is just temporarily unreachable. The reflog records every movement of HEAD and every branch tip for 90 days. Commits survive `reset --hard`, deleted branches, botched rebases and accidental amends.
 
-This file covers the six most common disasters in order of frequency, starting with the least destructive recovery approach each time. The one exception where recovery is not guaranteed is a committed secret: once it is pushed, it is compromised, and rewriting history does not un-compromise it.
+This file covers the six most common disasters in order of frequency, starting with the least destructive recovery approach each time. The one exception where recovery is not guaranteed is a committed secret: once it is pushed, it is compromised and rewriting history does not un-compromise it.
 
 **The golden rules before anything else:**
 
@@ -536,6 +536,7 @@ git fsck --full --strict --verbose
 ```
 
 Look for lines like:
+
 - `error: object file .git/objects/ab/cdef... is empty` - truncated object
 - `error: sha1 mismatch` - content does not match its SHA (corruption)
 - `dangling commit` - unreachable but not corrupt (harmless)
@@ -597,12 +598,12 @@ git cherry-pick <unique-sha-from-broken>
 
 This is the most important rule in disaster recovery:
 
-| Situation | Use | Why |
-|---|---|---|
-| Commits are local only, not pushed | `git reset --hard` | Safe - no one else has seen these commits |
-| Commits are pushed, others may have fetched | `git revert` | Creates a new commit that undoes the changes; preserves history for everyone |
-| Merge commit needs undoing, already pushed | `git revert -m 1` | Revert the merge safely without rewriting shared history |
-| Merge commit needs undoing, not yet pushed | `git reset --hard ORIG_HEAD` | Safe - history is not shared yet |
+| Situation                                   | Use                          | Why                                                                          |
+| ------------------------------------------- | ---------------------------- | ---------------------------------------------------------------------------- |
+| Commits are local only, not pushed          | `git reset --hard`           | Safe - no one else has seen these commits                                    |
+| Commits are pushed, others may have fetched | `git revert`                 | Creates a new commit that undoes the changes; preserves history for everyone |
+| Merge commit needs undoing, already pushed  | `git revert -m 1`            | Revert the merge safely without rewriting shared history                     |
+| Merge commit needs undoing, not yet pushed  | `git reset --hard ORIG_HEAD` | Safe - history is not shared yet                                             |
 
 **Never use `git reset --hard` plus `git push --force` on a branch that other people have fetched.** This is exactly how accidental force push disasters happen. If in doubt, use `git revert`.
 

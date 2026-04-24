@@ -363,18 +363,18 @@ Use the `include` directive for machine-specific settings that should not be in 
 
 Git aliases (`git config --global alias.xx ...`) and shell aliases (`alias gs='git status'`) serve similar purposes but have different characteristics.
 
-| | Git aliases | Shell aliases |
-| - | ----------- | ------------- |
-| **Syntax** | `git xx` | `xx` |
-| **Where stored** | `~/.gitconfig` | `~/.bashrc`, `~/.zshrc` |
-| **Works in any shell** | Yes (git reads `.gitconfig`) | No (each shell has its own) |
-| **Works in IDEs** | Yes (IDEs call `git xx`) | No (IDEs do not source your shell config) |
-| **Shell scripting** | Limited (needs `!` prefix) | Full |
-| **Autocomplete** | Via git's own completion | Via shell completion |
+|                        | Git aliases                  | Shell aliases                             |
+| ---------------------- | ---------------------------- | ----------------------------------------- |
+| **Syntax**             | `git xx`                     | `xx`                                      |
+| **Where stored**       | `~/.gitconfig`               | `~/.bashrc`, `~/.zshrc`                   |
+| **Works in any shell** | Yes (git reads `.gitconfig`) | No (each shell has its own)               |
+| **Works in IDEs**      | Yes (IDEs call `git xx`)     | No (IDEs do not source your shell config) |
+| **Shell scripting**    | Limited (needs `!` prefix)   | Full                                      |
+| **Autocomplete**       | Via git's own completion     | Via shell completion                      |
 
-**Git aliases** are better for: operations that should work the same in every tool and shell, operations you want IDEs to be able to invoke, and complex git-specific workflows.
+**Git aliases** are better for: operations that should work the same in every tool and shell, operations you want IDEs to be able to invoke and complex git-specific workflows.
 
-**Shell aliases** are better for: two-character shortcuts you use hundreds of times a day, combining git with other Unix tools, and operations that mix git with non-git commands.
+**Shell aliases** are better for: two-character shortcuts you use hundreds of times a day, combining git with other Unix tools and operations that mix git with non-git commands.
 
 Many developers use both - a set of shell aliases for the most frequently typed operations and git aliases for more complex multi-step operations.
 

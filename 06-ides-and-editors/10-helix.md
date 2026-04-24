@@ -87,10 +87,10 @@ Verify the installation with `hx --version`. Run `hx --health` to check Tree-sit
 
 Helix's configuration file is `config.toml`. Its location:
 
-| Platform | Path |
-|---|---|
-| 🐧 Linux | `~/.config/helix/config.toml` |
-| 🍎 macOS | `~/.config/helix/config.toml` |
+| Platform   | Path                          |
+| ---------- | ----------------------------- |
+| 🐧 Linux   | `~/.config/helix/config.toml` |
+| 🍎 macOS   | `~/.config/helix/config.toml` |
 | 🪟 Windows | `%AppData%\helix\config.toml` |
 
 A minimal `config.toml`:
@@ -333,13 +333,13 @@ lazygit is the most popular choice but not the only option. Other terminal Git t
 
 **Built-in Helix shortcuts relevant to Git**:
 
-| Action | Key | Notes |
-|---|---|---|
-| Next changed hunk | `]g` | Navigate between diff hunks |
-| Previous changed hunk | `[g` | Navigate between diff hunks |
-| Run shell command | `:sh <command>` | One-off Git commands |
-| Redraw terminal | `:redraw` | After lazygit exits inline |
-| Reload all buffers | `:reload-all` | After external Git changes |
+| Action                | Key             | Notes                       |
+| --------------------- | --------------- | --------------------------- |
+| Next changed hunk     | `]g`            | Navigate between diff hunks |
+| Previous changed hunk | `[g`            | Navigate between diff hunks |
+| Run shell command     | `:sh <command>` | One-off Git commands        |
+| Redraw terminal       | `:redraw`       | After lazygit exits inline  |
+| Reload all buffers    | `:reload-all`   | After external Git changes  |
 
 **Recommended custom keybindings** (add to `config.toml`):
 
@@ -367,7 +367,7 @@ C-g = [":sh tmux popup -d '#{pane_current_path}' -xC -yC -w 90% -h 90% -E lazygi
 
 **Exercise 1 - configure lazygit with tmux**
 
-Install tmux and lazygit. Open a terminal with tmux running. Add the `C-g` keybinding from section 7 to your Helix config. Open a repository in Helix. Make a change to a file and press `Ctrl+G`. Verify that a lazygit popup opens. Stage the file in lazygit, write a commit message, commit, and press `q`. Verify that Helix's gutter indicators have updated.
+Install tmux and lazygit. Open a terminal with tmux running. Add the `C-g` keybinding from section 7 to your Helix config. Open a repository in Helix. Make a change to a file and press `Ctrl+G`. Verify that a lazygit popup opens. Stage the file in lazygit, write a commit message, commit and press `q`. Verify that Helix's gutter indicators have updated.
 
 **Exercise 2 - navigate hunks**
 

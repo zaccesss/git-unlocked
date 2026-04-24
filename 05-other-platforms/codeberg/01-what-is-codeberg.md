@@ -51,6 +51,7 @@ In October 2022, the Gitea governance controversy erupted (covered in detail in 
 In December 2022, Codeberg e.V. announced and hosted the **Forgejo** project - the community fork of Gitea. Codeberg became Forgejo's primary infrastructure provider and institutional steward. In early 2023, Codeberg migrated its own platform from Gitea to Forgejo.
 
 Today, Codeberg serves two roles simultaneously:
+
 1. A public hosted Git service (codeberg.org) for open source projects
 2. The institutional home of the Forgejo project
 
@@ -157,6 +158,7 @@ NLnet Foundation frequently funds projects with requirements to use community-go
 Codeberg has a Code of Conduct and a community that actively discusses the platform's direction. The Codeberg forum and issue tracker are used for feature requests and governance discussions.
 
 The community tends toward:
+
 - Strong preference for free software licences (GPL, AGPL, MIT)
 - Scepticism of proprietary tools and lock-in
 - Valuing privacy and data sovereignty
@@ -208,6 +210,7 @@ Codeberg is operated by volunteers and a small team. There is no enterprise SLA.
 **Exercise 3 - Compare with GitHub**
 
 Open [codeberg.org](https://codeberg.org) and [github.com](https://github.com) side by side. Compare:
+
 - The explore/discovery pages
 - A repository's issue list
 - The pull request interface
@@ -249,7 +252,7 @@ The platform runs Forgejo, the community fork of Gitea. Codeberg e.V. is also th
 
 Codeberg differs from GitHub and GitLab.com in governance (non-profit vs corporate), data practices (EU jurisdiction, no tracking or advertising), sustainability model (donations vs enterprise revenue) and AI features (none on Codeberg).
 
-The trade-offs: smaller ecosystem and community, CI friction compared to GitHub Actions, no mobile app, resource limits on CI, and no enterprise SLA.
+The trade-offs: smaller ecosystem and community, CI friction compared to GitHub Actions, no mobile app, resource limits on CI and no enterprise SLA.
 
 The right audience for Codeberg: free software advocates, privacy-conscious developers, European public sector projects, developers who have migrated from GitHub and want community-governed infrastructure.
 

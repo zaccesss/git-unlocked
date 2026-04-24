@@ -44,6 +44,7 @@ This file covers installation on all three operating systems, authentication wit
 The project was originally created by community contributor Clement Sam in 2020 and later adopted by GitLab as the official CLI. Unlike some CLIs that are an afterthought, `glab` receives active development and stays in sync with GitLab platform changes.
 
 **Key capabilities:**
+
 - Create and manage merge requests from the terminal
 - View and interact with CI/CD pipelines and job logs in real time
 - Manage issues, labels, milestones and releases
@@ -145,7 +146,7 @@ glab auth login
 # How would you like to authenticate? → Login with a token (or Web browser for OAuth)
 ```
 
-**Browser-based OAuth** (easiest): select "Login with a web browser", your default browser opens, you approve access, and `glab` stores the token automatically.
+**Browser-based OAuth** (easiest): select "Login with a web browser", your default browser opens, you approve access and `glab` stores the token automatically.
 
 **Personal access token**: select "Paste an authentication token". In GitLab, go to Avatar -> Edit profile -> Access tokens, create a token with `api` and `write_repository` scopes, paste the token into the prompt.
 
@@ -194,13 +195,13 @@ glab config set editor vim
 
 ### Useful configuration options
 
-| Key | Values | Description |
-|---|---|---|
-| `editor` | Any editor command | Used when composing MR/issue descriptions |
-| `browser` | Any browser command | Used when opening GitLab in the browser |
-| `git_protocol` | `ssh`, `https` | Protocol for Git operations |
-| `host` | Domain name | Default GitLab host for commands |
-| `no_prompt` | `true`, `false` | Disable interactive prompts (for scripting) |
+| Key            | Values              | Description                                 |
+| -------------- | ------------------- | ------------------------------------------- |
+| `editor`       | Any editor command  | Used when composing MR/issue descriptions   |
+| `browser`      | Any browser command | Used when opening GitLab in the browser     |
+| `git_protocol` | `ssh`, `https`      | Protocol for Git operations                 |
+| `host`         | Domain name         | Default GitLab host for commands            |
+| `no_prompt`    | `true`, `false`     | Disable interactive prompts (for scripting) |
 
 ---
 
@@ -868,20 +869,20 @@ After adding to your profile and restarting the terminal, press `Tab` after any 
 
 Both `glab` and GitHub's `gh` are excellent platform CLIs with similar command structures. If you use both platforms, you will find the muscle memory transfers well.
 
-| Feature | glab (GitLab) | gh (GitHub) |
-|---|---|---|
-| **Merge/pull requests** | `glab mr create/list/merge` | `gh pr create/list/merge` |
-| **Issues** | `glab issue create/list/close` | `gh issue create/list/close` |
-| **Releases** | `glab release create` | `gh release create` |
-| **API access** | `glab api /endpoint` | `gh api /endpoint` |
-| **CI/CD pipelines** | `glab ci status/view/trace/run` | `gh run list/view` (limited) |
-| **Live job logs** | `glab ci trace` (real-time) | `gh run view --log` (after completion) |
-| **CI/CD variables** | `glab variable list/set/delete` | No equivalent |
-| **Pipeline schedules** | `glab schedule create/run` | No equivalent |
-| **Runners** | `glab runner list/pause` | No equivalent |
-| **AI assistant** | `glab duo ask` | `gh copilot suggest/explain` |
-| **Multiple instances** | Yes, native support | Yes, native support |
-| **Authentication** | PAT or OAuth | PAT or OAuth |
+| Feature                 | glab (GitLab)                   | gh (GitHub)                            |
+| ----------------------- | ------------------------------- | -------------------------------------- |
+| **Merge/pull requests** | `glab mr create/list/merge`     | `gh pr create/list/merge`              |
+| **Issues**              | `glab issue create/list/close`  | `gh issue create/list/close`           |
+| **Releases**            | `glab release create`           | `gh release create`                    |
+| **API access**          | `glab api /endpoint`            | `gh api /endpoint`                     |
+| **CI/CD pipelines**     | `glab ci status/view/trace/run` | `gh run list/view` (limited)           |
+| **Live job logs**       | `glab ci trace` (real-time)     | `gh run view --log` (after completion) |
+| **CI/CD variables**     | `glab variable list/set/delete` | No equivalent                          |
+| **Pipeline schedules**  | `glab schedule create/run`      | No equivalent                          |
+| **Runners**             | `glab runner list/pause`        | No equivalent                          |
+| **AI assistant**        | `glab duo ask`                  | `gh copilot suggest/explain`           |
+| **Multiple instances**  | Yes, native support             | Yes, native support                    |
+| **Authentication**      | PAT or OAuth                    | PAT or OAuth                           |
 
 **The key advantage of `glab`**: the `glab ci` commands are significantly more capable than GitHub's `gh run` commands. Being able to stream live job logs with `glab ci trace`, trigger pipelines with variables and manage CI/CD variables all from the terminal makes `glab` genuinely useful for DevOps workflows, not just code review workflows.
 

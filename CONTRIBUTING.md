@@ -110,6 +110,8 @@ All content in this course follows these rules exactly. Please match them.
 ### Language and tone
 
 - Write in **UK English** - colour, organise, practise, licence (noun), recognise
+- Do not use em dashes (—) or en dashes (–) in prose - use a hyphen, colon or rewrite the sentence
+- Do not use the Oxford comma - write "X, Y and Z" not "X, Y, and Z"
 - Maintain a clear, professional and accessible tone throughout
 - Assume the reader has zero prior knowledge unless the file is marked 🟡 or 🔴
 - Do not use jargon without explaining it first

@@ -120,7 +120,7 @@ In Agent mode, you can ask Cursor to perform complete Git workflows in natural l
 
 **Creating a branch and committing**:
 
-> "Create a branch called feature/user-authentication, implement JWT token validation in src/auth/middleware.py, write unit tests in tests/test_auth.py, commit both files with an appropriate conventional commit message, and push the branch."
+> "Create a branch called feature/user-authentication, implement JWT token validation in src/auth/middleware.py, write unit tests in tests/test_auth.py, commit both files with an appropriate conventional commit message and push the branch."
 
 Cursor runs `git checkout -b feature/user-authentication`, edits the files, runs your test suite, fixes any failures it can, commits with a generated message, and pushes. It reports what it did at each step.
 
@@ -151,7 +151,7 @@ Cursor runs `git diff main...HEAD`, reads the output and generates a PR descript
 
 **Background Agents** (launched May 2025) run in the background on your local machine while you work on other things. You assign a task in the Agents panel and the agent works on it asynchronously, including making Git commits. When it is done, you review the result.
 
-**Cloud Agents with Computer Use** (launched February 24, 2026) run in isolated cloud VMs with a full desktop environment - a browser, a file system, and the ability to run tests. Cloud Agents can:
+**Cloud Agents with Computer Use** (launched February 24, 2026) run in isolated cloud VMs with a full desktop environment - a browser, a file system and the ability to run tests. Cloud Agents can:
 
 - Clone a repository into a cloud VM
 - Implement changes across multiple files
@@ -184,6 +184,7 @@ alwaysApply: true
 # Commit message conventions
 
 All commit messages MUST follow conventional commits format:
+
 - feat: new feature
 - fix: bug fix
 - docs: documentation only
@@ -193,16 +194,19 @@ All commit messages MUST follow conventional commits format:
 - chore: build process, tooling
 
 Subject line rules:
+
 - Maximum 72 characters
 - Imperative present tense: "add feature" not "added feature"
 - No period at the end
 
 Body rules:
+
 - Reference issue numbers: "Closes #123"
 - Explain WHY not WHAT (the diff shows what)
 - Wrap at 72 characters
 
 Branch naming:
+
 - Feature branches: feature/<short-description>
 - Bug fix branches: fix/<issue-number>-<short-description>
 - Release branches: release/v<version>
@@ -264,30 +268,30 @@ Cursor is compatible with most VS Code extensions. It uses the VS Code Marketpla
 
 Cursor inherits all VS Code shortcuts and adds:
 
-| Action | Windows/Linux | Mac |
-|---|---|---|
-| Open Composer (inline) | `Ctrl+K` | `Cmd+K` |
-| Open Composer (panel) | `Ctrl+I` | `Cmd+I` |
-| Open Composer (Agent mode) | `Ctrl+Shift+I` | `Cmd+Shift+I` |
-| Open Chat | `Ctrl+L` | `Cmd+L` |
-| Accept AI suggestion (Tab) | `Tab` | `Tab` |
-| Reject AI suggestion | `Esc` | `Esc` |
-| Open Source Control panel | `Ctrl+Shift+G` | `Cmd+Shift+G` |
-| Open terminal | `` Ctrl+` `` | `` Cmd+` `` |
-| Commit | `Ctrl+Enter` (in commit box) | `Cmd+Enter` |
-| Open Agents panel | `Ctrl+Shift+J` | `Cmd+Shift+J` |
-| Show Cursor Blame | right-click > Cursor Blame | right-click > Cursor Blame |
+| Action                     | Windows/Linux                | Mac                        |
+| -------------------------- | ---------------------------- | -------------------------- |
+| Open Composer (inline)     | `Ctrl+K`                     | `Cmd+K`                    |
+| Open Composer (panel)      | `Ctrl+I`                     | `Cmd+I`                    |
+| Open Composer (Agent mode) | `Ctrl+Shift+I`               | `Cmd+Shift+I`              |
+| Open Chat                  | `Ctrl+L`                     | `Cmd+L`                    |
+| Accept AI suggestion (Tab) | `Tab`                        | `Tab`                      |
+| Reject AI suggestion       | `Esc`                        | `Esc`                      |
+| Open Source Control panel  | `Ctrl+Shift+G`               | `Cmd+Shift+G`              |
+| Open terminal              | `` Ctrl+` ``                 | `` Cmd+` ``                |
+| Commit                     | `Ctrl+Enter` (in commit box) | `Cmd+Enter`                |
+| Open Agents panel          | `Ctrl+Shift+J`               | `Cmd+Shift+J`              |
+| Show Cursor Blame          | right-click > Cursor Blame   | right-click > Cursor Blame |
 
 ---
 
 ## 13. Pricing
 
-| Plan | Price | What is included |
-|---|---|---|
-| Hobby | $0 | 2,000 Tab completions/month, 50 slow premium requests |
-| Pro | $20/month | $20 usage credits, fast requests, most models |
-| Pro+ | $60/month | $60 usage credits, all models, priority |
-| Ultra | $200/month | $200 usage credits, maximum limits |
+| Plan     | Price          | What is included                                       |
+| -------- | -------------- | ------------------------------------------------------ |
+| Hobby    | $0             | 2,000 Tab completions/month, 50 slow premium requests  |
+| Pro      | $20/month      | $20 usage credits, fast requests, most models          |
+| Pro+     | $60/month      | $60 usage credits, all models, priority                |
+| Ultra    | $200/month     | $200 usage credits, maximum limits                     |
 | Business | $40/user/month | All Pro features, SSO/SAML, admin controls, audit logs |
 
 Cursor moved from a fixed-request model to usage-based credits in June 2025. Each AI operation costs a variable number of credits depending on the model used and the size of the context. Simpler models (Claude Haiku 4.5, GPT-4o-mini) cost fewer credits than frontier models (Claude Opus 4.6, GPT-5). Cloud Agent tasks on frontier models can consume credits quickly.
@@ -312,11 +316,11 @@ Open a file with a reasonable commit history in a repository where you have used
 
 **Exercise 4 - Branch with an Agent**
 
-Open Composer in Agent mode and type: "Create a new branch called feature/test-agent-workflow, add a new file called AGENT_TEST.md with a brief description of what this branch is for, commit it with a conventional commit message, and show me the git log for this branch." Watch the agent execute the full workflow. Verify the result in the Source Control panel and `git log`.
+Open Composer in Agent mode and type: "Create a new branch called feature/test-agent-workflow, add a new file called AGENT_TEST.md with a brief description of what this branch is for, commit it with a conventional commit message and show me the git log for this branch." Watch the agent execute the full workflow. Verify the result in the Source Control panel and `git log`.
 
 **Exercise 5 - PR description from a diff**
 
-Push a feature branch that has several commits. Open Composer in Agent mode and type: "Compare this branch with main and write a pull request description I can use on GitHub. Include a summary, a list of changes, and any testing notes." Review the output and use it when opening the PR.
+Push a feature branch that has several commits. Open Composer in Agent mode and type: "Compare this branch with main and write a pull request description I can use on GitHub. Include a summary, a list of changes and any testing notes." Review the output and use it when opening the PR.
 
 ---
 

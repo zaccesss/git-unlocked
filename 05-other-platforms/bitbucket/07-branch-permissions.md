@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 30 minutes
 
-Branch permissions (also called branch restrictions) are Bitbucket's way of protecting important branches from uncontrolled changes. They define who can push to a branch, who can delete it, who can merge into it, and what conditions must be met before a merge is allowed. Without branch permissions, anyone with write access to a repository can push directly to `main`, delete branches accidentally or merge unreviewed code.
+Branch permissions (also called branch restrictions) are Bitbucket's way of protecting important branches from uncontrolled changes. They define who can push to a branch, who can delete it, who can merge into it and what conditions must be met before a merge is allowed. Without branch permissions, anyone with write access to a repository can push directly to `main`, delete branches accidentally or merge unreviewed code.
 
 This file covers the full branch permission system: branch restrictions, merge checks, required builds, default reviewer rules and how all of these work together to create a production-grade code review and deployment gate.
 
@@ -65,13 +65,13 @@ Branch restrictions control who can push, delete or merge to a branch. They are 
 
 The branch name field accepts exact names or glob patterns:
 
-| Pattern | Matches |
-|---|---|
-| `main` | Only the branch named `main` |
-| `release/*` | Any branch starting with `release/`: `release/1.0`, `release/2.3` |
+| Pattern      | Matches                                                            |
+| ------------ | ------------------------------------------------------------------ |
+| `main`       | Only the branch named `main`                                       |
+| `release/*`  | Any branch starting with `release/`: `release/1.0`, `release/2.3`  |
 | `feature/**` | Any branch under `feature/`: `feature/login`, `feature/auth/oauth` |
-| `*` | Every branch |
-| `v*` | Any branch starting with `v`: `v1.0`, `v2-stable` |
+| `*`          | Every branch                                                       |
+| `v*`         | Any branch starting with `v`: `v1.0`, `v2-stable`                  |
 
 Patterns are evaluated from most specific to least specific. A restriction on `main` takes precedence over a restriction on `*`.
 
@@ -82,6 +82,7 @@ Patterns are evaluated from most specific to least specific. A restriction on `m
 Controls who can push commits directly to the branch (bypassing pull requests).
 
 Options:
+
 - **No one** - nobody can push directly, all changes must go through a pull request
 - **Administrators** - only repository administrators can push directly
 - **Specific users or groups** - named individuals or groups can push directly; everyone else must use PRs
@@ -183,6 +184,7 @@ POST /2.0/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build
 ```
 
 Request body:
+
 ```json
 {
   "state": "SUCCESSFUL",
@@ -336,6 +338,7 @@ This is an important distinction: Free plan merge checks are advisory for everyo
 ### Gitflow pattern
 
 Teams using Gitflow typically set:
+
 - `main`: write-restricted, 2 approvals required, builds must pass
 - `develop`: write-restricted, 1 approval required, builds must pass
 - `release/*`: write-restricted (admins only), 2 approvals required
@@ -344,6 +347,7 @@ Teams using Gitflow typically set:
 ### Trunk-based development pattern
 
 Teams doing trunk-based development push small, frequent changes to `main` (or `trunk`):
+
 - `main`/`trunk`: write-restricted, 1 approval required, fast builds required (kept under 10 minutes)
 - Feature branches: no restrictions
 - No `develop` or `release` branches
@@ -351,6 +355,7 @@ Teams doing trunk-based development push small, frequent changes to `main` (or `
 ### Solo developer pattern
 
 A solo developer still benefits from branch permissions as a safety net:
+
 - `main`: write-restricted to administrators (yourself), delete restricted
 - No approval requirements (you are the only reviewer anyway)
 - Builds must pass before merge
@@ -370,6 +375,7 @@ This prevents accidental direct pushes and catches build failures before they re
 5. Save the restriction
 
 Now try pushing directly to main:
+
 ```bash
 git checkout main
 echo "test" >> test.txt
@@ -400,6 +406,7 @@ git push origin main
 1. Edit the `main` branch restriction
 2. Enable **Prevent rewriting history (no force pushes)**
 3. Try a force push:
+
 ```bash
 git checkout main
 git commit --amend -m "Amended commit" --no-edit
@@ -443,7 +450,7 @@ Branch permissions protect important branches through two complementary mechanis
 
 Restrictions are configured in **Repository settings** > **Branch permissions**. They use glob patterns to match branch names and can be stacked (multiple restrictions applying to the same branch). Key restrictions: write access (no direct pushes to main), delete restriction (prevent accidental deletion), force push restriction (protect history).
 
-Merge checks require: minimum approvals, no unresolved tasks, passing builds, and optionally reset approvals when new commits are pushed. On Free and Standard plans these are advisory warnings; on Premium they are server-enforced blocks.
+Merge checks require: minimum approvals, no unresolved tasks, passing builds and optionally reset approvals when new commits are pushed. On Free and Standard plans these are advisory warnings; on Premium they are server-enforced blocks.
 
 Default reviewers auto-assign team members to PRs targeting specific branches, ensuring the right people always review important changes.
 

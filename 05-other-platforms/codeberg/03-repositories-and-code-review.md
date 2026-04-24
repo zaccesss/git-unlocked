@@ -90,6 +90,7 @@ Requires SSH public key added to your account (Settings > SSH / GPG Keys).
 ### Codeberg clone URL format
 
 Codeberg SSH uses the standard format:
+
 ```
 git@codeberg.org:OWNER/REPO.git
 ```
@@ -103,6 +104,7 @@ Note the colon (`:`) between the host and owner - this is standard SSH Git synta
 🍎 **Mac**: Git Credential Manager stores in macOS Keychain automatically.
 
 🐧 **Linux**:
+
 ```bash
 # Cache in memory for 1 hour
 git config --global credential.helper 'cache --timeout=3600'
@@ -161,6 +163,7 @@ Keep a Codeberg repository in sync with an upstream GitHub repository:
 3. The Codeberg repository is read-only (you cannot push to it)
 
 Use this for:
+
 - Mirroring popular open source projects for air-gapped access
 - Keeping a Codeberg copy of a project that primarily lives on GitHub
 - Providing fast European access to US-hosted repositories
@@ -176,6 +179,7 @@ The pull request workflow on Codeberg is identical to Forgejo and very similar t
 After pushing a branch, Codeberg shows a banner suggesting you create a PR. Click it, or go to **Pull Requests** > **New Pull Request**.
 
 Fill in:
+
 - **Title**: what the change does
 - **Description**: why it is needed and how to test it (Markdown supported)
 - **Reviewers**, **Assignees**, **Labels**, **Milestone**
@@ -183,6 +187,7 @@ Fill in:
 ### Code review
 
 In the **Files Changed** tab:
+
 - Hover over any line and click **+** to add an inline comment
 - Drag across multiple lines to comment on a block
 - Add code suggestions (changes the reviewer can apply with one click) using the suggestion syntax in a fenced code block marked `suggestion`
@@ -192,6 +197,7 @@ Submit a review with **Approve**, **Request changes** or **Comment** from the **
 ### Merge strategies
 
 Codeberg supports three merge strategies (configure which are available in repository settings):
+
 - **Merge commit**: preserves full branch history
 - **Squash and merge**: one commit per PR on the target branch
 - **Rebase and merge**: replays commits linearly
@@ -252,6 +258,7 @@ Topics are searchable tags that help people find your project on Codeberg.
 ### Adding topics
 
 On your repository page, click the gear icon next to **Topics** and add relevant tags:
+
 - Language: `python`, `go`, `rust`, `typescript`
 - Category: `library`, `cli`, `web`, `desktop`, `mobile`
 - Domain: `machine-learning`, `cryptography`, `devtools`, `embedded`
@@ -273,6 +280,7 @@ Each repository can have a wiki for documentation.
 Wikis are enabled by default. Click **Wiki** in the repository navigation.
 
 Create pages in Markdown with internal links between pages:
+
 ```markdown
 See the [[Installation Guide]] for setup instructions.
 ```
@@ -341,6 +349,7 @@ Go to the repository on Codeberg and create a PR from the banner that appears.
 **Exercise 4 - Import from GitHub**
 
 If you have a GitHub repository to migrate:
+
 1. **+** > **New Migration** > **GitHub**
 2. Enter the repository URL
 3. Enable migration of issues, PRs and releases
@@ -370,7 +379,7 @@ Organisation private repositories require financial support of Codeberg. Attempt
 
 ## Summary
 
-Codeberg repositories work identically to Forgejo repositories. Create public repositories for open source projects, initialise with a README and a licence, and push with SSH for the best experience.
+Codeberg repositories work identically to Forgejo repositories. Create public repositories for open source projects, initialise with a README and a licence and push with SSH for the best experience.
 
 Import existing projects from GitHub via **+ > New Migration > GitHub** to bring over code, issues, PRs, labels, milestones and releases. For code-only migrations, use `git push --mirror`. Set up pull mirrors to keep a Codeberg repository in sync with an upstream source.
 

@@ -24,7 +24,7 @@ The terminal is powerful because it does exactly what you tell it, with no confi
 
 ## 1. Why the terminal has no undo
 
-When you delete a file in a graphical file manager on Windows or macOS, it goes to the Recycle Bin or Trash. You can recover it. When you delete a file with `rm` in the terminal, the deletion is immediate and permanent - the kernel calls `unlink()`, removes the directory entry, and the filesystem marks that space as available. There is no staging area for deletion, no bin, no undo. Recovery tools like `extundelete` exist but are forensic-grade - unreliable on SSDs with TRIM, journaling filesystems, and modern COW filesystems.
+When you delete a file in a graphical file manager on Windows or macOS, it goes to the Recycle Bin or Trash. You can recover it. When you delete a file with `rm` in the terminal, the deletion is immediate and permanent - the kernel calls `unlink()`, removes the directory entry, and the filesystem marks that space as available. There is no staging area for deletion, no bin, no undo. Recovery tools like `extundelete` exist but are forensic-grade - unreliable on SSDs with TRIM, journaling filesystems and modern COW filesystems.
 
 Git adds a partial safety net for work that has been committed - the reflog (covered in section 4). But the reflog only tracks commits and reference changes. If you have uncommitted work and destroy it, the reflog cannot help you.
 

@@ -75,6 +75,7 @@ When you push a new branch or new commits to an existing branch, Bitbucket shows
 **Title** - a concise summary of what the change does. Good PR titles are specific: "Fix login redirect loop for OAuth users" rather than "Fix bug". The title appears in commit history and in Jira's development panel if linked.
 
 **Description** - the context and details reviewers need. At minimum:
+
 - What does this change do?
 - Why is this change needed?
 - How can reviewers test it?
@@ -106,6 +107,7 @@ Once created, a PR has several tabs and panels:
 ### Overview tab
 
 The default view. Shows:
+
 - PR title, description and metadata
 - Reviewer list and their approval status
 - Build status from Bitbucket Pipelines
@@ -119,6 +121,7 @@ A list of all commits included in this PR. Each commit links to its diff. This v
 ### Diff tab
 
 The full diff of all changes in the PR. This is where most code review happens:
+
 - Green lines were added
 - Red lines were removed
 - Unchanged lines provide context
@@ -146,6 +149,7 @@ There is no formal "start review" step in Bitbucket - you comment and approve di
 ### Reading the diff effectively
 
 Focus on:
+
 - **Logic and correctness** - does the code do what the PR description says it does?
 - **Edge cases** - does the code handle unusual inputs, empty values, concurrent access?
 - **Security** - is any user input sanitised? Are any secrets or credentials hardcoded?
@@ -175,20 +179,23 @@ Click the comment icon at the top of a file's diff section to add a comment abou
 
 Bitbucket comments support Markdown:
 
-```markdown
-**This is bold** and *this is italic*
+````markdown
+**This is bold** and _this is italic_
 
 Code inline: `const x = 5`
 
 Code block:
+
 ```javascript
 function greet(name) {
   return `Hello, ${name}`;
 }
 ```
+````
 
 - List item one
 - List item two
+
 ```
 
 ### Resolving comment threads
@@ -226,7 +233,7 @@ If new commits are pushed to the PR after you approved, you may want to re-revie
 2. Click the dropdown next to your approval status
 3. Select **Revoke approval**
 
-Branch permissions can be configured to automatically revoke approvals when new commits are pushed (see branch permissions in file 07). This prevents a pattern where code is approved, more changes are added, and the PR is merged without the new code being reviewed.
+Branch permissions can be configured to automatically revoke approvals when new commits are pushed (see branch permissions in file 07). This prevents a pattern where code is approved, more changes are added and the PR is merged without the new code being reviewed.
 
 ### Required approvals
 
@@ -246,14 +253,16 @@ When a PR is ready to merge, Bitbucket offers up to three strategies depending o
 ### Merge commit
 
 ```
+
 Before merge:
-main:     A --- B --- C
-feature:              D --- E --- F
+main: A --- B --- C
+feature: D --- E --- F
 
 After merge commit:
-main:     A --- B --- C --- M (merge commit)
-                       \         /
-feature:                D --- E --- F
+main: A --- B --- C --- M (merge commit)
+\ /
+feature: D --- E --- F
+
 ```
 
 A merge commit preserves the complete branch history. The merge commit has two parents - the tip of the destination branch and the tip of the source branch. The full context of when the feature branch diverged and when it was merged is visible.
@@ -265,12 +274,14 @@ A merge commit preserves the complete branch history. The merge commit has two p
 ### Squash merge
 
 ```
+
 Before squash:
-main:     A --- B --- C
-feature:              D --- E --- F
+main: A --- B --- C
+feature: D --- E --- F
 
 After squash:
-main:     A --- B --- C --- S (squashed commit, contains D+E+F combined)
+main: A --- B --- C --- S (squashed commit, contains D+E+F combined)
+
 ```
 
 All commits from the feature branch are combined into a single commit on the destination branch. The feature branch's individual commits disappear from the main history. The new squashed commit has a single parent - the previous tip of main.
@@ -284,12 +295,14 @@ All commits from the feature branch are combined into a single commit on the des
 ### Fast-forward merge
 
 ```
+
 Before fast-forward:
-main:     A --- B --- C
-feature:              D --- E --- F
+main: A --- B --- C
+feature: D --- E --- F
 
 After fast-forward (only possible if feature is directly ahead of main):
-main:     A --- B --- C --- D --- E --- F
+main: A --- B --- C --- D --- E --- F
+
 ```
 
 A fast-forward merge is only possible when the destination branch has not moved since the feature branch was created. Git simply moves the destination branch pointer forward to where the feature branch is - no new commit is created.
@@ -358,8 +371,10 @@ A PR template is a pre-filled description that appears when a new pull request i
 Create a file at this exact path in your repository:
 
 ```
+
 .bitbucket/pull-request-description-template.md
-```
+
+````
 
 Example template:
 
@@ -386,7 +401,7 @@ Example template:
 ## Screenshots (if relevant)
 
 <!-- Attach before/after screenshots for UI changes -->
-```
+````
 
 ### Template best practices
 
@@ -411,6 +426,7 @@ The Jira integration is one of Bitbucket's strongest features, and pull requests
 ### Automatic linking via branch name
 
 If your branch name contains a Jira issue key, Bitbucket automatically links the PR to that Jira issue. The link appears in:
+
 - The PR overview in Bitbucket
 - The Development panel on the Jira issue
 - Jira's sprint board (the code icon appears on the issue card)
@@ -432,6 +448,7 @@ Mentioning a Jira issue key in the PR title or description also creates the link
 ### What appears in Jira
 
 Once linked, the Jira issue's Development panel shows:
+
 - Branch: the branch name and status (open, merged)
 - Commits: how many commits are in the PR, with links
 - Pull request: the PR title, status (open, approved, merged, declined) and link
@@ -462,6 +479,7 @@ Reviewers can see at a glance whether the code passes automated tests. Merging c
 Build results from external CI systems (Jenkins, CircleCI, Travis CI) can also be posted to a Bitbucket PR using the Bitbucket REST API. This allows teams using CI systems other than Bitbucket Pipelines to still display and enforce build status on PRs.
 
 The API endpoint for posting build status:
+
 ```
 POST /2.0/repositories/{workspace}/{repo_slug}/commit/{commit}/statuses/build
 ```
@@ -523,6 +541,7 @@ Declined PRs are not deleted - they remain in the PR list as closed. The branch 
 ### Reopening a declined PR
 
 Declined PRs can be reopened if the work becomes relevant again:
+
 1. Find the declined PR (filter by "Declined" status in the PR list)
 2. Click **Reopen**
 
@@ -539,6 +558,7 @@ Bitbucket sends email notifications and in-app notifications for PR activity. Th
 ### Default notification triggers
 
 You receive notifications for:
+
 - PRs where you are a reviewer
 - PRs where you are the author (for approvals, comments and status changes)
 - PRs where you have left a comment (for subsequent activity in those PRs)
@@ -550,6 +570,7 @@ You receive notifications for:
 3. Adjust which events trigger email notifications
 
 For busy repositories, reduce notification noise by:
+
 - Only receiving emails for PRs where you are explicitly a reviewer
 - Disabling notifications for repos you watch passively
 - Using Bitbucket's in-app notification center instead of email for lower-priority events
@@ -561,11 +582,13 @@ For busy repositories, reduce notification noise by:
 **Exercise 1 - Create a pull request**
 
 1. In your practice repository, create a new branch:
+
 ```bash
 git checkout -b feature/add-contributing-guide
 ```
 
 2. Create a file:
+
 ```bash
 echo "# Contributing\n\nThank you for considering contributing to this project." > CONTRIBUTING.md
 git add CONTRIBUTING.md

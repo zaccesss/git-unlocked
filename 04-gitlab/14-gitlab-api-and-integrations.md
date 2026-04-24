@@ -33,6 +33,7 @@ GitLab exposes a comprehensive REST API and a GraphQL API that give you programm
 The GitLab REST API follows standard REST conventions. Every resource has a predictable URL structure, uses HTTP verbs correctly and returns JSON. It is the most complete API surface GitLab offers and the right choice for most integrations.
 
 **Base URL:**
+
 - GitLab.com: `https://gitlab.com/api/v4/`
 - Self-managed: `https://YOUR_DOMAIN/api/v4/`
 
@@ -42,19 +43,19 @@ The GitLab REST API follows standard REST conventions. Every resource has a pred
 
 **HTTP status codes**:
 
-| Code | Meaning |
-|---|---|
-| 200 OK | Request succeeded, data returned |
-| 201 Created | Resource created successfully |
-| 204 No Content | Request succeeded, no data to return (DELETE) |
-| 400 Bad Request | Invalid parameters |
-| 401 Unauthorized | Authentication required or token invalid |
-| 403 Forbidden | Authenticated but insufficient permissions |
-| 404 Not Found | Resource does not exist or you lack access |
-| 409 Conflict | Resource already exists or conflict in state |
-| 422 Unprocessable Entity | Validation errors |
-| 429 Too Many Requests | Rate limit exceeded |
-| 500 Internal Server Error | GitLab error |
+| Code                      | Meaning                                       |
+| ------------------------- | --------------------------------------------- |
+| 200 OK                    | Request succeeded, data returned              |
+| 201 Created               | Resource created successfully                 |
+| 204 No Content            | Request succeeded, no data to return (DELETE) |
+| 400 Bad Request           | Invalid parameters                            |
+| 401 Unauthorized          | Authentication required or token invalid      |
+| 403 Forbidden             | Authenticated but insufficient permissions    |
+| 404 Not Found             | Resource does not exist or you lack access    |
+| 409 Conflict              | Resource already exists or conflict in state  |
+| 422 Unprocessable Entity  | Validation errors                             |
+| 429 Too Many Requests     | Rate limit exceeded                           |
+| 500 Internal Server Error | GitLab error                                  |
 
 ---
 
@@ -132,6 +133,7 @@ curl --header "Authorization: Bearer YOUR_OAUTH_TOKEN" \
 ```
 
 **Flow types:**
+
 - **Authorization code flow**: standard flow for web applications with a backend
 - **PKCE flow**: for mobile apps and SPAs that cannot securely store a client secret
 - **Device authorization flow**: for CLI tools and devices without a browser
@@ -216,10 +218,10 @@ URL="https://gitlab.com/api/v4/projects?membership=true&per_page=100"
 while [ -n "$URL" ]; do
   # Fetch page and capture response headers
   RESPONSE=$(curl -sI -H "PRIVATE-TOKEN: $TOKEN" "$URL" -D /tmp/headers 2>/dev/null)
-  
+
   # Fetch the actual data
   curl -s -H "PRIVATE-TOKEN: $TOKEN" "$URL" >> all_projects.json
-  
+
   # Get next page URL from Link header
   URL=$(grep "^link:" /tmp/headers | grep -o '<[^>]*>; rel="next"' | sed 's/<\(.*\)>; rel="next"/\1/')
 done
@@ -419,12 +421,7 @@ query {
 
 ```graphql
 mutation {
-  createIssue(input: {
-    projectPath: "my-group/my-project"
-    title: "Bug: login fails on Safari 17"
-    description: "Steps to reproduce..."
-    labelNames: ["bug", "frontend"]
-  }) {
+  createIssue(input: { projectPath: "my-group/my-project", title: "Bug: login fails on Safari 17", description: "Steps to reproduce...", labelNames: ["bug", "frontend"] }) {
     issue {
       iid
       title
@@ -437,12 +434,12 @@ mutation {
 
 ### REST vs GraphQL - when to use each
 
-| Use REST when | Use GraphQL when |
-|---|---|
-| Performing simple CRUD operations | Fetching data from multiple related resources in one request |
-| Working with binary data (file contents, artifacts) | You need precise control over which fields are returned |
-| Using tools that have built-in REST support | Building a dashboard or UI that needs flexible data fetching |
-| Triggering actions (pipelines, merges) | Reducing API calls by combining multiple queries |
+| Use REST when                                       | Use GraphQL when                                             |
+| --------------------------------------------------- | ------------------------------------------------------------ |
+| Performing simple CRUD operations                   | Fetching data from multiple related resources in one request |
+| Working with binary data (file contents, artifacts) | You need precise control over which fields are returned      |
+| Using tools that have built-in REST support         | Building a dashboard or UI that needs flexible data fetching |
+| Triggering actions (pipelines, merges)              | Reducing API calls by combining multiple queries             |
 
 Most integrations use REST. GraphQL is most valuable when building applications that need to display data from multiple GitLab resources simultaneously.
 
@@ -462,29 +459,30 @@ Webhooks are HTTP POST requests that GitLab sends to your URL when specific even
 
 ### Supported events
 
-| Event | Trigger |
-|---|---|
-| Push events | Commits pushed to any branch |
-| Tag push events | A tag is created or deleted |
-| Comments | A comment is added to an issue, MR, commit or snippet |
-| Confidential comments | A comment on a confidential issue |
-| Issues events | An issue is created, updated, closed or reopened |
-| Confidential issues events | Changes to confidential issues |
-| Merge request events | An MR is created, updated, merged or closed |
-| Job events | A CI/CD job changes status |
-| Pipeline events | A pipeline changes status |
-| Wiki page events | A wiki page is created or updated |
-| Deployment events | A deployment starts, succeeds or fails |
-| Releases events | A release is created or updated |
-| Member events | A member is added, updated or removed |
-| Subgroup events | A subgroup is created or deleted |
-| Project events | A project is created, renamed, transferred or deleted |
+| Event                      | Trigger                                               |
+| -------------------------- | ----------------------------------------------------- |
+| Push events                | Commits pushed to any branch                          |
+| Tag push events            | A tag is created or deleted                           |
+| Comments                   | A comment is added to an issue, MR, commit or snippet |
+| Confidential comments      | A comment on a confidential issue                     |
+| Issues events              | An issue is created, updated, closed or reopened      |
+| Confidential issues events | Changes to confidential issues                        |
+| Merge request events       | An MR is created, updated, merged or closed           |
+| Job events                 | A CI/CD job changes status                            |
+| Pipeline events            | A pipeline changes status                             |
+| Wiki page events           | A wiki page is created or updated                     |
+| Deployment events          | A deployment starts, succeeds or fails                |
+| Releases events            | A release is created or updated                       |
+| Member events              | A member is added, updated or removed                 |
+| Subgroup events            | A subgroup is created or deleted                      |
+| Project events             | A project is created, renamed, transferred or deleted |
 
 ### Configuring a webhook
 
 Settings -> Webhooks -> Add new webhook
 
 Fields:
+
 - **URL**: the endpoint GitLab will POST to
 - **Secret token**: an optional value GitLab includes in the `X-Gitlab-Token` header, used to verify the request comes from GitLab
 - **Trigger events**: tick the events you want to receive
@@ -493,6 +491,7 @@ Fields:
 ### Webhook payload
 
 Each webhook POST includes:
+
 - Headers: `X-Gitlab-Event` (event type), `X-Gitlab-Token` (your secret), `Content-Type: application/json`
 - Body: JSON object describing the event
 
@@ -541,21 +540,21 @@ def webhook():
     token = request.headers.get("X-Gitlab-Token")
     if token != WEBHOOK_SECRET:
         abort(401)
-    
+
     event = request.headers.get("X-Gitlab-Event")
     payload = request.json
-    
+
     if event == "Push Hook":
         branch = payload["ref"].replace("refs/heads/", "")
         user = payload["user_username"]
         commit_count = len(payload["commits"])
         print(f"{user} pushed {commit_count} commits to {branch}")
-    
+
     elif event == "Merge Request Hook":
         action = payload["object_attributes"]["action"]
         title = payload["object_attributes"]["title"]
         print(f"MR '{title}' was {action}")
-    
+
     return "", 200
 ```
 
@@ -603,13 +602,14 @@ Transitions PROJ-123 to In Progress
 Setup: Settings -> Integrations -> GitLab for Slack app -> **Install GitLab for Slack**. Authorise in Slack. Configure which channels receive which event notifications.
 
 **Slash commands** (after installation):
+
 ```
 /gitlab help                          - show available commands
 /gitlab my-group/my-project deploy production  - trigger a deployment
 /gitlab my-group/my-project open issue  - open an issue from Slack
 ```
 
-**Notification configuration**: after installing, go to the integration settings to configure which events send to which channels. You can have pipeline results go to one channel, MR updates to another, and deployment events to a third.
+**Notification configuration**: after installing, go to the integration settings to configure which events send to which channels. You can have pipeline results go to one channel, MR updates to another and deployment events to a third.
 
 Group-level Slack app configuration (GA in GitLab 17.8): configure once at the group level and it applies to all projects in the group.
 
@@ -715,6 +715,7 @@ curl --request DELETE \
 Configure automatic deletion of old tags: Settings -> Packages and registries -> Container registry -> **Clean up image tags**.
 
 Configure:
+
 - **Run cleanup**: on a schedule (every day, week, month)
 - **Keep the most recent**: N tags matching a name pattern
 - **Remove tags older than**: N days
@@ -972,14 +973,14 @@ GitLab.com applies rate limits to protect the service. Self-managed instances ha
 
 ### Current GitLab.com limits (as of 2026)
 
-| Request type | Limit |
-|---|---|
-| Unauthenticated API requests | 10 requests/second per IP |
-| Authenticated API requests | 2,000 requests/minute per user |
-| Raw file endpoints | 300 requests/minute per IP |
-| Repository downloads | 5 downloads/minute per user |
-| Pipeline creation via API | 25/minute per project |
-| Webhook deliveries | 500/minute per project |
+| Request type                 | Limit                          |
+| ---------------------------- | ------------------------------ |
+| Unauthenticated API requests | 10 requests/second per IP      |
+| Authenticated API requests   | 2,000 requests/minute per user |
+| Raw file endpoints           | 300 requests/minute per IP     |
+| Repository downloads         | 5 downloads/minute per user    |
+| Pipeline creation via API    | 25/minute per project          |
+| Webhook deliveries           | 500/minute per project         |
 
 When you exceed a rate limit, GitLab returns `429 Too Many Requests` with a `Retry-After` header indicating how many seconds to wait.
 
@@ -992,15 +993,15 @@ import time
 def api_request_with_retry(url, headers, max_retries=3):
     for attempt in range(max_retries):
         response = requests.get(url, headers=headers)
-        
+
         if response.status_code == 429:
             retry_after = int(response.headers.get("Retry-After", 60))
             print(f"Rate limited. Waiting {retry_after} seconds before retry {attempt + 1}/{max_retries}")
             time.sleep(retry_after)
             continue
-        
+
         return response
-    
+
     raise Exception(f"Max retries exceeded for {url}")
 
 # Usage
@@ -1142,7 +1143,9 @@ query {
     mergeRequests(state: opened, first: 3) {
       nodes {
         title
-        author { username }
+        author {
+          username
+        }
       }
     }
   }

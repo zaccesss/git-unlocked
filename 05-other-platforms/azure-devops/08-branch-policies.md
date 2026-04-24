@@ -61,6 +61,7 @@ Branch policies are configured at the repository or branch level.
 5. Click the branch name to configure its policies
 
 Or from within Repos:
+
 1. Go to **Repos** > **Branches**
 2. Find the branch
 3. Click the **...** menu > **Branch policies**
@@ -102,7 +103,7 @@ Prohibit the most recent pusher from approving: On
 Reset approval votes on new pushes: On
 ```
 
-This configuration means: two different people must review the code, neither of which is the author, and both must have reviewed the final state of the code (no late pushes after approval).
+This configuration means: two different people must review the code, neither of which is the author and both must have reviewed the final state of the code (no late pushes after approval).
 
 ---
 
@@ -172,11 +173,11 @@ This policy restricts which merge strategies can be used when completing pull re
 
 ### Choosing a strategy
 
-| Strategy | Best for |
-|---|---|
-| Merge commit | Teams that value full branch history and clear merge points |
-| Squash | Teams that want clean, linear history (one commit per feature) |
-| Rebase | Teams that value linear history with all individual commits preserved |
+| Strategy     | Best for                                                              |
+| ------------ | --------------------------------------------------------------------- |
+| Merge commit | Teams that value full branch history and clear merge points           |
+| Squash       | Teams that want clean, linear history (one commit per feature)        |
+| Rebase       | Teams that value linear history with all individual commits preserved |
 
 Most teams choose **either merge commit or squash** and stick to it consistently. Allowing all merge types leads to inconsistent history.
 
@@ -208,6 +209,7 @@ Build validation runs a pipeline automatically when a PR is created or updated, 
 ### What build validation does
 
 When a PR triggers build validation:
+
 1. Azure Pipelines creates a temporary merge of the PR's source branch into the target branch
 2. The pipeline runs against this merge result
 3. If the pipeline passes, the policy is satisfied
@@ -219,6 +221,7 @@ This is the critical integration between Azure Repos and Azure Pipelines. It ens
 ### Multiple build validations
 
 You can add multiple build validations to a branch. For example:
+
 - **Required**: Unit tests pipeline (fast, must always pass)
 - **Required**: Integration tests pipeline (slower, must pass)
 - **Optional**: Performance benchmarks (informational, not blocking)
@@ -238,6 +241,7 @@ POST https://dev.azure.com/{org}/{project}/_apis/git/repositories/{repoId}/commi
 ```
 
 With a status object containing:
+
 - `state`: `succeeded`, `failed`, `pending`, `notSet`
 - `genre`: the category of the check (e.g. "security", "quality")
 - `name`: the specific check name
@@ -331,6 +335,7 @@ Sometimes urgent situations require bypassing policies - a critical hotfix that 
 The permission "Bypass policies when completing pull requests" allows a user to complete a PR even when policies are not satisfied. It also allows direct pushes to policy-protected branches.
 
 To grant bypass permission:
+
 1. Go to **Project settings** > **Repositories** > select a repository > **Security**
 2. Find the user or group
 3. Set "Bypass policies when completing pull requests" to **Allow**
@@ -341,6 +346,7 @@ To grant bypass permission:
 ### Bypassing in practice
 
 When a user with bypass permission completes a PR that fails policies, Azure DevOps:
+
 1. Records the bypass in the audit log
 2. Adds a note to the PR that policies were bypassed
 3. Identifies which policies were not satisfied at the time of completion
@@ -414,6 +420,7 @@ Branch lock: enabled during release freeze window
 5. Save
 
 Now try to push directly to main:
+
 ```bash
 git checkout main
 echo "test" >> test.txt
@@ -426,6 +433,7 @@ git push origin main
 **Exercise 2 - Add build validation**
 
 1. Create a simple pipeline (`azure-pipelines-pr.yml`):
+
 ```yaml
 trigger: none
 pr:
@@ -436,7 +444,7 @@ pool:
 
 steps:
   - script: echo "PR build succeeded"
-    displayName: 'PR validation'
+    displayName: "PR validation"
 ```
 
 2. Commit and push this file to a branch and create a PR

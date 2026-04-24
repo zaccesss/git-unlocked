@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 30 minutes
 
-Before you can push code, open merge requests, run pipelines or collaborate with a team on GitLab, you need an account. This file walks you through creating and securing your account properly from the start: signing up on GitLab.com, setting up two-factor authentication with multiple methods including the new passkeys, generating and adding SSH keys on Windows, Mac and Linux, creating personal access tokens for API and tooling access, and understanding exactly what the free tier gives you and where its limits are.
+Before you can push code, open merge requests, run pipelines or collaborate with a team on GitLab, you need an account. This file walks you through creating and securing your account properly from the start: signing up on GitLab.com, setting up two-factor authentication with multiple methods including the new passkeys, generating and adding SSH keys on Windows, Mac and Linux, creating personal access tokens for API and tooling access and understanding exactly what the free tier gives you and where its limits are.
 
 Getting this right at the start saves significant headaches later. An account without 2FA is a security risk. An account without SSH keys means typing your password for every push and pull. An account with no understanding of free tier limits leads to surprises mid-project.
 
@@ -34,6 +34,7 @@ Getting this right at the start saves significant headaches later. An account wi
 This file covers **GitLab.com** - the cloud-hosted service at `https://gitlab.com`. If your organisation runs its own GitLab installation (self-managed), the signup process is different and controlled by your administrator. The self-managed signin section near the end of this file covers the relevant differences.
 
 You will need:
+
 - An email address you control and can receive mail at
 - A secure password (at least 8 characters; GitLab enforces this)
 - A phone or authenticator app if you plan to set up 2FA (strongly recommended)
@@ -61,6 +62,7 @@ After verification, GitLab asks a short onboarding questionnaire: your role, tea
 ## Username Rules and Choosing Well
 
 Your username matters more than it might seem. It appears in:
+
 - Your profile URL: `https://gitlab.com/yourusername`
 - Every project URL you create: `https://gitlab.com/yourusername/project-name`
 - Every commit you make (combined with your Git `user.name` setting)
@@ -68,6 +70,7 @@ Your username matters more than it might seem. It appears in:
 - The registry path for any container images you publish
 
 **Technical rules:**
+
 - 2 to 255 characters
 - Only non-accented letters, digits, underscores (`_`), hyphens (`-`) and dots (`.`)
 - Cannot start with `_`, `-` or `.`
@@ -76,6 +79,7 @@ Your username matters more than it might seem. It appears in:
 - Cannot contain emoji
 
 **Practical advice:**
+
 - Use something consistent with your GitHub username if you have one - many developers use the same handle everywhere
 - Lowercase is conventional
 - Avoid dots in usernames if possible - they can cause confusion with domain names and some tooling
@@ -161,6 +165,7 @@ Access 2FA settings at: **Avatar → Edit profile → Access → Password and au
 TOTP generates a new 6-digit code every 30 seconds. You enter this code alongside your password when signing in.
 
 **Compatible apps (all free):**
+
 - **Aegis Authenticator** (Android, open source) - recommended for privacy
 - **Google Authenticator** (Android, iOS)
 - **Microsoft Authenticator** (Android, iOS)
@@ -216,14 +221,14 @@ Passkeys became **generally available (GA) in GitLab 18.9** (February 2026) and 
 
 ### Compatible devices and platforms
 
-| Platform | Authentication method |
-|---|---|
-| iPhone / iPad (iOS 16+) | Face ID, Touch ID, Passkey sync via iCloud |
-| Android 9+ | Fingerprint, face recognition, Google Password Manager sync |
-| macOS | Touch ID, Face ID, iCloud Keychain |
-| Windows 10/11 | Windows Hello (PIN, fingerprint, face) |
-| Linux | Hardware security keys (FIDO2), browser-stored passkeys |
-| Hardware keys | YubiKey 5 series, Feitian, Google Titan |
+| Platform                | Authentication method                                       |
+| ----------------------- | ----------------------------------------------------------- |
+| iPhone / iPad (iOS 16+) | Face ID, Touch ID, Passkey sync via iCloud                  |
+| Android 9+              | Fingerprint, face recognition, Google Password Manager sync |
+| macOS                   | Touch ID, Face ID, iCloud Keychain                          |
+| Windows 10/11           | Windows Hello (PIN, fingerprint, face)                      |
+| Linux                   | Hardware security keys (FIDO2), browser-stored passkeys     |
+| Hardware keys           | YubiKey 5 series, Feitian, Google Titan                     |
 
 Browsers: Chrome 109+, Safari 16+, Firefox 122+, Edge 109+ all support passkeys.
 
@@ -241,6 +246,7 @@ You can register multiple passkeys (different devices, hardware keys). Each appe
 ### Signing in with a passkey
 
 On the GitLab sign-in page:
+
 1. Under the username/password form, find **Or sign in with** or **other sign-in options**
 2. Click **Sign in with a passkey**
 3. Your device prompts for biometric or PIN verification
@@ -260,6 +266,7 @@ SSH keys let you push, pull and clone repositories without typing your username 
 The recommended algorithm is **Ed25519** - faster and more secure than the older RSA type.
 
 🍎🐧:
+
 ```bash
 # Generate an Ed25519 key
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -273,6 +280,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
 🪟 (Git Bash or WSL):
+
 ```bash
 # Same command works in Git Bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -290,6 +298,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 The SSH agent holds your private key in memory so you do not need to enter your passphrase repeatedly.
 
 🍎🐧:
+
 ```bash
 # Start the agent
 eval "$(ssh-agent -s)"
@@ -299,6 +308,7 @@ ssh-add ~/.ssh/id_ed25519
 ```
 
 🪟 (PowerShell as Administrator, Windows 10+):
+
 ```powershell
 # Enable the OpenSSH Agent service
 Set-Service -Name ssh-agent -StartupType Automatic
@@ -309,6 +319,7 @@ ssh-add $env:USERPROFILE\.ssh\id_ed25519
 ```
 
 🍎 (macOS - add to Keychain for persistence across reboots):
+
 ```bash
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ```
@@ -316,6 +327,7 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 ### Copy your public key
 
 🍎🐧:
+
 ```bash
 cat ~/.ssh/id_ed25519.pub
 # Outputs something like:
@@ -323,6 +335,7 @@ cat ~/.ssh/id_ed25519.pub
 ```
 
 🪟 (PowerShell):
+
 ```powershell
 Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub
 ```
@@ -346,6 +359,7 @@ ssh -T git@gitlab.com
 ```
 
 Expected response:
+
 ```
 Welcome to GitLab, @yourusername!
 ```
@@ -393,20 +407,20 @@ Personal access tokens (PATs) are authentication credentials for use with the Gi
 
 ### Token scopes
 
-| Scope | What it allows |
-|---|---|
-| `api` | Full read/write access to the API, all projects, groups, registries and Git-over-HTTPS. The most powerful scope. |
-| `read_api` | Read-only API access to everything `api` covers. |
-| `read_user` | Read your own profile information and authenticated user data. |
-| `create_runner` | Register new GitLab Runners to projects or groups. |
-| `manage_runner` | Manage (pause, delete, update) Runners. |
-| `k8s_proxy` | Access Kubernetes clusters through the GitLab agent. |
-| `read_repository` | Read-only access to repositories via Git-over-HTTPS for private projects. |
-| `write_repository` | Read-write access to repositories via Git-over-HTTPS. Allows push without full API access. |
-| `read_registry` | Pull container images from the registry. |
-| `write_registry` | Push container images to the registry. |
-| `ai_features` | Access the GitLab Duo AI APIs. |
-| `sudo` | Impersonate other users via the API (admin only). |
+| Scope              | What it allows                                                                                                   |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| `api`              | Full read/write access to the API, all projects, groups, registries and Git-over-HTTPS. The most powerful scope. |
+| `read_api`         | Read-only API access to everything `api` covers.                                                                 |
+| `read_user`        | Read your own profile information and authenticated user data.                                                   |
+| `create_runner`    | Register new GitLab Runners to projects or groups.                                                               |
+| `manage_runner`    | Manage (pause, delete, update) Runners.                                                                          |
+| `k8s_proxy`        | Access Kubernetes clusters through the GitLab agent.                                                             |
+| `read_repository`  | Read-only access to repositories via Git-over-HTTPS for private projects.                                        |
+| `write_repository` | Read-write access to repositories via Git-over-HTTPS. Allows push without full API access.                       |
+| `read_registry`    | Pull container images from the registry.                                                                         |
+| `write_registry`   | Push container images to the registry.                                                                           |
+| `ai_features`      | Access the GitLab Duo AI APIs.                                                                                   |
+| `sudo`             | Impersonate other users via the API (admin only).                                                                |
 
 **Example use cases:**
 
@@ -417,7 +431,7 @@ Personal access tokens (PATs) are authentication credentials for use with the Gi
 
 ### Token rotation
 
-Before a token expires, GitLab sends email notifications at 60 days and 30 days before expiry. You can also rotate tokens manually: go to the token in your list, click **Rotate** (since GitLab 17.7). This creates a new token with the same name and scopes, immediately invalidates the old one, and shows you the new value once.
+Before a token expires, GitLab sends email notifications at 60 days and 30 days before expiry. You can also rotate tokens manually: go to the token in your list, click **Rotate** (since GitLab 17.7). This creates a new token with the same name and scopes, immediately invalidates the old one and shows you the new value once.
 
 If you use CI/CD secrets or environment variables to hold tokens, build a rotation process into your workflow. Expired tokens cause pipeline failures and deployment outages.
 
@@ -455,6 +469,7 @@ Every unique user who has access to any project or subgroup within a private top
 When a private group exceeds five unique members, GitLab puts the **entire namespace into read-only mode**. No new code can be pushed, no issues can be created, nothing can be changed. To resolve it you must either: reduce the member count back to five, or upgrade to a paid plan.
 
 **Exemptions to the five-user limit:**
+
 - Public groups and projects have no user limit
 - Personal namespaces (your own projects, not in a group) have no user limit
 - GitLab for Education and GitLab for Open Source programme members are exempt
@@ -470,6 +485,7 @@ If you need more than three top-level groups, you must upgrade to a paid plan. T
 The Free tier includes **400 compute minutes per month** for pipelines running on GitLab.com's shared runners. Shared runners are the Linux, Windows and macOS machines that GitLab.com provides for running CI/CD jobs.
 
 400 minutes sounds like a lot but runs out quickly if:
+
 - You run tests on every push to every branch
 - Your test suite takes more than a few minutes
 - Multiple team members push frequently throughout the day
@@ -514,9 +530,10 @@ Despite the limits, the Free tier is substantial. You get:
 
 GitLab.com's shared runners are the managed machines that execute your CI/CD pipelines without any setup. They are valuable and costly to operate. In 2021, GitLab experienced severe abuse of the free shared runners - mainly cryptocurrency mining operations that created thousands of accounts and ran mining software 24/7 on GitLab's infrastructure, causing significant performance problems for all users.
 
-GitLab's response was to require credit card verification before Free tier accounts can use shared runners. The card is used for **identity verification only**. GitLab charges $1 to verify the card, then immediately reverses it. No money is held, no charges are made, and GitLab does not store your card details.
+GitLab's response was to require credit card verification before Free tier accounts can use shared runners. The card is used for **identity verification only**. GitLab charges $1 to verify the card, then immediately reverses it. No money is held, no charges are made and GitLab does not store your card details.
 
 **Alternatives that do not require a card:**
+
 - **Install your own GitLab Runner**: free, no card required, no minute limits. Your runner runs on hardware you control.
 - **Use a Runner registered to your project**: if someone else in your project has already set up a runner, you can use theirs.
 - **Disable shared runners and use only project-specific runners**: in project Settings → CI/CD → Runners, you can disable shared runners entirely.
@@ -569,6 +586,7 @@ ssh -T git@your.instance.com
 **Exercise 3: Generate and add an SSH key**
 
 🍎🐧:
+
 ```bash
 # Generate (replace with your email)
 ssh-keygen -t ed25519 -C "you@example.com"
@@ -582,6 +600,7 @@ cat ~/.ssh/id_ed25519.pub
 ```
 
 🪟:
+
 ```powershell
 # Generate
 ssh-keygen -t ed25519 -C "you@example.com"

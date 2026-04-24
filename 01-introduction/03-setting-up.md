@@ -1,6 +1,6 @@
 # Setting Up
 
-**Difficulty:** 🟢 Beginner | **Time:** 30–50 minutes
+**Difficulty:** 🟢 Beginner | **Time:** 30 to 50 minutes
 
 This file gets you fully set up before you write a single Git command. By the end you will have a GitHub account, a GitLab account, Git installed and configured, authentication working and Git set up inside your code editor or IDE.
 
@@ -69,7 +69,7 @@ An **IDE (Integrated Development Environment)** is an all-in-one application for
 | **Rider**              | .NET and Unreal Engine           | Paid                               |
 
 > [!TIP]
-> If you are new to development, start with **VS Code**. It is free, works on Windows, Mac and Linux, and is used by over 75% of developers worldwide.
+> If you are new to development, start with **VS Code**. It is free, works on Windows, Mac and Linux and is used by over 75% of developers worldwide.
 
 A text editor like Notepad only edits text with no understanding of code. A terminal is a command-line interface with no graphical editor. An IDE combines all three.
 
@@ -137,7 +137,7 @@ If you see `'git' is not recognized` (Windows) or `command not found` (Mac/Linux
 > Never share your GitHub password. If you think your account has been compromised, go to **Settings → Password and security** immediately - change your password, regenerate your recovery codes and revoke any suspicious OAuth applications.
 
 > [!TIP]
-> **Students:** Go to **https://education.github.com** and apply for the GitHub Student Developer Pack. It gives you GitHub Copilot Pro, JetBrains IDEs, domain names, cloud credits and over 100 other tools completely free. All you need is a school or university email address. It is worth thousands of pounds or dollars and approval typically takes 1–3 days.
+> **Students:** Go to **https://education.github.com** and apply for the GitHub Student Developer Pack. It gives you GitHub Copilot Pro, JetBrains IDEs, domain names, cloud credits and over 100 other tools completely free. All you need is a school or university email address. It is worth thousands of pounds or dollars and approval typically takes 1 to 3 days.
 
 ---
 
@@ -273,7 +273,7 @@ Go to **https://git-scm.com/install/mac** and download the installer.
 
 ### Linux
 
-Use your distribution's package manager. Type the relevant command, press Enter, and enter your password when prompted.
+Use your distribution's package manager. Type the relevant command, press Enter and enter your password when prompted.
 
 **Ubuntu, Debian or Linux Mint:**
 
@@ -450,7 +450,7 @@ sudo apt install gh
 gh auth login
 ```
 
-Follow the prompts - choose `GitHub.com`, then `HTTPS` or `SSH`, then `Login with a web browser`. Copy the one-time code, press Enter, and authorise in your browser.
+Follow the prompts - choose `GitHub.com`, then `HTTPS` or `SSH`, then `Login with a web browser`. Copy the one-time code, press Enter and authorise in your browser.
 
 That is it. GitHub CLI stores your credentials securely. You will never need to type a password for Git operations again.
 

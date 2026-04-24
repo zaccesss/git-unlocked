@@ -28,20 +28,20 @@
 
 The course is organised into 12 numbered sections, each covering a distinct topic. The numbering reflects the intended reading order for beginners, but experienced learners can jump to any section directly.
 
-| Folder                  | What it covers                                                                 |
-| ----------------------- | ------------------------------------------------------------------------------ |
-| `00-welcome/`           | What this course is and how to get the most from it                            |
-| `01-introduction/`      | What version control is, how to set up Git, and how to navigate the course     |
-| `02-git/`               | Everything Git — from `git init` through internals, hooks, worktrees and more  |
-| `03-github/`            | Full GitHub platform — issues, Actions, Copilot, security, releases and more   |
-| `04-gitlab/`            | Full GitLab platform — pipelines, merge requests, runners, self-hosting        |
-| `05-other-platforms/`   | Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg                           |
-| `06-ides-and-editors/`  | VS Code, JetBrains, Neovim, Cursor, Zed and more                               |
-| `07-terminal/`          | Shell setup, lazygit, delta, fzf, bat, tig, gitui, starship and zoxide         |
-| `08-real-world/`        | Open source contribution, team workflows, GitOps, monorepos, disaster recovery |
-| `09-reference/`         | Cheatsheet, glossary, common mistakes, security reference                      |
-| `10-resources/`         | 120+ curated books, videos, tools and communities                              |
-| `11-first-contribution/`| A safe sandbox for making your very first open source pull request             |
+| Folder                   | What it covers                                                                 |
+| ------------------------ | ------------------------------------------------------------------------------ |
+| `00-welcome/`            | What this course is and how to get the most from it                            |
+| `01-introduction/`       | What version control is, how to set up Git and how to navigate the course      |
+| `02-git/`                | Everything Git - from `git init` through internals, hooks, worktrees and more  |
+| `03-github/`             | Full GitHub platform - issues, Actions, Copilot, security, releases and more   |
+| `04-gitlab/`             | Full GitLab platform - pipelines, merge requests, runners, self-hosting        |
+| `05-other-platforms/`    | Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg                           |
+| `06-ides-and-editors/`   | VS Code, JetBrains, Neovim, Cursor, Zed and more                               |
+| `07-terminal/`           | Shell setup, lazygit, delta, fzf, bat, tig, gitui, starship and zoxide         |
+| `08-real-world/`         | Open source contribution, team workflows, GitOps, monorepos, disaster recovery |
+| `09-reference/`          | Cheatsheet, glossary, common mistakes, security reference                      |
+| `10-resources/`          | 120+ curated books, videos, tools and communities                              |
+| `11-first-contribution/` | A safe sandbox for making your very first open source pull request             |
 
 Every content file includes a difficulty label (🟢 Beginner / 🟡 Intermediate / 🔴 Advanced) and covers Windows, Mac and Linux commands side by side.
 
@@ -49,11 +49,11 @@ Every content file includes a difficulty label (🟢 Beginner / 🟡 Intermediat
 
 Skip `01-introduction/` and go straight to whichever platform or topic you want to deepen. Good entry points for experienced users:
 
-- **Strengthen Git fundamentals** — `02-git/12-git-workflows.md` through `02-git/25-git-internals-advanced.md`
-- **Learn GitHub deeply** — start at `03-github/00-github-overview.md`
-- **Terminal-first workflow** — start at `07-terminal/00-terminal-overview.md`
-- **Real-world team practices** — `08-real-world/02-working-in-a-team.md`
-- **Quick reference** — `09-reference/cheatsheet.md` has every Git command in one place
+- **Strengthen Git fundamentals:** `02-git/12-git-workflows.md` through `02-git/25-git-internals-advanced.md`
+- **Learn GitHub deeply:** start at `03-github/00-github-overview.md`
+- **Terminal-first workflow:** start at `07-terminal/00-terminal-overview.md`
+- **Real-world team practices:** `08-real-world/02-working-in-a-team.md`
+- **Quick reference:** `09-reference/cheatsheet.md` has every Git command in one place
 
 ### Is the entire course free?
 
@@ -61,9 +61,9 @@ Yes. Every file, every section and all future updates are free under the [MIT Li
 
 ### How do I contribute to this course?
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. The short version: fork the repo, create a branch, make your change following the writing style guide, and open a pull request. Your name gets added to [HALL_OF_FAME.md](HALL_OF_FAME.md) once your first PR is merged.
+Read [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide. The short version: fork the repo, create a branch, make your change following the writing style guide and open a pull request. Your name gets added to [HALL_OF_FAME.md](HALL_OF_FAME.md) once your first PR is merged.
 
-If you have never opened a pull request before, start at [11-first-contribution/](11-first-contribution/README.md) — it is a sandbox designed for exactly that.
+If you have never opened a pull request before, start at [11-first-contribution/](11-first-contribution/README.md) - it is a sandbox designed for exactly that.
 
 ---
 
@@ -218,7 +218,7 @@ GitHub Copilot is an AI coding assistant. It has a **free tier** with 2,000 comp
 
 A free pack of tools for verified students - worth approximately $45,000 in total value. It includes GitHub Copilot Pro, JetBrains IDEs, domain names, cloud credits and over 100 other offers.
 
-Apply at [education.github.com](https://education.github.com) with a school email or student ID. Approval usually takes 1–3 days.
+Apply at [education.github.com](https://education.github.com) with a school email or student ID. Approval usually takes 1 to 3 days.
 
 ### How do I push my first project to GitHub?
 

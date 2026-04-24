@@ -135,7 +135,7 @@ Rochkind originally wrote SCCS in SNOBOL4 for an IBM System/370. He rewrote it i
 
 SCCS managed files in isolation. Each file had its own separate history file. It used a **pessimistic locking model**: when one programmer checked out a file, no one else could edit it. Only one person could work on a file at a time.
 
-Despite these limitations, SCCS established the foundational concepts every modern version control system still uses: check-in and check-out, revision history, and delta-based storage. Rochkind received the IEEE Most Influential Paper Award in 1989 for his 1975 paper describing it.
+Despite these limitations, SCCS established the foundational concepts every modern version control system still uses: check-in and check-out, revision history and delta-based storage. Rochkind received the IEEE Most Influential Paper Award in 1989 for his 1975 paper describing it.
 
 ### RCS: faster access, same limitations (1982)
 
@@ -167,7 +167,7 @@ SVN became self-hosting on 31 August 2001, after 14 months of development. It be
 
 SVN dominated the 2000s as the CVS replacement. Major adopters included the Apache Software Foundation, FreeBSD, Python, Ruby and WordPress. However, SVN remained a **centralised** system. The central server was still a single point of failure, and most operations required a network connection.
 
-### BitKeeper: the catalyst that created Git (2000–2005)
+### BitKeeper: the catalyst that created Git (2000-2005)
 
 **Larry McVoy** developed BitKeeper through his company BitMover Inc. The first public release was 4 May 2000. BitKeeper offered something genuinely revolutionary: a **distributed version control model** where entire repositories could be forked and merged easily.
 
@@ -219,7 +219,7 @@ Git's dominance is not accidental. Five factors compounded to make it effectivel
 
 **Microsoft's endorsement.** Microsoft acquired GitHub in June 2018 for $7.5 billion. Microsoft itself migrated the Windows codebase to Git - the largest Git repository in the world. This legitimised Git in enterprise settings that had previously resisted it.
 
-**The tipping point.** In 2009, SVN held 58% developer adoption versus Git's 2% (Eclipse annual survey). By 2014, Git surpassed SVN. By 2018, Git reached 87–88% in Stack Overflow surveys. By 2022, **93.87%**. Stack Overflow stopped asking about VCS preferences in 2019 because Git was so dominant - they only asked again in 2022 to confirm the question was still settled.
+**The tipping point.** In 2009, SVN held 58% developer adoption versus Git's 2% (Eclipse annual survey). By 2014, Git surpassed SVN. By 2018, Git reached 87-88% in Stack Overflow surveys. By 2022, **93.87%**. Stack Overflow stopped asking about VCS preferences in 2019 because Git was so dominant - they only asked again in 2022 to confirm the question was still settled.
 
 ---
 
@@ -296,7 +296,7 @@ You do not. Start with the five most common commands and build from there. Every
 
 **Thinking mistakes in Git are permanent.**
 
-Almost nothing in Git is permanent. Git is specifically designed to make recovery possible. Once something is committed, it is very difficult to lose permanently. The reflog - Git's internal safety net - keeps records of everything for 30–90 days even after deletions.
+Almost nothing in Git is permanent. Git is specifically designed to make recovery possible. Once something is committed, it is very difficult to lose permanently. The reflog - Git's internal safety net - keeps records of everything for 30 to 90 days even after deletions.
 
 ---
 
@@ -318,7 +318,7 @@ Almost nothing in Git is permanent. Git is specifically designed to make recover
 - [Pro Git book](https://git-scm.com/book/en/v2) - the free official Git book. Chapter 1 covers the history of version control in depth
 - [Git turns 20: A Q&A with Linus Torvalds](https://github.blog/open-source/git/git-turns-20-a-qa-with-linus-torvalds/) - Linus Torvalds on Git's creation in his own words (GitHub Blog, 2025)
 - [Journey through Git's 20-year history](https://about.gitlab.com/blog/journey-through-gits-20-year-history/) - GitLab's detailed timeline of Git's development (2025)
-- [BitKeeper, Linux, and licensing disputes: How Linus wrote Git in 14 days](https://graphite.com/blog/bitkeeper-linux-story-of-git-creation) - the full story of the BitKeeper incident (Graphite)
+- [BitKeeper, Linux and licensing disputes: How Linus wrote Git in 14 days](https://graphite.com/blog/bitkeeper-linux-story-of-git-creation) - the full story of the BitKeeper incident (Graphite)
 - [A history of source control systems: SCCS and RCS](https://experimentalworks.net/posts/2024-03-18-a-history-of-vcs-part1/) - detailed technical history of the earliest VCS tools
 - [Version control systems popularity in 2025](https://rhodecode.com/blog/156/version-control-systems-popularity-in-2025) - current adoption statistics across VCS tools (RhodeCode)
 - [Beyond Git: The other version control systems developers use](https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/) - Stack Overflow's analysis of non-Git VCS usage

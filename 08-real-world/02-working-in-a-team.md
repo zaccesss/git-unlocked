@@ -23,9 +23,9 @@
 
 ## Introduction
 
-When you work alone, Git is a backup and history tool. When you work in a team, Git becomes the coordination layer for everything: who changed what, when, and why; which features are safe to deploy; how to untangle two people's conflicting changes; and how to ensure nothing lands on `main` without passing tests.
+When you work alone, Git is a backup and history tool. When you work in a team, Git becomes the coordination layer for everything: who changed what, when and why; which features are safe to deploy; how to untangle two people's conflicting changes; and how to ensure nothing lands on `main` without passing tests.
 
-This file covers the decisions every team needs to make - which branching strategy fits your release model, how to set up protected branches and rulesets, how code review works in practice, and how merge queues prevent the CI-passing-on-my-branch-but-broken-on-main problem. It draws on published engineering practices from Google, Microsoft, Shopify and Netflix.
+This file covers the decisions every team needs to make - which branching strategy fits your release model, how to set up protected branches and rulesets, how code review works in practice and how merge queues prevent the CI-passing-on-my-branch-but-broken-on-main problem. It draws on published engineering practices from Google, Microsoft, Shopify and Netflix.
 
 **What you need:**
 
@@ -36,7 +36,7 @@ This file covers the decisions every team needs to make - which branching strate
 
 ## Branching strategies
 
-A branching strategy is a shared agreement about which branches exist, what they represent, and how changes flow between them. The right choice depends on how often you ship and whether you need to support multiple live versions simultaneously.
+A branching strategy is a shared agreement about which branches exist, what they represent and how changes flow between them. The right choice depends on how often you ship and whether you need to support multiple live versions simultaneously.
 
 ### GitFlow 🔴
 
@@ -148,13 +148,13 @@ DORA (DevOps Research and Assessment) research consistently correlates trunk-bas
 
 ### Choosing a strategy
 
-| Question | Answer | Strategy |
-|---|---|---|
-| Do you ship continuously (multiple times per day)? | Yes | Trunk-based or GitHub Flow |
-| Do you maintain multiple live versions? | Yes | GitFlow or GitLab Flow (release branches) |
-| Do you have staged environments (dev/staging/prod)? | Yes | GitLab Flow |
-| Are you a small team moving fast? | Yes | GitHub Flow |
-| Do you ship versioned installers or mobile apps? | Yes | GitFlow |
+| Question                                            | Answer | Strategy                                  |
+| --------------------------------------------------- | ------ | ----------------------------------------- |
+| Do you ship continuously (multiple times per day)?  | Yes    | Trunk-based or GitHub Flow                |
+| Do you maintain multiple live versions?             | Yes    | GitFlow or GitLab Flow (release branches) |
+| Do you have staged environments (dev/staging/prod)? | Yes    | GitLab Flow                               |
+| Are you a small team moving fast?                   | Yes    | GitHub Flow                               |
+| Do you ship versioned installers or mobile apps?    | Yes    | GitFlow                                   |
 
 ---
 
@@ -293,7 +293,7 @@ Docs: [docs.gitlab.com/user/project/codeowners](https://docs.gitlab.com/user/pro
 ### GitHub Rulesets (the current standard)
 
 > [!IMPORTANT]
-> GitHub has two systems for branch protection: **classic branch protection rules** (legacy) and **Rulesets** (current standard since 2023). Use Rulesets for new setups. Classic rules still work but cannot stack, cannot apply at the organisation level, and cannot enforce commit metadata. Rulesets do all three.
+> GitHub has two systems for branch protection: **classic branch protection rules** (legacy) and **Rulesets** (current standard since 2023). Use Rulesets for new setups. Classic rules still work but cannot stack, cannot apply at the organisation level and cannot enforce commit metadata. Rulesets do all three.
 
 Rulesets are created at **Settings > Rules > Rulesets** in your repository (or at the organisation level to apply across many repos).
 
@@ -340,7 +340,7 @@ Allowed to push: No one
 Allowed to force push: No
 ```
 
-GitLab's **push rules** (Premium) add commit-message regex enforcement, author-email restrictions, maximum file size, and rejection of unsigned commits. **MR approval rules** define how many approvals are required and which users or groups can provide them.
+GitLab's **push rules** (Premium) add commit-message regex enforcement, author-email restrictions, maximum file size and rejection of unsigned commits. **MR approval rules** define how many approvals are required and which users or groups can provide them.
 
 ---
 
@@ -362,7 +362,7 @@ on:
   push:
     branches: [main]
   pull_request:
-  merge_group:           # this line enables merge queue CI
+  merge_group: # this line enables merge queue CI
 
 jobs:
   test:
@@ -433,7 +433,7 @@ This exercise requires a GitHub repository where you have admin access. Create a
 ## Common mistakes
 
 **Using classic branch protection rules on new repositories.**
-Classic rules are being superseded by Rulesets. They cannot stack, cannot apply across the fork network, and have a smaller feature set. If you are setting up protection for the first time, use Rulesets from the start.
+Classic rules are being superseded by Rulesets. They cannot stack, cannot apply across the fork network and have a smaller feature set. If you are setting up protection for the first time, use Rulesets from the start.
 
 **Choosing GitFlow for a team that deploys continuously.**
 GitFlow was designed for software that ships versioned releases. If your team deploys to production every day or multiple times per day, GitFlow's release branches create unnecessary overhead and long-running divergence. Use GitHub Flow or trunk-based development instead.
@@ -456,7 +456,7 @@ If you enable the GitHub Merge Queue but forget to add `merge_group:` to your CI
 
 The branching strategy question collapses to a single question: do you deploy continuously from one version, or do you ship versioned releases? Continuous deployment points toward trunk-based development or GitHub Flow; versioned releases point toward GitFlow or GitLab Flow (release branches).
 
-Beyond the branching strategy, three practices define high-performance team Git: small PRs reviewed within one working day, CODEOWNERS to route reviews automatically, and Rulesets (not classic branch protection) to enforce the rules. For teams with busy `main` branches, a merge queue eliminates the class of CI failures that happen when two individually-green PRs combine unexpectedly.
+Beyond the branching strategy, three practices define high-performance team Git: small PRs reviewed within one working day, CODEOWNERS to route reviews automatically and Rulesets (not classic branch protection) to enforce the rules. For teams with busy `main` branches, a merge queue eliminates the class of CI failures that happen when two individually-green PRs combine unexpectedly.
 
 ---
 

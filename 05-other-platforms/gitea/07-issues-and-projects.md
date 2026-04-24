@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 25 minutes
 
-Gitea issues are the unit of tracked work - bugs, feature requests, tasks, questions and discussions. They live alongside the code they relate to, link to commits and pull requests, and feed into Kanban project boards for visual workflow management. This file covers the full issues system: creating and managing issues, labels, milestones, project boards and issue templates.
+Gitea issues are the unit of tracked work - bugs, feature requests, tasks, questions and discussions. They live alongside the code they relate to, link to commits and pull requests and feed into Kanban project boards for visual workflow management. This file covers the full issues system: creating and managing issues, labels, milestones, project boards and issue templates.
 
 ---
 
@@ -72,6 +72,7 @@ HTTP 500 Internal Server Error.
 ### Commenting on issues
 
 Any user with access to the repository can comment on issues. Comments support:
+
 - Full Markdown
 - `@mentions` to notify specific users
 - `#123` to reference other issues or PRs
@@ -86,6 +87,7 @@ The author of a comment (or a repository admin) can edit or delete it using the 
 ### Locking issues
 
 Repository maintainers can lock an issue to prevent further comments:
+
 1. Click **Lock** in the issue's right sidebar
 2. Select a reason (off-topic, spam, too heated, resolved)
 
@@ -94,6 +96,7 @@ Locked issues accept comments only from collaborators and maintainers.
 ### Issue states
 
 Issues are either **Open** or **Closed**. Open issues need attention. Close an issue when:
+
 - The bug is fixed
 - The feature is implemented
 - The question is answered
@@ -119,18 +122,21 @@ Labels categorise issues and pull requests. They appear as coloured badges on th
 Gitea does not pre-create labels on new repositories. Consider creating these standard sets:
 
 **Type labels:**
+
 - `bug` (red) - confirmed bugs
 - `enhancement` (blue) - feature requests
 - `documentation` (teal) - documentation improvements
 - `question` (purple) - needs clarification
 
 **Status labels:**
+
 - `needs-investigation` (orange) - needs more information
 - `blocked` (dark red) - waiting on an external dependency
 - `in-progress` (yellow) - actively being worked on
 - `duplicate` (grey) - duplicate of another issue
 
 **Priority labels:**
+
 - `priority: critical` (dark red)
 - `priority: high` (red)
 - `priority: low` (light grey)
@@ -186,17 +192,20 @@ Click **Assignees** in the right sidebar to assign one or more users to an issue
 ### @mentions
 
 Mentioning a user with `@username` in any issue comment or PR description:
+
 - Sends them an email notification
 - Creates a notification in their Gitea notification centre
 - Links their username to their profile
 
 Mentions work for users, teams and organisations:
+
 - `@username` - specific user
 - `@org/team` - all members of a team within an organisation
 
 ### Watching and ignoring
 
 Control your notification level for an issue:
+
 - **Watch**: receive notifications for all activity
 - **Unwatch**: only receive notifications when directly mentioned or assigned
 
@@ -284,12 +293,12 @@ labels: enhancement
 
 The `---` block at the top of a template is YAML front matter:
 
-| Field | Purpose |
-|---|---|
-| `name` | The template name shown in the template selector |
-| `about` | A brief description shown under the name |
-| `labels` | Labels automatically applied when using this template |
-| `assignees` | Users automatically assigned |
+| Field       | Purpose                                               |
+| ----------- | ----------------------------------------------------- |
+| `name`      | The template name shown in the template selector      |
+| `about`     | A brief description shown under the name              |
+| `labels`    | Labels automatically applied when using this template |
+| `assignees` | Users automatically assigned                          |
 
 ### Blank issue option
 
@@ -318,6 +327,7 @@ These keywords followed by an issue reference close the issue when the commit la
 - `Resolves #123`
 
 **In a commit message:**
+
 ```
 Fix null pointer in user authentication
 
@@ -328,6 +338,7 @@ Fixes #456
 ```
 
 **In a pull request description:**
+
 ```markdown
 This PR implements password reset via email.
 
@@ -340,6 +351,7 @@ Both issues 123 and 124 are automatically closed when the PR is merged.
 ### Cross-repository closing
 
 Close an issue in another repository with the full reference:
+
 ```
 Fixes owner/other-repo#89
 ```
@@ -351,6 +363,7 @@ Fixes owner/other-repo#89
 Pin up to 3 issues to the top of the issues list for visibility. Pinned issues appear before all other issues regardless of sort order.
 
 Use pinning for:
+
 - Announcements (project status, deprecation notices)
 - Contribution guidelines ("read this before opening an issue")
 - Known blocking issues affecting many users
@@ -364,6 +377,7 @@ To pin: open an issue > click **Pin Issue** in the right sidebar (available to m
 Any comment or issue body can receive emoji reactions. Reactions are a lightweight way to express agreement or acknowledgement without a comment.
 
 Click the smiley face icon on any comment to react. Common reactions:
+
 - 👍 +1 / agree
 - 👎 -1 / disagree
 - ❤️ love
@@ -382,6 +396,7 @@ Gitea Projects provide visual Kanban boards for managing issues and pull request
 ### Creating a project
 
 **Repository project:**
+
 1. Go to the repository > **Projects**
 2. Click **New Project**
 3. Enter a name and optional description
@@ -389,6 +404,7 @@ Gitea Projects provide visual Kanban boards for managing issues and pull request
 5. Click **Create Project**
 
 **Organisation project:**
+
 1. Go to the organisation page > **Projects**
 2. Follow the same steps
 
@@ -402,15 +418,18 @@ Each project has columns representing workflow stages. Default templates include
 ### Adding issues to a project
 
 **From an issue:**
+
 1. Open an issue
 2. Click **Projects** in the right sidebar
 3. Select the project and optionally the column
 
 **From the board:**
+
 1. Click **+** in a column
 2. Search for existing issues or create a new one
 
 **Bulk add:**
+
 1. From the project board, click **Add existing issues**
 2. Search and select multiple issues
 
@@ -421,6 +440,7 @@ Drag and drop issue cards between columns to update their status. The move is re
 ### Filtering the board
 
 Filter the board by:
+
 - Assignee
 - Label
 - Milestone
@@ -459,6 +479,7 @@ owner/repo!456        # PR reference in another repo
 ```
 
 In a comment:
+
 ```markdown
 This duplicates owner/other-repo#89 which was reported last month.
 

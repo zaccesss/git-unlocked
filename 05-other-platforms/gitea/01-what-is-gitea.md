@@ -4,7 +4,7 @@
 
 Gitea is a self-hosted Git platform written in Go. It provides a web interface for Git repository hosting, pull requests, issues, project boards, CI/CD and a package registry - all the features of a modern Git forge - in a single binary that runs on minimal hardware. A Raspberry Pi with 512 MB of RAM can run a fully functional Gitea instance for a small team.
 
-Understanding Gitea in 2026 requires understanding its history: a fork of an older project, a period of community-driven growth, a controversial shift to commercial ownership, and the split that created Forgejo. That history shapes everything from the licence to the governance to the feature roadmap.
+Understanding Gitea in 2026 requires understanding its history: a fork of an older project, a period of community-driven growth, a controversial shift to commercial ownership and the split that created Forgejo. That history shapes everything from the licence to the governance to the feature roadmap.
 
 ---
 
@@ -65,6 +65,7 @@ By 2022, Gitea had become the most popular self-hosted Git platform after GitLab
 In **October 2022**, two of Gitea's lead maintainers - **Lunny Xiao** and **Matti Ranta** - incorporated a company called **Gitea Limited** in the United Kingdom without informing the broader contributor community. Simultaneously, the domain names `gitea.com` and `gitea.io` and the project's trademarks were transferred to this new company.
 
 The community discovered this when they noticed ownership changes on the domains. An **open letter signed by 48 contributors** was published, demanding that:
+
 1. The assets (domain names, trademarks) be transferred to a non-profit foundation
 2. The governance model be made transparent
 3. Conflicts of interest be disclosed
@@ -82,6 +83,7 @@ The community response was swift. Within weeks, a new project called **Forgejo**
 The Gitea Ltd story did not end with the Forgejo fork. In late 2023, a US subsidiary called **CommitGo, Inc.** (incorporated in Delaware) was formed. In March 2024, CommitGo launched **Gitea Enterprise** - a proprietary tier built on top of the open source Gitea codebase.
 
 Gitea Enterprise adds features not available in the community edition:
+
 - **Branch Protection Inheritance**: inherit branch protection rules from parent organisations
 - **Dependency Scanning**: automated vulnerability detection in dependencies
 - **IP Allowlist**: restrict access by IP address
@@ -119,6 +121,7 @@ Starting in Gitea v1.21 (late 2023), the frontend was rewritten from jQuery/Foma
 Notable additions since v1.22:
 
 **v1.25 (October 2025):**
+
 - 3D/CAD file preview (STL, OBJ format rendering in the browser)
 - Streamed repository archives (faster downloads of large repos)
 - Fork-and-edit workflow from the web UI
@@ -126,6 +129,7 @@ Notable additions since v1.22:
 - Enhanced SSH commit signing support
 
 **v1.24 (June 2025):**
+
 - Global 2FA enforcement (admins can require all users to have 2FA)
 - File tree sidebar in repository view
 - Material design file icons
@@ -133,6 +137,7 @@ Notable additions since v1.22:
 - Choose which email to use when committing via the web UI
 
 **v1.22 (mid-2024):**
+
 - Dropped MySQL 5.7 and PostgreSQL 10/11 support (minimum PostgreSQL 12, MySQL 8.0)
 
 ---
@@ -182,6 +187,7 @@ Notable additions since v1.22:
 ### Package registry
 
 Gitea includes one of the most complete self-hosted package registries available:
+
 - Alpine, Arch, Cargo, Chef, Composer, Conan, Conda, Container/OCI, CRAN, Debian, Generic, Go, Helm, Maven, npm, NuGet, Pub, PyPI, RPM, RubyGems, Swift, Vagrant and more
 
 ### Organisation management
@@ -206,6 +212,7 @@ Gitea includes one of the most complete self-hosted package registries available
 ### Small teams and individuals who want self-hosted Git
 
 Gitea's primary audience is developers and small teams who:
+
 - Want control over their code (not on GitHub, GitLab.com or Bitbucket)
 - Need a Git platform that runs on modest hardware
 - Run home labs, developer environments or air-gapped networks
@@ -232,6 +239,7 @@ Many developers run Gitea at home purely for learning and private personal proje
 The most commonly asked comparison. They share the same codebase origin (Forgejo forked from Gitea in December 2022 and became a hard fork in February 2024). They are no longer drop-in replacements for each other.
 
 Key differences in 2026:
+
 - **Licence**: Gitea is MIT. Forgejo switched to GPLv3+ in v9.0.
 - **Governance**: Gitea is controlled by CommitGo (for-profit). Forgejo operates under Codeberg e.V. (non-profit).
 - **Federation**: Forgejo actively develops ActivityPub federation. Gitea has stalled on federation.
@@ -267,6 +275,7 @@ All Gitea configuration lives in a file called `app.ini`, typically located at `
 ### Work directory
 
 Gitea uses a **work directory** (default: `/var/lib/gitea` on Linux) to store:
+
 - Repository data (Git objects)
 - Attachment uploads
 - LFS objects
@@ -287,6 +296,7 @@ Gitea Actions requires a separate component called **act_runner**. The act_runne
 **Exercise 1 - Explore Gitea.com**
 
 Visit [gitea.com](https://gitea.com) (CommitGo's hosted Gitea instance). Create a free account and explore:
+
 - The repository creation flow
 - The pull request interface
 - The Actions tab on a repository

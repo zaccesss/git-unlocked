@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 35 minutes
 
-This file covers every major shell you will encounter across Windows, Mac and Linux - what each one is, how to set it up, where its config files live, and how to make it work well for daily Git use. It also covers WSL2, which lets Windows users run a full Linux shell environment natively.
+This file covers every major shell you will encounter across Windows, Mac and Linux - what each one is, how to set it up, where its config files live and how to make it work well for daily Git use. It also covers WSL2, which lets Windows users run a full Linux shell environment natively.
 
 ---
 
@@ -57,14 +57,17 @@ sudo dnf upgrade bash
 bash config is split across multiple files and which one bash reads depends on how it was started. This is one of the most confusing parts of bash for beginners.
 
 **Login shell** (started at TTY login, via SSH, or with `bash -l`):
+
 1. `/etc/profile` (system-wide)
 2. First existing of: `~/.bash_profile`, `~/.bash_login`, `~/.profile`
 
 **Interactive non-login shell** (each new terminal tab on Linux):
+
 1. `/etc/bash.bashrc` (Debian) or `/etc/bashrc` (RHEL/Fedora)
 2. `~/.bashrc`
 
 **Non-interactive shell** (scripts):
+
 - Only reads `$BASH_ENV` if set
 
 The practical consequence: if you add an alias to `~/.bashrc` but your terminal opens login shells, the alias will not be available. The standard fix is to add this to `~/.bash_profile`:
@@ -197,13 +200,13 @@ chsh -s "$(which zsh)"      # set as default (takes effect on next login)
 
 fish is excellent for interactive use. The important trade-off to understand: **fish is not POSIX-compliant**. Its syntax differs from bash and zsh:
 
-| bash / zsh | fish |
-| ---------- | ---- |
-| `export VAR=value` | `set -gx VAR value` |
-| `if [ condition ]; then` | `if condition` |
-| `function name() { }` | `function name; end` |
-| `FOO=bar command` | Not supported natively |
-| `source ~/.bashrc` | `source ~/.config/fish/config.fish` |
+| bash / zsh               | fish                                |
+| ------------------------ | ----------------------------------- |
+| `export VAR=value`       | `set -gx VAR value`                 |
+| `if [ condition ]; then` | `if condition`                      |
+| `function name() { }`    | `function name; end`                |
+| `FOO=bar command`        | Not supported natively              |
+| `source ~/.bashrc`       | `source ~/.config/fish/config.fish` |
 
 This means most shell scripts found online (install scripts, environment setup scripts, `.profile` fragments) will not run directly in fish. For those, you temporarily switch to bash: `bash script.sh`.
 
@@ -241,10 +244,10 @@ chsh -s "$(which fish)"
 
 fish config lives at:
 
-| Platform | Path |
-| -------- | ---- |
-| 🐧 Linux | `~/.config/fish/config.fish` |
-| 🍎 macOS | `~/.config/fish/config.fish` |
+| Platform         | Path                         |
+| ---------------- | ---------------------------- |
+| 🐧 Linux         | `~/.config/fish/config.fish` |
+| 🍎 macOS         | `~/.config/fish/config.fish` |
 | 🪟 Windows (WSL) | `~/.config/fish/config.fish` |
 
 Functions live in `~/.config/fish/functions/` (one file per function, named after the function). Completions in `~/.config/fish/completions/`. Fish also has a web-based config interface - run `fish_config` in the terminal to open it in your browser.
@@ -302,12 +305,12 @@ sudo apt install powershell
 
 PowerShell has **four profile files** per installation - scoped by user and host:
 
-| Scope | Windows path | macOS/Linux path |
-| ----- | ------------ | ---------------- |
-| Current user, current host | `$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` | `~/.config/powershell/Microsoft.PowerShell_profile.ps1` |
-| Current user, all hosts | `$env:USERPROFILE\Documents\PowerShell\profile.ps1` | `~/.config/powershell/profile.ps1` |
-| All users, current host | `$env:ProgramFiles\PowerShell\7\Microsoft.PowerShell_profile.ps1` | `/usr/local/share/powershell/Microsoft.PowerShell_profile.ps1` |
-| All users, all hosts | `$env:ProgramFiles\PowerShell\7\profile.ps1` | varies |
+| Scope                      | Windows path                                                             | macOS/Linux path                                               |
+| -------------------------- | ------------------------------------------------------------------------ | -------------------------------------------------------------- |
+| Current user, current host | `$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` | `~/.config/powershell/Microsoft.PowerShell_profile.ps1`        |
+| Current user, all hosts    | `$env:USERPROFILE\Documents\PowerShell\profile.ps1`                      | `~/.config/powershell/profile.ps1`                             |
+| All users, current host    | `$env:ProgramFiles\PowerShell\7\Microsoft.PowerShell_profile.ps1`        | `/usr/local/share/powershell/Microsoft.PowerShell_profile.ps1` |
+| All users, all hosts       | `$env:ProgramFiles\PowerShell\7\profile.ps1`                             | varies                                                         |
 
 `$PROFILE` expands to the current user, current host path - the one you edit for personal settings.
 
@@ -375,9 +378,10 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 
 `cmd.exe` (Command Prompt) has shipped with every version of Windows since NT in 1993. It handles `.bat` and `.cmd` scripts and is still used in legacy enterprise environments, CI/CD pipelines, recovery environments and situations where PowerShell execution policy blocks scripts.
 
-For Git work, cmd.exe is mostly adequate but lacks many quality-of-life features. Key limitations: no persistent history between sessions by default, primitive scripting, no real functions, no arrays, path handling quirks, and echo by default on every command in batch files (suppress with `@echo off`).
+For Git work, cmd.exe is mostly adequate but lacks many quality-of-life features. Key limitations: no persistent history between sessions by default, primitive scripting, no real functions, no arrays, path handling quirks and echo by default on every command in batch files (suppress with `@echo off`).
 
 **When you will encounter cmd.exe**:
+
 - Opening a terminal via `Win+R → cmd`
 - Batch scripts (`.bat`, `.cmd` files)
 - Some legacy CI/CD runners
@@ -401,7 +405,7 @@ Open PowerShell as Administrator and run:
 wsl --install
 ```
 
-This single command enables WSL, installs the Linux kernel, and installs Ubuntu. Restart when prompted.
+This single command enables WSL, installs the Linux kernel and installs Ubuntu. Restart when prompted.
 
 After restart, Ubuntu opens and asks you to create a username and password. This is your Linux user account - it does not need to match your Windows username.
 
@@ -466,7 +470,7 @@ Set the starting directory to your Linux home (not the Windows filesystem):
 
 ```json
 {
-    "startingDirectory": "//wsl.localhost/Ubuntu-24.04/home/your_username"
+  "startingDirectory": "//wsl.localhost/Ubuntu-24.04/home/your_username"
 }
 ```
 
@@ -498,10 +502,10 @@ VS Code installs a server component inside WSL and connects to it. The terminal 
 
 WSL2 uses three filesystem locations:
 
-| Location | What it is | Speed | Use for |
-| -------- | ---------- | ----- | ------- |
-| `~` (e.g. `/home/username`) | Native Linux ext4 filesystem | Fast | Code, Git repos, tools |
-| `/mnt/c/`, `/mnt/d/` etc. | Windows drives accessed via 9P | Slow | Accessing Windows files when needed |
+| Location                           | What it is                           | Speed    | Use for                             |
+| ---------------------------------- | ------------------------------------ | -------- | ----------------------------------- |
+| `~` (e.g. `/home/username`)        | Native Linux ext4 filesystem         | Fast     | Code, Git repos, tools              |
+| `/mnt/c/`, `/mnt/d/` etc.          | Windows drives accessed via 9P       | Slow     | Accessing Windows files when needed |
 | `\\wsl.localhost\Ubuntu-24.04\...` | Windows UNC path to Linux filesystem | Moderate | Opening Linux files in Windows apps |
 
 ### Advanced WSL2 configuration
@@ -542,14 +546,14 @@ appendWindowsPath=false  # prevent Windows PATH from leaking into WSL (speeds up
 
 ## 7. Choosing a shell
 
-| Shell | Best for | Avoid if |
-| ----- | -------- | -------- |
-| **bash** | Linux servers, scripts, portability, WSL | You want modern interactive features without plugins |
-| **zsh + Oh My Zsh** | macOS daily driver, rich completion, extensive plugins | You want simplicity or fast startup |
-| **fish** | Beginners wanting features out of the box, friendly interactive use | You run a lot of bash scripts or need POSIX compliance |
-| **PowerShell 7** | Windows development, .NET, Azure, cross-platform scripting | You prefer Unix-style pipelines |
-| **cmd.exe** | Running legacy `.bat` scripts, enterprise tools that require it | Everything else |
-| **WSL2** | Windows users who want the full Linux toolchain | You cannot or do not want to enable virtualisation |
+| Shell               | Best for                                                            | Avoid if                                               |
+| ------------------- | ------------------------------------------------------------------- | ------------------------------------------------------ |
+| **bash**            | Linux servers, scripts, portability, WSL                            | You want modern interactive features without plugins   |
+| **zsh + Oh My Zsh** | macOS daily driver, rich completion, extensive plugins              | You want simplicity or fast startup                    |
+| **fish**            | Beginners wanting features out of the box, friendly interactive use | You run a lot of bash scripts or need POSIX compliance |
+| **PowerShell 7**    | Windows development, .NET, Azure, cross-platform scripting          | You prefer Unix-style pipelines                        |
+| **cmd.exe**         | Running legacy `.bat` scripts, enterprise tools that require it     | Everything else                                        |
+| **WSL2**            | Windows users who want the full Linux toolchain                     | You cannot or do not want to enable virtualisation     |
 
 Most developers on Mac use zsh (it is the default). Most developers on Linux use bash or zsh. Most developers on Windows who do serious development use WSL2 with bash or zsh inside it.
 
@@ -610,7 +614,7 @@ Installing tools inside WSL but running them from Windows PowerShell. Tools inst
 
 bash is the universal Linux shell and macOS legacy default, with config split between login (`.bash_profile`) and interactive (`.bashrc`) files. The standard fix for macOS is to source `.bashrc` from `.bash_profile`. zsh is the macOS default since 2019, with Oh My Zsh providing plugins and themes; put aliases in `~/.zshrc` and PATH in `~/.zprofile` on Mac. fish ships features like autosuggestions and syntax highlighting with zero setup but is not POSIX-compliant; any command starting with a space is automatically hidden from its history. PowerShell 7 is the modern cross-platform Windows shell; `$PROFILE` points to your config file, and `Clear-History` does not clear the PSReadLine history file. cmd.exe is the Windows legacy shell, still used for `.bat` scripts and enterprise tools.
 
-WSL2 runs a real Linux kernel on Windows and is the recommended way for Windows developers to get the full Linux toolchain. Keep code in the Linux filesystem, not in `/mnt/c/`. Use Windows Terminal with a Nerd Font, install zsh and Oh My Zsh inside WSL, and connect VS Code via the WSL extension with `code .`.
+WSL2 runs a real Linux kernel on Windows and is the recommended way for Windows developers to get the full Linux toolchain. Keep code in the Linux filesystem, not in `/mnt/c/`. Use Windows Terminal with a Nerd Font, install zsh and Oh My Zsh inside WSL and connect VS Code via the WSL extension with `code .`.
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 25 minutes
 
-fzf is a command-line fuzzy finder. You pipe a list of anything into it, type a few characters, and it instantly filters the list to matching items. You select one and press Enter, and fzf returns it for use in another command. For Git, this means fuzzy-searching through branches, commits, stashes, files and command history - turning long-typed names into two-character selections. Combined with git aliases and shell functions, fzf transforms the command-line Git experience.
+fzf is a command-line fuzzy finder. You pipe a list of anything into it, type a few characters and it instantly filters the list to matching items. You select one and press Enter, and fzf returns it for use in another command. For Git, this means fuzzy-searching through branches, commits, stashes, files and command history - turning long-typed names into two-character selections. Combined with git aliases and shell functions, fzf transforms the command-line Git experience.
 
 ---
 
@@ -26,7 +26,7 @@ fzf is a command-line fuzzy finder. You pipe a list of anything into it, type a 
 
 ## 1. What fzf is and how it works
 
-fzf reads lines from stdin, opens a fuzzy search interface, and writes the selected line to stdout. That is its entire interface. Because it uses stdin and stdout, it composes with any command that produces or consumes text.
+fzf reads lines from stdin, opens a fuzzy search interface and writes the selected line to stdout. That is its entire interface. Because it uses stdin and stdout, it composes with any command that produces or consumes text.
 
 A minimal example:
 
@@ -110,7 +110,7 @@ The three key bindings this enables:
 
 **`Alt+C`** - fuzzy `cd`. An fzf window shows all directories; select one to cd into it. On macOS, `Alt+C` may need to be configured as `Option+C` depending on your terminal settings.
 
-**Fuzzy completion with `**`**: in bash and zsh, type a command prefix and `**` then press Tab to invoke fzf completion:
+**Fuzzy completion with `**`**: in bash and zsh, type a command prefix and `\*\*` then press Tab to invoke fzf completion:
 
 ```bash
 vim **<Tab>         # fzf to choose a file for vim
@@ -309,26 +309,26 @@ source ~/.forgit/forgit.plugin.fish
 
 ### forgit commands
 
-| Command | Action |
-| ------- | ------ |
-| `ga` | Interactive `git add` - pick files with diff preview |
-| `glo` | Interactive `git log` - browse commits with diff preview |
-| `gd` | Interactive `git diff` - pick a file to diff |
-| `gcf` | Interactive checkout file - pick a file to restore |
-| `gcb` | Interactive checkout branch |
-| `gsw` | Interactive `git switch` |
-| `gco` | Interactive checkout commit |
-| `gbd` | Interactive branch delete - multi-select |
-| `gst` | Interactive stash show |
-| `gsp` | Interactive stash pop |
-| `gss` | Interactive stash push |
-| `gclean` | Interactive `git clean` - preview before deleting |
-| `grh` | Interactive `git reset HEAD` - unstage files |
-| `gcp` | Interactive cherry-pick - multi-select commits |
-| `grb` | Interactive rebase |
-| `gfu` | Interactive fixup + autosquash |
-| `grc` | Interactive revert |
-| `gbl` | Interactive blame |
+| Command  | Action                                                   |
+| -------- | -------------------------------------------------------- |
+| `ga`     | Interactive `git add` - pick files with diff preview     |
+| `glo`    | Interactive `git log` - browse commits with diff preview |
+| `gd`     | Interactive `git diff` - pick a file to diff             |
+| `gcf`    | Interactive checkout file - pick a file to restore       |
+| `gcb`    | Interactive checkout branch                              |
+| `gsw`    | Interactive `git switch`                                 |
+| `gco`    | Interactive checkout commit                              |
+| `gbd`    | Interactive branch delete - multi-select                 |
+| `gst`    | Interactive stash show                                   |
+| `gsp`    | Interactive stash pop                                    |
+| `gss`    | Interactive stash push                                   |
+| `gclean` | Interactive `git clean` - preview before deleting        |
+| `grh`    | Interactive `git reset HEAD` - unstage files             |
+| `gcp`    | Interactive cherry-pick - multi-select commits           |
+| `grb`    | Interactive rebase                                       |
+| `gfu`    | Interactive fixup + autosquash                           |
+| `grc`    | Interactive revert                                       |
+| `gbl`    | Interactive blame                                        |
 
 **Customisation**:
 
@@ -352,16 +352,16 @@ export FORGIT_DIFF_PAGER="delta --paging=never"
 
 **fzf-git.sh** is a script by junegunn (the creator of fzf) providing polished Git-fzf integrations as key bindings. It adds `Ctrl+G` followed by a letter to fuzzy-search different Git objects:
 
-| Key | Action |
-| --- | ------ |
-| `Ctrl+G Ctrl+F` | Fuzzy browse modified **files** |
-| `Ctrl+G Ctrl+B` | Fuzzy browse **branches** |
-| `Ctrl+G Ctrl+T` | Fuzzy browse **tags** |
-| `Ctrl+G Ctrl+R` | Fuzzy browse **remotes** |
+| Key             | Action                               |
+| --------------- | ------------------------------------ |
+| `Ctrl+G Ctrl+F` | Fuzzy browse modified **files**      |
+| `Ctrl+G Ctrl+B` | Fuzzy browse **branches**            |
+| `Ctrl+G Ctrl+T` | Fuzzy browse **tags**                |
+| `Ctrl+G Ctrl+R` | Fuzzy browse **remotes**             |
 | `Ctrl+G Ctrl+H` | Fuzzy browse commit **hashes** (log) |
-| `Ctrl+G Ctrl+S` | Fuzzy browse **stashes** |
-| `Ctrl+G Ctrl+E` | Fuzzy browse **each ref** |
-| `Ctrl+G Ctrl+W` | Fuzzy browse **worktrees** |
+| `Ctrl+G Ctrl+S` | Fuzzy browse **stashes**             |
+| `Ctrl+G Ctrl+E` | Fuzzy browse **each ref**            |
+| `Ctrl+G Ctrl+W` | Fuzzy browse **worktrees**           |
 
 Install:
 
