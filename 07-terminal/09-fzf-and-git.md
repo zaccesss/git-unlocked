@@ -275,7 +275,7 @@ Use `git fa` instead of `git add` to get a fuzzy file picker with diff preview. 
 
 ## 8. forgit - a ready-made fzf-git plugin
 
-forgit is a lazy-loaded shell plugin that wraps git commands with fzf, saving you from writing the functions yourself. Current version: **26.01.0** (January 2026). Requires fzf v0.49+.
+forgit is a lazy-loaded shell plugin that wraps git commands with fzf, saving you from writing the functions yourself. Current version: **26.04.2** (April 2026). Requires fzf v0.49+.
 
 ### Installing forgit
 
