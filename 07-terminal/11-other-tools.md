@@ -168,7 +168,7 @@ Config lives at `~/.config/gitui/` on all platforms (gitui follows XDG correctly
 
 Starship is a cross-shell prompt written in Rust. It shows your current branch, ahead/behind counts, staged/unstaged file indicators, stash count, and conflict markers - automatically updating as you work. It also shows language versions, cloud contexts, tool versions and much more, but only when they are relevant to the current directory.
 
-Current version: **v1.24.2** (December 2025).
+Current version: **v1.25.0** (April 2026).
 
 ### Installing starship
 

@@ -49,7 +49,7 @@ An effective secret detection posture uses four complementary layers:
 
 ### gitleaks 🟡
 
-**Current version: v8.30.0**. gitleaks is a Go-based secret scanner using regex rules. It scans Git history, staged changes or directories. It outputs SARIF for GitHub's Security tab.
+**Current version: v8.30.1**. gitleaks is a Go-based secret scanner using regex rules. It scans Git history, staged changes or directories. It outputs SARIF for GitHub's Security tab.
 
 > [!IMPORTANT]
 > gitleaks-action v2+ requires a paid licence for organisation repositories. The CLI itself is MIT-licensed and free. Many 2022-era CI tutorials assume the action is free for all repos - this is no longer the case.
@@ -133,7 +133,7 @@ paths = ['''(?i)(test|fixture|testdata)/''']     # test directories
 
 ### TruffleHog 🔴
 
-**Current version: v3.94.3**. TruffleHog goes beyond regex matching by actively verifying found credentials against provider APIs. A finding is labeled `verified` (live), `unverified` (pattern match, not confirmed) or `unknown` (provider unreachable). `--only-verified` eliminates noise.
+**Current version: v3.95.2**. TruffleHog goes beyond regex matching by actively verifying found credentials against provider APIs. A finding is labeled `verified` (live), `unverified` (pattern match, not confirmed) or `unknown` (provider unreachable). `--only-verified` eliminates noise.
 
 > [!NOTE]
 > TruffleHog v3+ is licensed AGPL-3.0. Check with your legal team before embedding it in commercial products.
@@ -195,7 +195,7 @@ jobs:
 
 ### pre-commit framework
 
-**Current version: 4.5.1**. The `pre-commit` framework manages client-side Git hooks in a declarative YAML file.
+**Current version: 4.6.0**. The `pre-commit` framework manages client-side Git hooks in a declarative YAML file.
 
 ```bash
 # Install
@@ -211,7 +211,7 @@ pre-commit install --hook-type pre-push   # also install pre-push hook
 ```yaml
 repos:
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.30.0
+    rev: v8.30.1
     hooks:
       - id: gitleaks
 
@@ -541,7 +541,7 @@ jobs:
 
 ### Sigstore cosign 🔴
 
-**Current version: v3.0.3**. Sign and verify container images and blobs using Sigstore's transparency log.
+**Current version: v3.0.6**. Sign and verify container images and blobs using Sigstore's transparency log.
 
 > [!IMPORTANT]
 > Cosign v3 broke several flags from pre-2.0 tutorials. `COSIGN_EXPERIMENTAL=1` is gone (keyless is now default). `--certificate-email` is removed (use `--certificate-identity` + `--certificate-oidc-issuer`). The `--bundle` flag is now required for blob signing.
@@ -1028,7 +1028,7 @@ pip install pre-commit gitleaks
 cat > .pre-commit-config.yaml << 'EOF'
 repos:
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.30.0
+    rev: v8.30.1
     hooks:
       - id: gitleaks
   - repo: https://github.com/pre-commit/pre-commit-hooks
