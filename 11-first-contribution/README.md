@@ -95,7 +95,7 @@ git switch -c add-jsmith
 
 ### Step 4: Add your name to the contributors list
 
-Open `first-contribution/contributors.md` in any text editor.
+Open `11-first-contribution/contributors.md` in any text editor.
 
 Find the section that matches the first letter of your GitHub username and add a new line with your name. Follow the exact format already used in the file:
 
@@ -116,7 +116,7 @@ Save the file.
 Stage the file and commit with a descriptive message:
 
 ```bash
-git add first-contribution/contributors.md
+git add 11-first-contribution/contributors.md
 git commit -m "docs(first-contribution): add YOUR_USERNAME to contributors"
 ```
 
