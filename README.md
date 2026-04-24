@@ -76,9 +76,11 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) first, then open a pull request. Everyon
 
 ## Contributors
 
-<a href="https://github.com/zaccesss/git-unlocked/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=zaccesss/git-unlocked" alt="Contributors" />
-</a>
+<p align="center">
+  <a href="https://github.com/zaccesss/git-unlocked/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=zaccesss/git-unlocked" alt="Contributors" />
+  </a>
+</p>
 
 ---
 
@@ -102,6 +104,6 @@ If this course helped you, please star the repository. It helps others find it.
 
 <br />
 
-![git-unlocked banner](assets/git_unlocked_banner.svg)
+<img src="assets/git_unlocked_banner.svg" alt="git-unlocked banner" />
 
 </div>

@@ -11,7 +11,7 @@ This roadmap tracks the development plan for git-unlocked.
 | Section                            | Files | Status   |
 | ---------------------------------- | ----- | -------- |
 | 00-welcome/                        | 1     | Complete |
-| 01-introduction/                   | 4     | Complete |
+| 01-introduction/                   | 3     | Complete |
 | 02-git/                            | 29    | Complete |
 | 03-github/                         | 28    | Complete |
 | 04-gitlab/                         | 16    | Complete |
@@ -27,7 +27,7 @@ This roadmap tracks the development plan for git-unlocked.
 | 10-resources/                      | 1     | Complete |
 | 11-first-contribution/             | 2     | Complete |
 
-**Total: 202 files across 15 sections**
+**Total: 182 files across 15 sections**
 
 ---
 
