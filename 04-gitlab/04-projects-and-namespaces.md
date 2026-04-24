@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 30 minutes
 
-On GitLab, the word "repository" barely scratches the surface of what you are actually working with. GitLab organises everything around **projects** - and a project is much more than a Git repository. It is the container for your code, your issues, your merge requests, your CI/CD pipelines, your wiki, your container images and your packages. Understanding how projects work, how they sit inside namespaces, and how groups and subgroups structure an organisation is foundational to using GitLab effectively.
+On GitLab, the word "repository" barely scratches the surface of what you are actually working with. GitLab organises everything around **projects** - and a project is much more than a Git repository. It is the container for your code, your issues, your merge requests, your CI/CD pipelines, your wiki, your container images and your packages. Understanding how projects work, how they sit inside namespaces and how groups and subgroups structure an organisation is foundational to using GitLab effectively.
 
 This file covers the full picture: the difference between personal and group namespaces, creating and configuring projects, visibility levels, forking, project templates, the Web IDE, importing from GitHub and how GitLab's group hierarchy compares to GitHub's organisations and teams.
 
@@ -414,7 +414,7 @@ You can protect by exact name (`main`) or wildcard pattern (`release/*`). Defaul
 - **Git shallow clone depth**: how many commits to include in the clone. Default is 20. Increase for jobs that need full history (e.g. generating changelogs)
 - **Timeout**: maximum duration for a pipeline job before it is cancelled (default 60 minutes)
 
-**Runners**: view which runners are available to the project, enable or disable specific runners, and enable or disable group and instance-level runners for this project.
+**Runners**: view which runners are available to the project, enable or disable specific runners and enable or disable group and instance-level runners for this project.
 
 **Variables**: project-level CI/CD variables. These are key-value pairs available as environment variables in every pipeline job. Mark them as **Protected** (only available on protected branches/tags) and/or **Masked** (value never shown in job logs). Never hardcode secrets in `.gitlab-ci.yml` - always use variables.
 

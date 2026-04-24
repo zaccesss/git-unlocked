@@ -40,18 +40,22 @@ Choosing between them is not just a technical decision. It involves cost modelli
 The decision between Cloud and Data Center comes down to a few key questions:
 
 **Who manages the infrastructure?**
+
 - Cloud: Atlassian manages servers, networking, storage, backups, OS updates, Java updates, database maintenance and availability. Your team touches none of this.
 - Data Center: Your team manages everything. You need Linux administration expertise, database management skills, storage management and on-call capacity for incidents.
 
 **Where does your code live?**
+
 - Cloud: In Atlassian's datacentres (AWS-hosted, in multiple regions). Atlassian has access to the infrastructure your code runs on.
 - Data Center: On your own servers, in your own datacentre or private cloud. Only you have access to the hardware.
 
 **What are your compliance requirements?**
+
 - Cloud: Atlassian holds various compliance certifications (SOC 2 Type II, ISO 27001, FedRAMP Moderate for some products). Check the current certification list at the Atlassian Trust Center.
 - Data Center: You are responsible for compliance. You can achieve any compliance posture because you control the entire stack - but you must do the work yourself.
 
 **What is your budget model?**
+
 - Cloud: Operational expenditure (OpEx). Monthly or annual subscription. Predictable, scales with users.
 - Data Center: Upfront licence cost (CapEx/OpEx depending on your accounting) plus ongoing infrastructure costs. Can be cheaper at scale but requires capital.
 
@@ -59,31 +63,31 @@ The decision between Cloud and Data Center comes down to a few key questions:
 
 ## Feature comparison: Cloud vs Data Center
 
-| Feature | Cloud | Data Center |
-|---|---|---|
-| **Git hosting** | Yes | Yes |
-| **Pull requests** | Yes | Yes |
-| **Bitbucket Pipelines** | Yes | No (use external CI) |
-| **Branch permissions** | Yes | Yes |
-| **Default reviewers** | Yes | Yes |
-| **Jira integration** | Native (same Atlassian org) | Via application links |
-| **Atlassian Intelligence / AI** | Yes (Standard+) | No |
-| **Bitbucket Packages** | Yes (Standard+) | No |
-| **IP allowlisting** | Yes (Premium) | Yes (network level) |
-| **Secret scanning** | Yes (Standard+) | No |
-| **SSH keys** | Yes | Yes |
-| **API tokens** | Yes | Yes (local accounts) |
-| **SAML SSO** | Via Atlassian Guard | Built-in |
-| **LDAP authentication** | Via Atlassian Guard | Yes, built-in |
-| **Audit log** | Yes (Premium) | Yes, built-in |
-| **High availability** | Built-in (Atlassian manages) | Yes (Active-Active clustering) |
-| **Windows OS support** | N/A | No (Linux only since v8.0) |
-| **Upgrade control** | Atlassian upgrades automatically | You control upgrade timing |
-| **Custom plugins** | Limited (Marketplace apps) | Full plugin API |
-| **Data residency control** | Regional (EU, US, etc.) | Complete (your hardware) |
-| **Mirror repositories** | Yes | Yes (Smart Mirroring) |
-| **Webhook limits** | Platform limits | Configurable |
-| **Storage limits** | Plan-based | Limited by your hardware |
+| Feature                         | Cloud                            | Data Center                    |
+| ------------------------------- | -------------------------------- | ------------------------------ |
+| **Git hosting**                 | Yes                              | Yes                            |
+| **Pull requests**               | Yes                              | Yes                            |
+| **Bitbucket Pipelines**         | Yes                              | No (use external CI)           |
+| **Branch permissions**          | Yes                              | Yes                            |
+| **Default reviewers**           | Yes                              | Yes                            |
+| **Jira integration**            | Native (same Atlassian org)      | Via application links          |
+| **Atlassian Intelligence / AI** | Yes (Standard+)                  | No                             |
+| **Bitbucket Packages**          | Yes (Standard+)                  | No                             |
+| **IP allowlisting**             | Yes (Premium)                    | Yes (network level)            |
+| **Secret scanning**             | Yes (Standard+)                  | No                             |
+| **SSH keys**                    | Yes                              | Yes                            |
+| **API tokens**                  | Yes                              | Yes (local accounts)           |
+| **SAML SSO**                    | Via Atlassian Guard              | Built-in                       |
+| **LDAP authentication**         | Via Atlassian Guard              | Yes, built-in                  |
+| **Audit log**                   | Yes (Premium)                    | Yes, built-in                  |
+| **High availability**           | Built-in (Atlassian manages)     | Yes (Active-Active clustering) |
+| **Windows OS support**          | N/A                              | No (Linux only since v8.0)     |
+| **Upgrade control**             | Atlassian upgrades automatically | You control upgrade timing     |
+| **Custom plugins**              | Limited (Marketplace apps)       | Full plugin API                |
+| **Data residency control**      | Regional (EU, US, etc.)          | Complete (your hardware)       |
+| **Mirror repositories**         | Yes                              | Yes (Smart Mirroring)          |
+| **Webhook limits**              | Platform limits                  | Configurable                   |
+| **Storage limits**              | Plan-based                       | Limited by your hardware       |
 
 ### Feature gaps that matter most
 
@@ -101,13 +105,14 @@ The decision between Cloud and Data Center comes down to a few key questions:
 
 Monthly subscription per user per workspace:
 
-| Plan | Price/user/month | Pipeline minutes | Users |
-|---|---|---|---|
-| Free | $0 | 50 | Max 5 |
-| Standard | $3.65 | 2,500 | Unlimited |
-| Premium | $7.25 | 3,500 | Unlimited |
+| Plan     | Price/user/month | Pipeline minutes | Users     |
+| -------- | ---------------- | ---------------- | --------- |
+| Free     | $0               | 50               | Max 5     |
+| Standard | $3.65            | 2,500            | Unlimited |
+| Premium  | $7.25            | 3,500            | Unlimited |
 
 For a 100-person engineering team:
+
 - Standard: 100 × $3.65 = $365/month = $4,380/year
 - Premium: 100 × $7.25 = $725/month = $8,700/year
 
@@ -119,16 +124,17 @@ Total Premium + Guard for 100 users: ~$13,740/year
 
 Data Center uses annual subscription pricing based on user tier. The licence includes all features regardless of user count within the tier. Current approximate pricing (check [atlassian.com](https://www.atlassian.com/software/bitbucket/pricing) for current figures):
 
-| User tier | Annual price (approx.) |
-|---|---|
-| Up to 25 users | ~$2,300/year |
-| Up to 50 users | ~$4,200/year |
-| Up to 100 users | ~$7,500/year |
-| Up to 250 users | ~$15,000/year |
-| Up to 500 users | ~$25,000/year |
-| 500+ users | Contact Atlassian |
+| User tier       | Annual price (approx.) |
+| --------------- | ---------------------- |
+| Up to 25 users  | ~$2,300/year           |
+| Up to 50 users  | ~$4,200/year           |
+| Up to 100 users | ~$7,500/year           |
+| Up to 250 users | ~$15,000/year          |
+| Up to 500 users | ~$25,000/year          |
+| 500+ users      | Contact Atlassian      |
 
 Data Center licence costs must be added to infrastructure costs:
+
 - Servers (2+ application nodes for HA): $500-2,000/month depending on spec
 - Database server: $200-500/month
 - Shared storage (NFS or equivalent): $100-300/month
@@ -211,6 +217,7 @@ Mirrors are configured from the Bitbucket Data Center admin panel and connect to
 ### Bitbucket Data Center system requirements
 
 **Minimum (small team, non-HA):**
+
 - 4-core CPU
 - 8 GB RAM
 - 10 GB free disk (excluding repository data)
@@ -219,6 +226,7 @@ Mirrors are configured from the Bitbucket Data Center admin panel and connect to
 - Git 2.34.0 or later
 
 **Recommended (production, 100 users):**
+
 - 8-core CPU per application node
 - 16 GB RAM per application node
 - SSD storage
@@ -227,6 +235,7 @@ Mirrors are configured from the Bitbucket Data Center admin panel and connect to
 - Shared filesystem (NFS, GlusterFS or equivalent) for application nodes
 
 **High availability minimum:**
+
 - 2+ application nodes (active-active)
 - External load balancer (HAProxy, Nginx, AWS ALB)
 - Shared filesystem accessible by all nodes
@@ -234,10 +243,10 @@ Mirrors are configured from the Bitbucket Data Center admin panel and connect to
 
 ### Supported databases
 
-| Database | Supported versions |
-|---|---|
-| PostgreSQL | 14, 15, 16 |
-| MySQL | 8.0, 8.4 |
+| Database   | Supported versions |
+| ---------- | ------------------ |
+| PostgreSQL | 14, 15, 16         |
+| MySQL      | 8.0, 8.4           |
 
 Microsoft SQL Server and Oracle Database are not supported. If your organisation uses these databases, you need a separate PostgreSQL or MySQL instance for Bitbucket.
 
@@ -246,6 +255,7 @@ Microsoft SQL Server and Oracle Database are not supported. If your organisation
 Bitbucket Data Center requires OpenSearch for code search and repository search functionality. Elasticsearch support was removed in version 9.0. You must run OpenSearch 2.x alongside Bitbucket.
 
 OpenSearch can run on the same server as Bitbucket for small deployments but should be on separate hardware for production. OpenSearch requires:
+
 - 4+ GB RAM dedicated to the JVM heap
 - SSD storage recommended for index files
 
@@ -268,6 +278,7 @@ chmod +x atlassian-bitbucket-10.2.0-x64.bin
 **Step 2 - Set up the database**
 
 🐧 Linux (PostgreSQL example):
+
 ```bash
 # Install PostgreSQL
 sudo apt install postgresql postgresql-contrib
@@ -286,6 +297,7 @@ sudo ./atlassian-bitbucket-10.2.0-x64.bin
 ```
 
 The installer prompts for:
+
 - Installation directory (default: `/opt/atlassian/bitbucket`)
 - Home directory for data (default: `/var/atlassian/application-data/bitbucket`)
 - Port (default: 7990)
@@ -304,6 +316,7 @@ cd opensearch-2.x.0/
 **Step 5 - Initial setup wizard**
 
 Navigate to `http://your-server:7990` in a browser. The setup wizard guides you through:
+
 1. Entering your Data Center licence key
 2. Connecting to the database
 3. Connecting to OpenSearch
@@ -342,6 +355,7 @@ server {
 Bitbucket Data Center supports active-active clustering: multiple application nodes running simultaneously, all serving traffic. If one node goes down, the others continue serving requests with no downtime.
 
 **Requirements for clustering:**
+
 - All nodes share a common home directory (NFS or equivalent shared filesystem)
 - A load balancer distributes traffic across nodes
 - A shared database all nodes connect to
@@ -349,6 +363,7 @@ Bitbucket Data Center supports active-active clustering: multiple application no
 - Each node must be able to reach all other nodes on the Hazelcast port (typically 5701)
 
 **Adding a second node:**
+
 1. Ensure shared filesystem is mounted on both nodes
 2. Install Bitbucket on the second node pointing to the same home directory and database
 3. Configure the load balancer to include the second node
@@ -375,6 +390,7 @@ With active-active clustering, upgrades can be performed with zero downtime usin
 Atlassian manages Cloud performance. For the vast majority of teams, Cloud performance is sufficient. Very large repositories (with large binary files, very long commit histories) may experience slower operations, but this is an edge case.
 
 For performance issues on Cloud, options include:
+
 - Enabling Git LFS for large files
 - Shallow clones in CI/CD (`git clone --depth 1`)
 - Git maintenance operations (`git gc`, `git pack-refs`)
@@ -384,6 +400,7 @@ For performance issues on Cloud, options include:
 Data Center performance depends on your infrastructure configuration.
 
 **Slow clone/fetch speeds** are usually caused by:
+
 - Insufficient RAM for the JVM (increase the heap: `-Xmx4g` for 4 GB)
 - Spinning disk storage (use SSDs for the home directory and database)
 - Insufficient CPU for concurrent operations
@@ -398,6 +415,7 @@ Data Center performance depends on your infrastructure configuration.
 ## Migrating from Cloud to Data Center
 
 Teams move from Cloud to Data Center when:
+
 - Their organisation's security policy prohibits cloud-hosted code
 - Compliance requirements mandate on-premises data control
 - They need LDAP/Active Directory integration without the Guard add-on cost
@@ -426,6 +444,7 @@ Teams move from Cloud to Data Center when:
 ## Migrating from Data Center to Cloud
 
 Teams move from Data Center to Cloud when:
+
 - They want to reduce operational burden
 - They want access to Bitbucket Pipelines, AI features and Packages
 - Their compliance requirements have changed and cloud is now permitted
@@ -446,6 +465,7 @@ The migration can be run incrementally - repositories can be migrated in batches
 ### Post-migration setup
 
 After migrating to Cloud:
+
 - Set up Bitbucket Pipelines (replace Jenkins or Bamboo)
 - Connect to Jira Cloud via the native Atlassian integration
 - Set up Atlassian Guard if SSO is required
@@ -537,6 +557,7 @@ Choose Bitbucket Data Center if:
 **Exercise 2 - Explore the Migration Assistant (Data Center users)**
 
 If you manage a Data Center instance:
+
 1. Install the Bitbucket Cloud Migration Assistant app from the Atlassian Marketplace
 2. Run the pre-migration analysis (no data is moved at this stage)
 3. Review the migration readiness report to understand what would and would not transfer
@@ -544,6 +565,7 @@ If you manage a Data Center instance:
 **Exercise 3 - Calculate total cost of ownership**
 
 For your actual team size, calculate:
+
 - Cloud Premium cost: users × $7.25/month × 12
 - Cloud Guard Standard cost (if SSO needed): users × $4.20/month × 12
 - Data Center licence cost (from current Atlassian pricing)
@@ -588,11 +610,11 @@ Bitbucket Cloud and Bitbucket Data Center serve the same fundamental purpose but
 
 Bitbucket Server reached end of life in February 2024. All self-hosted deployments must run Data Center.
 
-The current Data Center LTS is 10.2 (March 2026, supported until March 2028). It runs on Linux only, requires OpenSearch for search, and supports active-active clustering for high availability.
+The current Data Center LTS is 10.2 (March 2026, supported until March 2028). It runs on Linux only, requires OpenSearch for search and supports active-active clustering for high availability.
 
 Cloud offers features Data Center does not: Bitbucket Pipelines, AI features (Rovo Dev), Bitbucket Packages and secret scanning. Data Center offers features Cloud does not: built-in LDAP/SAML without Guard, complete data sovereignty, custom plugins and Smart Mirroring.
 
-Choose Cloud for simplicity, Pipelines access and lower operational burden. Choose Data Center for data sovereignty, air-gapped deployments, compliance environments that prohibit cloud hosting, and very large teams where self-hosting economics favour on-premises.
+Choose Cloud for simplicity, Pipelines access and lower operational burden. Choose Data Center for data sovereignty, air-gapped deployments, compliance environments that prohibit cloud hosting and very large teams where self-hosting economics favour on-premises.
 
 The Bitbucket Hybrid Licence (arriving mid-2026) will allow organisations to operate both Cloud and Data Center under a single agreement, supporting gradual migrations and mixed-posture environments.
 

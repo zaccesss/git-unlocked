@@ -30,7 +30,7 @@ Version control is a system that records changes to files over time so you can r
 
 You have almost certainly already used a primitive form of version control. Every time you saved a file as `essay_final.docx`, then `essay_final_v2.docx`, then `essay_final_ACTUALLY_FINAL.docx`, you were doing version control by hand. You kept a history of your work. You could go back. You just did it in the most painful possible way.
 
-A proper version control system does this automatically, systematically, and in a way that works for both individuals and large teams.
+A proper version control system does this automatically, systematically and in a way that works for both individuals and large teams.
 
 ---
 
@@ -151,7 +151,7 @@ This means:
 
 - You can work on a plane with no internet
 - Committing is instantaneous (no waiting for a server)
-- You can experiment, make mistakes, and clean them up before anyone else sees your work
+- You can experiment, make mistakes and clean them up before anyone else sees your work
 - Losing your internet connection does not interrupt your work
 
 The flip side: changes other people push are not automatically visible to you. You need to `git fetch` (download their changes) explicitly. `git pull` combines fetch and merge in one step.

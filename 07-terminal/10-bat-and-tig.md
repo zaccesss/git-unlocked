@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 20 minutes
 
-Two terminal tools that complement a Git workflow without replacing any part of it: **bat** is a syntax-highlighted replacement for `cat` that integrates with Git to show file changes inline, and **tig** is a keyboard-driven Git log browser that has been around since 2006 and remains one of the fastest ways to navigate commit history, view blame, and browse the state of a repository entirely from the terminal.
+Two terminal tools that complement a Git workflow without replacing any part of it: **bat** is a syntax-highlighted replacement for `cat` that integrates with Git to show file changes inline, and **tig** is a keyboard-driven Git log browser that has been around since 2006 and remains one of the fastest ways to navigate commit history, view blame and browse the state of a repository entirely from the terminal.
 
 ---
 
@@ -27,7 +27,7 @@ Two terminal tools that complement a Git workflow without replacing any part of 
 
 ## 1. bat - syntax-highlighted cat
 
-`cat` prints the contents of a file. bat does the same thing with syntax highlighting, line numbers, Git change indicators in the gutter, and automatic paging when the output is longer than the terminal. For reading files in the terminal, bat is significantly easier to read than `cat`.
+`cat` prints the contents of a file. bat does the same thing with syntax highlighting, line numbers, Git change indicators in the gutter and automatic paging when the output is longer than the terminal. For reading files in the terminal, bat is significantly easier to read than `cat`.
 
 bat is written in Rust and uses the `syntect` library (the same one delta uses) for syntax highlighting, with the same Sublime Text `.sublime-syntax` format files. It supports over 200 languages out of the box.
 
@@ -42,6 +42,7 @@ bat src/auth.py
 ```
 
 bat shows:
+
 - **Syntax highlighting** with the language detected from the file extension
 - **Line numbers** in the gutter
 - **Git change markers** (`+` for added lines, `~` for modified, `-` for deleted) in the gutter next to line numbers
@@ -144,7 +145,7 @@ alias cat='bat --paging=never'  # no paging - just print
 bat shows Git change indicators automatically when viewing files inside a Git repository. The gutter to the left of line numbers shows:
 
 - `+` green: line added since last commit
-- `~` yellow: line modified since last commit  
+- `~` yellow: line modified since last commit
 - (empty space): line deleted at this position is not shown directly; you see the gap
 
 This gives you a quick visual overview of what changed in a file without running `git diff`.
@@ -178,10 +179,10 @@ This gives you syntax-highlighted man pages with bat's colour scheme. Add both l
 
 bat reads a config file at:
 
-| Platform | Path |
-| -------- | ---- |
-| 🐧 Linux | `~/.config/bat/config` |
-| 🍎 macOS | `~/.config/bat/config` |
+| Platform   | Path                   |
+| ---------- | ---------------------- |
+| 🐧 Linux   | `~/.config/bat/config` |
+| 🍎 macOS   | `~/.config/bat/config` |
 | 🪟 Windows | `%APPDATA%\bat\config` |
 
 Find the path: `bat --config-file`
@@ -238,7 +239,7 @@ bat cache --build
 
 tig is an ncurses-based Git repository browser. It has been maintained since 2006, is written in C, and has a stable, keyboard-driven interface focused on navigating history, viewing diffs, blame, references and stashes. It is available on every platform Git supports.
 
-tig is not trying to be lazygit. It does not do staging or commit creation as smoothly. What it is excellent at is **reading history** - quickly navigating a commit graph, viewing the diff for any commit, blaming any file, browsing all refs, and searching through commits. For code archaeology and understanding what happened in a repository, tig is fast and precise.
+tig is not trying to be lazygit. It does not do staging or commit creation as smoothly. What it is excellent at is **reading history** - quickly navigating a commit graph, viewing the diff for any commit, blaming any file, browsing all refs and searching through commits. For code archaeology and understanding what happened in a repository, tig is fast and precise.
 
 ---
 
@@ -293,52 +294,52 @@ git log -p | tig       # tig as a pager for log output
 
 tig has several named views, each accessed by a key:
 
-| Key | View |
-| --- | ---- |
-| `m` | Main view (commit log with graph) |
+| Key | View                                    |
+| --- | --------------------------------------- |
+| `m` | Main view (commit log with graph)       |
 | `d` | Diff view (diff of the selected commit) |
-| `l` | Log view |
-| `t` | Tree view (file browser at a commit) |
-| `f` | Blame view (who wrote each line) |
+| `l` | Log view                                |
+| `t` | Tree view (file browser at a commit)    |
+| `f` | Blame view (who wrote each line)        |
 | `r` | Refs view (all branches, tags, remotes) |
-| `s` | Status view (staging interface) |
-| `y` | Stash view |
-| `p` | Pager (view output piped into tig) |
-| `h` | Help view |
+| `s` | Status view (staging interface)         |
+| `y` | Stash view                              |
+| `p` | Pager (view output piped into tig)      |
+| `h` | Help view                               |
 
 ### Navigation
 
 Most tig navigation uses vi-style keys:
 
-| Key | Action |
-| --- | ------ |
-| `j` / `k` | Move down / up one line |
-| `J` / `K` | Move to next / previous item (context-sensitive) |
-| `Space` / `-` | Page down / up |
-| `g` / `G` | Jump to first / last entry |
-| `Enter` | Open the selected item (show diff, expand commit, etc.) |
-| `Tab` | Switch between split pane and full view |
-| `q` | Close current view |
-| `Q` | Quit tig |
-| `R` / `F5` | Refresh the current view |
-| `/` | Search forward (regular expression) |
-| `?` | Search backward |
-| `n` / `N` | Next / previous search match |
+| Key           | Action                                                  |
+| ------------- | ------------------------------------------------------- |
+| `j` / `k`     | Move down / up one line                                 |
+| `J` / `K`     | Move to next / previous item (context-sensitive)        |
+| `Space` / `-` | Page down / up                                          |
+| `g` / `G`     | Jump to first / last entry                              |
+| `Enter`       | Open the selected item (show diff, expand commit, etc.) |
+| `Tab`         | Switch between split pane and full view                 |
+| `q`           | Close current view                                      |
+| `Q`           | Quit tig                                                |
+| `R` / `F5`    | Refresh the current view                                |
+| `/`           | Search forward (regular expression)                     |
+| `?`           | Search backward                                         |
+| `n` / `N`     | Next / previous search match                            |
 
 ### Main view actions
 
 From the main view (commit log):
 
-| Key | Action |
-| --- | ------ |
-| `Enter` | Open the diff for the selected commit |
-| `C` | Cherry-pick this commit to the current branch |
-| `r` | Revert this commit |
-| `t` | Create a tag at this commit |
-| `!` | Reset HEAD to this commit (asks type: soft/mixed/hard) |
-| `b` | Create a new branch at this commit |
-| `y` | Copy commit hash |
-| `E` | Open in `$EDITOR` |
+| Key     | Action                                                 |
+| ------- | ------------------------------------------------------ |
+| `Enter` | Open the diff for the selected commit                  |
+| `C`     | Cherry-pick this commit to the current branch          |
+| `r`     | Revert this commit                                     |
+| `t`     | Create a tag at this commit                            |
+| `!`     | Reset HEAD to this commit (asks type: soft/mixed/hard) |
+| `b`     | Create a new branch at this commit                     |
+| `y`     | Copy commit hash                                       |
+| `E`     | Open in `$EDITOR`                                      |
 
 ---
 
@@ -361,12 +362,12 @@ Untracked files:
 
 Navigate the file list with `j`/`k`. In the status view:
 
-| Key | Action |
-| --- | ------ |
-| `u` | Stage / unstage the selected file |
-| `!` | Revert the selected file (discard changes) |
-| `C` | Commit (opens `$EDITOR` for the message) |
-| `Enter` | Open the diff for the selected file |
+| Key     | Action                                     |
+| ------- | ------------------------------------------ |
+| `u`     | Stage / unstage the selected file          |
+| `!`     | Revert the selected file (discard changes) |
+| `C`     | Commit (opens `$EDITOR` for the message)   |
+| `Enter` | Open the diff for the selected file        |
 
 For granular hunk-level staging, tig's stage view is less capable than lazygit or `git add -p`. Use tig for fast full-file staging and history browsing; use lazygit or `git add -p` for interactive hunk-level staging.
 
@@ -427,7 +428,7 @@ bind diff <Ctrl-d> !?git checkout %(commit) -- %(file)
 
 **Exercise 1 - explore bat on a file**
 
-Install bat. Navigate to any code file in a project (`src/*.py`, `*.js`, `*.go` etc.). Run `bat filename`. Notice the syntax highlighting, line numbers, and any Git change indicators if the file has uncommitted changes. Run `bat -r 1:20 filename` to see just the first 20 lines.
+Install bat. Navigate to any code file in a project (`src/*.py`, `*.js`, `*.go` etc.). Run `bat filename`. Notice the syntax highlighting, line numbers and any Git change indicators if the file has uncommitted changes. Run `bat -r 1:20 filename` to see just the first 20 lines.
 
 **Exercise 2 - bat and git diff**
 

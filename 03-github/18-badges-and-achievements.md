@@ -85,12 +85,12 @@ GitHub currently has nine achievements. Seven can be actively earned by anyone t
 
 **Tier thresholds:**
 
-| Tier | PRs Merged |
-|---|---|
-| Default (no medal) | 2 |
-| Bronze 🥉 | 16 |
-| Silver 🥈 | 128 |
-| Gold 🥇 | 1024 |
+| Tier               | PRs Merged |
+| ------------------ | ---------- |
+| Default (no medal) | 2          |
+| Bronze 🥉          | 16         |
+| Silver 🥈          | 128        |
+| Gold 🥇            | 1024       |
 
 **Notes:**
 
@@ -137,12 +137,12 @@ GitHub currently has nine achievements. Seven can be actively earned by anyone t
 
 **Tier thresholds:**
 
-| Tier | Co-authored PRs Merged |
-|---|---|
-| Default (no medal) | 1 |
-| Bronze 🥉 | 10 |
-| Silver 🥈 | 24 |
-| Gold 🥇 | 48 |
+| Tier               | Co-authored PRs Merged |
+| ------------------ | ---------------------- |
+| Default (no medal) | 1                      |
+| Bronze 🥉          | 10                     |
+| Silver 🥈          | 24                     |
+| Gold 🥇            | 48                     |
 
 **Notes:**
 
@@ -164,12 +164,12 @@ GitHub currently has nine achievements. Seven can be actively earned by anyone t
 
 **Tier thresholds:**
 
-| Tier | Stars on a Single Repository |
-|---|---|
-| Default (no medal) | 16 |
-| Bronze 🥉 | 128 |
-| Silver 🥈 | 512 |
-| Gold 🥇 | 4096 |
+| Tier               | Stars on a Single Repository |
+| ------------------ | ---------------------------- |
+| Default (no medal) | 16                           |
+| Bronze 🥉          | 128                          |
+| Silver 🥈          | 512                          |
+| Gold 🥇            | 4096                         |
 
 **Notes:**
 
@@ -186,12 +186,12 @@ GitHub currently has nine achievements. Seven can be actively earned by anyone t
 
 **Tier thresholds:**
 
-| Tier | Accepted Answers |
-|---|---|
-| Default (no medal) | 1 |
-| Bronze 🥉 | 8 |
-| Silver 🥈 | 16 |
-| Gold 🥇 | 32 |
+| Tier               | Accepted Answers |
+| ------------------ | ---------------- |
+| Default (no medal) | 1                |
+| Bronze 🥉          | 8                |
+| Silver 🥈          | 16               |
+| Gold 🥇            | 32               |
 
 **Notes:**
 
@@ -276,13 +276,14 @@ These three badges can be earned within minutes of creating a GitHub account. Yo
 
 **What it earns:** The Quickdraw badge.
 
-**What you need:** A repository, an issue or PR, and the ability to close it within 5 minutes of opening.
+**What you need:** A repository, an issue or PR and the ability to close it within 5 minutes of opening.
 
 **Step-by-step:**
 
 **Step 1.** Sign in to GitHub at `github.com`.
 
 **Step 2.** Create a new repository:
+
 - Click the **+** icon in the top-right corner
 - Click **New repository**
 - Name it anything - for example `quickdraw-test`
@@ -291,12 +292,14 @@ These three badges can be earned within minutes of creating a GitHub account. Yo
 - Click **Create repository**
 
 **Step 3.** Open an issue:
+
 - In your new repository, click the **Issues** tab
 - Click **New issue**
 - Give it any title - for example `Test issue`
 - Click **Submit new issue**
 
 **Step 4.** Close the issue immediately:
+
 - You are now viewing the open issue
 - Scroll down to the comment box
 - Click **Close issue** (the button at the bottom right of the comment area, or use the dropdown to select **Close as not planned**)
@@ -319,11 +322,13 @@ That is it. As long as you closed it within 5 minutes of opening it - which you 
 Continue in the same `quickdraw-test` repository from Badge 1, or use any repository you own.
 
 **Step 1.** Create a new branch on GitHub:
+
 - In your repository, click the branch dropdown (it says `main` by default, in the top-left of the file list)
 - Type a new branch name in the box - for example `yolo-branch`
 - Click **Create branch: yolo-branch from 'main'**
 
 **Step 2.** Make a small change on the new branch:
+
 - You are now on `yolo-branch`
 - Click on `README.md` in the file list
 - Click the pencil (edit) icon
@@ -333,6 +338,7 @@ Continue in the same `quickdraw-test` repository from Badge 1, or use any reposi
 - Click **Commit changes**
 
 **Step 3.** Open a pull request:
+
 - GitHub will show a yellow banner saying your branch has recent pushes with a **Compare and pull request** button - click it
 - Or go to the **Pull requests** tab and click **New pull request**, then set base to `main` and compare to `yolo-branch`
 - Give the PR any title
@@ -340,6 +346,7 @@ Continue in the same `quickdraw-test` repository from Badge 1, or use any reposi
 - Click **Create pull request**
 
 **Step 4.** Merge immediately without review:
+
 - You are now viewing the open PR
 - Scroll down to the merge section
 - Click **Merge pull request**
@@ -363,10 +370,12 @@ No one reviewed it. No approval was given. GitHub awards the YOLO badge. It may 
 You already merged one PR for the YOLO badge. You need one more merged PR.
 
 **Step 1.** Create another branch:
+
 - In your repository, click the branch dropdown showing `main`
 - Type `pull-shark-branch` and click **Create branch: pull-shark-branch from 'main'**
 
 **Step 2.** Make a change on the new branch:
+
 - Click `README.md`
 - Click the pencil icon
 - Add another line - for example `<!-- pull shark edit -->`
@@ -374,11 +383,13 @@ You already merged one PR for the YOLO badge. You need one more merged PR.
 - Click **Commit changes**
 
 **Step 3.** Open a pull request:
+
 - Click the **Compare and pull request** banner or go to the **Pull requests** tab
 - Title it anything
 - Click **Create pull request**
 
 **Step 4.** Merge it:
+
 - Click **Merge pull request**
 - Click **Confirm merge**
 
@@ -404,15 +415,15 @@ The tier displayed on your profile always shows your current highest tier. You d
 
 **Full tier table:**
 
-| Achievement | Default | Bronze 🥉 | Silver 🥈 | Gold 🥇 |
-|---|---|---|---|---|
-| Pull Shark | 2 PRs merged | 16 | 128 | 1024 |
-| Pair Extraordinaire | 1 co-authored PR merged | 10 | 24 | 48 |
-| Starstruck | 16 stars on one repo | 128 | 512 | 4096 |
-| Galaxy Brain | 1 accepted answer | 8 | 16 | 32 |
-| YOLO | 1 (no tiers) | - | - | - |
-| Quickdraw | 1 (no tiers) | - | - | - |
-| Public Sponsor | 1 (no tiers) | - | - | - |
+| Achievement         | Default                 | Bronze 🥉 | Silver 🥈 | Gold 🥇 |
+| ------------------- | ----------------------- | --------- | --------- | ------- |
+| Pull Shark          | 2 PRs merged            | 16        | 128       | 1024    |
+| Pair Extraordinaire | 1 co-authored PR merged | 10        | 24        | 48      |
+| Starstruck          | 16 stars on one repo    | 128       | 512       | 4096    |
+| Galaxy Brain        | 1 accepted answer       | 8         | 16        | 32      |
+| YOLO                | 1 (no tiers)            | -         | -         | -       |
+| Quickdraw           | 1 (no tiers)            | -         | -         | -       |
+| Public Sponsor      | 1 (no tiers)            | -         | -         | -       |
 
 ---
 

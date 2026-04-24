@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 25 minutes
 
-GitHub Education gives verified students and teachers free access to professional tools worth thousands of pounds or dollars. The flagship offer is the **Student Developer Pack** - a bundle of over 100 tools that companies contribute so students can learn with the same software used in industry. This file covers the Pack in full with redemption steps for the key offers, how to apply and what to do if your application is rejected, GitHub Classroom for teachers, and the Campus Expert program for student community leaders.
+GitHub Education gives verified students and teachers free access to professional tools worth thousands of pounds or dollars. The flagship offer is the **Student Developer Pack** - a bundle of over 100 tools that companies contribute so students can learn with the same software used in industry. This file covers the Pack in full with redemption steps for the key offers, how to apply and what to do if your application is rejected, GitHub Classroom for teachers and the Campus Expert program for student community leaders.
 
 ---
 
@@ -70,7 +70,7 @@ The following reflects the most practically useful offers as of March 2026. The 
 
 **Cloud platforms:**
 
-- **Microsoft Azure** - $100 in Azure credits valid for 12 months, plus access to Azure Dev Tools for Teaching (Windows, Visual Studio, and other Microsoft developer tools).
+- **Microsoft Azure** - $100 in Azure credits valid for 12 months, plus access to Azure Dev Tools for Teaching (Windows, Visual Studio and other Microsoft developer tools).
 - **DigitalOcean** - $200 in platform credits valid for 1 year. Use for deploying web apps, databases and containers.
 - **Heroku** - extended free tier and credits for Heroku's cloud platform. Useful for deploying web applications quickly.
 - **Render** - credits for Render's cloud hosting platform (web services, databases, cron jobs).
@@ -362,7 +362,6 @@ Autograding runs automated tests on student code every time they push a commit. 
 1. When creating or editing an assignment, scroll to **Add autograding tests**
 2. Click **Add test**
 3. Choose a test type:
-
    - **Run command** - runs a shell command and checks the exit code (0 = pass, non-zero = fail)
    - **Run command, check output** - runs a command and checks that stdout matches expected output exactly
    - **Input/Output** - provide input and expected output; Classroom runs your program and compares
@@ -452,7 +451,7 @@ GitHub Octernships are paid industry placements (internships) for students. They
 
 **What they are:**
 
-Octernships are project-based internships typically lasting 2 to 4 months, done remotely. Each Octernship has a specific project scope agreed between the company and GitHub. Students apply for specific Octernships, complete a technical application task, and if selected work directly with the company.
+Octernships are project-based internships typically lasting 2 to 4 months, done remotely. Each Octernship has a specific project scope agreed between the company and GitHub. Students apply for specific Octernships, complete a technical application task and if selected work directly with the company.
 
 **Pay:** Octernships are paid. The exact amount varies per company and project but is competitive with standard internship rates.
 

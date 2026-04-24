@@ -32,11 +32,13 @@ Pull requests in Gitea are the primary mechanism for proposing, reviewing and me
 **After pushing a branch**, Gitea shows a banner on the repository page suggesting you create a pull request. Click it.
 
 **From the Branches list:**
+
 1. Go to **Code** > **Branches**
 2. Find your branch
 3. Click **New Pull Request**
 
 **From the Pull Requests page:**
+
 1. Click **Pull Requests** in the repository navigation
 2. Click **New Pull Request**
 3. Select the base branch (what to merge into) and the compare branch (your changes)
@@ -46,6 +48,7 @@ Pull requests in Gitea are the primary mechanism for proposing, reviewing and me
 **Title**: A concise description of what the PR does. This becomes the merge commit message for squash merges. Write it in the present tense: "Add OAuth2 login" not "Added OAuth2 login".
 
 **Content / Description**: Context for reviewers. Explain:
+
 - What the change does
 - Why it is needed
 - How to test it
@@ -90,6 +93,7 @@ curl -X POST \
 ### Overview tab
 
 The default view showing:
+
 - PR title, description and metadata
 - Reviewer list and their review status
 - CI/CD build status (if Gitea Actions is configured)
@@ -104,6 +108,7 @@ All commits included in this PR. Each links to the commit's diff. Useful for rev
 ### Files Changed tab
 
 The diff of all changes. This is the primary code review workspace:
+
 - Green lines: additions
 - Red lines: deletions
 - Context lines: unchanged surrounding code
@@ -131,6 +136,7 @@ git push origin feature/my-feature
 ### Line-level comments
 
 To comment on a specific line:
+
 1. Hover over the line in the **Files Changed** tab
 2. Click the blue **+** icon that appears on the left
 3. Write your comment
@@ -146,7 +152,7 @@ Click and drag across multiple lines to select a range, then click **+** to comm
 
 All comments support full Markdown:
 
-```markdown
+````markdown
 **This needs a null check:**
 
 ```go
@@ -154,9 +160,11 @@ if user == nil {
     return ErrNotFound
 }
 ```
+````
 
 See the [error handling docs](https://docs.example.com/errors) for the pattern we use.
-```
+
+`````
 
 ### Suggestions
 
@@ -170,8 +178,9 @@ func validateUser(user *User) error {
     }
     return nil
 }
-```
-````
+`````
+
+`````
 
 The suggestion appears as a diff in the review comment. The PR author sees an **Apply suggestion** button that commits the change directly.
 
@@ -330,7 +339,7 @@ Required status checks: [gitea-ci/test, gitea-ci/build]
 Restrict force push: yes
 ```
 
-This configuration means: nobody can push directly to `main`, PRs need 2 approvals, approvals reset when code changes, and all CI checks must pass.
+This configuration means: nobody can push directly to `main`, PRs need 2 approvals, approvals reset when code changes and all CI checks must pass.
 
 ---
 
@@ -485,7 +494,8 @@ I suggest updating this to:
 # Contributing Guide
 Welcome contributors! Please read this first.
 ```
-````
+`````
+
 5. Submit the comment
 
 **Exercise 3 - Configure branch protection**
@@ -497,6 +507,7 @@ Welcome contributors! Please read this first.
 5. Save
 
 Now try to push directly to main:
+
 ```bash
 git checkout main
 echo "direct push test" >> test.txt

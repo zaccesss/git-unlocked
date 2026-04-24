@@ -30,15 +30,15 @@ This file pulls together everything from the previous files into a single, coher
 
 ## 1. The tools in this workflow
 
-| Tool | Role | File |
-| ---- | ---- | ---- |
-| zoxide | Navigate between repositories instantly | [11-other-tools.md](11-other-tools.md) |
+| Tool     | Role                                               | File                                   |
+| -------- | -------------------------------------------------- | -------------------------------------- |
+| zoxide   | Navigate between repositories instantly            | [11-other-tools.md](11-other-tools.md) |
 | starship | Show branch, status and ahead/behind in the prompt | [11-other-tools.md](11-other-tools.md) |
-| lazygit | Stage, commit, branch, rebase, push | [08-lazygit.md](08-lazygit.md) |
-| delta | Better diff output in the terminal | [07-delta.md](07-delta.md) |
-| bat | View file contents with syntax highlighting | [10-bat-and-tig.md](10-bat-and-tig.md) |
-| fzf | Fuzzy search branches, commits, files | [09-fzf-and-git.md](09-fzf-and-git.md) |
-| tig | Browse history, blame, find a specific commit | [10-bat-and-tig.md](10-bat-and-tig.md) |
+| lazygit  | Stage, commit, branch, rebase, push                | [08-lazygit.md](08-lazygit.md)         |
+| delta    | Better diff output in the terminal                 | [07-delta.md](07-delta.md)             |
+| bat      | View file contents with syntax highlighting        | [10-bat-and-tig.md](10-bat-and-tig.md) |
+| fzf      | Fuzzy search branches, commits, files              | [09-fzf-and-git.md](09-fzf-and-git.md) |
+| tig      | Browse history, blame, find a specific commit      | [10-bat-and-tig.md](10-bat-and-tig.md) |
 
 None of these tools are required. Every step below has a plain `git` command alternative. The tools make things faster and more visual, but the underlying operations are standard Git.
 
@@ -279,7 +279,7 @@ git rebase --continue
 
 ## 9. Cleaning up commits before a PR
 
-You made 7 commits while working on the feature. Some are "WIP" commits, some are minor fixes to previous commits, and two could be squashed together. Before creating a PR, clean them up into a coherent set of commits that reviewers can easily follow.
+You made 7 commits while working on the feature. Some are "WIP" commits, some are minor fixes to previous commits and two could be squashed together. Before creating a PR, clean them up into a coherent set of commits that reviewers can easily follow.
 
 **View your commits**:
 

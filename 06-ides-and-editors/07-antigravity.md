@@ -75,7 +75,7 @@ Everything in [01-vs-code.md](01-vs-code.md) applies to Antigravity. The **Gener
 
 Antigravity's defining UX is the toggle between two primary interfaces:
 
-**Editor view** (press `Cmd+E` on Mac or `Ctrl+E` on Windows/Linux to return to it): the standard IDE interface. A full VS Code-compatible editor with source control panel, file explorer, terminal, debugger, and an AI agent sidebar similar to Cursor's Composer. This is where you write code, review diffs, and do hands-on work.
+**Editor view** (press `Cmd+E` on Mac or `Ctrl+E` on Windows/Linux to return to it): the standard IDE interface. A full VS Code-compatible editor with source control panel, file explorer, terminal, debugger and an AI agent sidebar similar to Cursor's Composer. This is where you write code, review diffs, and do hands-on work.
 
 **Manager view** (press `Cmd+E` / `Ctrl+E` again to toggle, or click the grid icon in the Activity Bar): mission control for orchestrating multiple AI agents. The Manager view shows up to 5 parallel agents running simultaneously. Each agent has its own panel showing:
 
@@ -100,7 +100,7 @@ Every agent action in Antigravity produces **Artifacts** - verifiable deliverabl
 
 Artifacts are stored in `~/.gemini/antigravity/brain/<GUID>/` on your local machine and linked from the agent panel. Reusable patterns are saved to `.antigravity/knowledge/` in the project directory (committed to Git if you choose).
 
-For Git workflows, the Artifact model is valuable because you can read `git_operations.md` to see exactly which commits the agent created, what messages it used, and whether it pushed. This is more auditable than Cursor or Windsurf, where you need to run `git log` yourself to understand what the agent did.
+For Git workflows, the Artifact model is valuable because you can read `git_operations.md` to see exactly which commits the agent created, what messages it used and whether it pushed. This is more auditable than Cursor or Windsurf, where you need to run `git log` yourself to understand what the agent did.
 
 **Commenting on Artifacts**: click any section of an Artifact to leave a comment. Antigravity incorporates your comment into the agent's context for the next step, similar to leaving review comments on a Google Doc. For example, if the agent's `git_operations.md` shows it committed to the wrong branch, you can comment "this should have been on feature/login, not on main" and Antigravity will correct the branch.
 
@@ -114,13 +114,13 @@ For Git workflows, the Artifact model is valuable because you can read `git_oper
 
 **Feature branch and implementation**:
 
-> "Create a branch called feature/export-csv, implement CSV export for the orders table in src/reports/orders.py, update the API endpoint in src/api/orders.py to accept an export=csv query parameter, write tests, and commit everything with appropriate conventional commit messages."
+> "Create a branch called feature/export-csv, implement CSV export for the orders table in src/reports/orders.py, update the API endpoint in src/api/orders.py to accept an export=csv query parameter, write tests and commit everything with appropriate conventional commit messages."
 
-Antigravity creates the Artifact plan first. After you approve, it executes: branch creation, file edits, test runs, commit, and logs everything in `git_operations.md`.
+Antigravity creates the Artifact plan first. After you approve, it executes: branch creation, file edits, test runs, commit and logs everything in `git_operations.md`.
 
 **Reviewing before merge**:
 
-> "Compare the current branch with main. List every file changed, summarise the intent of each change, and flag any potential issues I should know about before merging."
+> "Compare the current branch with main. List every file changed, summarise the intent of each change and flag any potential issues I should know about before merging."
 
 The agent runs `git diff main...HEAD`, reads the output and produces a review Artifact that you can read before deciding to merge.
 
@@ -137,14 +137,14 @@ Both agents work on separate branches (Antigravity uses Git worktrees for isolat
 
 Antigravity supports multiple AI models. You switch models from the model selector dropdown in the agent sidebar.
 
-| Model | Notes |
-|---|---|
-| Gemini 3.1 Pro | Default; 1M token input, 65K output; Low/Medium/High thinking variants |
-| Gemini 3 Pro | Launch-era model; 76.2% SWE-Bench Verified |
-| Gemini 3 Flash | Faster, cheaper; suitable for routine tasks |
-| Claude Opus 4.6 | Anthropic's most capable model available in Antigravity |
-| Claude Sonnet 4.6 | Faster Claude option; Thinking variant available |
-| GPT-OSS-120B | Open-source OpenAI model; available in Antigravity |
+| Model             | Notes                                                                  |
+| ----------------- | ---------------------------------------------------------------------- |
+| Gemini 3.1 Pro    | Default; 1M token input, 65K output; Low/Medium/High thinking variants |
+| Gemini 3 Pro      | Launch-era model; 76.2% SWE-Bench Verified                             |
+| Gemini 3 Flash    | Faster, cheaper; suitable for routine tasks                            |
+| Claude Opus 4.6   | Anthropic's most capable model available in Antigravity                |
+| Claude Sonnet 4.6 | Faster Claude option; Thinking variant available                       |
+| GPT-OSS-120B      | Open-source OpenAI model; available in Antigravity                     |
 
 **Auto-failover**: if your primary model hits a rate limit, Antigravity automatically switches to an available model rather than failing the task. This is useful during peak usage.
 
@@ -187,7 +187,7 @@ Antigravity processes code through Google's cloud infrastructure. This matters f
 
 **Data residency**: all code sent to Gemini models goes to Google's servers. If your organisation has data residency requirements or handles code that cannot leave your jurisdiction, Antigravity may not be appropriate. Unlike JetBrains AI Ultimate or some Cursor configurations, there is no self-hosted option for Antigravity as of April 2026.
 
-**Agent permissions**: Antigravity agents can read any file in your repository, run terminal commands, and push to remote repositories. Review the agent's planned Artifact before approving execution for sensitive tasks.
+**Agent permissions**: Antigravity agents can read any file in your repository, run terminal commands and push to remote repositories. Review the agent's planned Artifact before approving execution for sensitive tasks.
 
 **macOS sandbox**: a macOS sandbox was added in February 2026, limiting what agents can access outside the project directory. Windows and Linux rely on Secure Mode (a configuration flag), which is less comprehensive.
 
@@ -208,7 +208,7 @@ Antigravity is in public preview as of April 2026. It is a capable tool but has 
 - **UI freeze**: occasional freezes in the Manager view when monitoring multiple agents simultaneously
 - **Legacy codebase struggles**: agents perform well on standard library patterns but can misinterpret unusual frameworks, unusual naming conventions or undocumented legacy code
 
-**The practical advice**: use Antigravity for new features, greenfield work, and tasks with well-defined requirements. For critical production paths - authentication, payment processing, data migration - either use a more mature tool or supervise Antigravity's work very closely and review every Artifact and every commit before accepting.
+**The practical advice**: use Antigravity for new features, greenfield work and tasks with well-defined requirements. For critical production paths - authentication, payment processing, data migration - either use a more mature tool or supervise Antigravity's work very closely and review every Artifact and every commit before accepting.
 
 ---
 
@@ -216,11 +216,11 @@ Antigravity is in public preview as of April 2026. It is a capable tool but has 
 
 Antigravity is **free in public preview** as of April 2026. Google has indicated it will introduce paid tiers in 2026. Based on the existing Google AI product structure, expected tiers are:
 
-| Tier | Estimated price | Notes |
-|---|---|---|
-| Free | $0 | Limited daily rate; Gemini 3 Flash + 3.1 Pro within limits |
-| Google AI Pro | $20/month | Higher limits, Claude access |
-| Google AI Ultra | $249.99/month | Maximum limits, all models, priority |
+| Tier            | Estimated price | Notes                                                      |
+| --------------- | --------------- | ---------------------------------------------------------- |
+| Free            | $0              | Limited daily rate; Gemini 3 Flash + 3.1 Pro within limits |
+| Google AI Pro   | $20/month       | Higher limits, Claude access                               |
+| Google AI Ultra | $249.99/month   | Maximum limits, all models, priority                       |
 
 These are projections based on Google's AI product pricing patterns. Check [antigravity.google](https://antigravity.google) for current pricing.
 
@@ -233,15 +233,15 @@ These are projections based on Google's AI product pricing patterns. Check [anti
 
 Antigravity inherits VS Code shortcuts and adds:
 
-| Action | Windows/Linux | Mac |
-|---|---|---|
-| Toggle Editor/Manager view | `Ctrl+E` | `Cmd+E` |
-| New agent task | `Ctrl+N` (in Manager view) | `Cmd+N` |
-| Open Source Control panel | `Ctrl+Shift+G` | `Cmd+Shift+G` |
-| Open terminal | `` Ctrl+` `` | `` Cmd+` `` |
-| Commit | `Ctrl+Enter` (in commit box) | `Cmd+Enter` |
-| Open Command Palette | `Ctrl+Shift+P` | `Cmd+Shift+P` |
-| Stop agent | `Esc` (in agent panel) | `Esc` |
+| Action                     | Windows/Linux                | Mac           |
+| -------------------------- | ---------------------------- | ------------- |
+| Toggle Editor/Manager view | `Ctrl+E`                     | `Cmd+E`       |
+| New agent task             | `Ctrl+N` (in Manager view)   | `Cmd+N`       |
+| Open Source Control panel  | `Ctrl+Shift+G`               | `Cmd+Shift+G` |
+| Open terminal              | `` Ctrl+` ``                 | `` Cmd+` ``   |
+| Commit                     | `Ctrl+Enter` (in commit box) | `Cmd+Enter`   |
+| Open Command Palette       | `Ctrl+Shift+P`               | `Cmd+Shift+P` |
+| Stop agent                 | `Esc` (in agent panel)       | `Esc`         |
 
 ---
 

@@ -28,19 +28,19 @@ Current version: **v0.28.1** (March 2026).
 
 ### gitui vs lazygit
 
-| Dimension | lazygit | gitui |
-| --------- | ------- | ----- |
-| Language | Go | Rust |
-| Git backend | system `git` binary | libgit2 (async) |
-| Performance on large repos | Good | Better - async pipeline |
-| Interactive rebase | Full UI: drag, squash, fixup, drop | Basic: reword, fixup, squash |
-| GitHub PR integration | Yes (v0.61+) | No |
-| Cherry-pick | Multi-select, paste | Basic |
-| Bisect support | Yes | No |
-| Worktree support | Yes | No |
-| Syntax highlighting in diffs | Via delta pager | Built-in via syntect |
-| Config format | YAML | RON (Rusty Object Notation) |
-| Platform support | All (delta caveat on Windows) | All (built-in highlighting works everywhere) |
+| Dimension                    | lazygit                            | gitui                                        |
+| ---------------------------- | ---------------------------------- | -------------------------------------------- |
+| Language                     | Go                                 | Rust                                         |
+| Git backend                  | system `git` binary                | libgit2 (async)                              |
+| Performance on large repos   | Good                               | Better - async pipeline                      |
+| Interactive rebase           | Full UI: drag, squash, fixup, drop | Basic: reword, fixup, squash                 |
+| GitHub PR integration        | Yes (v0.61+)                       | No                                           |
+| Cherry-pick                  | Multi-select, paste                | Basic                                        |
+| Bisect support               | Yes                                | No                                           |
+| Worktree support             | Yes                                | No                                           |
+| Syntax highlighting in diffs | Via delta pager                    | Built-in via syntect                         |
+| Config format                | YAML                               | RON (Rusty Object Notation)                  |
+| Platform support             | All (delta caveat on Windows)      | All (built-in highlighting works everywhere) |
 
 **Choose gitui when**: your repository has hundreds of thousands of commits (the Linux kernel, large monorepos) and lazygit feels noticeably slow. The async architecture keeps the UI responsive while Git operations complete in the background.
 
@@ -84,42 +84,42 @@ gitui
 
 The interface has **five tabs** accessed by number keys `1`-`5`:
 
-| Tab | Content |
-| --- | ------- |
-| `1` Status | Files with staged/unstaged breakdown |
-| `2` Log | Commit history |
-| `3` Files | File browser at current state |
-| `4` Stashing | Stash list |
-| `5` Stashes | (same as 4 - navigate between) |
+| Tab          | Content                              |
+| ------------ | ------------------------------------ |
+| `1` Status   | Files with staged/unstaged breakdown |
+| `2` Log      | Commit history                       |
+| `3` Files    | File browser at current state        |
+| `4` Stashing | Stash list                           |
+| `5` Stashes  | (same as 4 - navigate between)       |
 
 **Key operations**:
 
-| Key | Action |
-| --- | ------ |
-| `space` | Stage / unstage file or hunk |
-| `D` | Discard changes in selected file |
-| `c` | Commit (opens message popup) |
-| `a` | Amend last commit |
-| `s` | Stash changes |
-| `Shift+S` | Pop most recent stash |
-| `p` | Push |
-| `f` | Fetch |
-| `Shift+P` | Pull (note: opposite of lazygit convention) |
-| `b` | Open branch popup |
-| `l` | Open log view |
-| `?` / `F1` | Help |
-| `q` | Quit |
+| Key        | Action                                      |
+| ---------- | ------------------------------------------- |
+| `space`    | Stage / unstage file or hunk                |
+| `D`        | Discard changes in selected file            |
+| `c`        | Commit (opens message popup)                |
+| `a`        | Amend last commit                           |
+| `s`        | Stash changes                               |
+| `Shift+S`  | Pop most recent stash                       |
+| `p`        | Push                                        |
+| `f`        | Fetch                                       |
+| `Shift+P`  | Pull (note: opposite of lazygit convention) |
+| `b`        | Open branch popup                           |
+| `l`        | Open log view                               |
+| `?` / `F1` | Help                                        |
+| `q`        | Quit                                        |
 
 **In the log view (Tab 2)**:
 
-| Key | Action |
-| --- | ------ |
-| `E` | Reword commit message |
-| `F` | Fixup into parent commit |
-| `S` | Squash into parent commit |
-| `t` | Create tag at commit |
-| `r` | Revert commit |
-| `y` | Copy commit hash |
+| Key | Action                                  |
+| --- | --------------------------------------- |
+| `E` | Reword commit message                   |
+| `F` | Fixup into parent commit                |
+| `S` | Squash into parent commit               |
+| `t` | Create tag at commit                    |
+| `r` | Revert commit                           |
+| `y` | Copy commit hash                        |
 | `B` | Open blame view for file in this commit |
 
 ### gitui configuration
@@ -166,7 +166,7 @@ Config lives at `~/.config/gitui/` on all platforms (gitui follows XDG correctly
 
 ## 2. Starship prompt
 
-Starship is a cross-shell prompt written in Rust. It shows your current branch, ahead/behind counts, staged/unstaged file indicators, stash count, and conflict markers - automatically updating as you work. It also shows language versions, cloud contexts, tool versions and much more, but only when they are relevant to the current directory.
+Starship is a cross-shell prompt written in Rust. It shows your current branch, ahead/behind counts, staged/unstaged file indicators, stash count and conflict markers - automatically updating as you work. It also shows language versions, cloud contexts, tool versions and much more, but only when they are relevant to the current directory.
 
 Current version: **v1.25.0** (April 2026).
 

@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 35 minutes
 
-GitLab's permission system is built around groups, roles and inheritance. Get it right and your team has exactly the access they need with no friction. Get it wrong and you end up with developers unable to push code, managers unable to read reports, or contractors with more access than they should have. Understanding how roles cascade through the group hierarchy, how access tokens scope to groups and projects, and how SAML SSO locks down authentication is foundational for anyone administering a GitLab team or organisation.
+GitLab's permission system is built around groups, roles and inheritance. Get it right and your team has exactly the access they need with no friction. Get it wrong and you end up with developers unable to push code, managers unable to read reports, or contractors with more access than they should have. Understanding how roles cascade through the group hierarchy, how access tokens scope to groups and projects and how SAML SSO locks down authentication is foundational for anyone administering a GitLab team or organisation.
 
 This file covers the full picture: creating and managing groups, every role and what it actually allows, the subgroup hierarchy and how access inherits through it, group and project access tokens, deploy tokens, SAML SSO and SCIM provisioning, group-level CI/CD variables and how they cascade, and how to structure a real organisation in GitLab's namespace hierarchy.
 
@@ -55,6 +55,7 @@ Without groups, each of these would require per-project configuration - adding m
 Click **Create new (+)** in the top navigation bar -> **New group** -> **Create group**.
 
 Fill in:
+
 - **Group name**: the display name shown in the UI. Can contain spaces and special characters. Different from the URL slug.
 - **Group URL (slug)**: the URL-safe identifier used in all project URLs within this group. Choose carefully - renaming later breaks every URL that references this group and every project inside it.
 - **Visibility level**: Public (anyone can see the group page and its public projects), Internal (self-managed only - any authenticated user on the instance), Private (only members can see anything inside)
@@ -134,6 +135,7 @@ GitLab has six predefined roles. Each role is a superset of the one below it - a
 The minimum role. Intended for external stakeholders who need visibility without contribution rights.
 
 **Can do:**
+
 - View and comment on public and internal issues and merge requests
 - Create issues and edit their own issues
 - View project statistics
@@ -141,6 +143,7 @@ The minimum role. Intended for external stakeholders who need visibility without
 - Download project artifacts (if allowed by project settings)
 
 **Cannot do:**
+
 - Clone private repositories
 - Push any code
 - Create or delete branches
@@ -152,6 +155,7 @@ The minimum role. Intended for external stakeholders who need visibility without
 For team members who need to read code and data but not contribute changes.
 
 **Everything Guest can do, plus:**
+
 - Clone the repository (including private projects)
 - View pipelines, job logs and artifacts
 - Create new labels
@@ -164,6 +168,7 @@ For team members who need to read code and data but not contribute changes.
 The standard role for active contributors. Most of the team working on a project day-to-day is at this level.
 
 **Everything Reporter can do, plus:**
+
 - Push to non-protected branches
 - Create, edit and delete branches
 - Create and delete tags (if not protected)
@@ -179,6 +184,7 @@ The standard role for active contributors. Most of the team working on a project
 For team leads, senior developers or anyone responsible for the project's configuration.
 
 **Everything Developer can do, plus:**
+
 - Push to protected branches (if the protection rule allows Maintainers)
 - Merge merge requests
 - Manage branch protection rules
@@ -196,6 +202,7 @@ For team leads, senior developers or anyone responsible for the project's config
 The highest standard role. Typically limited to team leads, engineering managers or the person responsible for the group.
 
 **Everything Maintainer can do, plus:**
+
 - Delete the group or project
 - Change the group or project URL (rename)
 - Change group or project visibility
@@ -211,6 +218,7 @@ The highest standard role. Typically limited to team leads, engineering managers
 A role specifically for project managers and product owners who need planning access without code access. Non-billable on GitLab.com - does not count toward paid seat limits.
 
 **Can do:**
+
 - Everything Reporter can do
 - Create and manage issues, epics, milestones, iterations
 - Create and manage labels
@@ -218,6 +226,7 @@ A role specifically for project managers and product owners who need planning ac
 - Access planning and analytics features
 
 **Cannot do:**
+
 - Clone repositories
 - View or run pipelines
 - Access the container or package registry
@@ -227,10 +236,12 @@ A role specifically for project managers and product owners who need planning ac
 The lowest possible role, designed for users who need to be a group member for technical reasons (SSO, billing, appearing in @mentions) without actually accessing project content. Non-billable.
 
 **Can do:**
+
 - View the group name in the navigation sidebar
 - See that the group exists
 
 **Cannot do:**
+
 - View any projects in the group
 - View any issues, MRs, wikis or code
 - Almost everything else
@@ -242,6 +253,7 @@ Use Minimal Access for: external auditors who need to authenticate via group SSO
 A special non-hierarchical role (not part of the Guest-Owner ladder). Available at group level. Inherits from Reporter and adds security-specific permissions.
 
 **Can do (beyond Reporter):**
+
 - View vulnerability reports and security dashboards
 - Dismiss and manage vulnerabilities
 - Access security policies
@@ -259,6 +271,7 @@ This is the most important concept to understand when administering a multi-leve
 ### How inheritance works
 
 Roles granted at a parent group flow downward to every subgroup and every project within that hierarchy. A user added to the top-level group `acme-corp` with the Developer role has Developer access to:
+
 - Every project directly in `acme-corp/`
 - Every project in `acme-corp/backend/`
 - Every project in `acme-corp/backend/payments/`
@@ -270,6 +283,7 @@ Roles granted at a parent group flow downward to every subgroup and every projec
 You can grant a higher role at a subgroup or project level without changing the parent group role.
 
 Example:
+
 - Alice is Developer in `acme-corp` (the top-level group)
 - She therefore has Developer access to everything
 - For the specific project `acme-corp/backend/payments-service`, she is added as Maintainer
@@ -298,6 +312,7 @@ Project -> Settings -> Members -> search for a user -> see their effective role 
 Group -> **Manage -> Members** -> **Invite members**
 
 Fill in:
+
 - **Username or email**: search by GitLab username, or enter an email address to invite someone who does not have a GitLab account yet
 - **Role**: the role to assign (Guest, Reporter, Developer, Maintainer, Owner, Planner)
 - **Access expiry date**: optional date after which the membership automatically expires (see below)
@@ -345,10 +360,12 @@ Members approaching expiry receive email notifications (at 7 days and 1 day befo
 Group access tokens are credentials that authenticate as a bot user scoped to a specific group. They are used for automation, CI/CD pipelines, scripts and integrations that need API access across a group without being tied to a personal user account.
 
 **Availability:**
+
 - On GitLab.com: Premium and above only
 - On self-managed GitLab: any licence (including CE)
 
 **Advantages over personal access tokens (PATs):**
+
 - Not tied to a specific person's account - the token still works if that person leaves the organisation
 - Scoped to the group - cannot accidentally access resources outside the group
 - Creates a dedicated bot user that is separate from real user accounts
@@ -359,6 +376,7 @@ Group access tokens are credentials that authenticate as a bot user scoped to a 
 Group -> Settings -> **Access tokens** -> **Add new token**
 
 Fields:
+
 - **Token name**: descriptive name indicating the purpose (e.g. "CI/CD deployment pipeline", "Terraform automation")
 - **Expiry date**: maximum 365 days from creation. Required.
 - **Role**: the role the token's bot user has in the group. Choose the minimum needed.
@@ -369,6 +387,7 @@ After creation, copy the token immediately - it is only shown once.
 ### Managing the bot user
 
 The group access token creates a system-managed "bot" user (visible in Manage -> Members as "Group bot"). This user:
+
 - Does not count toward the billable seat limit
 - Cannot sign in to the web interface
 - Can only authenticate via the token value
@@ -400,6 +419,7 @@ Project access tokens work identically to group access tokens but are scoped to 
 Project -> Settings -> **Access tokens** -> **Add new token**
 
 Use project access tokens when:
+
 - The automation only needs to access one specific project
 - You want the narrowest possible scope for security
 - The project's CI/CD pipeline needs API access to its own project
@@ -424,13 +444,13 @@ Deploy tokens are lightweight credentials for read-only (or read-write) access t
 
 **Deploy token scopes:**
 
-| Scope | What it allows |
-|---|---|
-| `read_repository` | Clone the repository via HTTP |
-| `read_registry` | Pull Docker images from the container registry |
-| `write_registry` | Push Docker images to the container registry |
-| `read_package_registry` | Download packages from the package registry |
-| `write_package_registry` | Upload packages to the package registry |
+| Scope                    | What it allows                                 |
+| ------------------------ | ---------------------------------------------- |
+| `read_repository`        | Clone the repository via HTTP                  |
+| `read_registry`          | Pull Docker images from the container registry |
+| `write_registry`         | Push Docker images to the container registry   |
+| `read_package_registry`  | Download packages from the package registry    |
+| `write_package_registry` | Upload packages to the package registry        |
 
 Deploy tokens cannot access the GitLab REST API - they are purely for Git and registry operations.
 
@@ -441,6 +461,7 @@ Deploy tokens cannot access the GitLab REST API - they are purely for Git and re
 **Group level** (applies to all projects in the group): Group -> Settings -> Repository -> **Deploy tokens** -> **Add new token**
 
 Fields:
+
 - **Name**: descriptive identifier
 - **Expiry date**: optional (deploy tokens can be non-expiring)
 - **Username**: the username the token authenticates as (auto-generated if left blank)
@@ -465,15 +486,15 @@ kubectl create secret docker-registry gitlab-registry \
 
 ### Deploy tokens vs access tokens
 
-| | Deploy token | Access token |
-|---|---|---|
-| API access | No | Yes |
-| Git clone | Yes | Yes |
-| Registry pull/push | Yes (with scope) | Yes (with scope) |
-| Expiry | Optional | Required (max 365 days) |
-| Billable seat | No | No |
-| User association | None (standalone) | Creates a bot user |
-| Revocation | Delete the token | Delete the token |
+|                    | Deploy token      | Access token            |
+| ------------------ | ----------------- | ----------------------- |
+| API access         | No                | Yes                     |
+| Git clone          | Yes               | Yes                     |
+| Registry pull/push | Yes (with scope)  | Yes (with scope)        |
+| Expiry             | Optional          | Required (max 365 days) |
+| Billable seat      | No                | No                      |
+| User association   | None (standalone) | Creates a bot user      |
+| Revocation         | Delete the token  | Delete the token        |
 
 Use deploy tokens for production deployment pipelines that only need to pull container images or clone repositories. Use access tokens when you need API access.
 
@@ -524,6 +545,7 @@ Project owners enable a shared deploy key: Settings -> Repository -> Deploy keys
 SAML (Security Assertion Markup Language) SSO lets group members authenticate using your organisation's existing identity provider (IdP) - Okta, Microsoft Entra ID (Azure AD), Google Workspace, OneLogin, Ping Identity and others.
 
 **Availability:**
+
 - GitLab.com: Premium and above, configured per top-level group
 - Self-managed GitLab: any licence, configured at the instance level in `gitlab.rb`
 
@@ -539,6 +561,7 @@ SAML (Security Assertion Markup Language) SSO lets group members authenticate us
 Group -> Settings -> **SAML SSO** -> Enable SAML authentication
 
 GitLab shows you three values to configure in your IdP:
+
 - **Identifier (Entity ID)**: `https://gitlab.com/groups/YOUR_GROUP/-/saml/metadata`
 - **Reply URL (Assertion Consumer Service URL)**: `https://gitlab.com/groups/YOUR_GROUP/-/saml/callback`
 - **GitLab sign-on URL**: `https://gitlab.com/groups/YOUR_GROUP/-/saml/sso`
@@ -546,6 +569,7 @@ GitLab shows you three values to configure in your IdP:
 In your IdP, configure a new SAML application with these values.
 
 Back in GitLab, enter:
+
 - **Identity provider SSO URL**: the URL your IdP provides for SSO
 - **Certificate fingerprint**: SHA-1 or SHA-256 fingerprint of the IdP's certificate
 
@@ -563,14 +587,14 @@ Save and test by clicking **Verify SAML configuration**.
 
 Configure your IdP to send the following SAML attributes:
 
-| SAML attribute | GitLab uses it for |
-|---|---|
-| `email` | User email address (required) |
-| `name` | Display name |
-| `username` | GitLab username (if not already taken) |
-| `first_name` | First name |
-| `last_name` | Last name |
-| `groups` | Group membership (for automatic role assignment) |
+| SAML attribute | GitLab uses it for                               |
+| -------------- | ------------------------------------------------ |
+| `email`        | User email address (required)                    |
+| `name`         | Display name                                     |
+| `username`     | GitLab username (if not already taken)           |
+| `first_name`   | First name                                       |
+| `last_name`    | Last name                                        |
+| `groups`       | Group membership (for automatic role assignment) |
 
 ### Setting up SAML on self-managed GitLab
 
@@ -619,6 +643,7 @@ SCIM (System for Cross-domain Identity Management) automates user provisioning a
 Group -> Settings -> SAML SSO -> **Generate SCIM token**
 
 Copy the base URL and token. In your IdP's application configuration for the GitLab SAML app, find the SCIM provisioning settings and enter:
+
 - **SCIM base URL**: `https://gitlab.com/api/scim/v2/groups/YOUR_GROUP`
 - **API token**: the token generated in GitLab
 
@@ -635,6 +660,7 @@ CI/CD variables defined at the group level are automatically available to every 
 Group -> Settings -> **CI/CD** -> **Variables** -> **Add variable**
 
 Configure each variable:
+
 - **Key**: the variable name (e.g. `AWS_ACCESS_KEY_ID`, `DEPLOY_TOKEN`, `REGISTRY_URL`)
 - **Value**: the value (e.g. the actual AWS key, token value, or URL)
 - **Type**: Variable (default) or File (value is written to a temp file; `$KEY` gives the file path)
@@ -646,12 +672,14 @@ Configure each variable:
 ### Variable inheritance and precedence
 
 Variables cascade through the hierarchy. A project's pipeline has access to:
+
 1. Variables defined in the project's `.gitlab-ci.yml`
 2. Variables defined in the project's CI/CD settings
 3. Variables defined in the immediate parent group's CI/CD settings
 4. Variables defined in all ancestor groups up to the top-level group
 
 When the same variable name is defined at multiple levels, the most specific level wins:
+
 - Project-level variable beats group-level variable
 - Closer group beats more distant ancestor group
 
@@ -670,12 +698,12 @@ In `.gitlab-ci.yml`:
 deploy-staging:
   environment: staging
   script:
-    - echo "Deploying to $DEPLOY_URL"   # uses staging value
+    - echo "Deploying to $DEPLOY_URL" # uses staging value
 
 deploy-production:
   environment: production
   script:
-    - echo "Deploying to $DEPLOY_URL"   # uses production value
+    - echo "Deploying to $DEPLOY_URL" # uses production value
 ```
 
 This lets you use the same variable name across environments while automatically getting the right value based on which environment the job is running in.
@@ -715,6 +743,7 @@ Imagine a group with 20 projects, each running CI/CD pipelines. Without group ru
 Group -> **CI/CD -> Runners**
 
 This page shows:
+
 - All runners registered to this group
 - Status (online, offline, paused)
 - Tags
@@ -736,6 +765,7 @@ gitlab-runner register \
 ### Runner inheritance for subgroups
 
 A runner registered to `acme-corp` is available to all projects in:
+
 - `acme-corp/` directly
 - `acme-corp/backend/`
 - `acme-corp/backend/api/`
@@ -806,6 +836,7 @@ Audit events record security-relevant actions taken by users within a group. The
 ### Filtering audit events
 
 Filter by:
+
 - Date range
 - User (who performed the action)
 - Author type (User, DeployToken, etc.)
@@ -961,7 +992,7 @@ git clone https://DEPLOY_TOKEN_USERNAME:DEPLOY_TOKEN_VALUE@gitlab.com/NAMESPACE/
 
 ## Summary
 
-- **Groups** provide three things simultaneously: a URL namespace for projects, an access container where membership cascades to all projects inside, and a settings container where variables and runners apply to all projects below
+- **Groups** provide three things simultaneously: a URL namespace for projects, an access container where membership cascades to all projects inside and a settings container where variables and runners apply to all projects below
 - **Six standard roles** in ascending order: Guest (view and comment), Reporter (clone and read), Developer (push and create MRs), Maintainer (manage project configuration), Owner (full control including delete and billing). Non-hierarchical additions: Planner (planning access only, non-billable), Minimal Access (visibility only, non-billable), Security Manager (vulnerability access, non-billable)
 - **Inheritance**: roles granted at a parent group flow downward to all subgroups and projects. You can grant a higher role at a lower level. You cannot grant a lower role at a lower level than the parent group provides.
 - **Group access tokens** (Premium on GitLab.com, any licence on self-managed): credentials for automation not tied to a personal account. Create bot users. Scoped to the group. Expiry required (max 365 days).

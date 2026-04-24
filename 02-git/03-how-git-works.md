@@ -4,7 +4,7 @@
 
 Most Git tutorials teach you commands. This file teaches you what Git is actually doing when you run them. Understanding this makes everything else click - you stop memorising commands and start understanding them.
 
-You do not need to memorise everything in this file. Read it once, understand the concepts, and come back to it when something confuses you later.
+You do not need to memorise everything in this file. Read it once, understand the concepts and come back to it when something confuses you later.
 
 ---
 
@@ -237,7 +237,7 @@ This copies a snapshot of the specified files from your working directory into t
 git commit -m "your commit message"
 ```
 
-Git takes everything in the staging area, creates a tree object, creates a commit object pointing to that tree and the previous commit, and moves the current branch pointer to the new commit.
+Git takes everything in the staging area, creates a tree object, creates a commit object pointing to that tree and the previous commit and moves the current branch pointer to the new commit.
 
 **Step 4 - Push to a remote repository (optional).**
 

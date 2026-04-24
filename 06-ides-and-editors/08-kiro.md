@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 30 minutes
 
-AWS Kiro is an agentic IDE built by Amazon on a Code-OSS fork - the open-source base of VS Code - with a fundamentally different philosophy from Cursor or Windsurf. Where those editors treat AI as a coding accelerator, Kiro introduces **spec-driven development**: before writing a single line of code, the agent produces structured requirement documents, design documents and implementation plans that you review and approve. Git is integrated throughout this lifecycle, from hooks that fire on branch creation and PR events to an autonomous agent that can be assigned GitHub issues directly via issue labels. Kiro launched in preview in July 2025, reached general availability at AWS re:Invent on November 17, 2025, and is particularly well-suited to teams building on AWS who want a structured, documented approach to AI-assisted development.
+AWS Kiro is an agentic IDE built by Amazon on a Code-OSS fork - the open-source base of VS Code - with a fundamentally different philosophy from Cursor or Windsurf. Where those editors treat AI as a coding accelerator, Kiro introduces **spec-driven development**: before writing a single line of code, the agent produces structured requirement documents, design documents and implementation plans that you review and approve. Git is integrated throughout this lifecycle, from hooks that fire on branch creation and PR events to an autonomous agent that can be assigned GitHub issues directly via issue labels. Kiro launched in preview in July 2025, reached general availability at AWS re:Invent on November 17, 2025 and is particularly well-suited to teams building on AWS who want a structured, documented approach to AI-assisted development.
 
 ---
 
@@ -84,11 +84,13 @@ A spec lives in `.kiro/specs/<feature-name>/` and contains three files:
 ## Requirements
 
 ### 1. Export orders as CSV
+
 **As a** report administrator
 **I want to** export the orders table to CSV
 **So that** I can analyse data in spreadsheet tools
 
 #### Acceptance criteria
+
 - WHEN the user clicks "Export CSV" on the orders page
 - THEN the system generates a CSV file with all visible columns
 - AND the file downloads with the filename format orders-YYYY-MM-DD.csv
@@ -193,16 +195,16 @@ Kiro hooks support a comprehensive set of Git-related events across three catego
 
 **Repository events**:
 
-| Event | When it fires |
-|---|---|
-| `branch_created` | A new local branch is created |
-| `branch_switched` | The active branch changes |
-| `pre_commit` | Immediately before a commit is created |
-| `commit_created` | After a commit is created |
-| `pull_request_opened` | A PR is opened on the connected GitHub repo |
-| `pull_request_review_requested` | A review is requested on a PR |
-| `merge_completed` | A branch merge completes |
-| `rebase_completed` | A rebase completes |
+| Event                           | When it fires                               |
+| ------------------------------- | ------------------------------------------- |
+| `branch_created`                | A new local branch is created               |
+| `branch_switched`               | The active branch changes                   |
+| `pre_commit`                    | Immediately before a commit is created      |
+| `commit_created`                | After a commit is created                   |
+| `pull_request_opened`           | A PR is opened on the connected GitHub repo |
+| `pull_request_review_requested` | A review is requested on a PR               |
+| `merge_completed`               | A branch merge completes                    |
+| `rebase_completed`              | A rebase completes                          |
 
 **Example: auto-run tests and create a baseline report when a feature branch is created**
 
@@ -274,7 +276,7 @@ Co-authored-by: Isaac Adjei <isaac@example.com>
 Co-authored-by: Kiro <kiro@amazon.com>
 ```
 
-**What Kiro's agent does not do**: it does not auto-merge pull requests, does not act on review comments from reviewers other than the task creator, and does not push directly to protected branches.
+**What Kiro's agent does not do**: it does not auto-merge pull requests, does not act on review comments from reviewers other than the task creator and does not push directly to protected branches.
 
 ---
 
@@ -297,6 +299,7 @@ Backend: Python 3.12, FastAPI, PostgreSQL 16
 Frontend: React 19, TypeScript 5.4, Tailwind CSS
 
 ## Git conventions
+
 - Conventional commits: feat, fix, docs, chore, test, refactor
 - Branch naming: feature/<ticket>-<description>, fix/<ticket>-<description>
 - Subject line max 72 characters, imperative mood
@@ -304,6 +307,7 @@ Frontend: React 19, TypeScript 5.4, Tailwind CSS
 - Never commit debug logging or commented-out code
 
 ## Code conventions
+
 - TypeScript strict mode, no any types
 - All API endpoints must have OpenAPI docstrings
 - Services must have 100% unit test coverage
@@ -391,26 +395,26 @@ Kiro uses the **OpenVSX** registry at [open-vsx.org](https://open-vsx.org). Most
 
 ## 13. Keyboard shortcuts
 
-| Action | Windows/Linux | Mac |
-|---|---|---|
-| Open Source Control panel | `Ctrl+Shift+G` | `Cmd+Shift+G` |
-| Open terminal | `` Ctrl+` `` | `` Cmd+` `` |
-| Commit | `Ctrl+Enter` (in commit box) | `Cmd+Enter` |
-| Open Command Palette | `Ctrl+Shift+P` | `Cmd+Shift+P` |
-| Open Kiro chat | `Ctrl+Shift+K` | `Cmd+Shift+K` |
-| New spec | Kiro sidebar > New Spec | Kiro sidebar > New Spec |
-| New hook | Kiro sidebar > New Hook | Kiro sidebar > New Hook |
+| Action                    | Windows/Linux                | Mac                     |
+| ------------------------- | ---------------------------- | ----------------------- |
+| Open Source Control panel | `Ctrl+Shift+G`               | `Cmd+Shift+G`           |
+| Open terminal             | `` Ctrl+` ``                 | `` Cmd+` ``             |
+| Commit                    | `Ctrl+Enter` (in commit box) | `Cmd+Enter`             |
+| Open Command Palette      | `Ctrl+Shift+P`               | `Cmd+Shift+P`           |
+| Open Kiro chat            | `Ctrl+Shift+K`               | `Cmd+Shift+K`           |
+| New spec                  | Kiro sidebar > New Spec      | Kiro sidebar > New Spec |
+| New hook                  | Kiro sidebar > New Hook      | Kiro sidebar > New Hook |
 
 ---
 
 ## 14. Pricing
 
-| Plan | Price | Credits/month | Notes |
-|---|---|---|---|
-| Free | $0 | 50 + 500 bonus first 14 days | GitHub/Google/AWS Builder ID |
-| Pro | $20/month | Higher limits | Most teams |
-| Pro+ | $40/month | Higher limits | Power users |
-| Power | $200/month | Maximum | Heavy agentic use |
+| Plan  | Price      | Credits/month                | Notes                        |
+| ----- | ---------- | ---------------------------- | ---------------------------- |
+| Free  | $0         | 50 + 500 bonus first 14 days | GitHub/Google/AWS Builder ID |
+| Pro   | $20/month  | Higher limits                | Most teams                   |
+| Pro+  | $40/month  | Higher limits                | Power users                  |
+| Power | $200/month | Maximum                      | Heavy agentic use            |
 
 Overage billing at $0.04 per credit is disabled by default - you must opt in. Shell Command hooks are free and do not consume credits. Agent Prompt hooks and agent tasks consume credits.
 

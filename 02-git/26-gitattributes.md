@@ -559,7 +559,7 @@ If you do not explicitly mark image, font and archive files as binary, Git may t
 
 **Forgetting `export-ignore` for sensitive or development-only files.**
 
-If you distribute your project as a zip archive (via GitHub Releases or `git archive`), test files, CI configuration, and IDE settings will be included unless you mark them with `export-ignore`.
+If you distribute your project as a zip archive (via GitHub Releases or `git archive`), test files, CI configuration and IDE settings will be included unless you mark them with `export-ignore`.
 
 **Using `linguist-vendored` on your own code.**
 

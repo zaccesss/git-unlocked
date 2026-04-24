@@ -800,7 +800,7 @@ GitHub Apps are the recommended way to build production integrations. Unlike OAu
 
 **How GitHub Apps are used in practice:**
 
-Most major GitHub integrations you already use are GitHub Apps: Dependabot, CodeClimate, CircleCI, Travis CI, Vercel, Netlify, Renovate, Linear, Sentry, Datadog, Slack, and dozens more. When you install one of these on a repository, you are installing a GitHub App.
+Most major GitHub integrations you already use are GitHub Apps: Dependabot, CodeClimate, CircleCI, Travis CI, Vercel, Netlify, Renovate, Linear, Sentry, Datadog, Slack and dozens more. When you install one of these on a repository, you are installing a GitHub App.
 
 ---
 

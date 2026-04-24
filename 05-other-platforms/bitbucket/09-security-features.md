@@ -2,9 +2,9 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 30 minutes
 
-Security in Bitbucket operates at multiple levels: who can access your code, where they can access it from, what they must authenticate with, what happens when secrets are accidentally committed, and what conditions must be met before code reaches production. This file covers every security feature available in Bitbucket Cloud, from the basics (2FA enforcement, SSH key management) through to advanced controls (IP allowlisting, Atlassian Guard SSO, secret scanning, merge checks as security gates).
+Security in Bitbucket operates at multiple levels: who can access your code, where they can access it from, what they must authenticate with, what happens when secrets are accidentally committed and what conditions must be met before code reaches production. This file covers every security feature available in Bitbucket Cloud, from the basics (2FA enforcement, SSH key management) through to advanced controls (IP allowlisting, Atlassian Guard SSO, secret scanning, merge checks as security gates).
 
-Understanding which features are available on which plan is important: some security controls are free, some require Standard, and the most powerful enforcement mechanisms require Premium or the Atlassian Guard add-on.
+Understanding which features are available on which plan is important: some security controls are free, some require Standard and the most powerful enforcement mechanisms require Premium or the Atlassian Guard add-on.
 
 ---
 
@@ -35,7 +35,7 @@ Understanding which features are available on which plan is important: some secu
 
 Bitbucket's security model covers four domains:
 
-**Identity and access** - who can sign in to Bitbucket, with what credentials, from where, and what they are allowed to do once authenticated.
+**Identity and access** - who can sign in to Bitbucket, with what credentials, from where and what they are allowed to do once authenticated.
 
 **Code protection** - preventing unauthorised changes to important branches, requiring review before merging, blocking force pushes that could erase history.
 
@@ -80,6 +80,7 @@ Workspace administrators can require all workspace members to have 2FA enabled:
 3. Enable **Require two-step verification for all members**
 
 When this is enabled:
+
 - Members who do not have 2FA enabled are immediately shown a prompt to set it up
 - Members who do not complete 2FA setup lose access to the workspace until they do
 - New members must enable 2FA before they can access workspace resources
@@ -94,6 +95,7 @@ Requiring 2FA for human accounts does not affect Bitbucket Pipelines or automate
 ### Atlassian Guard for enterprise 2FA
 
 For enterprise-grade 2FA management, Atlassian Guard provides:
+
 - Authentication policies that enforce specific 2FA methods (hardware keys only, authenticator apps only)
 - Visibility into which team members have 2FA enabled across your entire Atlassian organisation
 - The ability to require re-authentication after a set session duration
@@ -107,12 +109,12 @@ SSH keys authenticate Git operations over the SSH protocol without requiring a u
 
 ### Key types and recommendations
 
-| Algorithm | Recommendation | Key size |
-|---|---|---|
-| `ed25519` | Preferred - modern, fast, small keys | Fixed (256-bit) |
-| `rsa` | Acceptable if ed25519 not supported | 4096-bit minimum |
-| `dsa` | Insecure - do not use | - |
-| `ecdsa` | Acceptable but ed25519 preferred | 256-bit+ |
+| Algorithm | Recommendation                       | Key size         |
+| --------- | ------------------------------------ | ---------------- |
+| `ed25519` | Preferred - modern, fast, small keys | Fixed (256-bit)  |
+| `rsa`     | Acceptable if ed25519 not supported  | 4096-bit minimum |
+| `dsa`     | Insecure - do not use                | -                |
+| `ecdsa`   | Acceptable but ed25519 preferred     | 256-bit+         |
 
 Always use `ed25519` unless you have a specific reason not to.
 
@@ -138,6 +140,7 @@ Access keys with Read access can clone and fetch. Read/Write can also push. For 
 ### Key rotation policy
 
 SSH keys do not expire automatically. As a security practice:
+
 - Rotate SSH keys annually or when a team member leaves
 - Remove access keys from repositories when the integration they were created for is decommissioned
 - Review the list of SSH keys on user accounts and repository access keys periodically
@@ -162,6 +165,7 @@ The principle of least privilege limits the blast radius if a token is compromis
 ### Token expiry
 
 Set expiry dates on all tokens. Short-lived tokens are safer than long-lived tokens:
+
 - Project-specific tokens: expire when the project ends
 - CI/CD tokens: rotate on a schedule (every 90 days is a reasonable default)
 - Developer personal tokens: 1 year maximum, with a calendar reminder to rotate
@@ -169,6 +173,7 @@ Set expiry dates on all tokens. Short-lived tokens are safer than long-lived tok
 ### Token revocation
 
 Revoke tokens immediately when:
+
 - A developer leaves the team
 - A token value is accidentally exposed (committed to code, shown in a screenshot, logged to an insecure location)
 - A system using a token is decommissioned
@@ -178,6 +183,7 @@ Revocation is instant. Once revoked, the token cannot be used for any authentica
 ### Detecting token exposure
 
 If a token is committed to a repository by mistake:
+
 1. Revoke the token immediately in Bitbucket account settings
 2. Create a new token to replace it
 3. Remove the token from the repository's Git history (see the secret scanning section below)
@@ -210,6 +216,7 @@ IP allowlisting restricts access to Bitbucket resources to connections originati
 ### What IP allowlisting affects
 
 When enabled, IP allowlisting applies to:
+
 - Web access to bitbucket.org (browser)
 - Git operations over HTTPS
 - Git operations over SSH
@@ -239,6 +246,7 @@ Bitbucket's secret scanning feature detects API keys, passwords, tokens and othe
 ### What secret scanning detects
 
 Bitbucket scans for patterns matching known credential formats including:
+
 - AWS access keys and secret keys
 - Google Cloud service account keys
 - Stripe API keys
@@ -255,6 +263,7 @@ Secret scanning is available on **Standard and Premium plans**. It is not availa
 ### What happens when a secret is detected
 
 When a commit containing a detected secret is pushed:
+
 1. Bitbucket sends an email notification to the repository administrators
 2. The secret finding appears in the repository's security tab
 3. The code push is **not blocked** - the commit is accepted and the code is pushed successfully
@@ -297,6 +306,7 @@ git push origin --force --tags
 Prevention is better than detection:
 
 **Use a `.gitignore` for secret-containing files:**
+
 ```gitignore
 .env
 .env.local
@@ -307,6 +317,7 @@ credentials.json
 ```
 
 **Use pre-commit hooks to scan before pushing:**
+
 ```bash
 # Install detect-secrets
 pip install detect-secrets
@@ -335,16 +346,16 @@ Branch permission merge checks serve a dual purpose: they enforce code quality a
 ```yaml
 pipelines:
   pull-requests:
-    '**':
+    "**":
       - step:
           name: Security scan
           script:
             - pipe: snyk/snyk-scan:1.0.0
               variables:
                 SNYK_TOKEN: $SNYK_TOKEN
-                LANGUAGE: 'node'
-                SEVERITY_THRESHOLD: 'high'
-                FAIL_ON_ISSUES: 'true'
+                LANGUAGE: "node"
+                SEVERITY_THRESHOLD: "high"
+                FAIL_ON_ISSUES: "true"
 ```
 
 With `FAIL_ON_ISSUES: 'true'`, Snyk fails the pipeline step if high-severity vulnerabilities are found. Combined with the "no failed builds" merge check, this blocks merging vulnerable code.
@@ -363,7 +374,7 @@ Atlassian Guard (formerly Atlassian Access) is a separately priced add-on that p
 
 **Authentication policies** - configure which sign-in methods are permitted. Restrict to SSO only (disable direct Atlassian password login), require hardware security keys, set session duration limits.
 
-**API token controls** - see which users have created API tokens, when they were last used, and revoke them centrally if needed.
+**API token controls** - see which users have created API tokens, when they were last used and revoke them centrally if needed.
 
 **Two-step verification controls** - enforce 2FA across the organisation from a central location, with visibility into compliance status.
 
@@ -380,6 +391,7 @@ Atlassian Guard (formerly Atlassian Access) is a separately priced add-on that p
 ### When Guard is required
 
 Guard is required if your organisation needs:
+
 - SSO for Bitbucket (any tier of Guard)
 - Automated user provisioning/deprovisioning from your HR system
 - Centralised management of authentication policies
@@ -393,19 +405,19 @@ For teams without these requirements, Bitbucket's built-in security controls (2F
 
 ### Workspace roles
 
-| Role | Capabilities |
-|---|---|
-| **Owner** | Full admin access: billing, workspace deletion, all settings |
-| **Admin** | Manage members, create repos, change all settings |
-| **Member** | Access repositories based on individual repo permissions |
+| Role       | Capabilities                                                 |
+| ---------- | ------------------------------------------------------------ |
+| **Owner**  | Full admin access: billing, workspace deletion, all settings |
+| **Admin**  | Manage members, create repos, change all settings            |
+| **Member** | Access repositories based on individual repo permissions     |
 
 ### Repository roles
 
-| Role | Read | Clone | Push | Create PR | Merge PR | Admin |
-|---|---|---|---|---|---|---|
-| **Read** | Yes | Yes | No | No | No | No |
-| **Write** | Yes | Yes | Yes | Yes | No | No |
-| **Admin** | Yes | Yes | Yes | Yes | Yes | Yes |
+| Role      | Read | Clone | Push | Create PR | Merge PR | Admin |
+| --------- | ---- | ----- | ---- | --------- | -------- | ----- |
+| **Read**  | Yes  | Yes   | No   | No        | No       | No    |
+| **Write** | Yes  | Yes   | Yes  | Yes       | No       | No    |
+| **Admin** | Yes  | Yes   | Yes  | Yes       | Yes      | Yes   |
 
 ### Group-based access
 
@@ -444,6 +456,7 @@ Logs can be filtered by event type, user and date range. Logs can also be export
 ### Compliance use cases
 
 Audit logs satisfy compliance requirements that mandate evidence of access controls and change management:
+
 - SOC 2 Type II: evidence of who had access and when
 - ISO 27001: change management records
 - PCI-DSS: audit trail of changes to code handling payment data
@@ -458,12 +471,14 @@ Bitbucket Pipelines has specific security considerations beyond general Bitbucke
 ### Securing pipeline variables
 
 Use **secured variables** (not unsecured) for any sensitive values:
+
 - API keys for cloud providers
 - Database connection strings
 - Deployment credentials
 - Notification webhook URLs
 
 Secured variables are:
+
 - Not shown in plaintext in the Bitbucket UI after creation
 - Masked in pipeline logs (the value is replaced with `****`)
 - Not available to pipelines triggered from forked repositories (prevents secret exfiltration via PRs from forks)
@@ -480,6 +495,7 @@ This means your pull request pipeline must be designed to work without sensitive
 Modern cloud providers support OpenID Connect (OIDC) for CI/CD authentication - instead of storing a long-lived cloud credential in a Bitbucket variable, the pipeline authenticates using a short-lived token issued by Bitbucket.
 
 Bitbucket Pipelines supports OIDC on V5 premium runners. With OIDC:
+
 - No long-lived AWS, GCP or Azure credentials stored in Bitbucket
 - The cloud provider trusts Bitbucket's identity tokens
 - Credentials cannot be extracted even if a pipeline is compromised
@@ -491,9 +507,9 @@ Bitbucket Pipelines supports OIDC on V5 premium runners. With OIDC:
     script:
       - export AWS_WEB_IDENTITY_TOKEN_FILE=$(cat $BITBUCKET_STEP_OIDC_TOKEN)
       - aws sts assume-role-with-web-identity \
-          --role-arn arn:aws:iam::123456789:role/BitbucketDeployRole \
-          --role-session-name bitbucket-pipeline \
-          --web-identity-token file://$BITBUCKET_STEP_OIDC_TOKEN
+        --role-arn arn:aws:iam::123456789:role/BitbucketDeployRole \
+        --role-session-name bitbucket-pipeline \
+        --web-identity-token file://$BITBUCKET_STEP_OIDC_TOKEN
 ```
 
 ---
@@ -595,6 +611,7 @@ Work through this checklist for any production Bitbucket workspace:
 **Exercise 4 - Simulate a secret in a commit (test environment only)**
 
 In a private test repository:
+
 1. Create a file containing a fake credential: `echo "API_KEY=FAKE_TEST_KEY_12345" > test-secret.txt`
 2. Commit and push it
 3. Check whether Bitbucket flags it (requires Standard/Premium for secret scanning)
@@ -629,7 +646,7 @@ Before making any repository public, use `git log --all -- '*.env'`, `git log -S
 
 ## Summary
 
-Bitbucket security operates across four domains: identity and access, code protection, secret protection, and pipeline security.
+Bitbucket security operates across four domains: identity and access, code protection, secret protection and pipeline security.
 
 Identity security starts with strong Atlassian accounts: 2FA (enforced at workspace level), SSH keys using ed25519, and API tokens with appropriate scopes and expiry dates. App passwords are fully retired from June 2026.
 

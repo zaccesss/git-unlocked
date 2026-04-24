@@ -28,7 +28,7 @@ Five words describe overlapping concepts and almost everyone conflates them at s
 
 **Terminal emulator** - a graphical program that draws a text window and accepts keyboard input. It is software that pretends to be a hardware terminal. Examples: Terminal.app, iTerm2, Windows Terminal, GNOME Terminal, Alacritty, WezTerm, Kitty. The terminal emulator itself does not run commands - it just displays output and passes your keystrokes to the shell running inside it.
 
-**Shell** - a command interpreter. It reads what you type, parses it, and runs programs on your behalf. Examples: bash, zsh, fish, PowerShell, cmd.exe. When you type `git status` and press Enter, the shell finds the `git` program on your system and runs it. The shell is the thing that gives you the `$` or `>` prompt.
+**Shell** - a command interpreter. It reads what you type, parses it and runs programs on your behalf. Examples: bash, zsh, fish, PowerShell, cmd.exe. When you type `git status` and press Enter, the shell finds the `git` program on your system and runs it. The shell is the thing that gives you the `$` or `>` prompt.
 
 **CLI (Command Line Interface)** - an abstract concept, not a specific program. It describes any tool or workflow where you control a computer by typing text commands rather than clicking buttons. Git's CLI is the set of commands Git accepts (`git commit`, `git push`, etc.). The opposite of a CLI is a GUI (Graphical User Interface).
 
@@ -44,7 +44,7 @@ In practice, most developers use "terminal" loosely to mean the whole setup - th
 
 Understanding the history explains why the vocabulary is the way it is.
 
-In the 1960s and 1970s, computers were enormous machines shared by many users. Each user sat at a **teletype (TTY)** - a mechanical device that looked like a typewriter. You typed a command, the teletype sent it to the mainframe over a serial cable, the mainframe ran it, and the result came back and printed on paper.
+In the 1960s and 1970s, computers were enormous machines shared by many users. Each user sat at a **teletype (TTY)** - a mechanical device that looked like a typewriter. You typed a command, the teletype sent it to the mainframe over a serial cable, the mainframe ran it and the result came back and printed on paper.
 
 As computers became more capable, physical CRTs replaced paper. The **DEC VT100** (1978) was the defining terminal of its era - a keyboard and a screen with no processing power of its own, just a display. The VT100 defined the ANSI escape code standard that terminals still use today. When you see coloured output in your terminal - green text, bold text, underlined text - that colouring is happening via ANSI escape codes that were standardised in 1978.
 
@@ -60,7 +60,7 @@ Any time you open a terminal window and type a command, three layers are involve
 
 **Layer 1 - Terminal emulator**: draws the window, renders fonts, handles colours and mouse events. Receives characters from layer 2 and displays them. Sends your keystrokes to layer 2.
 
-**Layer 2 - PTY (pseudo-terminal)**: a kernel abstraction that connects the terminal emulator to the shell. It is a pair of file descriptors - a master side (held by the terminal emulator) and a slave side (used by the shell). The kernel's TTY layer handles line discipline - buffering, `Ctrl+C` for interrupt, `Ctrl+Z` for suspend, backspace processing, and echo. You can check what TTY your current session uses with `tty`.
+**Layer 2 - PTY (pseudo-terminal)**: a kernel abstraction that connects the terminal emulator to the shell. It is a pair of file descriptors - a master side (held by the terminal emulator) and a slave side (used by the shell). The kernel's TTY layer handles line discipline - buffering, `Ctrl+C` for interrupt, `Ctrl+Z` for suspend, backspace processing and echo. You can check what TTY your current session uses with `tty`.
 
 **Layer 3 - Shell**: the process running inside the PTY. It prints the prompt, reads input, parses commands and forks child processes to run programs. When you type `git status`, the shell forks a child process, execs the `git` binary, and waits for it to finish.
 
@@ -94,15 +94,15 @@ When you type a command and press Enter:
 
 The character at the end of your prompt before the cursor is one of the most confusing things for new terminal users. Different platforms and shells show different symbols.
 
-| Symbol | Shell / context | Meaning |
-| ------ | --------------- | ------- |
-| `$` | bash, zsh (regular user) | Ready for input as a normal user. The `$` comes from bash's `\$` prompt escape, which expands to `$` when UID is not 0 |
-| `#` | bash, zsh (root user) | Ready for input as root. Same `\$` escape, but when running as root (UID 0) it shows `#` - a visual warning that you have full system access |
-| `%` | zsh (some configs) | zsh's default prompt uses `%#` which shows `%` for normal users and `#` for root. Many zsh themes use `%` as the normal-user symbol instead of `$` |
-| `>>>` | Python REPL | You are inside the Python interpreter, not a shell. Press `Ctrl+D` or type `exit()` to return to your shell |
-| `PS>` or `PS C:\>` | PowerShell | Ready for input in PowerShell. The `PS` prefix comes from PowerShell's default `prompt` function |
-| `>` | cmd.exe | Ready for input in the Windows Command Prompt. `%PROMPT%` defaults to `$P$G` - current path plus `>` |
-| `~$` or `user@host:~$` | bash (common format) | Same `$` symbol with path or user/hostname context prepended |
+| Symbol                 | Shell / context          | Meaning                                                                                                                                            |
+| ---------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$`                    | bash, zsh (regular user) | Ready for input as a normal user. The `$` comes from bash's `\$` prompt escape, which expands to `$` when UID is not 0                             |
+| `#`                    | bash, zsh (root user)    | Ready for input as root. Same `\$` escape, but when running as root (UID 0) it shows `#` - a visual warning that you have full system access       |
+| `%`                    | zsh (some configs)       | zsh's default prompt uses `%#` which shows `%` for normal users and `#` for root. Many zsh themes use `%` as the normal-user symbol instead of `$` |
+| `>>>`                  | Python REPL              | You are inside the Python interpreter, not a shell. Press `Ctrl+D` or type `exit()` to return to your shell                                        |
+| `PS>` or `PS C:\>`     | PowerShell               | Ready for input in PowerShell. The `PS` prefix comes from PowerShell's default `prompt` function                                                   |
+| `>`                    | cmd.exe                  | Ready for input in the Windows Command Prompt. `%PROMPT%` defaults to `$P$G` - current path plus `>`                                               |
+| `~$` or `user@host:~$` | bash (common format)     | Same `$` symbol with path or user/hostname context prepended                                                                                       |
 
 The symbols differ purely because each shell's author chose different defaults. There is no deep technical reason `$` means "ready" - it is convention.
 

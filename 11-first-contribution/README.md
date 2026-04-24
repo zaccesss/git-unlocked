@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 10 minutes
 
-This is a safe sandbox for making your very first open source pull request. You will fork this repository, add your name to a list, and open a PR. That is it. No code required.
+This is a safe sandbox for making your very first open source pull request. You will fork this repository, add your name to a list and open a PR. That is it. No code required.
 
 ---
 
@@ -29,7 +29,7 @@ By completing this exercise you will have practised the full open source contrib
 - Pushing to your fork
 - Opening a pull request
 
-This is the same workflow used to contribute to projects like VS Code, React, Kubernetes, and the Linux kernel. Once you have done it once, it stops feeling mysterious.
+This is the same workflow used to contribute to projects like VS Code, React, Kubernetes and the Linux kernel. Once you have done it once, it stops feeling mysterious.
 
 ---
 
@@ -223,7 +223,7 @@ git switch -c add-YOUR_USERNAME
 Now that you have made your first contribution, here are some natural next steps:
 
 **Learn the full workflow in depth**
-Read [real-world/01-contributing-to-open-source.md](../08-real-world/01-contributing-to-open-source.md) for a complete guide to the open source contribution workflow, including how to handle review feedback, sync your fork with upstream over time, and work with projects that have their own specific contribution requirements.
+Read [real-world/01-contributing-to-open-source.md](../08-real-world/01-contributing-to-open-source.md) for a complete guide to the open source contribution workflow, including how to handle review feedback, sync your fork with upstream over time and work with projects that have their own specific contribution requirements.
 
 **Find a real project to contribute to**
 

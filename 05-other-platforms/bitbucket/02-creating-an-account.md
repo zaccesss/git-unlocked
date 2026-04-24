@@ -154,6 +154,7 @@ An authenticator app generates time-based one-time passwords (TOTP) that refresh
 - 🍎🐧 **Google Authenticator** - iOS and Android, no cloud backup
 
 Setup process:
+
 1. Choose **Authenticator app** as your method
 2. Scan the QR code with your authenticator app
 3. Enter the 6-digit code shown in the app to confirm it is working
@@ -191,16 +192,19 @@ When you add an SSH public key to Bitbucket, you are telling Bitbucket: "Trust c
 If you do not already have an SSH key, generate one. Open a terminal:
 
 🪟 **Windows** (PowerShell or Git Bash):
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
 
 🍎 **Mac** (Terminal):
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
 
 🐧 **Linux** (Bash):
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
@@ -211,6 +215,7 @@ The command is identical across all three operating systems. When prompted:
 - **Passphrase**: enter a passphrase to protect the key (optional but recommended). The passphrase encrypts the private key file - if someone steals the file, they still cannot use it without the passphrase.
 
 This creates two files:
+
 - `~/.ssh/id_ed25519` - your private key (never share this)
 - `~/.ssh/id_ed25519.pub` - your public key (this is what you add to Bitbucket)
 
@@ -222,16 +227,19 @@ This creates two files:
 **Copy your public key:**
 
 🪟 **Windows** (PowerShell):
+
 ```powershell
 Get-Content ~/.ssh/id_ed25519.pub | clip
 ```
 
 🍎 **Mac**:
+
 ```bash
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 🐧 **Linux**:
+
 ```bash
 cat ~/.ssh/id_ed25519.pub
 # then copy the output manually, or:
@@ -285,6 +293,7 @@ git clone https://bitbucket.org/workspace/repository.git
 ### What API tokens are for
 
 API tokens are used when:
+
 - Cloning or pushing over HTTPS from the command line
 - Authenticating in CI/CD pipelines that use HTTPS
 - Accessing the Bitbucket REST API from scripts or tools
@@ -308,19 +317,19 @@ If you use SSH for Git operations, you do not need an API token for those operat
 
 API tokens have granular permission scopes:
 
-| Scope | What it allows |
-|---|---|
-| **Repositories: Read** | Clone repositories, read code |
-| **Repositories: Write** | Push commits, create branches |
-| **Repositories: Admin** | Manage repository settings |
-| **Pull requests: Read** | View pull requests |
-| **Pull requests: Write** | Create and comment on pull requests |
-| **Issues: Read** | View issues |
-| **Issues: Write** | Create and update issues |
-| **Pipelines: Read** | View pipeline status |
-| **Pipelines: Write** | Trigger pipelines |
-| **Account: Read** | Read account information |
-| **Workspace membership: Read** | View workspace members |
+| Scope                          | What it allows                      |
+| ------------------------------ | ----------------------------------- |
+| **Repositories: Read**         | Clone repositories, read code       |
+| **Repositories: Write**        | Push commits, create branches       |
+| **Repositories: Admin**        | Manage repository settings          |
+| **Pull requests: Read**        | View pull requests                  |
+| **Pull requests: Write**       | Create and comment on pull requests |
+| **Issues: Read**               | View issues                         |
+| **Issues: Write**              | Create and update issues            |
+| **Pipelines: Read**            | View pipeline status                |
+| **Pipelines: Write**           | Trigger pipelines                   |
+| **Account: Read**              | Read account information            |
+| **Workspace membership: Read** | View workspace members              |
 
 Always grant the minimum permissions needed. A token used for CI/CD that only needs to clone and push does not need Account or Issue permissions.
 
@@ -341,6 +350,7 @@ To avoid entering credentials every time, store them in Git's credential manager
 🍎 **Mac** - Git Credential Manager stores tokens in the macOS Keychain automatically.
 
 🐧 **Linux**:
+
 ```bash
 git config --global credential.helper store
 # or use the memory cache for a session:
@@ -355,6 +365,7 @@ git config --global credential.helper 'cache --timeout=3600'
 You can view all your active tokens in **Personal settings** > **API tokens**. Each token shows its label, creation date, expiry date and last-used date. You can revoke any token immediately by clicking the bin icon next to it.
 
 Revoke tokens when:
+
 - A project or integration they were created for is finished
 - You suspect a token has been exposed or compromised
 - An employee who used the token leaves the organisation
@@ -376,6 +387,7 @@ GitHub's free plan has unlimited collaborators on public repositories and unlimi
 **Free: 50 Bitbucket Pipelines minutes per month.** This resets on the first of each month. 50 minutes is enough for light experimentation but not for active development workflows. A typical test suite that takes 5 minutes to run would exhaust the free allocation in 10 runs.
 
 If you are doing serious CI/CD work on a free plan, consider:
+
 - Using self-hosted runners (free runners, 100 per workspace on V5)
 - Optimising your pipeline to run faster
 - Upgrading to Standard ($3.65/user/month) for 2,500 minutes
@@ -390,15 +402,15 @@ The free plan supports **unlimited repositories** in a workspace. There is no ca
 
 ### Features not on the free plan
 
-| Feature | Minimum plan |
-|---|---|
-| AI pull request descriptions (Rovo Dev) | Standard |
-| Bitbucket Packages (container registry) | Standard |
-| IP allowlisting | Premium |
-| Enforced merge checks | Premium |
-| Required builds before merge | Premium |
-| 99.9% uptime SLA | Premium |
-| Atlassian Guard (SSO) | Guard add-on (separate pricing) |
+| Feature                                 | Minimum plan                    |
+| --------------------------------------- | ------------------------------- |
+| AI pull request descriptions (Rovo Dev) | Standard                        |
+| Bitbucket Packages (container registry) | Standard                        |
+| IP allowlisting                         | Premium                         |
+| Enforced merge checks                   | Premium                         |
+| Required builds before merge            | Premium                         |
+| 99.9% uptime SLA                        | Premium                         |
+| Atlassian Guard (SSO)                   | Guard add-on (separate pricing) |
 
 ---
 
@@ -442,6 +454,7 @@ If you are setting up Bitbucket for an organisation rather than personal use, yo
 **Atlassian Guard** (formerly Atlassian Access) is a separate paid product that adds enterprise identity management to Atlassian Cloud products including Bitbucket. Guard Standard costs **$4.20 per user per month** on top of Bitbucket pricing.
 
 Guard Standard provides:
+
 - **Single sign-on (SSO)** via SAML 2.0 - your team signs in through your identity provider (Okta, Azure AD, Google Workspace) rather than managing Atlassian passwords separately
 - **SCIM provisioning** - automatically create and deactivate Atlassian accounts when employees join or leave, synced from your identity provider
 - **Authentication policies** - enforce 2FA, set password strength requirements, control which sign-in methods are allowed
@@ -486,18 +499,21 @@ Work through this checklist after setting up your account:
 **Exercise 2 - Generate and add an SSH key**
 
 🪟 Windows (Git Bash or PowerShell):
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 Get-Content ~/.ssh/id_ed25519.pub | clip
 ```
 
 🍎 Mac:
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 🐧 Linux:
+
 ```bash
 ssh-keygen -t ed25519 -C "your-email@example.com"
 cat ~/.ssh/id_ed25519.pub
@@ -506,6 +522,7 @@ cat ~/.ssh/id_ed25519.pub
 Add the copied key to Bitbucket under **Personal settings** > **SSH keys**.
 
 Then test it:
+
 ```bash
 ssh -T git@bitbucket.org
 ```
@@ -521,7 +538,7 @@ ssh -T git@bitbucket.org
 
 1. Click your workspace name in the left sidebar
 2. Go to **Workspace settings**
-3. Explore the Members, Groups, and Permissions sections
+3. Explore the Members, Groups and Permissions sections
 4. Note the difference between workspace-level settings and repository-level settings
 
 ---
@@ -562,11 +579,11 @@ This is the most common 2FA mistake across all platforms. Recovery codes exist f
 
 Bitbucket accounts are Atlassian accounts - one identity across all Atlassian products. Sign up at [bitbucket.org](https://bitbucket.org), verify your email, and enable two-factor authentication immediately using an authenticator app. Save your recovery codes offline.
 
-SSH keys are the preferred method for command-line Git operations. Generate an ed25519 key pair, add the public key to Bitbucket under Personal settings, and test the connection with `ssh -T git@bitbucket.org`.
+SSH keys are the preferred method for command-line Git operations. Generate an ed25519 key pair, add the public key to Bitbucket under Personal settings and test the connection with `ssh -T git@bitbucket.org`.
 
-API tokens replace the deprecated app passwords entirely from June 2026. Create tokens with the minimum permissions needed, set expiry dates, and store them securely using environment variables or a password manager - never in code.
+API tokens replace the deprecated app passwords entirely from June 2026. Create tokens with the minimum permissions needed, set expiry dates and store them securely using environment variables or a password manager - never in code.
 
-The free plan supports up to 5 workspace users, 50 Pipelines minutes per month, and 1 GB total storage with unlimited private repositories. Enterprise teams needing SSO require Atlassian Guard as a separate paid product at $4.20 per user per month.
+The free plan supports up to 5 workspace users, 50 Pipelines minutes per month and 1 GB total storage with unlimited private repositories. Enterprise teams needing SSO require Atlassian Guard as a separate paid product at $4.20 per user per month.
 
 ---
 

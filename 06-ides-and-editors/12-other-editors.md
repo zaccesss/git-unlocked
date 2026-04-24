@@ -61,26 +61,26 @@ M-x package-install RET magit RET
 
 **Key bindings in the status buffer**:
 
-| Key | Action |
-|---|---|
-| `s` | Stage file or hunk under cursor |
-| `u` | Unstage file or hunk under cursor |
-| `k` | Discard change under cursor |
-| `Tab` | Toggle section expand/collapse |
-| `c c` | Commit |
-| `c a` | Amend last commit |
-| `c w` | Reword last commit message |
-| `c f` | Create fixup commit |
-| `c s` | Create squash commit |
-| `P p` | Push to upstream |
-| `F p` | Pull from upstream |
-| `b b` | Switch branch |
-| `b c` | Create new branch |
-| `r i` | Interactive rebase |
-| `z z` | Stash |
-| `z p` | Pop stash |
-| `l l` | Open log |
-| `?` | Show all available commands |
+| Key   | Action                            |
+| ----- | --------------------------------- |
+| `s`   | Stage file or hunk under cursor   |
+| `u`   | Unstage file or hunk under cursor |
+| `k`   | Discard change under cursor       |
+| `Tab` | Toggle section expand/collapse    |
+| `c c` | Commit                            |
+| `c a` | Amend last commit                 |
+| `c w` | Reword last commit message        |
+| `c f` | Create fixup commit               |
+| `c s` | Create squash commit              |
+| `P p` | Push to upstream                  |
+| `F p` | Pull from upstream                |
+| `b b` | Switch branch                     |
+| `b c` | Create new branch                 |
+| `r i` | Interactive rebase                |
+| `z z` | Stash                             |
+| `z p` | Pop stash                         |
+| `l l` | Open log                          |
+| `?`   | Show all available commands       |
 
 **What makes Magit exceptional**
 
@@ -88,7 +88,7 @@ Magit's power comes from three things. First, **transient menus** (the library t
 
 Second, **region-aware staging**: Magit can stage not just files and hunks but arbitrary regions of text. Select three lines in the middle of a hunk using Emacs region selection, press `s` and only those three lines are staged. This level of granularity is unmatched by any other editor Git integration.
 
-Third, **the log and commit graph**: Magit's log view (`l l`) renders the full commit graph, allows filtering by author, date range, file path and commit message, and makes every commit interactively actionable (cherry-pick, revert, reset, rebase, tag, copy hash) with a single keypress.
+Third, **the log and commit graph**: Magit's log view (`l l`) renders the full commit graph, allows filtering by author, date range, file path and commit message and makes every commit interactively actionable (cherry-pick, revert, reset, rebase, tag, copy hash) with a single keypress.
 
 **Forge**: the `forge` Emacs package extends Magit with GitHub, GitLab and Gitea/Forgejo support. Forge maintains a local SQLite database of issues, pull requests and review comments, updated via the platform's API. From inside Emacs you can list open PRs, read their diffs, leave inline comments, approve reviews and merge - all without opening a browser. Bootstrap Forge with `M-x forge-add-repository` in a project directory.
 
@@ -147,7 +147,7 @@ GitHub Copilot is deeply integrated in Visual Studio 2026:
 
 **Background**
 
-Xcode is Apple's IDE for iOS, iPadOS, macOS, watchOS and tvOS development. It is free, available only on macOS, and required for building and distributing apps in the Apple ecosystem. Apple moved to year-based versioning at WWDC 2025 - the current release is **Xcode 26** (not Xcode 17), with Xcode 26.3 adding agentic coding via MCP.
+Xcode is Apple's IDE for iOS, iPadOS, macOS, watchOS and tvOS development. It is free, available only on macOS and required for building and distributing apps in the Apple ecosystem. Apple moved to year-based versioning at WWDC 2025 - the current release is **Xcode 26** (not Xcode 17), with Xcode 26.3 adding agentic coding via MCP.
 
 **Source Control Navigator**
 
@@ -160,19 +160,19 @@ Open with `Cmd+2`. The Source Control Navigator has two tabs:
 
 The **Integrate** menu (renamed from Source Control in Xcode 26) contains the full Git command surface:
 
-| Menu item | Action |
-|---|---|
-| Commit (`Alt+Cmd+C`) | Stage and commit |
-| Push | Push current branch |
-| Pull | Pull from upstream |
-| Fetch | Fetch all remotes |
-| Rebase | Rebase current branch onto another |
-| Merge | Merge a branch into the current branch |
-| Cherry-Pick | Cherry-pick a commit |
-| Stash Changes | Create a stash |
-| Discard All Changes | Revert working tree to HEAD |
-| New Branch | Create and switch to a new branch |
-| Create Pull Request | Open the GitHub/Bitbucket PR form in the browser |
+| Menu item            | Action                                           |
+| -------------------- | ------------------------------------------------ |
+| Commit (`Alt+Cmd+C`) | Stage and commit                                 |
+| Push                 | Push current branch                              |
+| Pull                 | Pull from upstream                               |
+| Fetch                | Fetch all remotes                                |
+| Rebase               | Rebase current branch onto another               |
+| Merge                | Merge a branch into the current branch           |
+| Cherry-Pick          | Cherry-pick a commit                             |
+| Stash Changes        | Create a stash                                   |
+| Discard All Changes  | Revert working tree to HEAD                      |
+| New Branch           | Create and switch to a new branch                |
+| Create Pull Request  | Open the GitHub/Bitbucket PR form in the browser |
 
 **Commit workflow**
 
@@ -244,7 +244,7 @@ EGit is bundled with Eclipse IDE for Java Developers and most other Eclipse IDE 
 
 **Git Staging view**: drag files from the **Unstaged Changes** pane to the **Staged Changes** pane to stage them. Hunk-level staging requires right-clicking a specific change. The commit message box supports spell checking and `Amend` / `Sign-off` / `Sign commit` checkboxes.
 
-**History view**: a graphical commit log with branch lanes, filtering by author, date and path, and commit-level actions (cherry-pick, revert, create branch, create tag, reset, checkout). Click any commit to see its full diff in the Compare Editor.
+**History view**: a graphical commit log with branch lanes, filtering by author, date and path and commit-level actions (cherry-pick, revert, create branch, create tag, reset, checkout). Click any commit to see its full diff in the Compare Editor.
 
 **Reflog view**: shows the reflog for recovery after rebases, resets and other history-modifying operations.
 
@@ -316,7 +316,7 @@ Nova's extension marketplace has a GitHub extension that adds:
 
 Vim (Vi IMproved) was created by Bram Moolenaar in 1991 as an improvement on the original Unix `vi` editor. Bram Moolenaar died in August 2023. Vim 9.1 is the current stable release, maintained by the community. Development pace has slowed significantly compared to Neovim's trajectory.
 
-Classic Vim is still widely used and relevant, particularly on servers where Neovim may not be installed, in SSH sessions, and among developers who learned Vim before Neovim became the dominant choice. Every Linux server has `vi` or `vim` available.
+Classic Vim is still widely used and relevant, particularly on servers where Neovim may not be installed, in SSH sessions and among developers who learned Vim before Neovim became the dominant choice. Every Linux server has `vi` or `vim` available.
 
 **Git integration: vim-fugitive**
 
@@ -376,7 +376,7 @@ git config --global core.editor nano
 
 When `git commit` opens nano, write the commit message, press `Ctrl+O` to save and `Ctrl+X` to exit. This is the minimum viable Git editor workflow - functional but no staging panel, no diff view, no history, no blame.
 
-nano is useful for: writing commit messages on servers where nothing else is installed, quick edits in SSH sessions, and as the default editor for users who are not yet comfortable with Vim or Helix.
+nano is useful for: writing commit messages on servers where nothing else is installed, quick edits in SSH sessions and as the default editor for users who are not yet comfortable with Vim or Helix.
 
 ---
 
@@ -459,7 +459,7 @@ Treating nano as a permanent Git editor setup. nano is a viable fallback for wri
 
 ## 12. Summary
 
-Emacs with Magit is the gold standard for keyboard-driven Git management, offering region-aware staging, transient menus for all Git flags, and Forge for GitHub/GitLab integration - all from within Emacs. Visual Studio is the Windows IDE for .NET, C++, Unity and enterprise development, with a Git Changes window, interactive rebase UI, Azure DevOps integration and deep Copilot integration in the 2026 release. Xcode is macOS-only and required for Apple platform development; its Source Control Navigator covers the standard workflow with blame, diff and PR creation, and Xcode 26 adds agentic coding via MCP. Android Studio is an IntelliJ IDEA fork with the full JetBrains Git implementation plus Gemini for Android-specific AI assistance. Eclipse with EGit provides a complete Git workflow for the Java/OSGi developer community still on Eclipse, with staging, history, interactive rebase and a three-pane merge tool. Nova is a native macOS editor with built-in Git staging, diff and blame. Classic Vim with vim-fugitive and vim-gitgutter covers the same core workflow as the Neovim stack, with slight feature gaps due to missing Neovim-specific plugins. nano and Notepad++ are minimal tools with no meaningful Git integration beyond `core.editor` support.
+Emacs with Magit is the gold standard for keyboard-driven Git management, offering region-aware staging, transient menus for all Git flags and Forge for GitHub/GitLab integration - all from within Emacs. Visual Studio is the Windows IDE for .NET, C++, Unity and enterprise development, with a Git Changes window, interactive rebase UI, Azure DevOps integration and deep Copilot integration in the 2026 release. Xcode is macOS-only and required for Apple platform development; its Source Control Navigator covers the standard workflow with blame, diff and PR creation, and Xcode 26 adds agentic coding via MCP. Android Studio is an IntelliJ IDEA fork with the full JetBrains Git implementation plus Gemini for Android-specific AI assistance. Eclipse with EGit provides a complete Git workflow for the Java/OSGi developer community still on Eclipse, with staging, history, interactive rebase and a three-pane merge tool. Nova is a native macOS editor with built-in Git staging, diff and blame. Classic Vim with vim-fugitive and vim-gitgutter covers the same core workflow as the Neovim stack, with slight feature gaps due to missing Neovim-specific plugins. nano and Notepad++ are minimal tools with no meaningful Git integration beyond `core.editor` support.
 
 ---
 

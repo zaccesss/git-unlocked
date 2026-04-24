@@ -8,24 +8,24 @@ This roadmap tracks the development plan for git-unlocked.
 
 ## Status overview
 
-| Section                            | Files | Status   |
-| ---------------------------------- | ----- | -------- |
-| 00-welcome/                        | 1     | Complete |
-| 01-introduction/                   | 3     | Complete |
-| 02-git/                            | 29    | Complete |
-| 03-github/                         | 28    | Complete |
-| 04-gitlab/                         | 16    | Complete |
-| 05-other-platforms/bitbucket/      | 14    | Complete |
-| 05-other-platforms/azure-devops/   | 15    | Complete |
-| 05-other-platforms/gitea/          | 13    | Complete |
-| 05-other-platforms/forgejo/        | 10    | Complete |
-| 05-other-platforms/codeberg/       | 10    | Complete |
-| 06-ides-and-editors/               | 14    | Complete |
-| 07-terminal/                       | 14    | Complete |
-| 08-real-world/                     | 8     | Complete |
-| 09-reference/                      | 4     | Complete |
-| 10-resources/                      | 1     | Complete |
-| 11-first-contribution/             | 2     | Complete |
+| Section                          | Files | Status   |
+| -------------------------------- | ----- | -------- |
+| 00-welcome/                      | 1     | Complete |
+| 01-introduction/                 | 3     | Complete |
+| 02-git/                          | 29    | Complete |
+| 03-github/                       | 28    | Complete |
+| 04-gitlab/                       | 16    | Complete |
+| 05-other-platforms/bitbucket/    | 14    | Complete |
+| 05-other-platforms/azure-devops/ | 15    | Complete |
+| 05-other-platforms/gitea/        | 13    | Complete |
+| 05-other-platforms/forgejo/      | 10    | Complete |
+| 05-other-platforms/codeberg/     | 10    | Complete |
+| 06-ides-and-editors/             | 14    | Complete |
+| 07-terminal/                     | 14    | Complete |
+| 08-real-world/                   | 8     | Complete |
+| 09-reference/                    | 4     | Complete |
+| 10-resources/                    | 1     | Complete |
+| 11-first-contribution/           | 2     | Complete |
 
 **Total: 182 files across 15 sections**
 

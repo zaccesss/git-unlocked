@@ -50,18 +50,18 @@ Requiring a pull request before merging to `main`. This single rule ensures that
 
 GitHub has two systems for protecting branches. Both work and can coexist, but rulesets are the newer, more powerful system.
 
-| Feature | Branch Protection Rules | Rulesets |
-|---|---|---|
-| Multiple rules per branch | No (one rule set per pattern) | Yes (multiple rulesets stack) |
-| Organisation-level rules | No | Yes |
-| Target tags | No | Yes |
-| Target pushes (fork network) | No | Yes (push rulesets) |
-| Evaluate/dry-run mode | No | Yes |
-| Pre-emptive rules (before branch exists) | No | Yes |
-| File size/path restrictions | No | Yes |
-| Branch naming enforcement | No | Yes |
-| Import/export | No | Yes |
-| Bypass with granular control | Admins only | Specific roles, teams, apps |
+| Feature                                  | Branch Protection Rules       | Rulesets                      |
+| ---------------------------------------- | ----------------------------- | ----------------------------- |
+| Multiple rules per branch                | No (one rule set per pattern) | Yes (multiple rulesets stack) |
+| Organisation-level rules                 | No                            | Yes                           |
+| Target tags                              | No                            | Yes                           |
+| Target pushes (fork network)             | No                            | Yes (push rulesets)           |
+| Evaluate/dry-run mode                    | No                            | Yes                           |
+| Pre-emptive rules (before branch exists) | No                            | Yes                           |
+| File size/path restrictions              | No                            | Yes                           |
+| Branch naming enforcement                | No                            | Yes                           |
+| Import/export                            | No                            | Yes                           |
+| Bypass with granular control             | Admins only                   | Specific roles, teams, apps   |
 
 **Recommendation:** Use rulesets for new repositories. If you have existing branch protection rules, they continue to work alongside rulesets. Migrate gradually when convenient.
 
@@ -76,6 +76,7 @@ Or directly: **Settings → Branches → Add branch protection rule**.
 **Specify the branch name pattern:**
 
 Patterns use `fnmatch` glob syntax:
+
 - `main` - matches only the `main` branch
 - `release/*` - matches all branches starting with `release/`
 - `v*` - matches all branches starting with `v`
@@ -93,7 +94,7 @@ No one can push directly to this branch. All changes must go through a pull requ
 
 **Required number of approvals before merging:** 1 to 6. For most repositories, 1 is sufficient. Critical production repositories or security-sensitive code may warrant 2+.
 
-**Dismiss stale pull request approvals when new commits are pushed:** If the author pushes new commits after a reviewer approves, the approval is dismissed and review must happen again. Prevents the scenario where someone approves a PR, the author makes significant changes, and the PR is merged without the changes being reviewed.
+**Dismiss stale pull request approvals when new commits are pushed:** If the author pushes new commits after a reviewer approves, the approval is dismissed and review must happen again. Prevents the scenario where someone approves a PR, the author makes significant changes and the PR is merged without the changes being reviewed.
 
 **Require review from code owners:** If the changed files have a CODEOWNERS entry, those designated owners must approve before merging. Ensures domain experts review relevant changes.
 
@@ -150,6 +151,7 @@ Branch deletion is blocked on protected branches. Enable only if branch deletion
 **Navigate to:** Repository → Settings → Rules → Rulesets → New ruleset.
 
 Three ruleset types:
+
 - **Branch ruleset** - protects specific branches
 - **Tag ruleset** - protects specific tags
 - **Push ruleset** - applies to pushes across the entire fork network
@@ -287,15 +289,15 @@ Rulesets use `fnmatch` glob patterns. A target can match on:
 
 **Pattern examples:**
 
-| Pattern | Matches |
-|---|---|
-| `~DEFAULT_BRANCH` | The default branch (`main`) |
-| `~ALL` | All branches or tags |
-| `main` | Only `main` |
-| `release/*` | Any branch starting with `release/` |
-| `v*` | Any tag starting with `v` |
-| `feature/**` | Any branch with `feature/` anywhere in the path |
-| `!hotfix/*` | Exclude hotfix branches (use in Excludes) |
+| Pattern           | Matches                                         |
+| ----------------- | ----------------------------------------------- |
+| `~DEFAULT_BRANCH` | The default branch (`main`)                     |
+| `~ALL`            | All branches or tags                            |
+| `main`            | Only `main`                                     |
+| `release/*`       | Any branch starting with `release/`             |
+| `v*`              | Any tag starting with `v`                       |
+| `feature/**`      | Any branch with `feature/` anywhere in the path |
+| `!hotfix/*`       | Exclude hotfix branches (use in Excludes)       |
 
 **The `~DEFAULT_BRANCH` special pattern** is particularly useful - it always targets whatever the default branch is called, even if you rename `main` to `trunk` or something else.
 
@@ -403,13 +405,13 @@ name: CI
 on: [push, pull_request]
 
 jobs:
-  run-tests:          # <-- This name is the check name
+  run-tests: # <-- This name is the check name
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: npm test
 
-  lint:               # <-- Another check name
+  lint: # <-- Another check name
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

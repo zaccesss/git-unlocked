@@ -390,6 +390,7 @@ git remote -v
 ```
 
 You should see:
+
 ```
 origin    https://github.com/YOUR_USERNAME/original-project.git (fetch)
 origin    https://github.com/YOUR_USERNAME/original-project.git (push)
@@ -492,7 +493,7 @@ Output:
     main pushes to main (up to date)
 ```
 
-This shows the fetch and push URLs, all remote branches, and the configured pull and push behaviour for your local branches.
+This shows the fetch and push URLs, all remote branches and the configured pull and push behaviour for your local branches.
 
 ---
 

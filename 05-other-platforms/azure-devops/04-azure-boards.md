@@ -98,14 +98,17 @@ A **work item** is the fundamental unit of tracked work in Azure Boards. Every t
 ### Creating a work item
 
 **From the Boards view:**
+
 1. Click **+ Add work item** at the bottom of any column
 2. Type a title and press Enter
 
 **From the Backlogs view:**
+
 1. Click **+ New Work Item** at the top of the backlog
 2. Select the type (Epic, Feature, Story, etc.)
 
 **From the work item form:**
+
 1. Click **Work Items** in the Boards sidebar
 2. Click **+ New Work Item**
 3. Select type and open the full form
@@ -144,12 +147,12 @@ The full work item form contains:
 
 States represent the lifecycle of a work item. The available states depend on the process template and work item type. Teams can customise states in process settings. Common patterns:
 
-| State | Meaning |
-|---|---|
-| New / To Do | Created, not yet started |
-| Active / In Progress | Being worked on |
+| State                | Meaning                                   |
+| -------------------- | ----------------------------------------- |
+| New / To Do          | Created, not yet started                  |
+| Active / In Progress | Being worked on                           |
 | Resolved / In Review | Complete, awaiting review or verification |
-| Closed / Done | Verified complete, no further action |
+| Closed / Done        | Verified complete, no further action      |
 
 ### Work item types and hierarchy
 
@@ -160,6 +163,7 @@ This hierarchy enables planning at different levels: leadership tracks Epics and
 ### Bulk editing
 
 Select multiple work items in any list view using the checkboxes. Bulk operations available:
+
 - Change state
 - Assign to a different person
 - Move to a different area or iteration
@@ -193,6 +197,7 @@ Each column represents a workflow state. The default columns for Agile are: **Ne
 ### Card information
 
 Each card on the board shows by default:
+
 - Work item ID and title
 - Assigned person's avatar
 - Tags
@@ -204,6 +209,7 @@ Click any card to open the full work item form.
 ### Swimlanes
 
 Swimlanes divide the board horizontally to separate different categories of work. Common uses:
+
 - **Priority swimlane**: "Expedite" (urgent), "Standard", "Low priority"
 - **Type swimlane**: "Features", "Bugs"
 - **Team swimlane**: different rows per team member
@@ -223,6 +229,7 @@ Click **Backlogs** in the left sidebar.
 ### Backlog levels
 
 The backlog has multiple levels corresponding to the work item hierarchy:
+
 - **Epics backlog**: Epics list with Features as children
 - **Features backlog**: Features list with User Stories as children
 - **Stories/PBIs backlog**: The sprint-level backlog - Stories or PBIs with Tasks as children
@@ -238,6 +245,7 @@ The ordering in the backlog is the recommended order for the team to work. Sprin
 ### Backlog filters
 
 Filter the backlog by:
+
 - Assigned to
 - Area path
 - Tags
@@ -249,6 +257,7 @@ This allows a team lead to see only their team's items, or a developer to see on
 ### Backlog settings
 
 Click the gear icon on the backlog to configure:
+
 - Which work item types appear at each level
 - Whether to show "In Progress" items (items already in a sprint)
 - Whether to show child items from all iterations or just the current sprint
@@ -317,15 +326,15 @@ Queries let you search, filter and save views of work items. Any question you ca
 
 ### Query operators
 
-| Condition | Example |
-|---|---|
-| Field = Value | State = Active |
-| Field Contains | Title Contains "authentication" |
-| Field In (list) | Assigned To In (Alice, Bob) |
-| Field Was Ever | State Was Ever "In Review" |
-| Field Changed | Changed Date >= @Today - 7 |
-| @Me | Assigned To = @Me |
-| @Today | Changed Date >= @Today - 7 |
+| Condition         | Example                            |
+| ----------------- | ---------------------------------- |
+| Field = Value     | State = Active                     |
+| Field Contains    | Title Contains "authentication"    |
+| Field In (list)   | Assigned To In (Alice, Bob)        |
+| Field Was Ever    | State Was Ever "In Review"         |
+| Field Changed     | Changed Date >= @Today - 7         |
+| @Me               | Assigned To = @Me                  |
+| @Today            | Changed Date >= @Today - 7         |
 | @CurrentIteration | Iteration Path = @CurrentIteration |
 
 ### Work Item Query Language (WIQL)
@@ -345,6 +354,7 @@ ORDER BY [Microsoft.VSTS.Common.Priority] ASC, [System.CreatedDate] DESC
 ### Saving and sharing queries
 
 Queries can be saved as **My queries** (visible only to you) or **Shared queries** (visible to the team). Saved queries can be:
+
 - Pinned to the sidebar for quick access
 - Added as a widget on dashboards
 - Used in email notifications (trigger an email when a query returns new results)
@@ -354,7 +364,7 @@ Queries can be saved as **My queries** (visible only to you) or **Shared queries
 
 ## Delivery plans
 
-**Delivery plans** provide a timeline view of work across multiple teams and iterations. They answer the question: "What is each team delivering, when, and how do they align?"
+**Delivery plans** provide a timeline view of work across multiple teams and iterations. They answer the question: "What is each team delivering, when and how do they align?"
 
 This is particularly valuable for organisations running SAFe (Scaled Agile Framework) or program-level planning where multiple teams need to coordinate deliveries.
 
@@ -429,6 +439,7 @@ Dashboards are customisable pages of widgets showing team metrics. Each team can
 3. Click **Edit** > **+ Widget** to add widgets
 
 Popular widgets:
+
 - **Burndown chart**: sprint or release burndown
 - **Velocity**: points completed per sprint over time
 - **Cumulative flow diagram**: tracks items moving through workflow states
@@ -444,7 +455,7 @@ The **Analytics** section provides more powerful reporting using Azure DevOps An
 
 ### Azure DevOps and Power BI
 
-Azure DevOps has a native Power BI connector. In Power BI Desktop, connect to Azure DevOps using the Azure DevOps connector, authenticate, and pull work item data into Power BI reports. This is the most powerful reporting option for teams that need custom metrics, trend analysis or executive dashboards.
+Azure DevOps has a native Power BI connector. In Power BI Desktop, connect to Azure DevOps using the Azure DevOps connector, authenticate and pull work item data into Power BI reports. This is the most powerful reporting option for teams that need custom metrics, trend analysis or executive dashboards.
 
 ---
 
@@ -470,6 +481,7 @@ Every project has a default team with the same name as the project. This team ow
 Area paths categorise work items by feature area or team. Each team is associated with one or more area paths. Work items in a team's area path appear on that team's board and backlog.
 
 Example structure:
+
 ```
 MyProject                    (root area)
   ├── Frontend                (Frontend team's area)

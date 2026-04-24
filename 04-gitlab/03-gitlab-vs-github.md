@@ -50,28 +50,28 @@ For a small startup moving fast: GitHub's flexibility and large Action marketpla
 
 GitLab and GitHub use different names for many of the same concepts. If you are coming from GitHub, this table maps everything you know.
 
-| GitHub | GitLab | Notes |
-|---|---|---|
-| Repository | Project | A GitLab project includes the repo plus issues, pipelines, wiki, packages and more |
-| Pull request | Merge request (MR) | Functionally identical; GitLab's term is technically more accurate |
-| GitHub Actions | GitLab CI/CD | Different YAML syntax; GitLab's is more tightly integrated |
-| Workflow file | `.gitlab-ci.yml` | GitHub: `.github/workflows/*.yml`; GitLab: one file at root |
-| Runner | GitLab Runner | Same concept: an agent that executes jobs |
-| Organisation | Group | GitLab groups can be nested (subgroups); GitHub orgs cannot |
-| Team | Subgroup or role | GitLab uses role-based access; teams are approximated by subgroups |
-| GitHub Pages | GitLab Pages | Both host static sites; implementation differs |
-| Gist | Snippet | Both are versioned code fragments; GitLab Snippets support multiple files |
-| GitHub Copilot | GitLab Duo | Different models, different pricing, different integration depth |
-| Branch protection rules | Protected branches | Similar concept; GitLab's approval requirements cost more |
-| Required reviewers | Merge request approvals | Free on GitHub; Premium-only on GitLab |
-| CODEOWNERS (enforcement) | CODEOWNERS (enforcement) | Same file format; enforcement is free on GitHub, Premium on GitLab |
-| GitHub Advanced Security | GitLab Ultimate security features | Different toolset; GitLab includes DAST and fuzz testing |
-| Dependabot | GitLab dependency scanning | Different implementations; both check for vulnerable packages |
-| Secret scanning | Secret detection | Both scan for accidentally committed credentials |
-| GitHub Enterprise Server | GitLab self-managed (EE) | GitHub: $21/user/month; GitLab CE: free |
-| GitHub Marketplace | GitLab integrations | Different scale: GitHub has 10,000+ Actions; GitLab has built-in tools |
-| GitHub Discussions | No direct equivalent | GitLab has no community forum feature |
-| GitHub Sponsors | No direct equivalent | GitLab has no developer sponsorship mechanism |
+| GitHub                   | GitLab                            | Notes                                                                              |
+| ------------------------ | --------------------------------- | ---------------------------------------------------------------------------------- |
+| Repository               | Project                           | A GitLab project includes the repo plus issues, pipelines, wiki, packages and more |
+| Pull request             | Merge request (MR)                | Functionally identical; GitLab's term is technically more accurate                 |
+| GitHub Actions           | GitLab CI/CD                      | Different YAML syntax; GitLab's is more tightly integrated                         |
+| Workflow file            | `.gitlab-ci.yml`                  | GitHub: `.github/workflows/*.yml`; GitLab: one file at root                        |
+| Runner                   | GitLab Runner                     | Same concept: an agent that executes jobs                                          |
+| Organisation             | Group                             | GitLab groups can be nested (subgroups); GitHub orgs cannot                        |
+| Team                     | Subgroup or role                  | GitLab uses role-based access; teams are approximated by subgroups                 |
+| GitHub Pages             | GitLab Pages                      | Both host static sites; implementation differs                                     |
+| Gist                     | Snippet                           | Both are versioned code fragments; GitLab Snippets support multiple files          |
+| GitHub Copilot           | GitLab Duo                        | Different models, different pricing, different integration depth                   |
+| Branch protection rules  | Protected branches                | Similar concept; GitLab's approval requirements cost more                          |
+| Required reviewers       | Merge request approvals           | Free on GitHub; Premium-only on GitLab                                             |
+| CODEOWNERS (enforcement) | CODEOWNERS (enforcement)          | Same file format; enforcement is free on GitHub, Premium on GitLab                 |
+| GitHub Advanced Security | GitLab Ultimate security features | Different toolset; GitLab includes DAST and fuzz testing                           |
+| Dependabot               | GitLab dependency scanning        | Different implementations; both check for vulnerable packages                      |
+| Secret scanning          | Secret detection                  | Both scan for accidentally committed credentials                                   |
+| GitHub Enterprise Server | GitLab self-managed (EE)          | GitHub: $21/user/month; GitLab CE: free                                            |
+| GitHub Marketplace       | GitLab integrations               | Different scale: GitHub has 10,000+ Actions; GitLab has built-in tools             |
+| GitHub Discussions       | No direct equivalent              | GitLab has no community forum feature                                              |
+| GitHub Sponsors          | No direct equivalent              | GitLab has no developer sponsorship mechanism                                      |
 
 ---
 
@@ -81,44 +81,44 @@ The following table compares features across both platforms as of Q1 2026.
 
 ### Code and collaboration
 
-| Feature | GitHub | GitLab |
-|---|---|---|
-| Git repository hosting | ✓ | ✓ |
-| Web-based code browser | ✓ | ✓ |
-| Pull requests / merge requests | ✓ | ✓ |
-| Inline code review comments | ✓ | ✓ |
-| Suggested changes in reviews | ✓ | ✓ |
-| Draft PRs / draft MRs | ✓ | ✓ |
-| PR/MR templates | ✓ | ✓ |
-| Required reviewers (free) | ✓ Free | ✗ Premium only |
-| CODEOWNERS enforcement (free) | ✓ Free | ✗ Premium only |
-| Merge methods (squash, ff) | ✓ | ✓ |
-| Merge trains | ✗ | ✓ Premium |
-| Branch protection | ✓ | ✓ |
-| Protected tags | ✓ | ✓ |
-| Fork-based workflow | ✓ | ✓ |
-| Wikis | ✓ | ✓ (group wikis: Premium) |
-| Gists / Snippets | ✓ | ✓ |
-| Web-based editor | ✓ github.dev | ✓ Web IDE |
-| Cloud development environments | ✓ Codespaces | ✓ Workspaces (beta) |
+| Feature                        | GitHub       | GitLab                   |
+| ------------------------------ | ------------ | ------------------------ |
+| Git repository hosting         | ✓            | ✓                        |
+| Web-based code browser         | ✓            | ✓                        |
+| Pull requests / merge requests | ✓            | ✓                        |
+| Inline code review comments    | ✓            | ✓                        |
+| Suggested changes in reviews   | ✓            | ✓                        |
+| Draft PRs / draft MRs          | ✓            | ✓                        |
+| PR/MR templates                | ✓            | ✓                        |
+| Required reviewers (free)      | ✓ Free       | ✗ Premium only           |
+| CODEOWNERS enforcement (free)  | ✓ Free       | ✗ Premium only           |
+| Merge methods (squash, ff)     | ✓            | ✓                        |
+| Merge trains                   | ✗            | ✓ Premium                |
+| Branch protection              | ✓            | ✓                        |
+| Protected tags                 | ✓            | ✓                        |
+| Fork-based workflow            | ✓            | ✓                        |
+| Wikis                          | ✓            | ✓ (group wikis: Premium) |
+| Gists / Snippets               | ✓            | ✓                        |
+| Web-based editor               | ✓ github.dev | ✓ Web IDE                |
+| Cloud development environments | ✓ Codespaces | ✓ Workspaces (beta)      |
 
 ### Project management
 
-| Feature | GitHub | GitLab |
-|---|---|---|
-| Issues | ✓ | ✓ |
-| Issue labels | ✓ | ✓ |
-| Scoped labels (mutex) | ✗ | ✓ Premium |
-| Milestones | ✓ | ✓ |
-| Kanban boards | ✓ Projects | ✓ Boards |
-| Roadmaps / timelines | ✓ Projects | ✓ Premium |
-| Epics | ✗ | ✓ Premium |
-| Iterations / sprints | ✗ | ✓ Premium |
-| Sub-issues | ✓ (limited) | ✓ |
-| Time tracking | ✗ | ✓ |
-| Community Discussions | ✓ | ✗ |
-| Sponsorships | ✓ | ✗ |
-| Service Desk | ✗ | ✓ |
+| Feature               | GitHub      | GitLab    |
+| --------------------- | ----------- | --------- |
+| Issues                | ✓           | ✓         |
+| Issue labels          | ✓           | ✓         |
+| Scoped labels (mutex) | ✗           | ✓ Premium |
+| Milestones            | ✓           | ✓         |
+| Kanban boards         | ✓ Projects  | ✓ Boards  |
+| Roadmaps / timelines  | ✓ Projects  | ✓ Premium |
+| Epics                 | ✗           | ✓ Premium |
+| Iterations / sprints  | ✗           | ✓ Premium |
+| Sub-issues            | ✓ (limited) | ✓         |
+| Time tracking         | ✗           | ✓         |
+| Community Discussions | ✓           | ✗         |
+| Sponsorships          | ✓           | ✗         |
+| Service Desk          | ✗           | ✓         |
 
 ### CI/CD and automation
 
@@ -126,17 +126,17 @@ Full CI/CD comparison in the next section.
 
 ### Registries
 
-| Feature | GitHub | GitLab |
-|---|---|---|
-| Container registry | ✓ | ✓ |
-| npm packages | ✓ | ✓ |
-| PyPI packages | ✗ | ✓ |
-| Maven packages | ✓ | ✓ |
-| NuGet packages | ✓ | ✓ |
-| Cargo (Rust) packages | ✗ | ✓ |
-| Composer (PHP) packages | ✗ | ✓ |
-| Helm charts | ✗ | ✓ |
-| Generic packages | ✗ | ✓ |
+| Feature                 | GitHub | GitLab |
+| ----------------------- | ------ | ------ |
+| Container registry      | ✓      | ✓      |
+| npm packages            | ✓      | ✓      |
+| PyPI packages           | ✗      | ✓      |
+| Maven packages          | ✓      | ✓      |
+| NuGet packages          | ✓      | ✓      |
+| Cargo (Rust) packages   | ✗      | ✓      |
+| Composer (PHP) packages | ✗      | ✓      |
+| Helm charts             | ✗      | ✓      |
+| Generic packages        | ✗      | ✓      |
 
 ---
 
@@ -146,11 +146,11 @@ CI/CD is where the platforms differ most clearly in both design and free tier ge
 
 ### Free compute minutes
 
-| | GitHub | GitLab |
-|---|---|---|
-| Free minutes (public repos) | Unlimited | Unlimited |
-| Free minutes (private, cloud runners) | **2,000/month** | **400/month** |
-| Self-hosted runners | Free, unlimited | Free, unlimited |
+|                                       | GitHub          | GitLab          |
+| ------------------------------------- | --------------- | --------------- |
+| Free minutes (public repos)           | Unlimited       | Unlimited       |
+| Free minutes (private, cloud runners) | **2,000/month** | **400/month**   |
+| Self-hosted runners                   | Free, unlimited | Free, unlimited |
 
 GitHub's 2,000 free minutes vs GitLab's 400 minutes is the most-cited advantage GitHub has over GitLab on the free tier. For teams that rely on shared runners for private repository CI/CD, GitHub gives five times more free execution. However, both platforms give unlimited free minutes when you use self-hosted runners.
 
@@ -189,6 +189,7 @@ run-tests:
 ```
 
 **Key differences:**
+
 - GitHub separates workflows into multiple files; GitLab uses one file with stages
 - GitHub uses community actions (`uses: actions/checkout@v4`); GitLab uses templates and components
 - GitHub Actions has a 10,000+ action marketplace; GitLab has a CI/CD Catalog with components
@@ -212,18 +213,18 @@ GitLab builds its integrations natively. SAST, DAST, dependency scanning - all r
 
 Security scanning is where GitLab has historically been strongest relative to GitHub.
 
-| Security feature | GitHub | GitLab |
-|---|---|---|
-| Secret detection (free) | ✓ Public repos free; Private requires Advanced Security | ✓ Free (all tiers) |
-| Secret push protection | ✓ Free for public; $49/committer for private | ✓ Free |
-| SAST | ✓ CodeQL (free for public; $49/committer for private) | ✓ Basic free; Advanced: Ultimate |
-| Dependency scanning | ✓ Dependabot (free) | ✓ Basic free; Advanced: Ultimate |
-| Container scanning | ✓ (Advanced Security) | ✓ Basic free |
-| DAST | ✗ (requires third-party) | ✓ Ultimate |
-| Fuzz testing | ✗ | ✓ Ultimate |
-| License compliance | ✓ (with Advanced Security) | ✓ Ultimate |
-| Vulnerability management dashboard | ✓ (Advanced Security) | ✓ Ultimate |
-| Security policies | ✓ (Advanced Security) | ✓ Ultimate |
+| Security feature                   | GitHub                                                  | GitLab                           |
+| ---------------------------------- | ------------------------------------------------------- | -------------------------------- |
+| Secret detection (free)            | ✓ Public repos free; Private requires Advanced Security | ✓ Free (all tiers)               |
+| Secret push protection             | ✓ Free for public; $49/committer for private            | ✓ Free                           |
+| SAST                               | ✓ CodeQL (free for public; $49/committer for private)   | ✓ Basic free; Advanced: Ultimate |
+| Dependency scanning                | ✓ Dependabot (free)                                     | ✓ Basic free; Advanced: Ultimate |
+| Container scanning                 | ✓ (Advanced Security)                                   | ✓ Basic free                     |
+| DAST                               | ✗ (requires third-party)                                | ✓ Ultimate                       |
+| Fuzz testing                       | ✗                                                       | ✓ Ultimate                       |
+| License compliance                 | ✓ (with Advanced Security)                              | ✓ Ultimate                       |
+| Vulnerability management dashboard | ✓ (Advanced Security)                                   | ✓ Ultimate                       |
+| Security policies                  | ✓ (Advanced Security)                                   | ✓ Ultimate                       |
 
 **GitHub Advanced Security cost**: $49 per active committer per month. For a team of 20 active developers, that is $980/month or nearly $12,000/year just for Advanced Security - on top of the base GitHub plan.
 
@@ -235,24 +236,24 @@ For organisations that need comprehensive security scanning, the actual cost com
 
 ## AI Features Comparison
 
-| Feature | GitHub Copilot | GitLab Duo |
-|---|---|---|
-| Code completion | ✓ (all tiers) | ✓ (Duo Core, included in Premium/Ultimate) |
-| Multi-line completion | ✓ | ✓ |
-| Chat assistant | ✓ (all tiers) | ✓ |
-| Inline chat | ✓ | ✓ |
-| Tests generation | ✓ | ✓ |
-| Explain code | ✓ | ✓ |
-| MR / PR summaries | ✓ Pro/Business | ✓ Duo Pro |
-| Agent mode (autonomous) | ✓ (agent mode) | ✓ Duo Agent Platform |
-| Pipeline failure analysis | ✗ | ✓ Duo Enterprise |
-| Vulnerability resolution | ✗ | ✓ Duo Enterprise |
-| Security analyst agent | ✗ | ✓ Duo Agent Platform |
-| Free tier AI | ✓ 2,000 completions/month | ✓ (credits system; Free users get some) |
-| Models | OpenAI GPT-4 family | Anthropic Claude, Google Vertex AI, Fireworks Codestral |
-| Privacy (no training on your code) | ✓ (configurable) | ✓ (zero-day retention) |
-| Self-hosted AI models | ✗ | ✓ (Duo Enterprise, 17.9+) |
-| IDE support | VS Code, JetBrains, Vim, Neovim, many | VS Code, JetBrains, Visual Studio, Neovim |
+| Feature                            | GitHub Copilot                        | GitLab Duo                                              |
+| ---------------------------------- | ------------------------------------- | ------------------------------------------------------- |
+| Code completion                    | ✓ (all tiers)                         | ✓ (Duo Core, included in Premium/Ultimate)              |
+| Multi-line completion              | ✓                                     | ✓                                                       |
+| Chat assistant                     | ✓ (all tiers)                         | ✓                                                       |
+| Inline chat                        | ✓                                     | ✓                                                       |
+| Tests generation                   | ✓                                     | ✓                                                       |
+| Explain code                       | ✓                                     | ✓                                                       |
+| MR / PR summaries                  | ✓ Pro/Business                        | ✓ Duo Pro                                               |
+| Agent mode (autonomous)            | ✓ (agent mode)                        | ✓ Duo Agent Platform                                    |
+| Pipeline failure analysis          | ✗                                     | ✓ Duo Enterprise                                        |
+| Vulnerability resolution           | ✗                                     | ✓ Duo Enterprise                                        |
+| Security analyst agent             | ✗                                     | ✓ Duo Agent Platform                                    |
+| Free tier AI                       | ✓ 2,000 completions/month             | ✓ (credits system; Free users get some)                 |
+| Models                             | OpenAI GPT-4 family                   | Anthropic Claude, Google Vertex AI, Fireworks Codestral |
+| Privacy (no training on your code) | ✓ (configurable)                      | ✓ (zero-day retention)                                  |
+| Self-hosted AI models              | ✗                                     | ✓ (Duo Enterprise, 17.9+)                               |
+| IDE support                        | VS Code, JetBrains, Vim, Neovim, many | VS Code, JetBrains, Visual Studio, Neovim               |
 
 **Key difference**: GitHub Copilot is primarily a code completion and chat tool. GitLab Duo integrates AI across the entire software development lifecycle - not just writing code but planning work, reviewing merge requests, diagnosing failed pipelines, analysing security vulnerabilities and executing multi-step agentic tasks. Copilot is more mature and more widely adopted among individual developers. Duo is more integrated and more useful for enterprise DevSecOps workflows.
 
@@ -262,31 +263,31 @@ For organisations that need comprehensive security scanning, the actual cost com
 
 ### Base plan pricing (April 2026)
 
-| | GitHub | GitLab |
-|---|---|---|
-| Free | $0 (2,000 CI mins, unlimited private repos, unlimited collaborators) | $0 (400 CI mins, unlimited repos, 5 users/private group) |
-| Team / Premium | $4/user/month | $29/user/month |
-| Enterprise / Ultimate | $21/user/month | ~$99/user/month (contact sales) |
-| AI add-on | Copilot Business: $19/user/month | Duo Pro: $19/user/month; Duo Enterprise: $39/user/month |
-| Advanced Security | $49/active committer/month | Included in Ultimate |
+|                       | GitHub                                                               | GitLab                                                   |
+| --------------------- | -------------------------------------------------------------------- | -------------------------------------------------------- |
+| Free                  | $0 (2,000 CI mins, unlimited private repos, unlimited collaborators) | $0 (400 CI mins, unlimited repos, 5 users/private group) |
+| Team / Premium        | $4/user/month                                                        | $29/user/month                                           |
+| Enterprise / Ultimate | $21/user/month                                                       | ~$99/user/month (contact sales)                          |
+| AI add-on             | Copilot Business: $19/user/month                                     | Duo Pro: $19/user/month; Duo Enterprise: $39/user/month  |
+| Advanced Security     | $49/active committer/month                                           | Included in Ultimate                                     |
 
 ### Real-world cost comparison
 
 For a **10-person development team** that needs CI/CD, basic security scanning and project management:
 
-| Scenario | GitHub | GitLab |
-|---|---|---|
-| Free tiers only | $0 (2,000 mins/month) | $0 (400 mins/month, 5-user group limit blocks this) |
-| Team plan only | $40/month | $290/month |
-| With Copilot / Duo Pro | $230/month ($40 + $190) | $480/month ($290 + $190) |
-| With full security | $720/month (+ Adv. Security) | $990/month (Ultimate, includes security) |
+| Scenario               | GitHub                       | GitLab                                              |
+| ---------------------- | ---------------------------- | --------------------------------------------------- |
+| Free tiers only        | $0 (2,000 mins/month)        | $0 (400 mins/month, 5-user group limit blocks this) |
+| Team plan only         | $40/month                    | $290/month                                          |
+| With Copilot / Duo Pro | $230/month ($40 + $190)      | $480/month ($290 + $190)                            |
+| With full security     | $720/month (+ Adv. Security) | $990/month (Ultimate, includes security)            |
 
 For a **50-person team** needing full DevSecOps including SAST, DAST and vulnerability management:
 
-| | GitHub Enterprise + Adv. Security + Copilot Business | GitLab Ultimate + Duo Pro |
-|---|---|---|
-| Monthly | $4,450 ($21 + $49 + $19 × 50 users) | $5,400 ($99 + $19 × 50 + a few rounding differences) |
-| Approximate annual | $53,400 | $64,800 |
+|                    | GitHub Enterprise + Adv. Security + Copilot Business | GitLab Ultimate + Duo Pro                            |
+| ------------------ | ---------------------------------------------------- | ---------------------------------------------------- |
+| Monthly            | $4,450 ($21 + $49 + $19 × 50 users)                  | $5,400 ($99 + $19 × 50 + a few rounding differences) |
+| Approximate annual | $53,400                                              | $64,800                                              |
 
 These are list prices. Both GitHub and GitLab negotiate enterprise deals that can significantly reduce actual costs. GitLab in particular has significant discounts for multi-year commitments (15-30% per Vendr data).
 
@@ -336,14 +337,14 @@ Installation options: Linux package (Omnibus, most common), Docker, Kubernetes H
 
 **GitHub Enterprise Server (GHES)** is GitHub's self-hosted option. It costs **$21/user/month** - there is no free self-hosted option from GitHub. GHES gives you GitHub's interface and features running on your own infrastructure, with the same code review, Actions and security tools.
 
-| | GitLab self-managed | GitHub Enterprise Server |
-|---|---|---|
-| Free self-hosted option | ✓ GitLab CE (MIT licence) | ✗ |
-| Cost for self-hosted | $0 (CE) / $29/user Premium / $99/user Ultimate | $21/user/month |
-| Minimum server requirements | 4 vCPU / 8 GB RAM (constrained) | 8 vCPU / 16 GB RAM |
-| Air-gapped installation | ✓ | ✓ |
-| LDAP/AD integration | ✓ | ✓ |
-| SAML SSO | ✓ (Premium) | ✓ |
+|                             | GitLab self-managed                            | GitHub Enterprise Server |
+| --------------------------- | ---------------------------------------------- | ------------------------ |
+| Free self-hosted option     | ✓ GitLab CE (MIT licence)                      | ✗                        |
+| Cost for self-hosted        | $0 (CE) / $29/user Premium / $99/user Ultimate | $21/user/month           |
+| Minimum server requirements | 4 vCPU / 8 GB RAM (constrained)                | 8 vCPU / 16 GB RAM       |
+| Air-gapped installation     | ✓                                              | ✓                        |
+| LDAP/AD integration         | ✓                                              | ✓                        |
+| SAML SSO                    | ✓ (Premium)                                    | ✓                        |
 
 For organisations that need on-premises code hosting for compliance, air-gap or data sovereignty reasons, GitLab CE removes the per-user licensing cost entirely. This is the primary reason government agencies, defence contractors and regulated enterprises often choose GitLab.
 
@@ -351,15 +352,15 @@ For organisations that need on-premises code hosting for compliance, air-gap or 
 
 ## Community and Ecosystem
 
-| | GitHub | GitLab |
-|---|---|---|
-| Total registered users | 100M+ developers | 40M+ registered users |
-| Open source projects | Vast majority of major OSS | Growing; GNOME, KDE, freedesktop.org |
-| Developer mindshare | Dominant (Stack Overflow survey) | Stronger in enterprise and regulated industries |
-| Actions/integrations marketplace | 10,000+ Actions | CI/CD Catalog (growing); fewer integrations |
-| Forum/community | GitHub Discussions | No equivalent |
-| Profile visibility | Developer portfolios (stars, contributions) | Less portfolio-focused |
-| Sponsor developers | ✓ GitHub Sponsors | ✗ |
+|                                  | GitHub                                      | GitLab                                          |
+| -------------------------------- | ------------------------------------------- | ----------------------------------------------- |
+| Total registered users           | 100M+ developers                            | 40M+ registered users                           |
+| Open source projects             | Vast majority of major OSS                  | Growing; GNOME, KDE, freedesktop.org            |
+| Developer mindshare              | Dominant (Stack Overflow survey)            | Stronger in enterprise and regulated industries |
+| Actions/integrations marketplace | 10,000+ Actions                             | CI/CD Catalog (growing); fewer integrations     |
+| Forum/community                  | GitHub Discussions                          | No equivalent                                   |
+| Profile visibility               | Developer portfolios (stars, contributions) | Less portfolio-focused                          |
+| Sponsor developers               | ✓ GitHub Sponsors                           | ✗                                               |
 
 **GitHub's community advantage is real and significant.** When hiring developers, a GitHub profile is a far more common portfolio reference than GitLab. The open source community is overwhelmingly on GitHub. Stack Overflow's 2025 developer survey confirms GitHub's continued dominance among individual developers and open source contributors.
 
@@ -369,16 +370,16 @@ GitLab's community is strong inside corporate firewalls and government networks.
 
 ## Platform Availability
 
-| Surface | GitHub | GitLab |
-|---|---|---|
-| Web interface | ✓ github.com | ✓ gitlab.com |
-| Desktop app | ✓ GitHub Desktop | ✗ No official desktop app |
-| Mobile app | ✓ iOS and Android | ✓ iOS and Android |
-| CLI | ✓ `gh` | ✓ `glab` |
-| VS Code extension | ✓ GitHub Pull Requests | ✓ GitLab Workflow |
-| JetBrains plugin | ✓ GitHub | ✓ GitLab Duo |
-| Neovim plugin | ✓ Various | ✓ gitlab.nvim |
-| Self-hosted option | ✓ GitHub Enterprise Server | ✓ GitLab CE/EE |
+| Surface            | GitHub                     | GitLab                    |
+| ------------------ | -------------------------- | ------------------------- |
+| Web interface      | ✓ github.com               | ✓ gitlab.com              |
+| Desktop app        | ✓ GitHub Desktop           | ✗ No official desktop app |
+| Mobile app         | ✓ iOS and Android          | ✓ iOS and Android         |
+| CLI                | ✓ `gh`                     | ✓ `glab`                  |
+| VS Code extension  | ✓ GitHub Pull Requests     | ✓ GitLab Workflow         |
+| JetBrains plugin   | ✓ GitHub                   | ✓ GitLab Duo              |
+| Neovim plugin      | ✓ Various                  | ✓ gitlab.nvim             |
+| Self-hosted option | ✓ GitHub Enterprise Server | ✓ GitLab CE/EE            |
 
 One notable gap: GitLab has no desktop application equivalent to GitHub Desktop. If your team uses a GUI Git client and wants deep platform integration, GitHub Desktop provides pull request management, branch creation and basic repository management in a native app. GitLab users rely on the web interface, IDE extensions or third-party Git clients like GitKraken, Tower or Sourcetree (which support both platforms).
 
@@ -410,7 +411,7 @@ GitHub is the stronger choice when:
 
 **Ecosystem flexibility matters most.** If you need to integrate with dozens of SaaS services and you want community-maintained integrations rather than building custom automation, GitHub's Actions marketplace is unmatched in breadth.
 
-**Cost at small scale is a primary concern.** For a two-person startup, GitHub's free tier gives 2,000 CI minutes, unlimited collaborators on private repos, and free required reviews. GitLab's free tier limits your private group to five users and gives only 400 minutes. At this scale GitHub's free tier is simply more generous.
+**Cost at small scale is a primary concern.** For a two-person startup, GitHub's free tier gives 2,000 CI minutes, unlimited collaborators on private repos and free required reviews. GitLab's free tier limits your private group to five users and gives only 400 minutes. At this scale GitHub's free tier is simply more generous.
 
 **Developer recruiting and visibility matter.** If you are a startup trying to attract developer talent, having your work on GitHub (where developers expect to find portfolios) has a real advantage. A GitHub profile is a standard part of a developer's professional identity in a way that GitLab profiles are not yet.
 
@@ -448,11 +449,13 @@ GitLab's repository mirroring is configured at: Settings → Repository → Mirr
 **Compare the `.yml` formats:**
 
 Look at a real GitHub Actions workflow:
+
 ```
 https://github.com/vercel/next.js/tree/canary/.github/workflows
 ```
 
 Look at a real GitLab CI/CD configuration:
+
 ```
 https://gitlab.com/gitlab-org/gitlab/-/blob/master/.gitlab-ci.yml
 ```

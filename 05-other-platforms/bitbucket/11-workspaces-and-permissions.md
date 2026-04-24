@@ -4,7 +4,7 @@
 
 A workspace is the top-level organisational container in Bitbucket. Everything lives inside a workspace: repositories, projects, members, billing and settings. Understanding how workspaces are structured and how permissions cascade through them is essential for anyone administering Bitbucket for a team - whether that team has five developers or five hundred.
 
-This file covers the complete workspace and permissions model: how workspaces are created and configured, how groups simplify access management, how roles work at workspace and repository level, how permissions cascade from workspace to project to repository, and how to structure access control for common team configurations.
+This file covers the complete workspace and permissions model: how workspaces are created and configured, how groups simplify access management, how roles work at workspace and repository level, how permissions cascade from workspace to project to repository and how to structure access control for common team configurations.
 
 ---
 
@@ -139,6 +139,7 @@ Members cannot access repositories they have not been granted access to. They ca
 ### Choosing between roles
 
 For a typical software team:
+
 - **Owner**: CTO, VP of Engineering, or designated account administrator
 - **Admin**: Engineering managers, team leads, DevOps engineers who manage repository setup
 - **Member**: All developers, QA engineers, designers, anyone who needs repository access
@@ -147,7 +148,7 @@ For a typical software team:
 
 ## Groups
 
-Groups are named collections of members. They are the right tool for managing access to multiple repositories for a set of people. Instead of granting 10 developers access to 20 repositories individually (200 permission entries), create a group, add 10 developers, and grant the group access to 20 repositories (30 entries).
+Groups are named collections of members. They are the right tool for managing access to multiple repositories for a set of people. Instead of granting 10 developers access to 20 repositories individually (200 permission entries), create a group, add 10 developers and grant the group access to 20 repositories (30 entries).
 
 ### Creating a group
 
@@ -176,12 +177,14 @@ Members added to a group inherit all permissions that group has been granted on 
 Groups are granted access at the repository level or project level:
 
 **Repository level:**
+
 1. Open the repository
 2. Go to **Repository settings** > **User and group access**
 3. Under **Group access**, click **Add a group**
 4. Select the group and choose the permission level (Read, Write, Admin)
 
 **Project level:**
+
 1. Open the project
 2. Go to **Project settings** > **User and group access**
 3. Add the group with the appropriate permission level
@@ -205,11 +208,11 @@ Projects are an optional grouping layer between the workspace and individual rep
 
 When you grant a user or group access to a project, every repository in that project inherits that permission. The permission levels mirror repository permissions:
 
-| Project permission | Equivalent to |
-|---|---|
-| Read | Repository Read |
-| Write | Repository Write |
-| Admin | Repository Admin |
+| Project permission | Equivalent to    |
+| ------------------ | ---------------- |
+| Read               | Repository Read  |
+| Write              | Repository Write |
+| Admin              | Repository Admin |
 
 A group granted **Write** on a project can push to, pull from and create pull requests on every repository in that project, without needing individual repository permissions.
 
@@ -224,12 +227,14 @@ Projects have their own settings accessible from the project page > **Project se
 ### When to use projects
 
 **Use projects when:**
+
 - Your workspace has 20+ repositories
 - Multiple teams work in the same workspace and need separate access scopes
 - You want to grant a team access to all their repositories at once
 - You want consistent default settings across a group of related repositories
 
 **Skip projects when:**
+
 - Your workspace has fewer than 10 repositories
 - All repositories are accessed by the same team
 - The overhead of managing an extra layer is not justified
@@ -242,10 +247,10 @@ Repository permissions are the most granular level of access control. They can b
 
 ### Repository permission levels
 
-| Level | Can do |
-|---|---|
-| **Read** | View repository, clone, fetch, view pull requests and issues |
-| **Write** | Everything in Read, plus push commits, create branches, create pull requests |
+| Level     | Can do                                                                                     |
+| --------- | ------------------------------------------------------------------------------------------ |
+| **Read**  | View repository, clone, fetch, view pull requests and issues                               |
+| **Write** | Everything in Read, plus push commits, create branches, create pull requests               |
 | **Admin** | Everything in Write, plus manage repository settings, delete the repository, manage access |
 
 ### Granting direct repository access
@@ -270,6 +275,7 @@ If a user has Read via a group and Write via direct access, they have Write. The
 ### Removing access
 
 To remove a user's access to a specific repository:
+
 1. Go to **Repository settings** > **User and group access**
 2. Find the user or group
 3. Click **Remove** or change the permission level
@@ -301,6 +307,7 @@ Higher-level permissions are not overridden by lower-level restrictions. If a us
 **Problem:** Because the Backend Team group has project-level Write, all backend team members can access the sensitive repository.
 
 **Solution options:**
+
 1. Move the sensitive repository out of the "Backend" project to no project, and grant only the two seniors direct access. Remove the repo from the project so it no longer inherits project permissions.
 2. Create a separate project for the sensitive repository with its own access controls.
 
@@ -336,6 +343,7 @@ Invited users who have not yet accepted appear in a "Pending" section of the mem
 3. Click the **...** menu > **Remove from workspace**
 
 Removing a member:
+
 - Revokes all their access to workspace repositories immediately
 - Removes them from all groups
 - Does not delete any code they committed (Git history is preserved)
@@ -362,6 +370,7 @@ Automated systems (CI/CD pipelines, deployment scripts, bots) that need to acces
 ### Why service accounts matter
 
 If CI/CD uses a developer's personal API token:
+
 - When the developer leaves and their account is deactivated, the CI/CD breaks
 - The developer's token has access to everything they can access personally, not just what CI/CD needs
 - There is no clear audit trail separating the developer's actions from the automation's actions
@@ -390,54 +399,54 @@ A complete reference of workspace settings and what they control:
 
 ### Overview settings
 
-| Setting | What it controls |
-|---|---|
-| Workspace name | The display name shown in the UI |
-| Workspace slug | The URL identifier (bitbucket.org/slug) |
-| Avatar | The workspace logo or icon |
-| Description | A short text description of the workspace |
+| Setting        | What it controls                          |
+| -------------- | ----------------------------------------- |
+| Workspace name | The display name shown in the UI          |
+| Workspace slug | The URL identifier (bitbucket.org/slug)   |
+| Avatar         | The workspace logo or icon                |
+| Description    | A short text description of the workspace |
 
 ### Member settings
 
-| Setting | What it controls |
-|---|---|
-| Member list | All current members and their roles |
-| Pending invites | Invitations awaiting acceptance |
-| Default role | Role assigned to new members (always Member; cannot change) |
+| Setting         | What it controls                                            |
+| --------------- | ----------------------------------------------------------- |
+| Member list     | All current members and their roles                         |
+| Pending invites | Invitations awaiting acceptance                             |
+| Default role    | Role assigned to new members (always Member; cannot change) |
 
 ### Group settings
 
-| Setting | What it controls |
-|---|---|
-| Group list | All groups in the workspace |
-| Group members | Members in each group |
-| Group access | Which repos/projects each group can access |
+| Setting       | What it controls                           |
+| ------------- | ------------------------------------------ |
+| Group list    | All groups in the workspace                |
+| Group members | Members in each group                      |
+| Group access  | Which repos/projects each group can access |
 
 ### Plan and billing
 
-| Setting | What it controls |
-|---|---|
-| Current plan | Free, Standard or Premium |
-| Billing cycle | Monthly or annual (annual is discounted) |
-| Payment method | Credit card or invoice |
-| Usage | Current month's pipeline minutes, storage used |
-| User count | Number of active workspace members |
+| Setting        | What it controls                               |
+| -------------- | ---------------------------------------------- |
+| Current plan   | Free, Standard or Premium                      |
+| Billing cycle  | Monthly or annual (annual is discounted)       |
+| Payment method | Credit card or invoice                         |
+| Usage          | Current month's pipeline minutes, storage used |
+| User count     | Number of active workspace members             |
 
 ### Security settings
 
-| Setting | Plan required | What it controls |
-|---|---|---|
-| Two-step verification enforcement | Free | Require all members to have 2FA |
-| IP allowlisting | Premium | Restrict access to specific IP ranges |
-| Audit log | Premium | Full event history for compliance |
+| Setting                           | Plan required | What it controls                      |
+| --------------------------------- | ------------- | ------------------------------------- |
+| Two-step verification enforcement | Free          | Require all members to have 2FA       |
+| IP allowlisting                   | Premium       | Restrict access to specific IP ranges |
+| Audit log                         | Premium       | Full event history for compliance     |
 
 ### Integration settings
 
-| Setting | What it controls |
-|---|---|
-| Jira Software | Connect to a Jira site for development panel integration |
-| Slack | Connect Slack for notifications |
-| Identity providers | SAML SSO configuration (via Guard) |
+| Setting            | What it controls                                         |
+| ------------------ | -------------------------------------------------------- |
+| Jira Software      | Connect to a Jira site for development panel integration |
+| Slack              | Connect Slack for notifications                          |
+| Identity providers | SAML SSO configuration (via Guard)                       |
 
 ---
 

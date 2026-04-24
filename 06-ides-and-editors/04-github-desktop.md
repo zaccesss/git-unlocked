@@ -92,7 +92,7 @@ flatpak install flathub io.github.shiftey.Desktop
 
 ## 3. Signing in and setting up
 
-On first launch, GitHub Desktop asks you to sign in to GitHub. You can sign in to multiple accounts simultaneously - GitHub.com, GitHub Enterprise Server instances, and other domains are all supported since the multi-domain feature was added in v3.5.0.
+On first launch, GitHub Desktop asks you to sign in to GitHub. You can sign in to multiple accounts simultaneously - GitHub.com, GitHub Enterprise Server instances and other domains are all supported since the multi-domain feature was added in v3.5.0.
 
 After signing in, configure your name and email address for commits if they are not already in your global Git config. GitHub Desktop reads from `~/.gitconfig` and shows your existing settings. You can override them per repository in `File > Options > Git` (Windows/Linux) or `GitHub Desktop > Settings > Git` (Mac).
 
@@ -107,20 +107,24 @@ After signing in, configure your name and email address for commits if they are 
 GitHub Desktop has a deliberately simple interface with four main areas:
 
 **The toolbar** at the top shows:
+
 - The current repository (click to switch repositories)
 - The current branch (click to switch or create branches)
 - **Fetch/Push/Pull** button showing sync status
 - **Open in Editor** and **View on GitHub** buttons
 
 **The left panel** has two tabs:
+
 - **Changes** - files modified in the working tree, with checkboxes for including/excluding from the next commit
 - **History** - the commit log for the current branch
 
 **The right panel** shows:
+
 - In Changes tab: the diff for the selected file
 - In History tab: the diff for the selected commit and the list of files it changed
 
 **The commit area** at the bottom of the left panel (visible in Changes tab) contains:
+
 - A **Summary** input for the commit message subject line
 - An optional **Description** input for the commit body
 - The **Commit to [branch]** button
@@ -305,6 +309,7 @@ If you use a tool like Husky, Lefthook or pre-commit (Python), they install hook
 **Forking**: when you clone a repository you do not own and do not have push access to, GitHub Desktop detects this and asks whether you want to fork it to your own account. Clicking **Fork This Repository** creates a fork on GitHub and sets up the remote correctly.
 
 **Contributing to a fork**: after forking, GitHub Desktop uses the standard fork-and-PR workflow:
+
 1. Create a feature branch from the fork's default branch
 2. Make changes and commit
 3. Push the branch to your fork
@@ -329,22 +334,22 @@ The shiftkey fork includes all features of the official release including Copilo
 
 ## 18. Keyboard shortcuts
 
-| Action | Windows/Linux | Mac |
-|---|---|---|
-| Switch to Changes tab | `Ctrl+1` | `Cmd+1` |
-| Switch to History tab | `Ctrl+2` | `Cmd+2` |
-| Commit | `Ctrl+Enter` | `Cmd+Enter` |
-| Push | `Ctrl+P` | `Cmd+P` |
-| Pull | `Ctrl+Shift+P` | `Cmd+Shift+P` |
-| Fetch | `Ctrl+Shift+T` | `Cmd+Shift+T` |
-| New branch | `Ctrl+Shift+N` | `Cmd+Shift+N` |
-| Switch repository | `Ctrl+B` | `Cmd+B` |
-| Stash changes | `Ctrl+Shift+S` | `Cmd+Shift+S` |
-| Preferences / Settings | `Ctrl+,` | `Cmd+,` |
-| Open in editor | `Ctrl+Shift+A` | `Cmd+Shift+A` |
-| Open in shell | `Ctrl+\`` | `Cmd+\`` |
-| View on GitHub | `Ctrl+Shift+G` | `Cmd+Shift+G` |
-| Undo last commit | `Ctrl+Z` | `Cmd+Z` |
+| Action                 | Windows/Linux  | Mac           |
+| ---------------------- | -------------- | ------------- |
+| Switch to Changes tab  | `Ctrl+1`       | `Cmd+1`       |
+| Switch to History tab  | `Ctrl+2`       | `Cmd+2`       |
+| Commit                 | `Ctrl+Enter`   | `Cmd+Enter`   |
+| Push                   | `Ctrl+P`       | `Cmd+P`       |
+| Pull                   | `Ctrl+Shift+P` | `Cmd+Shift+P` |
+| Fetch                  | `Ctrl+Shift+T` | `Cmd+Shift+T` |
+| New branch             | `Ctrl+Shift+N` | `Cmd+Shift+N` |
+| Switch repository      | `Ctrl+B`       | `Cmd+B`       |
+| Stash changes          | `Ctrl+Shift+S` | `Cmd+Shift+S` |
+| Preferences / Settings | `Ctrl+,`       | `Cmd+,`       |
+| Open in editor         | `Ctrl+Shift+A` | `Cmd+Shift+A` |
+| Open in shell          | `Ctrl+\``      | `Cmd+\``      |
+| View on GitHub         | `Ctrl+Shift+G` | `Cmd+Shift+G` |
+| Undo last commit       | `Ctrl+Z`       | `Cmd+Z`       |
 
 ---
 
@@ -374,7 +379,7 @@ Find a public open-source repository on GitHub that accepts contributions. In Gi
 
 ## 20. Common Mistakes
 
-Assuming GitHub Desktop has parity with VS Code or JetBrains for advanced Git operations is a common misconception. GitHub Desktop deliberately omits interactive rebase, the blame view, the full commit graph, stash management beyond one slot, and submodule support. It is designed to cover the common daily workflow cleanly, not to be a complete Git client. For anything outside its scope, use the **Open in Shell** button to drop into a terminal.
+Assuming GitHub Desktop has parity with VS Code or JetBrains for advanced Git operations is a common misconception. GitHub Desktop deliberately omits interactive rebase, the blame view, the full commit graph, stash management beyond one slot and submodule support. It is designed to cover the common daily workflow cleanly, not to be a complete Git client. For anything outside its scope, use the **Open in Shell** button to drop into a terminal.
 
 Forgetting to check individual lines leads to committing unrelated changes together. GitHub Desktop makes line-level staging visual and accessible - use it. Committing everything at once because it is faster produces a messier history that is harder to review and harder to revert.
 
@@ -388,7 +393,7 @@ Using the Linux shiftkey fork without checking its release version occasionally 
 
 ## 21. Summary
 
-GitHub Desktop is a free, open-source, cross-platform Git client focused on clarity and ease of use. It covers cloning, repository creation, line-level staging with checkboxes and image diffs, Copilot commit message generation, branching and merging, push and pull with automatic background fetching, history browsing, merge conflict resolution with external editor integration, a single-slot stash, drag-and-drop cherry-pick, pull request creation and checkout, Git hooks support (fixed in v3.5.5), and forking for open-source contributions. It does not try to expose every Git feature - interactive rebase, multi-stash management, blame, and a full commit graph are outside its scope. For those workflows, use the integrated terminal or switch to a more complete client like GitKraken, Sourcetree, or the Git integration in VS Code or a JetBrains IDE. Linux users need the community-maintained shiftkey fork rather than the official build.
+GitHub Desktop is a free, open-source, cross-platform Git client focused on clarity and ease of use. It covers cloning, repository creation, line-level staging with checkboxes and image diffs, Copilot commit message generation, branching and merging, push and pull with automatic background fetching, history browsing, merge conflict resolution with external editor integration, a single-slot stash, drag-and-drop cherry-pick, pull request creation and checkout, Git hooks support (fixed in v3.5.5), and forking for open-source contributions. It does not try to expose every Git feature - interactive rebase, multi-stash management, blame and a full commit graph are outside its scope. For those workflows, use the integrated terminal or switch to a more complete client like GitKraken, Sourcetree or the Git integration in VS Code or a JetBrains IDE. Linux users need the community-maintained shiftkey fork rather than the official build.
 
 ---
 

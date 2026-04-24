@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 5 minutes
 
-How git-unlocked is organised, where to start, and how to get the most out of it.
+How git-unlocked is organised, where to start and how to get the most out of it.
 
 ---
 

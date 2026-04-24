@@ -180,7 +180,7 @@ trufflehog docker --image ghcr.io/org/image:tag --only-verified
 name: trufflehog scan
 on:
   schedule:
-    - cron: '0 2 * * 1'   # every Monday at 2 AM
+    - cron: "0 2 * * 1" # every Monday at 2 AM
   workflow_dispatch:
 jobs:
   scan:
@@ -219,14 +219,14 @@ repos:
     rev: v1.5.0
     hooks:
       - id: detect-secrets
-        args: ['--baseline', '.secrets.baseline']
+        args: ["--baseline", ".secrets.baseline"]
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
       - id: detect-private-key
       - id: check-added-large-files
-        args: ['--maxkb=500']
+        args: ["--maxkb=500"]
       - id: check-merge-conflict
       - id: no-commit-to-branch
         args: [--branch, main, --branch, master]
@@ -281,7 +281,7 @@ Available on **Ultimate tier**. General availability reached in GitLab **17.5**.
 
 ### detect-secrets (Yelp) 🟡
 
-**Current version: v1.5.0**. detect-secrets uses a **baseline-driven** workflow: you scan once, review and mark every finding as a known true or false positive, commit the baseline file, and CI only fails on new secrets introduced after the baseline.
+**Current version: v1.5.0**. detect-secrets uses a **baseline-driven** workflow: you scan once, review and mark every finding as a known true or false positive, commit the baseline file and CI only fails on new secrets introduced after the baseline.
 
 ```bash
 pip install detect-secrets
@@ -493,7 +493,7 @@ jobs:
       # ...build step produces ./dist/app...
       - uses: actions/attest-build-provenance@v1
         with:
-          subject-path: 'dist/app'
+          subject-path: "dist/app"
 ```
 
 **Verify:**
@@ -582,8 +582,8 @@ permissions:
 steps:
   - uses: actions/setup-node@v4
     with:
-      node-version: '22'
-      registry-url: 'https://registry.npmjs.org'
+      node-version: "22"
+      registry-url: "https://registry.npmjs.org"
   - run: npm ci && npm publish --access public
     # No NPM_TOKEN needed - OIDC handles it
 ```
@@ -749,11 +749,11 @@ export SOPS_AGE_KEY_FILE=~/.config/sops/age/keys.txt
 ```yaml
 creation_rules:
   - path_regex: secrets/dev/.*\.yaml$
-    encrypted_regex: '^(data|stringData)$'
+    encrypted_regex: "^(data|stringData)$"
     age: age1ql3z7hjy54pw3pywairh23suapme6h37yjgl2...
 
   - path_regex: secrets/prod/.*\.yaml$
-    kms: 'arn:aws:kms:us-west-2:111122223333:key/abc'
+    kms: "arn:aws:kms:us-west-2:111122223333:key/abc"
     age: age129h70qwxnjsscal...
 ```
 
@@ -888,15 +888,15 @@ git config --global credential.protectProtocol true
 
 ## Platform security features
 
-| Feature | GitHub | GitLab | Gitea/Forgejo | Bitbucket | Azure DevOps |
-|---|---|---|---|---|---|
-| Branch protection | Rulesets (stacking, org-wide) | Branch rules + push rules | Per-repo (Enterprise adds inheritance) | Branch restrictions + project defaults | Branch policies |
-| Require signed commits | Ruleset rule | Push rule (Premium+) | Ruleset option | Hooks only | Not native |
-| Secret scanning | Free on public repos | Pipeline (all tiers); push protection (Ultimate) | None (use Actions) | Snyk add-on | Via GHAzDO |
-| SAST | CodeQL (public free / Code Security $30 private) | Semgrep (all); Advanced SAST (Ultimate) | None | Snyk | CodeQL via GHAzDO |
-| Dependency scanning | Dependabot (free) | Gemnasium (Ultimate UI) | Enterprise | Snyk built-in | GHAzDO |
-| Push protection | Default on public repos; Secret Protection $19 private | Ultimate GA 17.5 | None | None | GHAzDO |
-| OIDC for CI | GitHub Actions OIDC | GitLab CI OIDC | Via Actions | Pipelines OIDC | Federated workload identity |
+| Feature                | GitHub                                                 | GitLab                                           | Gitea/Forgejo                          | Bitbucket                              | Azure DevOps                |
+| ---------------------- | ------------------------------------------------------ | ------------------------------------------------ | -------------------------------------- | -------------------------------------- | --------------------------- |
+| Branch protection      | Rulesets (stacking, org-wide)                          | Branch rules + push rules                        | Per-repo (Enterprise adds inheritance) | Branch restrictions + project defaults | Branch policies             |
+| Require signed commits | Ruleset rule                                           | Push rule (Premium+)                             | Ruleset option                         | Hooks only                             | Not native                  |
+| Secret scanning        | Free on public repos                                   | Pipeline (all tiers); push protection (Ultimate) | None (use Actions)                     | Snyk add-on                            | Via GHAzDO                  |
+| SAST                   | CodeQL (public free / Code Security $30 private)       | Semgrep (all); Advanced SAST (Ultimate)          | None                                   | Snyk                                   | CodeQL via GHAzDO           |
+| Dependency scanning    | Dependabot (free)                                      | Gemnasium (Ultimate UI)                          | Enterprise                             | Snyk built-in                          | GHAzDO                      |
+| Push protection        | Default on public repos; Secret Protection $19 private | Ultimate GA 17.5                                 | None                                   | None                                   | GHAzDO                      |
+| OIDC for CI            | GitHub Actions OIDC                                    | GitLab CI OIDC                                   | Via Actions                            | Pipelines OIDC                         | Federated workload identity |
 
 ### GitHub security features 🟡
 
@@ -939,6 +939,7 @@ GA since October 2023, cloud-only (no ADO Server support). Pricing matches GitHu
 Attackers retroactively moved every tag (v1 through v45.0.7) of `tj-actions/changed-files` to a single malicious commit that dumped runner process memory - including secrets - into public workflow logs. The initial pivot was a stolen PAT from a related action (`reviewdog/action-setup`). Roughly 23,000 consumer repositories were affected. Repositories pinned to a full commit SHA were unaffected.
 
 **Lessons:**
+
 - Pin every GitHub Action by full commit SHA, never by tag
 - Use `GITHUB_TOKEN` with minimal `permissions:` blocks
 - Add `gitleaks` or `trufflehog` scans so leaked secrets trigger alerts
@@ -949,6 +950,7 @@ Attackers retroactively moved every tag (v1 through v45.0.7) of `tj-actions/chan
 Malicious versions of `nx` (20.9.0-20.12.0 and 21.5.0-21.8.0) contained a `postinstall` script that harvested GitHub PATs, npm tokens, SSH keys, `.env`, `.npmrc` and crypto wallets, then pushed them to public repositories using the stolen tokens. About 5,500 private repositories were flipped public. The initial attack vector was a vulnerable `pull_request_target` workflow that exfiltrated the npm publish token.
 
 **Lessons:**
+
 - Use OIDC Trusted Publishing for npm - no long-lived token to steal
 - Never combine `pull_request_target` with a checkout of the PR's code
 - Use `npm ci --ignore-scripts` in CI to prevent `postinstall` attacks
@@ -959,6 +961,7 @@ Malicious versions of `nx` (20.9.0-20.12.0 and 21.5.0-21.8.0) contained a `posti
 A multi-year social engineering campaign resulted in a CVSS 10.0 sshd backdoor injected via tarball-only files invisible to Git history. The attacker built trust over ~2.6 years and ~750 legitimate contributions.
 
 **Lessons:**
+
 - Reproducible builds from Git (not tarballs) make tarball-only injections detectable
 - Diverse maintainer pools and scepticism toward urgent pressure to merge
 - Scrutiny on binary test fixtures and build system files
@@ -968,6 +971,7 @@ A multi-year social engineering campaign resulted in a CVSS 10.0 sshd backdoor i
 A plaintext GitLab authentication token was exposed on a public developer host for approximately 22 months. After the initial breach, the attacker used a Zendesk token found in the downloaded source to exfiltrate 800,000 support tickets 11 days later.
 
 **Lessons:**
+
 - Pre-commit secret scanning and push protection on self-hosted forges
 - Mandatory rotation on any suspected exposure - do not wait for confirmation
 - Audit all tokens, not just the one that was obviously compromised
@@ -977,6 +981,7 @@ A plaintext GitLab authentication token was exposed on a public developer host f
 A hardcoded AWS token in a self-managed GitLab repository led to terabytes of customer data being exfiltrated from unencrypted S3 buckets.
 
 **Lessons:**
+
 - OIDC/IAM roles instead of long-lived cloud credentials
 - Secret scanning enabled on self-hosted Git instances
 - Encrypt S3 buckets and other storage at rest
@@ -1001,7 +1006,7 @@ Use Dependabot with `package-ecosystem: "github-actions"` to keep SHA pins curre
 
 **2. Eliminate long-lived publish tokens with OIDC.**
 
-Replace npm tokens, PyPI tokens, and cloud provider credentials with OIDC Trusted Publishing or short-lived tokens from GitHub Apps. A stolen token with a TTL of 15 minutes cannot be used the next day.
+Replace npm tokens, PyPI tokens and cloud provider credentials with OIDC Trusted Publishing or short-lived tokens from GitHub Apps. A stolen token with a TTL of 15 minutes cannot be used the next day.
 
 **3. Protect the push with gitleaks and platform push protection.**
 

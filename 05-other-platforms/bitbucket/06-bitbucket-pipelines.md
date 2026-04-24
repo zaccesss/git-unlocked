@@ -35,7 +35,7 @@ This file is a complete reference for Bitbucket Pipelines. It covers the full YA
 
 ## How Pipelines works
 
-When you push a commit to Bitbucket, the platform checks whether a `bitbucket-pipelines.yml` file exists in the repository root. If it does, Bitbucket spins up a Docker container based on the image you specified, clones your repository into it, and runs your pipeline steps inside that container.
+When you push a commit to Bitbucket, the platform checks whether a `bitbucket-pipelines.yml` file exists in the repository root. If it does, Bitbucket spins up a Docker container based on the image you specified, clones your repository into it and runs your pipeline steps inside that container.
 
 Each step in a pipeline runs in a fresh container. This isolation means steps cannot accidentally share state or interfere with each other - but it also means you need to explicitly pass data between steps using **artifacts**.
 
@@ -73,38 +73,38 @@ This runs on every push to any branch. A single step echoes a message. Real pipe
 ### Top-level structure
 
 ```yaml
-image: atlassian/default-image:4  # default Docker image for all steps
+image: atlassian/default-image:4 # default Docker image for all steps
 
-definitions:           # reusable components (caches, services, steps)
+definitions: # reusable components (caches, services, steps)
   caches:
     node: ~/.npm
   services:
     postgres:
       image: postgres:15
 
-options:               # global pipeline options
-  max-time: 30         # maximum minutes per step (default: 120)
-  size: 2x             # step size (1x default, 2x double resources)
+options: # global pipeline options
+  max-time: 30 # maximum minutes per step (default: 120)
+  size: 2x # step size (1x default, 2x double resources)
 
 pipelines:
-  default:             # runs on any branch not matched by other triggers
+  default: # runs on any branch not matched by other triggers
     - step: ...
 
-  branches:            # runs on specific branches
+  branches: # runs on specific branches
     main:
       - step: ...
-    'release/*':
+    "release/*":
       - step: ...
 
-  pull-requests:       # runs on pull request creation and updates
-    '**':
+  pull-requests: # runs on pull request creation and updates
+    "**":
       - step: ...
 
-  tags:                # runs when a tag is pushed
-    'v*':
+  tags: # runs when a tag is pushed
+    "v*":
       - step: ...
 
-  custom:              # manually triggered pipelines
+  custom: # manually triggered pipelines
     deploy-to-production:
       - step: ...
 ```
@@ -141,11 +141,11 @@ pipelines:
       - step:
           script:
             - npm test
-    'feature/*':
+    "feature/*":
       - step:
           script:
             - npm test
-    'release/**':
+    "release/**":
       - step:
           script:
             - npm run release
@@ -158,11 +158,11 @@ Branch patterns support glob matching: `*` matches within a single path segment,
 ```yaml
 pipelines:
   pull-requests:
-    '**':              # all PRs regardless of target branch
+    "**": # all PRs regardless of target branch
       - step:
           script:
             - npm test
-    'main':            # only PRs targeting main
+    "main": # only PRs targeting main
       - step:
           script:
             - npm test
@@ -176,12 +176,12 @@ Pull request pipelines run when a PR is opened, updated with new commits or sync
 ```yaml
 pipelines:
   tags:
-    'v*':              # any tag starting with v (v1.0, v2.3.1, etc.)
+    "v*": # any tag starting with v (v1.0, v2.3.1, etc.)
       - step:
           script:
             - npm run build
             - npm publish
-    'v*-rc*':          # release candidates: v1.0-rc1
+    "v*-rc*": # release candidates: v1.0-rc1
       - step:
           script:
             - npm run build
@@ -220,20 +220,20 @@ A step is the basic unit of work in a pipeline. Each step runs in its own Docker
 
 ```yaml
 - step:
-    name: Run tests          # displayed in the Bitbucket UI
-    image: node:20           # Docker image (overrides the top-level image)
-    size: 2x                 # 2x doubles CPU and memory
-    max-time: 20             # maximum minutes (overrides global max-time)
+    name: Run tests # displayed in the Bitbucket UI
+    image: node:20 # Docker image (overrides the top-level image)
+    size: 2x # 2x doubles CPU and memory
+    max-time: 20 # maximum minutes (overrides global max-time)
     caches:
-      - node                 # use the node cache defined in definitions
+      - node # use the node cache defined in definitions
     services:
-      - postgres             # start a postgres service container alongside
+      - postgres # start a postgres service container alongside
     artifacts:
-      - coverage/**          # files to pass to subsequent steps
+      - coverage/** # files to pass to subsequent steps
     script:
-      - npm ci               # commands run in order; step fails if any returns non-zero
+      - npm ci # commands run in order; step fails if any returns non-zero
       - npm test
-    after-script:            # always runs after script, even on failure
+    after-script: # always runs after script, even on failure
       - echo "Step finished with exit code $BITBUCKET_EXIT_CODE"
 ```
 
@@ -244,7 +244,7 @@ Each line in `script` is a shell command. They run in order. If any command exit
 ```yaml
 script:
   - echo "Starting build"
-  - npm ci                    # fails here? subsequent lines do not run
+  - npm ci # fails here? subsequent lines do not run
   - npm run build
   - npm test
 after-script:
@@ -259,7 +259,7 @@ Steps can be skipped based on conditions:
 ```yaml
 - step:
     name: Deploy to production
-    trigger: manual           # requires a human to click Run in the UI
+    trigger: manual # requires a human to click Run in the UI
     script:
       - ./deploy.sh
 
@@ -268,7 +268,7 @@ Steps can be skipped based on conditions:
     condition:
       changesets:
         includePaths:
-          - "src/**"          # only run if files in src/ changed
+          - "src/**" # only run if files in src/ changed
     script:
       - ./notify-slack.sh
 ```
@@ -380,26 +380,26 @@ You can mix parallel and sequential steps using multiple stages:
 pipelines:
   default:
     - stage:
-        name: Validate          # runs first
+        name: Validate # runs first
         steps:
           - step:
               name: Lint
-              script: [ npm run lint ]
+              script: [npm run lint]
           - step:
               name: Type check
-              script: [ npm run typecheck ]
+              script: [npm run typecheck]
     - stage:
-        name: Test              # runs after Validate passes
+        name: Test # runs after Validate passes
         steps:
           - step:
               name: Unit tests
-              script: [ npm test ]
+              script: [npm test]
           - step:
               name: E2E tests
-              script: [ npm run test:e2e ]
+              script: [npm run test:e2e]
     - step:
-        name: Deploy            # runs after Test passes
-        script: [ ./deploy.sh ]
+        name: Deploy # runs after Test passes
+        script: [./deploy.sh]
 ```
 
 ---
@@ -410,19 +410,19 @@ pipelines:
 
 Bitbucket provides a set of environment variables automatically available in every pipeline step:
 
-| Variable | Value |
-|---|---|
-| `BITBUCKET_REPO_SLUG` | Repository name slug |
-| `BITBUCKET_REPO_FULL_NAME` | `workspace/repo` |
-| `BITBUCKET_BRANCH` | Current branch name |
-| `BITBUCKET_TAG` | Current tag (if triggered by tag) |
-| `BITBUCKET_COMMIT` | Full commit SHA |
-| `BITBUCKET_BUILD_NUMBER` | Pipeline build number (increments per run) |
-| `BITBUCKET_WORKSPACE` | Workspace slug |
-| `BITBUCKET_PR_ID` | Pull request ID (if PR pipeline) |
-| `BITBUCKET_PR_DESTINATION_BRANCH` | Target branch of PR |
-| `BITBUCKET_DEPLOYMENT_ENVIRONMENT` | Deployment environment name |
-| `BITBUCKET_PIPELINE_UUID` | Unique identifier for this pipeline run |
+| Variable                           | Value                                      |
+| ---------------------------------- | ------------------------------------------ |
+| `BITBUCKET_REPO_SLUG`              | Repository name slug                       |
+| `BITBUCKET_REPO_FULL_NAME`         | `workspace/repo`                           |
+| `BITBUCKET_BRANCH`                 | Current branch name                        |
+| `BITBUCKET_TAG`                    | Current tag (if triggered by tag)          |
+| `BITBUCKET_COMMIT`                 | Full commit SHA                            |
+| `BITBUCKET_BUILD_NUMBER`           | Pipeline build number (increments per run) |
+| `BITBUCKET_WORKSPACE`              | Workspace slug                             |
+| `BITBUCKET_PR_ID`                  | Pull request ID (if PR pipeline)           |
+| `BITBUCKET_PR_DESTINATION_BRANCH`  | Target branch of PR                        |
+| `BITBUCKET_DEPLOYMENT_ENVIRONMENT` | Deployment environment name                |
+| `BITBUCKET_PIPELINE_UUID`          | Unique identifier for this pipeline run    |
 
 ### Repository variables
 
@@ -489,11 +489,11 @@ Caches are defined in the `definitions` section and referenced in steps:
 ```yaml
 definitions:
   caches:
-    node: ~/.npm              # npm cache directory
-    pip: ~/.cache/pip         # Python pip cache
-    gradle: ~/.gradle/caches  # Gradle cache
-    maven: ~/.m2/repository   # Maven local repository
-    composer: ~/.composer/cache  # PHP Composer cache
+    node: ~/.npm # npm cache directory
+    pip: ~/.cache/pip # Python pip cache
+    gradle: ~/.gradle/caches # Gradle cache
+    maven: ~/.m2/repository # Maven local repository
+    composer: ~/.composer/cache # PHP Composer cache
 
 pipelines:
   default:
@@ -511,12 +511,12 @@ Bitbucket provides built-in cache shortcuts for common tools. These use the corr
 
 ```yaml
 caches:
-  - node      # npm
-  - pip       # Python pip
-  - gradle    # Gradle
-  - maven     # Maven
-  - composer  # PHP Composer
-  - docker    # Docker image layers
+  - node # npm
+  - pip # Python pip
+  - gradle # Gradle
+  - maven # Maven
+  - composer # PHP Composer
+  - docker # Docker image layers
 ```
 
 ### Cache invalidation
@@ -556,9 +556,9 @@ pipelines:
         name: Build
         script:
           - npm ci
-          - npm run build    # produces dist/ directory
+          - npm run build # produces dist/ directory
         artifacts:
-          - dist/**          # pass dist/ to the next step
+          - dist/** # pass dist/ to the next step
     - step:
         name: Deploy
         script:
@@ -570,20 +570,20 @@ pipelines:
 
 ```yaml
 artifacts:
-  - dist/**             # everything in dist/
-  - coverage/**         # test coverage reports
-  - '*.log'             # all log files in root
-  - reports/*.xml       # XML files in reports/
-  - build/app.jar       # specific file
+  - dist/** # everything in dist/
+  - coverage/** # test coverage reports
+  - "*.log" # all log files in root
+  - reports/*.xml # XML files in reports/
+  - build/app.jar # specific file
 ```
 
 ### Artifacts vs caches
 
-| Feature | Artifacts | Caches |
-|---|---|---|
-| Purpose | Pass build outputs between steps | Speed up dependency downloads |
-| Scope | Within a single pipeline run | Across multiple pipeline runs |
-| Storage | Temporary (pipeline duration) | Persistent (up to 7 days) |
+| Feature   | Artifacts                         | Caches                           |
+| --------- | --------------------------------- | -------------------------------- |
+| Purpose   | Pass build outputs between steps  | Speed up dependency downloads    |
+| Scope     | Within a single pipeline run      | Across multiple pipeline runs    |
+| Storage   | Temporary (pipeline duration)     | Persistent (up to 7 days)        |
 | Direction | Forward only (step N to step N+1) | Bidirectional (restore and save) |
 
 Use **artifacts** for: compiled code, test reports, Docker layers, built binaries.
@@ -613,7 +613,7 @@ definitions:
       environment:
         discovery.type: single-node
         ES_JAVA_OPTS: "-Xms512m -Xmx512m"
-      memory: 1024          # MB allocated to this service container
+      memory: 1024 # MB allocated to this service container
 
 pipelines:
   default:
@@ -644,7 +644,7 @@ To build and push Docker images inside a pipeline step, use Docker-in-Docker (di
 definitions:
   services:
     docker:
-      memory: 2048          # Docker service needs extra memory
+      memory: 2048 # Docker service needs extra memory
 
 pipelines:
   default:
@@ -677,9 +677,9 @@ Pipes are pre-built pipeline steps packaged as Docker images. Instead of writing
         variables:
           AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
           AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-          AWS_DEFAULT_REGION: 'eu-west-1'
-          S3_BUCKET: 'my-production-bucket'
-          LOCAL_PATH: 'dist'
+          AWS_DEFAULT_REGION: "eu-west-1"
+          S3_BUCKET: "my-production-bucket"
+          LOCAL_PATH: "dist"
 ```
 
 The `pipe:` key replaces `script:`. Variables are passed as key-value pairs specific to that pipe.
@@ -711,13 +711,13 @@ The `pipe:` key replaces `script:`. Variables are passed as key-value pairs spec
 - pipe: atlassian/slack-notify:2.1.0
   variables:
     WEBHOOK_URL: $SLACK_WEBHOOK_URL
-    MESSAGE: 'Build $BITBUCKET_BUILD_NUMBER succeeded'
+    MESSAGE: "Build $BITBUCKET_BUILD_NUMBER succeeded"
 
 # Snyk security scan
 - pipe: snyk/snyk-scan:1.0.0
   variables:
     SNYK_TOKEN: $SNYK_TOKEN
-    LANGUAGE: 'node'
+    LANGUAGE: "node"
 
 # SonarCloud scan
 - pipe: sonarsource/sonarcloud-scan:2.0.0
@@ -755,13 +755,13 @@ pipelines:
     main:
       - step:
           name: Deploy to staging
-          deployment: staging        # links this step to the staging environment
+          deployment: staging # links this step to the staging environment
           script:
             - ./deploy.sh staging
       - step:
           name: Deploy to production
-          deployment: production     # links this step to the production environment
-          trigger: manual            # requires human approval in the UI
+          deployment: production # links this step to the production environment
+          trigger: manual # requires human approval in the UI
           script:
             - ./deploy.sh production
 ```
@@ -798,11 +798,13 @@ Bitbucket's hosted runners are Linux-only. For Windows builds, macOS builds, bui
 The V5 runner architecture (2025-2026) supports two tiers:
 
 **Basic runners** (free, up to 100 per workspace):
+
 - Standard CPU and memory
 - Suitable for most builds
 - No additional cost
 
 **Premium runners** ($15/slot/month):
+
 - Customisable CPU and memory allocation
 - Docker volume mount support
 - S3/GCS external cache storage
@@ -820,6 +822,7 @@ The V5 runner architecture (2025-2026) supports two tiers:
 4. Follow the installation instructions
 
 🪟 **Windows installation:**
+
 ```powershell
 # Download the runner
 Invoke-WebRequest -Uri "https://product-downloads.atlassian.com/software/bitbucket/pipelines/runner/latest/windows/runner.exe" -OutFile runner.exe
@@ -832,6 +835,7 @@ Invoke-WebRequest -Uri "https://product-downloads.atlassian.com/software/bitbuck
 ```
 
 🍎 **Mac installation:**
+
 ```bash
 # Download the runner
 curl -Lo runner https://product-downloads.atlassian.com/software/bitbucket/pipelines/runner/latest/macos/runner
@@ -844,6 +848,7 @@ chmod +x runner
 ```
 
 🐧 **Linux installation:**
+
 ```bash
 # Download the runner
 curl -Lo runner https://product-downloads.atlassian.com/software/bitbucket/pipelines/runner/latest/linux/runner
@@ -862,7 +867,7 @@ chmod +x runner
     name: Windows build
     runs-on:
       - self.hosted
-      - windows              # label matching the runner's labels
+      - windows # label matching the runner's labels
     script:
       - dotnet build
       - dotnet test
@@ -886,25 +891,25 @@ When registering a runner, assign labels that describe its capabilities (OS, arc
 
 ### Monthly minutes
 
-| Plan | Hosted minutes/month | Reset |
-|---|---|---|
-| Free | 50 | 1st of month |
-| Standard | 2,500 | 1st of month |
-| Premium | 3,500 | 1st of month |
+| Plan     | Hosted minutes/month | Reset        |
+| -------- | -------------------- | ------------ |
+| Free     | 50                   | 1st of month |
+| Standard | 2,500                | 1st of month |
+| Premium  | 3,500                | 1st of month |
 
 Additional minutes: $10 per 1,000 minutes. Self-hosted runners do not consume hosted minutes.
 
 ### Other limits
 
-| Limit | Value |
-|---|---|
-| Maximum step runtime | 120 minutes (default), configurable to 120 max |
-| Maximum pipeline runtime | No explicit cap (sum of steps) |
-| Maximum artifact size | 1 GB per step |
-| Maximum cache size | 1 GB per cache key |
-| Maximum parallel steps | 10 per stage |
-| Maximum steps per pipeline | 100 |
-| Clones per minute (rate limit) | 20 |
+| Limit                          | Value                                          |
+| ------------------------------ | ---------------------------------------------- |
+| Maximum step runtime           | 120 minutes (default), configurable to 120 max |
+| Maximum pipeline runtime       | No explicit cap (sum of steps)                 |
+| Maximum artifact size          | 1 GB per step                                  |
+| Maximum cache size             | 1 GB per cache key                             |
+| Maximum parallel steps         | 10 per stage                                   |
+| Maximum steps per pipeline     | 100                                            |
+| Clones per minute (rate limit) | 20                                             |
 
 ### Optimising minute usage
 
@@ -976,9 +981,9 @@ pipelines:
               variables:
                 AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
                 AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
-                AWS_DEFAULT_REGION: 'eu-west-1'
+                AWS_DEFAULT_REGION: "eu-west-1"
                 S3_BUCKET: $PRODUCTION_BUCKET
-                LOCAL_PATH: 'dist'
+                LOCAL_PATH: "dist"
 ```
 
 ### Python Django application
@@ -1095,34 +1100,45 @@ Every pipeline step writes output to a log visible in the Bitbucket UI. When a s
 ### Common failure causes
 
 **Image pull failure:**
+
 ```
 Unable to find image 'node:999' locally
 ```
+
 The Docker image tag does not exist. Check your image name and tag.
 
 **Script command not found:**
+
 ```
 bash: npm: command not found
 ```
+
 The tool is not installed in the Docker image. Use a different image that includes the tool, or install it in the script.
 
 **Environment variable not set:**
+
 ```
 Error: AWS_ACCESS_KEY_ID is not set
 ```
+
 Check that the variable is defined in repository or workspace settings, and that the variable name matches exactly (case-sensitive).
 
 **Artifact not found in next step:**
+
 ```
 No such file or directory: dist/index.html
 ```
+
 The artifact glob pattern in the previous step did not match the files. Check that the build actually produced files at the expected path, and that the artifact pattern is correct.
 
 **Service connection refused:**
+
 ```
 Error: connect ECONNREFUSED 127.0.0.1:5432
 ```
+
 The service container is not ready when the script tries to connect. Add a health check wait:
+
 ```bash
 # Wait for postgres to be ready
 until pg_isready -h localhost -p 5432; do sleep 1; done
@@ -1131,6 +1147,7 @@ until pg_isready -h localhost -p 5432; do sleep 1; done
 ### Re-running a pipeline
 
 Failed pipelines can be re-run from the Bitbucket UI without pushing a new commit:
+
 1. Open the pipeline run
 2. Click **Re-run** (or **Re-run failed steps** to skip steps that passed)
 

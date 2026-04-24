@@ -4,7 +4,7 @@
 
 Three platforms dominate professional Git hosting. GitHub is the largest and most community-facing. GitLab is the most complete DevSecOps suite. Bitbucket is the deepest Jira integration available anywhere. Each has a genuine reason to exist and a genuine audience it serves best.
 
-This file does not declare a winner. It gives you a thorough, factual comparison across every dimension that matters when choosing a platform - or when explaining to a colleague or manager why a team chose what it chose. By the end you should be able to describe clearly what each platform does well, where each falls short, and which to recommend for a given team's situation.
+This file does not declare a winner. It gives you a thorough, factual comparison across every dimension that matters when choosing a platform - or when explaining to a colleague or manager why a team chose what it chose. By the end you should be able to describe clearly what each platform does well, where each falls short and which to recommend for a given team's situation.
 
 ---
 
@@ -50,12 +50,12 @@ Before the detailed comparison, it helps to understand what each platform is fun
 
 ### Cloud pricing (per user per month, 2026)
 
-| Tier | GitHub | GitLab | Bitbucket |
-|---|---|---|---|
-| **Free** | $0 | $0 | $0 |
-| **Entry paid** | $4 (Pro, individual) | $29 (Premium) | $3.65 (Standard) |
-| **Team/mid** | $4/user (Team) | $29/user (Premium) | $3.65/user (Standard) |
-| **Enterprise** | $21/user (Enterprise) | ~$99/user (Ultimate) | $7.25/user (Premium) |
+| Tier           | GitHub                | GitLab               | Bitbucket             |
+| -------------- | --------------------- | -------------------- | --------------------- |
+| **Free**       | $0                    | $0                   | $0                    |
+| **Entry paid** | $4 (Pro, individual)  | $29 (Premium)        | $3.65 (Standard)      |
+| **Team/mid**   | $4/user (Team)        | $29/user (Premium)   | $3.65/user (Standard) |
+| **Enterprise** | $21/user (Enterprise) | ~$99/user (Ultimate) | $7.25/user (Premium)  |
 
 Bitbucket Standard at $3.65/user/month is the cheapest paid tier among the three for teams. However, this comparison is incomplete without factoring in what each paid tier includes.
 
@@ -63,7 +63,7 @@ Bitbucket Standard at $3.65/user/month is the cheapest paid tier among the three
 
 **GitLab Premium ($29/user/month)** includes: merge request approvals, CODEOWNERS enforcement, multiple reviewers, epics, roadmaps, scoped labels, burndown charts, iterations, SAML SSO, merge trains, code quality reports, 50,000 CI/CD minutes/month and much more. GitLab Premium is expensive but it replaces tools that many teams would otherwise buy separately.
 
-**Bitbucket Standard ($3.65/user/month)** includes: 2,500 Pipelines minutes/month, 5 GB LFS storage, AI pull request descriptions, and Bitbucket Packages. The low per-user price is attractive but the feature depth at Standard is more limited than GitHub Team or GitLab Premium.
+**Bitbucket Standard ($3.65/user/month)** includes: 2,500 Pipelines minutes/month, 5 GB LFS storage, AI pull request descriptions and Bitbucket Packages. The low per-user price is attractive but the feature depth at Standard is more limited than GitHub Team or GitLab Premium.
 
 **The real cost comparison**
 
@@ -75,6 +75,7 @@ Headline per-user pricing is misleading without considering add-ons:
 - Bitbucket requires Jira for robust project management. If a team uses GitHub or GitLab, native project management tools are included at no extra cost.
 
 A team with 20 developers doing serious work might pay:
+
 - **GitHub Enterprise + GHAS**: ~$70/user/month = $1,400/month
 - **GitLab Ultimate**: ~$99/user/month = $1,980/month
 - **Bitbucket Premium + Guard Standard**: ~$11.45/user/month = $229/month (but without integrated security scanning, which would require a third-party tool or Jira-adjacent product)
@@ -83,20 +84,20 @@ A team with 20 developers doing serious work might pay:
 
 ## Free tier comparison
 
-| Feature | GitHub Free | GitLab Free | Bitbucket Free |
-|---|---|---|---|
-| **Private repos** | Unlimited | Unlimited | Unlimited |
-| **Users** | Unlimited | Unlimited | Up to 5 per workspace |
-| **CI/CD minutes** | 2,000/month | 400/month | 50/month |
-| **Storage** | 500 MB Actions / 1 GB LFS | 5 GB | 1 GB total |
-| **Container registry** | Packages (500 MB) | Container registry (included) | Packages (limited) |
-| **Pages** | Yes (public only without Pro) | Yes | No |
-| **SSO** | No | No | No (requires Guard add-on) |
-| **Security scanning** | Basic Dependabot alerts | Limited SAST | No |
-| **Issue tracker** | Yes | Yes | Yes (being sunset) |
-| **Wiki** | Yes | Yes | Yes (being sunset) |
-| **Project management** | GitHub Projects (Kanban) | Issue boards | Requires Jira |
-| **Mobile app** | Yes | Yes | Limited |
+| Feature                | GitHub Free                   | GitLab Free                   | Bitbucket Free             |
+| ---------------------- | ----------------------------- | ----------------------------- | -------------------------- |
+| **Private repos**      | Unlimited                     | Unlimited                     | Unlimited                  |
+| **Users**              | Unlimited                     | Unlimited                     | Up to 5 per workspace      |
+| **CI/CD minutes**      | 2,000/month                   | 400/month                     | 50/month                   |
+| **Storage**            | 500 MB Actions / 1 GB LFS     | 5 GB                          | 1 GB total                 |
+| **Container registry** | Packages (500 MB)             | Container registry (included) | Packages (limited)         |
+| **Pages**              | Yes (public only without Pro) | Yes                           | No                         |
+| **SSO**                | No                            | No                            | No (requires Guard add-on) |
+| **Security scanning**  | Basic Dependabot alerts       | Limited SAST                  | No                         |
+| **Issue tracker**      | Yes                           | Yes                           | Yes (being sunset)         |
+| **Wiki**               | Yes                           | Yes                           | Yes (being sunset)         |
+| **Project management** | GitHub Projects (Kanban)      | Issue boards                  | Requires Jira              |
+| **Mobile app**         | Yes                           | Yes                           | Limited                    |
 
 GitHub's free tier has the best CI/CD allocation (2,000 minutes), no user limit and includes GitHub Pages. GitLab's free tier has the best storage and a usable container registry. Bitbucket's free tier has the tightest restrictions (5 users, 50 minutes) but is genuinely useful for a small Atlassian-native team.
 
@@ -138,19 +139,19 @@ All three platforms have mature code review tools. The terminology differs: GitH
 
 ### Comparison of code review features
 
-| Feature | GitHub | GitLab | Bitbucket |
-|---|---|---|---|
-| Inline comments | Yes | Yes | Yes |
-| Suggested changes | Yes | Yes | No |
-| Required reviewers | Team plan+ | Premium+ | Free (default reviewers) |
-| Draft PRs/MRs | Yes | Yes | Yes |
-| Review threads/resolution | Yes | Yes | Yes |
-| CODEOWNERS | Yes (enforced: Team+) | Yes (enforced: Premium+) | Default reviewers (similar) |
-| Merge methods | Merge, squash, rebase | Merge, squash, fast-forward | Merge commit, squash, fast-forward |
-| Merge queues | Enterprise | Premium+ | No |
-| PR templates | Yes | Yes | Yes |
-| Auto-assign reviewers | Yes (with CODEOWNERS) | Yes | Yes (default reviewers) |
-| Review expiry | No | No | Yes (re-approval on new commits) |
+| Feature                   | GitHub                | GitLab                      | Bitbucket                          |
+| ------------------------- | --------------------- | --------------------------- | ---------------------------------- |
+| Inline comments           | Yes                   | Yes                         | Yes                                |
+| Suggested changes         | Yes                   | Yes                         | No                                 |
+| Required reviewers        | Team plan+            | Premium+                    | Free (default reviewers)           |
+| Draft PRs/MRs             | Yes                   | Yes                         | Yes                                |
+| Review threads/resolution | Yes                   | Yes                         | Yes                                |
+| CODEOWNERS                | Yes (enforced: Team+) | Yes (enforced: Premium+)    | Default reviewers (similar)        |
+| Merge methods             | Merge, squash, rebase | Merge, squash, fast-forward | Merge commit, squash, fast-forward |
+| Merge queues              | Enterprise            | Premium+                    | No                                 |
+| PR templates              | Yes                   | Yes                         | Yes                                |
+| Auto-assign reviewers     | Yes (with CODEOWNERS) | Yes                         | Yes (default reviewers)            |
+| Review expiry             | No                    | No                          | Yes (re-approval on new commits)   |
 
 **Suggested changes** (GitHub and GitLab) let reviewers propose specific code edits directly in the review interface - the author can apply them with a single click. Bitbucket does not have this feature; reviewers must describe changes in comments and authors must implement them manually. This is a meaningful gap for teams doing detailed code review.
 
@@ -172,23 +173,23 @@ All three platforms have mature code review tools. The terminology differs: GitH
 
 ### Hosted runner comparison (2026)
 
-| Spec | GitHub | GitLab | Bitbucket |
-|---|---|---|---|
-| **Linux** | Ubuntu 24.04 (2-core, 7 GB) | Ubuntu (2-core) | Ubuntu (unspecified) |
-| **Windows** | Windows Server 2025 | Windows (limited) | No |
-| **macOS** | macOS 15 (3-core, 14 GB) | macOS (limited, paid) | No |
-| **ARM** | Yes (GitHub-hosted) | Limited | No |
-| **GPU** | Yes (larger runners) | Limited | No |
+| Spec        | GitHub                      | GitLab                | Bitbucket            |
+| ----------- | --------------------------- | --------------------- | -------------------- |
+| **Linux**   | Ubuntu 24.04 (2-core, 7 GB) | Ubuntu (2-core)       | Ubuntu (unspecified) |
+| **Windows** | Windows Server 2025         | Windows (limited)     | No                   |
+| **macOS**   | macOS 15 (3-core, 14 GB)    | macOS (limited, paid) | No                   |
+| **ARM**     | Yes (GitHub-hosted)         | Limited               | No                   |
+| **GPU**     | Yes (larger runners)        | Limited               | No                   |
 
 GitHub has by far the strongest hosted runner offering. Windows and macOS runners on GitHub are first-class. GitLab macOS runners require GitLab SaaS Premium. Bitbucket Pipelines only offers Linux-based hosted runners - for Windows or macOS builds, you must use self-hosted runners.
 
 ### CI/CD minutes comparison
 
-| Plan | GitHub | GitLab | Bitbucket |
-|---|---|---|---|
-| **Free** | 2,000/month | 400/month | 50/month |
-| **Entry paid** | 3,000/month (Team) | 10,000/month (Premium) | 2,500/month (Standard) |
-| **Top paid** | 50,000/month (Enterprise) | 50,000/month (Ultimate) | 3,500/month (Premium) |
+| Plan           | GitHub                    | GitLab                  | Bitbucket              |
+| -------------- | ------------------------- | ----------------------- | ---------------------- |
+| **Free**       | 2,000/month               | 400/month               | 50/month               |
+| **Entry paid** | 3,000/month (Team)        | 10,000/month (Premium)  | 2,500/month (Standard) |
+| **Top paid**   | 50,000/month (Enterprise) | 50,000/month (Ultimate) | 3,500/month (Premium)  |
 
 Bitbucket's free allocation (50 minutes) is significantly lower than GitHub (2,000) and GitLab (400). At the paid tiers, Bitbucket Standard and GitLab Premium offer comparable allocations for the user count, but GitLab's $29/user price gets you 10,000 minutes vs Bitbucket Standard's 2,500 at $3.65/user.
 
@@ -204,17 +205,17 @@ Bitbucket's free allocation (50 minutes) is significantly lower than GitHub (2,0
 
 ## Project management and planning
 
-| Feature | GitHub | GitLab | Bitbucket |
-|---|---|---|---|
-| Issues | Yes, native | Yes, native | Being sunset (migrate to Jira) |
-| Kanban boards | GitHub Projects | Issue boards | Requires Jira |
-| Milestones | Yes | Yes | Yes (limited) |
-| Epics | No (use Projects) | Yes (Premium+) | Requires Jira |
-| Roadmaps | GitHub Projects | Yes (Premium+) | Requires Jira |
-| Sprints/iterations | No | Yes (Premium+) | Requires Jira |
-| Time tracking | No | Yes | Requires Jira |
-| Custom fields | GitHub Projects | Yes | Requires Jira |
-| Jira integration | Available (via API/app) | Available (via API/app) | Native, deepest available |
+| Feature            | GitHub                  | GitLab                  | Bitbucket                      |
+| ------------------ | ----------------------- | ----------------------- | ------------------------------ |
+| Issues             | Yes, native             | Yes, native             | Being sunset (migrate to Jira) |
+| Kanban boards      | GitHub Projects         | Issue boards            | Requires Jira                  |
+| Milestones         | Yes                     | Yes                     | Yes (limited)                  |
+| Epics              | No (use Projects)       | Yes (Premium+)          | Requires Jira                  |
+| Roadmaps           | GitHub Projects         | Yes (Premium+)          | Requires Jira                  |
+| Sprints/iterations | No                      | Yes (Premium+)          | Requires Jira                  |
+| Time tracking      | No                      | Yes                     | Requires Jira                  |
+| Custom fields      | GitHub Projects         | Yes                     | Requires Jira                  |
+| Jira integration   | Available (via API/app) | Available (via API/app) | Native, deepest available      |
 
 This is the starkest difference in the comparison. **GitHub and GitLab have native project management tools included in their platforms.** Bitbucket is sunsetting its native Issues and Wikis and explicitly pointing teams toward Jira and Confluence.
 
@@ -226,17 +227,17 @@ GitLab's project management is strongest in its paid tiers (epics, roadmaps, ite
 
 ## Security features
 
-| Feature | GitHub | GitLab | Bitbucket |
-|---|---|---|---|
-| Secret scanning | Yes (free for public, GHAS for private) | Free tier (limited) | Yes (Standard+) |
-| Dependency scanning | Dependabot (free) | Yes (Ultimate for full) | Limited (via pipes) |
-| SAST | GHAS ($49/user add-on) | Free (limited), Ultimate (full) | No native |
-| DAST | GHAS | Ultimate | No |
-| Container scanning | GHAS | Ultimate | No |
-| IP allowlisting | Enterprise | Premium | Premium |
-| 2FA enforcement | Organisation level | Group level | Workspace level (Premium) |
-| Audit log | Enterprise | Premium | Premium |
-| SSO (SAML) | Team+ | Premium+ | Guard add-on |
+| Feature             | GitHub                                  | GitLab                          | Bitbucket                 |
+| ------------------- | --------------------------------------- | ------------------------------- | ------------------------- |
+| Secret scanning     | Yes (free for public, GHAS for private) | Free tier (limited)             | Yes (Standard+)           |
+| Dependency scanning | Dependabot (free)                       | Yes (Ultimate for full)         | Limited (via pipes)       |
+| SAST                | GHAS ($49/user add-on)                  | Free (limited), Ultimate (full) | No native                 |
+| DAST                | GHAS                                    | Ultimate                        | No                        |
+| Container scanning  | GHAS                                    | Ultimate                        | No                        |
+| IP allowlisting     | Enterprise                              | Premium                         | Premium                   |
+| 2FA enforcement     | Organisation level                      | Group level                     | Workspace level (Premium) |
+| Audit log           | Enterprise                              | Premium                         | Premium                   |
+| SSO (SAML)          | Team+                                   | Premium+                        | Guard add-on              |
 
 GitLab has the most comprehensive native security scanning, particularly at Ultimate tier where SAST, DAST, dependency scanning, secret detection, fuzz testing and container scanning are all included. GitHub's security features are strong but require the GHAS add-on for private repositories. Bitbucket has the weakest native security scanning and relies on third-party pipes and Marketplace apps.
 
@@ -246,14 +247,14 @@ For security-conscious teams at GitLab Ultimate, the included security tools can
 
 ## AI developer tooling
 
-| Feature | GitHub | GitLab | Bitbucket |
-|---|---|---|---|
-| AI code completion | Copilot (paid add-on) | Duo Code Suggestions (Premium+) | Rovo Dev (Standard+) |
-| AI chat assistant | Copilot Chat | Duo Chat | Rovo Chat |
-| AI PR/MR summaries | Copilot | Duo | Rovo Dev |
-| AI code review | Copilot (Enterprise) | Duo (Ultimate) | Limited |
-| AI security fixes | Copilot Autofix (Enterprise) | Duo Vulnerability Explanation | No |
-| IDE extensions | VS Code, JetBrains, Neovim, Vim, many more | VS Code, JetBrains | VS Code, JetBrains (limited) |
+| Feature            | GitHub                                     | GitLab                          | Bitbucket                    |
+| ------------------ | ------------------------------------------ | ------------------------------- | ---------------------------- |
+| AI code completion | Copilot (paid add-on)                      | Duo Code Suggestions (Premium+) | Rovo Dev (Standard+)         |
+| AI chat assistant  | Copilot Chat                               | Duo Chat                        | Rovo Chat                    |
+| AI PR/MR summaries | Copilot                                    | Duo                             | Rovo Dev                     |
+| AI code review     | Copilot (Enterprise)                       | Duo (Ultimate)                  | Limited                      |
+| AI security fixes  | Copilot Autofix (Enterprise)               | Duo Vulnerability Explanation   | No                           |
+| IDE extensions     | VS Code, JetBrains, Neovim, Vim, many more | VS Code, JetBrains              | VS Code, JetBrains (limited) |
 
 **GitHub Copilot** is the market leader in AI coding assistance by adoption, capability and ecosystem. It integrates with virtually every major IDE and editor. GitHub Copilot Individual costs $10/month or $100/year. Enterprise tier includes Copilot Autofix (automatic security fix suggestions) and fine-tuned models. Copilot has the deepest context about your codebase when used within GitHub itself.
 
@@ -265,11 +266,11 @@ For security-conscious teams at GitLab Ultimate, the included security tools can
 
 ## Self-hosting
 
-| Platform | Self-hosted product | Price model | OS support | Min requirements |
-|---|---|---|---|---|
-| **GitHub** | GitHub Enterprise Server | Per-user licence | Linux | 8-core, 32 GB RAM |
-| **GitLab** | GitLab CE (free) / EE (paid) | Free (CE) / per-user (EE) | Linux | 4-core, 4 GB RAM (CE) |
-| **Bitbucket** | Bitbucket Data Center | Annual subscription | Linux only | 4-core, 8 GB RAM |
+| Platform      | Self-hosted product          | Price model               | OS support | Min requirements      |
+| ------------- | ---------------------------- | ------------------------- | ---------- | --------------------- |
+| **GitHub**    | GitHub Enterprise Server     | Per-user licence          | Linux      | 8-core, 32 GB RAM     |
+| **GitLab**    | GitLab CE (free) / EE (paid) | Free (CE) / per-user (EE) | Linux      | 4-core, 4 GB RAM (CE) |
+| **Bitbucket** | Bitbucket Data Center        | Annual subscription       | Linux only | 4-core, 8 GB RAM      |
 
 **GitLab** has the strongest self-hosting story. GitLab Community Edition (CE) is free, open source (MIT licence) and provides a substantial feature set. GitLab Enterprise Edition (EE) adds premium features with a per-user licence. The same codebase runs on-premises and in the cloud, making GitLab the natural choice for teams that want full control with no vendor lock-in.
 
@@ -281,13 +282,13 @@ For security-conscious teams at GitLab Ultimate, the included security tools can
 
 ## Ecosystem and integrations
 
-| Dimension | GitHub | GitLab | Bitbucket |
-|---|---|---|---|
-| Marketplace apps | 20,000+ GitHub Apps and Actions | Limited (integrations via API) | Atlassian Marketplace (thousands, shared with Jira/Confluence) |
-| Jira integration | Third-party / GitHub for Jira app | Third-party / GitLab for Jira app | Native, deepest available |
-| Slack integration | Native | Native | Via Atlassian |
-| Cloud provider integrations | AWS, Azure, GCP (first-class) | AWS, Azure, GCP | AWS, Azure, GCP (via Pipelines pipes) |
-| IDE integrations | Very broad | Broad | Limited |
+| Dimension                   | GitHub                            | GitLab                            | Bitbucket                                                      |
+| --------------------------- | --------------------------------- | --------------------------------- | -------------------------------------------------------------- |
+| Marketplace apps            | 20,000+ GitHub Apps and Actions   | Limited (integrations via API)    | Atlassian Marketplace (thousands, shared with Jira/Confluence) |
+| Jira integration            | Third-party / GitHub for Jira app | Third-party / GitLab for Jira app | Native, deepest available                                      |
+| Slack integration           | Native                            | Native                            | Via Atlassian                                                  |
+| Cloud provider integrations | AWS, Azure, GCP (first-class)     | AWS, Azure, GCP                   | AWS, Azure, GCP (via Pipelines pipes)                          |
+| IDE integrations            | Very broad                        | Broad                             | Limited                                                        |
 
 GitHub's ecosystem advantage is strongest for general developer tooling: IDE plugins, testing frameworks, deployment tools, monitoring systems and more are built for GitHub first. The GitHub API and webhook system are the most widely targeted by third-party developers.
 
@@ -307,11 +308,11 @@ Bitbucket has minimal open source community presence. It has no equivalent of Gi
 
 ## Static site hosting
 
-| Platform | Service | Free | Custom domain | HTTPS |
-|---|---|---|---|---|
-| **GitHub** | GitHub Pages | Yes | Yes | Yes (Let's Encrypt) |
-| **GitLab** | GitLab Pages | Yes | Yes | Yes (Let's Encrypt) |
-| **Bitbucket** | None | N/A | N/A | N/A |
+| Platform      | Service      | Free | Custom domain | HTTPS               |
+| ------------- | ------------ | ---- | ------------- | ------------------- |
+| **GitHub**    | GitHub Pages | Yes  | Yes           | Yes (Let's Encrypt) |
+| **GitLab**    | GitLab Pages | Yes  | Yes           | Yes (Let's Encrypt) |
+| **Bitbucket** | None         | N/A  | N/A           | N/A                 |
 
 Bitbucket has no static site hosting. For teams that want to host documentation, project websites or demos directly from a repository, GitHub Pages and GitLab Pages are available for free. Bitbucket users deploy to external services (Netlify, Cloudflare Pages, Vercel, AWS Amplify) using Bitbucket Pipelines.
 
@@ -319,11 +320,11 @@ Bitbucket has no static site hosting. For teams that want to host documentation,
 
 ## Package and container registries
 
-| Platform | Registry | Package types |
-|---|---|---|
-| **GitHub** | GitHub Packages | npm, Maven, Gradle, NuGet, RubyGems, Docker/OCI |
-| **GitLab** | GitLab Package Registry + Container Registry | npm, Maven, Gradle, NuGet, PyPI, Composer, Conan, Helm, Terraform modules, Docker/OCI, generic |
-| **Bitbucket** | Bitbucket Packages (Standard+) | Docker/OCI (Container), npm, Maven (in progress) |
+| Platform      | Registry                                     | Package types                                                                                  |
+| ------------- | -------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| **GitHub**    | GitHub Packages                              | npm, Maven, Gradle, NuGet, RubyGems, Docker/OCI                                                |
+| **GitLab**    | GitLab Package Registry + Container Registry | npm, Maven, Gradle, NuGet, PyPI, Composer, Conan, Helm, Terraform modules, Docker/OCI, generic |
+| **Bitbucket** | Bitbucket Packages (Standard+)               | Docker/OCI (Container), npm, Maven (in progress)                                               |
 
 GitLab has the most complete package registry, supporting more package types than either competitor. GitHub Packages is mature and well-integrated with GitHub Actions. Bitbucket Packages launched in 2025 with container support and is expanding - it is the newest and least complete of the three.
 
@@ -383,6 +384,7 @@ Switching platforms is possible but not trivial. The Git repository itself is ea
 - **Git LFS** - LFS objects must be migrated separately. The Git repository history references LFS pointers but the actual objects live in LFS storage.
 
 All three platforms provide import tools for repositories from their competitors:
+
 - GitHub: Import from Bitbucket, GitLab, or any Git URL
 - GitLab: Import from GitHub, Bitbucket (Cloud and Server), and others
 - Bitbucket: Import from GitHub, GitLab, or any Git URL
@@ -394,11 +396,13 @@ All three platforms provide import tools for repositories from their competitors
 **Exercise 1 - Compare free plans hands-on**
 
 Create a free account on all three platforms (if you do not already have them):
+
 - github.com
 - gitlab.com
 - bitbucket.org
 
 Create a simple test repository on each. Push the same commit to all three. Compare:
+
 - How does the UI feel on each?
 - Where is the CI/CD setup?
 - What does the repository page look like?
@@ -408,6 +412,7 @@ Create a simple test repository on each. Push the same commit to all three. Comp
 Take a simple pipeline that runs a test (or just echoes a message) and write it in all three syntaxes:
 
 GitHub Actions (`.github/workflows/test.yml`):
+
 ```yaml
 name: Test
 on: [push]
@@ -420,6 +425,7 @@ jobs:
 ```
 
 GitLab CI/CD (`.gitlab-ci.yml`):
+
 ```yaml
 test:
   image: ubuntu:latest
@@ -428,6 +434,7 @@ test:
 ```
 
 Bitbucket Pipelines (`bitbucket-pipelines.yml`):
+
 ```yaml
 pipelines:
   default:
@@ -443,6 +450,7 @@ Notice the structural similarities and differences between the three.
 **Exercise 3 - Explore the Jira integration (if you have a Jira account)**
 
 If you have access to a Jira project:
+
 1. Connect it to a Bitbucket workspace in workspace settings
 2. Create a branch in Bitbucket named after a Jira issue key (e.g. `PROJ-1-my-feature`)
 3. Check the Jira issue's Development panel to see it reflected there

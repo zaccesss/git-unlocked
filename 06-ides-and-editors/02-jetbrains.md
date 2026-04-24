@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 35 minutes
 
-JetBrains produces the most complete built-in Git integration of any IDE family. IntelliJ IDEA, PyCharm, WebStorm, Rider, GoLand and CLion all share the same underlying Git implementation - learn it once and you know it across every JetBrains product. What you get is not just a staging panel but a full Git porcelain: changelists, shelving, an interactive rebase editor, a three-pane merge tool, a searchable commit log with a graphical branch view, cherry-pick, blame annotations, partial commits, and deep GitHub and GitLab integration. This file covers the Git workflow across the entire JetBrains family and explains the concepts unique to JetBrains that have no equivalent in VS Code.
+JetBrains produces the most complete built-in Git integration of any IDE family. IntelliJ IDEA, PyCharm, WebStorm, Rider, GoLand and CLion all share the same underlying Git implementation - learn it once and you know it across every JetBrains product. What you get is not just a staging panel but a full Git porcelain: changelists, shelving, an interactive rebase editor, a three-pane merge tool, a searchable commit log with a graphical branch view, cherry-pick, blame annotations, partial commits and deep GitHub and GitLab integration. This file covers the Git workflow across the entire JetBrains family and explains the concepts unique to JetBrains that have no equivalent in VS Code.
 
 ---
 
@@ -46,14 +46,14 @@ IntelliJ IDEA 2025.3, released December 2025, made a significant licensing chang
 
 All IDEs share the same Git implementation. The differences are in language support and specialised tooling.
 
-| IDE | Primary language(s) | Community (free) | Ultimate pricing |
-|---|---|---|---|
-| IntelliJ IDEA | Java, Kotlin, Scala | Yes (Java/Kotlin) | ~$719/year individual |
-| PyCharm | Python | Yes (core Python) | ~$299/year individual |
-| WebStorm | JavaScript, TypeScript | No | ~$299/year individual |
-| Rider | C#, .NET, Unity | No | ~$299/year individual |
-| GoLand | Go | No | ~$299/year individual |
-| CLion | C, C++, Rust | No | ~$299/year individual |
+| IDE           | Primary language(s)    | Community (free)  | Ultimate pricing      |
+| ------------- | ---------------------- | ----------------- | --------------------- |
+| IntelliJ IDEA | Java, Kotlin, Scala    | Yes (Java/Kotlin) | ~$719/year individual |
+| PyCharm       | Python                 | Yes (core Python) | ~$299/year individual |
+| WebStorm      | JavaScript, TypeScript | No                | ~$299/year individual |
+| Rider         | C#, .NET, Unity        | No                | ~$299/year individual |
+| GoLand        | Go                     | No                | ~$299/year individual |
+| CLion         | C, C++, Rust           | No                | ~$299/year individual |
 
 All Products Pack (all IDEs including AI Pro): ~$979/year individual. Student and open-source licences are available free of charge. The **All Products Pack** is the best value if you work across multiple languages.
 
@@ -107,7 +107,7 @@ When a project is under Git version control, IntelliJ IDEA replaces the generic 
 - **Patch** - create or apply a patch file
 - **Show Git Log** - open the Log tab in the Version Control tool window
 
-The **VCS Operations Popup** (`` Alt+` `` on Windows/Linux, `` Ctrl+V `` on Mac) is a quick-access menu for the most common operations. It is context-aware - it shows different options depending on what is selected in the editor or file tree.
+The **VCS Operations Popup** (`` Alt+` `` on Windows/Linux, `Ctrl+V` on Mac) is a quick-access menu for the most common operations. It is context-aware - it shows different options depending on what is selected in the editor or file tree.
 
 **The Version Control tool window** (`Alt+9` on Windows/Linux, `Cmd+9` on Mac) is the central hub. It has three tabs: **Local Changes** (the staging area), **Log** (the commit graph and history) and **Console** (Git command output). Open it whenever you need to see the current repository state.
 
@@ -370,7 +370,7 @@ JetBrains AI Assistant integrates directly into the Git workflow across several 
 
 Android Studio is Google's Android development IDE, built on IntelliJ IDEA. It inherits **every Git feature covered in this file**: changelists, shelving, the Log tab, interactive rebase, the three-pane merge tool, blame annotations and the Commit tool window - all with identical keyboard shortcuts.
 
-The main difference is the AI assistant. Android Studio ships **Gemini in Android Studio** rather than JetBrains AI Assistant. Gemini generates commit messages, explains code, answers questions about the Android SDK, and can run agentic tasks scoped to Android development.
+The main difference is the AI assistant. Android Studio ships **Gemini in Android Studio** rather than JetBrains AI Assistant. Gemini generates commit messages, explains code, answers questions about the Android SDK and can run agentic tasks scoped to Android development.
 
 GitHub and GitLab integration work identically to the base IntelliJ IDEA setup. Google's own **Firebase** and **Google Cloud** integrations are Android Studio-specific, but they do not affect the Git workflow.
 
@@ -380,24 +380,24 @@ Android Studio is free to download and use. It runs on Windows, macOS and Linux.
 
 ## 19. Key keyboard shortcuts
 
-| Action | Windows/Linux | Mac |
-|---|---|---|
-| Open Commit tool window | `Ctrl+K` | `Cmd+K` |
-| Commit | `Ctrl+Enter` (in commit box) | `Cmd+Enter` |
-| Push | `Ctrl+Shift+K` | `Cmd+Shift+K` |
-| Update project (pull) | `Ctrl+T` | `Cmd+T` |
-| Branches popup | `` Ctrl+Shift+` `` | `Ctrl+G` |
-| VCS Operations popup | `` Alt+` `` | `Ctrl+V` |
-| Open Version Control window | `Alt+9` | `Cmd+9` |
-| Open terminal | `Alt+F12` | `Opt+F12` |
-| Annotate with Git Blame | right-click gutter > Annotate | right-click gutter > Annotate |
-| Fetch | `Git > Fetch` | `Git > Fetch` |
-| Stash | `Git > Stash Changes` | `Git > Stash Changes` |
-| Next difference (in diff) | `F7` | `F7` |
-| Previous difference (in diff) | `Shift+F7` | `Shift+F7` |
-| Accept left side (merge) | `Ctrl+Left` | `Cmd+Left` |
-| Accept right side (merge) | `Ctrl+Right` | `Cmd+Right` |
-| Cherry-pick (from Log) | right-click commit > Cherry-Pick | right-click commit > Cherry-Pick |
+| Action                        | Windows/Linux                    | Mac                              |
+| ----------------------------- | -------------------------------- | -------------------------------- |
+| Open Commit tool window       | `Ctrl+K`                         | `Cmd+K`                          |
+| Commit                        | `Ctrl+Enter` (in commit box)     | `Cmd+Enter`                      |
+| Push                          | `Ctrl+Shift+K`                   | `Cmd+Shift+K`                    |
+| Update project (pull)         | `Ctrl+T`                         | `Cmd+T`                          |
+| Branches popup                | `` Ctrl+Shift+` ``               | `Ctrl+G`                         |
+| VCS Operations popup          | `` Alt+` ``                      | `Ctrl+V`                         |
+| Open Version Control window   | `Alt+9`                          | `Cmd+9`                          |
+| Open terminal                 | `Alt+F12`                        | `Opt+F12`                        |
+| Annotate with Git Blame       | right-click gutter > Annotate    | right-click gutter > Annotate    |
+| Fetch                         | `Git > Fetch`                    | `Git > Fetch`                    |
+| Stash                         | `Git > Stash Changes`            | `Git > Stash Changes`            |
+| Next difference (in diff)     | `F7`                             | `F7`                             |
+| Previous difference (in diff) | `Shift+F7`                       | `Shift+F7`                       |
+| Accept left side (merge)      | `Ctrl+Left`                      | `Cmd+Left`                       |
+| Accept right side (merge)     | `Ctrl+Right`                     | `Cmd+Right`                      |
+| Cherry-pick (from Log)        | right-click commit > Cherry-Pick | right-click commit > Cherry-Pick |
 
 ---
 

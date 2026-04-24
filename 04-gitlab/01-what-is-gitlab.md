@@ -197,7 +197,7 @@ At its core, GitLab hosts Git repositories. Everything beyond that is what makes
 
 ### Code management
 
-The web-based repository browser gives you syntax-highlighted file views, blame views showing who wrote each line and when, and a commit history browser. You can browse the code at any commit, tag or branch without cloning locally.
+The web-based repository browser gives you syntax-highlighted file views, blame views showing who wrote each line and when and a commit history browser. You can browse the code at any commit, tag or branch without cloning locally.
 
 **Merge requests** (GitLab's name for pull requests) are the primary code review mechanism. They show diffs, support inline comments, track suggestions that can be applied with one click, require approval workflows and integrate directly with CI/CD pipeline results. A merge request that fails its pipeline cannot be merged until the failure is resolved.
 
@@ -259,7 +259,7 @@ GitLab Duo is the umbrella name for GitLab's AI capabilities, covered fully in [
 
 **Duo Chat** is a conversational AI assistant available in the IDE and on GitLab.com. You can ask it to explain code, review a diff, write tests or help debug a pipeline failure.
 
-**Duo Agent Platform** (GA January 2026) extends AI from answering questions to taking actions: automatically converting an issue into a merge request, analysing CI/CD pipeline failures and generating fixes, reviewing security vulnerabilities and suggesting patches, and migrating CI/CD configurations.
+**Duo Agent Platform** (GA January 2026) extends AI from answering questions to taking actions: automatically converting an issue into a merge request, analysing CI/CD pipeline failures and generating fixes, reviewing security vulnerabilities and suggesting patches and migrating CI/CD configurations.
 
 ---
 

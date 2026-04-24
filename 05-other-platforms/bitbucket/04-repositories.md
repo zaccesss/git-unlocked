@@ -38,7 +38,7 @@ Workspace
         └── Repository
 ```
 
-**Workspace** is the top-level container. Every repository belongs to a workspace. A workspace has members, billing, and its own settings. Your personal workspace uses your username as the slug. Team or company workspaces are created separately.
+**Workspace** is the top-level container. Every repository belongs to a workspace. A workspace has members, billing and its own settings. Your personal workspace uses your username as the slug. Team or company workspaces are created separately.
 
 **Project** is an optional intermediate layer between the workspace and individual repositories. Projects group related repositories together. In a workspace with many repositories, projects make navigation and organisation manageable. Examples: a `Backend` project containing all backend service repositories, a `Mobile` project containing iOS and Android repositories, a `Infrastructure` project containing Terraform and Ansible repositories.
 
@@ -64,6 +64,7 @@ This structure differs from GitHub (where there is no grouping layer between org
 **Project** - optionally assign it to a project within the workspace. If no projects exist yet, you can create one here.
 
 **Repository name** - the name appears in the URL and in the Bitbucket interface. Rules:
+
 - Letters, numbers, hyphens and underscores
 - No spaces (spaces become hyphens in the URL)
 - Case-insensitive in the URL
@@ -140,6 +141,7 @@ After creating a repository, the settings page controls everything about how it 
 **Description** - a short summary shown on the repository listing page. Useful for navigation in large workspaces.
 
 **Fork policy** - control whether users can fork this repository:
+
 - Allow forks (default)
 - Restrict forks to the same workspace only
 - No forks allowed
@@ -198,6 +200,7 @@ git clone https://bitbucket.org/workspace-slug/repository-name.git
 ```
 
 When prompted for credentials:
+
 - **Username**: your Atlassian email address
 - **Password**: your API token (not your Atlassian account password)
 
@@ -206,6 +209,7 @@ When prompted for credentials:
 🍎 **Mac**: The macOS Keychain stores credentials automatically via Git Credential Manager.
 
 🐧 **Linux**: Use Git's credential store or cache helper:
+
 ```bash
 git config --global credential.helper store
 ```
@@ -254,12 +258,14 @@ Permissions cascade: workspace-level permissions override project-level permissi
 ### When to use projects
 
 **Use projects when:**
+
 - Your workspace has more than 10-15 repositories
 - Multiple teams work in the same workspace and need logical separation
 - You want to grant access to a group of related repositories at once
 - You want to keep the workspace repository listing navigable
 
 **Skip projects when:**
+
 - Your workspace has only a few repositories
 - All repositories are managed by the same small team
 - You prefer flat structure
@@ -312,6 +318,7 @@ The fork is a complete copy of the repository, including all branches and tags. 
 ### Fork policy
 
 Repository owners can control forking behaviour:
+
 - **Allow forks** (default) - anyone with read access can fork
 - **Allow forks within workspace only** - forks are restricted to the same workspace
 - **No forks** - forking is disabled
@@ -357,6 +364,7 @@ Git is designed for text files and source code. Binary files - images, videos, a
 ### How LFS works
 
 When you add a file to LFS tracking:
+
 1. The file is uploaded to Bitbucket's LFS storage server
 2. In the repository, a small pointer file replaces the actual content
 3. The pointer file contains a hash identifying the LFS object
@@ -369,6 +377,7 @@ The repository history stays small because only tiny pointer files are committed
 First, install Git LFS:
 
 🪟 **Windows**:
+
 ```bash
 # If using Git for Windows, LFS is often included. Check:
 git lfs version
@@ -380,16 +389,19 @@ choco install git-lfs
 ```
 
 🍎 **Mac**:
+
 ```bash
 brew install git-lfs
 ```
 
 🐧 **Linux** (Debian/Ubuntu):
+
 ```bash
 sudo apt install git-lfs
 ```
 
 After installing, initialise LFS:
+
 ```bash
 git lfs install
 ```
@@ -422,11 +434,11 @@ From now on, any file matching the tracked patterns is stored in LFS when you ad
 
 LFS storage is separate from repository storage and is plan-dependent:
 
-| Plan | LFS Storage |
-|---|---|
-| Free | 1 GB (shared with total workspace storage) |
-| Standard | 5 GB |
-| Premium | 10 GB |
+| Plan     | LFS Storage                                |
+| -------- | ------------------------------------------ |
+| Free     | 1 GB (shared with total workspace storage) |
+| Standard | 5 GB                                       |
+| Premium  | 10 GB                                      |
 
 Additional LFS storage can be purchased. If you exceed your LFS quota, pushes that would add LFS objects fail until you either delete old LFS objects or purchase more storage.
 
@@ -452,12 +464,14 @@ git lfs env
 You can transfer a repository to a different workspace. This is useful when reorganising repositories across workspaces or when a project moves between teams.
 
 **To transfer:**
+
 1. Go to repository **Settings** > **Repository details**
 2. Scroll to **Transfer repository**
 3. Enter the destination workspace slug
 4. Confirm the transfer
 
 **What happens:**
+
 - The repository moves to the new workspace with a new URL
 - All existing Git remotes pointing to the old URL break
 - Pull requests, commit comments and pipeline history move with the repository
@@ -472,12 +486,14 @@ You can transfer a repository to a different workspace. This is useful when reor
 Deletion is permanent and cannot be undone through the Bitbucket interface.
 
 **To delete:**
+
 1. Go to repository **Settings** > **Repository details**
 2. Scroll to **Delete repository**
 3. Type the repository name to confirm
 4. Click **Delete**
 
 Before deleting:
+
 - Ensure you have a local clone if you want to keep the code
 - Check that no CI/CD pipelines or deployment configurations reference this repository
 - Notify any team members who use the repository
@@ -532,6 +548,7 @@ The `--mirror` flag ensures all branches, tags and refs are pushed, not just the
 Repository variables are key-value pairs stored securely in Bitbucket and made available to Bitbucket Pipelines during CI/CD runs. They are the right place to store API keys, passwords and configuration values that your build process needs.
 
 **To add a repository variable:**
+
 1. Go to the repository
 2. Click **Repository settings** > **Repository variables**
 3. Click **Add variable**
@@ -557,16 +574,19 @@ pipelines:
 Bitbucket Pipelines supports deployment environments - named stages that your pipeline deploys to. Common environments: `Test`, `Staging`, `Production`.
 
 Environments serve two purposes:
+
 1. They provide a visual deployment history in the Bitbucket interface
 2. They can have environment-specific variables that override repository-level variables
 
 **To create a deployment environment:**
+
 1. Go to **Repository settings** > **Deployments**
 2. Click **Add environment**
 3. Name it (e.g. `Production`)
 4. Add environment-specific variables if needed
 
 In your pipeline:
+
 ```yaml
 pipelines:
   branches:

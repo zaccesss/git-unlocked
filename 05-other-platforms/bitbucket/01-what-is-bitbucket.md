@@ -28,9 +28,9 @@ This file covers where Bitbucket came from, how it has evolved, what it looks li
 
 ## The origin story
 
-Bitbucket was created by **Jesper Nøhr**, a Danish developer based in Sydney, Australia. He launched it in 2008 as a side project - a hosting service for Mercurial repositories. At the time, Git was gaining momentum in open source communities but Mercurial was the version control system many professional developers used, and there was no strong hosted option for it. GitHub had just launched earlier that year focused exclusively on Git. Jesper saw a gap and filled it.
+Bitbucket was created by **Jesper Nøhr**, a Danish developer based in Sydney, Australia. He launched it in 2008 as a side project - a hosting service for Mercurial repositories. At the time, Git was gaining momentum in open source communities but Mercurial was the version control system many professional developers used and there was no strong hosted option for it. GitHub had just launched earlier that year focused exclusively on Git. Jesper saw a gap and filled it.
 
-The original Bitbucket was built on Django (a Python web framework) and ran as a small startup. It offered free hosting for open source Mercurial repositories with private repositories available on paid plans. The feature set was minimal compared to what exists today - basic repository browsing, a simple issue tracker, and the ability to push and pull code.
+The original Bitbucket was built on Django (a Python web framework) and ran as a small startup. It offered free hosting for open source Mercurial repositories with private repositories available on paid plans. The feature set was minimal compared to what exists today - basic repository browsing, a simple issue tracker and the ability to push and pull code.
 
 Despite the modest beginnings, Bitbucket attracted a loyal user base among developers who preferred Mercurial's approach to branching and its cleaner history management compared to Git's more chaotic early tooling. This community gave Bitbucket a foundation to grow from.
 
@@ -38,11 +38,11 @@ Despite the modest beginnings, Bitbucket attracted a loyal user base among devel
 
 ## The Atlassian acquisition
 
-In **September 2010**, Atlassian acquired Bitbucket. At the time, Atlassian was already the dominant player in developer tooling for enterprise teams - Jira was the market-leading issue tracker, Confluence was widely used for internal documentation, and the company had built its business on tools that helped software teams coordinate at scale.
+In **September 2010**, Atlassian acquired Bitbucket. At the time, Atlassian was already the dominant player in developer tooling for enterprise teams - Jira was the market-leading issue tracker, Confluence was widely used for internal documentation and the company had built its business on tools that helped software teams coordinate at scale.
 
 The acquisition made strategic sense for Atlassian immediately. They had tools for planning software (Jira), documenting it (Confluence) and communicating about it - but nothing for hosting the actual code. Bitbucket filled that gap. For Bitbucket, the acquisition provided resources, distribution through Atlassian's existing customer base, and integration with the Jira platform that would eventually become its defining feature.
 
-Atlassian did not kill Bitbucket's independent identity. The brand remained, the product continued to develop, and the team grew. What changed was the trajectory: instead of building a GitHub competitor from scratch, Bitbucket became part of an integrated developer toolchain.
+Atlassian did not kill Bitbucket's independent identity. The brand remained, the product continued to develop and the team grew. What changed was the trajectory: instead of building a GitHub competitor from scratch, Bitbucket became part of an integrated developer toolchain.
 
 > [!NOTE]
 > Atlassian also acquired **SourceTree** in 2012, a free Git and Mercurial client for Mac and Windows. SourceTree is now one of the most popular GUI clients for Bitbucket and continues to be offered free of charge. It is covered in the `ides/` folder of this course.
@@ -84,7 +84,7 @@ As organisations grew larger and their infrastructure requirements became more c
 Data Center continues active development. The current long-term support release is **Bitbucket Data Center 10.2** (shipped March 2026, supported until March 2028). Unlike some other Atlassian Data Center products which face a 2029 end-of-life sunset, Bitbucket Data Center is explicitly excluded from that sunset and continues to receive investment.
 
 > [!IMPORTANT]
-> Despite Atlassian announcing end-of-life for Jira, Confluence, and several other Data Center products in March 2029, **Bitbucket Data Center is not included in this announcement**. It has an active roadmap and Atlassian has committed to its continued development. Do not conflate the Data Center sunset with Bitbucket Data Center - they are separate decisions.
+> Despite Atlassian announcing end-of-life for Jira, Confluence and several other Data Center products in March 2029, **Bitbucket Data Center is not included in this announcement**. It has an active roadmap and Atlassian has committed to its continued development. Do not conflate the Data Center sunset with Bitbucket Data Center - they are separate decisions.
 
 ---
 
@@ -95,6 +95,7 @@ Data Center continues active development. The current long-term support release 
 Bitbucket Cloud is the main product for most users. It runs at bitbucket.org and is offered in three pricing tiers:
 
 **Free tier** - $0 per month
+
 - Up to 5 users in a workspace
 - 50 Bitbucket Pipelines minutes per month
 - 1 GB total storage
@@ -102,6 +103,7 @@ Bitbucket Cloud is the main product for most users. It runs at bitbucket.org and
 - No AI features, no IP allowlisting, no enforced merge checks
 
 **Standard** - $3.65 per user per month
+
 - Unlimited users
 - 2,500 Pipelines minutes per month
 - 5 GB LFS storage
@@ -109,6 +111,7 @@ Bitbucket Cloud is the main product for most users. It runs at bitbucket.org and
 - Bitbucket Packages (container registry, npm, Maven support)
 
 **Premium** - $7.25 per user per month
+
 - Unlimited users
 - 3,500 Pipelines minutes per month
 - 10 GB LFS storage
@@ -125,7 +128,7 @@ Additional pipeline minutes can be purchased at $10 per 1,000. Self-hosted runne
 
 ### Bitbucket Data Center
 
-Bitbucket Data Center is the self-hosted enterprise version. It runs on Linux only (Windows support was dropped in version 8.0). Current requirements include Java 11, Git 2.34 or later, PostgreSQL or MySQL as the database, and OpenSearch for search indexing (Elasticsearch support was removed).
+Bitbucket Data Center is the self-hosted enterprise version. It runs on Linux only (Windows support was dropped in version 8.0). Current requirements include Java 11, Git 2.34 or later, PostgreSQL or MySQL as the database and OpenSearch for search indexing (Elasticsearch support was removed).
 
 Data Center licensing is subscription-based with annual fees. Pricing starts around $4,200 per year for up to 50 users. Unlike Cloud, Data Center gives organisations complete control over their data, network topology and upgrade schedule.
 
@@ -145,7 +148,7 @@ The replacement is **API tokens**, which offer expiry controls, scoped permissio
 
 ### Pipelines runners: the V5 overhaul
 
-Bitbucket Pipelines received a significant runner overhaul in 2025-2026. The new V5 self-hosted runners bring customisable CPU and memory, Docker volume mounts, S3 and GCS cache storage, and OpenID Connect support for secretless authentication to cloud providers.
+Bitbucket Pipelines received a significant runner overhaul in 2025-2026. The new V5 self-hosted runners bring customisable CPU and memory, Docker volume mounts, S3 and GCS cache storage and OpenID Connect support for secretless authentication to cloud providers.
 
 The runner pricing model changed to: up to 100 free basic runners per workspace, with premium runners (advanced orchestration, larger specs) costing $15 per slot per month. Pre-V5 runners will stop working on **3 June 2026** for monthly plans and **3 December 2026** for annual plans.
 
@@ -193,7 +196,7 @@ Understanding the typical Bitbucket user helps you understand the product's desi
 
 ### Teams already in the Atlassian ecosystem
 
-This is the primary use case. A company runs Jira for project management, Confluence for documentation and has been using Atlassian products for years. When they need Git hosting, Bitbucket is the natural choice. The Atlassian account system is already in place, the Jira integration works without setup, and the IT team already knows how to administer Atlassian products. Switching to GitHub or GitLab would mean managing a second identity system and building custom integrations to get anything close to Bitbucket's Jira connection.
+This is the primary use case. A company runs Jira for project management, Confluence for documentation and has been using Atlassian products for years. When they need Git hosting, Bitbucket is the natural choice. The Atlassian account system is already in place, the Jira integration works without setup and the IT team already knows how to administer Atlassian products. Switching to GitHub or GitLab would mean managing a second identity system and building custom integrations to get anything close to Bitbucket's Jira connection.
 
 ### Enterprises with data sovereignty requirements
 

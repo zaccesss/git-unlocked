@@ -37,6 +37,7 @@ Microsoft released **Team Foundation Server (TFS)** in 2005 as a comprehensive r
 TFS was an on-premises product. Organisations installed it on their own Windows servers with SQL Server as the database backend. It became deeply embedded in enterprise Microsoft shops over the following decade.
 
 Key TFS milestones:
+
 - **2010**: TFS Lab Management added for test environments
 - **2012**: Git support added alongside TFVC - TFS became the first major platform to support both TFVC and Git
 - **2013**: Agile planning tools matured, kanban boards added
@@ -69,6 +70,7 @@ Azure DevOps consists of five services. They share a unified interface, a single
 **Azure Boards** is the project management service. It provides work items (the basic unit of tracked work), Kanban boards, sprint planning, backlogs, queries, delivery plans and reporting.
 
 The work item hierarchy in the default Agile process template:
+
 ```
 Epic
   └── Feature
@@ -89,7 +91,7 @@ Azure Boards is the most direct Azure DevOps competitor to GitHub Projects, Jira
 
 **Team Foundation Version Control (TFVC)** - Microsoft's centralised version control system inherited from TFS. TFVC is a legacy system. Most teams should use Git. TFVC is discussed briefly in [03-azure-repos.md](03-azure-repos.md) for teams who may be migrating from it.
 
-Azure Repos Git is a first-class, production-quality Git hosting service. It is competitive with GitHub and GitLab for core hosting features. Where it differs is in ecosystem: fewer third-party integrations, no equivalent of the GitHub Marketplace, and no community discovery mechanism.
+Azure Repos Git is a first-class, production-quality Git hosting service. It is competitive with GitHub and GitLab for core hosting features. Where it differs is in ecosystem: fewer third-party integrations, no equivalent of the GitHub Marketplace and no community discovery mechanism.
 
 ### Azure Pipelines
 
@@ -145,6 +147,7 @@ The same product ships in two deployment models.
 Hosted at [dev.azure.com](https://dev.azure.com). Managed entirely by Microsoft. You log in with a Microsoft account or Azure Active Directory identity and immediately get access to all five services.
 
 **Advantages of Services:**
+
 - No infrastructure to manage
 - Continuously updated (new features ship every sprint, approximately every 3 weeks)
 - Globally distributed with high availability
@@ -152,6 +155,7 @@ Hosted at [dev.azure.com](https://dev.azure.com). Managed entirely by Microsoft.
 - Integrated with Azure cloud services
 
 **Limitations of Services:**
+
 - Your code and data are on Microsoft's infrastructure
 - Upgrade timing is controlled by Microsoft
 - Some highly specialised integrations are only available on Server
@@ -161,6 +165,7 @@ Hosted at [dev.azure.com](https://dev.azure.com). Managed entirely by Microsoft.
 Installed on your own Windows or Linux servers. You manage the infrastructure, perform upgrades and are responsible for availability.
 
 **Advantages of Server:**
+
 - Complete data sovereignty - your data never leaves your infrastructure
 - Air-gapped deployment possible (no internet connectivity required)
 - You control upgrade timing
@@ -168,6 +173,7 @@ Installed on your own Windows or Linux servers. You manage the infrastructure, p
 - Can integrate with internal network resources without VPN
 
 **Limitations of Server:**
+
 - Infrastructure overhead: Windows Server or Linux, SQL Server, operational management
 - Features lag Services - cloud features often arrive months later
 - Annual upgrades required to stay current
@@ -180,7 +186,7 @@ The latest release is simply called **Azure DevOps Server** (no year designation
 
 ### Enterprise Microsoft environments
 
-Azure DevOps is most at home in enterprise organisations running Microsoft technology stacks: Azure cloud infrastructure, .NET or C# applications, Windows Server environments, Active Directory for identity management, and Visual Studio for development. In these environments, Azure DevOps integrates naturally with the existing toolchain without additional configuration.
+Azure DevOps is most at home in enterprise organisations running Microsoft technology stacks: Azure cloud infrastructure, .NET or C# applications, Windows Server environments, Active Directory for identity management and Visual Studio for development. In these environments, Azure DevOps integrates naturally with the existing toolchain without additional configuration.
 
 ### Regulated industries
 
@@ -221,11 +227,11 @@ In 2026, Azure DevOps received the **Azure DevOps MCP Server** (Model Context Pr
 
 **Microsoft-hosted agent images in 2026:**
 
-| Image alias | Current OS |
-|---|---|
-| `ubuntu-latest` | Ubuntu 24.04 LTS |
+| Image alias      | Current OS                         |
+| ---------------- | ---------------------------------- |
+| `ubuntu-latest`  | Ubuntu 24.04 LTS                   |
 | `windows-latest` | Windows Server 2025 (with VS 2022) |
-| `macos-latest` | macOS 15 Sequoia |
+| `macos-latest`   | macOS 15 Sequoia                   |
 
 Windows Server 2019 agents were retired December 31, 2025. Ubuntu 20.04 agents were retired May 2025. macOS 14 Sonoma deprecation begins July 2026.
 
@@ -281,6 +287,7 @@ A **PAT** is the primary authentication credential for the Azure DevOps REST API
 **Exercise 3 - Compare with GitHub**
 
 Open [github.com](https://github.com) and [dev.azure.com](https://dev.azure.com) side by side. Find the equivalent of:
+
 - A GitHub repository → Azure Repos
 - GitHub Actions → Azure Pipelines
 - GitHub Projects → Azure Boards
@@ -299,7 +306,7 @@ In Azure DevOps, you navigate to a project first, then to a repository within th
 
 **Creating one project per repository**
 
-Some teams coming from GitHub create one Azure DevOps project per code repository (mirroring the GitHub model where the repo is the primary unit). This creates administrative overhead. Instead, create one project per team or product area, and use multiple repositories within that project.
+Some teams coming from GitHub create one Azure DevOps project per code repository (mirroring the GitHub model where the repo is the primary unit). This creates administrative overhead. Instead, create one project per team or product area and use multiple repositories within that project.
 
 **Using Azure DevOps Repos when GitHub integration would work better**
 

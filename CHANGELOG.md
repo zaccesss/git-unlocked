@@ -75,7 +75,7 @@ Practical scenarios showing Git in real professional contexts.
 #### introduction/ - 2 new files
 
 - `introduction/02-how-to-use-this-course.md` - full rewrite; replaces initial placeholder
-- `introduction/04-version-control-concepts.md` - new bridging file covering what version control is, the history of VCS tools, and the core Git mental model
+- `introduction/04-version-control-concepts.md` - new bridging file covering what version control is, the history of VCS tools and the core Git mental model
 
 ### Updated
 

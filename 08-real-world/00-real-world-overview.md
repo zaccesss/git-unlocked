@@ -21,9 +21,9 @@
 
 The rest of this course teaches you Git commands and platform features in isolation. This section teaches you how those commands and features combine in the real world, on real teams, solving real problems.
 
-Every file in this section is built around a scenario: contributing to a project you do not own, shipping code with a team of twenty, automating infrastructure deployments, working inside a repository with a million files, moving a codebase between platforms, or digging a team out of a serious Git disaster. These are the situations where knowing the right command is not enough - you also need to know the right sequence, the right tool for the job, and the failure modes to avoid.
+Every file in this section is built around a scenario: contributing to a project you do not own, shipping code with a team of twenty, automating infrastructure deployments, working inside a repository with a million files, moving a codebase between platforms, or digging a team out of a serious Git disaster. These are the situations where knowing the right command is not enough - you also need to know the right sequence, the right tool for the job and the failure modes to avoid.
 
-The content in this section draws on public engineering posts from Google, Meta, Microsoft, Shopify, Netflix and others, on the OpenGitOps specification, on official documentation from the Git project and every major platform, and on the collective knowledge of teams that have made (and recovered from) every mistake covered here.
+The content in this section draws on public engineering posts from Google, Meta, Microsoft, Shopify, Netflix and others, on the OpenGitOps specification, on official documentation from the Git project and every major platform and on the collective knowledge of teams that have made (and recovered from) every mistake covered here.
 
 ---
 
@@ -58,16 +58,16 @@ You do not need to read all files in order. Each file is self-contained. The rea
 
 ## Files in this section
 
-| # | File | Topics | Level |
-|---|---|---|---|
-| 00 | [Real-world overview](00-real-world-overview.md) | Section map, reading order, prerequisites | 🟢 |
-| 01 | [Contributing to open source](01-contributing-to-open-source.md) | Fork workflow, PRs, upstream sync, review feedback | 🟢🟡 |
-| 02 | [Working in a team](02-working-in-a-team.md) | Branching strategies, code review, protected branches, merge queues | 🟡🔴 |
-| 03 | [GitOps workflows](03-gitops-workflows.md) | Git as infrastructure source of truth, ArgoCD, Flux, environment promotion | 🟡🔴 |
-| 04 | [Monorepo patterns](04-monorepo-patterns.md) | Large repos, sparse checkout, partial clone, Nx, Turborepo, Bazel | 🟡🔴 |
-| 05 | [Migrating between platforms](05-migrating-between-platforms.md) | GitHub to GitLab, GitLab to Gitea, LFS migration, gotchas | 🟡🔴 |
-| 06 | [Recovering from disasters](06-recovering-from-disasters.md) | Reflog, lost commits, bad merges, force push accidents, committed secrets | 🟢🟡🔴 |
-| 07 | [Real-world reference](07-all-real-world-reference.md) | Consolidated commands and patterns from all files in this section | 🟢🟡🔴 |
+| #   | File                                                             | Topics                                                                     | Level  |
+| --- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- | ------ |
+| 00  | [Real-world overview](00-real-world-overview.md)                 | Section map, reading order, prerequisites                                  | 🟢     |
+| 01  | [Contributing to open source](01-contributing-to-open-source.md) | Fork workflow, PRs, upstream sync, review feedback                         | 🟢🟡   |
+| 02  | [Working in a team](02-working-in-a-team.md)                     | Branching strategies, code review, protected branches, merge queues        | 🟡🔴   |
+| 03  | [GitOps workflows](03-gitops-workflows.md)                       | Git as infrastructure source of truth, ArgoCD, Flux, environment promotion | 🟡🔴   |
+| 04  | [Monorepo patterns](04-monorepo-patterns.md)                     | Large repos, sparse checkout, partial clone, Nx, Turborepo, Bazel          | 🟡🔴   |
+| 05  | [Migrating between platforms](05-migrating-between-platforms.md) | GitHub to GitLab, GitLab to Gitea, LFS migration, gotchas                  | 🟡🔴   |
+| 06  | [Recovering from disasters](06-recovering-from-disasters.md)     | Reflog, lost commits, bad merges, force push accidents, committed secrets  | 🟢🟡🔴 |
+| 07  | [Real-world reference](07-all-real-world-reference.md)           | Consolidated commands and patterns from all files in this section          | 🟢🟡🔴 |
 
 ---
 

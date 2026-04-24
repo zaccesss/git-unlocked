@@ -30,21 +30,21 @@ Azure DevOps Server is the self-hosted, on-premises version of Azure DevOps. It 
 
 Understanding the naming helps when reading documentation, searching for help or talking to colleagues from different eras:
 
-| Product name | Years | Notes |
-|---|---|---|
-| Visual SourceSafe | 1994-2005 | First Microsoft VCS, file-locking model |
-| Team Foundation Server (TFS) 2005 | 2005 | First TFS release with TFVC and work items |
-| TFS 2008 | 2008 | Added SharePoint integration |
-| TFS 2010 | 2010 | Lab Management added |
-| TFS 2012 | 2012 | Git support added |
-| TFS 2013 | 2013 | Agile planning tools |
-| TFS 2015 | 2015 | New build system (replaced XAML builds) |
-| TFS 2017 | 2017 | Release Management |
-| TFS 2018 | 2018 | Last "TFS" release |
-| Azure DevOps Server 2019 | 2019 | First "Azure DevOps Server" release |
-| Azure DevOps Server 2020 | 2020 | |
-| Azure DevOps Server 2022 | 2022 | |
-| Azure DevOps Server (no year) | 2025-present | Modern Lifecycle Policy, continuous support |
+| Product name                      | Years        | Notes                                       |
+| --------------------------------- | ------------ | ------------------------------------------- |
+| Visual SourceSafe                 | 1994-2005    | First Microsoft VCS, file-locking model     |
+| Team Foundation Server (TFS) 2005 | 2005         | First TFS release with TFVC and work items  |
+| TFS 2008                          | 2008         | Added SharePoint integration                |
+| TFS 2010                          | 2010         | Lab Management added                        |
+| TFS 2012                          | 2012         | Git support added                           |
+| TFS 2013                          | 2013         | Agile planning tools                        |
+| TFS 2015                          | 2015         | New build system (replaced XAML builds)     |
+| TFS 2017                          | 2017         | Release Management                          |
+| TFS 2018                          | 2018         | Last "TFS" release                          |
+| Azure DevOps Server 2019          | 2019         | First "Azure DevOps Server" release         |
+| Azure DevOps Server 2020          | 2020         |                                             |
+| Azure DevOps Server 2022          | 2022         |                                             |
+| Azure DevOps Server (no year)     | 2025-present | Modern Lifecycle Policy, continuous support |
 
 The current release is simply called **Azure DevOps Server** with no year designation, released December 2025. This reflects a shift to Microsoft's Modern Lifecycle Policy - rather than annual major releases, the server product now receives ongoing updates.
 
@@ -74,13 +74,13 @@ Choose Azure DevOps Server over Azure DevOps Services when your organisation has
 
 ### Application tier (Azure DevOps Server application)
 
-| Component | Minimum | Recommended |
-|---|---|---|
-| CPU | 4-core | 8-core |
-| RAM | 8 GB | 16 GB+ |
-| Disk (application) | 10 GB free | SSD, 50 GB+ |
-| Disk (repositories) | Depends on code size | SSD, plan for growth |
-| OS | Windows Server 2019/2022/2025 or RHEL 8/9, Ubuntu 20.04/22.04/24.04 | Windows Server 2025 or Ubuntu 22.04 |
+| Component           | Minimum                                                             | Recommended                         |
+| ------------------- | ------------------------------------------------------------------- | ----------------------------------- |
+| CPU                 | 4-core                                                              | 8-core                              |
+| RAM                 | 8 GB                                                                | 16 GB+                              |
+| Disk (application)  | 10 GB free                                                          | SSD, 50 GB+                         |
+| Disk (repositories) | Depends on code size                                                | SSD, plan for growth                |
+| OS                  | Windows Server 2019/2022/2025 or RHEL 8/9, Ubuntu 20.04/22.04/24.04 | Windows Server 2025 or Ubuntu 22.04 |
 
 > [!NOTE]
 > Azure DevOps Server now supports Linux (RHEL and Ubuntu) as of 2019. However, Windows Server remains the most tested and most documented deployment platform. If your team has strong Linux infrastructure expertise, Linux is a valid choice. If not, Windows Server is safer.
@@ -89,11 +89,11 @@ Choose Azure DevOps Server over Azure DevOps Services when your organisation has
 
 Azure DevOps Server stores all data in SQL Server. SQL Server must be installed separately.
 
-| Component | Minimum version |
-|---|---|
-| SQL Server | 2019 or later |
-| SQL Server version | Standard Edition minimum (Enterprise for large deployments) |
-| SQL Server features | Database Engine, Full-Text Search |
+| Component           | Minimum version                                             |
+| ------------------- | ----------------------------------------------------------- |
+| SQL Server          | 2019 or later                                               |
+| SQL Server version  | Standard Edition minimum (Enterprise for large deployments) |
+| SQL Server features | Database Engine, Full-Text Search                           |
 
 SQL Server 2025 (when released) is supported. SQL Server 2016 and earlier are not supported.
 
@@ -106,11 +106,11 @@ Code search functionality requires a separate Elasticsearch instance. Azure DevO
 
 ### Scale configurations
 
-| Configuration | Users | Application nodes | SQL Server |
-|---|---|---|---|
-| Single-server | Up to 250 | 1 | Local SQL Server Express or Standard |
-| Dual-server | Up to 500 | 1 | Separate SQL Server |
-| Multi-server | 500+ | Multiple (with load balancer) | SQL Server with High Availability |
+| Configuration | Users     | Application nodes             | SQL Server                           |
+| ------------- | --------- | ----------------------------- | ------------------------------------ |
+| Single-server | Up to 250 | 1                             | Local SQL Server Express or Standard |
+| Dual-server   | Up to 500 | 1                             | Separate SQL Server                  |
+| Multi-server  | 500+      | Multiple (with load balancer) | SQL Server with High Availability    |
 
 For any production deployment with more than 100 users, put SQL Server on a separate server from the Azure DevOps application.
 
@@ -136,18 +136,21 @@ Download Azure DevOps Server from the [Microsoft Visual Studio download page](ht
 ### Running the installer
 
 🪟 **Windows**:
+
 ```
 # Run as Administrator
 azuredevopsserver.exe
 ```
 
 Follow the installation wizard:
+
 1. Choose installation type: **New Deployment** (fresh install) or **Upgrade** (from TFS or earlier ADO Server)
 2. Select the installation directory
 3. The installer checks prerequisites and reports any missing components
 4. Accept the licence and click **Install**
 
 🐧 **Linux** (Ubuntu example):
+
 ```bash
 # Add the Microsoft package repository
 wget https://packages.microsoft.com/config/ubuntu/22.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
@@ -169,20 +172,24 @@ After installation, the Azure DevOps Server Configuration Wizard runs. This is s
 **Deployment type**: Choose **New Deployment**.
 
 **Database**: Specify the SQL Server instance. The wizard tests the connection. Options:
+
 - `.\` or `localhost` for local SQL Server
 - `SERVERNAME` for a named instance
 - `SERVERNAME\INSTANCENAME` for a named SQL Server instance
 
 **Account**: The service account that Azure DevOps Server runs as. Options:
+
 - **Network Service** (Windows built-in, suitable for simple deployments)
 - **Local service** (more restricted)
 - **Domain account** (recommended for AD-integrated deployments - e.g. `DOMAIN\ADOService`)
 
 **Application tier URL**: The URL users will use to access Azure DevOps Server. Examples:
+
 - `http://tfs.yourcompany.com:8080/tfs` (HTTP, non-standard port)
 - `https://devops.yourcompany.com` (HTTPS, standard port)
 
 For production, always use HTTPS. The wizard can configure an SSL certificate from:
+
 - Windows Certificate Store (for certificates installed via group policy or IIS)
 - A PFX file
 - Let's Encrypt (if the server has internet access)
@@ -227,11 +234,13 @@ Configure Windows Authentication exceptions or use basic authentication with HTT
 ### Azure Active Directory (Entra ID) integration
 
 Azure DevOps Server can authenticate against Azure AD, enabling:
+
 - Users to sign in with their Microsoft 365 / Azure AD credentials
 - Conditional Access policies
 - MFA enforcement from Azure AD
 
 This is configured in the Azure DevOps Server Administration Console:
+
 1. Open the Administration Console
 2. Under **Authentication**, configure the Azure AD connection
 3. Users can then sign in with their Azure AD identity
@@ -253,6 +262,7 @@ Upgrading from TFS to Azure DevOps Server preserves all data - work items, code 
 You cannot upgrade directly from very old TFS versions to the latest Azure DevOps Server. Microsoft publishes required upgrade paths - you must pass through certain intermediate versions.
 
 Example paths (check the official upgrade path documentation for current requirements):
+
 - TFS 2015 → TFS 2018 → Azure DevOps Server 2022 → Azure DevOps Server (current)
 - TFS 2017 → Azure DevOps Server 2019 → Azure DevOps Server (current)
 - Azure DevOps Server 2022 → Azure DevOps Server (current) - direct upgrade
@@ -295,30 +305,31 @@ Azure DevOps Server and Services share most features, but there are important di
 
 ### Features in Services not available in Server
 
-| Feature | Notes |
-|---|---|
-| **AI features** | Copilot integration, AI-powered PR summaries - Services only |
-| **GitHub Codespaces integration** | Services only |
-| **Analytics views (full)** | Basic analytics in Server; full Analytics service is Services-focused |
-| **Managed DevOps Pools** | Services only |
-| **Some Marketplace extensions** | Extensions must be compatible with your Server version |
+| Feature                           | Notes                                                                 |
+| --------------------------------- | --------------------------------------------------------------------- |
+| **AI features**                   | Copilot integration, AI-powered PR summaries - Services only          |
+| **GitHub Codespaces integration** | Services only                                                         |
+| **Analytics views (full)**        | Basic analytics in Server; full Analytics service is Services-focused |
+| **Managed DevOps Pools**          | Services only                                                         |
+| **Some Marketplace extensions**   | Extensions must be compatible with your Server version                |
 
 ### Features in Server not available in Services
 
-| Feature | Notes |
-|---|---|
-| **On-premises AD integration** | Services requires Azure AD |
-| **Air-gapped operation** | No internet required for Server |
-| **SAML SSO without Azure AD** | Server can use any SAML IDP directly |
-| **Full admin control** | You control every setting, upgrade timing and configuration |
-| **SQL Server Reporting Services** | Legacy reports via SSRS |
-| **SharePoint integration** | Legacy SharePoint portal integration (rarely used) |
+| Feature                           | Notes                                                       |
+| --------------------------------- | ----------------------------------------------------------- |
+| **On-premises AD integration**    | Services requires Azure AD                                  |
+| **Air-gapped operation**          | No internet required for Server                             |
+| **SAML SSO without Azure AD**     | Server can use any SAML IDP directly                        |
+| **Full admin control**            | You control every setting, upgrade timing and configuration |
+| **SQL Server Reporting Services** | Legacy reports via SSRS                                     |
+| **SharePoint integration**        | Legacy SharePoint portal integration (rarely used)          |
 
 ### Build agent differences
 
 Azure DevOps Server does not provide Microsoft-hosted agents. All build agents must be self-hosted. You install and manage agent software on your own machines.
 
 This means:
+
 - No built-in macOS build support unless you own and manage a macOS build machine
 - All agent maintenance (OS updates, tool updates) is your responsibility
 - Agent pools are local to your Server instance
@@ -331,19 +342,20 @@ This means:
 
 Azure DevOps Server requires user licences. Licences are bundled with Visual Studio subscriptions and sold separately:
 
-| Licence type | Access level | Typically for |
-|---|---|---|
-| **Visual Studio Enterprise subscriber** | Basic + Test Plans | Senior developers, architects |
-| **Visual Studio Professional subscriber** | Basic | Developers |
-| **Visual Studio Test Professional subscriber** | Basic + Test Plans | QA engineers |
-| **Basic** | Full Repos, Pipelines, Boards | Developers without VS subscriptions |
-| **Stakeholder** | Work items, dashboards (no code) | Free, managers/stakeholders |
+| Licence type                                   | Access level                     | Typically for                       |
+| ---------------------------------------------- | -------------------------------- | ----------------------------------- |
+| **Visual Studio Enterprise subscriber**        | Basic + Test Plans               | Senior developers, architects       |
+| **Visual Studio Professional subscriber**      | Basic                            | Developers                          |
+| **Visual Studio Test Professional subscriber** | Basic + Test Plans               | QA engineers                        |
+| **Basic**                                      | Full Repos, Pipelines, Boards    | Developers without VS subscriptions |
+| **Stakeholder**                                | Work items, dashboards (no code) | Free, managers/stakeholders         |
 
 Visual Studio subscription licences are transferable - if a developer has a Visual Studio Enterprise subscription for their development tools, that licence also covers Azure DevOps Server access.
 
 ### Server licences
 
 Azure DevOps Server itself requires a licence:
+
 - **Azure DevOps Server licence** - the server product licence (separate from user licences)
 - Included in several Microsoft enterprise agreements (EA, MPSA)
 - Available as a standalone purchase
@@ -359,12 +371,14 @@ Contact Microsoft licensing or a Microsoft partner for current pricing.
 **Back up regularly and test restores.** Azure DevOps Server data is irreplaceable - work item history, code, pipeline results and test records accumulated over years. A database corruption or hardware failure without a backup is catastrophic.
 
 **What to back up:**
+
 - SQL Server databases: `Tfs_Configuration`, `Tfs_DefaultCollection` (and any other project collection databases)
 - Azure DevOps Server application files (less critical - the installer can recreate these)
 - Elasticsearch indices (code search - can be rebuilt, but rebuilding takes time)
 - SSL certificates and service account credentials
 
 **Backup schedule:**
+
 - Daily differential backups
 - Weekly full backups
 - Retain at least 4 weeks of backups
@@ -373,6 +387,7 @@ Contact Microsoft licensing or a Microsoft partner for current pricing.
 Quarterly, restore from backup to a test environment and verify all data is accessible. An untested backup is not a backup.
 
 Built-in backup: Azure DevOps Server includes a scheduled backup tool in the Administration Console:
+
 1. Open the Administration Console
 2. Under **Scheduled backups**, configure the backup schedule and destination
 3. Test the restore procedure
@@ -386,6 +401,7 @@ Monitor the [Azure DevOps Server release notes](https://learn.microsoft.com/azur
 ### Monitoring
 
 Monitor these indicators for a healthy Azure DevOps Server instance:
+
 - **SQL Server performance**: query duration, disk I/O, memory pressure
 - **Disk space**: repositories grow continuously; monitor and plan expansion
 - **Windows Event Log**: application and system errors
@@ -413,11 +429,13 @@ Since Azure DevOps Server has no hosted agents, you must set up self-hosted agen
 3. Name the pool
 
 Or from the Azure DevOps Server web UI:
+
 1. **Organisation settings** > **Agent pools** > **Add pool**
 
 ### Installing a build agent
 
 🪟 **Windows** (PowerShell):
+
 ```powershell
 mkdir agent ; cd agent
 Invoke-WebRequest -Uri https://vstsagentpackage.azureedge.net/agent/latest/vsts-agent-win-x64-latest.zip -OutFile agent.zip
@@ -431,6 +449,7 @@ Expand-Archive agent.zip -DestinationPath .
 ```
 
 🍎 **Mac**:
+
 ```bash
 mkdir myagent && cd myagent
 curl -O https://vstsagentpackage.azureedge.net/agent/latest/vsts-agent-osx-x64-latest.tar.gz
@@ -445,6 +464,7 @@ tar zxvf vsts-agent-osx-x64-latest.tar.gz
 ```
 
 🐧 **Linux**:
+
 ```bash
 mkdir myagent && cd myagent
 curl -O https://vstsagentpackage.azureedge.net/agent/latest/vsts-agent-linux-x64-latest.tar.gz
@@ -493,6 +513,7 @@ When connecting to Server (not Services), agents typically use **Negotiate** (Ke
 1. In the Administration Console or web UI, create a pool called "Local"
 2. Download and configure a build agent pointing to your local server
 3. Create a simple pipeline (`azure-pipelines.yml`):
+
 ```yaml
 pool:
   name: Local
@@ -501,6 +522,7 @@ steps:
   - script: echo "Running on local agent"
   - script: hostname
 ```
+
 4. Run the pipeline and verify it runs on your local agent
 
 ---
@@ -545,7 +567,7 @@ Authentication on Server integrates directly with Active Directory (the default)
 
 Upgrading from TFS requires following the official upgrade path - skipping intermediate versions causes database corruption. Always back up before upgrading and test backups quarterly.
 
-Key Server differences from Services: no hosted agents (all builds must use self-hosted agents), no AI features, full administrative control, and on-premises AD integration without Azure subscriptions.
+Key Server differences from Services: no hosted agents (all builds must use self-hosted agents), no AI features, full administrative control and on-premises AD integration without Azure subscriptions.
 
 ---
 

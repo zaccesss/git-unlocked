@@ -4,7 +4,7 @@
 
 The Jira integration is Bitbucket's single greatest differentiator. Every major Git platform offers some form of Jira connection via API or third-party apps - but only Bitbucket, being made by the same company, delivers a native, deep integration that works bidirectionally without setup complexity. Code activity in Bitbucket automatically surfaces in Jira. Jira actions can be triggered from Git commit messages. Developers stay in their editor while project managers stay in their issue tracker, and both see the same connected picture of what is happening.
 
-This file covers the complete Jira-Bitbucket integration: how to connect the two products, how the development panel works, smart commits and their full syntax, automating Jira transitions, linking branches and PRs to issues, and using the integration effectively in real team workflows.
+This file covers the complete Jira-Bitbucket integration: how to connect the two products, how the development panel works, smart commits and their full syntax, automating Jira transitions, linking branches and PRs to issues and using the integration effectively in real team workflows.
 
 ---
 
@@ -167,6 +167,7 @@ git commit -m "PROJ-456 #resolved Fixed null pointer in payment service"
 ```
 
 The exact transition names available depend on the Jira project's workflow configuration. Common defaults:
+
 - `#to-do` - moves to To Do
 - `#in-progress` - moves to In Progress
 - `#done` - moves to Done (for simple workflows)
@@ -237,6 +238,7 @@ One of the most useful workflow features is creating branches directly from a Ji
 7. Click **Create branch**
 
 Jira creates the branch in Bitbucket directly. The branch name automatically includes the issue key, which means:
+
 - The Jira development panel immediately shows the branch
 - Any future commits pushed to this branch are linked to the issue without needing smart commit syntax
 
@@ -249,6 +251,7 @@ Jira generates branch names following this pattern:
 ```
 
 Example: Issue `PROJ-123` with summary "Fix login redirect loop" generates:
+
 ```
 feature/PROJ-123-fix-login-redirect-loop
 ```
@@ -320,6 +323,7 @@ Bitbucket Pipelines automatically reports build and deployment status to connect
 When a pipeline runs on a commit or branch linked to a Jira issue, the pipeline result (pass/fail) appears in the Jira development panel under **Builds**.
 
 This shows:
+
 - Whether the latest build passed or failed
 - The pipeline build number
 - A direct link to the pipeline run in Bitbucket
@@ -503,6 +507,7 @@ If you have a Jira account (free tier available at [atlassian.com/software/jira]
 
 1. Create a test issue in your Jira project (e.g. `TEST-1`)
 2. In your Bitbucket repository:
+
 ```bash
 git checkout -b feature/TEST-1-smart-commit-test
 echo "testing smart commits" >> test.txt
@@ -510,6 +515,7 @@ git add test.txt
 git commit -m "TEST-1 #comment Testing smart commit integration from Bitbucket"
 git push origin feature/TEST-1-smart-commit-test
 ```
+
 3. Open `TEST-1` in Jira and check the development panel and comments
 
 **Exercise 3 - Create a branch from Jira**
@@ -524,6 +530,7 @@ git push origin feature/TEST-1-smart-commit-test
 **Exercise 4 - Create automation**
 
 If you have access to Jira Automation:
+
 1. Go to Project settings > Automation
 2. Create a rule: When PR is merged > Transition issue to Done
 3. Create a branch, open a PR and merge it
@@ -542,6 +549,7 @@ If you have access to Jira Automation:
 Smart commits and development panel links are matched by committer identity. If your Git `user.email` is `personal@gmail.com` but your Atlassian account is `work@company.com`, and the Jira site is linked to your work account, smart commits from your personal email address will not execute.
 
 Set your Git email for work repositories:
+
 ```bash
 # Per-repository setting (does not affect other repos)
 git config user.email "work@company.com"

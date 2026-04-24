@@ -41,21 +41,23 @@ Gitea installs in one of three ways: as a single binary directly on the host, vi
 
 Gitea is exceptionally resource-efficient. These are genuine minimums, not "recommended for best performance" inflated numbers:
 
-| Use case | CPU | RAM | Disk |
-|---|---|---|---|
-| Personal / home lab | 1 core | 256 MB | SSD/HDD with free space for repos |
-| Small team (up to 10 users) | 1-2 cores | 512 MB | SSD recommended |
-| Medium team (10-50 users) | 2-4 cores | 1-2 GB | SSD |
-| Larger deployment (50+ users) | 4+ cores | 4+ GB | NVMe SSD |
+| Use case                      | CPU       | RAM    | Disk                              |
+| ----------------------------- | --------- | ------ | --------------------------------- |
+| Personal / home lab           | 1 core    | 256 MB | SSD/HDD with free space for repos |
+| Small team (up to 10 users)   | 1-2 cores | 512 MB | SSD recommended                   |
+| Medium team (10-50 users)     | 2-4 cores | 1-2 GB | SSD                               |
+| Larger deployment (50+ users) | 4+ cores  | 4+ GB  | NVMe SSD                          |
 
 Gitea officially states it can run on a Raspberry Pi. In practice, a Raspberry Pi 4 with 1-2 GB RAM handles a small team without difficulty, though large repository operations (cloning, searching) are slower than on dedicated hardware.
 
 **Supported operating systems:**
+
 - 🐧 Linux (x86_64, ARM, ARM64) - primary platform
 - 🪟 Windows (x86_64) - fully supported
 - 🍎 macOS (x86_64, Apple Silicon) - supported
 
 **Supported databases:**
+
 - SQLite 3 (built-in, suitable for personal use and small teams)
 - PostgreSQL 12 or later (recommended for production)
 - MySQL 8.0 or later
@@ -142,6 +144,7 @@ gitea web
 ```
 
 🪟 **Windows**:
+
 ```powershell
 cd C:\gitea
 .\gitea.exe web
@@ -220,6 +223,7 @@ services:
 ```
 
 Start:
+
 ```bash
 docker compose up -d
 ```
@@ -273,17 +277,20 @@ When Gitea starts for the first time without a configuration file, it serves an 
 ### Wizard sections
 
 **Database settings:**
+
 - Database type: SQLite3 (default), PostgreSQL, MySQL, MSSQL
 - For SQLite: the database file path (default: in the work directory)
 - For PostgreSQL/MySQL: host, port, database name, username, password
 
 **General settings:**
+
 - **Site title**: shown in the browser tab and header
 - **Repository root path**: where Git repositories are stored on disk (default: `/home/git/gitea-repositories`)
 - **Git hooks custom path**: leave default unless you have specific needs
 - **Gitea working directory**: where uploads, logs and configuration live
 
 **Optional settings:**
+
 - Email setup (SMTP configuration for notifications)
 - Server and third-party service settings
 
@@ -524,6 +531,7 @@ WantedBy=multi-user.target
 ```
 
 Enable and start:
+
 ```bash
 sudo systemctl enable gitea
 sudo systemctl start gitea
@@ -552,6 +560,7 @@ Gitea Actions requires a separate **act_runner** binary. This runner registers w
 ### Installing act_runner
 
 🐧 **Linux**:
+
 ```bash
 # Download the latest act_runner
 wget -O act_runner "https://dl.gitea.com/act_runner/latest/act_runner-latest-linux-amd64"
@@ -560,12 +569,14 @@ sudo mv act_runner /usr/local/bin/act_runner
 ```
 
 🪟 **Windows** (PowerShell):
+
 ```powershell
 Invoke-WebRequest -Uri "https://dl.gitea.com/act_runner/latest/act_runner-latest-windows-amd64.exe" `
   -OutFile "C:\act_runner\act_runner.exe"
 ```
 
 🍎 **Mac**:
+
 ```bash
 wget -O act_runner "https://dl.gitea.com/act_runner/latest/act_runner-latest-darwin-arm64"
 # Use darwin-amd64 for Intel Macs
@@ -579,6 +590,7 @@ chmod +x act_runner
 3. Copy the registration token
 
 Register the runner:
+
 ```bash
 act_runner register \
   --no-interactive \
@@ -747,7 +759,7 @@ The installation wizard auto-generates `SECRET_KEY` and `INTERNAL_TOKEN`. These 
 
 **Forgetting to configure ROOT_URL**
 
-If `ROOT_URL` does not match the actual URL users access Gitea from, clone URLs shown in the interface will be wrong, email links will be broken, and OAuth redirect flows will fail. Always set `ROOT_URL` to the exact URL (including trailing slash) that users use.
+If `ROOT_URL` does not match the actual URL users access Gitea from, clone URLs shown in the interface will be wrong, email links will be broken and OAuth redirect flows will fail. Always set `ROOT_URL` to the exact URL (including trailing slash) that users use.
 
 **Running Gitea directly on port 80/443 as root**
 

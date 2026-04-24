@@ -145,11 +145,11 @@ The `on:` key defines what triggers the workflow. GitHub supports over 40 event 
 ```yaml
 on:
   push:
-    branches: [main, develop]          # only these branches
-    branches-ignore: [feature/*]       # all branches except these
-    tags: ['v*']                       # only when pushing tags
-    paths: ['src/**', 'tests/**']      # only when these paths change
-    paths-ignore: ['docs/**', '*.md']  # ignore these paths
+    branches: [main, develop] # only these branches
+    branches-ignore: [feature/*] # all branches except these
+    tags: ["v*"] # only when pushing tags
+    paths: ["src/**", "tests/**"] # only when these paths change
+    paths-ignore: ["docs/**", "*.md"] # ignore these paths
 ```
 
 ### Pull request events
@@ -172,8 +172,8 @@ on:
 ```yaml
 on:
   schedule:
-    - cron: '0 9 * * 1-5'    # every weekday at 9am UTC
-    - cron: '0 0 * * 0'      # every Sunday at midnight UTC
+    - cron: "0 9 * * 1-5" # every weekday at 9am UTC
+    - cron: "0 0 * * 0" # every Sunday at midnight UTC
 ```
 
 Cron syntax: `minute hour day-of-month month day-of-week`. Minimum interval is every 5 minutes. Scheduled workflows only run on the default branch.
@@ -185,16 +185,16 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Environment to deploy to'
+        description: "Environment to deploy to"
         required: true
         type: choice
         options: [staging, production]
       version:
-        description: 'Version to deploy'
+        description: "Version to deploy"
         required: false
         type: string
       debug:
-        description: 'Enable debug mode'
+        description: "Enable debug mode"
         type: boolean
         default: false
 ```
@@ -206,19 +206,19 @@ on:
 ```yaml
 on:
   release:
-    types: [published, created]     # when a release is published
+    types: [published, created] # when a release is published
 
   issues:
-    types: [opened, labeled]        # when an issue is opened
+    types: [opened, labeled] # when an issue is opened
 
   issue_comment:
-    types: [created]                # when someone comments
+    types: [created] # when someone comments
 
   workflow_run:
-    workflows: [CI]                 # when another workflow completes
+    workflows: [CI] # when another workflow completes
     types: [completed]
 
-  repository_dispatch:              # custom webhook trigger
+  repository_dispatch: # custom webhook trigger
     types: [deploy]
 ```
 
@@ -244,10 +244,10 @@ Jobs are the top-level units of execution in a workflow. Each job runs on its ow
 ```yaml
 jobs:
   build:
-    name: Build the project          # display name (optional)
-    runs-on: ubuntu-latest           # which runner to use
-    timeout-minutes: 30              # cancel if takes longer than this
-    continue-on-error: false         # stop the workflow if this job fails
+    name: Build the project # display name (optional)
+    runs-on: ubuntu-latest # which runner to use
+    timeout-minutes: 30 # cancel if takes longer than this
+    continue-on-error: false # stop the workflow if this job fails
 
     steps:
       - run: npm run build
@@ -255,7 +255,7 @@ jobs:
   test:
     name: Run tests
     runs-on: ubuntu-latest
-    needs: build                     # wait for build to succeed first
+    needs: build # wait for build to succeed first
 
     steps:
       - run: npm test
@@ -263,9 +263,9 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
-    needs: [build, test]             # wait for BOTH jobs
+    needs: [build, test] # wait for BOTH jobs
 
-    if: github.ref == 'refs/heads/main'   # only run on main branch
+    if: github.ref == 'refs/heads/main' # only run on main branch
 
     steps:
       - run: ./deploy.sh
@@ -313,9 +313,9 @@ Steps are the individual tasks within a job. They run sequentially in order.
 ```yaml
 steps:
   - name: Step name (shown in logs)
-    id: my-step                         # optional ID for referencing outputs
-    uses: actions/checkout@v4           # use a pre-built action
-    with:                               # inputs for the action
+    id: my-step # optional ID for referencing outputs
+    uses: actions/checkout@v4 # use a pre-built action
+    with: # inputs for the action
       ref: main
 
   - name: Run a command
@@ -372,16 +372,16 @@ Runners are the machines where jobs execute. GitHub provides hosted runners and 
 
 ### GitHub-hosted runners
 
-| Label | OS | CPU | RAM |
-|---|---|---|---|
-| `ubuntu-latest` (ubuntu-24.04) | Ubuntu 24.04 | 4 | 16 GB |
-| `ubuntu-22.04` | Ubuntu 22.04 | 4 | 16 GB |
-| `ubuntu-24.04-arm` | Ubuntu 24.04 ARM | 4 | 16 GB |
-| `windows-latest` (windows-2025) | Windows Server 2025 | 4 | 16 GB |
-| `windows-2022` | Windows Server 2022 | 4 | 16 GB |
-| `macos-latest` (macos-15) | macOS 15 | 3 | 7 GB |
-| `macos-14` | macOS 14 | 3 | 7 GB |
-| `macos-13` | macOS 13 (Intel) | 3 | 14 GB |
+| Label                           | OS                  | CPU | RAM   |
+| ------------------------------- | ------------------- | --- | ----- |
+| `ubuntu-latest` (ubuntu-24.04)  | Ubuntu 24.04        | 4   | 16 GB |
+| `ubuntu-22.04`                  | Ubuntu 22.04        | 4   | 16 GB |
+| `ubuntu-24.04-arm`              | Ubuntu 24.04 ARM    | 4   | 16 GB |
+| `windows-latest` (windows-2025) | Windows Server 2025 | 4   | 16 GB |
+| `windows-2022`                  | Windows Server 2022 | 4   | 16 GB |
+| `macos-latest` (macos-15)       | macOS 15            | 3   | 7 GB  |
+| `macos-14`                      | macOS 14            | 3   | 7 GB  |
+| `macos-13`                      | macOS 13 (Intel)    | 3   | 14 GB |
 
 > [!NOTE]
 > Private repository jobs on standard runners get reduced resources: Linux and Windows get 2 CPU and 8 GB RAM. Public repositories always get the full specification.
@@ -392,7 +392,7 @@ Available for Linux and Windows: 8-core to 96-core, up to 384 GB RAM. macOS up t
 
 **Pre-installed software:**
 
-GitHub-hosted runners come with hundreds of tools pre-installed: Node.js (multiple versions), Python, Java, .NET, Go, Ruby, PHP, Docker, kubectl, Terraform, AWS CLI, Azure CLI, and more. Full software lists are in the `actions/runner-images` repository.
+GitHub-hosted runners come with hundreds of tools pre-installed: Node.js (multiple versions), Python, Java, .NET, Go, Ruby, PHP, Docker, kubectl, Terraform, AWS CLI, Azure CLI and more. Full software lists are in the `actions/runner-images` repository.
 
 ### Self-hosted runners
 
@@ -436,8 +436,8 @@ steps:
   - uses: actions/checkout@v4
   - uses: actions/setup-node@v4
     with:
-      node-version: '20'
-      cache: 'npm'
+      node-version: "20"
+      cache: "npm"
 ```
 
 **Action versioning - always pin to a version:**
@@ -452,25 +452,25 @@ uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # full SHA (mos
 > For third-party actions from the community, pin to a **full commit SHA** rather than a tag. Tags can be moved to point to different (malicious) commits. A full SHA is immutable.
 >
 > ```yaml
-> uses: some-org/some-action@abc1234def5678...  # SHA pin
+> uses: some-org/some-action@abc1234def5678... # SHA pin
 > ```
 
 **Commonly used official actions:**
 
-| Action | Purpose |
-|---|---|
-| `actions/checkout@v4` | Check out repository code |
-| `actions/setup-node@v4` | Install Node.js and configure npm/yarn cache |
-| `actions/setup-python@v5` | Install Python and configure pip/poetry cache |
-| `actions/setup-java@v4` | Install Java (multiple distributions) |
-| `actions/setup-go@v5` | Install Go |
-| `actions/setup-dotnet@v4` | Install .NET |
-| `actions/upload-artifact@v4` | Upload files for later jobs or download |
-| `actions/download-artifact@v4` | Download previously uploaded artefacts |
-| `actions/cache@v4` | Cache dependencies between runs |
-| `actions/github-script@v7` | Run JavaScript using the GitHub API |
-| `docker/login-action@v3` | Log in to a container registry |
-| `docker/build-push-action@v6` | Build and push Docker images |
+| Action                         | Purpose                                       |
+| ------------------------------ | --------------------------------------------- |
+| `actions/checkout@v4`          | Check out repository code                     |
+| `actions/setup-node@v4`        | Install Node.js and configure npm/yarn cache  |
+| `actions/setup-python@v5`      | Install Python and configure pip/poetry cache |
+| `actions/setup-java@v4`        | Install Java (multiple distributions)         |
+| `actions/setup-go@v5`          | Install Go                                    |
+| `actions/setup-dotnet@v4`      | Install .NET                                  |
+| `actions/upload-artifact@v4`   | Upload files for later jobs or download       |
+| `actions/download-artifact@v4` | Download previously uploaded artefacts        |
+| `actions/cache@v4`             | Cache dependencies between runs               |
+| `actions/github-script@v7`     | Run JavaScript using the GitHub API           |
+| `docker/login-action@v3`       | Log in to a container registry                |
+| `docker/build-push-action@v6`  | Build and push Docker images                  |
 
 ---
 
@@ -520,14 +520,14 @@ ${{ vars.DEPLOY_REGION }}
 
 ```yaml
 ${{ steps.my-step-id.outputs.result }}
-${{ steps.my-step-id.outcome }}   # success, failure, cancelled, skipped
+${{ steps.my-step-id.outcome }} # success, failure, cancelled, skipped
 ```
 
 **`needs` context** - outputs and results from dependency jobs:
 
 ```yaml
 ${{ needs.build.outputs.version }}
-${{ needs.build.result }}         # success, failure, cancelled, skipped
+${{ needs.build.result }} # success, failure, cancelled, skipped
 ```
 
 **`matrix` context** - current matrix values:
@@ -674,16 +674,16 @@ steps:
 
 ```yaml
 permissions:
-  contents: write        # needed to create releases
-  pull-requests: write   # needed to comment on PRs
-  issues: write          # needed to create/close issues
-  packages: write        # needed to publish packages
-  id-token: write        # needed for OIDC authentication
+  contents: write # needed to create releases
+  pull-requests: write # needed to comment on PRs
+  issues: write # needed to create/close issues
+  packages: write # needed to publish packages
+  id-token: write # needed for OIDC authentication
 
 jobs:
   deploy:
     permissions:
-      contents: read     # override at job level
+      contents: read # override at job level
 ```
 
 > [!IMPORTANT]
@@ -712,8 +712,8 @@ steps:
     with:
       name: build-output
       path: dist/
-      retention-days: 7         # default 90, max 400
-      if-no-files-found: error  # error, warn, or ignore
+      retention-days: 7 # default 90, max 400
+      if-no-files-found: error # error, warn, or ignore
 ```
 
 **Download in another job:**
@@ -749,7 +749,7 @@ Artefacts appear on the workflow run summary page and can be downloaded as a zip
   with:
     name: my-file
     path: output.html
-    compression-level: 0   # no compression - file downloads unzipped
+    compression-level: 0 # no compression - file downloads unzipped
 ```
 
 ---
@@ -784,18 +784,18 @@ The official setup actions support caching with a single `cache:` input:
 ```yaml
 - uses: actions/setup-node@v4
   with:
-    node-version: '20'
-    cache: 'npm'          # automatically caches npm/yarn/pnpm
+    node-version: "20"
+    cache: "npm" # automatically caches npm/yarn/pnpm
 
 - uses: actions/setup-python@v5
   with:
-    python-version: '3.12'
-    cache: 'pip'          # automatically caches pip
+    python-version: "3.12"
+    cache: "pip" # automatically caches pip
 
 - uses: actions/setup-java@v4
   with:
-    java-version: '21'
-    cache: 'maven'        # automatically caches maven
+    java-version: "21"
+    cache: "maven" # automatically caches maven
 ```
 
 **Cache limits:** 10 GB per repository. Entries unused for 7 days are evicted. Caches are scoped to the repository and branch.
@@ -813,8 +813,8 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         node: [18, 20, 22]
-      fail-fast: false        # continue other jobs if one fails
-      max-parallel: 6         # run at most 6 jobs at once
+      fail-fast: false # continue other jobs if one fails
+      max-parallel: 6 # run at most 6 jobs at once
 
     runs-on: ${{ matrix.os }}
 
@@ -837,10 +837,10 @@ strategy:
     node: [18, 20]
     include:
       - os: ubuntu-latest
-        node: 22          # add this extra combination
+        node: 22 # add this extra combination
     exclude:
       - os: windows-latest
-        node: 18          # remove this specific combination
+        node: 18 # remove this specific combination
 ```
 
 **Maximum matrix size:** 256 jobs per workflow.
@@ -866,7 +866,7 @@ jobs:
   deploy:
     concurrency:
       group: production-deployment
-      cancel-in-progress: false   # queue instead of cancel
+      cancel-in-progress: false # queue instead of cancel
 ```
 
 Setting `cancel-in-progress: false` queues the new run instead of cancelling the current one. Good for deployments where you want to ensure the latest code deploys but do not want to interrupt an in-progress deployment abruptly.
@@ -923,7 +923,7 @@ jobs:
 **Passing all secrets:**
 
 ```yaml
-secrets: inherit   # pass all calling workflow's secrets to the reusable workflow
+secrets: inherit # pass all calling workflow's secrets to the reusable workflow
 ```
 
 ---
@@ -935,20 +935,20 @@ Composite actions let you bundle multiple steps into a single reusable action. U
 **Create in your repository at `.github/actions/my-action/action.yml`:**
 
 ```yaml
-name: 'Setup and Test'
-description: 'Install dependencies and run tests'
+name: "Setup and Test"
+description: "Install dependencies and run tests"
 inputs:
   node-version:
-    description: 'Node.js version'
+    description: "Node.js version"
     required: false
-    default: '20'
+    default: "20"
 outputs:
   test-result:
-    description: 'Test result'
+    description: "Test result"
     value: ${{ steps.test.outputs.result }}
 
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - uses: actions/setup-node@v4
       with:
@@ -973,7 +973,7 @@ steps:
   - uses: actions/checkout@v4
   - uses: ./.github/actions/my-action
     with:
-      node-version: '22'
+      node-version: "22"
 ```
 
 ---
@@ -998,7 +998,7 @@ jobs:
   deploy-production:
     environment:
       name: production
-      url: https://example.com    # shown in PR and Actions UI
+      url: https://example.com # shown in PR and Actions UI
     runs-on: ubuntu-latest
     steps:
       - run: ./deploy-to-production.sh
@@ -1010,7 +1010,7 @@ When this job runs, GitHub pauses it if reviewers are required and sends them a 
 
 ```yaml
 env:
-  PROD_DATABASE_URL: ${{ secrets.PRODUCTION_DB_URL }}  # only available for production environment
+  PROD_DATABASE_URL: ${{ secrets.PRODUCTION_DB_URL }} # only available for production environment
 ```
 
 ---
@@ -1020,6 +1020,7 @@ env:
 **Repository-level default permissions:** Settings → Actions → General → Workflow permissions.
 
 Options:
+
 - **Read repository contents and packages permissions** (recommended default)
 - **Read and write permissions** (overly broad for most use cases)
 
@@ -1046,6 +1047,7 @@ Available permission scopes: `actions`, `attestations`, `checks`, `contents`, `d
 **Enable debug logging:**
 
 Add these repository secrets (set to `true`):
+
 - `ACTIONS_RUNNER_DEBUG` - enables runner diagnostic logging
 - `ACTIONS_STEP_DEBUG` - enables step debug logging
 
@@ -1080,7 +1082,7 @@ The `mxschmitt/action-tmate` action gives you an SSH session into the runner for
 ```yaml
 - name: Setup tmate session
   uses: mxschmitt/action-tmate@v3
-  if: failure()    # only open if a previous step failed
+  if: failure() # only open if a previous step failed
 ```
 
 ---
@@ -1093,32 +1095,32 @@ The `mxschmitt/action-tmate` action gives you an SSH session into the runner for
 
 ### Private repositories
 
-| Plan | Free minutes/month | Free storage |
-|---|---|---|
-| Free | 2,000 | 500 MB |
-| Pro | 3,000 | 1 GB |
-| Team | 3,000 | 2 GB |
-| Enterprise | 50,000 | 50 GB |
+| Plan       | Free minutes/month | Free storage |
+| ---------- | ------------------ | ------------ |
+| Free       | 2,000              | 500 MB       |
+| Pro        | 3,000              | 1 GB         |
+| Team       | 3,000              | 2 GB         |
+| Enterprise | 50,000             | 50 GB        |
 
 **Per-minute rates for private repositories (from January 2026):**
 
-| Runner | Rate per minute |
-|---|---|
-| Linux 2-core | $0.006 |
-| Windows 2-core | $0.010 |
-| macOS 3-core | $0.062 |
+| Runner         | Rate per minute |
+| -------------- | --------------- |
+| Linux 2-core   | $0.006          |
+| Windows 2-core | $0.010          |
+| macOS 3-core   | $0.062          |
 
 > [!NOTE]
 > GitHub reduced Actions pricing by up to 39% on 1 January 2026. macOS runners remain the most expensive due to Apple silicon licensing costs.
 
 **Concurrent job limits:**
 
-| Plan | Concurrent jobs |
-|---|---|
-| Free | 20 |
-| Pro | 40 |
-| Team | 60 |
-| Enterprise | 500 |
+| Plan       | Concurrent jobs |
+| ---------- | --------------- |
+| Free       | 20              |
+| Pro        | 40              |
+| Team       | 60              |
+| Enterprise | 500             |
 
 Self-hosted runners are free to use regardless of plan - you only pay for your own infrastructure.
 
@@ -1156,7 +1158,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: "npm"
 
       - run: npm ci
       - run: npm run build --if-present
@@ -1176,7 +1178,7 @@ jobs:
 
     strategy:
       matrix:
-        python-version: ['3.10', '3.11', '3.12']
+        python-version: ["3.10", "3.11", "3.12"]
 
     steps:
       - uses: actions/checkout@v4
@@ -1184,7 +1186,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-          cache: 'pip'
+          cache: "pip"
 
       - run: pip install -r requirements.txt
       - run: pip install pytest pytest-cov
@@ -1223,8 +1225,8 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
       - run: npm ci
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
@@ -1250,7 +1252,7 @@ name: Docker
 on:
   push:
     branches: [main]
-    tags: ['v*']
+    tags: ["v*"]
 
 jobs:
   build:
@@ -1383,8 +1385,8 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'Who to greet'
-        default: 'World'
+        description: "Who to greet"
+        default: "World"
         required: true
 ```
 
