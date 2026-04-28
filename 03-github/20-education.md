@@ -20,7 +20,6 @@ GitHub Education gives verified students and teachers free access to professiona
 - [Setting up a GitHub Classroom assignment](#setting-up-a-github-classroom-assignment)
 - [Autograding in GitHub Classroom](#autograding-in-github-classroom)
 - [Campus Expert Program](#campus-expert-program)
-- [GitHub Octernships](#github-octernships)
 - [Try It Yourself](#try-it-yourself)
 - [Common Mistakes](#common-mistakes)
 - [Summary](#summary)
@@ -38,8 +37,6 @@ GitHub Education is a set of free programs run by GitHub for students, teachers 
 - **Teacher Benefits** - GitHub Team plan free for verified teachers
 - **GitHub Classroom** - a platform for distributing and grading coding assignments
 - **Campus Expert Program** - leadership and community-building training for student leaders
-- **GitHub Octernships** - paid industry placements for students
-
 Everything in GitHub Education is free for eligible individuals. Nothing requires a credit card as a student or teacher.
 
 ---
@@ -445,27 +442,6 @@ Acceptance is selective - approximately 100 to 200 new Campus Experts are added 
 
 ---
 
-## GitHub Octernships
-
-GitHub Octernships are paid industry placements (internships) for students. They are run in partnership with companies that want to hire developer talent.
-
-**What they are:**
-
-Octernships are project-based internships typically lasting 2 to 4 months, done remotely. Each Octernship has a specific project scope agreed between the company and GitHub. Students apply for specific Octernships, complete a technical application task and if selected work directly with the company.
-
-**Pay:** Octernships are paid. The exact amount varies per company and project but is competitive with standard internship rates.
-
-**How to apply:**
-
-1. Go to `github.com/readme/octernships`
-2. Browse open Octernship listings
-3. Each listing has a technical application task - complete it in a public GitHub repository
-4. Submit the repository link through the listing before the deadline
-
-**Eligibility:** Open to students globally. Specific listings may have additional requirements (language, region, technical stack).
-
----
-
 ## Try It Yourself
 
 **Apply for the Student Developer Pack:**
@@ -518,7 +494,6 @@ Octernships are project-based internships typically lasting 2 to 4 months, done 
 - Cloud credits (Azure, DigitalOcean) typically expire after 12 months from redemption, not 2 years
 - **GitHub Classroom** lets teachers distribute coding assignments as GitHub repositories with optional autograding via GitHub Actions
 - The **Campus Expert Program** provides funding, training and GitHub support for student community leaders - applications are competitive
-- **GitHub Octernships** are paid remote project internships run through GitHub
 - Apply early - every month you wait is a month of free JetBrains, Copilot and cloud infrastructure you are missing
 
 ---
@@ -530,7 +505,6 @@ Octernships are project-based internships typically lasting 2 to 4 months, done 
 - [GitHub Classroom](https://classroom.github.com) - set up assignments and autograding
 - [Classroom documentation](https://docs.github.com/en/education/manage-coursework-with-github-classroom) - official guide for teachers
 - [Campus Expert program](https://education.github.com/experts) - information and application
-- [GitHub Octernships](https://github.com/readme/octernships) - current open placements
 - [GitHub Education Community](https://github.com/community/community) - forum for students and teachers
 - [JetBrains for students](https://www.jetbrains.com/community/education/#students) - direct JetBrains student programme if you already have verified student status elsewhere
 
