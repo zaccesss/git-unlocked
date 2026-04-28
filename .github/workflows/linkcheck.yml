@@ -23,12 +23,15 @@ jobs:
             --verbose
             --no-progress
             --insecure
-            --accept 403,429,400,502
+            --accept 200,403,429,400,502
+            --exclude-path '.github'
             --exclude 'localhost'
             --exclude 'github.com/settings'
             --exclude 'gitlab.com/-/user_settings'
             --exclude 'account.microsoft.com'
             --exclude 'reddit.com'
+            --exclude 'gitexplorer.com'
+            --exclude 'file://'
             '**/*.md'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
