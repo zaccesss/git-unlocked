@@ -31,7 +31,7 @@ If you are brand new to GitHub, start at file 01 and work forward. If you are lo
 | [17-profile-and-readme.md](17-profile-and-readme.md) | Building a standout GitHub profile and profile README with dynamic stats and components | 🟢 |
 | [18-badges-and-achievements.md](18-badges-and-achievements.md) | Every GitHub achievement, all tier thresholds and step-by-step guides to earn the three fastest badges | 🟢 |
 | [19-copilot.md](19-copilot.md) | GitHub Copilot - plans, model selection, VS Code/JetBrains/Neovim setup, Chat, Edits, agent mode, custom instructions and limitations | 🟡 |
-| [20-education.md](20-education.md) | Student Developer Pack (full offer list with redemption steps), GitHub Classroom, Campus Experts and Octernships | 🟢 |
+| [20-education.md](20-education.md) | Student Developer Pack (full offer list with redemption steps), GitHub Classroom and Campus Experts | 🟢 |
 | [21-cli.md](21-cli.md) | GitHub CLI (`gh`) - every command group with examples, JSON scripting, extensions and multi-step workflows | 🟡 |
 | [22-mobile.md](22-mobile.md) | GitHub Mobile - setup, built-in 2FA authenticator, notification triage, PR review and mobile limitations | 🟢 |
 | [23-collaborators-teams-orgs.md](23-collaborators-teams-orgs.md) | Collaborators, deploy keys, organisations, outside collaborators, teams, nested teams, CODEOWNERS and audit log | 🟡 |
