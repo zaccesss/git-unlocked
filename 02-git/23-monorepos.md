@@ -469,7 +469,7 @@ Large monorepos with contributors on Windows and Mac often suffer from spurious 
 ## Sources and Further Reading
 
 - [Turborepo documentation](https://turbo.build/repo/docs) - the leading monorepo build tool for JavaScript
-- [Nx documentation](https://nx.dev) - full-featured monorepo tooling with generators and plugins
+- [Nx documentation](https://nx.dev/docs/getting-started/intro) - full-featured monorepo tooling with generators and plugins
 - [Changesets](https://github.com/changesets/changesets) - versioning and changelog tool for monorepos
 - [Pants build system](https://www.pantsbuild.org) - scalable build for Python monorepos
 - [Bazel](https://bazel.build) - Google's monorepo build system for any language

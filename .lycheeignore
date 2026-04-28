@@ -51,7 +51,11 @@ https://blog\.gitea\.com/.*
 https://gitea\.com/gitea/governance
 
 # nx.dev timeouts
+https://nx\.dev/?
 https://nx\.dev/docs.*
+
+# Cloudflare/edge responses vary in GitHub Actions
+https://firstaidgit\.io/?
 
 # Other removed pages
 https://openssf\.org/blog/2025/03/18/cve-2025-30066-tj-actions-changed-files-action-is-compromised/

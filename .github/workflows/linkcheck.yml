@@ -23,6 +23,8 @@ jobs:
             --verbose
             --no-progress
             --insecure
+            --max-retries 5
+            --retry-wait-time 3
             --accept 200,202,403,429,400,502,503
             --exclude-path '.github'
             --exclude 'localhost'

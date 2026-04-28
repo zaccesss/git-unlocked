@@ -300,7 +300,7 @@ Package manager workspaces handle installation. Task runners handle **build grap
 
 **Current version: 22.x (Nx 22.5.0, released 2026-02-09)**
 
-Nx ([nx.dev](https://nx.dev)) builds a dependency graph from your project structure and import analysis. Its key primitives are:
+Nx ([nx.dev](https://nx.dev/docs/getting-started/intro)) builds a dependency graph from your project structure and import analysis. Its key primitives are:
 
 - **`nx run <project>:<target>`** - run a single task (build, test, lint)
 - **`nx run-many -t build`** - run a task across all projects, respecting the dependency graph
