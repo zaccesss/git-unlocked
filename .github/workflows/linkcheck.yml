@@ -23,7 +23,7 @@ jobs:
             --verbose
             --no-progress
             --insecure
-            --accept 200,403,429,400,502,503
+            --accept 200,202,403,429,400,502,503
             --exclude-path '.github'
             --exclude 'localhost'
             --exclude 'github.com/settings'
