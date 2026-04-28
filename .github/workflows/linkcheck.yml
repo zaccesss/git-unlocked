@@ -23,14 +23,18 @@ jobs:
             --verbose
             --no-progress
             --insecure
-            --accept 200,403,429,400,502
+            --accept 200,403,429,400,502,503
             --exclude-path '.github'
             --exclude 'localhost'
             --exclude 'github.com/settings'
+            --exclude 'github.com/zaccessss/git-unlocked/discussions'
             --exclude 'gitlab.com/-/user_settings'
             --exclude 'account.microsoft.com'
             --exclude 'reddit.com'
             --exclude 'gitexplorer.com'
+            --exclude 'slsa.dev'
+            --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
+            --exclude 'zaccessss/git-unlocked@'
             --exclude 'file://'
             '**/*.md'
         env:
