@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Check links
         uses: lycheeverse/lychee-action@v2
@@ -27,14 +27,13 @@ jobs:
             --exclude-path '.github'
             --exclude 'localhost'
             --exclude 'github.com/settings'
-            --exclude 'github.com/zaccessss/git-unlocked/discussions'
+            --exclude 'git-unlocked/discussions'
             --exclude 'gitlab.com/-/user_settings'
             --exclude 'account.microsoft.com'
             --exclude 'reddit.com'
             --exclude 'gitexplorer.com'
             --exclude 'slsa.dev'
             --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
-            --exclude 'zaccessss/git-unlocked@'
             --exclude 'file://'
             '**/*.md'
         env:
