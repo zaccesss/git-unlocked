@@ -36,6 +36,7 @@ jobs:
             --exclude 'gitexplorer.com'
             --exclude 'slsa.dev'
             --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
+            --exclude 'jvns.ca'
             --exclude 'file://'
             '**/*.md'
         env:
