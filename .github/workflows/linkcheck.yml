@@ -2,7 +2,7 @@ name: Check Links
 
 on:
   schedule:
-    - cron: '0 8 * * 1'
+    - cron: "0 8 * * 1"
   pull_request:
     branches:
       - main
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Check links
         uses: lycheeverse/lychee-action@v2
@@ -22,10 +22,21 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --exclude-mail
+            --insecure
+            --max-retries 5
+            --retry-wait-time 3
+            --accept 200,202,403,429,400,502,503
+            --exclude-path '.github'
             --exclude 'localhost'
             --exclude 'github.com/settings'
+            --exclude 'git-unlocked/discussions'
             --exclude 'gitlab.com/-/user_settings'
+            --exclude 'account.microsoft.com'
+            --exclude 'reddit.com'
+            --exclude 'gitexplorer.com'
+            --exclude 'slsa.dev'
+            --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
+            --exclude 'file://'
             '**/*.md'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

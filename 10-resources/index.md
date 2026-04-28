@@ -587,7 +587,7 @@ These resources are outdated, discontinued or actively misleading. Do not use th
 - [docs.gitlab.com](https://docs.gitlab.com/) - GitLab documentation
 - [GitHub Skills](https://skills.github.com) - free interactive GitHub courses
 - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials) - the best third-party Git tutorial site
-- [learn.microsoft.com - GitHub certifications](https://learn.microsoft.com/en-us/credentials/certifications/browse/?terms=github) - official GitHub certification catalog
+- [GitHub Certifications](https://learn.github.com/certifications) - official GitHub certification catalog
 - [university.gitlab.com](https://university.gitlab.com) - GitLab learning and certification platform
 - [git.github.io/rev_news](https://git.github.io/rev_news/) - Git Rev News newsletter archive
 
