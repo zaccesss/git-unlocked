@@ -1,0 +1,62 @@
+# GitHub Discussions not enabled on this repo
+https://github\.com/zaccessss/git-unlocked/discussions
+
+# git-scm pages that moved
+https://git-scm\.com/docs/git-subtree
+https://git-scm\.com/book/en/v2/Customising-Git-Git-Configuration
+
+# Atlassian tutorial pages that moved
+https://www\.atlassian\.com/git/tutorials/git-bisect
+https://www\.atlassian\.com/git/tutorials/git-worktree
+https://www\.atlassian\.com/git/tutorials/bitbucket-vs-github-vs-gitlab
+https://www\.atlassian\.com/software/bitbucket/data-residency
+
+# Atlassian support docs restructured
+https://support\.atlassian\.com/bitbucket-cloud/.*
+https://support\.atlassian\.com/manage-atlassian-account/.*
+https://support\.atlassian\.com/jira-cloud-administration/.*
+https://support\.atlassian\.com/jira-software-cloud/.*
+https://confluence\.atlassian\.com/bitbucketserver/.*
+
+# GitLab page that moved
+https://about\.gitlab\.com/ai-transparency/
+
+# Microsoft Learn page that moved
+https://learn\.microsoft\.com/azure/devops/repos/git/migrate-from-tfvc-to-git
+
+# VS Marketplace extensions that were removed
+https://marketplace\.visualstudio\.com/items\?itemName=checkmarx\.checkmarx
+https://marketplace\.visualstudio\.com/items\?itemName=CloudQATester\.selenium-tests
+https://marketplace\.visualstudio\.com/items\?itemName=microsoft-elearn\.microsoft-vsts-burndown
+https://marketplace\.visualstudio\.com/items\?itemName=ms-devlabs\.vss-services-delivery-plans
+https://marketplace\.visualstudio\.com/items\?itemName=ms-kubernetes-tools\.vsts-kubernetes-tools
+
+# Codeberg Community wiki moved
+https://codeberg\.org/Codeberg/Community/wiki.*
+https://codeberg\.org/Codeberg/org/src/branch/main/TOS\.md
+https://codeberg\.org/forgejo/runner/releases
+
+# Forgejo docs restructured
+https://forgejo\.org/about/
+https://forgejo\.org/docs/latest/.*
+
+# Woodpecker CI docs moved
+https://woodpecker-ci\.org/docs/administration/vcs/forgejo
+https://woodpecker-ci\.org/plugins/Gitea%20Release
+
+# Gitea docs restructured
+https://docs\.gitea\.com/usage/.*
+https://docs\.gitea\.com/administration/oauth2-provider
+https://blog\.gitea\.com/.*
+https://gitea\.com/gitea/governance
+
+# nx.dev timeouts
+https://nx\.dev/docs.*
+
+# Other removed pages
+https://openssf\.org/blog/2025/03/18/cve-2025-30066-tj-actions-changed-files-action-is-compromised/
+https://www\.techdoneright\.io/59
+https://github\.com/gitui-org/gitui/blob/main/KEY_CONFIG\.md
+
+# CHANGELOG version comparison links (tags not yet created)
+zaccessss/git-unlocked@.*
