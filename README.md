@@ -108,7 +108,6 @@ If this course helped you, please star the repository. It helps others find it.
 
 </div>
 
-
 ## Contact and Support
 
 Open an [issue](https://github.com/zaccesss/git-unlocked/issues) in this repository for questions or bugs.
@@ -116,5 +115,5 @@ Open an [issue](https://github.com/zaccesss/git-unlocked/issues) in this reposit
 You can also reach me directly at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
 
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer" alt="footer" />
 </p>
