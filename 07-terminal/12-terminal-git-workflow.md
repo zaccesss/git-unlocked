@@ -621,7 +621,7 @@ The workflow itself is standard Git: branch, commit, rebase, push, PR. The tools
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

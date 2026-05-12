@@ -577,7 +577,7 @@ Shell init order matters: framework → compinit → fzf → zoxide → forgit �
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -333,7 +333,7 @@ GitHub has dozens of features. You do not need all of them immediately. Start wi
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

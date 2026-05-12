@@ -481,7 +481,7 @@ Emacs with Magit is the gold standard for keyboard-driven Git management, offeri
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -15,7 +15,7 @@ git-unlocked is an educational course repository. It does not contain applicatio
 
 Report security issues privately by contacting the maintainer directly:
 
-**Isaac Adjei (Zaccess)** - via [zacess.com](https://zacess.com)
+**Isaac Adjei (Zaccess)** - via [isaacadjei.me](https://isaacadjei.me)
 
 Please include:
 
@@ -54,7 +54,7 @@ If you believe any of this security guidance is incorrect or outdated, please op
 
 <div align="center">
 
-Made with care by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with care by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

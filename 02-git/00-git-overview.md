@@ -116,7 +116,7 @@ You will see `git checkout` used for both purposes in older tutorials. It still 
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

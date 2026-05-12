@@ -858,7 +858,7 @@ The CLI shines in automation scripts: bulk work item updates, reporting, creatin
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

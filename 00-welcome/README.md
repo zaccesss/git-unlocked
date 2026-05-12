@@ -138,7 +138,7 @@ If you are ready to jump straight in, go to [What is Version Control?](../02-git
 
 ## About the Author
 
-This course was created by **Isaac Adjei (Zaccess)** - an electronic engineering and computer science student based in the United Kingdom, and the founder of [Zaccess](https://zacess.com).
+This course was created by **Isaac Adjei (Zaccess)** - an electronic engineering and computer science student based in the United Kingdom, and the founder of [Zaccess](https://isaacadjei.me).
 
 git-unlocked started as a personal Git reference and grew into something worth sharing with everyone. It is MIT licenced, open source and built to last.
 
@@ -170,7 +170,7 @@ If you want to contribute - fix a typo, improve an explanation, add a translatio
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

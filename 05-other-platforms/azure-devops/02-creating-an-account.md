@@ -457,7 +457,7 @@ The free tier provides 5 Basic users, 1 Microsoft-hosted parallel job with 1,800
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -359,7 +359,7 @@ Cursor is a VS Code fork that inherits the complete VS Code Git experience - Sou
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

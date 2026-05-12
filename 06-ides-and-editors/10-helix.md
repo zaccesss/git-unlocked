@@ -421,7 +421,7 @@ Helix is a terminal modal editor that ships built-in gutter diff indicators, a b
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

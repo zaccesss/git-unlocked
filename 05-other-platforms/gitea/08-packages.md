@@ -816,7 +816,7 @@ Gitea Actions workflows can publish packages as part of the build pipeline. Stor
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 
