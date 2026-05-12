@@ -767,7 +767,7 @@ EMU is not available on Free, Pro or Team plans - it requires GitHub Enterprise 
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

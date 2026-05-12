@@ -671,7 +671,7 @@ Paginate list responses with `page` and `limit` parameters. Check `X-Total-Count
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

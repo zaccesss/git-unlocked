@@ -1127,7 +1127,7 @@ The incidents of 2024-2025 - tj-actions, s1ngularity, xz-utils, Internet Archive
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -50,7 +50,7 @@ This Code of Conduct applies within all project spaces, including the repository
 
 Instances of abusive, harassing or otherwise unacceptable behaviour may be reported to the project maintainer at:
 
-**Isaac Adjei (Zaccess)** - via [zacess.com](https://zacess.com)
+**Isaac Adjei (Zaccess)** - via [isaacadjei.me](https://isaacadjei.me)
 
 All complaints will be reviewed and investigated promptly and fairly. The maintainer is obligated to maintain confidentiality with regard to the reporter of an incident.
 
@@ -88,7 +88,7 @@ Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcem
 
 <div align="center">
 
-Made with care by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with care by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

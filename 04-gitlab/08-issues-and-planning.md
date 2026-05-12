@@ -1031,7 +1031,7 @@ Maximum 50 MB total per snippet. Maximum 10 files. Files with binary content are
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

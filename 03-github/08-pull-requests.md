@@ -691,7 +691,7 @@ A PR with 3,000 changed lines across 40 files is extremely difficult to review w
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

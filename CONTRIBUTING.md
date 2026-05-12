@@ -160,7 +160,7 @@ Do **not** use `💡 **Tip:**`, `⚠️ **Warning:**`, `🔥 **Pro tip:**` or `�
 ### Branding
 
 - Author name: **Isaac Adjei (Zaccess)** - always in this order
-- Website: [zacess.com](https://zacess.com)
+- Website: [isaacadjei.me](https://isaacadjei.me)
 - GitHub: [github.com/zaccesss](https://github.com/zaccesss) - **zaccesss with three s's**
 - Branding line: **Access Granted. Success Unlocked.**
 - Branding goes at the **bottom of every file only** - never at the top
@@ -214,7 +214,7 @@ Key takeaways...
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 
@@ -310,7 +310,7 @@ Thank you for helping make git-unlocked better.
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

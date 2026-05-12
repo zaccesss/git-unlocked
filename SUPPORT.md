@@ -55,7 +55,7 @@ If you need help beyond this course:
 
 <div align="center">
 
-Made with care by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with care by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 
