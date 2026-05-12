@@ -343,7 +343,7 @@ Windsurf is a VS Code fork built around Cascade, an agentic AI system that maint
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

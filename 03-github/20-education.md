@@ -512,7 +512,7 @@ Acceptance is selective - approximately 100 to 200 new Campus Experts are added 
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

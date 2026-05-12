@@ -90,7 +90,7 @@ Forgejo runs on 🐧 Linux (x86_64, ARM, ARM64) and 🍎 macOS. Windows is **not
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

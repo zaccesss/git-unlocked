@@ -584,7 +584,7 @@ Above the Git level, the task runner tier (Nx, Turborepo, Bazel) provides build 
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

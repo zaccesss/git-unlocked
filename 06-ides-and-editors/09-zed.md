@@ -430,7 +430,7 @@ Zed is a GPU-accelerated native editor built in Rust by the creators of Atom and
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 
