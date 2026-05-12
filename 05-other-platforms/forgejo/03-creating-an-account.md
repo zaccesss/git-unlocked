@@ -414,7 +414,7 @@ Enable 2FA with an authenticator app and save recovery codes offline. Add SSH pu
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -486,7 +486,7 @@ After `git gc` or manual cleanup, old worktree references can accumulate. Run `g
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -654,7 +654,7 @@ git remote set-url origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -148,7 +148,7 @@ All command line examples cover Windows (PowerShell or Command Prompt), Mac (Ter
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

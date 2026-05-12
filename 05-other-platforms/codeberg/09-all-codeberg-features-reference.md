@@ -283,7 +283,7 @@ Complete reference for Codeberg features. Codeberg runs Forgejo, so most Forgejo
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

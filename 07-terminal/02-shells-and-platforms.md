@@ -633,7 +633,7 @@ WSL2 runs a real Linux kernel on Windows and is the recommended way for Windows 
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -600,7 +600,7 @@ The free plan supports up to 5 workspace users, 50 Pipelines minutes per month a
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

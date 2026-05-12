@@ -8,7 +8,7 @@ Every person listed here has contributed to making git-unlocked better for every
 
 | Name                  | GitHub                                   | Website                          | Role                   |
 | --------------------- | ---------------------------------------- | -------------------------------- | ---------------------- |
-| Isaac Adjei (Zaccess) | [@zaccesss](https://github.com/zaccesss) | [zacess.com](https://zacess.com) | Creator and maintainer |
+| Isaac Adjei (Zaccess) | [@zaccesss](https://github.com/zaccesss) | [isaacadjei.me](https://isaacadjei.me) | Creator and maintainer |
 
 ---
 
@@ -40,7 +40,7 @@ Never made a pull request before? The [first-contribution](11-first-contribution
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

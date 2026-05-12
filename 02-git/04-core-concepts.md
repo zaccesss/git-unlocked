@@ -515,7 +515,7 @@ A fork is a remote copy on GitHub or GitLab under your account. A clone is a loc
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

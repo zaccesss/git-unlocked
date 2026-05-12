@@ -726,7 +726,7 @@ Always use `git push --force-with-lease` instead of `git push --force`, and alwa
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 

@@ -1024,7 +1024,7 @@ git clone https://DEPLOY_TOKEN_USERNAME:DEPLOY_TOKEN_VALUE@gitlab.com/NAMESPACE/
 
 <div align="center">
 
-Made with 🔓 by [Isaac Adjei (Zaccess)](https://zacess.com)
+Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
 
 **Access Granted. Success Unlocked.**
 
