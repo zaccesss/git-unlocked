@@ -74,6 +74,14 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) first, then open a pull request. Everyon
 
 ---
 
+## Contact and Support
+
+Open an [issue](https://github.com/zaccesss/git-unlocked/issues) in this repository for questions or bugs.
+
+You can also reach me directly at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
+
+---
+
 ## Contributors
 
 <p align="center">
@@ -102,18 +110,7 @@ If this course helped you, please star the repository. It helps others find it.
 [![zacess.com](https://img.shields.io/badge/zacess.com-000000?style=for-the-badge)](https://zacess.com)
 [![GitHub](https://img.shields.io/badge/github-zaccesss-181717?style=for-the-badge&logo=github)](https://github.com/zaccesss)
 
-<br />
-
-<img src="assets/git_unlocked_banner.svg" alt="git-unlocked banner" />
-
-</div>
-
-## Contact and Support
-
-Open an [issue](https://github.com/zaccesss/git-unlocked/issues) in this repository for questions or bugs.
-
-You can also reach me directly at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer" alt="footer" />
+  
 </p>
