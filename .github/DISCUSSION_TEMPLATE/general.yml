@@ -1,0 +1,22 @@
+title: "[Question] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask anything about the course — setup help, a concept you are stuck on, a command that is not behaving as expected or anything else.
+        For errors or mistakes in the content itself, please [open an Issue](https://github.com/zaccesss/git-unlocked/issues/new?template=bug_report.md) instead.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What would you like to know?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (optional)
+      description: What are you trying to accomplish? Which section or file does this relate to? Which operating system are you on?

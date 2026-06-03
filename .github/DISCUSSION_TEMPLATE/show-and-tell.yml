@@ -1,0 +1,28 @@
+title: "[Show] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Built something after working through this course? Made your first open source contribution? Set up a workflow, configured a terminal tool or deployed something using skills from here? Share it.
+        Screenshots, links, code snippets and descriptions are all welcome.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you build or accomplish?
+      description: Describe what you made, what you learned and anything interesting about how you did it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: section
+    attributes:
+      label: Which part of the course helped most? (optional)
+      description: For example — the terminal section, the GitLab CI/CD files or the first-contribution sandbox.
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links or screenshots (optional)
+      description: A repo, a pull request, a screenshot or a write-up.
