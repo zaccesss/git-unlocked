@@ -318,7 +318,6 @@ Almost nothing in Git is permanent. Git is specifically designed to make recover
 - [Pro Git book](https://git-scm.com/book/en/v2) - the free official Git book. Chapter 1 covers the history of version control in depth
 - [Git turns 20: A Q&A with Linus Torvalds](https://github.blog/open-source/git/git-turns-20-a-qa-with-linus-torvalds/) - Linus Torvalds on Git's creation in his own words (GitHub Blog, 2025)
 - [Journey through Git's 20-year history](https://about.gitlab.com/blog/journey-through-gits-20-year-history/) - GitLab's detailed timeline of Git's development (2025)
-- [BitKeeper, Linux and licensing disputes: How Linus wrote Git in 14 days](https://graphite.com/blog/bitkeeper-linux-story-of-git-creation) - the full story of the BitKeeper incident (Graphite)
 - [A history of source control systems: SCCS and RCS](https://experimentalworks.net/posts/2024-03-18-a-history-of-vcs-part1/) - detailed technical history of the earliest VCS tools
 - [Version control systems popularity in 2025](https://rhodecode.com/blog/156/version-control-systems-popularity-in-2025) - current adoption statistics across VCS tools (RhodeCode)
 - [Beyond Git: The other version control systems developers use](https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use/) - Stack Overflow's analysis of non-Git VCS usage
