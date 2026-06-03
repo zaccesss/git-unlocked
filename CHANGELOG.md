@@ -166,4 +166,5 @@ Practical scenarios showing Git in real professional contexts.
 
 [Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.2.0...HEAD
 [1.2.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.0
+[1.1.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.1.0
 [1.0.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.0.0
