@@ -1,5 +1,9 @@
-# GitHub Discussions not enabled on this repo
-https://github\.com/zaccesss/git-unlocked/discussions
+# packagecontrol.io returns intermittent 500s from CI runners (bot blocking)
+https://packagecontrol\.io/?
+https://packagecontrol\.io/.*
+
+# JetBrains blog returns intermittent 500s from CI runners (bot blocking)
+https://blog\.jetbrains\.com/.*
 
 # git-scm pages that moved
 https://git-scm\.com/docs/git-subtree
