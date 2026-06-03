@@ -3,6 +3,7 @@
 > The most complete open source Git and version control course available. Free forever. MIT licensed.
 
 [![markdownlint](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml)
+[![Check Links](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)](CHANGELOG.md)
 
@@ -81,14 +82,6 @@ Open an [issue](https://github.com/zaccesss/git-unlocked/issues) in this reposit
 You can also reach me directly at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
 
 ---
-
-## Contributors
-
-<p align="center">
-  <a href="https://github.com/zaccesss/git-unlocked/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=zaccesss/git-unlocked" alt="Contributors" />
-  </a>
-</p>
 
 ---
 

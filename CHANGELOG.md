@@ -28,7 +28,24 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
-In progress or planned - not yet in a release.
+### Added
+
+- `.github/FUNDING.yml` - Patreon and Buy Me a Coffee support links
+- `.github/CODEOWNERS` - repository ownership declaration
+- `.github/DISCUSSION_TEMPLATE/` - four discussion templates: general questions, bug discussion, ideas and show-and-tell
+- `.github/dependabot.yml` - weekly Dependabot updates for GitHub Actions
+- `.github/workflows/stale.yml` - automatic stale issue and PR management
+- `.github/workflows/automerge-dependabot.yml` - auto-merge safe Dependabot patch and minor bumps
+
+### Fixed
+
+- Removed dead link to `graphite.com/blog/bitkeeper-linux-story-of-git-creation` (404) from `02-git/01-what-is-version-control.md`
+- Added `packagecontrol.io`, `blog.jetbrains.com` and `www.gnu.org/software/bash` to `.lycheeignore` to suppress intermittent CI timeouts and 500s from bot-blocking domains
+- Disabled `MD060/table-column-style` in `.markdownlint.json` following markdownlint-cli2 upgrade to v23
+
+---
+
+## Long-term plans
 
 - GitHub Pages site at zaccesss.github.io/git-unlocked
 - Interactive HTML quiz pages with instant answer checking
@@ -149,4 +166,5 @@ Practical scenarios showing Git in real professional contexts.
 
 [Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.2.0...HEAD
 [1.2.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.0
+[1.1.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.1.0
 [1.0.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.0.0
