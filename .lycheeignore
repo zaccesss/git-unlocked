@@ -54,6 +54,9 @@ https://docs\.gitea\.com/administration/oauth2-provider
 https://blog\.gitea\.com/.*
 https://gitea\.com/gitea/governance
 
+# gnu.org timeouts from CI runners
+https://www\.gnu\.org/software/bash/.*
+
 # nx.dev timeouts
 https://nx\.dev/?
 https://nx\.dev/docs.*
