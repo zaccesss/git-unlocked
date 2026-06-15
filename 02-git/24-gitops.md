@@ -473,7 +473,7 @@ GitOps requires discipline and tooling. For a small team not yet using Kubernete
 - [OpenGitOps principles](https://opengitops.dev) - the official GitOps principles defined by the CNCF working group
 - [Flux documentation](https://fluxcd.io/docs/) - the official guide to Flux
 - [ArgoCD documentation](https://argo-cd.readthedocs.io) - the official guide to ArgoCD
-- [Weaveworks - Guide to GitOps](https://www.weave.works/technologies/gitops/) - the original article that defined GitOps
+- [OpenGitOps specification](https://github.com/open-gitops/documents) - the CNCF working group's GitOps principles and specification documents
 - [Atlantis](https://www.runatlantis.io) - pull request automation for Terraform
 - [Sealed Secrets](https://github.com/bitnami-labs/sealed-secrets) - Kubernetes secrets management for GitOps
 - [SOPS](https://github.com/getsops/sops) - Mozilla's secrets management tool for Git
