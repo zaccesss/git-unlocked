@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+title: "git-unlocked: An Open-Source Modular Curriculum for Git and Version Control Education"
+version: 1.2.0
+date-released: "2026-06-15"
+abstract: >
+  git-unlocked is an open-source modular curriculum for teaching Git and
+  version control principles. The repository comprises 202 files organised
+  across 11 thematic sections, covering topics from repository initialisation
+  and branching strategies through to collaborative workflows and conflict
+  resolution. Released under the MIT licence, it is designed to be freely
+  reused, forked and extended by educators and self-directed learners.
+authors:
+  - family-names: Adjei
+    given-names: Isaac
+    orcid: "https://orcid.org/0009-0001-8298-5098"
+    affiliation: Aston University
+license: MIT
+repository-code: "https://github.com/zaccesss/git-unlocked"
+url: "https://isaacadjei.me"
+keywords:
+  - version control
+  - Git
+  - computer science education
+  - open-source curriculum
+  - software engineering
+message: "If you use this software, please cite it using the metadata below."
+preferred-citation:
+  type: report
+  title: "git-unlocked: An Open-Source Modular Curriculum for Git and Version Control Education"
+  authors:
+    - family-names: Adjei
+      given-names: Isaac
+      orcid: "https://orcid.org/0009-0001-8298-5098"
+      affiliation: Aston University
+  year: 2026
+  month: 6
+  publisher:
+    name: Zenodo
+  doi: "10.5281/zenodo.20694984"
+  url: "https://doi.org/10.5281/zenodo.20694984"
