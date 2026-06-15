@@ -28,6 +28,12 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+### Fixed
+
+- Excluded `docs.gitlab.com` and `status.atlassian.com` from linkcheck — auth-gated pages return 403 or 405 to automated requests but are valid links
+- Added 405 to accepted status codes in `linkcheck.yml`
+- Replaced dead `weave.works/technologies/gitops/` link (domain parked) with the OpenGitOps specification repository in `02-git/24-gitops.md`
+
 ---
 
 ## Long-term plans
