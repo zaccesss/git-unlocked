@@ -28,21 +28,6 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
-### Added
-
-- `.github/FUNDING.yml` - Patreon and Buy Me a Coffee support links
-- `.github/CODEOWNERS` - repository ownership declaration
-- `.github/DISCUSSION_TEMPLATE/` - four discussion templates: general questions, bug discussion, ideas and show-and-tell
-- `.github/dependabot.yml` - weekly Dependabot updates for GitHub Actions
-- `.github/workflows/stale.yml` - automatic stale issue and PR management
-- `.github/workflows/automerge-dependabot.yml` - auto-merge safe Dependabot patch and minor bumps
-
-### Fixed
-
-- Removed dead link to `graphite.com/blog/bitkeeper-linux-story-of-git-creation` (404) from `02-git/01-what-is-version-control.md`
-- Added `packagecontrol.io`, `blog.jetbrains.com` and `www.gnu.org/software/bash` to `.lycheeignore` to suppress intermittent CI timeouts and 500s from bot-blocking domains
-- Disabled `MD060/table-column-style` in `.markdownlint.json` following markdownlint-cli2 upgrade to v23
-
 ---
 
 ## Long-term plans
@@ -56,7 +41,7 @@ PATCH - typo fixes, small corrections, link updates
 
 ---
 
-## [1.2.0] - 2026-04-21
+## [1.2.0] - 2026-06-15
 
 ### Added
 
@@ -94,11 +79,30 @@ Practical scenarios showing Git in real professional contexts.
 - `introduction/02-how-to-use-this-course.md` - full rewrite; replaces initial placeholder
 - `introduction/04-version-control-concepts.md` - new bridging file covering what version control is, the history of VCS tools and the core Git mental model
 
+#### Repository meta
+
+- `CITATION.cff` - Zenodo DOI citation metadata for academic citation
+- `.github/FUNDING.yml` - Patreon and Buy Me a Coffee support links
+- `.github/CODEOWNERS` - repository ownership declaration
+- `.github/DISCUSSION_TEMPLATE/` - four discussion templates: general questions, bug discussion, ideas and show-and-tell
+- `.github/dependabot.yml` - weekly Dependabot updates for GitHub Actions
+- `.github/workflows/stale.yml` - automatic stale issue and PR management
+- `.github/workflows/automerge-dependabot.yml` - auto-merge safe Dependabot patch and minor bumps
+
 ### Updated
 
-- `README.md` - trimmed and restructured as a pure navigation page; added sections for real-world/, reference/, resources/ and first-contribution/
-- `CHANGELOG.md` - added v1.2.0 entry
+- `README.md` - trimmed and restructured as a pure navigation page; added sections for real-world/, reference/, resources/ and first-contribution/; added Zenodo DOI badge
+- `.github/FUNDING.yml` - GitHub Sponsors added as first entry; order updated to github → buy_me_a_coffee → patreon
+- `.github/workflows/linkcheck.yml` - added `workflow_dispatch` trigger
+- `CHANGELOG.md` - updated for v1.2.0
 - `ROADMAP.md` - all sections marked complete; long-term items noted
+
+### Fixed
+
+- Updated broken VS Code Copilot docs link in `06-ides-and-editors/01-vs-code.md` (`/docs/copilot/overview` → `/docs/agents/concepts/overview`)
+- Removed dead link to `graphite.com/blog/bitkeeper-linux-story-of-git-creation` (404) from `02-git/01-what-is-version-control.md`
+- Added `packagecontrol.io`, `blog.jetbrains.com` and `www.gnu.org/software/bash` to `.lycheeignore` to suppress intermittent CI timeouts and 500s from bot-blocking domains
+- Disabled `MD060/table-column-style` in `.markdownlint.json` following markdownlint-cli2 upgrade to v23
 
 ---
 
