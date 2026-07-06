@@ -28,6 +28,12 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+### Updated
+
+- Auto-merge now covers all Dependabot PRs including major bumps (previously only same-major patch/minor bumps merged), gated by the required CI checks, and any PR labelled `automerge`
+- Added a `Repo maintenance` workflow to delete merged PR branches the merge could not clean up
+- Added `.gitignore` for macOS `.DS_Store`
+
 ### Fixed
 
 - Replaced dead GitLab Git cheat sheet PDF (404) with the maintained GitLab Git docs reference in `10-resources/index.md`
