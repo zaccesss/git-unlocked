@@ -247,7 +247,7 @@ GitHub Education. Clean two-page reference organised by task. Print and pin.
 **[Atlassian Git Cheat Sheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)** 🟢🟡 🆓
 Task-grouped, actively maintained.
 
-**[GitLab Git Cheat Sheet (PDF)](https://about.gitlab.com/images/press/git-cheat-sheet.pdf)** 🟢 🆓
+**[GitLab Git Cheat Sheet](https://docs.gitlab.com/topics/git/commands/)** 🟢 🆓
 Official GitLab reference.
 
 **[Tower Git Cheat Sheet](https://www.git-tower.com/learn/cheat-sheets/git)** 🟢🟡 🆓
