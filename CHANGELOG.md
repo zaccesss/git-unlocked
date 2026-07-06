@@ -36,11 +36,17 @@ PATCH - typo fixes, small corrections, link updates
 
 ### Fixed
 
+- Served the DOI badge from `img.shields.io` instead of `zenodo.org` so it renders reliably through GitHub's image proxy in the README
+- Excluded `oliviac.dev` and the `gitea.com` homepage from linkcheck, which kept timing out from CI runners despite the 30s timeout and retries (the `docs.gitea.com`, `dl.gitea.com` and `blog.gitea.com` subdomains stay checked)
 - Replaced dead GitLab Git cheat sheet PDF (404) with the maintained GitLab Git docs reference in `10-resources/index.md`
 - Raised lychee `--timeout` to 30s and excluded `netflixtechblog.com` from linkcheck to stop intermittent CI timeout failures
 - Excluded `docs.gitlab.com` and `status.atlassian.com` from linkcheck — auth-gated pages return 403 or 405 to automated requests but are valid links
 - Added 405 to accepted status codes in `linkcheck.yml`
 - Replaced dead `weave.works/technologies/gitops/` link (domain parked) with the OpenGitOps specification repository in `02-git/24-gitops.md`
+
+### Removed
+
+- Deleted `oxford_scan.txt`, a leftover writing-style scan artefact committed to the repo root by accident
 
 ---
 
