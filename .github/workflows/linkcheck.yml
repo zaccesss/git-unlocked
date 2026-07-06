@@ -37,6 +37,8 @@ jobs:
             --exclude 'account.microsoft.com'
             --exclude 'reddit.com'
             --exclude 'netflixtechblog.com'
+            --exclude 'oliviac.dev'
+            --exclude '://gitea.com'
             --exclude 'gitexplorer.com'
             --exclude 'slsa.dev'
             --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
