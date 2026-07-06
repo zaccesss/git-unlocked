@@ -30,6 +30,8 @@ PATCH - typo fixes, small corrections, link updates
 
 ### Fixed
 
+- Replaced dead GitLab Git cheat sheet PDF (404) with the maintained GitLab Git docs reference in `10-resources/index.md`
+- Raised lychee `--timeout` to 30s and excluded `netflixtechblog.com` from linkcheck to stop intermittent CI timeout failures
 - Excluded `docs.gitlab.com` and `status.atlassian.com` from linkcheck — auth-gated pages return 403 or 405 to automated requests but are valid links
 - Added 405 to accepted status codes in `linkcheck.yml`
 - Replaced dead `weave.works/technologies/gitops/` link (domain parked) with the OpenGitOps specification repository in `02-git/24-gitops.md`
