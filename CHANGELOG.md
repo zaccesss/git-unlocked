@@ -28,6 +28,8 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+## [1.2.1] - 2026-07-06
+
 ### Updated
 
 - Auto-merge now covers all Dependabot PRs including major bumps (previously only same-major patch/minor bumps merged), gated by the required CI checks, and any PR labelled `automerge`
@@ -36,6 +38,7 @@ PATCH - typo fixes, small corrections, link updates
 
 ### Fixed
 
+- Corrected the section count in `CITATION.cff` from 11 to 12 and aligned the file count with the README
 - Served the DOI badge from `img.shields.io` instead of `zenodo.org` so it renders reliably through GitHub's image proxy in the README
 - Excluded `oliviac.dev` and the `gitea.com` homepage from linkcheck, which kept timing out from CI runners despite the 30s timeout and retries (the `docs.gitea.com`, `dl.gitea.com` and `blog.gitea.com` subdomains stay checked)
 - Replaced dead GitLab Git cheat sheet PDF (404) with the maintained GitLab Git docs reference in `10-resources/index.md`
@@ -188,7 +191,8 @@ Practical scenarios showing Git in real professional contexts.
 
 ---
 
-[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.2.0...HEAD
+[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.2.1...HEAD
+[1.2.1]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.1
 [1.2.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.0
 [1.1.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.1.0
 [1.0.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.0.0
