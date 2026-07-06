@@ -24,6 +24,7 @@ jobs:
             --verbose
             --no-progress
             --insecure
+            --timeout 30
             --max-retries 5
             --retry-wait-time 3
             --accept 200,202,403,405,429,400,502,503
@@ -35,6 +36,7 @@ jobs:
             --exclude 'status.atlassian.com'
             --exclude 'account.microsoft.com'
             --exclude 'reddit.com'
+            --exclude 'netflixtechblog.com'
             --exclude 'gitexplorer.com'
             --exclude 'slsa.dev'
             --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
