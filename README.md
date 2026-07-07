@@ -1,10 +1,10 @@
 # git-unlocked
 
-> The most complete open source Git and version control course available. Free forever. MIT licensed.
+> The most complete open source Git and version control course available. Free forever. CC BY-SA 4.0 licensed.
 
 [![markdownlint](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml)
 [![Check Links](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-green.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-1.2.1-blue.svg)](CHANGELOG.md)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20694984-blue.svg)](https://doi.org/10.5281/zenodo.20694984)
 
@@ -72,7 +72,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) first, then open a pull request. Everyon
 
 ## Licence
 
-[MIT Licence](LICENSE). Use, share, adapt and build on it - just give credit.
+[CC BY-SA 4.0 Licence](LICENSE). Use, share, adapt and build on it - just give credit and keep it under the same licence.
 
 ---
 
