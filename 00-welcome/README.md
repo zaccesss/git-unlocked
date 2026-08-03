@@ -128,9 +128,9 @@ Most Git tutorials give you a list of commands to memorise. This course explains
 
 ## Before You Start
 
-You do not need anything installed yet. The next file - [Setting Up](03-setting-up.md) - will walk you through creating your GitHub and GitLab accounts, installing Git and getting everything configured on your operating system.
+You do not need anything installed yet. The next file - [Setting Up](../01-introduction/03-setting-up.md) - will walk you through creating your GitHub and GitLab accounts, installing Git and getting everything configured on your operating system.
 
-If you want to understand how to navigate the course first, read [How to Use This Course](02-how-to-use-this-course.md).
+If you want to understand how to navigate the course first, read [How to Use This Course](../01-introduction/02-how-to-use-this-course.md).
 
 If you are ready to jump straight in, go to [What is Version Control?](../02-git/01-what-is-version-control.md).
 
@@ -150,8 +150,8 @@ If you want to contribute - fix a typo, improve an explanation, add a translatio
 
 ## Next Steps
 
-1. [How to Use This Course](02-how-to-use-this-course.md) - learn how to navigate git-unlocked
-2. [Setting Up](03-setting-up.md) - create your accounts and install Git
+1. [How to Use This Course](../01-introduction/02-how-to-use-this-course.md) - learn how to navigate git-unlocked
+2. [Setting Up](../01-introduction/03-setting-up.md) - create your accounts and install Git
 3. [What is Version Control?](../02-git/01-what-is-version-control.md) - start the course
 
 ---

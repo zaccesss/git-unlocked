@@ -290,7 +290,7 @@ Tags come in two types:
 
 **Annotated tags** - a full object in Git's database with a name, email, date, tagging message and optionally a GPG signature. Recommended for release tags because they contain more information and can be verified.
 
-Tags are covered in [git/15-tags-and-releases.md](15-tags-and-releases.md).
+Tags are covered in [git/16-tags-and-releases.md](16-tags-and-releases.md).
 
 ---
 
