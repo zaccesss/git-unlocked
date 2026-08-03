@@ -313,7 +313,7 @@ Qualifying organisations receive GitLab Ultimate (SaaS or self-managed EE) and 5
 
 **How to apply**: `about.gitlab.com/solutions/education/`. Approval typically takes a few weeks and requires institutional email verification.
 
-No support is included with the education programme. Support can be purchased separately at a discounted rate ($4.95/user/month as of 2025).
+No support is included with the education programme. Support can be purchased separately at a discounted rate - check `about.gitlab.com/solutions/education/` for the current price.
 
 ### GitLab for Open Source
 
