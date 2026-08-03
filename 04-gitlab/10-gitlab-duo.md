@@ -61,7 +61,7 @@ Duo features are distributed across three add-on tiers, each requiring a base Gi
 | **Duo Enterprise** | $39/user/month | Ultimate only                      | Everything in Pro + Root Cause Analysis, vulnerability explanation and resolution, AI Code Review, issue description generation, advanced agentic workflows |
 
 > [!NOTE]
-> **Duo Core** was introduced in GitLab 18.0 (November 2025) as a way to provide basic AI features at no extra cost to Premium and Ultimate subscribers. Before 18.0, all Duo features required a paid add-on. Free tier users receive a limited number of Duo credits (see [The credits system](#the-credits-system)).
+> **Duo Core** was introduced in GitLab 18.0 (May 2025) as a way to provide basic AI features at no extra cost to Premium and Ultimate subscribers. Before 18.0, all Duo features required a paid add-on. Free tier users receive a limited number of Duo credits (see [The credits system](#the-credits-system)).
 
 **GitLab Duo with Amazon Q** is a separate add-on (self-managed only) that integrates Amazon Q Developer's AI capabilities - including IDE plugins for Visual Studio, VS Code, JetBrains and Eclipse, plus command-line tools and AWS Console integration - into the GitLab workflow.
 
