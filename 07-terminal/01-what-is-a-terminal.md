@@ -136,7 +136,7 @@ Older alternatives still in use: **ConHost** (the legacy Windows console host, s
 
 **Terminal.app** - the built-in terminal that comes with macOS. Reliable, fast and functional. Opens zsh by default since macOS Catalina (2019).
 
-**iTerm2** - the most popular third-party terminal for macOS, free, feature-rich. Adds split panes within a tab, rich profile system, shell integration (marks prompt positions, tracks commands, enables click-to-download), a global hotkey drop-down window, tmux integration and much more. Current stable version is 3.5.x/3.6.x. Notable caveat: versions 3.5.6 through 3.5.10 had a bug that logged SSH I/O to `/tmp/framer.txt` on remote hosts - always use 3.5.11 or later.
+**iTerm2** - the most popular third-party terminal for macOS, free, feature-rich. Adds split panes within a tab, rich profile system, shell integration (marks prompt positions, tracks commands, enables click-to-download), a global hotkey drop-down window, tmux integration and much more. Current stable version is 3.6.x (3.6.11 as of June 2026) - always install the latest release rather than pinning to an old build.
 
 🐧 **Linux**
 
