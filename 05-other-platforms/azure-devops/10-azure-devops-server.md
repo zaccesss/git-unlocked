@@ -95,7 +95,7 @@ Azure DevOps Server stores all data in SQL Server. SQL Server must be installed 
 | SQL Server version  | Standard Edition minimum (Enterprise for large deployments) |
 | SQL Server features | Database Engine, Full-Text Search                           |
 
-SQL Server 2025 (when released) is supported. SQL Server 2016 and earlier are not supported.
+SQL Server 2025 is supported. SQL Server 2016 and earlier are not supported.
 
 > [!IMPORTANT]
 > **SQL Server Full-Text Search** is required. This is an optional SQL Server feature that is not installed by default in some SQL configurations. Ensure it is installed before running the Azure DevOps Server installer.
