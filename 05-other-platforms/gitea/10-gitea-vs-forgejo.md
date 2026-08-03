@@ -39,7 +39,7 @@ This file explains the history of the split, maps what has diverged and gives a 
 | Feb 2024 | Forgejo becomes a **hard fork** - drops Git compatibility with Gitea releases, begins independently developing the federation (ActivityPub) stack |
 | Mar 2024 | CommitGo Inc. (US entity) launches **Gitea Enterprise** with proprietary SAML, audit logs and IP allowlist                                        |
 | Apr 2024 | Forgejo v8.0 released as the first truly independent major release                                                                                |
-| 2025     | Forgejo reaches v14.x; Gitea at v1.25.x; version numbers no longer meaningful to compare                                                          |
+| 2025     | Forgejo reaches v9.0.x; Gitea at v1.25.x; version numbers no longer meaningful to compare                                                         |
 
 ---
 
@@ -174,7 +174,7 @@ Most tools that support Gitea also support Forgejo since the API is mostly compa
 
 ### Why you cannot compare version numbers
 
-Gitea is at v1.25.x. Forgejo is at v14.x (as of early 2026). The numbers are not comparable - Forgejo jumped its version numbering when it became a hard fork to clearly signal independence from Gitea's releases.
+Gitea is at v1.25.x. Forgejo is at v9.0.x (as of early 2026). The numbers are not comparable - Forgejo jumped its version numbering when it became a hard fork to clearly signal independence from Gitea's releases.
 
 ### API compatibility
 

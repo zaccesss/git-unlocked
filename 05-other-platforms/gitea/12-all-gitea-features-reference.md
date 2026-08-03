@@ -272,7 +272,7 @@ This is the complete feature reference for Gitea community edition. Use it to qu
 | Windows support | Yes | No (dropped 2024) |
 | ActivityPub federation | Stalled/minimal | Actively developed |
 | Enterprise tier | Yes (CommitGo) | No |
-| Version numbering | v1.25.x (April 2026) | v14.x (April 2026) |
+| Version numbering | v1.25.x (April 2026) | v9.0.x (April 2026) |
 | Default git hosting | gitea.com | codeberg.org |
 | Core UI | Very similar | Very similar |
 | REST API | Compatible for core operations | Compatible for core operations |
