@@ -42,7 +42,7 @@ GitHub Copilot is an AI coding assistant built into your editor. It suggests cod
 
 ## What Copilot Actually Is
 
-GitHub Copilot is a product built on top of large language models (LLMs). The underlying models are developed by OpenAI (GPT-4o, o3), Anthropic (Claude Sonnet, Claude Opus) and Google (Gemini). GitHub wraps these models with editor integrations, IDE plugins, a CLI extension and a web interface.
+GitHub Copilot is a product built on top of large language models (LLMs). The underlying models are developed by OpenAI (GPT-5.x), Anthropic (Claude Sonnet, Claude Opus, Claude Haiku) and Google (Gemini). GitHub wraps these models with editor integrations, IDE plugins, a CLI extension and a web interface.
 
 When you type in your editor, Copilot sends a prompt to the model containing your current file up to the cursor, content from related open files (determined by imports, file names and similarity), your recent edits in the session and any comments or function signatures you have just written. The model predicts what text should come next and returns it to your editor as a suggestion. This happens over the network in milliseconds.
 
@@ -100,7 +100,7 @@ The Copilot Free tier requires no credit card and is available to every GitHub a
 **Not included on Free:**
 
 - Unlimited completions
-- Premium models (GPT-4 o3, Claude Opus 4, Gemini Pro)
+- Premium models (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro)
 - Copilot Edits (multi-file editing mode)
 - Agent mode
 - Repository-level custom instructions (`.github/copilot-instructions.md`)
@@ -111,7 +111,7 @@ The Copilot Free tier requires no credit card and is available to every GitHub a
 
 ## Getting Copilot Free as a Student
 
-Verified students through the GitHub Student Developer Pack get **Copilot Pro free** with unlimited completions and chat, no monthly limit and access to o3-mini in addition to Claude Sonnet and GPT-4o.
+Verified students through the GitHub Student Developer Pack get **Copilot Pro free** with unlimited completions and chat, no monthly limit and access to Claude Sonnet 4.5 in addition to Claude Haiku 4.5 and GPT-5 mini.
 
 **How to apply:**
 
@@ -808,12 +808,12 @@ Copilot is not the only AI coding assistant. Understanding the alternatives help
 
 | Tool | Models | Editor support | Free tier | Key differentiator |
 |---|---|---|---|---|
-| **GitHub Copilot** | GPT-4o, Claude Sonnet, o3 | VS Code, JetBrains, Neovim, Visual Studio | Yes (2000 completions) | Deepest GitHub integration; PR summaries, Workspace |
-| **Cursor** | GPT-4o, Claude Sonnet | Cursor (VS Code fork) | Yes (limited) | Very capable agent mode; separate editor |
-| **Windsurf (Codeium)** | Claude Sonnet, GPT-4o | VS Code, JetBrains | Yes (generous) | More generous free tier; Cascade agent |
-| **Tabnine** | Own model + GPT-4 | Many editors including Vim | Yes (limited) | Can run entirely on-device for air-gapped environments |
+| **GitHub Copilot** | GPT-5.x, Claude Sonnet, Claude Opus | VS Code, JetBrains, Neovim, Visual Studio | Yes (2000 completions) | Deepest GitHub integration; PR summaries, Workspace |
+| **Cursor** | GPT-5.x, Claude Sonnet | Cursor (VS Code fork) | Yes (limited) | Very capable agent mode; separate editor |
+| **Windsurf (Codeium)** | Claude Sonnet, GPT-5.x | VS Code, JetBrains | Yes (generous) | More generous free tier; Cascade agent |
+| **Tabnine** | Own model + GPT-5 | Many editors including Vim | Yes (limited) | Can run entirely on-device for air-gapped environments |
 | **Amazon Q Developer** | Amazon Bedrock | VS Code, JetBrains | Yes | Best suggestions for AWS infrastructure and SDK code |
-| **Sourcegraph Cody** | Claude, GPT-4o | VS Code, JetBrains | Yes | Strong codebase-wide semantic search context |
+| **Sourcegraph Cody** | Claude, GPT-5.x | VS Code, JetBrains | Yes | Strong codebase-wide semantic search context |
 
 **Which to choose:**
 
@@ -890,7 +890,7 @@ gh copilot suggest "find all Python files modified in the last 3 days and count 
 
 ## Summary
 
-- Copilot is powered by multiple LLMs (GPT-4o, Claude Sonnet, o3) and runs via the GitHub API - it is not local
+- Copilot is powered by multiple LLMs (GPT-5.x, Claude Sonnet, Claude Opus) and runs via the GitHub API - it is not local
 - **Free tier:** 2000 completions and 50 chat messages per month; resets on the 1st of each month
 - **Students get Pro free** via the GitHub Student Developer Pack at `education.github.com`
 - Install in VS Code via the **GitHub Copilot** extension; sign in with your GitHub account
