@@ -54,7 +54,7 @@ Copilot integrates with: VS Code, Visual Studio, JetBrains IDEs (IntelliJ IDEA, 
 
 Understanding how Copilot works helps you use it better and understand why it sometimes fails.
 
-**Context window:** Every LLM has a maximum amount of text it can process at once - called its context window. Copilot fills this context window with your code. The larger the context window, the more of your project Copilot can "see" when generating suggestions. GPT-4o has a 128k token context window; Claude Sonnet 3.5 has 200k tokens.
+**Context window:** Every LLM has a maximum amount of text it can process at once - called its context window. Copilot fills this context window with your code. The larger the context window, the more of your project Copilot can "see" when generating suggestions. GPT-5 mini has a 128k token context window; Claude Sonnet 4.5 has 200k tokens.
 
 **Tokens:** A token is roughly 3 to 4 characters of code. A 500-line Python file is approximately 5,000 to 10,000 tokens. Large files can exceed what Copilot sends as context, meaning it only sees part of your file.
 
@@ -68,16 +68,16 @@ Understanding how Copilot works helps you use it better and understand why it so
 
 | Plan | Price | Completions | Chat | Models |
 |---|---|---|---|---|
-| Free | $0/month | 2000/month | 50 messages/month | Claude Sonnet 3.5, GPT-4o |
-| Pro | $10/month | Unlimited | Unlimited | + o3-mini |
-| Pro+ | $39/month | Unlimited | Unlimited | + Claude Opus 4, GPT-4 o3, Gemini 1.5 Pro |
-| Business | $19/user/month | Unlimited | Unlimited | Claude Sonnet, GPT-4o, o3-mini |
+| Free | $0/month | 2000/month | 50 messages/month | Claude Haiku 4.5, GPT-5 mini |
+| Pro | $10/month | Unlimited | Unlimited | + Claude Sonnet 4.5 |
+| Pro+ | $39/month | Unlimited | Unlimited | + Claude Opus 4.8, GPT-5.5, Gemini 3.1 Pro |
+| Business | $19/user/month | Unlimited | Unlimited | Claude Haiku 4.5, GPT-5 mini, Claude Sonnet 4.5 |
 | Enterprise | $39/user/month | Unlimited | Unlimited | All models, fine-tuning on internal code |
 
 > [!NOTE]
-> Prices and model availability as of March 2026. Models are updated frequently - check `github.com/features/copilot` for current information.
+> Prices and model availability as of August 2026. Models are updated frequently - check `github.com/features/copilot` for current information.
 
-**Pro vs Pro+:** Pro covers everyday development. Pro+ gives access to the most capable and expensive models (Claude Opus 4, GPT-4 o3 full) for the hardest algorithmic and architectural problems.
+**Pro vs Pro+:** Pro covers everyday development. Pro+ gives access to the most capable and expensive models (Claude Opus 4.8, GPT-5.5) for the hardest algorithmic and architectural problems.
 
 **Business vs Pro:** Business adds organisation management - content exclusions, policy controls, audit logs of Copilot usage and the ability to disable Copilot for specific repositories. Code is contractually not used for training on Business.
 
@@ -93,7 +93,7 @@ The Copilot Free tier requires no credit card and is available to every GitHub a
 
 - 2000 code completions per month
 - 50 Copilot Chat messages per month
-- Access to Claude Sonnet 3.5 and GPT-4o (switchable)
+- Access to Claude Haiku 4.5 and GPT-5 mini (switchable)
 - Works in VS Code, JetBrains IDEs, Neovim and the GitHub CLI
 - Copilot on GitHub.com (PR summaries, repository chat)
 
@@ -197,26 +197,26 @@ On Copilot Pro, Pro+ and Business plans you can choose which model powers your C
 **Switch the Chat model:**
 
 1. Open Copilot Chat
-2. Click the model name shown in the top-right corner of the chat panel (e.g. "Claude Sonnet 3.5")
+2. Click the model name shown in the top-right corner of the chat panel (e.g. "Claude Sonnet 4.5")
 3. Select your preferred model from the dropdown
 
 **Available models by plan:**
 
 | Model | Free | Pro | Pro+ | Business |
 |---|---|---|---|---|
-| GPT-4o | Yes | Yes | Yes | Yes |
-| Claude Sonnet 3.5 | Yes | Yes | Yes | Yes |
-| o3-mini | No | Yes | Yes | Yes |
-| Claude Opus 4 | No | No | Yes | No |
-| GPT-4 o3 (full) | No | No | Yes | No |
-| Gemini 1.5 Pro | No | No | Yes | No |
+| GPT-5 mini | Yes | Yes | Yes | Yes |
+| Claude Haiku 4.5 | Yes | Yes | Yes | Yes |
+| Claude Sonnet 4.5 | No | Yes | Yes | Yes |
+| Claude Opus 4.8 | No | No | Yes | No |
+| GPT-5.5 | No | No | Yes | No |
+| Gemini 3.1 Pro | No | No | Yes | No |
 
 **When to use which model:**
 
-- **GPT-4o** - fast, reliable, good for everyday completions and straightforward Chat questions
-- **Claude Sonnet 3.5** - strong on complex reasoning, long context and explaining large files. Often better than GPT-4o for understanding big codebases or writing detailed explanations
-- **o3-mini** - slower but significantly stronger on algorithmic and mathematical problems. Use for competitive programming, algorithm design, debugging complex logic or numerical code
-- **Claude Opus / o3 full (Pro+)** - the most capable available. Reserve for the hardest problems where the other models keep making errors
+- **GPT-5 mini** - fast, reliable, good for everyday completions and straightforward Chat questions
+- **Claude Sonnet 4.5** - strong on complex reasoning, long context and explaining large files. Often better than GPT-5 mini for understanding big codebases or writing detailed explanations
+- **Claude Haiku 4.5** - lightweight and fast, best for quick completions and simple Chat queries
+- **Claude Opus 4.8 / GPT-5.5 (Pro+)** - the most capable available. Reserve for the hardest problems where the other models keep making errors
 
 ---
 
