@@ -84,7 +84,7 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf install code
 ```
 
-VS Code requires Git to be installed separately. See [git/02-installing-git.md](../02-git/02-installing-git.md) if you have not done that yet. VS Code needs Git 2.0.0 or later; the current recommended version is 2.44 or above.
+VS Code requires Git to be installed separately. See [git/02-installing-git.md](../02-git/02-installing-git.md) if you have not done that yet. VS Code needs Git 2.0.0 or later; install a current release (2.53 or above) to get the latest features and fixes.
 
 ---
 

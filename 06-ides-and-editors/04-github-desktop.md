@@ -39,7 +39,7 @@ GitHub Desktop was first released in 2012 as a native Mac application called Git
 
 The rewrite made GitHub Desktop cross-platform (Windows and macOS) with a shared codebase, and the open-source model allowed community contributions. The application uses a bundled Git binary rather than your system Git, so it works correctly regardless of which version of Git you have installed.
 
-GitHub Desktop v3.5.0 (June 2025) added GitHub Copilot commit message generation as a generally available feature. Version 3.5.5 (February 2026) fixed Git hooks support, which had been unreliable with version managers like nvm, pyenv and rbenv due to shell environment issues. The current stable release is v3.5.7 (April 2026).
+GitHub Desktop v3.5.0 (June 2025) added GitHub Copilot commit message generation as a generally available feature. Version 3.5.5 (February 2026) fixed Git hooks support, which had been unreliable with version managers like nvm, pyenv and rbenv due to shell environment issues. The current stable release is v3.6 (June 2026), which added Git worktree support and deeper Copilot integration for commit authoring and merge conflict resolution.
 
 ---
 
