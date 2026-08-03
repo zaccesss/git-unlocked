@@ -140,7 +140,7 @@ If you are ready to jump straight in, go to [What is Version Control?](../02-git
 
 This course was created by **Isaac Adjei (Zaccess)** - an electronic engineering and computer science student based in the United Kingdom, and the founder of [Zaccess](https://isaacadjei.me).
 
-git-unlocked started as a personal Git reference and grew into something worth sharing with everyone. It is MIT licenced, open source and built to last.
+git-unlocked started as a personal Git reference and grew into something worth sharing with everyone. It is CC BY-SA 4.0 licenced, open source and built to last.
 
 If it helps you, please star the repository and share it with someone who needs it.
 
