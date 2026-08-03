@@ -4,7 +4,7 @@ version: 1.2.1
 date-released: "2026-07-06"
 abstract: >
   git-unlocked is an open-source modular curriculum for teaching Git and
-  version control principles. The repository comprises 217 files organised
+  version control principles. The repository comprises 182 files organised
   across 12 thematic sections, covering topics from repository initialisation
   and branching strategies through to collaborative workflows and conflict
   resolution. Released under the CC BY-SA 4.0 licence, it is designed to be
