@@ -548,7 +548,7 @@ Commands that can cause permanent data loss - review [04-terminal-safety.md](04-
 - [git/18-hooks.md](../02-git/18-hooks.md) - Git hooks for automation
 - [git/12-git-workflows.md](../02-git/12-git-workflows.md) - Branching strategies
 - [git/13-rebase.md](../02-git/13-rebase.md) - Rebase in depth
-- [ides-and-editors/08-lazygit.md](../06-ides-and-editors/08-kiro.md) - lazygit in editors
+- [terminal/08-lazygit.md](08-lazygit.md) - lazygit in depth
 
 ---
 
