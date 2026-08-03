@@ -651,7 +651,7 @@ Receive recurring financial support from the developer community.
 
 ### GitHub Copilot
 
-AI code completion and chat assistant powered by GPT-4o, Claude Sonnet and o3.
+AI code completion and chat assistant powered by GPT-5, Claude Sonnet and Gemini models.
 
 **Free tier:** 2000 completions/month, 50 chat messages/month
 
