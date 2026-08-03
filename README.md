@@ -10,7 +10,7 @@
 
 git-unlocked takes you from absolute zero to professional-level Git across every major platform: GitHub, GitLab, Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg. Every file covers Windows, Mac and Linux side by side. Nothing assumed. Nothing skipped.
 
-**217 files. 12 sections. All free.**
+**182 files. 12 sections. All free.**
 
 ---
 

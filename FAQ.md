@@ -57,7 +57,7 @@ Skip `01-introduction/` and go straight to whichever platform or topic you want 
 
 ### Is the entire course free?
 
-Yes. Every file, every section and all future updates are free under the [MIT Licence](LICENSE). You can use, share, adapt and build on the material as long as you give credit. There is no paid tier, no email gate and no premium content.
+Yes. Every file, every section and all future updates are free under the [CC BY-SA 4.0 Licence](LICENSE). You can use, share, adapt and build on the material as long as you give credit and keep it under the same licence. There is no paid tier, no email gate and no premium content.
 
 ### How do I contribute to this course?
 
