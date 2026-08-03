@@ -894,7 +894,7 @@ Paginate list responses using `page` and `limit` parameters. Check `X-Total-Coun
 
 ## Sources
 
-- [Gitea: API documentation](https://docs.gitea.com/api/1.20/)
+- [Gitea: API documentation](https://docs.gitea.com/api/)
 - [Gitea: Swagger UI](https://gitea.example.com/api/swagger) (replace with your instance URL)
 - [Gitea: Webhooks](https://docs.gitea.com/usage/webhooks)
 - [Drone CI: Gitea integration](https://docs.drone.io/server/provider/gitea/)

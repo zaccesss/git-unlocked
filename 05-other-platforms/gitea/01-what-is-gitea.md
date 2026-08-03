@@ -304,7 +304,7 @@ Visit [gitea.com](https://gitea.com) (CommitGo's hosted Gitea instance). Create 
 
 **Exercise 2 - Try the official demo**
 
-Gitea maintains a demo instance at [try.gitea.io](https://try.gitea.io) (check the current URL as it may change). Log in with `gitea`/`gitea` (or the current demo credentials shown on the page). Explore the admin panel to see what administration looks like.
+Gitea maintains a demo instance at [demo.gitea.com](https://demo.gitea.com) (check the current URL as it may change). Log in with `gitea`/`gitea` (or the current demo credentials shown on the page). Explore the admin panel to see what administration looks like.
 
 **Exercise 3 - Compare with Forgejo**
 

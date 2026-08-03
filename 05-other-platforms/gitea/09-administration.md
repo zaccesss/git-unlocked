@@ -713,7 +713,7 @@ Regular backups with `gitea dump` capture the database, repositories, LFS data a
 
 ## Sources
 
-- [Gitea: Administration documentation](https://docs.gitea.com/administration)
+- [Gitea: Administration documentation](https://docs.gitea.com/category/administration/)
 - [Gitea: LDAP authentication](https://docs.gitea.com/administration/authentication#ldap-via-binddn)
 - [Gitea: OAuth2 authentication](https://docs.gitea.com/administration/oauth2-provider)
 - [Gitea: Email configuration](https://docs.gitea.com/administration/email-setup)
