@@ -348,16 +348,16 @@ Fully automated version management and package publishing driven by commit messa
 JavaScript CLI (`git cz`) for writing Conventional Commits interactively.
 
 **[jesseduffield/lazygit](https://github.com/jesseduffield/lazygit)** - ~63k stars
-The leading Git TUI (terminal user interface). Covered in [terminal/06-lazygit.md](../07-terminal/06-lazygit.md).
+The leading Git TUI (terminal user interface). Covered in [terminal/08-lazygit.md](../07-terminal/08-lazygit.md).
 
 **[dandavison/delta](https://github.com/dandavison/delta)** - ~26k stars
-Syntax-highlighted, side-by-side diff pager. Covered in [terminal/05-delta.md](../07-terminal/05-delta.md).
+Syntax-highlighted, side-by-side diff pager. Covered in [terminal/07-delta.md](../07-terminal/07-delta.md).
 
 **[jonas/tig](https://github.com/jonas/tig)** - ~12.5k stars
-ncurses-based Git history browser with vi-style navigation. Covered in [terminal/09-tig.md](../07-terminal/09-tig.md).
+ncurses-based Git history browser with vi-style navigation. Covered in [terminal/10-bat-and-tig.md](../07-terminal/10-bat-and-tig.md).
 
 **[extrawurst/gitui](https://github.com/extrawurst/gitui)** - ~18k stars
-Rust-based async Git TUI. Covered in [terminal/10-gitui.md](../07-terminal/10-gitui.md).
+Rust-based async Git TUI. Covered in [terminal/11-other-tools.md](../07-terminal/11-other-tools.md).
 
 **[cli/cli](https://github.com/cli/cli)** - ~39k stars
 Official GitHub CLI (`gh`). Covered in [github/21-cli.md](../03-github/21-cli.md).

@@ -110,7 +110,7 @@ Git uses four types of objects:
 
 **Commit** - stores a snapshot of the entire project. A commit points to a tree (the root directory of the project at that moment), one or more parent commits, and metadata: author name, author email, committer name, committer email, timestamp and the commit message.
 
-**Tag** - stores a named reference to a specific commit, used for marking releases. Tags are covered in [git/15-tags-and-releases.md](15-tags-and-releases.md).
+**Tag** - stores a named reference to a specific commit, used for marking releases. Tags are covered in [git/16-tags-and-releases.md](16-tags-and-releases.md).
 
 ---
 

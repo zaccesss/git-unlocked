@@ -425,7 +425,7 @@ Open a pull request from your fork's branch to the original repository's `main`.
 
 **Why this workflow exists:**
 
-You do not have write access to the original repository. You can only push to your own fork. The pull request is your way of proposing that the original maintainer merge your changes. This is covered in detail in [github/05-pull-requests.md](../03-github/05-pull-requests.md).
+You do not have write access to the original repository. You can only push to your own fork. The pull request is your way of proposing that the original maintainer merge your changes. This is covered in detail in [github/08-pull-requests.md](../03-github/08-pull-requests.md).
 
 ---
 

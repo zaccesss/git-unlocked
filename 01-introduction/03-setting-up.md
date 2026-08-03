@@ -174,7 +174,7 @@ GitLab is a separate platform from GitHub. Many companies - especially in enterp
 > Use a different password for GitLab than for GitHub. If one account is compromised, the other stays safe. Store both in a password manager.
 
 > [!NOTE]
-> **GitLab vs GitHub - which should you use?** You do not have to choose. Most developers use both. GitHub is better for open source and broad collaboration. GitLab is better for private projects, enterprise use and when you need powerful built-in CI/CD pipelines. A full comparison is in [gitlab/02-gitlab-vs-github.md](../04-gitlab/02-gitlab-vs-github.md).
+> **GitLab vs GitHub - which should you use?** You do not have to choose. Most developers use both. GitHub is better for open source and broad collaboration. GitLab is better for private projects, enterprise use and when you need powerful built-in CI/CD pipelines. A full comparison is in [gitlab/03-gitlab-vs-github.md](../04-gitlab/03-gitlab-vs-github.md).
 
 ---
 
