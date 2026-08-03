@@ -304,7 +304,7 @@ STARSHIP_CACHE=~/.starship/cache
 
 zoxide is a smarter `cd` command. It tracks which directories you visit and how frequently, building a "frecency" score (frequency + recency). Instead of typing the full path to a repository you use daily, you type `z project` and zoxide jumps to the highest-scored match.
 
-Current version: **v0.9.9** (January 2025).
+Current version: **v0.10.0** (July 2026).
 
 ### Installing zoxide
 
