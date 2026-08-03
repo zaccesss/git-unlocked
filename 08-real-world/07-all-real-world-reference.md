@@ -466,7 +466,7 @@ gitleaks protect --staged
 # Pre-commit hook config (.pre-commit-config.yaml)
 repos:
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.24.2
+    rev: v8.30.1
     hooks:
       - id: gitleaks
 ```
