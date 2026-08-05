@@ -40,6 +40,10 @@ PATCH - typo fixes, small corrections, link updates
 - Removed a duplicate `---` divider left in `README.md` right before the footer
 - Bumped `CITATION.cff`'s `version` and `date-released` fields from 1.2.2 to 1.2.4, matching this release
 
+### Added
+
+- A `[!IMPORTANT]` alert in `README.md`'s Contact and Support section pointing to `SECURITY.md` for private security reporting
+
 ## [1.2.3] - 2026-08-05
 
 ### Fixed

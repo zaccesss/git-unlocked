@@ -82,6 +82,9 @@ Open an [issue](https://github.com/zaccesss/git-unlocked/issues) in this reposit
 
 You can also reach me directly at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
 
+> [!IMPORTANT]
+> Found a security issue, such as exposed credentials or harmful instructions in the course content? Do not open a public issue, see [SECURITY.md](SECURITY.md) for how to report it privately.
+
 ---
 
 If this course helps, a star on the repository helps others find it. Made by [Isaac Adjei](https://isaacadjei.me).
