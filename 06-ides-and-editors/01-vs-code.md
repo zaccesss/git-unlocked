@@ -483,7 +483,7 @@ VS Code ships a capable Git integration out of the box that handles staging at l
 - [GitLens pricing](https://www.gitkraken.com/pricing)
 - [GitHub Pull Requests extension repository](https://github.com/microsoft/vscode-pull-request-github)
 - [GitLab Workflow extension documentation](https://gitlab.com/gitlab-org/gitlab-vscode-extension)
-- [GitHub Copilot in VS Code documentation](https://code.visualstudio.com/docs/agents/concepts/overview)
+- [GitHub Copilot in VS Code documentation](https://code.visualstudio.com/docs/agents/overview)
 - [GitHub Copilot pricing](https://github.com/features/copilot#pricing)
 
 ---
