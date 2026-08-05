@@ -5,7 +5,7 @@
 [![markdownlint](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml)
 [![Check Links](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.2.2-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.2.4-blue.svg)](CHANGELOG.md)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20694984-blue.svg)](https://doi.org/10.5281/zenodo.20694984)
 
 git-unlocked takes you from absolute zero to professional-level Git across every major platform: GitHub, GitLab, Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg. Every file covers Windows, Mac and Linux side by side. Nothing assumed. Nothing skipped.
@@ -82,29 +82,9 @@ Open an [issue](https://github.com/zaccesss/git-unlocked/issues) in this reposit
 
 You can also reach me directly at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
 
----
+> [!IMPORTANT]
+> Found a security issue, such as exposed credentials or harmful instructions in the course content? Do not open a public issue, see [SECURITY.md](SECURITY.md) for how to report it privately.
 
 ---
 
-<div align="center">
-
-<br />
-
-Made with 🔓 by [Isaac Adjei](https://isaacadjei.me)
-
-**Access Granted. Success Unlocked.**
-
-<br />
-
-If this course helped you, please star the repository. It helps others find it.
-
-<br />
-
-[![isaacadjei.me](https://img.shields.io/badge/isaacadjei.me-000000?style=for-the-badge)](https://isaacadjei.me)
-[![zacess.com](https://img.shields.io/badge/zacess.com-000000?style=for-the-badge)](https://zacess.com)
-[![GitHub](https://img.shields.io/badge/github-zaccesss-181717?style=for-the-badge&logo=github)](https://github.com/zaccesss)
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer" alt="footer" />
-  
-</p>
+If this course helps, a star on the repository helps others find it. Made by [Isaac Adjei](https://isaacadjei.me).
