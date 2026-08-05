@@ -28,6 +28,12 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+## [1.2.3] - 2026-08-05
+
+### Fixed
+
+- Scoped the markdownlint and linkcheck workflow tokens to read-only contents access, closing two CodeQL actions/missing-workflow-permissions alerts. Both jobs only check out the repo and run a read-only check, neither writes back
+
 ## [1.2.2] - 2026-08-03
 
 ### Changed
