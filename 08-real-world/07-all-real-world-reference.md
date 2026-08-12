@@ -616,7 +616,7 @@ For full explanations, context and step-by-step exercises, return to the individ
 - [TruffleHog](https://github.com/trufflesecurity/trufflehog)
 - [Nx documentation](https://nx.dev/docs)
 - [Turborepo documentation](https://turbo.build/repo/docs)
-- [Bazel documentation](https://bazel.build/docs)
+- [Bazel documentation](https://bazel.build/)
 - [ArgoCD documentation](https://argo-cd.readthedocs.io/)
 - [Flux documentation](https://fluxcd.io/flux/)
 
