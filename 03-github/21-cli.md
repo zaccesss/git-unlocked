@@ -28,6 +28,7 @@ GitHub CLI (`gh`) is the official command-line tool for GitHub. It lets you crea
 - [Codespaces from the CLI](#codespaces-from-the-cli)
 - [Aliases](#aliases)
 - [GitHub CLI extensions](#github-cli-extensions)
+- [What's new in GitHub CLI](#whats-new-in-github-cli)
 - [Scripting with gh - JSON output and jq](#scripting-with-gh---json-output-and-jq)
 - [Practical multi-step workflows](#practical-multi-step-workflows)
 - [Try It Yourself](#try-it-yourself)
@@ -1047,13 +1048,40 @@ gh copilot suggest "list all files modified in the last week"
 gh copilot explain "git rebase -i HEAD~3"
 ```
 
-`suggest` takes a natural language description and returns the shell command to do it (asking which shell you use first for correct syntax). `explain` takes any shell command and explains every part of it in plain English.
+`suggest` takes a natural language description and returns the shell command to do it (asking which shell you use first for correct syntax). `explain` takes any shell command and explains every part of it in plain English. On recent `gh` versions Copilot ships built into the core CLI, so `gh copilot` works without installing the extension first - `gh extension install github/gh-copilot` is now only needed on older installs.
+
+---
+
+## What's New in GitHub CLI
+
+`gh` gets new command groups regularly. A few worth knowing about if you learned `gh` a while ago:
+
+```bash
+# Discussions, directly from the terminal
+gh discussion list
+gh discussion create --title "Question" --body "..." --category "Q&A"
+gh discussion view 42
+
+# Browse a remote repository's files without cloning it
+gh repo read-file OWNER/REPO path/to/file.md
+gh repo read-dir OWNER/REPO path/to/dir
+
+# Issue types, parent/sub-issue relationships and issue dependencies
+gh issue edit 123 --add-type Bug
+gh issue develop 123                          # link a branch to an issue
+
+# Manage Copilot coding agent skills
+gh skill list
+gh skill view my-skill
+```
+
+Run `gh <command> --help` to check what is available on your installed version - `gh` updates frequently and new subcommands land outside of major releases. Keep `gh` itself current with `gh version` and the upgrade steps in [Upgrading GitHub CLI](#upgrading-github-cli).
 
 ---
 
 ## Scripting with gh - JSON Output and jq
 
-`gh` outputs machine-readable JSON with the `--json` flag. Combine with `--jq` to filter and transform the output inline using jq syntax, or pipe to `jq` separately.
+`gh` outputs machine-readable JSON with the `--json` flag. Combine with `--jq` to filter and transform the output inline using jq syntax or pipe to `jq` separately.
 
 **Get JSON output:**
 

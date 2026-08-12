@@ -90,13 +90,13 @@ git --version
 If Git is installed you will see something like:
 
 ```
-git version 2.53.0
+git version 2.55.0
 ```
 
 If you see `'git' is not recognized` (Windows) or `command not found` (Mac/Linux), Git is not installed. Continue to Step 4 after completing Steps 2 and 3.
 
 > [!NOTE]
-> The current stable release is **Git 2.53.0** (February 2026). If your version is older than 2.28, update it - some features in this course require newer Git behaviour. Git 3.0 is expected later in 2026 and will bring significant changes including defaulting to `main` as the branch name.
+> The current stable release is **Git 2.55.0** (June 2026). If your version is older than 2.28, update it - some features in this course require newer Git behaviour. Git 3.0 is expected later in 2026 and will bring significant changes including defaulting to `main` as the branch name.
 
 ---
 
@@ -715,7 +715,7 @@ Run these commands one at a time to confirm your setup is complete.
 git --version
 ```
 
-Expected: `git version 2.53.0` (or similar)
+Expected: `git version 2.55.0` (or similar)
 
 **Your name is set:**
 
@@ -815,7 +815,7 @@ GitHub removed password authentication in August 2021. Use SSH keys (Step 6, Opt
 
 **`Permission denied (publickey)` with SSH**
 
-Check that your key files exist (`ls ~/.ssh/` - look for `id_ed25519` and `id_ed25519.pub`), the SSH agent is running (`eval "$(ssh-agent -s)"` then `ssh-add ~/.ssh/id_ed25519`), and your public key is added at https://github.com/settings/keys.
+Check that your key files exist (`ls ~/.ssh/` - look for `id_ed25519` and `id_ed25519.pub`), that the SSH agent is running (`eval "$(ssh-agent -s)"` then `ssh-add ~/.ssh/id_ed25519`) and that your public key is added at https://github.com/settings/keys.
 
 **My commits do not appear on my GitHub contribution graph**
 

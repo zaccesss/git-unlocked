@@ -78,7 +78,7 @@ Comfortable with Git basics. A Linux or Mac machine to install Forgejo on (Forge
 
 ## Note on Forgejo versions
 
-Forgejo jumped its version numbering when it became a hard fork. The current stable version is **v9.0.x** (April 2026 - check [codeberg.org/forgejo/forgejo/releases](https://codeberg.org/forgejo/forgejo/releases) for the latest). Forgejo's version numbers are not comparable to Gitea's v1.25.x - they use different schemes entirely.
+Forgejo jumped its version numbering when it became a hard fork. The current stable version is **v16.0.x** (July 2026 - check [codeberg.org/forgejo/forgejo/releases](https://codeberg.org/forgejo/forgejo/releases) for the latest). Forgejo's version numbers are not comparable to Gitea's v1.25.x - they use different schemes entirely.
 
 ---
 

@@ -42,10 +42,12 @@ jobs:
             --exclude 'netflixtechblog.com'
             --exclude 'oliviac.dev'
             --exclude '://gitea.com'
+            --exclude '://demo.gitea.com'
             --exclude 'gitexplorer.com'
             --exclude 'slsa.dev'
             --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
             --exclude 'jvns.ca'
+            --exclude 'nova.app'
             --exclude 'file://'
             '**/*.md'
         env:
