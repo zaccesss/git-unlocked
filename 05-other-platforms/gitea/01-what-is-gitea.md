@@ -36,7 +36,7 @@ However, Gogs had a structural problem: it was a one-person project. Jiahua Chen
 
 In **November 2016**, a group of contributors forked Gogs to create **Gitea**. The reasons: they wanted a more open, community-driven governance model where contributions were accepted more readily and decisions were made collectively. The initial Gitea commit was a fork of Gogs 0.9.97.
 
-The fork was not hostile. Jiahua Chen was notified, and both projects continued in parallel. Gogs continues to exist today as a simpler, more conservative project under Jiahua Chen's stewardship. Gitea diverged significantly over the following years, adding features, refactoring the codebase and adopting more modern tooling.
+The fork was not hostile. Jiahua Chen was notified and both projects continued in parallel. Gogs continues to exist today as a simpler, more conservative project under Jiahua Chen's stewardship. Gitea diverged significantly over the following years, adding features, refactoring the codebase and adopting more modern tooling.
 
 ---
 
@@ -338,7 +338,7 @@ Gitea is a lightweight, self-hosted Git platform written in Go. It originated as
 
 In 2022, two maintainers incorporated Gitea Limited and transferred the project's domain names and trademarks to this for-profit entity without community consent. The community's response was to create Forgejo, a separate fork under Codeberg e.V.'s non-profit umbrella. CommitGo (the US successor to Gitea Limited) subsequently launched Gitea Enterprise with proprietary-only features including SAML authentication, audit logs and IP allowlisting.
 
-In 2026, Gitea community edition is at v1.25.x, MIT-licensed, and actively developed. It provides Git hosting, pull requests, issues, Gitea Actions (GitHub Actions-compatible CI/CD), a package registry supporting 20+ formats and an extensive REST API. It runs on minimal hardware including Raspberry Pi.
+In 2026, Gitea community edition is at v1.25.x, MIT-licensed and actively developed. It provides Git hosting, pull requests, issues, Gitea Actions (GitHub Actions-compatible CI/CD), a package registry supporting 20+ formats and an extensive REST API. It runs on minimal hardware including Raspberry Pi.
 
 Key trade-offs compared to Forgejo: Gitea is MIT-licensed (Forgejo is GPLv3+), has Windows support (Forgejo dropped it), has no federation development (Forgejo's flagship differentiator) and has a commercial enterprise tier. The choice between them involves weighing licence philosophy, required features and governance preferences.
 

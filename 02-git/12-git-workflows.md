@@ -231,7 +231,7 @@ git push -u origin feature/descriptive-name
 
 Gitflow is a more structured workflow designed for projects that release versioned software on a schedule. It was defined by Vincent Driessen in January 2010 and became extremely influential in enterprise software development.
 
-It uses multiple long-lived branches with specific purposes, and a strict set of rules about how code flows between them.
+It uses multiple long-lived branches with specific purposes and a strict set of rules about how code flows between them.
 
 ### The branches
 

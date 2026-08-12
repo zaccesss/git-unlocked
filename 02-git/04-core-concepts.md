@@ -151,7 +151,7 @@ Branch names are just labels. The convention above is common but not enforced by
 
 ## Remote
 
-A **remote** is a version of your repository hosted somewhere else - typically GitHub, GitLab or Bitbucket. It is where you push your work to share it or back it up, and where you pull from to get other people's work.
+A **remote** is a version of your repository hosted somewhere else - typically GitHub, GitLab or Bitbucket. It is where you push your work to share it or back it up and where you pull from to get other people's work.
 
 When you clone a repository, Git automatically creates a remote called **`origin`** pointing to the URL you cloned from. You can have multiple remotes, but `origin` is the conventional name for the primary one.
 
@@ -250,7 +250,7 @@ git merge feature/user-login
 
 Git looks at the two branches, finds their common ancestor (the commit where they diverged) and combines the changes from both into a new merge commit.
 
-If the two branches changed different files, or different parts of the same file, Git can merge them automatically. If they changed the same lines of the same file in different ways, Git cannot decide which version is correct - this is a conflict.
+If the two branches changed different files or different parts of the same file, Git can merge them automatically. If they changed the same lines of the same file in different ways, Git cannot decide which version is correct - this is a conflict.
 
 Merging is covered in depth in [git/07-merging.md](07-merging.md).
 
@@ -258,7 +258,7 @@ Merging is covered in depth in [git/07-merging.md](07-merging.md).
 
 ## Conflict
 
-A **conflict** occurs when two branches have made different changes to the same part of the same file, and Git cannot automatically decide which version to keep.
+A **conflict** occurs when two branches have made different changes to the same part of the same file and Git cannot automatically decide which version to keep.
 
 Git stops the merge and marks the conflicting sections in the file:
 

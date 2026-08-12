@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 20 minutes
 
-Stashing lets you save your work-in-progress without committing it. It is the solution to one of the most common situations in development: you are halfway through something when you suddenly need to switch context - fix an urgent bug, review a colleague's branch, or pull the latest changes. Stash saves your unfinished work, clears your working directory and lets you come back to it later.
+Stashing lets you save your work-in-progress without committing it. It is the solution to one of the most common situations in development: you are halfway through something when you suddenly need to switch context - fix an urgent bug, review a colleague's branch or pull the latest changes. Stash saves your unfinished work, clears your working directory and lets you come back to it later.
 
 ---
 
@@ -125,7 +125,7 @@ git stash show -p stash@{2}
 
 ## Applying a Stash
 
-`git stash apply` restores the stashed changes but keeps the stash entry in the list. Use this when you want to apply the same changes to multiple branches, or when you want to keep the stash as a backup.
+`git stash apply` restores the stashed changes but keeps the stash entry in the list. Use this when you want to apply the same changes to multiple branches or when you want to keep the stash as a backup.
 
 **Apply the most recent stash:**
 
@@ -139,7 +139,7 @@ git stash apply
 git stash apply stash@{2}
 ```
 
-After applying, the stash remains in the list. You can apply it again later if needed, or drop it when you no longer need it.
+After applying, the stash remains in the list. You can apply it again later if needed or drop it when you no longer need it.
 
 ---
 

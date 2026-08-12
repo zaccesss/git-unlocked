@@ -25,7 +25,7 @@
 
 Open source contribution is one of the most valuable things a developer can do. You learn from production codebases, build a public record of your work and directly improve tools that millions of people use. It also has a reputation for being intimidating - complex contribution guides, maintainers requesting changes you do not understand, PRs sitting unanswered for weeks.
 
-This file demystifies the process. The underlying Git workflow is the same on almost every project. Once you understand the fork-and-PR sequence, the `upstream` remote, and how to handle review feedback cleanly, you can contribute to any project on GitHub or GitLab with confidence.
+This file demystifies the process. The underlying Git workflow is the same on almost every project. Once you understand the fork-and-PR sequence, the `upstream` remote and how to handle review feedback cleanly, you can contribute to any project on GitHub or GitLab with confidence.
 
 **What you need:**
 
@@ -70,7 +70,7 @@ Before writing code, search the issue tracker for your bug or feature. If an iss
 
 ### Start small
 
-Your first contribution to a project does not need to be a major feature. Fixing a typo in the docs, improving an error message, or adding a test for an uncovered edge case is a perfectly valid first PR. Small PRs are reviewed faster, merged more often, and teach you the project's conventions without the risk of a large rework request.
+Your first contribution to a project does not need to be a major feature. Fixing a typo in the docs, improving an error message or adding a test for an uncovered edge case is a perfectly valid first PR. Small PRs are reviewed faster, merged more often and teach you the project's conventions without the risk of a large rework request.
 
 ---
 
@@ -216,7 +216,7 @@ gh repo sync YOU/REPO -b main
 
 **Using the GitLab web interface:**
 
-Open your fork on GitLab, click the **...** menu next to the default branch, and select **Update fork**.
+Open your fork on GitLab, click the **...** menu next to the default branch and select **Update fork**.
 
 ### Rebasing your feature branch onto the latest upstream
 
@@ -424,7 +424,7 @@ Contributing to open source follows the same workflow on almost every project:
 - Use fixup commits during review so maintainers can re-review incrementally, then squash before merge with `git rebase -i --autosquash`
 - Always read `CONTRIBUTING.md` - every project has its own conventions
 
-Three major projects diverge from the standard model: the Linux kernel uses email patches via `b4`, Kubernetes uses chat-ops through Prow, and Rust uses bors for merge automation. All three are well-documented and follow predictable patterns once you know what to look for.
+Three major projects diverge from the standard model: the Linux kernel uses email patches via `b4`, Kubernetes uses chat-ops through Prow and Rust uses bors for merge automation. All three are well-documented and follow predictable patterns once you know what to look for.
 
 ---
 

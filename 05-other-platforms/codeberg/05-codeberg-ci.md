@@ -612,7 +612,7 @@ tar xzf woodpecker-agent_linux_amd64.tar.gz
 
 ### Registering with ci.codeberg.org
 
-1. In ci.codeberg.org, go to **Admin** > **Agents** (requires admin access, or contact Codeberg admins)
+1. In ci.codeberg.org, go to **Admin** > **Agents** (requires admin access or contact Codeberg admins)
 2. For personal use, Codeberg provides agent tokens to trusted users on request
 
 Alternatively, run your own complete Woodpecker server connected to your Codeberg account:

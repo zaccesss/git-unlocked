@@ -206,7 +206,7 @@ Students with the GitHub Student Developer Pack get the **Team plan free** for t
 
 **Step 6.** Select whether this organisation belongs to you personally or to a business/institution.
 
-**Step 7.** Optionally invite initial members on the next screen, or skip and invite later.
+**Step 7.** Optionally invite initial members on the next screen or skip and invite later.
 
 **Step 8.** Click **Complete setup**.
 

@@ -4,7 +4,7 @@
 
 This file covers the Git commands you will use every single day. Learn these ten commands well and you can handle the majority of real-world Git work. Everything else builds on top of them.
 
-Run every command in your terminal - Command Prompt, PowerShell or Git Bash on Windows, Terminal on Mac, or your terminal of choice on Linux.
+Run every command in your terminal - Command Prompt, PowerShell or Git Bash on Windows, Terminal on Mac or your terminal of choice on Linux.
 
 ---
 
@@ -516,7 +516,7 @@ This is covered in depth in [git/13-rebase.md](13-rebase.md).
 
 ## git switch
 
-`git switch` changes which branch you are working on. It was introduced in Git 2.23 as a clearer alternative to `git checkout` for switching branches, and became officially stable in Git 2.51.
+`git switch` changes which branch you are working on. It was introduced in Git 2.23 as a clearer alternative to `git checkout` for switching branches and became officially stable in Git 2.51.
 
 **Switch to an existing branch:**
 

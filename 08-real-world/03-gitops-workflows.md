@@ -26,7 +26,7 @@
 
 GitOps is the practice of using Git as the single source of truth for the desired state of your infrastructure and applications. Instead of running `kubectl apply` commands or clicking through a cloud console, you commit the desired state to a Git repository and let a software agent continuously reconcile the live system to match it.
 
-The result is infrastructure that is version-controlled, auditable, reviewable (via PRs), automatically recovered when someone makes a manual change, and consistent across environments.
+The result is infrastructure that is version-controlled, auditable, reviewable (via PRs), automatically recovered when someone makes a manual change and consistent across environments.
 
 This file assumes basic familiarity with Kubernetes. If you have not used Kubernetes before, the concepts still apply but the tooling examples will make more sense after you have worked through a basic Kubernetes tutorial.
 
@@ -254,7 +254,7 @@ flux bootstrap github \
   --personal
 ```
 
-`flux bootstrap` installs the Flux controllers, creates a `fleet-infra` repository (or uses an existing one), commits the Flux manifests to `clusters/my-cluster/`, and configures the cluster to reconcile from that path. From this point, any change to `clusters/my-cluster/` in the `fleet-infra` repo is automatically applied to the cluster.
+`flux bootstrap` installs the Flux controllers, creates a `fleet-infra` repository (or uses an existing one), commits the Flux manifests to `clusters/my-cluster/` and configures the cluster to reconcile from that path. From this point, any change to `clusters/my-cluster/` in the `fleet-infra` repo is automatically applied to the cluster.
 
 ### Defining a GitRepository and Kustomization
 
@@ -305,9 +305,9 @@ Commit these files to `fleet-infra`. Flux detects the new manifests and begins r
 | Stars (April 2026) | ~22,700 | ~6,500 |
 | CNCF status | Graduated | Graduated |
 
-**Choose ArgoCD if:** you want a UI, you are managing many clusters from a central place, or you are onboarding a team that is new to GitOps.
+**Choose ArgoCD if:** you want a UI, you are managing many clusters from a central place or you are onboarding a team that is new to GitOps.
 
-**Choose Flux if:** you want pure Kubernetes-native CRDs with no API server dependency, you need first-class SOPS secrets integration, or you want image-tag automation that writes back to Git.
+**Choose Flux if:** you want pure Kubernetes-native CRDs with no API server dependency, you need first-class SOPS secrets integration or you want image-tag automation that writes back to Git.
 
 Both are production-proven at scale. Both are CNCF-graduated. Either is a solid choice.
 
@@ -409,7 +409,7 @@ Kargo v1.9 (2026) added infrastructure-aware promotions integrating with Terrafo
 
 **Adobe, BlackRock, Capital One, the New York Times and Goldman Sachs** all publicly use ArgoCD.
 
-**Weaveworks** coined the term "GitOps" in 2017 and created Flux. The company shut down in February 2024, but Flux survived as a CNCF-graduated community project. GitLab, Microsoft (AKS), AWS (EKS Anywhere), and Aenix continue to back it.
+**Weaveworks** coined the term "GitOps" in 2017 and created Flux. The company shut down in February 2024, but Flux survived as a CNCF-graduated community project. GitLab, Microsoft (AKS), AWS (EKS Anywhere) and Aenix continue to back it.
 
 **Progressive delivery** - deploying to a small percentage of traffic first, then expanding - is the natural extension of GitOps. **Argo Rollouts** provides explicit step-based canary and blue-green deployments in the Argo ecosystem. **Flagger** provides automatic canary analysis over standard `Deployment`s in the Flux ecosystem.
 
@@ -471,10 +471,10 @@ argocd app get guestbook
 ## Common mistakes
 
 **Pushing directly to the cluster from CI (CIOps, not GitOps).**
-Running `kubectl apply` from a GitHub Actions job is the most common GitOps anti-pattern. It requires the CI system to hold cluster credentials, removes the reconciliation loop, and does not heal drift. Move the `kubectl apply` into an ArgoCD `Application` or Flux `Kustomization` and commit changes to Git instead.
+Running `kubectl apply` from a GitHub Actions job is the most common GitOps anti-pattern. It requires the CI system to hold cluster credentials, removes the reconciliation loop and does not heal drift. Move the `kubectl apply` into an ArgoCD `Application` or Flux `Kustomization` and commit changes to Git instead.
 
 **Storing secrets in Git unencrypted.**
-Git commits are permanent and often public. Never commit raw Kubernetes `Secret` YAML to a GitOps repository. Use **SOPS** with age or AWS KMS (first-class in Flux; supported via plugins in ArgoCD), **External Secrets Operator** (syncs from Vault, AWS Secrets Manager, GCP Secret Manager), or **Sealed Secrets** (encrypt before committing, decrypt in-cluster).
+Git commits are permanent and often public. Never commit raw Kubernetes `Secret` YAML to a GitOps repository. Use **SOPS** with age or AWS KMS (first-class in Flux; supported via plugins in ArgoCD), **External Secrets Operator** (syncs from Vault, AWS Secrets Manager, GCP Secret Manager) or **Sealed Secrets** (encrypt before committing, decrypt in-cluster).
 
 **Branch-per-environment at scale.**
 Branch-per-environment makes sense for two or three environments. With six or more, maintaining merge consistency becomes a full-time job. Switch to folder-per-environment with Kustomize overlays.

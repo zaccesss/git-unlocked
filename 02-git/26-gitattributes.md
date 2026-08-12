@@ -28,7 +28,7 @@ Getting `.gitattributes` right prevents one of the most common sources of spurio
 
 ## What is .gitattributes?
 
-When Git stores a file, it can optionally transform it - normalising line endings, applying filters, or marking it as binary. When Git displays a diff, it can use custom drivers to produce more readable output. When Git merges, it can use custom strategies for specific file types.
+When Git stores a file, it can optionally transform it - normalising line endings, applying filters or marking it as binary. When Git displays a diff, it can use custom drivers to produce more readable output. When Git merges, it can use custom strategies for specific file types.
 
 All of this behaviour is controlled by `.gitattributes`.
 
@@ -271,7 +271,7 @@ docs/            export-ignore
 Makefile         export-ignore
 ```
 
-When someone downloads your project as a zip from GitHub, or when you run `git archive`, these files and directories are excluded. The result is a clean production package.
+When someone downloads your project as a zip from GitHub or when you run `git archive`, these files and directories are excluded. The result is a clean production package.
 
 `export-subst` substitutes `$Format:` placeholders with commit metadata during export:
 

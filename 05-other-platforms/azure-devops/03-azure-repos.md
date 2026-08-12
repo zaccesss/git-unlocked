@@ -530,7 +530,7 @@ HTTPS Git operations in Azure DevOps require a PAT every time (unless a credenti
 
 **Creating a repository with a README and then trying to push an existing repo**
 
-If you initialise a repository with a README, it has a commit history. Pushing an existing local repo with its own history causes a rejection (histories have diverged). Either initialise empty, or fetch and merge the remote README first.
+If you initialise a repository with a README, it has a commit history. Pushing an existing local repo with its own history causes a rejection (histories have diverged). Either initialise empty or fetch and merge the remote README first.
 
 **Confusing the project's default repository with the project itself**
 
@@ -538,7 +538,7 @@ When you create a project named "MyApp", Azure DevOps automatically creates a re
 
 **Not linking work items to pull requests**
 
-Branch policies can require work item links. Even when not required, linking PRs to work items creates traceability - you can see from a work item what code implemented it, and from the code history what requirement a change served.
+Branch policies can require work item links. Even when not required, linking PRs to work items creates traceability - you can see from a work item what code implemented it and from the code history what requirement a change served.
 
 **Forgetting that TFVC branches are expensive**
 

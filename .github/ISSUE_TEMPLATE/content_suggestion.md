@@ -12,7 +12,7 @@ assignees: zaccesss
 
 ## Which folder or file does this relate to?
 
-<!-- For example: git/, github/, reference/cheatsheet.md, or a completely new section. -->
+<!-- For example: git/, github/, reference/cheatsheet.md or a completely new section. -->
 
 ## Why would this help learners?
 

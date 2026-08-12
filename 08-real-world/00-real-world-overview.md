@@ -21,7 +21,7 @@
 
 The rest of this course teaches you Git commands and platform features in isolation. This section teaches you how those commands and features combine in the real world, on real teams, solving real problems.
 
-Every file in this section is built around a scenario: contributing to a project you do not own, shipping code with a team of twenty, automating infrastructure deployments, working inside a repository with a million files, moving a codebase between platforms, or digging a team out of a serious Git disaster. These are the situations where knowing the right command is not enough - you also need to know the right sequence, the right tool for the job and the failure modes to avoid.
+Every file in this section is built around a scenario: contributing to a project you do not own, shipping code with a team of twenty, automating infrastructure deployments, working inside a repository with a million files, moving a codebase between platforms or digging a team out of a serious Git disaster. These are the situations where knowing the right command is not enough - you also need to know the right sequence, the right tool for the job and the failure modes to avoid.
 
 The content in this section draws on public engineering posts from Google, Meta, Microsoft, Shopify, Netflix and others, on the OpenGitOps specification, on official documentation from the Git project and every major platform and on the collective knowledge of teams that have made (and recovered from) every mistake covered here.
 
@@ -103,7 +103,7 @@ Each file lists any additional requirements at the top.
 
 Three ideas run through every file in this section.
 
-**Small, focused changes win.** Whether you are contributing to open source, working in a team, or managing a monorepo, the pattern that produces the least friction is the same: small commits, short-lived branches, fast review cycles. The research behind DORA (DevOps Research and Assessment) consistently finds that elite teams deploy frequently with small batches - not because they work faster, but because small changes are easier to review, easier to revert and easier to reason about.
+**Small, focused changes win.** Whether you are contributing to open source, working in a team or managing a monorepo, the pattern that produces the least friction is the same: small commits, short-lived branches, fast review cycles. The research behind DORA (DevOps Research and Assessment) consistently finds that elite teams deploy frequently with small batches - not because they work faster, but because small changes are easier to review, easier to revert and easier to reason about.
 
 **The reflog is your safety net.** Every file in this section that involves rewriting history, switching platforms or recovering from a mistake will remind you of the same thing: `git reflog` records every movement of HEAD and every branch tip for 90 days. Before you panic, run `git reflog`. Before you do anything destructive, make sure you understand what you will lose.
 
@@ -113,7 +113,7 @@ Three ideas run through every file in this section.
 
 ## Summary
 
-This section covers the seven scenarios that come up most often when developers use Git in a professional context. Each file is self-contained and practical, with step-by-step workflows, real-world examples and a common mistakes section. Start at `01-contributing-to-open-source.md` if you are new to the section, or jump to whichever file matches your current situation.
+This section covers the seven scenarios that come up most often when developers use Git in a professional context. Each file is self-contained and practical, with step-by-step workflows, real-world examples and a common mistakes section. Start at `01-contributing-to-open-source.md` if you are new to the section or jump to whichever file matches your current situation.
 
 ---
 

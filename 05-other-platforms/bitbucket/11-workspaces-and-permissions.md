@@ -140,7 +140,7 @@ Members cannot access repositories they have not been granted access to. They ca
 
 For a typical software team:
 
-- **Owner**: CTO, VP of Engineering, or designated account administrator
+- **Owner**: CTO, VP of Engineering or designated account administrator
 - **Admin**: Engineering managers, team leads, DevOps engineers who manage repository setup
 - **Member**: All developers, QA engineers, designers, anyone who needs repository access
 
@@ -308,14 +308,14 @@ Higher-level permissions are not overridden by lower-level restrictions. If a us
 
 **Solution options:**
 
-1. Move the sensitive repository out of the "Backend" project to no project, and grant only the two seniors direct access. Remove the repo from the project so it no longer inherits project permissions.
+1. Move the sensitive repository out of the "Backend" project to no project and grant only the two seniors direct access. Remove the repo from the project so it no longer inherits project permissions.
 2. Create a separate project for the sensitive repository with its own access controls.
 
 There is no way to "deny" access to a subset of a project's members for a specific repository within that project. The only option is to remove the repository from the project's scope.
 
 ### Fork permissions
 
-When a repository is forked, the fork is a separate repository with its own permissions. Access to the original repository does not grant access to the fork, and vice versa. The fork owner (or the workspace the fork lives in) controls access to the fork independently.
+When a repository is forked, the fork is a separate repository with its own permissions. Access to the original repository does not grant access to the fork and vice versa. The fork owner (or the workspace the fork lives in) controls access to the fork independently.
 
 ---
 
@@ -326,7 +326,7 @@ When a repository is forked, the fork is a separate repository with its own perm
 1. Go to **Workspace settings** > **Members**
 2. Click **Invite member**
 3. Enter their email address
-4. Select their workspace role (Owner, Admin, or Member)
+4. Select their workspace role (Owner, Admin or Member)
 5. Optionally add them to groups immediately
 6. Click **Send invite**
 
@@ -590,7 +590,7 @@ When someone leaves the organisation, their workspace membership (and all associ
 
 ## Summary
 
-Workspaces are the top-level containers in Bitbucket. Every repository, member, group and project belongs to a workspace. Workspaces have three roles: Owner (full access including billing), Admin (management without billing), and Member (access only to granted resources).
+Workspaces are the top-level containers in Bitbucket. Every repository, member, group and project belongs to a workspace. Workspaces have three roles: Owner (full access including billing), Admin (management without billing) and Member (access only to granted resources).
 
 Groups collect members and are the primary tool for scaling access management. Instead of granting repository access to individuals, grant it to groups. Adding someone to a group gives them all the access the group has; removing them takes it away.
 

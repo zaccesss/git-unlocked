@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 25 minutes
 
-Forgejo is a self-hosted Git platform steered by Codeberg e.V., a German non-profit organisation. It forked from Gitea in December 2022 following a governance dispute over who controlled the Gitea project's assets, and became a hard fork in February 2024 when it began diverging intentionally from Gitea's codebase. Forgejo's defining characteristics are its non-profit governance, fully free software model (no proprietary enterprise tier), SAML authentication in the free edition and active development of ActivityPub federation between instances.
+Forgejo is a self-hosted Git platform steered by Codeberg e.V., a German non-profit organisation. It forked from Gitea in December 2022 following a governance dispute over who controlled the Gitea project's assets and became a hard fork in February 2024 when it began diverging intentionally from Gitea's codebase. Forgejo's defining characteristics are its non-profit governance, fully free software model (no proprietary enterprise tier), SAML authentication in the free edition and active development of ActivityPub federation between instances.
 
 ---
 

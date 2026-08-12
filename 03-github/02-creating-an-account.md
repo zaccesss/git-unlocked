@@ -70,7 +70,7 @@ Your GitHub username is permanent in practice - you can change it but doing so b
 **Think about recruiters.** Your GitHub URL will be on your CV: `github.com/YOUR_USERNAME`. `github.com/jane-smith` looks professional. `github.com/xXdarkl0rdXx` does not.
 
 > [!TIP]
-> If your preferred username is taken, try adding your country code, a hyphen, or using initials. For example, if `janesmith` is taken, try `jane-smith`, `jsmith` or `j-a-smith`. Avoid adding long strings of numbers.
+> If your preferred username is taken, try adding your country code, a hyphen or using initials. For example, if `janesmith` is taken, try `jane-smith`, `jsmith` or `j-a-smith`. Avoid adding long strings of numbers.
 
 **What happens if you change your username later:**
 
@@ -84,7 +84,7 @@ GitHub creates a redirect from your old username to your new one, but this redir
 
 **Step 2.** Enter your **email address** and click **Continue**.
 
-**Step 3.** Create a **password**. GitHub requires a minimum of 15 characters, or 8 characters if it includes a number and a lowercase letter. Use a password manager to generate and store a strong password.
+**Step 3.** Create a **password**. GitHub requires a minimum of 15 characters or 8 characters if it includes a number and a lowercase letter. Use a password manager to generate and store a strong password.
 
 **Step 4.** Enter your chosen **username**. GitHub checks availability in real time.
 
@@ -147,7 +147,7 @@ Scan the QR code with your authenticator app. **Save the recovery codes** that G
 
 ### 4. SMS text messages
 
-GitHub sends a code to your phone number by text. This is the least secure option - SIM-swap attacks can intercept SMS codes. Only use SMS if you have no other option, and plan to upgrade to an authenticator app as soon as possible.
+GitHub sends a code to your phone number by text. This is the least secure option - SIM-swap attacks can intercept SMS codes. Only use SMS if you have no other option and plan to upgrade to an authenticator app as soon as possible.
 
 ### 5. GitHub Mobile as a backup
 
@@ -169,7 +169,7 @@ The GitHub Mobile app can approve 2FA requests via push notification. This is a 
 
 ## Protecting Your Email Address
 
-Every commit you make contains your name and email address in its metadata. If you use your real email in commits, it will appear in public repositories forever - visible to anyone who clones or browses the repository, and indexed by search engines.
+Every commit you make contains your name and email address in its metadata. If you use your real email in commits, it will appear in public repositories forever - visible to anyone who clones or browses the repository and indexed by search engines.
 
 **GitHub's noreply email address** solves this. When you enable email privacy, GitHub provides a special address in the format:
 

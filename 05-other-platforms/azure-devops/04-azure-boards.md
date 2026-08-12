@@ -189,7 +189,7 @@ Each column represents a workflow state. The default columns for Agile are: **Ne
 1. Click the **Settings** gear on the board
 2. Click **Columns**
 3. Add, rename or reorder columns
-4. Map columns to workflow states (multiple states can map to one column, or columns can map to sub-states)
+4. Map columns to workflow states (multiple states can map to one column or columns can map to sub-states)
 5. Set WIP (Work In Progress) limits per column
 
 **WIP limits** display a warning (or hard stop, depending on configuration) when a column exceeds the specified number of cards. WIP limits are a core Kanban practice - they surface bottlenecks and encourage completing work before starting new work.
@@ -252,7 +252,7 @@ Filter the backlog by:
 - Work item type
 - Iteration
 
-This allows a team lead to see only their team's items, or a developer to see only items assigned to them.
+This allows a team lead to see only their team's items or a developer to see only items assigned to them.
 
 ### Backlog settings
 
@@ -566,7 +566,7 @@ Teams new to Azure Boards often create many swimlanes, many custom columns and c
 
 **Not closing work items when PRs are merged**
 
-Work items linger in Active state long after the code is merged. Configure automatic transitions in project settings, or make it a team habit to close work items when PRs are completed.
+Work items linger in Active state long after the code is merged. Configure automatic transitions in project settings or make it a team habit to close work items when PRs are completed.
 
 **Using only the Kanban board and ignoring the backlog**
 

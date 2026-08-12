@@ -4,7 +4,7 @@
 
 This folder covers everything you need to work with Git confidently from the command line. It starts from the absolute basics - what a terminal is and how it differs from a shell - and builds up through shell setup on every platform, safe working habits, deep Git configuration and the modern ecosystem of terminal tools that make Git workflows faster and clearer.
 
-You do not need to be a terminal expert to start here. Every file covers Windows, Mac and Linux side by side, and every concept is explained from scratch.
+You do not need to be a terminal expert to start here. Every file covers Windows, Mac and Linux side by side and every concept is explained from scratch.
 
 ---
 
@@ -19,9 +19,9 @@ You do not need to be a terminal expert to start here. Every file covers Windows
 
 ## 1. What this section covers
 
-Most Git tutorials assume you already know your way around a terminal. This section does not. It explains what a terminal is, how it differs from a shell and a command prompt, why Windows has three different ways to run commands, what those `$` and `>` symbols actually mean, and how Git fits into all of it.
+Most Git tutorials assume you already know your way around a terminal. This section does not. It explains what a terminal is, how it differs from a shell and a command prompt, why Windows has three different ways to run commands, what those `$` and `>` symbols actually mean and how Git fits into all of it.
 
-From there it moves into practical territory: configuring Git properly, writing aliases that save you time every day, and the tools that make terminal Git genuinely pleasant to use - better diffs with delta, a full TUI with lazygit, fuzzy finding with fzf and more.
+From there it moves into practical territory: configuring Git properly, writing aliases that save you time every day and the tools that make terminal Git genuinely pleasant to use - better diffs with delta, a full TUI with lazygit, fuzzy finding with fzf and more.
 
 The section closes with a full workflow walkthrough that pulls everything together.
 

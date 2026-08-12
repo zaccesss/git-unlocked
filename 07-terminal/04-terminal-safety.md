@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 25 minutes
 
-The terminal is powerful because it does exactly what you tell it, with no confirmation dialogs, no Recycle Bin, and no undo button. That same directness makes certain commands genuinely dangerous. This file covers which Git commands can destroy work, which shell commands have no recovery, how secrets end up in your shell history and what to do about it, and what safety nets actually exist.
+The terminal is powerful because it does exactly what you tell it, with no confirmation dialogs, no Recycle Bin and no undo button. That same directness makes certain commands genuinely dangerous. This file covers which Git commands can destroy work, which shell commands have no recovery, how secrets end up in your shell history and what to do about it and what safety nets actually exist.
 
 ---
 
@@ -24,11 +24,11 @@ The terminal is powerful because it does exactly what you tell it, with no confi
 
 ## 1. Why the terminal has no undo
 
-When you delete a file in a graphical file manager on Windows or macOS, it goes to the Recycle Bin or Trash. You can recover it. When you delete a file with `rm` in the terminal, the deletion is immediate and permanent - the kernel calls `unlink()`, removes the directory entry, and the filesystem marks that space as available. There is no staging area for deletion, no bin, no undo. Recovery tools like `extundelete` exist but are forensic-grade - unreliable on SSDs with TRIM, journaling filesystems and modern COW filesystems.
+When you delete a file in a graphical file manager on Windows or macOS, it goes to the Recycle Bin or Trash. You can recover it. When you delete a file with `rm` in the terminal, the deletion is immediate and permanent - the kernel calls `unlink()`, removes the directory entry and the filesystem marks that space as available. There is no staging area for deletion, no bin, no undo. Recovery tools like `extundelete` exist but are forensic-grade - unreliable on SSDs with TRIM, journaling filesystems and modern COW filesystems.
 
 Git adds a partial safety net for work that has been committed - the reflog (covered in section 4). But the reflog only tracks commits and reference changes. If you have uncommitted work and destroy it, the reflog cannot help you.
 
-This is not a reason to avoid the terminal. It is a reason to understand which commands are safe, which are dangerous, and how to build habits that protect you.
+This is not a reason to avoid the terminal. It is a reason to understand which commands are safe, which are dangerous and how to build habits that protect you.
 
 ---
 
@@ -103,7 +103,7 @@ git branch -d feature/login   # delete only if merged (safe)
 git branch -D feature/login   # force delete even if not merged
 ```
 
-`-D` deletes a branch even if it has commits not present in any other branch. Those commits are not immediately deleted - they are dangling objects recoverable via `git reflog` and `git fsck` for about 30 days. But the branch name is gone, and finding the commits is inconvenient.
+`-D` deletes a branch even if it has commits not present in any other branch. Those commits are not immediately deleted - they are dangling objects recoverable via `git reflog` and `git fsck` for about 30 days. But the branch name is gone and finding the commits is inconvenient.
 
 ---
 
@@ -217,7 +217,7 @@ git cherry-pick abc1234
 Reflog entries expire after 90 days (for reachable commits) or 30 days (for unreachable/dangling commits). The defaults are set by `gc.reflogExpire` and `gc.reflogExpireUnreachable`.
 
 > [!IMPORTANT]
-> The reflog is **local only**. It is not cloned, not pushed, not shared. Your teammate's reflog cannot help you recover your lost commits, and vice versa. Cloning a repository does not give you the original reflog.
+> The reflog is **local only**. It is not cloned, not pushed, not shared. Your teammate's reflog cannot help you recover your lost commits and vice versa. Cloning a repository does not give you the original reflog.
 
 ### git stash
 
@@ -278,7 +278,7 @@ PROMPT_COMMAND='history -a'   # save every command immediately
  export GITHUB_TOKEN=ghp_abc123...   # leading space - not saved to history
 ```
 
-🐧🍎 **zsh** stores history in `~/.zsh_history`. Set `HISTFILE`, `HISTSIZE` (in-memory), and `SAVEHIST` (file size - zsh writes nothing without this).
+🐧🍎 **zsh** stores history in `~/.zsh_history`. Set `HISTFILE`, `HISTSIZE` (in-memory) and `SAVEHIST` (file size - zsh writes nothing without this).
 
 ```zsh
 # In ~/.zshrc
@@ -560,21 +560,21 @@ Running `git clean -fdx` without a dry run first. The `-x` flag deletes `.gitign
 
 Using `git push --force` on a shared branch. Any force push to `main` or `develop` rewrites the branch's history on the remote. Anyone who has pulled since your last push now has commits that are no longer in the remote branch. Use `--force-with-lease` and only force push to branches that are exclusively yours.
 
-Thinking that clearing shell history makes a secret safe. If a secret was in your history file and your machine has been accessed by others, or your files are synced to a cloud service, or your shell history was logged somewhere else, the secret is already exposed. Rotating the credential is the only real fix.
+Thinking that clearing shell history makes a secret safe. If a secret was in your history file and your machine has been accessed by others or your files are synced to a cloud service or your shell history was logged somewhere else, the secret is already exposed. Rotating the credential is the only real fix.
 
 Embedding tokens directly in git remote URLs: `git remote set-url origin https://mytoken@github.com/...`. This saves the token to `.git/config` which is a plain text file in the repository directory. Anyone with filesystem access to the repo can read it. Use a credential helper instead.
 
-Forgetting that `git reset --hard` destroys uncommitted work. The reflog records ref changes but not working tree state. If you have files modified but not staged, or staged but not committed, `git reset --hard` removes them permanently. The stash-first habit eliminates this risk entirely.
+Forgetting that `git reset --hard` destroys uncommitted work. The reflog records ref changes but not working tree state. If you have files modified but not staged or staged but not committed, `git reset --hard` removes them permanently. The stash-first habit eliminates this risk entirely.
 
 ---
 
 ## 10. Summary
 
-The terminal has no undo for file deletion and no Recycle Bin for `rm`. The most dangerous Git commands are `git reset --hard` (destroys uncommitted changes), `git clean -fdx` (destroys untracked files including ignored files), `git checkout -- .` and `git restore .` (discard unstaged changes), and `git push --force` (overwrites remote history). Use `--force-with-lease --force-if-includes` instead of bare `--force`.
+The terminal has no undo for file deletion and no Recycle Bin for `rm`. The most dangerous Git commands are `git reset --hard` (destroys uncommitted changes), `git clean -fdx` (destroys untracked files including ignored files), `git checkout -- .` and `git restore .` (discard unstaged changes) and `git push --force` (overwrites remote history). Use `--force-with-lease --force-if-includes` instead of bare `--force`.
 
 The reflog is your primary Git safety net - it records every HEAD movement and lets you recover commits for 30-90 days. It only tracks commits, not uncommitted working tree changes. Stashing before risky operations gives you a reliable recovery point. Dry run flags (`git clean -n`, `git rm --dry-run`) let you preview before destroying.
 
-Shell history records every command you type to a plain text file. API keys and tokens must never appear directly in commands. Use environment variables loaded from `.env` files, leading spaces to skip history, or password manager CLIs. If a secret is committed and pushed, rotate the credential immediately, then rewrite history with `git-filter-repo` or BFG Repo-Cleaner.
+Shell history records every command you type to a plain text file. API keys and tokens must never appear directly in commands. Use environment variables loaded from `.env` files, leading spaces to skip history or password manager CLIs. If a secret is committed and pushed, rotate the credential immediately, then rewrite history with `git-filter-repo` or BFG Repo-Cleaner.
 
 ---
 

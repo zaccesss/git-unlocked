@@ -337,7 +337,7 @@ You should see both `origin` (your fork) and `upstream` (the original).
 git switch -c improvement/YOUR_USERNAME-practice
 ```
 
-**Step 5.** Make a small change - add your name to the HALL_OF_FAME.md if contributing is something you want to do, or simply note what you practised.
+**Step 5.** Make a small change - add your name to the HALL_OF_FAME.md if contributing is something you want to do or simply note what you practised.
 
 **Step 6.** Commit and push to your fork:
 
@@ -392,7 +392,7 @@ If your fork is behind upstream and you start making changes, your pull request 
 
 **Opening a pull request from `main`.**
 
-If you open a pull request from your fork's `main` branch to upstream's `main`, and the PR is rejected or you want to make changes, you have no clean branch to work from. Always use a dedicated feature branch for each contribution.
+If you open a pull request from your fork's `main` branch to upstream's `main` and the PR is rejected or you want to make changes, you have no clean branch to work from. Always use a dedicated feature branch for each contribution.
 
 **Assuming fork gives you upstream write access.**
 

@@ -442,11 +442,11 @@ cd .. && rm -rf worktree-practice
 
 **Trying to check out the same branch in two worktrees.**
 
-Git prevents this. If you need to compare two states of the same branch, use `git stash`, create a temporary branch, or use `git show` to inspect files without checking them out.
+Git prevents this. If you need to compare two states of the same branch, use `git stash`, create a temporary branch or use `git show` to inspect files without checking them out.
 
 **Deleting a worktree directory manually instead of using `git worktree remove`.**
 
-Manually deleting the directory leaves a stale entry in `.git/worktrees/`. Run `git worktree prune` to clean these up, or use `git worktree remove` in the first place.
+Manually deleting the directory leaves a stale entry in `.git/worktrees/`. Run `git worktree prune` to clean these up or use `git worktree remove` in the first place.
 
 **Forgetting that each worktree has its own index.**
 
@@ -458,7 +458,7 @@ Some IDEs treat the two directories as unrelated projects and may not understand
 
 **Not pruning stale worktrees.**
 
-After `git gc` or manual cleanup, old worktree references can accumulate. Run `git worktree prune` periodically to keep things clean, or just let `git gc` handle it.
+After `git gc` or manual cleanup, old worktree references can accumulate. Run `git worktree prune` periodically to keep things clean or just let `git gc` handle it.
 
 ---
 

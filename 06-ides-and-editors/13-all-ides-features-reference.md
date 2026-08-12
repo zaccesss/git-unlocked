@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 15 minutes
 
-This is the quick-reference file for the entire `ides-and-editors/` section. Use it when you need to compare tools at a glance, find which editors support a specific Git feature, or identify the right tool for a specific use case. Every editor and IDE covered in this section appears here.
+This is the quick-reference file for the entire `ides-and-editors/` section. Use it when you need to compare tools at a glance, find which editors support a specific Git feature or identify the right tool for a specific use case. Every editor and IDE covered in this section appears here.
 
 ---
 

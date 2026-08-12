@@ -300,7 +300,7 @@ An extension with read/write access to code can read every repository in your or
 
 ## Building your own extension
 
-If no existing extension does what you need, or if you want to distribute a tool internally across your organisation, you can build your own extension.
+If no existing extension does what you need or if you want to distribute a tool internally across your organisation, you can build your own extension.
 
 ### What you need
 

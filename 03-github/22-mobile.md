@@ -107,7 +107,7 @@ GitHub Mobile is a review and triage tool. It is not a development environment.
 - **Cannot manage organisation billing or security settings** - these require the web
 - **Cannot access the GitHub CLI** - the CLI is a desktop tool
 
-For writing code on mobile, open `github.com` in your mobile browser and go to `github.dev` (press `.` on a repository) for a browser-based VS Code editor, or open a Codespace in the browser.
+For writing code on mobile, open `github.com` in your mobile browser and go to `github.dev` (press `.` on a repository) for a browser-based VS Code editor or open a Codespace in the browser.
 
 ---
 
@@ -115,7 +115,7 @@ For writing code on mobile, open `github.com` in your mobile browser and go to `
 
 🍎 **iOS (iPhone and iPad):**
 
-Search for **GitHub** in the App Store, or go to `apps.apple.com` and search for GitHub. The publisher is **GitHub Inc.** Requires iOS 16.0 or later.
+Search for **GitHub** in the App Store or go to `apps.apple.com` and search for GitHub. The publisher is **GitHub Inc.** Requires iOS 16.0 or later.
 
 🤖 **Android:**
 
@@ -174,7 +174,7 @@ GitHub Mobile has a built-in TOTP (time-based one-time password) authenticator. 
 
 1. Sign in to `github.com` on a desktop browser
 2. Go to **Settings → Password and security → Two-factor authentication**
-3. Click **Edit** next to your current 2FA method, or enable 2FA if not already active
+3. Click **Edit** next to your current 2FA method or enable 2FA if not already active
 4. Select **GitHub Mobile** as your authentication method
 5. Open the GitHub app on your phone
 6. In the app, go to **Profile → Settings → Two-factor authentication**
@@ -223,7 +223,7 @@ Tap and hold a notification for more options including Bookmark.
 
 ## Customising Notification Settings
 
-There are two levels of notification configuration: what GitHub generates, and what the app displays.
+There are two levels of notification configuration: what GitHub generates and what the app displays.
 
 **In the app - push notification settings:**
 
@@ -322,7 +322,7 @@ Tap **Files changed** to see the diff. Files are listed in order. Tap any file t
 1. In the diff view, tap any line number
 2. A comment input box appears anchored to that line
 3. Write your comment - Markdown is supported
-4. Tap **Add single comment** to post it immediately, or **Start review** to batch it with other comments
+4. Tap **Add single comment** to post it immediately or **Start review** to batch it with other comments
 
 **Submitting a review:**
 

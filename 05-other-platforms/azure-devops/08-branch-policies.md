@@ -189,7 +189,7 @@ Enable only "Squash merge". Disable all others. Every PR creates exactly one com
 
 ## Build validation
 
-Build validation runs a pipeline automatically when a PR is created or updated, and uses the pipeline result as a policy requirement.
+Build validation runs a pipeline automatically when a PR is created or updated and uses the pipeline result as a policy requirement.
 
 ### Configuration
 
@@ -328,7 +328,7 @@ This is useful for enforcing consistent standards across many repositories: "all
 
 ## Bypassing policies
 
-Sometimes urgent situations require bypassing policies - a critical hotfix that must deploy immediately, or a repository administrator doing emergency maintenance.
+Sometimes urgent situations require bypassing policies - a critical hotfix that must deploy immediately or a repository administrator doing emergency maintenance.
 
 ### Bypass permissions
 

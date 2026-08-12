@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 25 minutes
 
-Merging is how you bring work from one branch into another. It is the natural conclusion of the branching workflow - you build something on a branch, and when it is ready, you merge it back. Understanding how Git merges, and what happens in each scenario, makes you a much more confident collaborator.
+Merging is how you bring work from one branch into another. It is the natural conclusion of the branching workflow - you build something on a branch and when it is ready, you merge it back. Understanding how Git merges and what happens in each scenario makes you a much more confident collaborator.
 
 ---
 
@@ -77,7 +77,7 @@ git switch target-branch
 git merge source-branch
 ```
 
-Where `target-branch` is where you want the changes to end up, and `source-branch` is where the changes are coming from.
+Where `target-branch` is where you want the changes to end up and `source-branch` is where the changes are coming from.
 
 ---
 
@@ -163,7 +163,7 @@ Git uses three commits to compute the merge:
 - The tip of `feature/login` (`E`)
 - Their common ancestor (`C`)
 
-It compares what changed between `C` and `F`, and between `C` and `E`, and combines both sets of changes. If they touched different files or different parts of the same file, Git handles it automatically. If they touched the same lines, you get a conflict.
+It compares what changed between `C` and `F` and between `C` and `E` and combines both sets of changes. If they touched different files or different parts of the same file, Git handles it automatically. If they touched the same lines, you get a conflict.
 
 The result is a new **merge commit** (`G`) with two parents - `F` and `E`. This is the only type of commit with more than one parent.
 
@@ -236,7 +236,7 @@ When a three-way merge creates a merge commit, Git generates a default message l
 Merge branch 'feature/user-login' into main
 ```
 
-You can customise this message. Either let Git open your editor (by not using `-m`) and edit the default, or provide your own:
+You can customise this message. Either let Git open your editor (by not using `-m`) and edit the default or provide your own:
 
 ```bash
 git merge feature/user-login -m "merge: integrate user authentication feature"
@@ -295,7 +295,7 @@ Open the merge editor: Source Control panel -> click any file showing a conflict
 
 ### JetBrains IDEs
 
-Go to **Git -> Merge** or use the merge from the branch dropdown in the bottom status bar. Conflicts open in a three-panel diff view with Current, Changes and Result columns. Use the arrows to accept changes from either side, or edit the Result column directly.
+Go to **Git -> Merge** or use the merge from the branch dropdown in the bottom status bar. Conflicts open in a three-panel diff view with Current, Changes and Result columns. Use the arrows to accept changes from either side or edit the Result column directly.
 
 ### Visual Studio 2026
 
@@ -400,7 +400,7 @@ git merge feature/contact
 git log --oneline --graph --all
 ```
 
-This time you should see a merge commit with two parents, and the graph shows the branch diverging and merging back together.
+This time you should see a merge commit with two parents and the graph shows the branch diverging and merging back together.
 
 **Step 7.** Clean up branches and repository:
 
@@ -446,7 +446,7 @@ If you reset to undo a merge that has already been pushed, your local branch is 
 
 **Leaving merge conflicts unresolved.**
 
-If you start a merge and Git reports conflicts, you must resolve them before the merge is complete. Files with conflicts contain conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`). Until you resolve those and commit, your repository is in a mid-merge state. Run `git merge --abort` to cancel, or resolve the conflicts and commit. Conflicts are covered fully in [git/08-merge-conflicts.md](08-merge-conflicts.md).
+If you start a merge and Git reports conflicts, you must resolve them before the merge is complete. Files with conflicts contain conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`). Until you resolve those and commit, your repository is in a mid-merge state. Run `git merge --abort` to cancel or resolve the conflicts and commit. Conflicts are covered fully in [git/08-merge-conflicts.md](08-merge-conflicts.md).
 
 **Merging the wrong branch.**
 

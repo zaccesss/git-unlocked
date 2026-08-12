@@ -38,7 +38,7 @@ This file does not declare a winner. It gives you a thorough, factual comparison
 
 Before the detailed comparison, it helps to understand what each platform is fundamentally trying to be.
 
-**GitHub** is the social network of code. It is where open source lives, where developers build reputations, where the largest ecosystem of tooling integrations exists. It is owned by Microsoft (acquired in 2018 for $7.5 billion). GitHub's strategic direction is increasingly AI-first: GitHub Copilot is the most widely adopted AI coding assistant in the industry, and GitHub Actions is the dominant CI/CD platform for open source work. GitHub has over 100 million developers and hosts over 420 million repositories.
+**GitHub** is the social network of code. It is where open source lives, where developers build reputations, where the largest ecosystem of tooling integrations exists. It is owned by Microsoft (acquired in 2018 for $7.5 billion). GitHub's strategic direction is increasingly AI-first: GitHub Copilot is the most widely adopted AI coding assistant in the industry and GitHub Actions is the dominant CI/CD platform for open source work. GitHub has over 100 million developers and hosts over 420 million repositories.
 
 **GitLab** is a self-contained DevSecOps platform. Its philosophy is that a development organisation should not need to stitch together a dozen separate tools to build and ship software. GitLab provides source code management, CI/CD, container registry, security scanning, package registry, project management, incident management and more - all in one product, with one data model, one API and one interface. GitLab is publicly traded (GTLB on NASDAQ) and used by more than 30 million registered users including over 50% of the Fortune 100.
 
@@ -375,7 +375,7 @@ In practice, many organisations use more than one platform. A company might use 
 
 ## Migration between platforms
 
-Switching platforms is possible but not trivial. The Git repository itself is easy to migrate - it is just a Git remote, and `git push` to a new remote is all that is needed to move the code. The difficult parts are:
+Switching platforms is possible but not trivial. The Git repository itself is easy to migrate - it is just a Git remote and `git push` to a new remote is all that is needed to move the code. The difficult parts are:
 
 - **Pull requests and issues** - not transferable automatically. Tools like GitHub's repository import feature, GitLab's importers and third-party migration tools (Babelfish, Monkey-Patch) can help.
 - **CI/CD pipelines** - syntax differs between GitHub Actions, GitLab CI/CD and Bitbucket Pipelines. Pipelines must be rewritten, not just copied.
@@ -385,9 +385,9 @@ Switching platforms is possible but not trivial. The Git repository itself is ea
 
 All three platforms provide import tools for repositories from their competitors:
 
-- GitHub: Import from Bitbucket, GitLab, or any Git URL
-- GitLab: Import from GitHub, Bitbucket (Cloud and Server), and others
-- Bitbucket: Import from GitHub, GitLab, or any Git URL
+- GitHub: Import from Bitbucket, GitLab or any Git URL
+- GitLab: Import from GitHub, Bitbucket (Cloud and Server) and others
+- Bitbucket: Import from GitHub, GitLab or any Git URL
 
 ---
 

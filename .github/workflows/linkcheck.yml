@@ -20,6 +20,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v7
 
+      # forgefed.org and gitea-open-letter.coding.social share an IP and refuse the
+      # TLS handshake for non-browser clients, so lychee's retries never help there
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
@@ -48,6 +50,8 @@ jobs:
             --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
             --exclude 'jvns.ca'
             --exclude 'nova.app'
+            --exclude 'forgefed.org'
+            --exclude 'gitea-open-letter.coding.social'
             --exclude 'file://'
             '**/*.md'
         env:

@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 10 minutes
 
-Quick reference for every tool covered in the `terminal/` section. Use this file when you need to look up an install command, a key binding, a config file path, or find the right tool for a specific task.
+Quick reference for every tool covered in the `terminal/` section. Use this file when you need to look up an install command, a key binding, a config file path or find the right tool for a specific task.
 
 ---
 

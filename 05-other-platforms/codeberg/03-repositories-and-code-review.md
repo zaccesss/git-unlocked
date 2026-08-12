@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 25 minutes
 
-Codeberg repositories and pull requests work identically to Forgejo - the same creation flow, the same pull request interface, the same branch protection model. This file focuses on the Codeberg-specific aspects: importing from GitHub, the Codeberg-specific URLs and clone patterns, and considerations specific to the hosted service. For the complete code review and protected branches reference, see [../forgejo/04-repositories-and-code-review.md](../forgejo/04-repositories-and-code-review.md).
+Codeberg repositories and pull requests work identically to Forgejo - the same creation flow, the same pull request interface, the same branch protection model. This file focuses on the Codeberg-specific aspects: importing from GitHub, the Codeberg-specific URLs and clone patterns and considerations specific to the hosted service. For the complete code review and protected branches reference, see [../forgejo/04-repositories-and-code-review.md](../forgejo/04-repositories-and-code-review.md).
 
 ---
 
@@ -176,7 +176,7 @@ The pull request workflow on Codeberg is identical to Forgejo and very similar t
 
 ### Creating a PR
 
-After pushing a branch, Codeberg shows a banner suggesting you create a PR. Click it, or go to **Pull Requests** > **New Pull Request**.
+After pushing a branch, Codeberg shows a banner suggesting you create a PR. Click it or go to **Pull Requests** > **New Pull Request**.
 
 Fill in:
 
