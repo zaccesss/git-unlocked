@@ -47,6 +47,7 @@ jobs:
             --exclude 'slsa.dev'
             --exclude 'learn.microsoft.com/azure/devops/cli/sign-in-with-pat'
             --exclude 'jvns.ca'
+            --exclude 'nova.app'
             --exclude 'file://'
             '**/*.md'
         env:
