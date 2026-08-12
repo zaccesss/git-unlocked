@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 25 minutes
 
-Merging is how you bring work from one branch into another. It is the natural conclusion of the branching workflow - you build something on a branch and when it is ready, you merge it back. Understanding how Git merges and what happens in each scenario, makes you a much more confident collaborator.
+Merging is how you bring work from one branch into another. It is the natural conclusion of the branching workflow - you build something on a branch and when it is ready, you merge it back. Understanding how Git merges and what happens in each scenario makes you a much more confident collaborator.
 
 ---
 

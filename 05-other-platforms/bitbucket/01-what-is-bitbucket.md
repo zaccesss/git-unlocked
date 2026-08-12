@@ -51,7 +51,7 @@ Atlassian did not kill Bitbucket's independent identity. The brand remained, the
 
 ## Mercurial and the move to Git-only
 
-Bitbucket supported both Git and Mercurial from 2011 onwards. This dual-VCS support was a significant differentiator: GitHub supported only Git and GitLab (when it launched in 2011) was also Git-only. Bitbucket's Mercurial support made it the natural choice for teams who had built their workflows around Mercurial.
+Bitbucket supported both Git and Mercurial from 2011 onwards. This dual-VCS support was a significant differentiator: GitHub supported only Git; GitLab (when it launched in 2011) was also Git-only. Bitbucket's Mercurial support made it the natural choice for teams who had built their workflows around Mercurial.
 
 However, Git's dominance in the industry grew rapidly through the 2010s. Mercurial usage declined steadily, particularly as GitHub's popularity drove more and more tooling to be built Git-first. By the late 2010s, Bitbucket's Mercurial repositories represented a tiny and shrinking fraction of active usage but required ongoing maintenance, documentation and testing.
 
