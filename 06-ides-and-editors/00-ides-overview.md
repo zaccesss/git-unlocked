@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 20 minutes
 
-Every developer needs somewhere to write code, and the editor you choose shapes how you interact with Git every single day. This section maps the full landscape of editors and IDEs available in 2026 - from lightweight terminal tools to fully autonomous AI coding environments - and shows you exactly how Git fits into each one. Whether you are picking your first editor, evaluating the wave of new AI-first tools, or simply trying to understand what your current editor can do with Git, this overview will orient you before you read the individual files.
+Every developer needs somewhere to write code and the editor you choose shapes how you interact with Git every single day. This section maps the full landscape of editors and IDEs available in 2026 - from lightweight terminal tools to fully autonomous AI coding environments - and shows you exactly how Git fits into each one. Whether you are picking your first editor, evaluating the wave of new AI-first tools or simply trying to understand what your current editor can do with Git, this overview will orient you before you read the individual files.
 
 ---
 
@@ -24,12 +24,12 @@ Every developer needs somewhere to write code, and the editor you choose shapes 
 
 ## 1. Why your editor choice matters for Git
 
-Git is a command-line tool at its core. Every operation - staging, committing, branching, merging, rebasing - can be performed in a terminal with nothing but the `git` binary and a keyboard. However, the editor you use every day can make that workflow dramatically easier, more visual, or even partially automated, depending on how deeply it integrates with Git.
+Git is a command-line tool at its core. Every operation - staging, committing, branching, merging, rebasing - can be performed in a terminal with nothing but the `git` binary and a keyboard. However, the editor you use every day can make that workflow dramatically easier, more visual or even partially automated, depending on how deeply it integrates with Git.
 
 A well-integrated editor gives you:
 
 - Visual diff views so you can see exactly what changed before committing
-- Gutter indicators so you know which lines are new, modified, or deleted at a glance
+- Gutter indicators so you know which lines are new, modified or deleted at a glance
 - Inline blame annotations so you can see who wrote every line and when
 - One-click staging, committing and pushing without leaving your editor
 - Merge conflict resolution UIs that make three-way merges readable
@@ -126,7 +126,7 @@ This means two important things. First, everything you learn about Git in the te
 
 ## 7. The integrated terminal as an escape hatch
 
-Every editor covered in this section ships an integrated terminal, and that terminal is your escape hatch for anything the GUI does not support. Some complex operations - interactive rebase with specific flags, worktree management, `git filter-repo`, submodule surgery - are either not available in the GUI or are cleaner to do at the command line.
+Every editor covered in this section ships an integrated terminal and that terminal is your escape hatch for anything the GUI does not support. Some complex operations - interactive rebase with specific flags, worktree management, `git filter-repo`, submodule surgery - are either not available in the GUI or are cleaner to do at the command line.
 
 | Editor | Open terminal | Notes |
 |---|---|---|
@@ -181,7 +181,7 @@ Trusting AI agent Git operations without reviewing them is a specific mistake th
 
 ## 10. Summary
 
-The editor landscape in 2026 spans three generations: classic IDEs and editors with stable Git integrations, AI-assisted editors that add intelligence on top of traditional workflows, and agentic IDEs where AI can drive significant portions of the Git workflow autonomously. VS Code is the most widely used editor and the foundation most agentic IDEs are forked from. JetBrains provides the most complete built-in Git integration. Neovim and Helix serve keyboard-native workflows. GitHub Desktop is the simplest visual Git client. Cursor and Windsurf are the most production-ready agentic options as of April 2026. Zed is a fast, native alternative now available on all three platforms. Sublime Text with GitSavvy is a capable keyboard-driven setup. Emacs with Magit remains the gold standard terminal-based Git porcelain. Every tool in this section runs the same `git` binary underneath, and every one ships an integrated terminal for operations the GUI does not cover. Understanding that the GUI is a UI on top of Git, not a replacement for it, is the foundation for using any of these tools effectively.
+The editor landscape in 2026 spans three generations: classic IDEs and editors with stable Git integrations, AI-assisted editors that add intelligence on top of traditional workflows and agentic IDEs where AI can drive significant portions of the Git workflow autonomously. VS Code is the most widely used editor and the foundation most agentic IDEs are forked from. JetBrains provides the most complete built-in Git integration. Neovim and Helix serve keyboard-native workflows. GitHub Desktop is the simplest visual Git client. Cursor and Windsurf are the most production-ready agentic options as of April 2026. Zed is a fast, native alternative now available on all three platforms. Sublime Text with GitSavvy is a capable keyboard-driven setup. Emacs with Magit remains the gold standard terminal-based Git porcelain. Every tool in this section runs the same `git` binary underneath and every one ships an integrated terminal for operations the GUI does not cover. Understanding that the GUI is a UI on top of Git, not a replacement for it, is the foundation for using any of these tools effectively.
 
 ---
 

@@ -28,7 +28,7 @@ Administering a Gitea instance means managing users, organisations, repositories
 
 ## The admin panel
 
-The admin panel is accessible to users with the Administrator flag on their account. Navigate to it via your avatar > **Site Administration**, or directly at `https://gitea.example.com/-/admin`.
+The admin panel is accessible to users with the Administrator flag on their account. Navigate to it via your avatar > **Site Administration** or directly at `https://gitea.example.com/-/admin`.
 
 ### Admin panel sections
 
@@ -203,7 +203,7 @@ Connect Gitea to an LDAP server for corporate SSO.
 | **Name** | Label for this auth source | `Corporate AD` |
 | **Host** | LDAP server address | `ldap.example.com` |
 | **Port** | LDAP port | `389` (LDAP) or `636` (LDAPS) |
-| **Security protocol** | None, LDAPS, or StartTLS | `STARTTLS` |
+| **Security protocol** | None, LDAPS or StartTLS | `STARTTLS` |
 | **Bind DN** | The account used to search | `cn=gitea-bind,ou=service,dc=example,dc=com` |
 | **Bind password** | Password for the bind account | (your bind account password) |
 | **User search base** | Where to look for users | `ou=users,dc=example,dc=com` |

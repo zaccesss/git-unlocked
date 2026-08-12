@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 25 minutes
 
-fzf is a command-line fuzzy finder. You pipe a list of anything into it, type a few characters and it instantly filters the list to matching items. You select one and press Enter, and fzf returns it for use in another command. For Git, this means fuzzy-searching through branches, commits, stashes, files and command history - turning long-typed names into two-character selections. Combined with git aliases and shell functions, fzf transforms the command-line Git experience.
+fzf is a command-line fuzzy finder. You pipe a list of anything into it, type a few characters and it instantly filters the list to matching items. You select one and press Enter and fzf returns it for use in another command. For Git, this means fuzzy-searching through branches, commits, stashes, files and command history - turning long-typed names into two-character selections. Combined with git aliases and shell functions, fzf transforms the command-line Git experience.
 
 ---
 
@@ -191,7 +191,7 @@ gri() {
 }
 ```
 
-Run `gri`, select the commit just before where you want to start rebasing, and the interactive rebase opens with that as the base.
+Run `gri`, select the commit just before where you want to start rebasing and the interactive rebase opens with that as the base.
 
 ---
 
@@ -249,7 +249,7 @@ fstash() {
 }
 ```
 
-Run `fstash`. Press Enter to view a stash's diff, `Ctrl+D` to see the diff against HEAD, or `Ctrl+B` to create a branch from the stash.
+Run `fstash`. Press Enter to view a stash's diff, `Ctrl+D` to see the diff against HEAD or `Ctrl+B` to create a branch from the stash.
 
 ---
 
@@ -400,7 +400,7 @@ Install forgit using one of the methods in section 8. Run `glo` in a repository 
 
 **Exercise 5 - fuzzy log with hash output**
 
-Add the `fgl` function from section 5 to your shell config. Run it. Select a commit. The hash is printed to stdout. Now use it in a command: `git show $(fgl)`. This runs `fgl`, waits for you to select a commit, and passes its hash to `git show`.
+Add the `fgl` function from section 5 to your shell config. Run it. Select a commit. The hash is printed to stdout. Now use it in a command: `git show $(fgl)`. This runs `fgl`, waits for you to select a commit and passes its hash to `git show`.
 
 ---
 
@@ -420,7 +420,7 @@ Using fzf inside a script or CI environment where there is no interactive termin
 
 ## 12. Summary
 
-fzf is a command-line fuzzy finder that accepts any list on stdin and returns the selected item on stdout, composing cleanly with Git and shell commands. Shell integration adds `Ctrl+R` (history search), `Ctrl+T` (file path paste) and `Alt+C` (fuzzy cd). For Git, fzf powers fuzzy branch checkout, fuzzy commit browsing with diff previews, fuzzy file staging with `-m` multi-select, and fuzzy stash browsing. Write your own functions using `git branch | fzf` and `git log --oneline | fzf` as the pattern, or use ready-made solutions: **forgit** wraps full git commands as shell aliases (`ga`, `glo`, `gd`, `gcb`, `gbd` and more), and **fzf-git.sh** by fzf's author adds `Ctrl+G` key bindings for interactive Git object selection. On Windows, fzf works natively; forgit requires WSL2 or Git Bash.
+fzf is a command-line fuzzy finder that accepts any list on stdin and returns the selected item on stdout, composing cleanly with Git and shell commands. Shell integration adds `Ctrl+R` (history search), `Ctrl+T` (file path paste) and `Alt+C` (fuzzy cd). For Git, fzf powers fuzzy branch checkout, fuzzy commit browsing with diff previews, fuzzy file staging with `-m` multi-select and fuzzy stash browsing. Write your own functions using `git branch | fzf` and `git log --oneline | fzf` as the pattern or use ready-made solutions: **forgit** wraps full git commands as shell aliases (`ga`, `glo`, `gd`, `gcb`, `gbd` and more) and **fzf-git.sh** by fzf's author adds `Ctrl+G` key bindings for interactive Git object selection. On Windows, fzf works natively; forgit requires WSL2 or Git Bash.
 
 ---
 

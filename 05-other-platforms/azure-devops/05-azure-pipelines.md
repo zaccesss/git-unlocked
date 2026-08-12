@@ -66,7 +66,7 @@ steps:
     displayName: 'Say hello'
 ```
 
-This runs whenever a commit is pushed to `main`, using a Microsoft-hosted Ubuntu 24.04 agent, and executes a single shell command.
+This runs whenever a commit is pushed to `main`, using a Microsoft-hosted Ubuntu 24.04 agent and executes a single shell command.
 
 ### Full structure overview
 

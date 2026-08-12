@@ -2,9 +2,9 @@
 
 ## Our Pledge
 
-We as contributors and maintainers of git-unlocked pledge to make participation in this project a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socioeconomic status, nationality, personal appearance, race, caste, colour, religion, or sexual identity and orientation.
+We as contributors and maintainers of git-unlocked pledge to make participation in this project a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socioeconomic status, nationality, personal appearance, race, caste, colour, religion or sexual identity and orientation.
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive and healthy community.
 
 ---
 
@@ -23,7 +23,7 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 **Examples of unacceptable behaviour:**
 
 - The use of sexualised language or imagery and unwelcome sexual attention or advances
-- Trolling, insulting or derogatory comments, and personal or political attacks
+- Trolling, insulting or derogatory comments and personal or political attacks
 - Public or private harassment
 - Publishing others' private information, such as a physical or email address, without their explicit permission
 - Dismissing or belittling questions from beginners
@@ -36,7 +36,7 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 
 Project maintainers are responsible for clarifying and enforcing our standards of acceptable behaviour and will take appropriate and fair corrective action in response to any behaviour that they deem inappropriate, threatening, offensive or harmful.
 
-Project maintainers have the right and responsibility to remove, edit or reject comments, commits, code, issues and other contributions that are not aligned with this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
+Project maintainers have the right and responsibility to remove, edit or reject comments, commits, code, issues and other contributions that are not aligned with this Code of Conduct and will communicate reasons for moderation decisions when appropriate.
 
 ---
 

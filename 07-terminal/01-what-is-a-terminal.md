@@ -14,7 +14,7 @@ Before you can use Git confidently from the command line, you need a clear menta
 4. [What you actually see when you open a terminal](#4-what-you-actually-see-when-you-open-a-terminal)
 5. [Prompt symbols explained](#5-prompt-symbols-explained)
 6. [Terminal emulators on each platform](#6-terminal-emulators-on-each-platform)
-7. [What a CLI is, and how it relates to Git](#7-what-a-cli-is-and-how-it-relates-to-git)
+7. [What a CLI is and how it relates to Git](#7-what-a-cli-is-and-how-it-relates-to-git)
 8. [Try It Yourself](#8-try-it-yourself)
 9. [Common Mistakes](#9-common-mistakes)
 10. [Summary](#10-summary)
@@ -36,7 +36,7 @@ Five words describe overlapping concepts and almost everyone conflates them at s
 
 **Console** - historically the physical keyboard and screen wired directly to a server. On Linux today, a "virtual console" is a full-screen text mode you reach with `Ctrl+Alt+F1` through `Ctrl+Alt+F6`, outside the graphical desktop. On Windows, `conhost.exe` is the legacy Console Host that used to power cmd.exe and PowerShell windows before Windows Terminal existed.
 
-In practice, most developers use "terminal" loosely to mean the whole setup - the window, the shell inside it, and the prompt. That is fine in conversation. When something goes wrong or you need to configure something, it helps to know which layer the problem is in.
+In practice, most developers use "terminal" loosely to mean the whole setup - the window, the shell inside it and the prompt. That is fine in conversation. When something goes wrong or you need to configure something, it helps to know which layer the problem is in.
 
 ---
 
@@ -62,7 +62,7 @@ Any time you open a terminal window and type a command, three layers are involve
 
 **Layer 2 - PTY (pseudo-terminal)**: a kernel abstraction that connects the terminal emulator to the shell. It is a pair of file descriptors - a master side (held by the terminal emulator) and a slave side (used by the shell). The kernel's TTY layer handles line discipline - buffering, `Ctrl+C` for interrupt, `Ctrl+Z` for suspend, backspace processing and echo. You can check what TTY your current session uses with `tty`.
 
-**Layer 3 - Shell**: the process running inside the PTY. It prints the prompt, reads input, parses commands and forks child processes to run programs. When you type `git status`, the shell forks a child process, execs the `git` binary, and waits for it to finish.
+**Layer 3 - Shell**: the process running inside the PTY. It prints the prompt, reads input, parses commands and forks child processes to run programs. When you type `git status`, the shell forks a child process, execs the `git` binary and waits for it to finish.
 
 This three-layer model matters because **each layer has its own configuration**. Terminal emulator settings (font, colours, key bindings) live in the terminal emulator's config file. Shell settings (aliases, PATH, prompt) live in the shell's config file. Git settings live in `.gitconfig`. Problems at one layer look different from problems at another - a broken PATH is a shell problem, a garbled display is a terminal problem, a missing alias is a shell config problem.
 
@@ -114,11 +114,11 @@ The symbols differ purely because each shell's author chose different defaults. 
 
 ## 6. Terminal emulators on each platform
 
-Each platform has its own set of terminal emulators. The key thing to remember: the terminal emulator is just a window. You can use any shell inside any terminal emulator, and switching terminal emulators does not change how Git or your shell works.
+Each platform has its own set of terminal emulators. The key thing to remember: the terminal emulator is just a window. You can use any shell inside any terminal emulator and switching terminal emulators does not change how Git or your shell works.
 
 🪟 **Windows**
 
-**Windows Terminal** is the modern, recommended terminal emulator for Windows. It was open-sourced in May 2019 and has been the **default terminal on Windows 11** since version 22H2. It supports multiple tabs, split panes, GPU-accelerated text rendering, and deep customisation. You can run cmd.exe, PowerShell, WSL (Linux shells), Azure Cloud Shell and SSH sessions all in separate tabs in the same window.
+**Windows Terminal** is the modern, recommended terminal emulator for Windows. It was open-sourced in May 2019 and has been the **default terminal on Windows 11** since version 22H2. It supports multiple tabs, split panes, GPU-accelerated text rendering and deep customisation. You can run cmd.exe, PowerShell, WSL (Linux shells), Azure Cloud Shell and SSH sessions all in separate tabs in the same window.
 
 Windows Terminal is a terminal emulator - it hosts other shells. The shell you use inside it (PowerShell, cmd.exe, bash via WSL) is a separate choice from the terminal itself.
 
@@ -148,7 +148,7 @@ Popular alternatives used by developers: **Alacritty** (GPU-accelerated, minimal
 
 ---
 
-## 7. What a CLI is, and how it relates to Git
+## 7. What a CLI is and how it relates to Git
 
 Git is a CLI tool. It has no graphical interface of its own - everything Git does is accessed by typing commands. `git init`, `git add`, `git commit`, `git push` - these are all CLI commands.
 
@@ -157,7 +157,7 @@ When you type `git status` in your terminal:
 1. Your shell reads `git status`
 2. The shell splits it into a command (`git`) and an argument (`status`)
 3. The shell searches your `$PATH` (the list of directories where programs live) for a program called `git`
-4. It finds `/usr/bin/git` (Linux), `/opt/homebrew/bin/git` (macOS with Homebrew), or `C:\Program Files\Git\cmd\git.exe` (Windows)
+4. It finds `/usr/bin/git` (Linux), `/opt/homebrew/bin/git` (macOS with Homebrew) or `C:\Program Files\Git\cmd\git.exe` (Windows)
 5. The shell runs that program, passing `status` as an argument
 6. Git prints its output to the terminal
 7. The shell prints the prompt again
@@ -218,7 +218,7 @@ Opening cmd.exe on Windows when you meant to open PowerShell or WSL. The three W
 
 ## 10. Summary
 
-A terminal emulator is a graphical application that displays a text window. A shell is a command interpreter that runs inside the terminal and executes programs when you type commands. A CLI is the abstract concept of controlling software by typing text commands. "Command Prompt" means either the text the shell shows before your cursor, or specifically Windows' cmd.exe program. These are different layers that each have their own configuration.
+A terminal emulator is a graphical application that displays a text window. A shell is a command interpreter that runs inside the terminal and executes programs when you type commands. A CLI is the abstract concept of controlling software by typing text commands. "Command Prompt" means either the text the shell shows before your cursor or specifically Windows' cmd.exe program. These are different layers that each have their own configuration.
 
 Prompt symbols are just conventions: `$` for bash/zsh normal user, `#` for root, `%` for some zsh configs, `PS>` for PowerShell, `>` for cmd.exe, `>>>` for the Python REPL. When documentation shows `$ git status`, the `$` is not part of the command.
 

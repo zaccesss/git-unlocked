@@ -33,7 +33,7 @@ This file covers the full picture: the difference between personal and group nam
 
 ## What is a GitLab Project?
 
-In GitHub, a repository is mostly a Git repository with some attached features bolted on: issues, pull requests, Actions, a wiki. The repository is the core object, and everything else orbits it.
+In GitHub, a repository is mostly a Git repository with some attached features bolted on: issues, pull requests, Actions, a wiki. The repository is the core object and everything else orbits it.
 
 In GitLab, a **project** is a richer, more unified object. It bundles everything related to building and shipping software into one place:
 
@@ -172,8 +172,8 @@ Click **Create new (+)** in the top navigation bar → **New group** → **Creat
 Fill in:
 
 - **Group name**: the display name shown in the UI (can contain spaces and special characters)
-- **Group URL**: the slug used in all URLs. Choose this with care - changing it later breaks every existing link to every project in the group, and invalidates any webhooks or integrations pointing to those URLs
-- **Visibility level**: Public (anyone can see the group and its public projects without signing in), Internal (self-managed only - visible to all authenticated users on the instance), or Private (only group members can access anything inside)
+- **Group URL**: the slug used in all URLs. Choose this with care - changing it later breaks every existing link to every project in the group and invalidates any webhooks or integrations pointing to those URLs
+- **Visibility level**: Public (anyone can see the group and its public projects without signing in), Internal (self-managed only - visible to all authenticated users on the instance) or Private (only group members can access anything inside)
 - **Your role**: you are set as Owner automatically
 
 After creation, navigate to **Manage → Members** to invite other users. When you add someone to a group, they immediately gain access to every project inside the group at their assigned role level.
@@ -256,7 +256,7 @@ acme-corp/                           (top-level group)
 In this structure:
 
 - A user added to `acme-corp` with Developer gets Developer access to every project in the entire company
-- A user added to `acme-corp/engineering/backend` with Maintainer gets Maintainer access to all three backend projects only, and inherits their `acme-corp` role everywhere else
+- A user added to `acme-corp/engineering/backend` with Maintainer gets Maintainer access to all three backend projects only and inherits their `acme-corp` role everywhere else
 - CI/CD variables set at `acme-corp` flow down to every project in the entire company
 - CI/CD variables set at `acme-corp/engineering/backend` flow only to the three backend projects
 
@@ -281,7 +281,7 @@ A subgroup's visibility **cannot exceed** its parent group's visibility:
 ### Who can create subgroups
 
 By default, Maintainer and Owner roles can create subgroups. This is configurable per group:
-Group Settings → General → Permissions → **Allowed to create subgroups**: Owners only, or Maintainers and Owners.
+Group Settings → General → Permissions → **Allowed to create subgroups**: Owners only or Maintainers and Owners.
 
 ---
 
@@ -301,7 +301,7 @@ The most common starting point. Configure:
 
 - **Project name**: the display name (can include spaces and special characters)
 - **Project URL**: select the namespace (your personal namespace or any group where you have at least Developer access), then set the project slug - the URL-safe identifier. The slug is automatically generated from the name but you can customise it
-- **Visibility level**: Public, Private, or Internal (self-managed only)
+- **Visibility level**: Public, Private or Internal (self-managed only)
 - **Initialize repository with a README**: creates an initial commit so the repository is not empty. Tick this if starting fresh. Skip it if you are pushing an existing local repository
 - **Default branch name**: defaults to `main`. Configurable at the instance, group or project level
 
@@ -372,12 +372,12 @@ Once a project exists, all its settings live in the left sidebar under **Setting
 
 - Change the project's visibility level (Public/Private)
 - Toggle individual features on or off: Issues, Repository, Merge requests, Forks, CI/CD, Analytics, Wiki, Snippets, Pages, Packages and registries, Security and compliance
-- Set who can access each feature: Only project members, or Everyone with access
+- Set who can access each feature: Only project members or Everyone with access
 
 **Merge request settings** (in General → Merge requests):
 
-- **Default merge method**: merge commit (creates a merge commit every time), squash and merge (combines all commits into one), or fast-forward only (requires a linear history - no merge commits ever)
-- **Squash commits when merging**: options are Do not allow, Allow (user can choose), Encourage (default is on but user can opt out), or Require (always squash)
+- **Default merge method**: merge commit (creates a merge commit every time), squash and merge (combines all commits into one) or fast-forward only (requires a linear history - no merge commits ever)
+- **Squash commits when merging**: options are Do not allow, Allow (user can choose), Encourage (default is on but user can opt out) or Require (always squash)
 - **Merge request approvals**: configure how many approvals are required before a merge is allowed (Premium feature)
 - **Status checks**: require external services to report green before merging
 
@@ -397,7 +397,7 @@ Require a pipeline to succeed: Yes
 
 You can protect by exact name (`main`) or wildcard pattern (`release/*`). Default branch is protected automatically.
 
-**Protected tags**: prevent deletion of tags matching a pattern, or restrict who can create them. Useful for release tags that should not be deleted.
+**Protected tags**: prevent deletion of tags matching a pattern or restrict who can create them. Useful for release tags that should not be deleted.
 
 **Deploy keys**: SSH public keys that grant read-only (or read-write) repository access without being tied to a user account. Used by deployment servers, build systems and any automation that needs to clone the repository. Deploy keys do not consume a licence seat.
 
@@ -666,7 +666,7 @@ GitLab's GitHub importer transfers a GitHub repository to a GitLab project, incl
 
 ### Importing by URL
 
-For any publicly accessible Git repository, or one accessible with credentials:
+For any publicly accessible Git repository or one accessible with credentials:
 
 Create new project → **Import project** → **Repository by URL** → enter the remote URL → optionally provide a username and password/token for private repositories.
 
@@ -680,7 +680,7 @@ Projects can be exported as a compressed archive (`.tar.gz`) and imported to ano
 
 **Import**: Create new project → Import project → GitLab export → upload the archive.
 
-This is useful for migrating projects from a self-managed instance to GitLab.com, or between self-managed instances.
+This is useful for migrating projects from a self-managed instance to GitLab.com or between self-managed instances.
 
 ---
 

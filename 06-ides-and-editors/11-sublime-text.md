@@ -35,7 +35,7 @@ Sublime Text is a proprietary cross-platform code editor known for its speed, th
 
 ## 1. History and background
 
-Sublime Text was created by Jon Skinner, a former Google engineer, and first released in 2008. It introduced the Command Palette, goto-anything (`Ctrl+P` / `Cmd+P`) and multiple selections to a mainstream editor audience. These features were widely imitated - VS Code, Atom and many others adopted them. Sublime Text 2 and 3 dominated the editor market for web developers from roughly 2011 to 2016, when VS Code's momentum began to shift the landscape.
+Sublime Text was created by Jon Skinner, a former Google engineer and first released in 2008. It introduced the Command Palette, goto-anything (`Ctrl+P` / `Cmd+P`) and multiple selections to a mainstream editor audience. These features were widely imitated - VS Code, Atom and many others adopted them. Sublime Text 2 and 3 dominated the editor market for web developers from roughly 2011 to 2016, when VS Code's momentum began to shift the landscape.
 
 Sublime Text is now maintained by Sublime HQ, the company Jon Skinner founded. Sublime Text 4 was released in 2021 with significant performance improvements, multi-line find-and-replace, Apple Silicon support and Tab multi-select. The editor retains a loyal userbase that values its speed and polish.
 
@@ -172,7 +172,7 @@ GitSavvy's staging interface is one of its standout features.
 
 **Hunk-level staging**: press `l` or `=` on a file to expand its inline diff. The diff appears directly in the status buffer below the filename. Move the cursor to any hunk and press `s` to stage only that hunk, `u` to unstage it, `d` to discard it.
 
-**Line-level staging**: select specific lines within a diff using normal Sublime Text selection (click and drag, or `Shift+Arrow`). With lines selected, press `s` to stage only the selected lines. This is equivalent to `git add -p` but entirely visual.
+**Line-level staging**: select specific lines within a diff using normal Sublime Text selection (click and drag or `Shift+Arrow`). With lines selected, press `s` to stage only the selected lines. This is equivalent to `git add -p` but entirely visual.
 
 **The diff view**: the `git: diff` command opens a standalone diff view showing all unstaged changes. In this view:
 
@@ -290,7 +290,7 @@ Run `git: blame` from the Command Palette to open the blame view for the current
 | `[` / `]` | Previous / next commit in the blame |
 | `q` | Close the blame view |
 
-The blame view integrates with Line History: pressing Enter on a blame entry opens that commit's details, and from there you can navigate the full history of how that code evolved.
+The blame view integrates with Line History: pressing Enter on a blame entry opens that commit's details and from there you can navigate the full history of how that code evolved.
 
 ---
 

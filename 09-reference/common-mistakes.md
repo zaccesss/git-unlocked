@@ -596,7 +596,7 @@ git lfs push --all https://dest.example.com/user/repo.git
 
 **GitHub: using classic branch protection instead of Rulesets**
 
-Classic branch protection is legacy. Rulesets stack, apply at the organisation level, cover the fork network and have more controls. Migrate via Settings > Rules > Rulesets > New branch ruleset, or import from existing branch protection.
+Classic branch protection is legacy. Rulesets stack, apply at the organisation level, cover the fork network and have more controls. Migrate via Settings > Rules > Rulesets > New branch ruleset or import from existing branch protection.
 
 **GitLab: `git filter-branch` tutorial for removing secrets**
 

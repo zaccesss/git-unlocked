@@ -47,7 +47,7 @@ Branch permissions are configured at the repository level.
 2. Click **Repository settings** in the left sidebar
 3. Click **Branch permissions** under the Code section
 
-You can also access them from a specific branch: go to **Branches**, click the `...` menu next to a branch, and select **Edit permissions**.
+You can also access them from a specific branch: go to **Branches**, click the `...` menu next to a branch and select **Edit permissions**.
 
 ---
 
@@ -157,7 +157,7 @@ Requires all default reviewers (see below) to have approved, not just any N revi
 
 **Reset approvals on new commits**
 
-Revokes all existing approvals when new commits are pushed to the PR. This prevents the pattern where code is reviewed and approved, more changes are pushed (perhaps to address review comments), and the PR is merged without the new code being reviewed.
+Revokes all existing approvals when new commits are pushed to the PR. This prevents the pattern where code is reviewed and approved, more changes are pushed (perhaps to address review comments) and the PR is merged without the new code being reviewed.
 
 This setting is off by default. Enabling it creates more review work but catches a common source of quality issues.
 
@@ -323,7 +323,7 @@ Branch permissions are set at the repository level. There is no workspace-level 
 
 When multiple restrictions match a branch, they are all applied. There is no single "most specific wins" rule for restrictions - all matching restrictions stack.
 
-Example: If you have a restriction on `*` (all branches) requiring 1 approval, and a restriction on `main` requiring 2 approvals, pushes to `main` must satisfy both: at least 2 approvals (from the `main` restriction) and the conditions from the `*` restriction. In practice, the stricter rule dominates.
+Example: If you have a restriction on `*` (all branches) requiring 1 approval and a restriction on `main` requiring 2 approvals, pushes to `main` must satisfy both: at least 2 approvals (from the `main` restriction) and the conditions from the `*` restriction. In practice, the stricter rule dominates.
 
 ### Administrative bypass
 

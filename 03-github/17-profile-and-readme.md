@@ -137,7 +137,7 @@ GitHub's Markdown renderer supports most Markdown features plus a limited subset
 
 **Step 5.** Click **Create repository**.
 
-**Step 6.** Edit `README.md` - click the pencil icon to edit directly on GitHub, or clone it locally.
+**Step 6.** Edit `README.md` - click the pencil icon to edit directly on GitHub or clone it locally.
 
 **Step 7.** Commit and push. Visit your profile to see the README displayed.
 
@@ -325,7 +325,7 @@ Generates animated, colourful banners to use as headers and footers.
 
 **Shape types:** `wave`, `egg`, `shark`, `slice`, `rect`, `soft`, `rounded`, `cylinder`, `waving`, `transparent`, `venom`
 
-**Colour modes:** `gradient` (random gradient), `random` (random solid), `auto` (changes each time), a hex code, or a custom gradient: `color=0:EEFF00,100:a82da8`
+**Colour modes:** `gradient` (random gradient), `random` (random solid), `auto` (changes each time), a hex code or a custom gradient: `color=0:EEFF00,100:a82da8`
 
 **Animations:** `fadeIn`, `scaleUp`, `blink`, `blinking`, `twinkling`
 
@@ -389,7 +389,7 @@ Generates dynamic achievement trophies ranked from SSS down to C based on your G
 [![Trophies](https://github-profile-trophy.vercel.app/?username=YOUR_USERNAME&theme=onedark&column=-1&row=1&no-frame=true&no-bg=true)](https://github.com/ryo-ma/github-profile-trophy)
 ```
 
-**Trophy types:** Stars, Commits, Followers, Issues, Pull Request, Repositories, Experience (account age), and secret achievements.
+**Trophy types:** Stars, Commits, Followers, Issues, Pull Request, Repositories, Experience (account age) and secret achievements.
 
 **Parameters:**
 - `theme` - `flat`, `onedark`, `dracula`, `nord`, `algolia`, `tokyonight`, `juicyfresh`, `radical` and more
@@ -468,7 +468,7 @@ The most popular visitor counter uses komarev's service:
 ![Profile Views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&color=blue&style=flat-square&label=PROFILE+VIEWS)
 ```
 
-**Colour options:** `blue`, `green`, `red`, `orange`, `purple`, `brightgreen`, `grey`, or a hex code.
+**Colour options:** `blue`, `green`, `red`, `orange`, `purple`, `brightgreen`, `grey` or a hex code.
 
 **Style options:** `flat`, `flat-square`, `plastic`, `for-the-badge`
 

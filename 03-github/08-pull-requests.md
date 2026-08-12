@@ -178,7 +178,7 @@ Use **Development** in the right sidebar to manually link an issue without an au
 
 ## Draft Pull Requests
 
-A draft pull request signals that it is work in progress and not ready for review. CODEOWNERS are not automatically requested on drafts, and many teams configure branch protection to prevent merging draft PRs.
+A draft pull request signals that it is work in progress and not ready for review. CODEOWNERS are not automatically requested on drafts and many teams configure branch protection to prevent merging draft PRs.
 
 **Create a draft:**
 
@@ -239,7 +239,7 @@ Use **Start a review** rather than **Add single comment** for all your comments 
 
 Click **Review changes** (top right of Files changed):
 - Write an overall review summary
-- Choose: **Comment** (general feedback, not approving or blocking), **Approve** (this is good to merge), or **Request changes** (there are issues that must be addressed before merge)
+- Choose: **Comment** (general feedback, not approving or blocking), **Approve** (this is good to merge) or **Request changes** (there are issues that must be addressed before merge)
 - Click **Submit review**
 
 ---
@@ -654,7 +654,7 @@ Bypassing required status checks by merging before they finish or dismissing fai
 
 **Not deleting the branch after merging.**
 
-After a PR is merged, the branch serves no further purpose. Leaving dozens of merged branches makes the repository messy. Enable "Automatically delete head branches" in Settings → General, or delete manually after each merge.
+After a PR is merged, the branch serves no further purpose. Leaving dozens of merged branches makes the repository messy. Enable "Automatically delete head branches" in Settings → General or delete manually after each merge.
 
 **Large pull requests that are impossible to review.**
 

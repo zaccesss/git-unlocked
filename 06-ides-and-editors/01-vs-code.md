@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 35 minutes
 
-Visual Studio Code is the most widely used code editor in the world and the reference point for Git integration across the entire industry. It is free, open-source and maintained by Microsoft, and it ships a Git integration that covers the full daily workflow - staging, committing, branching, merging, diffing and conflict resolution - without a single extension installed. Its extension marketplace then layers on GitLens, GitHub Pull Requests, GitLab Workflow and GitHub Copilot to take that baseline into territory that rivals dedicated Git GUI clients. Every agentic IDE covered in the rest of this section is built on VS Code, which means everything you learn here transfers directly to Cursor, Windsurf, Antigravity and Kiro.
+Visual Studio Code is the most widely used code editor in the world and the reference point for Git integration across the entire industry. It is free, open-source and maintained by Microsoft and it ships a Git integration that covers the full daily workflow - staging, committing, branching, merging, diffing and conflict resolution - without a single extension installed. Its extension marketplace then layers on GitLens, GitHub Pull Requests, GitLab Workflow and GitHub Copilot to take that baseline into territory that rivals dedicated Git GUI clients. Every agentic IDE covered in the rest of this section is built on VS Code, which means everything you learn here transfers directly to Cursor, Windsurf, Antigravity and Kiro.
 
 ---
 
@@ -90,7 +90,7 @@ VS Code requires Git to be installed separately. See [git/02-installing-git.md](
 
 ## 3. The built-in Source Control panel
 
-Open the Source Control panel with `Ctrl+Shift+G` on Windows/Linux or `Cmd+Shift+G` on Mac, or click the branching icon in the Activity Bar on the left. VS Code detects Git repositories automatically when you open a folder that contains a `.git` directory. If the folder is not yet a repository, the panel shows an **Initialize Repository** button.
+Open the Source Control panel with `Ctrl+Shift+G` on Windows/Linux or `Cmd+Shift+G` on Mac or click the branching icon in the Activity Bar on the left. VS Code detects Git repositories automatically when you open a folder that contains a `.git` directory. If the folder is not yet a repository, the panel shows an **Initialize Repository** button.
 
 The panel is divided into sections:
 
@@ -99,21 +99,21 @@ The panel is divided into sections:
 - **Changes** - files with modifications not yet staged
 - **Untracked** - new files that Git is not yet tracking (shown in some configurations)
 
-Each file entry has a one-letter indicator: `M` (modified), `A` (added/staged), `D` (deleted), `U` (untracked), `C` (conflict). Hovering over a file shows action icons: open file, discard changes (unstaged), and stage/unstage. Right-clicking a file gives you the full context menu including **Stage Selected Ranges**, **Open Changes**, **Open File**, **Revert File** and **Copy Relative Path**.
+Each file entry has a one-letter indicator: `M` (modified), `A` (added/staged), `D` (deleted), `U` (untracked), `C` (conflict). Hovering over a file shows action icons: open file, discard changes (unstaged) and stage/unstage. Right-clicking a file gives you the full context menu including **Stage Selected Ranges**, **Open Changes**, **Open File**, **Revert File** and **Copy Relative Path**.
 
-The three-dot menu (`...`) at the top of the panel is the overflow menu. It contains every Git operation that does not have a dedicated button: pull, push, fetch, clone, stash, cherry-pick, rebase, merge and more. If you cannot find a Git operation, look here first, or use the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and type `Git:` to see every available command.
+The three-dot menu (`...`) at the top of the panel is the overflow menu. It contains every Git operation that does not have a dedicated button: pull, push, fetch, clone, stash, cherry-pick, rebase, merge and more. If you cannot find a Git operation, look here first or use the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`) and type `Git:` to see every available command.
 
 ---
 
 ## 4. Staging changes
 
-**Staging a whole file**: click the `+` icon next to the file name in the Changes section, or right-click and select **Stage Changes**.
+**Staging a whole file**: click the `+` icon next to the file name in the Changes section or right-click and select **Stage Changes**.
 
 **Staging a hunk**: click on the file to open the diff editor. Right-click on any hunk (a grouped block of changes) and select **Stage Hunk**. Alternatively, select specific lines in the diff and right-click to choose **Stage Selected Ranges** - this stages only the highlighted lines.
 
-**Staging all changes at once**: click the `+` icon next to the **Changes** heading at the section level, or run `Git: Stage All Changes` from the Command Palette.
+**Staging all changes at once**: click the `+` icon next to the **Changes** heading at the section level or run `Git: Stage All Changes` from the Command Palette.
 
-**Unstaging**: click the `-` icon next to any staged file, or right-click and choose **Unstage Changes**. To unstage everything at once, click the `-` on the **Staged Changes** heading.
+**Unstaging**: click the `-` icon next to any staged file or right-click and choose **Unstage Changes**. To unstage everything at once, click the `-` on the **Staged Changes** heading.
 
 **Discarding changes**: right-click a file in Changes and select **Discard Changes** to revert it to the last committed state. This is equivalent to `git checkout -- <file>`. You can also discard a hunk from inside the diff editor.
 
@@ -146,9 +146,9 @@ Type your commit message in the text box at the top of the Source Control panel 
 
 **Deleting a branch**: right-click a branch in the Branches section of the Source Control panel sidebar and select **Delete Branch**. VS Code will warn you if the branch has unmerged commits.
 
-**Pushing**: click the push icon in the Status Bar (the cloud with an up arrow), or use `Ctrl+Shift+P > Git: Push`. If the branch has no upstream, VS Code offers to publish it to the configured remote.
+**Pushing**: click the push icon in the Status Bar (the cloud with an up arrow) or use `Ctrl+Shift+P > Git: Push`. If the branch has no upstream, VS Code offers to publish it to the configured remote.
 
-**Pulling**: click the pull icon (the cloud with a down arrow), or use `Git: Pull`. The Status Bar shows how many commits are ahead and behind the remote.
+**Pulling**: click the pull icon (the cloud with a down arrow) or use `Git: Pull`. The Status Bar shows how many commits are ahead and behind the remote.
 
 **Fetching**: `Git: Fetch` updates your local remote-tracking branches without merging anything. Use this to see what has changed on the remote before deciding to pull.
 
@@ -160,7 +160,7 @@ Type your commit message in the text box at the top of the Source Control panel 
 
 Clicking on any modified file in the Source Control panel opens the diff editor. By default this is a side-by-side view with the previous version on the left and your changes on the right. Deletions are shown in red, additions in green.
 
-**Switching between unified and side-by-side**: use the toggle button in the top-right corner of the diff editor, or set `"diffEditor.renderSideBySide": false` in your settings.
+**Switching between unified and side-by-side**: use the toggle button in the top-right corner of the diff editor or set `"diffEditor.renderSideBySide": false` in your settings.
 
 **Inline diff in the editor**: without opening the full diff view, VS Code shows coloured gutter indicators (green for added lines, blue for modified, red triangles for deleted). Clicking any indicator opens an inline peek diff with **Stage Hunk**, **Revert Hunk** and navigation arrows.
 
@@ -172,7 +172,7 @@ Clicking on any modified file in the Source Control panel opens the diff editor.
 
 ## 8. The 3-way merge editor
 
-When VS Code encounters a merge conflict, it marks the conflicting files with `!` in the Source Control panel. Opening a conflicting file shows the standard conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`). You can edit these manually, or click **Resolve in Merge Editor** at the top of the file to open the 3-way merge editor.
+When VS Code encounters a merge conflict, it marks the conflicting files with `!` in the Source Control panel. Opening a conflicting file shows the standard conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`). You can edit these manually or click **Resolve in Merge Editor** at the top of the file to open the 3-way merge editor.
 
 The merge editor has three panes:
 
@@ -191,7 +191,7 @@ Once all conflicts are resolved in the Result pane, click **Complete Merge** to 
 
 ## 9. The Source Control Graph
 
-The Source Control Graph is a commit history visualisation built into VS Code. Access it from the Source Control panel by clicking the graph icon, or run `Git: Show Git Graph` from the Command Palette.
+The Source Control Graph is a commit history visualisation built into VS Code. Access it from the Source Control panel by clicking the graph icon or run `Git: Show Git Graph` from the Command Palette.
 
 The graph shows:
 
@@ -199,7 +199,7 @@ The graph shows:
 - Author avatars and commit messages
 - Relationships between commits - merges, rebases and diverging branches are all visible
 
-From the graph you can right-click any commit to: checkout, create a branch from it, cherry-pick it, revert it, reset to it (soft, mixed or hard), copy the commit hash, or view the full diff.
+From the graph you can right-click any commit to: checkout, create a branch from it, cherry-pick it, revert it, reset to it (soft, mixed or hard), copy the commit hash or view the full diff.
 
 **Filtering**: the search box filters commits by message, author or hash. The branch picker in the top bar limits the graph to a specific branch or all branches.
 
@@ -209,7 +209,7 @@ The Source Control Graph was promoted out of experimental in VS Code 1.93 (Augus
 
 ## 10. Inline blame and gutter indicators
 
-**Inline blame** shows the commit author, date and message for the current line at the end of the line in faded text, without opening any separate panel. Enable it with `git.blame.editorDecoration.enabled: true` in settings, or toggle it with `Git: Toggle Inline Blame` from the Command Palette. Hovering over the blame annotation shows a popup with the full commit hash, author email and a **Show Commit** link that opens the diff for that commit.
+**Inline blame** shows the commit author, date and message for the current line at the end of the line in faded text, without opening any separate panel. Enable it with `git.blame.editorDecoration.enabled: true` in settings or toggle it with `Git: Toggle Inline Blame` from the Command Palette. Hovering over the blame annotation shows a popup with the full commit hash, author email and a **Show Commit** link that opens the diff for that commit.
 
 **Gutter indicators** appear in the thin column between the line numbers and the code:
 
@@ -227,7 +227,7 @@ Both features use your local Git history and update in real time as you edit.
 
 The Timeline view shows the complete history of the currently open file. Open it at the bottom of the Explorer panel or via `View > Open View > Timeline`.
 
-Each entry in the Timeline is either a Git commit that touched the file, a local save (if VS Code's autosave creates timeline entries), or an extension event. Clicking a Git entry opens a diff showing exactly what changed in that commit for that specific file. This is equivalent to `git log -p -- <filename>` but with a UI.
+Each entry in the Timeline is either a Git commit that touched the file, a local save (if VS Code's autosave creates timeline entries) or an extension event. Clicking a Git entry opens a diff showing exactly what changed in that commit for that specific file. This is equivalent to `git log -p -- <filename>` but with a UI.
 
 The Timeline is useful for tracking how a specific file evolved over time without leaving the editor, especially when you cannot remember which commit introduced a particular change.
 
@@ -287,7 +287,7 @@ GitLens is the most popular Git extension for VS Code, with over 40 million inst
 
 **Pro features** (requires a GitLens Pro subscription, approximately $10/month):
 
-- **Commit Graph** - a full visual graph of your repository history with branch lanes, filters by author/branch/date, and interactive rebase from the graph
+- **Commit Graph** - a full visual graph of your repository history with branch lanes, filters by author/branch/date and interactive rebase from the graph
 - **Visual File History** - a timeline chart showing the evolution of a file with bubbles sized by the number of changes in each commit
 - **Worktrees** view for managing multiple working trees
 - **Cloud Patches** - sharing work-in-progress diffs with teammates via an encrypted link before committing
@@ -332,7 +332,7 @@ After installing, sign in to GitHub via the Accounts icon in the Activity Bar or
 4. Click a file to open its diff in the diff editor
 5. Hover over any line and click the comment icon to leave an inline comment
 6. Use suggestion blocks to propose specific code changes that the author can accept with one click
-7. Click **Submit Review** to approve, request changes, or leave a comment
+7. Click **Submit Review** to approve, request changes or leave a comment
 8. Click **Merge Pull Request** when the PR is ready
 
 **Working on issues**: the extension also shows GitHub Issues in a sidebar. Click any issue to see its details. Use the **Start Working on Issue** button to automatically create a branch named after the issue (for example `issue-42-fix-login-bug`) and switch to it. The issue number is auto-linked in commit messages and PR descriptions.
@@ -369,7 +369,7 @@ GitHub Copilot became a built-in feature of VS Code in version 1.116 (February 2
 
 - **AI commit messages** - the sparkle icon in the commit message box generates a message from your staged diff. The message uses conventional commit format by default and can be regenerated or edited freely.
 - **Merge conflict resolution** - in the 3-way merge editor, Copilot can suggest how to resolve the conflict in the Result pane. Click the Copilot icon that appears above conflicting regions.
-- **Agent mode** - in the Copilot chat panel, switching to Agent mode lets Copilot run tools: it can read files, run terminal commands (including `git` commands), edit files and iterate until the task is complete. You can ask it to "create a feature branch called feature/login-redesign, implement the changes in src/auth.py, and commit with an appropriate message".
+- **Agent mode** - in the Copilot chat panel, switching to Agent mode lets Copilot run tools: it can read files, run terminal commands (including `git` commands), edit files and iterate until the task is complete. You can ask it to "create a feature branch called feature/login-redesign, implement the changes in src/auth.py and commit with an appropriate message".
 - **PR description generation** - when creating a pull request via the GitHub Pull Requests extension, Copilot can generate the PR title and description from the commits and diffs.
 - **Code review** - `@workspace /review` asks Copilot to review your uncommitted changes and suggest improvements before you commit.
 
@@ -395,7 +395,7 @@ GitLab Duo is available in VS Code through the GitLab Workflow extension. It pro
 
 **Code Suggestions**: similar to Copilot completions - grey ghost text appears as you type, Tab to accept. Duo's suggestions are generated by GitLab's own AI models trained with security and code quality in mind.
 
-**Duo Chat for Git questions**: you can ask Duo questions like "explain this merge conflict", "what changed in the last 5 commits?", or "write a commit message for these staged changes". Duo has access to your local file context via the extension.
+**Duo Chat for Git questions**: you can ask Duo questions like "explain this merge conflict", "what changed in the last 5 commits?" or "write a commit message for these staged changes". Duo has access to your local file context via the extension.
 
 **Limitations compared to Copilot in VS Code**: Duo does not have an agent mode, cannot run terminal commands, cannot create branches or commits autonomously and does not have a PR creation workflow inside the IDE. These capabilities live on the GitLab web platform rather than in the VS Code extension. For developers who want IDE-side agentic Git workflows and use GitLab, the common pattern is to use Copilot for in-IDE AI assistance alongside the GitLab platform for MR and CI/CD workflows.
 

@@ -4,7 +4,7 @@
 
 Every action you take in the Bitbucket web interface can also be performed via the REST API. Creating repositories, managing pull requests, posting build status, triggering pipelines, managing user access - all of it is available programmatically. The Bitbucket REST API v2 is the foundation for custom tooling, automation, third-party integrations and CI/CD systems that interact with Bitbucket programmatically.
 
-This file covers the Bitbucket REST API v2 completely: authentication, common request patterns, webhooks for event-driven integrations, the Atlassian Marketplace for pre-built add-ons, and practical automation examples for real development workflows.
+This file covers the Bitbucket REST API v2 completely: authentication, common request patterns, webhooks for event-driven integrations, the Atlassian Marketplace for pre-built add-ons and practical automation examples for real development workflows.
 
 ---
 
@@ -1176,9 +1176,9 @@ Without verifying the `X-Hub-Signature` header, any actor on the internet who kn
 
 ## Summary
 
-The Bitbucket REST API v2 provides programmatic access to every Bitbucket feature. The base URL is `https://api.bitbucket.org/2.0/`. Authenticate with API tokens (Basic Auth with email and token as password), or OAuth 2.0 for user-facing applications. App passwords are retired from June 2026.
+The Bitbucket REST API v2 provides programmatic access to every Bitbucket feature. The base URL is `https://api.bitbucket.org/2.0/`. Authenticate with API tokens (Basic Auth with email and token as password) or OAuth 2.0 for user-facing applications. App passwords are retired from June 2026.
 
-The API covers repositories (CRUD operations, branches, tags, commits), pull requests (create, merge, approve, comment), commit statuses (post build results from external CI systems), Pipelines (trigger and monitor runs), and workspace management (members, groups, projects).
+The API covers repositories (CRUD operations, branches, tags, commits), pull requests (create, merge, approve, comment), commit statuses (post build results from external CI systems), Pipelines (trigger and monitor runs) and workspace management (members, groups, projects).
 
 Webhooks provide real-time event notifications from Bitbucket to your systems. Subscribe to events (push, PR creation, PR merge, build status changes) and Bitbucket POSTs the event payload to your URL within seconds. Always verify webhook signatures and respond within 10 seconds.
 

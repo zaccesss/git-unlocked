@@ -161,7 +161,7 @@ The **GitHub Octoverse** is GitHub's annual report on developer trends and platf
 
 ### 1. TypeScript became the most-used language on GitHub
 
-TypeScript overtook Python and JavaScript as the number one language on GitHub by monthly contributor count in August 2025, reaching 2,636,006 monthly contributors - a 66.63% increase year on year. The driver is AI tooling: AI coding assistants work significantly better with typed languages, and 94% of LLM-generated compilation errors are type-check failures. Developers are choosing TypeScript specifically because it improves AI-assisted development.
+TypeScript overtook Python and JavaScript as the number one language on GitHub by monthly contributor count in August 2025, reaching 2,636,006 monthly contributors - a 66.63% increase year on year. The driver is AI tooling: AI coding assistants work significantly better with typed languages and 94% of LLM-generated compilation errors are type-check failures. Developers are choosing TypeScript specifically because it improves AI-assisted development.
 
 ### 2. Generative AI became standard in software development
 

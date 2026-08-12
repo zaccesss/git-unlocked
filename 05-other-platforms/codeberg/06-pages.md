@@ -510,7 +510,7 @@ For projects with a build step, use Woodpecker CI to build and push the output t
 
 Custom domains are configured with a `.domains` file in the `pages` branch root. Codeberg automatically provisions Let's Encrypt HTTPS certificates once DNS is configured correctly.
 
-Key limitations: public repositories only for free tier, the branch must be named exactly `pages`, no server-side code or configuration files, and fair use storage limits apply.
+Key limitations: public repositories only for free tier, the branch must be named exactly `pages`, no server-side code or configuration files and fair use storage limits apply.
 
 ---
 

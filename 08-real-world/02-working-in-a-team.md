@@ -160,7 +160,7 @@ DORA (DevOps Research and Assessment) research consistently correlates trunk-bas
 
 ## Commit message conventions
 
-Good commit messages are the single most underrated practice in team Git. They make `git log`, `git blame` and `git bisect` dramatically more useful, and they enable automatic CHANGELOG generation.
+Good commit messages are the single most underrated practice in team Git. They make `git log`, `git blame` and `git bisect` dramatically more useful and they enable automatic CHANGELOG generation.
 
 ### Conventional Commits
 
@@ -212,11 +212,11 @@ Code review is where team Git slows down or speeds up. The research is clear on 
 
 **Keep PRs under 400 lines of diff.** Google's internal standard targets 200 lines. Every study on code review finds that reviewers catch fewer bugs as PR size grows. A reviewer can meaningfully engage with 200 lines in 20 minutes; 1,000 lines gets a rubber stamp.
 
-If a feature requires 2,000 lines of change, split it into a **stacked PR** series: each PR builds on the previous one, and each is independently reviewable.
+If a feature requires 2,000 lines of change, split it into a **stacked PR** series: each PR builds on the previous one and each is independently reviewable.
 
 ### Response time
 
-**Review within one working day.** Unreviewed PRs are the most common source of developer frustration in team Git. They block the author, cause branch drift (requiring rebases), and waste the context the reviewer built up from the PR description. Set a team SLA and hold to it.
+**Review within one working day.** Unreviewed PRs are the most common source of developer frustration in team Git. They block the author, cause branch drift (requiring rebases) and waste the context the reviewer built up from the PR description. Set a team SLA and hold to it.
 
 ### What to look for
 
@@ -426,7 +426,7 @@ This exercise requires a GitHub repository where you have admin access. Create a
 8. Try to push directly to `main`: `git push origin HEAD:main` - observe the rejection.
 9. Open a PR from your branch and observe the required checks and approval requirement.
 
-**Bonus:** Add a `.github/CODEOWNERS` file that assigns yourself as the owner of all files (`* @YOUR_USERNAME`), add the "Require CODEOWNERS review" rule, and observe that you are auto-requested as a reviewer on the PR.
+**Bonus:** Add a `.github/CODEOWNERS` file that assigns yourself as the owner of all files (`* @YOUR_USERNAME`), add the "Require CODEOWNERS review" rule and observe that you are auto-requested as a reviewer on the PR.
 
 ---
 
@@ -439,7 +439,7 @@ Classic rules are being superseded by Rulesets. They cannot stack, cannot apply 
 GitFlow was designed for software that ships versioned releases. If your team deploys to production every day or multiple times per day, GitFlow's release branches create unnecessary overhead and long-running divergence. Use GitHub Flow or trunk-based development instead.
 
 **Long-lived feature branches.**
-The longer a branch lives, the more it diverges from `main`, and the harder the eventual merge. Aim for branches that live hours to a few days, not weeks. If a feature takes weeks, use feature flags to hide incomplete work and merge incrementally.
+The longer a branch lives, the more it diverges from `main` and the harder the eventual merge. Aim for branches that live hours to a few days, not weeks. If a feature takes weeks, use feature flags to hide incomplete work and merge incrementally.
 
 **Not enforcing commit message conventions in CI.**
 Team commit conventions only work if they are enforced automatically. A `commitlint` check in CI or a `commit-msg` hook (via Husky or pre-commit) is the only reliable way to keep a consistent history.
@@ -454,7 +454,7 @@ If you enable the GitHub Merge Queue but forget to add `merge_group:` to your CI
 
 ## Summary
 
-The branching strategy question collapses to a single question: do you deploy continuously from one version, or do you ship versioned releases? Continuous deployment points toward trunk-based development or GitHub Flow; versioned releases point toward GitFlow or GitLab Flow (release branches).
+The branching strategy question collapses to a single question: do you deploy continuously from one version or do you ship versioned releases? Continuous deployment points toward trunk-based development or GitHub Flow; versioned releases point toward GitFlow or GitLab Flow (release branches).
 
 Beyond the branching strategy, three practices define high-performance team Git: small PRs reviewed within one working day, CODEOWNERS to route reviews automatically and Rulesets (not classic branch protection) to enforce the rules. For teams with busy `main` branches, a merge queue eliminates the class of CI failures that happen when two individually-green PRs combine unexpectedly.
 

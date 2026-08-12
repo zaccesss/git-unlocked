@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 35 minutes
 
-This file covers three distinct but related topics: issues and project management (identical to Gitea), the package registry (identical to Gitea), and ActivityPub federation - Forgejo's distinctive feature that does not exist in Gitea. Issues and packages are covered concisely since they match the Gitea behaviour; federation gets the depth it deserves as the feature that sets Forgejo apart.
+This file covers three distinct but related topics: issues and project management (identical to Gitea), the package registry (identical to Gitea) and ActivityPub federation - Forgejo's distinctive feature that does not exist in Gitea. Issues and packages are covered concisely since they match the Gitea behaviour; federation gets the depth it deserves as the feature that sets Forgejo apart.
 
 ---
 
@@ -180,7 +180,7 @@ Organisation projects (visible across all org repositories): Organisation > **Pr
 
 ### Managing boards
 
-- **Add issues**: from the project board > **+ Add existing issues**, or from any issue > **Projects** in sidebar
+- **Add issues**: from the project board > **+ Add existing issues** or from any issue > **Projects** in sidebar
 - **Move cards**: drag and drop between columns
 - **Filter**: by assignee, label or milestone
 - **Archive**: when a project is complete, archive it to hide from the active list

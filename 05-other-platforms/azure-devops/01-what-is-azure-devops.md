@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 25 minutes
 
-Azure DevOps is Microsoft's integrated platform for software development teams. It bundles five services - project management, Git hosting, CI/CD pipelines, package management and quality assurance - into a single product with a unified identity system, shared permissions and consistent tooling. You can use one service, all five, or any combination in between.
+Azure DevOps is Microsoft's integrated platform for software development teams. It bundles five services - project management, Git hosting, CI/CD pipelines, package management and quality assurance - into a single product with a unified identity system, shared permissions and consistent tooling. You can use one service, all five or any combination in between.
 
 Understanding what Azure DevOps is requires understanding where it came from. The product has one of the longest continuous development histories in the industry, evolving through multiple names and paradigms over more than two decades. That history explains why Azure DevOps works the way it does and why certain design decisions look the way they look in 2026.
 
@@ -28,7 +28,7 @@ Understanding what Azure DevOps is requires understanding where it came from. Th
 
 ### Visual SourceSafe (1994-2005)
 
-Microsoft's first version control product was **Visual SourceSafe (VSS)**, acquired from One Tree Software in 1994. VSS was a centralised version control system - developers checked out files, edited them, and checked them back in. Only one person could edit a file at a time without conflicts. VSS had a reputation for database corruption and was widely criticised for poor scalability and reliability, but it was deeply integrated into the Visual Studio ecosystem and widely used despite its problems.
+Microsoft's first version control product was **Visual SourceSafe (VSS)**, acquired from One Tree Software in 1994. VSS was a centralised version control system - developers checked out files, edited them and checked them back in. Only one person could edit a file at a time without conflicts. VSS had a reputation for database corruption and was widely criticised for poor scalability and reliability, but it was deeply integrated into the Visual Studio ecosystem and widely used despite its problems.
 
 ### Team Foundation Server (2005-2018)
 
@@ -49,7 +49,7 @@ Key TFS milestones:
 
 Microsoft launched the cloud-hosted version of TFS in 2012, initially called **Team Foundation Service**, later renamed **Visual Studio Team Services (VSTS)**. VSTS was a hosted SaaS version of TFS, allowing teams to use TFS capabilities without managing their own server infrastructure.
 
-VSTS diverged from on-premises TFS increasingly over time: cloud features arrived in VSTS months before they shipped in TFS, and the velocity of cloud development accelerated. VSTS introduced features like free private Git repositories, a modern CI/CD system, and integration with the growing Azure cloud platform.
+VSTS diverged from on-premises TFS increasingly over time: cloud features arrived in VSTS months before they shipped in TFS and the velocity of cloud development accelerated. VSTS introduced features like free private Git repositories, a modern CI/CD system and integration with the growing Azure cloud platform.
 
 ### Azure DevOps (2018-present)
 

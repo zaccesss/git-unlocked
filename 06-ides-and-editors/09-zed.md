@@ -159,7 +159,7 @@ The commit message box is at the bottom of the Git panel. Type the subject on th
 
 ## 7. AI commit message generation
 
-Zed can generate commit messages using your configured AI model. Click the sparkle icon in the commit message box in the Git panel, or run `git: generate commit message` from the Command Palette.
+Zed can generate commit messages using your configured AI model. Click the sparkle icon in the commit message box in the Git panel or run `git: generate commit message` from the Command Palette.
 
 The generated message is based on the staged diff. You can configure the model used via `agent.commit_message_model` in your Zed settings:
 
@@ -180,7 +180,7 @@ Any model configured in Zed's AI settings (Anthropic, OpenAI, Gemini, local Olla
 
 ## 8. Inline blame
 
-Enable inline blame with `editor: toggle git blame` from the Command Palette, or add to your settings:
+Enable inline blame with `editor: toggle git blame` from the Command Palette or add to your settings:
 
 ```json
 {
@@ -234,7 +234,7 @@ After resolving all conflicts in a file, stage it from the Git panel. Once all c
 
 **Current branch**: shown in the Status Bar at the bottom left. Click it to open the branch switcher.
 
-**Switching branches**: click the branch name in the Status Bar and select from the list, or type to filter. Zed shows local branches with their ahead/behind counts relative to the remote.
+**Switching branches**: click the branch name in the Status Bar and select from the list or type to filter. Zed shows local branches with their ahead/behind counts relative to the remote.
 
 **Creating a branch**: in the branch switcher, type a new branch name and press Enter. Zed creates and checks out the branch.
 
@@ -413,7 +413,7 @@ Forgetting that Windows support is new in 2026 and may have rough edges. Zed's W
 
 ## 19. Summary
 
-Zed is a GPU-accelerated native editor built in Rust by the creators of Atom and Tree-sitter. It runs on Windows, macOS and Linux. Native Git integration launched in March 2025 and covers file-level and hunk-level staging in a novel Diff View where deleted content is navigable like normal text, AI commit message generation using any configured AI provider, inline blame with commit details, gutter indicators, conflict resolution with accept-ours/theirs/both and AI-assisted resolution, push/pull/fetch via the Command Palette, and branch switching via the Status Bar. Zed's multiplayer real-time collaboration automatically adds `Co-Authored-By` trailers for all session participants. Complex operations - interactive rebase, stash management, cherry-pick, full commit graph - require the integrated terminal with `GIT_EDITOR=zed --wait` set. The extension ecosystem has approximately 700 WASM extensions, far fewer than VS Code's 50,000, so advanced Git UI tools like GitLens have no direct equivalent. The free tier includes the full editor and bring-your-own-key AI at no cost. Zed is the best choice for developers who want the fastest graphical editor experience, are comfortable using the terminal for advanced Git operations and do not need the VS Code extension breadth.
+Zed is a GPU-accelerated native editor built in Rust by the creators of Atom and Tree-sitter. It runs on Windows, macOS and Linux. Native Git integration launched in March 2025 and covers file-level and hunk-level staging in a novel Diff View where deleted content is navigable like normal text, AI commit message generation using any configured AI provider, inline blame with commit details, gutter indicators, conflict resolution with accept-ours/theirs/both and AI-assisted resolution, push/pull/fetch via the Command Palette and branch switching via the Status Bar. Zed's multiplayer real-time collaboration automatically adds `Co-Authored-By` trailers for all session participants. Complex operations - interactive rebase, stash management, cherry-pick, full commit graph - require the integrated terminal with `GIT_EDITOR=zed --wait` set. The extension ecosystem has approximately 700 WASM extensions, far fewer than VS Code's 50,000, so advanced Git UI tools like GitLens have no direct equivalent. The free tier includes the full editor and bring-your-own-key AI at no cost. Zed is the best choice for developers who want the fastest graphical editor experience, are comfortable using the terminal for advanced Git operations and do not need the VS Code extension breadth.
 
 ---
 

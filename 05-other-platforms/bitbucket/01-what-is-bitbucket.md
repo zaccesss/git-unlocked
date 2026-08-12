@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 25 minutes
 
-Bitbucket is a Git hosting platform owned by Atlassian. It is the platform that most teams choose when they are already inside the Atlassian ecosystem - when they use Jira for project management, Confluence for documentation and Trello for lightweight planning. No other Git platform integrates with Jira as deeply as Bitbucket does. That integration is not an afterthought or an API connection - it is built into the architecture of how Bitbucket works, and it is the main reason teams choose it over GitHub or GitLab.
+Bitbucket is a Git hosting platform owned by Atlassian. It is the platform that most teams choose when they are already inside the Atlassian ecosystem - when they use Jira for project management, Confluence for documentation and Trello for lightweight planning. No other Git platform integrates with Jira as deeply as Bitbucket does. That integration is not an afterthought or an API connection - it is built into the architecture of how Bitbucket works and it is the main reason teams choose it over GitHub or GitLab.
 
 This file covers where Bitbucket came from, how it has evolved, what it looks like today and what you need to understand before diving into the rest of the folder.
 
@@ -40,7 +40,7 @@ Despite the modest beginnings, Bitbucket attracted a loyal user base among devel
 
 In **September 2010**, Atlassian acquired Bitbucket. At the time, Atlassian was already the dominant player in developer tooling for enterprise teams - Jira was the market-leading issue tracker, Confluence was widely used for internal documentation and the company had built its business on tools that helped software teams coordinate at scale.
 
-The acquisition made strategic sense for Atlassian immediately. They had tools for planning software (Jira), documenting it (Confluence) and communicating about it - but nothing for hosting the actual code. Bitbucket filled that gap. For Bitbucket, the acquisition provided resources, distribution through Atlassian's existing customer base, and integration with the Jira platform that would eventually become its defining feature.
+The acquisition made strategic sense for Atlassian immediately. They had tools for planning software (Jira), documenting it (Confluence) and communicating about it - but nothing for hosting the actual code. Bitbucket filled that gap. For Bitbucket, the acquisition provided resources, distribution through Atlassian's existing customer base and integration with the Jira platform that would eventually become its defining feature.
 
 Atlassian did not kill Bitbucket's independent identity. The brand remained, the product continued to develop and the team grew. What changed was the trajectory: instead of building a GitHub competitor from scratch, Bitbucket became part of an integrated developer toolchain.
 
@@ -51,7 +51,7 @@ Atlassian did not kill Bitbucket's independent identity. The brand remained, the
 
 ## Mercurial and the move to Git-only
 
-Bitbucket supported both Git and Mercurial from 2011 onwards. This dual-VCS support was a significant differentiator: GitHub supported only Git, and GitLab (when it launched in 2011) was also Git-only. Bitbucket's Mercurial support made it the natural choice for teams who had built their workflows around Mercurial.
+Bitbucket supported both Git and Mercurial from 2011 onwards. This dual-VCS support was a significant differentiator: GitHub supported only Git; GitLab (when it launched in 2011) was also Git-only. Bitbucket's Mercurial support made it the natural choice for teams who had built their workflows around Mercurial.
 
 However, Git's dominance in the industry grew rapidly through the 2010s. Mercurial usage declined steadily, particularly as GitHub's popularity drove more and more tooling to be built Git-first. By the late 2010s, Bitbucket's Mercurial repositories represented a tiny and shrinking fraction of active usage but required ongoing maintenance, documentation and testing.
 
@@ -221,8 +221,8 @@ Bitbucket is a weaker choice in a few scenarios:
 A full three-way comparison is in [03-bitbucket-vs-github-vs-gitlab.md](03-bitbucket-vs-github-vs-gitlab.md). But if you need to orient yourself quickly:
 
 - **Choose Bitbucket** if your team uses Jira and wants the deepest possible integration between code and project management.
-- **Choose GitHub** if you work on open source, want the richest AI developer tooling, or need the widest ecosystem of integrations and community.
-- **Choose GitLab** if you want a single platform for code, CI/CD, security scanning and DevSecOps without paying extra for each capability, or if you want to self-host an all-in-one platform.
+- **Choose GitHub** if you work on open source, want the richest AI developer tooling or need the widest ecosystem of integrations and community.
+- **Choose GitLab** if you want a single platform for code, CI/CD, security scanning and DevSecOps without paying extra for each capability or if you want to self-host an all-in-one platform.
 
 ---
 
@@ -240,7 +240,7 @@ Workspaces have their own settings, member lists, access controls and permission
 
 ### Projects
 
-Inside a workspace, **projects** are an optional grouping layer above repositories. A project might group all the backend repositories together, or all the mobile app repositories. This is different from GitHub, where there is no built-in grouping layer between the organisation and individual repositories (GitHub Projects are a different concept - they are Kanban-style boards). In GitLab, the equivalent is groups and subgroups.
+Inside a workspace, **projects** are an optional grouping layer above repositories. A project might group all the backend repositories together or all the mobile app repositories. This is different from GitHub, where there is no built-in grouping layer between the organisation and individual repositories (GitHub Projects are a different concept - they are Kanban-style boards). In GitLab, the equivalent is groups and subgroups.
 
 Projects in Bitbucket are useful for large workspaces where dozens or hundreds of repositories need to be organised. For small teams, they are optional.
 
@@ -276,7 +276,7 @@ You do not need to install anything to complete these exercises - Bitbucket is a
 **Exercise 2 - Explore the workspace**
 
 1. After signing in, you land in your personal workspace
-2. Look at the left sidebar - you will see your avatar, Repos, Projects, and settings icons
+2. Look at the left sidebar - you will see your avatar, Repos, Projects and settings icons
 3. Click "Repos" to see the repositories in your workspace (it will be empty for a new account)
 4. Click your avatar to access workspace settings
 5. Notice the workspace URL: `bitbucket.org/{your-username}`
@@ -318,7 +318,7 @@ The Jira integration is powerful but requires that your Bitbucket workspace is c
 
 **Thinking the free plan has unlimited users**
 
-Bitbucket Cloud's free plan supports up to **5 users per workspace**. GitHub's free plan supports unlimited users (with some feature limitations). If your team has more than 5 people, you need to upgrade to Standard or Premium, or look at alternatives.
+Bitbucket Cloud's free plan supports up to **5 users per workspace**. GitHub's free plan supports unlimited users (with some feature limitations). If your team has more than 5 people, you need to upgrade to Standard or Premium or look at alternatives.
 
 **Expecting wiki and native Issues to work long-term**
 
@@ -328,7 +328,7 @@ Bitbucket is sunsetting native Issues and Wikis in Cloud. If you use these featu
 
 ## Summary
 
-Bitbucket was founded in 2008 by Jesper Nøhr as a Mercurial hosting service and acquired by Atlassian in 2010. Over the following decade it gained Git support (2011), rebranded its self-hosted product from Stash to Bitbucket Server (2015), dropped Mercurial support entirely (2020), and retired the Server product in favour of Data Center (end of life February 2024).
+Bitbucket was founded in 2008 by Jesper Nøhr as a Mercurial hosting service and acquired by Atlassian in 2010. Over the following decade it gained Git support (2011), rebranded its self-hosted product from Stash to Bitbucket Server (2015), dropped Mercurial support entirely (2020) and retired the Server product in favour of Data Center (end of life February 2024).
 
 In 2026, Bitbucket Cloud offers three tiers (Free, Standard at $3.65/user/month, Premium at $7.25/user/month) with an ongoing transition from app passwords to API tokens. Bitbucket Data Center 10.2 is the current LTS self-hosted release, running on Linux with active development continuing.
 
@@ -336,7 +336,7 @@ Bitbucket's strongest selling point is its place inside the Atlassian ecosystem.
 
 Key vocabulary to know: workspaces are the top-level container (like GitHub organisations); projects are an optional grouping layer above repositories; pull requests are the code review mechanism; Pipelines is the CI/CD system; and API tokens are the new way to authenticate programmatically.
 
-Bitbucket is not the right choice for open source projects, teams that do not use Jira, or teams that need the latest AI developer tooling. But for Atlassian-native teams, it provides a cohesive development workflow that is difficult to replicate by stitching together separate tools.
+Bitbucket is not the right choice for open source projects, teams that do not use Jira or teams that need the latest AI developer tooling. But for Atlassian-native teams, it provides a cohesive development workflow that is difficult to replicate by stitching together separate tools.
 
 ---
 

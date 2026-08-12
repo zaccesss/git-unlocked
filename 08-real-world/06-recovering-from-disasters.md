@@ -389,7 +389,7 @@ git push --force --mirror origin
 
 ### BFG Repo-Cleaner: the simpler alternative
 
-**BFG Repo-Cleaner v1.14.0** (requires Java 11+) is faster than filter-repo for two specific tasks: removing files larger than a size limit, and replacing text from a list.
+**BFG Repo-Cleaner v1.14.0** (requires Java 11+) is faster than filter-repo for two specific tasks: removing files larger than a size limit and replacing text from a list.
 
 ```bash
 # Download BFG
@@ -702,9 +702,9 @@ The six most common disasters and their primary recovery tools:
 - **Detached HEAD** - `git switch -c rescue-branch` if you have uncommitted work
 - **Committed secrets** - rotate first, then `git filter-repo` to rewrite history, then force-push, then all collaborators re-clone
 
-For secret detection, use **gitleaks** as a pre-commit hook and in CI, and **TruffleHog** on a weekly schedule for deep scanning with live credential verification. GitHub push protection provides the server-side final gate.
+For secret detection, use **gitleaks** as a pre-commit hook and in CI and **TruffleHog** on a weekly schedule for deep scanning with live credential verification. GitHub push protection provides the server-side final gate.
 
-Always use `git push --force-with-lease` instead of `git push --force`, and always use `git revert` instead of `git reset --hard` on any branch other people have fetched.
+Always use `git push --force-with-lease` instead of `git push --force` and always use `git revert` instead of `git reset --hard` on any branch other people have fetched.
 
 ---
 

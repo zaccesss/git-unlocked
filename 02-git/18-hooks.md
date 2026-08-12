@@ -83,7 +83,7 @@ Receives no arguments. Cannot modify the commit.
 
 Runs before the commit message editor opens, after the default message is created. Can modify the commit message template. Receives the path to the file containing the commit message as an argument.
 
-Used for automatically prepending a ticket number to commit messages, or inserting a template.
+Used for automatically prepending a ticket number to commit messages or inserting a template.
 
 ### commit-msg
 
@@ -99,7 +99,7 @@ Runs after the commit is created. Cannot affect the commit. Used for notificatio
 
 Runs before `git push` sends data to the remote. Receives the remote name and URL. If it exits non-zero, the push is aborted.
 
-Used for running the full test suite before allowing a push, or preventing force pushes to protected branches.
+Used for running the full test suite before allowing a push or preventing force pushes to protected branches.
 
 ### pre-rebase
 
@@ -533,7 +533,7 @@ On Mac and Linux, a hook script that is not executable is silently ignored. Alwa
 
 **Assuming hooks run on all operating systems the same way.**
 
-Bash hooks do not work natively in Windows Command Prompt or PowerShell. Use Git Bash on Windows, or use a cross-platform tool like Husky or pre-commit.
+Bash hooks do not work natively in Windows Command Prompt or PowerShell. Use Git Bash on Windows or use a cross-platform tool like Husky or pre-commit.
 
 **Not documenting hook setup in CONTRIBUTING.md.**
 

@@ -98,7 +98,7 @@ GitHub allows you to upload existing files directly through the web interface wi
 
 **Step 2.** Click **Add file** → **Upload files**.
 
-**Step 3.** Drag and drop files into the upload area, or click **choose your files** to open a file picker. You can upload multiple files at once.
+**Step 3.** Drag and drop files into the upload area or click **choose your files** to open a file picker. You can upload multiple files at once.
 
 **Limits:**
 
@@ -126,7 +126,7 @@ Or click the **trash icon** if it is visible in the file toolbar.
 
 **Delete a folder:**
 
-GitHub does not have a "delete folder" button. Deleting all files within a folder removes the folder automatically (Git does not track empty directories). To delete a folder, delete all its files one by one through the web interface, or use Git locally:
+GitHub does not have a "delete folder" button. Deleting all files within a folder removes the folder automatically (Git does not track empty directories). To delete a folder, delete all its files one by one through the web interface or use Git locally:
 
 ```bash
 git rm -r folder-name/
@@ -148,7 +148,7 @@ Commit directly to the main branch.
 
 The change goes immediately to `main` (or whichever branch you were viewing). No pull request. No review. The change is live immediately.
 
-**Use this when:** You are the sole owner of the repository, working on a personal project, making a trivial documentation fix that needs no review, or on a branch that is already your working branch.
+**Use this when:** You are the sole owner of the repository, working on a personal project, making a trivial documentation fix that needs no review or on a branch that is already your working branch.
 
 ### Option 2: Create a new branch and start a pull request
 
@@ -159,7 +159,7 @@ Branch name: YOUR_USERNAME-patch-1
 
 GitHub creates a new branch, commits your change there and opens the pull request form. You can rename the branch to something more descriptive.
 
-**Use this when:** You are contributing to a shared repository, the branch has protection rules requiring pull requests, you want your change reviewed before it goes live, or you are contributing to someone else's repository (including forked repositories).
+**Use this when:** You are contributing to a shared repository, the branch has protection rules requiring pull requests, you want your change reviewed before it goes live or you are contributing to someone else's repository (including forked repositories).
 
 > [!IMPORTANT]
 > In repositories with branch protection rules on `main`, the "commit directly" option may be greyed out or unavailable. You will always need to use the pull request route.

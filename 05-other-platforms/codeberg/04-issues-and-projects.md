@@ -327,7 +327,7 @@ If users consistently open issues asking "how do I do X?", consider adding a Git
 
 ## Summary
 
-Codeberg issues, labels, milestones and project boards are Forgejo's features, working identically to Forgejo. The focus on Codeberg is the open source contribution workflow: public issues from the community, fork-and-PR contribution model, `good first issue` labelling for onboarding, and CONTRIBUTING.md documentation.
+Codeberg issues, labels, milestones and project boards are Forgejo's features, working identically to Forgejo. The focus on Codeberg is the open source contribution workflow: public issues from the community, fork-and-PR contribution model, `good first issue` labelling for onboarding and CONTRIBUTING.md documentation.
 
 Issue templates for bug reports and feature requests reduce friction and improve issue quality. Organisation-level project boards provide unified tracking across multi-repository projects.
 

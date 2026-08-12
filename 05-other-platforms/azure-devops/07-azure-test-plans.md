@@ -98,7 +98,7 @@ A **test case** is a work item (of type "Test Case") that defines what to test a
 - **Steps**: the detailed procedure with expected results per step
 - **Expected results**: what the tester should observe if the feature works correctly
 - **Priority**: how critical this test is (1-4)
-- **Automation status**: Manual, Planned for automation, or Automated
+- **Automation status**: Manual, Planned for automation or Automated
 - **Links**: to requirements (User Stories, PBIs), bugs and other test cases
 
 ### Creating a test case

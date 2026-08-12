@@ -424,7 +424,7 @@ Repository → Security → Advisories → New draft security advisory.
 Fill in:
 
 - **Title** - brief description
-- **CVE identifier** - leave blank to request one from GitHub, or add an existing CVE
+- **CVE identifier** - leave blank to request one from GitHub or add an existing CVE
 - **Description** - full details of the vulnerability
 - **Affected packages** - which package and versions are affected
 - **Severity** - calculated from CVSS vector or manually set

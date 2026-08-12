@@ -99,7 +99,7 @@ Bisecting: 142 revisions left to test after this (roughly 7 steps)
 [e4f5g6h] update: refactor payment processing
 ```
 
-**Step 4.** Test whether the bug is present at the checked-out commit. Run your application, run a test, or do whatever is needed to determine if the bug exists.
+**Step 4.** Test whether the bug is present at the checked-out commit. Run your application, run a test or do whatever is needed to determine if the bug exists.
 
 **Step 5.** Tell Git the result:
 

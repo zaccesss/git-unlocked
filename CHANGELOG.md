@@ -63,7 +63,7 @@ PATCH - typo fixes, small corrections, link updates
 
 ### Fixed
 
-- Corrected `CITATION.cff`'s licence field and abstract wording from MIT to CC BY-SA 4.0, and two more stale MIT mentions in `FAQ.md` and `00-welcome/README.md` that the original relicense missed
+- Corrected `CITATION.cff`'s licence field and abstract wording from MIT to CC BY-SA 4.0 and two more stale MIT mentions in `FAQ.md` and `00-welcome/README.md` that the original relicense missed
 - Corrected the file count from 217 to 182 in `README.md` and `CITATION.cff`, matching the README's own course-contents table and the actual count on disk
 - Repaired 13 broken internal links across `10-resources/index.md`, `07-terminal/13-all-terminal-tools-reference.md`, `00-welcome/README.md`, `01-introduction/03-setting-up.md`, `02-git/03-how-git-works.md`, `02-git/04-core-concepts.md` and `02-git/09-remote-repos.md`
 - Replaced three dead/stale links in the Gitea section (`try.gitea.io`, `docs.gitea.com/administration`, `docs.gitea.com/api/1.20/`) with working current URLs
@@ -79,7 +79,7 @@ PATCH - typo fixes, small corrections, link updates
 
 ### Updated
 
-- Auto-merge now covers all Dependabot PRs including major bumps (previously only same-major patch/minor bumps merged), gated by the required CI checks, and any PR labelled `automerge`
+- Auto-merge now covers all Dependabot PRs including major bumps (previously only same-major patch/minor bumps merged), gated by the required CI checks and any PR labelled `automerge`
 - Added a `Repo maintenance` workflow to delete merged PR branches the merge could not clean up
 - Added `.gitignore` for macOS `.DS_Store`
 
@@ -90,7 +90,7 @@ PATCH - typo fixes, small corrections, link updates
 - Excluded `oliviac.dev` and the `gitea.com` homepage from linkcheck, which kept timing out from CI runners despite the 30s timeout and retries (the `docs.gitea.com`, `dl.gitea.com` and `blog.gitea.com` subdomains stay checked)
 - Replaced dead GitLab Git cheat sheet PDF (404) with the maintained GitLab Git docs reference in `10-resources/index.md`
 - Raised lychee `--timeout` to 30s and excluded `netflixtechblog.com` from linkcheck to stop intermittent CI timeout failures
-- Excluded `docs.gitlab.com` and `status.atlassian.com` from linkcheck — auth-gated pages return 403 or 405 to automated requests but are valid links
+- Excluded `docs.gitlab.com` and `status.atlassian.com` from linkcheck: auth-gated pages return 403 or 405 to automated requests but are valid links
 - Added 405 to accepted status codes in `linkcheck.yml`
 - Replaced dead `weave.works/technologies/gitops/` link (domain parked) with the OpenGitOps specification repository in `02-git/24-gitops.md`
 

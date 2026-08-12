@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 30 minutes
 
-Every Git command you run reads configuration before doing anything. Knowing how that configuration works - where the files are, which overrides which, what the most useful settings do, and how to scope settings to specific projects or remotes - lets you set Git up once and have it behave exactly the way you want everywhere.
+Every Git command you run reads configuration before doing anything. Knowing how that configuration works - where the files are, which overrides which, what the most useful settings do and how to scope settings to specific projects or remotes - lets you set Git up once and have it behave exactly the way you want everywhere.
 
 ---
 
@@ -34,7 +34,7 @@ Git configuration is layered across three levels. Each level can override settin
 
 The precedence order: **local wins over global, global wins over system**. If `user.email` is set in both global and local, Git uses the local value inside that repository.
 
-There is also a **worktree** level for Git worktrees (advanced, requires `extensions.worktreeConfig=true`), and inline **command-line** overrides with `git -c key=value command` which override everything.
+There is also a **worktree** level for Git worktrees (advanced, requires `extensions.worktreeConfig=true`) and inline **command-line** overrides with `git -c key=value command` which override everything.
 
 Full precedence, lowest to highest:
 
@@ -170,7 +170,7 @@ git -c user.email="temp@example.com" commit -m "message"
 - **Multi-valued keys** appear multiple times: `remote.origin.fetch = +refs/heads/*:refs/remotes/origin/*`
 - **Comments** start with `#` or `;`
 
-Values can reference other values with `%(key)` notation, and the special value `~/` expands to the home directory. Variables set with `git config` write values without quotes; the `=` is required.
+Values can reference other values with `%(key)` notation and the special value `~/` expands to the home directory. Variables set with `git config` write values without quotes; the `=` is required.
 
 ---
 
@@ -325,7 +325,7 @@ On large repositories, `git status` can take several seconds because Git has to 
     allowedSignersFile = ~/.config/git/allowed_signers
 ```
 
-SSH commit signing (Git 2.34+, November 2021) is simpler to set up than GPG. Generate an SSH key (`ssh-keygen -t ed25519`), add the public key to GitHub's signing keys (separate from authentication keys), and set `user.signingkey`:
+SSH commit signing (Git 2.34+, November 2021) is simpler to set up than GPG. Generate an SSH key (`ssh-keygen -t ed25519`), add the public key to GitHub's signing keys (separate from authentication keys) and set `user.signingkey`:
 
 ```ini
 [user]
@@ -377,7 +377,7 @@ Conditional includes let you automatically load different config files depending
 - Without trailing slash: exact match only
 - `gitdir/i:~/Work/` - case-insensitive match (useful on macOS/Windows)
 
-When you clone a repository into `~/work/myproject` and commit, Git sees that `.git` is inside `~/work/`, matches the `includeIf`, loads `~/.gitconfig-work`, and uses your work email automatically. No manual switching needed.
+When you clone a repository into `~/work/myproject` and commit, Git sees that `.git` is inside `~/work/`, matches the `includeIf`, loads `~/.gitconfig-work` and uses your work email automatically. No manual switching needed.
 
 > [!IMPORTANT]
 > `hasconfig:remote.*.url:` conditions (Git 2.36+) cannot reference remote URLs themselves. These conditions work by reading the local `.git/config` of the repository you are in - which means the repo must already have been cloned. They cannot be used to set the credentials needed to clone in the first place.
@@ -567,7 +567,7 @@ Putting `GIT_EDITOR` in `~/.bashrc` instead of `core.editor` in `~/.gitconfig`. 
 
 Git configuration has three levels - system, global and local - with local overriding global and global overriding system. Global config lives in `~/.gitconfig`, local config in `.git/config`. `git config --list --show-origin` shows every setting and which file it came from.
 
-The most impactful settings to configure: `push.autoSetupRemote = true` eliminates the `-u` flag on first push (Git 2.37+), `merge.conflictStyle = zdiff3` makes conflict markers much easier to read (Git 2.35+), `rebase.updateRefs = true` keeps stacked branches in sync (Git 2.38+), `core.fsmonitor = true` makes `git status` near-instantaneous on large repositories (Git 2.37+), `branch.sort = -committerdate` shows your most recent branches first, and `diff.algorithm = histogram` produces cleaner diffs.
+The most impactful settings to configure: `push.autoSetupRemote = true` eliminates the `-u` flag on first push (Git 2.37+), `merge.conflictStyle = zdiff3` makes conflict markers much easier to read (Git 2.35+), `rebase.updateRefs = true` keeps stacked branches in sync (Git 2.38+), `core.fsmonitor = true` makes `git status` near-instantaneous on large repositories (Git 2.37+), `branch.sort = -committerdate` shows your most recent branches first and `diff.algorithm = histogram` produces cleaner diffs.
 
 Conditional includes (`[includeIf "gitdir:~/work/"]`) automatically load different config files based on which repository you are in - the clean solution for separate work and personal email addresses on the same machine.
 

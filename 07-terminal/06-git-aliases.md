@@ -438,7 +438,7 @@ Shell aliases with quoting errors. The value of a git alias is a string that get
 
 Forgetting that git aliases do not support tab completion by default for custom argument names. If you type `git sw <tab>` you get branch completions because `git switch` has completion defined. But a custom alias `git myswitch <tab>` will not get completions unless you write a shell completion function for it. For frequently used aliases, adding completion is worth the effort.
 
-Syncing the `.gitconfig` that contains work credentials to a public dotfiles repository. If your `~/.gitconfig` contains `user.email = you@company.com` or a signing key path, and you push it to a public GitHub repo, you have exposed that information. Use `[include]` with a `~/.gitconfig-local` file for anything machine-specific or sensitive, and only commit the shared file.
+Syncing the `.gitconfig` that contains work credentials to a public dotfiles repository. If your `~/.gitconfig` contains `user.email = you@company.com` or a signing key path and you push it to a public GitHub repo, you have exposed that information. Use `[include]` with a `~/.gitconfig-local` file for anything machine-specific or sensitive and only commit the shared file.
 
 ---
 
@@ -446,7 +446,7 @@ Syncing the `.gitconfig` that contains work credentials to a public dotfiles rep
 
 Git aliases live in the `[alias]` section of `~/.gitconfig`. A simple alias replaces a long command with a short one: `git config --global alias.st "status --short --branch"` makes `git st` work. Aliases starting with `!` run as shell commands and can use full shell scripting including `$1` positional arguments and functions.
 
-The most useful aliases to add immediately: `lg` for a colour-coded graphical log, `pf` for a safe force push, `amend` for quick message-free amends, `undo` for reversing a commit without losing changes, `wip` for saving in-progress work, and `cleanup`/`tidy` for removing stale branches.
+The most useful aliases to add immediately: `lg` for a colour-coded graphical log, `pf` for a safe force push, `amend` for quick message-free amends, `undo` for reversing a commit without losing changes, `wip` for saving in-progress work and `cleanup`/`tidy` for removing stale branches.
 
 Keep aliases in a dotfiles repository for easy deployment across machines. Use `[include]` with a local config file for machine-specific settings you do not want in a shared repo. Shell aliases (in `~/.zshrc`) are good for the highest-frequency two-character shortcuts; git aliases are better for complex workflows that need to work in IDEs and multiple shells.
 

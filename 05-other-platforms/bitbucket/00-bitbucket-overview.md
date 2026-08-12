@@ -45,7 +45,7 @@ Bitbucket shares most Git concepts with GitHub and GitLab but organises things d
 | Branch protection rule | Branch restriction / branch permission |
 | Required reviewers | Default reviewers |
 | CODEOWNERS | Default reviewers (similar concept) |
-| GitHub Pages / GitLab Pages | No equivalent (use Netlify, Cloudflare Pages, or similar) |
+| GitHub Pages / GitLab Pages | No equivalent (use Netlify, Cloudflare Pages or similar) |
 | GitHub Copilot / GitLab Duo | Rovo Dev (Atlassian Intelligence) |
 
 > [!NOTE]

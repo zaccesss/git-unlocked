@@ -337,7 +337,7 @@ Webhooks deliver event payloads to your endpoints when actions occur in Forgejo.
 
 **Via UI:**
 1. Repository **Settings** > **Webhooks** > **Add Webhook** > **Gitea** (native format, works for Forgejo)
-2. Set the payload URL, content type (`application/json`), and optional secret
+2. Set the payload URL, content type (`application/json`) and optional secret
 3. Choose events to trigger on
 4. Click **Add Webhook**
 

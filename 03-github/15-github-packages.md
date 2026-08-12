@@ -158,7 +158,7 @@ pip install twine
 python -m twine upload --repository-url https://upload.pypi.org/legacy/ dist/*
 ```
 
-For GitHub Packages, use the GitHub npm registry for JavaScript and the Container registry for Python wheel distributions, or publish to PyPI directly.
+For GitHub Packages, use the GitHub npm registry for JavaScript and the Container registry for Python wheel distributions or publish to PyPI directly.
 
 ---
 

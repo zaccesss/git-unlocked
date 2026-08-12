@@ -163,7 +163,7 @@ Click **Create project**.
 
 **Organisation**: Which organisation this token grants access to. Select **All accessible organisations** for cross-organisation use.
 
-**Expiration**: 30, 90, 180 or 365 days, or a custom date. Always set an expiry.
+**Expiration**: 30, 90, 180 or 365 days or a custom date. Always set an expiry.
 
 **Scopes**: Always use the minimum required:
 

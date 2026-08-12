@@ -275,7 +275,7 @@ Available on **Ultimate tier**. General availability reached in GitLab **17.5**.
 1. Admin > Settings > Security and Compliance > enable "Allow secret push protection"
 2. Per project: Secure > Security configuration > toggle "Secret push protection"
 
-**Bypass:** include `[skip secret push protection]` in a commit message, or use `git push -o secret_detection.skip_all`. All bypasses are audited.
+**Bypass:** include `[skip secret push protection]` in a commit message or use `git push -o secret_detection.skip_all`. All bypasses are audited.
 
 **Limits to know:** skipped if a push is over 3,150 paths or over 350,000 lines; files over 1 MiB and binaries are skipped; initial repository pushes are skipped.
 

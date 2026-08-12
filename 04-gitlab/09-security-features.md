@@ -34,7 +34,7 @@ This file covers every security scanning capability GitLab offers: what each sca
 
 ## Security Scanning Overview
 
-GitLab's security scanning works by running specialised jobs inside your existing CI/CD pipeline. You include a template in your `.gitlab-ci.yml`, GitLab runs the scanner as a standard pipeline job, and the results are uploaded as a structured artifact. GitLab then parses that artifact and surfaces findings in:
+GitLab's security scanning works by running specialised jobs inside your existing CI/CD pipeline. You include a template in your `.gitlab-ci.yml`, GitLab runs the scanner as a standard pipeline job and the results are uploaded as a structured artifact. GitLab then parses that artifact and surfaces findings in:
 
 - **The merge request security widget**: a panel in the MR that shows new vulnerabilities introduced by this branch compared to the target branch
 - **The pipeline security tab**: all findings for the entire pipeline run
@@ -752,7 +752,7 @@ This database powers GitLab's dependency scanning and is kept continuously updat
 
 **Key takeaway**: for public repositories, GitHub's security feature access is comparable to GitLab's Free tier. For private repositories requiring comprehensive security scanning, GitHub Advanced Security at $49/committer/month adds up quickly. GitLab Ultimate includes DAST and fuzz testing that GitHub does not offer at any price.
 
-A team of 20 paying for GitHub Team + GitHub Advanced Security pays approximately $1,340/month. GitLab Ultimate for the same team is approximately $1,980/month. The gap is smaller than headline prices suggest, and GitLab includes features GitHub does not have at any price.
+A team of 20 paying for GitHub Team + GitHub Advanced Security pays approximately $1,340/month. GitLab Ultimate for the same team is approximately $1,980/month. The gap is smaller than headline prices suggest and GitLab includes features GitHub does not have at any price.
 
 ---
 

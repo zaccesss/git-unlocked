@@ -176,7 +176,7 @@ TOTP generates a new 6-digit code every 30 seconds. You enter this code alongsid
 
 1. Avatar → Edit profile → Access → Password and authentication
 2. Under **Two-factor authentication**, click **Enable two-factor authentication**
-3. Open your authenticator app and scan the QR code, or manually enter the key shown below it
+3. Open your authenticator app and scan the QR code or manually enter the key shown below it
 4. Enter the 6-digit code currently shown in your app to confirm it is set up correctly
 5. Click **Register with two-factor app**
 
@@ -189,7 +189,7 @@ GitLab immediately shows your **recovery codes** - 10 one-time-use codes for eme
 
 Hardware keys (such as YubiKey, Google Titan Key or Feitian) provide the strongest 2FA. They require physical possession of the key to sign in.
 
-**Setup steps (requires TOTP first, or since GitLab 17.6, can be standalone):**
+**Setup steps (requires TOTP first or since GitLab 17.6, can be standalone):**
 
 1. Avatar → Edit profile → Access → Password and authentication
 2. Scroll to **WebAuthn devices** section
@@ -375,7 +375,7 @@ When you clone a repository, GitLab gives you two URL options:
 - **SSH**: `git@gitlab.com:namespace/project.git` - uses your SSH key, no password prompts after setup
 - **HTTPS**: `https://gitlab.com/namespace/project.git` - requires a personal access token or password (password-based authentication for Git was removed in 2021)
 
-SSH is recommended for regular use. HTTPS is simpler for one-off clones on a machine you do not own, or in environments where SSH is blocked.
+SSH is recommended for regular use. HTTPS is simpler for one-off clones on a machine you do not own or in environments where SSH is blocked.
 
 ### Supported key types
 
@@ -466,7 +466,7 @@ Every unique user who has access to any project or subgroup within a private top
 
 **Example**: you create a group called `my-team`. Under it you create three projects. You add four team members to various projects. Even if no single project has more than five members, the total unique members across the group is what counts.
 
-When a private group exceeds five unique members, GitLab puts the **entire namespace into read-only mode**. No new code can be pushed, no issues can be created, nothing can be changed. To resolve it you must either: reduce the member count back to five, or upgrade to a paid plan.
+When a private group exceeds five unique members, GitLab puts the **entire namespace into read-only mode**. No new code can be pushed, no issues can be created, nothing can be changed. To resolve it you must either: reduce the member count back to five or upgrade to a paid plan.
 
 **Exemptions to the five-user limit:**
 

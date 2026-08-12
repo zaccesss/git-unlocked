@@ -497,7 +497,7 @@ Check the file in Forgejo - it shows as an LFS pointer.
 
 **Creating a repository with a README when pushing an existing project**
 
-An initialised repository has a commit that diverges from your local history. Push will be rejected. Either initialise empty, or fetch and merge the remote README before pushing your local commits.
+An initialised repository has a commit that diverges from your local history. Push will be rejected. Either initialise empty or fetch and merge the remote README before pushing your local commits.
 
 **Not committing .gitattributes after `git lfs track`**
 

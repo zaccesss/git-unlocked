@@ -394,7 +394,7 @@ Once HTTPS is enforced, HTTP requests redirect automatically to HTTPS. The **Enf
 If your site exceeds the bandwidth soft limit, GitHub contacts you rather than taking your site offline immediately.
 
 > [!TIP]
-> For sites with large media files (images, videos), host those files elsewhere (a CDN, GitHub Releases, or a dedicated media host) and reference them by URL. This keeps your repository small and fast to deploy.
+> For sites with large media files (images, videos), host those files elsewhere (a CDN, GitHub Releases or a dedicated media host) and reference them by URL. This keeps your repository small and fast to deploy.
 
 ---
 

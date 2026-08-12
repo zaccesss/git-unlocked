@@ -342,7 +342,7 @@ While you clean history, make the repository private to prevent further exposure
 
 ### Step 3 - Notify affected parties if necessary
 
-If the secret gave access to user data or a production system, and there is evidence or reason to believe it was accessed, follow your incident response process. In some jurisdictions, data breaches must be reported to regulators.
+If the secret gave access to user data or a production system and there is evidence or reason to believe it was accessed, follow your incident response process. In some jurisdictions, data breaches must be reported to regulators.
 
 ---
 
@@ -897,7 +897,7 @@ rm test_secret.py
 
 **Committing `node_modules/`, `__pycache__/` or `.venv/`.** These directories are often hundreds of megabytes, can contain executable code and should never be committed. They are fully reproducible from `package.json`/`package-lock.json` or `requirements.txt`/`Pipfile.lock`. If they are already committed, use `git rm -r --cached node_modules/` to untrack them.
 
-**Not adding `.gitignore` before creating `.env`.** If you create `.env` before adding it to `.gitignore`, and then run `git add .`, you may accidentally stage it. Always set up `.gitignore` first.
+**Not adding `.gitignore` before creating `.env`.** If you create `.env` before adding it to `.gitignore` and then run `git add .`, you may accidentally stage it. Always set up `.gitignore` first.
 
 **Using `git commit --no-verify` to bypass pre-commit hooks.** Pre-commit hooks exist to protect you. Bypassing them because they are "annoying" defeats their purpose. Fix the false positive properly instead.
 

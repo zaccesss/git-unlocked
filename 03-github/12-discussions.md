@@ -279,7 +279,7 @@ Once a discussion has reached a conclusion and there is a clear action to take, 
 
 Open the discussion → three-dot menu at the top of the post → **Create issue from discussion**.
 
-GitHub creates a new issue with the discussion's title and body, and adds a comment to the discussion linking to the new issue.
+GitHub creates a new issue with the discussion's title and body and adds a comment to the discussion linking to the new issue.
 
 **The discussion remains open** after conversion - the conversation can continue while the work is tracked in the issue.
 
@@ -349,7 +349,7 @@ Open discussion → three-dot menu → **Lock conversation** → select reason.
 
 **Closing discussions:**
 
-Discussions can be closed without deleting them. Closed discussions remain visible but show as resolved. Use for Q&A discussions once an answer is marked, or for polls once voting is complete.
+Discussions can be closed without deleting them. Closed discussions remain visible but show as resolved. Use for Q&A discussions once an answer is marked or for polls once voting is complete.
 
 **Transferring discussions:**
 

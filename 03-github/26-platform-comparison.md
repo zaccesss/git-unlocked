@@ -111,12 +111,12 @@ GitHub is available on six surfaces: the web browser, GitHub Desktop, the mobile
 
 **What it is:** A graphical desktop application for Git operations. It provides a visual interface for staging changes, committing, branching, pushing and pulling - replacing the terminal for all Git commands.
 
-**Best for:** Beginners learning Git who are not yet comfortable with the terminal, or developers who prefer a visual workflow for day-to-day Git operations.
+**Best for:** Beginners learning Git who are not yet comfortable with the terminal or developers who prefer a visual workflow for day-to-day Git operations.
 
 **What it does particularly well:**
 
 - **Visual diff view:** See exactly what changed in each file with a side-by-side or unified diff, colour-coded additions and deletions
-- **Partial staging:** Stage specific files, or specific lines within a file - without using `git add -p` in the terminal
+- **Partial staging:** Stage specific files or specific lines within a file - without using `git add -p` in the terminal
 - **Commit history graph:** Visual branch and merge history showing how branches relate
 - **Merge conflict resolution:** Side-by-side visual conflict resolver - choose which version to keep per conflict marker
 - **One-click pull requests:** Opens a pre-filled PR form in the browser from the Desktop app
@@ -143,7 +143,7 @@ After installation:
 1. Open GitHub Desktop
 2. Click **Sign in to GitHub.com**
 3. Complete the browser authentication
-4. Choose **Clone a repository** and select from your GitHub repositories, or add an existing local repository
+4. Choose **Clone a repository** and select from your GitHub repositories or add an existing local repository
 
 **Workflow in GitHub Desktop:**
 
@@ -193,7 +193,7 @@ Covered in full: `22-mobile.md`
 
 **What it is:** `gh`, the official command-line tool for the GitHub API layer. It manages PRs, issues, Actions, releases and more - without leaving the terminal.
 
-**Best for:** Developers who work primarily in the terminal and want to manage GitHub without opening a browser, and for scripting and automation.
+**Best for:** Developers who work primarily in the terminal and want to manage GitHub without opening a browser and for scripting and automation.
 
 **What it does that no other surface does:**
 

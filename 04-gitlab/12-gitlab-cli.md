@@ -4,7 +4,7 @@
 
 `glab` is the official GitLab command-line interface. It lets you manage everything in GitLab - repositories, merge requests, issues, CI/CD pipelines, variables, runners, releases and more - without leaving your terminal. If you are already comfortable with Git on the command line, `glab` extends that workflow to GitLab platform operations: creating MRs, checking pipeline status, viewing live job logs, setting CI/CD variables and triggering deployments all happen through the same terminal you use for `git push`.
 
-This file covers installation on all three operating systems, authentication with both GitLab.com and self-managed instances, every major command group with real examples, the AI integration via `glab duo`, and how `glab` compares to GitHub's `gh` CLI.
+This file covers installation on all three operating systems, authentication with both GitLab.com and self-managed instances, every major command group with real examples, the AI integration via `glab duo` and how `glab` compares to GitHub's `gh` CLI.
 
 ---
 
@@ -980,7 +980,7 @@ glab api POST /projects/:id/issues \
 ## Summary
 
 - `glab` is GitLab's official MIT-licensed CLI, written in Go, supporting GitLab.com and all self-managed instances
-- Install with `brew install glab` (Mac/Linux), `winget install glab` (Windows), or package managers on any Linux distro
+- Install with `brew install glab` (Mac/Linux), `winget install glab` (Windows) or package managers on any Linux distro
 - Authenticate with `glab auth login` - supports OAuth browser flow and personal access tokens
 - Multiple instances can be authenticated simultaneously; `glab` auto-detects the right one from the repository's remote URL
 - **`glab mr`**: create (`--fill` for quick creation), list, view, approve, checkout, merge, rebase, update - full MR lifecycle from the terminal

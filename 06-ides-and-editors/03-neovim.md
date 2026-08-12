@@ -2,7 +2,7 @@
 
 **Difficulty:** 🔴 Advanced | **Time:** 40 minutes
 
-Neovim is a terminal-based editor that extends Vim with a Lua scripting API, built-in LSP client, tree-sitter integration and an active plugin ecosystem. It has no built-in Git UI, but its plugin ecosystem provides the most keyboard-efficient Git workflow available in any editor. The standard stack in 2026 combines four plugins: vim-fugitive for full Git command access, gitsigns.nvim for inline diff indicators and hunk operations, neogit for a Magit-style porcelain, and diffview.nvim for dedicated diff and merge views. This file covers how to install and configure that stack and how to use it for the full daily Git workflow. It also covers Vim (classic), which shares vim-fugitive but not the Neovim-specific plugins.
+Neovim is a terminal-based editor that extends Vim with a Lua scripting API, built-in LSP client, tree-sitter integration and an active plugin ecosystem. It has no built-in Git UI, but its plugin ecosystem provides the most keyboard-efficient Git workflow available in any editor. The standard stack in 2026 combines four plugins: vim-fugitive for full Git command access, gitsigns.nvim for inline diff indicators and hunk operations, neogit for a Magit-style porcelain and diffview.nvim for dedicated diff and merge views. This file covers how to install and configure that stack and how to use it for the full daily Git workflow. It also covers Vim (classic), which shares vim-fugitive but not the Neovim-specific plugins.
 
 ---
 
@@ -384,7 +384,7 @@ return {
 }
 ```
 
-**The diff view**: `:DiffviewOpen` opens a split showing all changed files in the working tree on the left and their diffs on the right. `:DiffviewOpen HEAD~3` shows the diff between HEAD and HEAD~3. `:DiffviewOpen main...feature` shows the diff between the common ancestor of main and feature, and the tip of feature.
+**The diff view**: `:DiffviewOpen` opens a split showing all changed files in the working tree on the left and their diffs on the right. `:DiffviewOpen HEAD~3` shows the diff between HEAD and HEAD~3. `:DiffviewOpen main...feature` shows the diff between the common ancestor of main and feature and the tip of feature.
 
 | Key (in diff view) | Action |
 |---|---|
@@ -534,7 +534,7 @@ return {
 
 **Pushing and pulling**: press `<leader>gp` (`:Git push`) to push. The output appears in a terminal buffer; press Enter when done. Pull with `:Git pull`. For complex fetch/push scenarios, open lazygit with `<leader>lg` which has a more ergonomic UI for remote management.
 
-**Interactive rebase**: in the fugitive status buffer, navigate to a commit in the log section and press `ri` to start an interactive rebase from that commit. The rebase todo file opens in Neovim with fugitive's extended keybindings: press `r` to reword, `s` to squash, `f` to fixup, `d` to drop, and move lines with `ddp`/`ddkP` (Vim idiom for moving lines down/up). Save and close to start the rebase.
+**Interactive rebase**: in the fugitive status buffer, navigate to a commit in the log section and press `ri` to start an interactive rebase from that commit. The rebase todo file opens in Neovim with fugitive's extended keybindings: press `r` to reword, `s` to squash, `f` to fixup, `d` to drop and move lines with `ddp`/`ddkP` (Vim idiom for moving lines down/up). Save and close to start the rebase.
 
 **Resolving conflicts**: open the conflicting file and run `:Gdiffsplit!` to open the three-way merge view. Or run `<leader>gv` to open diffview's merge layout. Use `do`/`dp` in the fugitive split or the diffview conflict keymaps to resolve each hunk.
 
@@ -624,13 +624,13 @@ Using the wrong plugin manager for Neovim vs Vim is a common confusion. lazy.nvi
 
 Trying to use neogit without its dependencies causes cryptic errors. neogit requires `nvim-lua/plenary.nvim`. If you use the diffview integration, diffview.nvim must also be installed. Declare them in the `dependencies` field of the lazy.nvim spec so they are always installed together.
 
-Running `git commit` in the Neovim terminal without the editor configured opens a nested Neovim inside the terminal, which can confuse new users. The `:wq` in the inner Neovim triggers the commit, but the outer Neovim does not automatically update. Use fugitive's `cc` in the status buffer instead, or run `git commit -m "message"` from the terminal for one-liners.
+Running `git commit` in the Neovim terminal without the editor configured opens a nested Neovim inside the terminal, which can confuse new users. The `:wq` in the inner Neovim triggers the commit, but the outer Neovim does not automatically update. Use fugitive's `cc` in the status buffer instead or run `git commit -m "message"` from the terminal for one-liners.
 
 ---
 
 ## 16. Summary
 
-Neovim's Git workflow is built from four plugins: vim-fugitive for full Git command access and a keyboard-driven status buffer, gitsigns.nvim for live signcolumn indicators and hunk-level operations, neogit for a Magit-style porcelain with popup-driven commands, and diffview.nvim for rich diff and file history views. These are managed by lazy.nvim, which provides a lockfile, lazy loading and a graphical UI. The config lives in `~/.config/nvim/init.lua` on Linux/macOS or `%LOCALAPPDATA%\nvim\init.lua` on Windows. Neovim's built-in terminal with `GIT_EDITOR=nvim` set routes commit messages and interactive rebase todo files back into the editor. lazygit.nvim adds a floating lazygit terminal for complex multi-remote and multi-stash scenarios. Classic Vim users can use vim-fugitive with vim-plug but miss the Neovim-specific plugins. The trade-off vs graphical editors is a steeper learning curve in exchange for an extremely fast, keyboard-only workflow with no GUI overhead.
+Neovim's Git workflow is built from four plugins: vim-fugitive for full Git command access and a keyboard-driven status buffer, gitsigns.nvim for live signcolumn indicators and hunk-level operations, neogit for a Magit-style porcelain with popup-driven commands and diffview.nvim for rich diff and file history views. These are managed by lazy.nvim, which provides a lockfile, lazy loading and a graphical UI. The config lives in `~/.config/nvim/init.lua` on Linux/macOS or `%LOCALAPPDATA%\nvim\init.lua` on Windows. Neovim's built-in terminal with `GIT_EDITOR=nvim` set routes commit messages and interactive rebase todo files back into the editor. lazygit.nvim adds a floating lazygit terminal for complex multi-remote and multi-stash scenarios. Classic Vim users can use vim-fugitive with vim-plug but miss the Neovim-specific plugins. The trade-off vs graphical editors is a steeper learning curve in exchange for an extremely fast, keyboard-only workflow with no GUI overhead.
 
 ---
 

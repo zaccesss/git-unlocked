@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 40 minutes
 
-Gitea installs in one of three ways: as a single binary directly on the host, via Docker, or from a system package. All three approaches result in the same running application - the difference is in how you manage upgrades, configuration and the surrounding infrastructure. This file covers all three methods across Windows, Mac and Linux, then walks through the initial configuration, the app.ini configuration file and recommended production settings.
+Gitea installs in one of three ways: as a single binary directly on the host, via Docker or from a system package. All three approaches result in the same running application - the difference is in how you manage upgrades, configuration and the surrounding infrastructure. This file covers all three methods across Windows, Mac and Linux, then walks through the initial configuration, the app.ini configuration file and recommended production settings.
 
 ---
 

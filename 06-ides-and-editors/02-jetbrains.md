@@ -36,7 +36,7 @@ JetBrains produces the most complete built-in Git integration of any IDE family.
 
 ## 1. History and background
 
-JetBrains was founded in Prague in 2000 by three Russian developers - Sergey Dmitriev, Valentin Kipyatkov and Eugene Belyaev - who built IntelliJ IDEA as a smarter Java IDE. The company's philosophy from the start was deep language understanding over generic text editing: every IDE knows the semantics of its primary language, not just its syntax, so refactoring, navigation and code analysis work at a level that generic editors cannot match. Git integration was added in IntelliJ IDEA 8 (2008) alongside Subversion and CVS support, and has been refined continuously since. The `Git4Idea` plugin - the shared Git implementation across all JetBrains IDEs - is now one of the most complete GUI Git implementations available.
+JetBrains was founded in Prague in 2000 by three Russian developers - Sergey Dmitriev, Valentin Kipyatkov and Eugene Belyaev - who built IntelliJ IDEA as a smarter Java IDE. The company's philosophy from the start was deep language understanding over generic text editing: every IDE knows the semantics of its primary language, not just its syntax, so refactoring, navigation and code analysis work at a level that generic editors cannot match. Git integration was added in IntelliJ IDEA 8 (2008) alongside Subversion and CVS support and has been refined continuously since. The `Git4Idea` plugin - the shared Git implementation across all JetBrains IDEs - is now one of the most complete GUI Git implementations available.
 
 IntelliJ IDEA 2025.3, released December 2025, made a significant licensing change: the Community edition was expanded to include core Java, Kotlin, SQL, JavaScript and TypeScript support for **free forever including commercial use**, removing the previous restriction that required an Ultimate subscription for commercial JavaScript/TypeScript work. Ultimate remains the paid tier with advanced framework tooling, database support and full AI Assistant integration.
 
@@ -121,9 +121,9 @@ The Commit tool window shows all modified files grouped into changelists (see th
 
 - Tick or untick to include or exclude from the commit
 - Click the file to open its diff in the main editor area
-- Right-click to stage/unstage individual files, open the full diff, show history, or revert
+- Right-click to stage/unstage individual files, open the full diff, show history or revert
 
-**The commit message box** is at the bottom of the panel. It shows a character counter for the subject line (the first line should be under 72 characters). Press `Ctrl+Enter` / `Cmd+Enter` to commit immediately, or click the **Commit** button. Click the dropdown arrow next to **Commit** to access **Commit and Push** in one step.
+**The commit message box** is at the bottom of the panel. It shows a character counter for the subject line (the first line should be under 72 characters). Press `Ctrl+Enter` / `Cmd+Enter` to commit immediately or click the **Commit** button. Click the dropdown arrow next to **Commit** to access **Commit and Push** in one step.
 
 **Commit checks** run automatically before each commit and can be configured per project:
 
@@ -262,7 +262,7 @@ When a merge or rebase creates a conflict, JetBrains opens the three-pane merge 
 - **Right (Incoming/Server)** - the changes from the branch being merged or rebased
 - **Centre (Result)** - the final output you are building, starting from the common ancestor
 
-Each conflict has chevron buttons (`>>` and `<<`) to accept the left or right change, and an X to reject it. For complex conflicts where you need parts of both sides, click **Accept Left/Right** for the parts you want and then edit the Result pane directly.
+Each conflict has chevron buttons (`>>` and `<<`) to accept the left or right change and an X to reject it. For complex conflicts where you need parts of both sides, click **Accept Left/Right** for the parts you want and then edit the Result pane directly.
 
 **Magic Resolve**: the wand icon at the top of the merge tool attempts to auto-resolve non-overlapping changes. It applies all changes from both sides that do not conflict and leaves only the genuinely conflicting regions for manual resolution. In practice this handles a large proportion of conflicts automatically.
 
@@ -274,13 +274,13 @@ Each conflict has chevron buttons (`>>` and `<<`) to accept the left or right ch
 
 ## 12. Annotate with Git Blame
 
-To see blame annotations for the current file, right-click in the gutter (the grey margin to the left of line numbers) and choose **Annotate with Git Blame**, or use the keyboard shortcut `Ctrl+Shift+Alt+B` on Windows/Linux. The gutter fills with coloured blocks showing the commit hash, author and date for each line.
+To see blame annotations for the current file, right-click in the gutter (the grey margin to the left of line numbers) and choose **Annotate with Git Blame** or use the keyboard shortcut `Ctrl+Shift+Alt+B` on Windows/Linux. The gutter fills with coloured blocks showing the commit hash, author and date for each line.
 
-Clicking any blame annotation opens the **Commit Details** panel showing the full commit message, author, date and diff for that commit. From the Commit Details panel you can cherry-pick the commit, revert it, create a branch from it, or open it on GitHub/GitLab.
+Clicking any blame annotation opens the **Commit Details** panel showing the full commit message, author, date and diff for that commit. From the Commit Details panel you can cherry-pick the commit, revert it, create a branch from it or open it on GitHub/GitLab.
 
 **Navigate through history**: with a line selected and blame active, press `Ctrl+Shift+A` / `Cmd+Shift+A` and search for **Show Diff from Annotation** to see the diff for the commit that last modified the selected line. This is equivalent to `git show <hash>` but opens the diff in JetBrains' diff viewer.
 
-**Hide blame**: right-click the gutter again and choose **Close Annotations**, or use the same keyboard shortcut that opened it.
+**Hide blame**: right-click the gutter again and choose **Close Annotations** or use the same keyboard shortcut that opened it.
 
 ---
 
@@ -314,7 +314,7 @@ GitHub Actions status is not shown natively in the JetBrains IDE. The separate *
 
 ## 15. GitLab integration
 
-GitLab support in JetBrains IDEs is provided by two plugins: the **official GitLab plugin** (`GitLab`) published by GitLab on the JetBrains Marketplace, and the third-party **JetLab** plugin. As of 2026, the official GitLab plugin is the recommended choice for most users.
+GitLab support in JetBrains IDEs is provided by two plugins: the **official GitLab plugin** (`GitLab`) published by GitLab on the JetBrains Marketplace and the third-party **JetLab** plugin. As of 2026, the official GitLab plugin is the recommended choice for most users.
 
 **Official GitLab plugin** features:
 
@@ -348,7 +348,7 @@ JetBrains AI Assistant integrates directly into the Git workflow across several 
 **In the Commit tool window**:
 
 - **Generate Commit Message** (sparkle icon) - analyses the staged diff and produces a Conventional Commits-style message. Regenerate as many times as needed.
-- **Self-Review with AI** - reviews your changes before committing and reports potential issues in the Problems tool window tab. Catches things like missing null checks, unused variables introduced in the diff, or inconsistencies with the rest of the codebase.
+- **Self-Review with AI** - reviews your changes before committing and reports potential issues in the Problems tool window tab. Catches things like missing null checks, unused variables introduced in the diff or inconsistencies with the rest of the codebase.
 
 **In the merge tool**:
 

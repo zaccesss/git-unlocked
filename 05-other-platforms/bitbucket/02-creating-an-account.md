@@ -4,7 +4,7 @@
 
 Your Bitbucket account is an Atlassian account. That distinction matters from the start: when you sign up for Bitbucket, you are not just creating a Bitbucket account - you are creating an identity that works across the entire Atlassian product suite. The same login gives you access to Jira, Confluence, Trello, Statuspage and every other Atlassian cloud product. This shared identity is one of Bitbucket's core advantages for teams that use multiple Atlassian tools.
 
-This file walks you through the complete account setup process: signing up, securing your account with two-factor authentication, adding SSH keys, creating API tokens (the replacement for the deprecated app passwords), and understanding the free tier limits so you know what you are working with before you start building.
+This file walks you through the complete account setup process: signing up, securing your account with two-factor authentication, adding SSH keys, creating API tokens (the replacement for the deprecated app passwords) and understanding the free tier limits so you know what you are working with before you start building.
 
 ---
 
@@ -172,7 +172,7 @@ Hardware security keys (like YubiKey) and device-based passkeys provide the stro
 
 When you enable 2FA, Atlassian generates a set of single-use recovery codes. These are for emergencies: if you lose your phone or authenticator app, a recovery code lets you sign in and reset your 2FA settings.
 
-**Save your recovery codes immediately.** Store them somewhere secure and offline - a password manager, a printed document in a safe place, or an encrypted file. Do not store them in the same cloud service you use for everything else.
+**Save your recovery codes immediately.** Store them somewhere secure and offline - a password manager, a printed document in a safe place or an encrypted file. Do not store them in the same cloud service you use for everything else.
 
 > [!WARNING]
 > If you lose your 2FA device and do not have recovery codes, recovering your account requires contacting Atlassian support and proving your identity. This process can take days. The recovery codes exist specifically to prevent this situation - save them.
@@ -577,7 +577,7 @@ This is the most common 2FA mistake across all platforms. Recovery codes exist f
 
 ## Summary
 
-Bitbucket accounts are Atlassian accounts - one identity across all Atlassian products. Sign up at [bitbucket.org](https://bitbucket.org), verify your email, and enable two-factor authentication immediately using an authenticator app. Save your recovery codes offline.
+Bitbucket accounts are Atlassian accounts - one identity across all Atlassian products. Sign up at [bitbucket.org](https://bitbucket.org), verify your email and enable two-factor authentication immediately using an authenticator app. Save your recovery codes offline.
 
 SSH keys are the preferred method for command-line Git operations. Generate an ed25519 key pair, add the public key to Bitbucket under Personal settings and test the connection with `ssh -T git@bitbucket.org`.
 

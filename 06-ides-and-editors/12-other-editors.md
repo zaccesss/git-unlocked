@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 30 minutes
 
-The editors covered in the previous files represent the most widely used tools for Git-integrated development in 2026. But the landscape is broader than that. This file covers the significant editors and IDEs that did not get their own dedicated file: Emacs with Magit (widely considered the gold standard Git porcelain), Visual Studio (Microsoft's full Windows IDE, distinct from VS Code), Xcode (Apple's macOS IDE for iOS and macOS development), Android Studio (Google's Android IDE built on IntelliJ), Eclipse with EGit (the long-established Java IDE), Nova (Panic's macOS editor), Vim classic, and nano and Notepad++ at the minimal end. Each section covers the Git integration, the platform, the key features and when you would choose it.
+The editors covered in the previous files represent the most widely used tools for Git-integrated development in 2026. But the landscape is broader than that. This file covers the significant editors and IDEs that did not get their own dedicated file: Emacs with Magit (widely considered the gold standard Git porcelain), Visual Studio (Microsoft's full Windows IDE, distinct from VS Code), Xcode (Apple's macOS IDE for iOS and macOS development), Android Studio (Google's Android IDE built on IntelliJ), Eclipse with EGit (the long-established Java IDE), Nova (Panic's macOS editor), Vim classic and nano and Notepad++ at the minimal end. Each section covers the Git integration, the platform, the key features and when you would choose it.
 
 ---
 
@@ -92,7 +92,7 @@ Third, **the log and commit graph**: Magit's log view (`l l`) renders the full c
 
 **Forge**: the `forge` Emacs package extends Magit with GitHub, GitLab and Gitea/Forgejo support. Forge maintains a local SQLite database of issues, pull requests and review comments, updated via the platform's API. From inside Emacs you can list open PRs, read their diffs, leave inline comments, approve reviews and merge - all without opening a browser. Bootstrap Forge with `M-x forge-add-repository` in a project directory.
 
-**Who should use it**: developers already invested in Emacs, or developers who work extensively with Git history (rebasing, archaeology, complex branching) and want the most keyboard-efficient interface available. The learning investment is real but the payoff for heavy Git users is significant.
+**Who should use it**: developers already invested in Emacs or developers who work extensively with Git history (rebasing, archaeology, complex branching) and want the most keyboard-efficient interface available. The learning investment is real but the payoff for heavy Git users is significant.
 
 ---
 
@@ -197,7 +197,7 @@ Xcode authenticates with GitHub and Bitbucket via personal access tokens. Go to 
 
 **Limitations**
 
-Xcode's Git UI is functional but not as deep as VS Code's or JetBrains' implementations. There is no interactive rebase UI (use the terminal: `git rebase -i`), the 3-way merge editor is basic compared to JetBrains', and the commit graph is less navigable than Magit or IntelliJ's Log tab. For complex Git operations, most iOS developers use the terminal alongside Xcode.
+Xcode's Git UI is functional but not as deep as VS Code's or JetBrains' implementations. There is no interactive rebase UI (use the terminal: `git rebase -i`), the 3-way merge editor is basic compared to JetBrains' and the commit graph is less navigable than Magit or IntelliJ's Log tab. For complex Git operations, most iOS developers use the terminal alongside Xcode.
 
 **Who should use it**: iOS, macOS, watchOS and tvOS developers who need Xcode for building and signing. There is no alternative for Apple platform development.
 
@@ -211,7 +211,7 @@ Xcode's Git UI is functional but not as deep as VS Code's or JetBrains' implemen
 
 Android Studio is Google's official Android development IDE, built on IntelliJ IDEA by JetBrains. Google uses IntelliJ as the base, adds Android-specific tooling (the Android SDK manager, emulator integration, Layout Editor, Profiler, APK analyser) and ships the result as Android Studio.
 
-Because it is an IntelliJ fork, Android Studio has **the same complete Git integration as IntelliJ IDEA**. Every feature in [02-jetbrains.md](02-jetbrains.md) applies identically: changelists, shelving, the Log tab, interactive rebase editor, three-pane merge tool, Git Blame annotations, the Commit tool window with pre-commit checks, and GitHub/GitLab plugins. The keyboard shortcuts are the same (`Ctrl+K` commit, `Ctrl+Shift+K` push, `Alt+9` Version Control window).
+Because it is an IntelliJ fork, Android Studio has **the same complete Git integration as IntelliJ IDEA**. Every feature in [02-jetbrains.md](02-jetbrains.md) applies identically: changelists, shelving, the Log tab, interactive rebase editor, three-pane merge tool, Git Blame annotations, the Commit tool window with pre-commit checks and GitHub/GitLab plugins. The keyboard shortcuts are the same (`Ctrl+K` commit, `Ctrl+Shift+K` push, `Alt+9` Version Control window).
 
 **Gemini in Android Studio**
 
@@ -258,9 +258,9 @@ EGit is bundled with Eclipse IDE for Java Developers and most other Eclipse IDE 
 
 **GPG-signed commits**: EGit supports commit signing with GPG, configured in `Window > Preferences > Team > Git > Configuration`.
 
-**Limitations**: EGit does not support stash management via the GUI (use the terminal), blame view is limited compared to JetBrains or GitLens, and the UI feels dated compared to modern alternatives. There are no AI features in EGit.
+**Limitations**: EGit does not support stash management via the GUI (use the terminal), blame view is limited compared to JetBrains or GitLens and the UI feels dated compared to modern alternatives. There are no AI features in EGit.
 
-**Who should use it**: teams maintaining existing Eclipse-based Java projects, AUTOSAR developers using Eclipse-based toolchains, and developers in organisations that have standardised on Eclipse and cannot change tooling. For new Java projects, IntelliJ IDEA Community (now free for commercial use) is a significantly better experience.
+**Who should use it**: teams maintaining existing Eclipse-based Java projects, AUTOSAR developers using Eclipse-based toolchains and developers in organisations that have standardised on Eclipse and cannot change tooling. For new Java projects, IntelliJ IDEA Community (now free for commercial use) is a significantly better experience.
 
 ---
 
@@ -358,7 +358,7 @@ For classic Vim users, vim-fugitive covers the full daily Git workflow. The expe
 git config --global core.editor vim
 ```
 
-**Who should use it**: developers on systems where only Vim is available (most servers), developers who prefer Vim's compatibility guarantees, and Vim users who do not want to migrate to Neovim's Lua-based configuration.
+**Who should use it**: developers on systems where only Vim is available (most servers), developers who prefer Vim's compatibility guarantees and Vim users who do not want to migrate to Neovim's Lua-based configuration.
 
 ---
 
@@ -407,11 +407,11 @@ With so many editors covered across this entire section, here is a quick decisio
 
 **Use Android Studio if**: you build Android apps. Like Xcode for Apple, Android Studio is the standard for Android development.
 
-**Use Eclipse if**: you maintain legacy Java/OSGi projects already on Eclipse, work in an AUTOSAR embedded toolchain, or are in an organisation that has standardised on Eclipse and cannot change.
+**Use Eclipse if**: you maintain legacy Java/OSGi projects already on Eclipse, work in an AUTOSAR embedded toolchain or are in an organisation that has standardised on Eclipse and cannot change.
 
-**Use Nova if**: you are a macOS developer who wants a native Mac editor with a polished feel and good web development support, and you do not need cross-platform compatibility.
+**Use Nova if**: you are a macOS developer who wants a native Mac editor with a polished feel and good web development support and you do not need cross-platform compatibility.
 
-**Use classic Vim if**: you are on servers or systems where Neovim is not available, or you prefer Vim's stability and simplicity.
+**Use classic Vim if**: you are on servers or systems where Neovim is not available or you prefer Vim's stability and simplicity.
 
 **Use nano if**: you need to write a commit message on a server where nothing else is installed.
 
@@ -459,7 +459,7 @@ Treating nano as a permanent Git editor setup. nano is a viable fallback for wri
 
 ## 12. Summary
 
-Emacs with Magit is the gold standard for keyboard-driven Git management, offering region-aware staging, transient menus for all Git flags and Forge for GitHub/GitLab integration - all from within Emacs. Visual Studio is the Windows IDE for .NET, C++, Unity and enterprise development, with a Git Changes window, interactive rebase UI, Azure DevOps integration and deep Copilot integration in the 2026 release. Xcode is macOS-only and required for Apple platform development; its Source Control Navigator covers the standard workflow with blame, diff and PR creation, and Xcode 26 adds agentic coding via MCP. Android Studio is an IntelliJ IDEA fork with the full JetBrains Git implementation plus Gemini for Android-specific AI assistance. Eclipse with EGit provides a complete Git workflow for the Java/OSGi developer community still on Eclipse, with staging, history, interactive rebase and a three-pane merge tool. Nova is a native macOS editor with built-in Git staging, diff and blame. Classic Vim with vim-fugitive and vim-gitgutter covers the same core workflow as the Neovim stack, with slight feature gaps due to missing Neovim-specific plugins. nano and Notepad++ are minimal tools with no meaningful Git integration beyond `core.editor` support.
+Emacs with Magit is the gold standard for keyboard-driven Git management, offering region-aware staging, transient menus for all Git flags and Forge for GitHub/GitLab integration - all from within Emacs. Visual Studio is the Windows IDE for .NET, C++, Unity and enterprise development, with a Git Changes window, interactive rebase UI, Azure DevOps integration and deep Copilot integration in the 2026 release. Xcode is macOS-only and required for Apple platform development; its Source Control Navigator covers the standard workflow with blame, diff and PR creation and Xcode 26 adds agentic coding via MCP. Android Studio is an IntelliJ IDEA fork with the full JetBrains Git implementation plus Gemini for Android-specific AI assistance. Eclipse with EGit provides a complete Git workflow for the Java/OSGi developer community still on Eclipse, with staging, history, interactive rebase and a three-pane merge tool. Nova is a native macOS editor with built-in Git staging, diff and blame. Classic Vim with vim-fugitive and vim-gitgutter covers the same core workflow as the Neovim stack, with slight feature gaps due to missing Neovim-specific plugins. nano and Notepad++ are minimal tools with no meaningful Git integration beyond `core.editor` support.
 
 ---
 

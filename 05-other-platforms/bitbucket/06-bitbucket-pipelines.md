@@ -4,7 +4,7 @@
 
 Bitbucket Pipelines is the built-in CI/CD system for Bitbucket Cloud. Pipelines run automatically when you push code, open a pull request or trigger them manually. They build, test and deploy your software using Docker containers - you define what happens in a YAML file called `bitbucket-pipelines.yml` committed to the root of your repository.
 
-This file is a complete reference for Bitbucket Pipelines. It covers the full YAML syntax, every major feature (steps, stages, parallel steps, services, caches, artifacts, pipes, deployment environments and self-hosted runners), and real-world patterns for building production-grade pipelines.
+This file is a complete reference for Bitbucket Pipelines. It covers the full YAML syntax, every major feature (steps, stages, parallel steps, services, caches, artifacts, pipes, deployment environments and self-hosted runners) and real-world patterns for building production-grade pipelines.
 
 ---
 
@@ -791,7 +791,7 @@ This is suitable for production deployments where a second pair of eyes (or a re
 
 ## Self-hosted runners
 
-Bitbucket's hosted runners are Linux-only. For Windows builds, macOS builds, builds requiring access to private network resources, or builds needing specialised hardware, you need self-hosted runners.
+Bitbucket's hosted runners are Linux-only. For Windows builds, macOS builds, builds requiring access to private network resources or builds needing specialised hardware, you need self-hosted runners.
 
 ### Runner types (V5)
 
@@ -1113,7 +1113,7 @@ The Docker image tag does not exist. Check your image name and tag.
 bash: npm: command not found
 ```
 
-The tool is not installed in the Docker image. Use a different image that includes the tool, or install it in the script.
+The tool is not installed in the Docker image. Use a different image that includes the tool or install it in the script.
 
 **Environment variable not set:**
 
@@ -1121,7 +1121,7 @@ The tool is not installed in the Docker image. Use a different image that includ
 Error: AWS_ACCESS_KEY_ID is not set
 ```
 
-Check that the variable is defined in repository or workspace settings, and that the variable name matches exactly (case-sensitive).
+Check that the variable is defined in repository or workspace settings and that the variable name matches exactly (case-sensitive).
 
 **Artifact not found in next step:**
 
@@ -1129,7 +1129,7 @@ Check that the variable is defined in repository or workspace settings, and that
 No such file or directory: dist/index.html
 ```
 
-The artifact glob pattern in the previous step did not match the files. Check that the build actually produced files at the expected path, and that the artifact pattern is correct.
+The artifact glob pattern in the previous step did not match the files. Check that the build actually produced files at the expected path and that the artifact pattern is correct.
 
 **Service connection refused:**
 

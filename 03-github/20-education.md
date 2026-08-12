@@ -327,7 +327,7 @@ GitHub Classroom is a free web application at `classroom.github.com` that lets t
 
 **Step 4.** Name the classroom (e.g. "EECS2024-Lab" or "CS101-Spring2025").
 
-**Step 5.** Optionally invite students directly, or share the classroom link and let students join themselves.
+**Step 5.** Optionally invite students directly or share the classroom link and let students join themselves.
 
 **Step 6.** Click **New assignment** inside the classroom.
 

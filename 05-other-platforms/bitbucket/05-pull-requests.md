@@ -39,7 +39,7 @@ A pull request does several things simultaneously:
 
 **It enables code review.** Team members read the diff, leave comments, ask questions and suggest improvements before the code becomes part of the shared codebase. This catches bugs, spreads knowledge and maintains code quality standards.
 
-**It enforces gates.** Through branch permissions and merge checks, a PR can be blocked from merging until specific conditions are met: a minimum number of approvals, passing CI/CD builds, no unresolved comments, or specific named reviewers having signed off.
+**It enforces gates.** Through branch permissions and merge checks, a PR can be blocked from merging until specific conditions are met: a minimum number of approvals, passing CI/CD builds, no unresolved comments or specific named reviewers having signed off.
 
 **It creates a traceable audit trail.** Every comment, approval, build result and merge event is recorded against the PR. Six months later you can read the PR and understand why a particular decision was made, who approved it and whether there was debate about the approach.
 

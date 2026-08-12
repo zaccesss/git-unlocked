@@ -1502,7 +1502,7 @@ Push the file, then watch the pipeline run in **Build → Pipelines**. Try click
 - **Jobs** are the unit of work. Every job needs a name and `script`. Configure with `image`, `services`, `rules`, `when`, `artifacts`, `cache`, `needs`, `tags`, `retry`, `timeout`
 - **`rules`** replaces deprecated `only`/`except`. Evaluated top-to-bottom; first match wins. Use `if`, `changes`, `exists`
 - **`workflow: rules`** controls whether a pipeline is created at all. Use it to eliminate duplicate pipelines
-- **Variables**: defined globally, per-job, in project/group settings, or passed via triggers. Never hardcode secrets in `.gitlab-ci.yml`
+- **Variables**: defined globally, per-job, in project/group settings or passed via triggers. Never hardcode secrets in `.gitlab-ci.yml`
 - **Predefined variables**: `$CI_COMMIT_BRANCH`, `$CI_COMMIT_SHA`, `$CI_PIPELINE_SOURCE`, `$CI_REGISTRY_IMAGE`, `$CI_JOB_TOKEN` and dozens more
 - **Artifacts**: files uploaded after a job; passed to later stages; parsed as reports (JUnit, coverage, SAST findings)
 - **Cache**: persists between pipeline runs to speed up dependency installation; use file-based keys tied to lock files

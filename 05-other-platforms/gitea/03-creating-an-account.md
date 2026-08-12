@@ -65,7 +65,7 @@ Access your profile settings by clicking your avatar in the top right > **Settin
 - **Website**: a link displayed on your profile page
 - **Description / Bio**: a short text about yourself
 - **Location**: shown on your profile
-- **Avatar**: upload an image, or Gitea uses a Gravatar based on your email
+- **Avatar**: upload an image or Gitea uses a Gravatar based on your email
 
 ### Username
 
@@ -81,7 +81,7 @@ Your username appears in all repository and user URLs. Changing it:
 
 1. Go to **Settings** > **Appearance**
 2. Choose your preferred UI language
-3. Choose a theme: Gitea Auto (follows system setting), Gitea Light, Gitea Dark, or others
+3. Choose a theme: Gitea Auto (follows system setting), Gitea Light, Gitea Dark or others
 4. Choose the editor theme for the web code editor
 
 ---
@@ -420,7 +420,7 @@ Ed25519 is the modern, recommended algorithm. RSA keys work but are larger and s
 
 ## Summary
 
-Gitea accounts are local to each instance - there is no central identity. Register using the instance's sign-in page, or sign in with an external OAuth2 provider if the administrator has configured one.
+Gitea accounts are local to each instance - there is no central identity. Register using the instance's sign-in page or sign in with an external OAuth2 provider if the administrator has configured one.
 
 Enable two-factor authentication immediately using an authenticator app. Save recovery codes offline - without them and your authenticator, you are locked out. SSH keys provide passwordless Git authentication; add your ed25519 public key under Settings > SSH / GPG Keys.
 

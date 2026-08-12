@@ -188,11 +188,11 @@ Keep the commit's changes but edit the commit message. Git applies the commit an
 reword a1b2c3d add: login form HTML
 ```
 
-Use this to fix a typo in a commit message, or to make a vague message more descriptive.
+Use this to fix a typo in a commit message or to make a vague message more descriptive.
 
 ### edit (e)
 
-Pause the rebase after applying this commit so you can amend it. You can stage additional changes, unstage things, or split the commit into multiple commits.
+Pause the rebase after applying this commit so you can amend it. You can stage additional changes, unstage things or split the commit into multiple commits.
 
 ```
 edit a1b2c3d add: login form HTML

@@ -463,22 +463,22 @@ Copilot Edits is a mode that lets Copilot make changes across multiple files sim
 
 **Open Copilot Edits in VS Code:**
 
-Press `Ctrl+Shift+I` (🪟🐧) / `Cmd+Shift+I` (🍎), or go to **View → Copilot Edits**.
+Press `Ctrl+Shift+I` (🪟🐧) / `Cmd+Shift+I` (🍎) or go to **View → Copilot Edits**.
 
 **How to use it:**
 
 1. Open Copilot Edits
-2. Click **Add Files** to add the files you want Copilot to edit, or drag files from the Explorer
+2. Click **Add Files** to add the files you want Copilot to edit or drag files from the Explorer
 3. Type your instruction - for example "add input validation to all route handlers" or "convert all callback-based async code to async/await"
 4. Copilot analyses the files and proposes a set of diffs across all relevant files
 5. Review each changed file - additions in green, deletions in red
-6. Click **Accept All** to apply everything, **Discard All** to reject, or go file by file
+6. Click **Accept All** to apply everything, **Discard All** to reject or go file by file
 
 **Good use cases:**
 
 - Renaming a function or variable consistently across a whole codebase
 - Adding error handling to a set of similar functions
-- Migrating from one pattern to another (e.g. callbacks to promises, or dict access to dataclass attributes)
+- Migrating from one pattern to another (e.g. callbacks to promises or dict access to dataclass attributes)
 - Adding type annotations to Python or JavaScript across multiple files
 - Standardising import style or formatting conventions across a module
 

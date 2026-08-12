@@ -4,7 +4,7 @@
 
 A repository in Bitbucket is where your code lives. Everything else - pull requests, pipelines, branch permissions, integrations - is built around the repository. Understanding how to create, configure and manage repositories in Bitbucket is foundational to everything that follows in this folder.
 
-Bitbucket repositories work the same way as repositories on any other Git platform at the protocol level - Git is Git. What differs is how Bitbucket organises repositories inside workspaces and projects, what configuration options are available, how Large File Storage works, and how forking interacts with the workspace structure. This file covers all of it.
+Bitbucket repositories work the same way as repositories on any other Git platform at the protocol level - Git is Git. What differs is how Bitbucket organises repositories inside workspaces and projects, what configuration options are available, how Large File Storage works and how forking interacts with the workspace structure. This file covers all of it.
 
 ---
 
@@ -56,7 +56,7 @@ This structure differs from GitHub (where there is no grouping layer between org
 ### Via the web interface
 
 1. Sign in to **bitbucket.org**
-2. Click the **+** icon in the left sidebar, or navigate to your workspace and click **Create repository**
+2. Click the **+** icon in the left sidebar or navigate to your workspace and click **Create repository**
 3. Fill in the repository details:
 
 **Workspace** - choose which workspace owns this repository. You can move it later but it is easier to place it correctly from the start.
@@ -98,7 +98,7 @@ curl -X POST \
   }'
 ```
 
-Replace `your-workspace` with your workspace slug, `new-repo-name` with the repository name, and `PROJ` with your project key if using a project.
+Replace `your-workspace` with your workspace slug, `new-repo-name` with the repository name and `PROJ` with your project key if using a project.
 
 ### From the command line with git init
 
@@ -171,7 +171,7 @@ Bitbucket has a built-in **branching model** configuration that structures how b
 - **Release branches** - prefixed with `release/`
 - **Hotfix branches** - prefixed with `hotfix/`
 
-This is an implementation of **Gitflow** - a popular branching strategy. When the branching model is configured, Bitbucket's UI offers shortcuts for creating correctly-named branches from the web interface, and it categorises branches in the branch listing page.
+This is an implementation of **Gitflow** - a popular branching strategy. When the branching model is configured, Bitbucket's UI offers shortcuts for creating correctly-named branches from the web interface and it categorises branches in the branch listing page.
 
 The branching model is optional. Teams that use trunk-based development or GitHub Flow (simpler, single main branch) should leave it disabled.
 
@@ -505,12 +505,12 @@ Bitbucket does not have a native archive feature like GitHub's repository archiv
 
 ## Import a repository from another platform
 
-Bitbucket can import repositories from GitHub, GitLab, or any accessible Git URL.
+Bitbucket can import repositories from GitHub, GitLab or any accessible Git URL.
 
 ### Using the web interface
 
 1. In your workspace, click **+** > **Import repository**
-2. Choose the source (GitHub, GitLab, Bitbucket Server, or custom URL)
+2. Choose the source (GitHub, GitLab, Bitbucket Server or custom URL)
 3. Enter the source repository URL
 4. Authenticate if the source repository is private (GitHub/GitLab personal access token)
 5. Choose the destination workspace and optionally a project
@@ -672,7 +672,7 @@ If you have multiple workspaces (personal and team), it is easy to accidentally 
 
 **Adding a README when importing existing code**
 
-If you create a repository with a README and then try to push an existing local repository, you get a rejection because the remote history diverges from your local history. Either create the repository without any initial files, or fetch and merge the remote README first.
+If you create a repository with a README and then try to push an existing local repository, you get a rejection because the remote history diverges from your local history. Either create the repository without any initial files or fetch and merge the remote README first.
 
 **Not committing .gitattributes after setting up LFS tracking**
 

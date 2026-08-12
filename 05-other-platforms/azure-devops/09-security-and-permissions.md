@@ -363,7 +363,7 @@ Service principals have no interactive sign-in, support proper credential rotati
 
 ### Managed identities
 
-For Azure-hosted workloads (virtual machines, Azure Functions, AKS) that need to access Azure DevOps, **managed identities** provide a credential-free authentication option. The Azure resource has an identity in Azure AD, and you grant that identity access to Azure DevOps without any secrets to manage.
+For Azure-hosted workloads (virtual machines, Azure Functions, AKS) that need to access Azure DevOps, **managed identities** provide a credential-free authentication option. The Azure resource has an identity in Azure AD and you grant that identity access to Azure DevOps without any secrets to manage.
 
 ---
 

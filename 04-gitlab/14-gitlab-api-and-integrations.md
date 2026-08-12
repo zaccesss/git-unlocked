@@ -561,7 +561,7 @@ def webhook():
 ### Auto-disabling webhooks
 
 > [!WARNING]
-> GitLab automatically **disables a webhook after 4 consecutive delivery failures** (4xx or 5xx responses, or connection timeouts). Once disabled, the webhook stops receiving events until it is manually re-enabled.
+> GitLab automatically **disables a webhook after 4 consecutive delivery failures** (4xx or 5xx responses or connection timeouts). Once disabled, the webhook stops receiving events until it is manually re-enabled.
 
 Check webhook health: Settings -> Webhooks -> click the webhook name -> **Recent Deliveries** tab. This shows the last 100 delivery attempts with request/response details for debugging.
 

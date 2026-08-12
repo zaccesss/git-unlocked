@@ -56,7 +56,7 @@ sudo dnf upgrade bash
 
 bash config is split across multiple files and which one bash reads depends on how it was started. This is one of the most confusing parts of bash for beginners.
 
-**Login shell** (started at TTY login, via SSH, or with `bash -l`):
+**Login shell** (started at TTY login, via SSH or with `bash -l`):
 
 1. `/etc/profile` (system-wide)
 2. First existing of: `~/.bash_profile`, `~/.bash_login`, `~/.profile`
@@ -112,7 +112,7 @@ alias gl='git log --oneline --graph --all -20'
 
 **zsh** (Z shell) was created by Paul Falstad at Princeton in 1990 and is MIT-licensed. Apple switched to zsh as the macOS default at macOS Catalina (October 2019) - primarily to avoid bash's GPLv3 licence. Current version in most distros is **zsh 5.9** (May 2022).
 
-zsh is bash-compatible for interactive use while adding many improvements: better tab completion, spelling correction, shared command history across sessions, powerful prompt customisation via `PROMPT` variables, and a built-in plugin system via `autoload`.
+zsh is bash-compatible for interactive use while adding many improvements: better tab completion, spelling correction, shared command history across sessions, powerful prompt customisation via `PROMPT` variables and a built-in plugin system via `autoload`.
 
 ### Config files
 
@@ -123,7 +123,7 @@ zsh has more config files than bash. The load order:
 3. `/etc/zshrc` then `~/.zshrc` - interactive shells
 4. `/etc/zlogin` then `~/.zlogin` - login shells, after `.zshrc`
 
-**In practice**: put environment variables and PATH in `~/.zprofile`, and everything else (aliases, functions, prompt, plugin loading) in `~/.zshrc`.
+**In practice**: put environment variables and PATH in `~/.zprofile` and everything else (aliases, functions, prompt, plugin loading) in `~/.zshrc`.
 
 > [!CAUTION]
 > macOS-specific PATH trap: macOS Terminal.app opens a login shell per tab, which runs `/etc/zprofile`, which calls `path_helper`. If you put PATH exports in `~/.zshenv`, `path_helper` in `/etc/zprofile` will run after them and can reorder or override your PATH. **Always put macOS PATH exports in `~/.zprofile`**, not `~/.zshenv`.
@@ -387,7 +387,7 @@ For Git work, cmd.exe is mostly adequate but lacks many quality-of-life features
 - Some legacy CI/CD runners
 - Visual Studio's Developer Command Prompt
 
-**Git in cmd.exe**: Git for Windows adds `C:\Program Files\Git\cmd` to the system PATH, so `git` commands work in cmd.exe. However, Git Bash (the bash environment bundled with Git for Windows) is usually a better choice for Git operations on Windows, or WSL2.
+**Git in cmd.exe**: Git for Windows adds `C:\Program Files\Git\cmd` to the system PATH, so `git` commands work in cmd.exe. However, Git Bash (the bash environment bundled with Git for Windows) is usually a better choice for Git operations on Windows or WSL2.
 
 ---
 
@@ -493,7 +493,7 @@ Install the **WSL extension** in VS Code on Windows. Then from inside a WSL term
 code .
 ```
 
-VS Code installs a server component inside WSL and connects to it. The terminal inside VS Code is now a real Linux shell, file watching works without configuration, and VS Code uses the Git binary inside WSL.
+VS Code installs a server component inside WSL and connects to it. The terminal inside VS Code is now a real Linux shell, file watching works without configuration and VS Code uses the Git binary inside WSL.
 
 > [!IMPORTANT]
 > Keep your code in the Linux filesystem (`~/projects/`, not `/mnt/c/`). File operations across the WSL-Windows boundary (`/mnt/c/...`) are significantly slower because they go through a 9P network protocol. Git operations on a repo stored in the Windows filesystem from WSL can be very slow on large repositories.
@@ -612,7 +612,7 @@ Installing tools inside WSL but running them from Windows PowerShell. Tools inst
 
 ## 10. Summary
 
-bash is the universal Linux shell and macOS legacy default, with config split between login (`.bash_profile`) and interactive (`.bashrc`) files. The standard fix for macOS is to source `.bashrc` from `.bash_profile`. zsh is the macOS default since 2019, with Oh My Zsh providing plugins and themes; put aliases in `~/.zshrc` and PATH in `~/.zprofile` on Mac. fish ships features like autosuggestions and syntax highlighting with zero setup but is not POSIX-compliant; any command starting with a space is automatically hidden from its history. PowerShell 7 is the modern cross-platform Windows shell; `$PROFILE` points to your config file, and `Clear-History` does not clear the PSReadLine history file. cmd.exe is the Windows legacy shell, still used for `.bat` scripts and enterprise tools.
+bash is the universal Linux shell and macOS legacy default, with config split between login (`.bash_profile`) and interactive (`.bashrc`) files. The standard fix for macOS is to source `.bashrc` from `.bash_profile`. zsh is the macOS default since 2019, with Oh My Zsh providing plugins and themes; put aliases in `~/.zshrc` and PATH in `~/.zprofile` on Mac. fish ships features like autosuggestions and syntax highlighting with zero setup but is not POSIX-compliant; any command starting with a space is automatically hidden from its history. PowerShell 7 is the modern cross-platform Windows shell; `$PROFILE` points to your config file and `Clear-History` does not clear the PSReadLine history file. cmd.exe is the Windows legacy shell, still used for `.bat` scripts and enterprise tools.
 
 WSL2 runs a real Linux kernel on Windows and is the recommended way for Windows developers to get the full Linux toolchain. Keep code in the Linux filesystem, not in `/mnt/c/`. Use Windows Terminal with a Nerd Font, install zsh and Oh My Zsh inside WSL and connect VS Code via the WSL extension with `code .`.
 

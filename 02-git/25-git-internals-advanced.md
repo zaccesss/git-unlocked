@@ -127,7 +127,7 @@ e4f5g6h HEAD@{1}: reset: moving to HEAD~1
 i7j8k9l HEAD@{2}: commit: wip: accidental commit
 ```
 
-`HEAD@{0}` is the current position. `HEAD@{1}` is where HEAD was before the last operation. `HEAD@{2}` is before that, and so on.
+`HEAD@{0}` is the current position. `HEAD@{1}` is where HEAD was before the last operation. `HEAD@{2}` is before that and so on.
 
 **Time-based references:**
 

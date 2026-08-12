@@ -373,7 +373,7 @@ curl -X POST \
 
 After posting a status, configure a branch policy status check that requires `jenkins-build` in the `continuous-integration` genre to have `succeeded` state. The branch policy blocks PR completion until Jenkins posts a success status.
 
-This is the integration pattern for external CI systems: Jenkins (or CircleCI, Travis, custom build systems) posts status via the API, and Azure Repos' branch policies enforce it.
+This is the integration pattern for external CI systems: Jenkins (or CircleCI, Travis, custom build systems) posts status via the API and Azure Repos' branch policies enforce it.
 
 ---
 
@@ -385,7 +385,7 @@ Service hooks send event notifications from Azure DevOps to external systems. Wh
 
 1. Go to **Project settings** > **Service hooks**
 2. Click **+** (Create subscription)
-3. Choose the consumer (e.g. **Web Hooks** for generic HTTP endpoints, or a specific integration like **Slack**, **Teams**)
+3. Choose the consumer (e.g. **Web Hooks** for generic HTTP endpoints or a specific integration like **Slack**, **Teams**)
 4. Select the trigger event
 5. Configure filters (optionally limit to specific repositories, branches or work item types)
 6. Enter the webhook URL and authentication
@@ -425,7 +425,7 @@ Service hooks send event notifications from Azure DevOps to external systems. Wh
    - Headers: none required for Slack
    - Resource details to send: **All**
 
-When a build fails, Azure DevOps POSTs the build details to Slack's webhook URL, and Slack displays the notification in the configured channel.
+When a build fails, Azure DevOps POSTs the build details to Slack's webhook URL and Slack displays the notification in the configured channel.
 
 ### Service hook payload example
 
@@ -540,7 +540,7 @@ Linking Azure Boards work items to GitHub commits and pull requests:
 3. Connect to a GitHub organisation or specific repositories
 4. Once connected, reference work items in GitHub with `AB#ID` in commit messages and PR descriptions
 
-GitHub pull requests show Azure Boards work item links in the PR description, and Azure Boards work items show GitHub commit and PR links in the Development section.
+GitHub pull requests show Azure Boards work item links in the PR description and Azure Boards work items show GitHub commit and PR links in the Development section.
 
 ---
 

@@ -156,7 +156,7 @@ Your PR will be reviewed and merged. Once merged, your name will appear permanen
 You will receive a GitHub notification when your PR is merged. You can view the merged PR at any time in the [Pull requests tab](https://github.com/zaccesss/git-unlocked/pulls).
 
 > [!NOTE]
-> PRs that do not follow the format in `contributors.md`, include changes to files other than `contributors.md`, or have commit messages that do not follow the Conventional Commits format may be asked to make changes before merging.
+> PRs that do not follow the format in `contributors.md`, include changes to files other than `contributors.md` or have commit messages that do not follow the Conventional Commits format may be asked to make changes before merging.
 
 ---
 

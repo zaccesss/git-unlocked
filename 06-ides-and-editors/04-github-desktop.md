@@ -37,7 +37,7 @@ GitHub Desktop is a free, visual Git client built and maintained by GitHub. It i
 
 GitHub Desktop was first released in 2012 as a native Mac application called GitHub for Mac, followed by GitHub for Windows in 2012. Both were proprietary apps with separate codebases. In 2017, GitHub unified and rewrote them into a single Electron-based application called GitHub Desktop, open-sourced under the MIT licence at [github.com/desktop/desktop](https://github.com/desktop/desktop).
 
-The rewrite made GitHub Desktop cross-platform (Windows and macOS) with a shared codebase, and the open-source model allowed community contributions. The application uses a bundled Git binary rather than your system Git, so it works correctly regardless of which version of Git you have installed.
+The rewrite made GitHub Desktop cross-platform (Windows and macOS) with a shared codebase and the open-source model allowed community contributions. The application uses a bundled Git binary rather than your system Git, so it works correctly regardless of which version of Git you have installed.
 
 GitHub Desktop v3.5.0 (June 2025) added GitHub Copilot commit message generation as a generally available feature. Version 3.5.5 (February 2026) fixed Git hooks support, which had been unreliable with version managers like nvm, pyenv and rbenv due to shell environment issues. The current stable release is v3.6 (June 2026), which added Git worktree support and deeper Copilot integration for commit authoring and merge conflict resolution.
 
@@ -133,7 +133,7 @@ GitHub Desktop has a deliberately simple interface with four main areas:
 
 ## 5. Cloning and creating repositories
 
-**Cloning a repository from GitHub**: go to `File > Clone Repository`. You can browse your GitHub repositories by name, paste a URL, or enter a path to a local repository. Choose a local path and click **Clone**.
+**Cloning a repository from GitHub**: go to `File > Clone Repository`. You can browse your GitHub repositories by name, paste a URL or enter a path to a local repository. Choose a local path and click **Clone**.
 
 **Cloning from the command line and opening in GitHub Desktop**:
 
@@ -198,7 +198,7 @@ You can regenerate the message by clicking the sparkle icon again if the first s
 
 **Deleting a branch**: right-click a local branch and select **Delete**. GitHub Desktop warns you if the branch has unmerged commits. Remote branch deletion is offered as an option.
 
-**Merging into the current branch**: go to `Branch > Merge into Current Branch`, select the branch to merge from, and click **Merge**. If there are conflicts, GitHub Desktop transitions to the conflict resolution UI.
+**Merging into the current branch**: go to `Branch > Merge into Current Branch`, select the branch to merge from and click **Merge**. If there are conflicts, GitHub Desktop transitions to the conflict resolution UI.
 
 **Comparing branches**: right-click a branch in the panel and select **Compare on GitHub** to open the branch comparison page in the browser, showing ahead/behind commit counts and the diff.
 
@@ -226,7 +226,7 @@ Click the **History** tab in the left panel to see the commit log for the curren
 
 **Searching commits**: use the search box at the top of the History tab to filter commits by message, author name or SHA.
 
-**Blame**: GitHub Desktop does not have a built-in blame view. Use **View on GitHub** to open the file in the browser and use GitHub's blame interface, or use your configured external editor's blame feature.
+**Blame**: GitHub Desktop does not have a built-in blame view. Use **View on GitHub** to open the file in the browser and use GitHub's blame interface or use your configured external editor's blame feature.
 
 ---
 
@@ -246,7 +246,7 @@ For each conflicting file you have three choices:
 Once all files are marked green, click **Continue Merge** and then **Commit Merge** to finalise.
 
 > [!TIP]
-> For complex conflicts, using the external editor (VS Code with its 3-way merge editor, or JetBrains with its merge tool) is usually faster than trying to resolve manually in a plain text editor. GitHub Desktop integrates cleanly with both.
+> For complex conflicts, using the external editor (VS Code with its 3-way merge editor or JetBrains with its merge tool) is usually faster than trying to resolve manually in a plain text editor. GitHub Desktop integrates cleanly with both.
 
 ---
 
@@ -256,7 +256,7 @@ GitHub Desktop has a single stash slot per branch. When you switch branches with
 
 **Stashing manually**: go to `Branch > Stash All Changes`. The Changes tab shows a banner saying your changes have been stashed.
 
-**Restoring the stash**: a **Stashed Changes** item appears at the bottom of the Changes tab when a stash exists. Click **Restore** to apply it, or **Discard** to throw it away.
+**Restoring the stash**: a **Stashed Changes** item appears at the bottom of the Changes tab when a stash exists. Click **Restore** to apply it or **Discard** to throw it away.
 
 **Limitation**: GitHub Desktop supports only one stash per branch. If you need multiple stashes, use the integrated terminal and `git stash push -m "name"` to manage a stack of stashes by name.
 
@@ -272,7 +272,7 @@ Cherry-pick copies one or more commits from another branch into the current bran
 
 Alternatively, right-click a commit in the History tab and select **Cherry-pick Commit**. GitHub Desktop shows a branch picker and moves the commit to the selected branch.
 
-For multi-commit cherry-picks, hold `Shift` and click to select a range of commits, or hold `Ctrl`/`Cmd` to select individual commits. Right-click the selection and choose **Cherry-pick Commits**.
+For multi-commit cherry-picks, hold `Shift` and click to select a range of commits or hold `Ctrl`/`Cmd` to select individual commits. Right-click the selection and choose **Cherry-pick Commits**.
 
 ---
 
@@ -393,7 +393,7 @@ Using the Linux shiftkey fork without checking its release version occasionally 
 
 ## 21. Summary
 
-GitHub Desktop is a free, open-source, cross-platform Git client focused on clarity and ease of use. It covers cloning, repository creation, line-level staging with checkboxes and image diffs, Copilot commit message generation, branching and merging, push and pull with automatic background fetching, history browsing, merge conflict resolution with external editor integration, a single-slot stash, drag-and-drop cherry-pick, pull request creation and checkout, Git hooks support (fixed in v3.5.5), and forking for open-source contributions. It does not try to expose every Git feature - interactive rebase, multi-stash management, blame and a full commit graph are outside its scope. For those workflows, use the integrated terminal or switch to a more complete client like GitKraken, Sourcetree or the Git integration in VS Code or a JetBrains IDE. Linux users need the community-maintained shiftkey fork rather than the official build.
+GitHub Desktop is a free, open-source, cross-platform Git client focused on clarity and ease of use. It covers cloning, repository creation, line-level staging with checkboxes and image diffs, Copilot commit message generation, branching and merging, push and pull with automatic background fetching, history browsing, merge conflict resolution with external editor integration, a single-slot stash, drag-and-drop cherry-pick, pull request creation and checkout, Git hooks support (fixed in v3.5.5) and forking for open-source contributions. It does not try to expose every Git feature - interactive rebase, multi-stash management, blame and a full commit graph are outside its scope. For those workflows, use the integrated terminal or switch to a more complete client like GitKraken, Sourcetree or the Git integration in VS Code or a JetBrains IDE. Linux users need the community-maintained shiftkey fork rather than the official build.
 
 ---
 

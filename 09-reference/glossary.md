@@ -207,7 +207,7 @@ A contiguous block of changed lines within a diff. `git add -p` lets you stage i
 Another name for the staging area - the intermediate state between your working tree and your repository. `git add` moves changes into the index. `git commit` creates a commit from the index. `git diff --staged` shows the difference between the index and HEAD.
 
 **Interactive rebase**
-`git rebase -i` opens an editor listing commits you can reorder, rename (`reword`), edit, squash together, fixup (squash without keeping message), or drop entirely. The most powerful tool for cleaning up commit history before opening a pull request.
+`git rebase -i` opens an editor listing commits you can reorder, rename (`reword`), edit, squash together, fixup (squash without keeping message) or drop entirely. The most powerful tool for cleaning up commit history before opening a pull request.
 
 ---
 

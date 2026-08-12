@@ -31,7 +31,7 @@ This file explains where GitLab came from, how it is structured, what makes it d
 
 ## Git vs GitLab - the essential distinction
 
-Before anything else, one thing must be crystal clear: **Git and GitLab are not the same thing, and one does not require the other.**
+Before anything else, one thing must be crystal clear: **Git and GitLab are not the same thing and one does not require the other.**
 
 **Git** is version control software. You install it on your computer and it tracks changes to files locally. Linus Torvalds wrote it in 2005 for the Linux kernel project. It is free, open source, has no web interface and works entirely on your local machine without an internet connection. When you run `git commit` or `git branch`, you are using Git - it has nothing to do with GitLab, GitHub or any other platform.
 
@@ -56,11 +56,11 @@ So Zaporozhets built his own tool over a weekend. He wrote it in **Ruby on Rails
 
 The project was called GitLab. It was a web application that gave teams a self-hosted platform for Git repositories with a basic web interface. Nothing more than that, initially.
 
-In **2012**, **Sytse "Sid" Sijbrandij**, a Dutch entrepreneur, stumbled across GitLab on Hacker News. He was immediately taken by the concept: an open-source, self-hosted alternative to GitHub that any organisation could run on their own servers. He began contributing code. The two connected directly, and Sijbrandij later described what happened next with characteristic directness: he essentially told Zaporozhets he was going to start a company around GitLab and asked him to join.
+In **2012**, **Sytse "Sid" Sijbrandij**, a Dutch entrepreneur, stumbled across GitLab on Hacker News. He was immediately taken by the concept: an open-source, self-hosted alternative to GitHub that any organisation could run on their own servers. He began contributing code. The two connected directly and Sijbrandij later described what happened next with characteristic directness: he essentially told Zaporozhets he was going to start a company around GitLab and asked him to join.
 
 They incorporated **GitLab B.V.** in the Netherlands in **2013**, with Zaporozhets as CTO and Sijbrandij as CEO. Both worked remotely from day one - Zaporozhets from Ukraine, Sijbrandij from the Netherlands. What would become a defining feature of the company was not a deliberate philosophy at that point. It was simply geography.
 
-**GitLab Inc.** was formally incorporated in Delaware, USA in **September 2014**, the move being partly for access to US venture capital. The company was accepted into **Y Combinator's Winter 2015 batch** - one of the few European startups in the cohort, and a significant validation that accelerated both fundraising and credibility in Silicon Valley.
+**GitLab Inc.** was formally incorporated in Delaware, USA in **September 2014**, the move being partly for access to US venture capital. The company was accepted into **Y Combinator's Winter 2015 batch** - one of the few European startups in the cohort and a significant validation that accelerated both fundraising and credibility in Silicon Valley.
 
 ---
 
@@ -101,7 +101,7 @@ The response to GitLab was immediate and historically significant:
 - GitLab saw **a 7× increase in orders** for its paid plans
 - GitLab's CEO live-tweeted that the site was struggling under the load and asked people to slow down the imports
 
-GitLab responded with two smart moves. First, they were transparent about the chaos - Sijbrandij tweeted real-time updates about server strain rather than pretending everything was fine. Second, and more strategically, **on the same day** as the Microsoft/GitHub announcement, GitLab announced that its **Ultimate and Gold tiers would be free forever for qualifying educational institutions and open source projects**. The timing was deliberate. The message was clear: if you are uncomfortable with GitHub being owned by Microsoft, GitLab is here, and it is generous to the communities that matter.
+GitLab responded with two smart moves. First, they were transparent about the chaos - Sijbrandij tweeted real-time updates about server strain rather than pretending everything was fine. Second and more strategically, **on the same day** as the Microsoft/GitHub announcement, GitLab announced that its **Ultimate and Gold tiers would be free forever for qualifying educational institutions and open source projects**. The timing was deliberate. The message was clear: if you are uncomfortable with GitHub being owned by Microsoft, GitLab is here and it is generous to the communities that matter.
 
 This single week accelerated GitLab's enterprise sales, brand recognition and developer community by years. It established GitLab permanently as the primary alternative for organisations that could not or would not use GitHub.
 
@@ -175,7 +175,7 @@ To understand why this matters, it helps to understand what the alternative look
 
 Each of these is potentially best-of-breed in its category. But each has its own login system, its own API, its own data model and its own billing. Integrating them requires custom webhooks, API connections and maintenance work. When something goes wrong across multiple tools, tracing the problem requires jumping between platforms.
 
-GitLab's answer is to collapse all of these into one product. The software development lifecycle has many stages, and GitLab maps them as:
+GitLab's answer is to collapse all of these into one product. The software development lifecycle has many stages and GitLab maps them as:
 
 **Plan → Create → Verify → Package → Secure → Release → Configure → Monitor → Govern**
 
@@ -243,7 +243,7 @@ Issues are the primary unit of work tracking. Each issue can have assignees, lab
 
 **Epics** (Premium) group related issues across multiple milestones into a single higher-level initiative. **Roadmaps** (Premium) show epics on a timeline, giving management and stakeholders a project-level view of progress.
 
-**Service Desk** turns your project's issue tracker into a customer support system. Customers email a unique address, and their emails create confidential issues. Your team responds through comments, and the customer receives the response by email - all without the customer needing a GitLab account.
+**Service Desk** turns your project's issue tracker into a customer support system. Customers email a unique address and their emails create confidential issues. Your team responds through comments and the customer receives the response by email - all without the customer needing a GitLab account.
 
 ### Registries
 
@@ -413,7 +413,7 @@ Open `https://gitlab.com/gitlab-org/gitlab` and `https://github.com/torvalds/lin
 
 ## Summary
 
-- GitLab was created by **Dmytro Zaporozhets** in Ukraine in **2011** as an open-source side project, and co-founded as a company with **Sid Sijbrandij** in **2013**
+- GitLab was created by **Dmytro Zaporozhets** in Ukraine in **2011** as an open-source side project and co-founded as a company with **Sid Sijbrandij** in **2013**
 - It is a **single application for the entire DevSecOps lifecycle**: code hosting, CI/CD, security scanning, project management, container and package registries and AI in one product
 - **40M+ registered users**, more than 50% of the Fortune 100, trading on NASDAQ as **GTLB**
 - Current version: **GitLab 18.10** (March 2026). CEO: **Bill Staples**. CTO: **Siva Padisetty**

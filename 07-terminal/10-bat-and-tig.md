@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 20 minutes
 
-Two terminal tools that complement a Git workflow without replacing any part of it: **bat** is a syntax-highlighted replacement for `cat` that integrates with Git to show file changes inline, and **tig** is a keyboard-driven Git log browser that has been around since 2006 and remains one of the fastest ways to navigate commit history, view blame and browse the state of a repository entirely from the terminal.
+Two terminal tools that complement a Git workflow without replacing any part of it: **bat** is a syntax-highlighted replacement for `cat` that integrates with Git to show file changes inline and **tig** is a keyboard-driven Git log browser that has been around since 2006 and remains one of the fastest ways to navigate commit history, view blame and browse the state of a repository entirely from the terminal.
 
 ---
 
@@ -237,7 +237,7 @@ bat cache --build
 
 ## 6. tig - a terminal Git browser
 
-tig is an ncurses-based Git repository browser. It has been maintained since 2006, is written in C, and has a stable, keyboard-driven interface focused on navigating history, viewing diffs, blame, references and stashes. It is available on every platform Git supports.
+tig is an ncurses-based Git repository browser. It has been maintained since 2006, is written in C and has a stable, keyboard-driven interface focused on navigating history, viewing diffs, blame, references and stashes. It is available on every platform Git supports.
 
 tig is not trying to be lazygit. It does not do staging or commit creation as smoothly. What it is excellent at is **reading history** - quickly navigating a commit graph, viewing the diff for any commit, blaming any file, browsing all refs and searching through commits. For code archaeology and understanding what happened in a repository, tig is fast and precise.
 
@@ -471,7 +471,7 @@ Forgetting tig is bundled with Git for Windows. Windows users often install extr
 
 ## 13. Summary
 
-bat is a syntax-highlighted `cat` replacement with Git change gutter indicators, line numbers and automatic paging. Install via your package manager (package is `bat`; on Ubuntu/Debian it installs as `batcat` - create a symlink). Use it for viewing files, as a pager for man pages (`export MANPAGER="sh -c 'col -bx | bat -l man -p'"`), or piping diff output for casual viewing. Configure via `~/.config/bat/config`. Themes are set with `--theme=` or `BAT_THEME`.
+bat is a syntax-highlighted `cat` replacement with Git change gutter indicators, line numbers and automatic paging. Install via your package manager (package is `bat`; on Ubuntu/Debian it installs as `batcat` - create a symlink). Use it for viewing files, as a pager for man pages (`export MANPAGER="sh -c 'col -bx | bat -l man -p'"`) or piping diff output for casual viewing. Configure via `~/.config/bat/config`. Themes are set with `--theme=` or `BAT_THEME`.
 
 tig is an ncurses Git browser written in C, stable since 2006. Launch with `tig` for the main log view, `tig blame file` for blame, `tig status` for the staging interface, `tig stash` for stash browsing, `tig refs` for all references. Navigate with vi-style `j`/`k`, open items with Enter, quit with `q`. It is bundled with Git for Windows 2.14.2+. Configure via `~/.tigrc`. Both tools complement rather than replace lazygit - bat for reading files, tig for navigating history, lazygit for staging and commits.
 

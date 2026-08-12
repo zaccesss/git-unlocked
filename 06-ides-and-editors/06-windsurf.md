@@ -33,7 +33,7 @@ Windsurf is an AI-first code editor built on a VS Code fork, distinguished by it
 
 Windsurf was created by Codeium, an AI coding company founded in 2022 that initially offered a free alternative to GitHub Copilot as a VS Code extension. In November 2024, Codeium pivoted: it rebranded to Windsurf and released the Windsurf Editor, an AI-native IDE built on a VS Code fork with Cascade as its centrepiece agent. By April 2025 the company had rebranded entirely from Codeium to Windsurf.
 
-The acquisition saga began in mid-2025. OpenAI announced an approximately $3 billion acquisition bid, which collapsed over IP-sharing concerns with Microsoft (OpenAI's primary investor). **On July 11, 2025, Google paid $2.4 billion in a talent deal**: CEO Varun Mohan, co-founder Douglas Chen, and approximately 40 senior researchers joined Google, where they built Google Antigravity (see [07-antigravity.md](07-antigravity.md)). This left approximately 200 remaining Windsurf employees without the founding team. **Cognition AI**, the company behind the Devin autonomous coding agent, acquired what remained - the product, brand, IP and remaining team - for approximately $250 million. Jeff Wang became interim CEO.
+The acquisition saga began in mid-2025. OpenAI announced an approximately $3 billion acquisition bid, which collapsed over IP-sharing concerns with Microsoft (OpenAI's primary investor). **On July 11, 2025, Google paid $2.4 billion in a talent deal**: CEO Varun Mohan, co-founder Douglas Chen and approximately 40 senior researchers joined Google, where they built Google Antigravity (see [07-antigravity.md](07-antigravity.md)). This left approximately 200 remaining Windsurf employees without the founding team. **Cognition AI**, the company behind the Devin autonomous coding agent, acquired what remained - the product, brand, IP and remaining team - for approximately $250 million. Jeff Wang became interim CEO.
 
 Despite the turbulence, Windsurf continued shipping: Wave 13 (December 2025) added Git worktrees and parallel agent sessions; Windsurf 2.0 (April 2026) added the Agent Command Center, Spaces and Devin integration. As of April 2026, Windsurf Pro has over 350 enterprise customers and more than 800,000 active monthly users.
 
@@ -72,7 +72,7 @@ Everything in [01-vs-code.md](01-vs-code.md) applies to Windsurf. The VS Code sh
 
 Cascade is Windsurf's built-in agentic AI. It is not a sidebar chatbot bolted onto the editor - it is the primary AI interface, designed to maintain context across long work sessions without you needing to re-explain what you are doing.
 
-**Opening Cascade**: click the Cascade icon in the Activity Bar, or press `Ctrl+L` / `Cmd+L`. The Cascade panel appears on the right side of the editor.
+**Opening Cascade**: click the Cascade icon in the Activity Bar or press `Ctrl+L` / `Cmd+L`. The Cascade panel appears on the right side of the editor.
 
 **Two modes**:
 
@@ -173,7 +173,7 @@ The Command Center allows you to:
 
 **Spaces** (also Windsurf 2.0) group related work together: a Space bundles Cascade sessions, PRs, files, notes and project context. When you return to a Space after switching tasks, all the context from previous sessions is preserved. Each Space corresponds to a logical unit of work (a feature, a sprint task, a bug investigation).
 
-**Devin integration** (Windsurf 2.0): Devin is Cognition's cloud-based autonomous software engineer. From the Windsurf Agent Command Center, you can delegate tasks directly to Devin cloud agents. Devin operates in an isolated cloud VM, opens PRs, and reports back to you through the Command Center. You plan and design locally in Windsurf, then delegate execution to Devin when the task is well-specified.
+**Devin integration** (Windsurf 2.0): Devin is Cognition's cloud-based autonomous software engineer. From the Windsurf Agent Command Center, you can delegate tasks directly to Devin cloud agents. Devin operates in an isolated cloud VM, opens PRs and reports back to you through the Command Center. You plan and design locally in Windsurf, then delegate execution to Devin when the task is well-specified.
 
 ---
 
@@ -300,7 +300,7 @@ If you have two tasks to work on simultaneously, ask Cascade: "Create a Git work
 
 **Exercise 4 - add a `.windsurfrules` file**
 
-Create a `.windsurfrules` file in your repository root with your team's commit message conventions (an example is shown in section 9). Commit it. Make a change, stage it, and ask Cascade to write a commit message. Verify that the generated message follows your rules. Ask a teammate to pull the repository and make a change - their Cascade should also follow the rules automatically.
+Create a `.windsurfrules` file in your repository root with your team's commit message conventions (an example is shown in section 9). Commit it. Make a change, stage it and ask Cascade to write a commit message. Verify that the generated message follows your rules. Ask a teammate to pull the repository and make a change - their Cascade should also follow the rules automatically.
 
 **Exercise 5 - explore the Agent Command Center**
 

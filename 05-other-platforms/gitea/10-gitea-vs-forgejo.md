@@ -258,7 +258,7 @@ There is no universally correct answer. The right choice depends on your specifi
 For a new self-hosted deployment in 2026 with no existing investment:
 
 - **Linux-only, open source philosophy, no Windows**: Forgejo is the stronger choice. SAML is free, federation is developing and governance is cleaner.
-- **Mixed OS including Windows, or uncertain about Windows needs**: Gitea. You cannot run Forgejo on Windows in production.
+- **Mixed OS including Windows or uncertain about Windows needs**: Gitea. You cannot run Forgejo on Windows in production.
 - **Enterprise with budget for SAML/audit features**: Gitea Enterprise if you need the enterprise features; Forgejo free if SAML is all you need.
 
 ---

@@ -170,7 +170,7 @@ git switch -
 The `-` is shorthand for "the branch I was on before this one". Extremely useful when moving between two branches repeatedly.
 
 > [!WARNING]
-> Git will not let you switch branches if you have uncommitted changes that conflict with the branch you are switching to. You have two options: commit your changes first, or stash them temporarily. Stashing is covered in [git/11-stash.md](11-stash.md).
+> Git will not let you switch branches if you have uncommitted changes that conflict with the branch you are switching to. You have two options: commit your changes first or stash them temporarily. Stashing is covered in [git/11-stash.md](11-stash.md).
 
 > [!NOTE]
 > You may see `git checkout branch-name` in older tutorials. This works but `git checkout` does many different things depending on its arguments - switching branches, restoring files and detaching HEAD. `git switch` was introduced specifically for switching branches and is the current recommendation. This course uses `git switch` throughout.

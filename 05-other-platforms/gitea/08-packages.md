@@ -786,7 +786,7 @@ Pulling private images from Gitea in Kubernetes requires an `imagePullSecret`. W
 
 **Filling disk space with unmanaged packages**
 
-Without a retention policy, packages accumulate indefinitely. A Docker registry in particular can grow rapidly. Set up periodic cleanup using the Gitea API to delete old versions, or monitor disk usage and set alerts.
+Without a retention policy, packages accumulate indefinitely. A Docker registry in particular can grow rapidly. Set up periodic cleanup using the Gitea API to delete old versions or monitor disk usage and set alerts.
 
 ---
 
