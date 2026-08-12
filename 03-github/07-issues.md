@@ -666,7 +666,7 @@ Unlabelled issues make the tracker hard to navigate. Even in a solo project, app
 
 **Forgetting to link issues to pull requests.**
 
-Without `Closes #N` in a pull request, the issue stays open even after the fix is merged. You then have to manually close it, or - worse - forget about it and end up with dozens of open issues for work that was already done.
+Without `Closes #N` in a pull request, the issue stays open even after the fix is merged. You then have to manually close it or - worse - forget about it and end up with dozens of open issues for work that was already done.
 
 **Reopening closed issues instead of creating new ones.**
 

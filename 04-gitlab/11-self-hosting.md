@@ -2,9 +2,9 @@
 
 **Difficulty:** 🔴 Advanced | **Time:** 50 minutes
 
-Self-hosting GitLab means running the entire platform on infrastructure you control: your own servers, your own cloud account, your own data centre. This is one of GitLab's most significant advantages over GitHub - GitLab's Community Edition is free, open source under the MIT licence, and has no user limits, no storage caps and no feature paywalls beyond the paid Enterprise Edition tiers. GitHub's equivalent self-hosted option costs $21 per user per month.
+Self-hosting GitLab means running the entire platform on infrastructure you control: your own servers, your own cloud account, your own data centre. This is one of GitLab's most significant advantages over GitHub - GitLab's Community Edition is free, open source under the MIT licence and has no user limits, no storage caps and no feature paywalls beyond the paid Enterprise Edition tiers. GitHub's equivalent self-hosted option costs $21 per user per month.
 
-Organisations choose to self-host for several reasons: data sovereignty requirements that prohibit sending source code to external clouds, air-gapped environments with no internet access, regulated industries like finance, healthcare and defence that must keep code on-premises, and large teams where the cost savings over GitLab.com are substantial.
+Organisations choose to self-host for several reasons: data sovereignty requirements that prohibit sending source code to external clouds, air-gapped environments with no internet access, regulated industries like finance, healthcare and defence that must keep code on-premises and large teams where the cost savings over GitLab.com are substantial.
 
 This file covers everything you need to plan, install, configure, maintain and upgrade a self-managed GitLab instance: editions and licences, hardware requirements, all installation methods, initial configuration, backup and restore, upgrades, runner installation and the key differences between self-managed GitLab and GitLab.com.
 
@@ -88,7 +88,7 @@ For large organisations, the per-seat cost of GitLab.com adds up quickly. A 500-
 
 ### Control and customisation
 
-Self-managed GitLab gives you control over: upgrade timing (you decide when to update), resource allocation (how much CPU and RAM pipelines get), network configuration, storage backends, integration with internal systems that are not reachable from GitLab.com, and instance-level settings that do not exist on GitLab.com (such as configuring default project visibility or disabling specific features instance-wide).
+Self-managed GitLab gives you control over: upgrade timing (you decide when to update), resource allocation (how much CPU and RAM pipelines get), network configuration, storage backends, integration with internal systems that are not reachable from GitLab.com and instance-level settings that do not exist on GitLab.com (such as configuring default project visibility or disabling specific features instance-wide).
 
 ---
 
@@ -1026,7 +1026,7 @@ You now have a fully functional GitLab instance running locally. Create projects
 
 ## Summary
 
-- **Always install Enterprise Edition (EE)**, even if you plan to stay on the free tier. EE without a licence is identical to CE, and EE makes future licence activation seamless
+- **Always install Enterprise Edition (EE)**, even if you plan to stay on the free tier. EE without a licence is identical to CE and EE makes future licence activation seamless
 - **Community Edition** is MIT-licensed, free, with no user limits, no storage limits and no feature expiry - an excellent choice for teams that must self-host
 - **Minimum production requirements**: 4 vCPU / 8 GB RAM (8 vCPU / 16 GB for 1,000 users). SSD storage strongly recommended
 - **Linux package (Omnibus)** is the recommended installation method for most teams: one command installs everything, all components bundled, managed with `gitlab-ctl`

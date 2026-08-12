@@ -179,7 +179,7 @@ Named references to specific commits. Used for versioning.
 
 Host packages (npm, Docker, Maven, NuGet, RubyGems, Gradle, containers) directly on GitHub.
 
-**Access:** A repository's **Packages** section on the right side, or `github.com/OWNER/REPO/pkgs`
+**Access:** A repository's **Packages** section on the right side or `github.com/OWNER/REPO/pkgs`
 
 **Authenticate:** `echo TOKEN | docker login ghcr.io -u USERNAME --password-stdin` (containers) or configure `.npmrc` for npm
 
@@ -367,7 +367,7 @@ jobs:
       - run: npm test
 ```
 
-**Triggers:** `push`, `pull_request`, `schedule` (cron), `workflow_dispatch` (manual), `release`, `issues`, and 40+ others
+**Triggers:** `push`, `pull_request`, `schedule` (cron), `workflow_dispatch` (manual), `release`, `issues` and 40+ others
 
 **Runners:** `ubuntu-latest`, `windows-latest`, `macos-latest` (GitHub-hosted) or self-hosted runners
 
@@ -599,7 +599,7 @@ Colour-coded tags for categorising issues and PRs.
 
 Free static site hosting directly from a repository.
 
-**Enable:** Settings → Pages. Choose source: a branch and folder (`/` root or `/docs`), or a GitHub Actions workflow.
+**Enable:** Settings → Pages. Choose source: a branch and folder (`/` root or `/docs`) or a GitHub Actions workflow.
 
 **Custom domain:** Add a `CNAME` file to the repository root, configure your DNS with a CNAME pointing to `USERNAME.github.io`.
 

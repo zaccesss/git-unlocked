@@ -28,9 +28,9 @@ Moving a repository between Git platforms without losing history, issues, pull r
 
 ## Introduction
 
-Migrating a repository between platforms sounds straightforward: clone it, push it somewhere else, done. In practice, it is one of the most data-loss-prone operations in Git work. The Git repository itself transfers cleanly. Everything else - issues, pull requests, merge requests, comments, labels, milestones, webhooks, deploy keys, CI secrets, branch protection rules and Git LFS objects - does not come along automatically, and some of it cannot be moved at all.
+Migrating a repository between platforms sounds straightforward: clone it, push it somewhere else, done. In practice, it is one of the most data-loss-prone operations in Git work. The Git repository itself transfers cleanly. Everything else - issues, pull requests, merge requests, comments, labels, milestones, webhooks, deploy keys, CI secrets, branch protection rules and Git LFS objects - does not come along automatically and some of it cannot be moved at all.
 
-This file covers the safe migration sequence for every common platform pair, the Git LFS trap that silently loses file content, and the checklist every migration needs before you delete the old repository.
+This file covers the safe migration sequence for every common platform pair, the Git LFS trap that silently loses file content and the checklist every migration needs before you delete the old repository.
 
 **What you need:**
 
@@ -378,7 +378,7 @@ bash migrate.sh
 
 ## Setting up a permanent mirror
 
-If you need to run two platforms in parallel during a transition, or maintain a read-only backup mirror, set up automatic mirroring.
+If you need to run two platforms in parallel during a transition or maintain a read-only backup mirror, set up automatic mirroring.
 
 ### GitHub to GitLab mirror (GitLab pull mirror)
 
@@ -557,7 +557,7 @@ Keep the source repository in read-only mode for at least two weeks after migrat
 
 Migrating between Git platforms has two distinct layers: the Git layer (commits, branches, tags, LFS objects) and the platform layer (issues, PRs, comments, labels, webhooks, secrets). The Git layer transfers cleanly with `git clone --mirror` and `git push --mirror`. The platform layer requires a platform-specific importer, manual recreation or API scripting.
 
-Git LFS is the most common source of silent data loss. Always check whether the repository uses LFS, always run `git lfs fetch --all` before pushing, and always run `git lfs push --all` separately after the mirror push.
+Git LFS is the most common source of silent data loss. Always check whether the repository uses LFS, always run `git lfs fetch --all` before pushing and always run `git lfs push --all` separately after the mirror push.
 
 The strongest platform importers are GitLab's GitHub importer (transfers issues, PRs, labels, milestones, releases and comments) and GitHub's GEI toolkit (transfers from GitHub, Azure DevOps and Bitbucket Server, but not GitLab). Work through the migration checklist before, during and after every migration, keep the source repository for at least two weeks after cutover and rotate all credentials rather than copying them.
 

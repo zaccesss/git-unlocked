@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 30 minutes
 
-Google Antigravity is an agent-first IDE built by Google using the ex-Windsurf/Codeium team hired in the $2.4 billion talent deal of July 2025. It launched on November 18, 2025 alongside Gemini 3, is built on a VS Code fork, and is free in public preview. Its distinguishing concept is the **Manager view** - a mission control panel for orchestrating multiple parallel AI agents, each producing verifiable Artifacts that you can audit before accepting. For Git, this means agents that commit code, open pull requests and create branches, with every action traceable through Artifacts. As of April 2026, Antigravity is a genuinely capable but still-preview tool with real stability limitations worth understanding before adopting for production work.
+Google Antigravity is an agent-first IDE built by Google using the ex-Windsurf/Codeium team hired in the $2.4 billion talent deal of July 2025. It launched on November 18, 2025 alongside Gemini 3, is built on a VS Code fork and is free in public preview. Its distinguishing concept is the **Manager view** - a mission control panel for orchestrating multiple parallel AI agents, each producing verifiable Artifacts that you can audit before accepting. For Git, this means agents that commit code, open pull requests and create branches, with every action traceable through Artifacts. As of April 2026, Antigravity is a genuinely capable but still-preview tool with real stability limitations worth understanding before adopting for production work.
 
 ---
 
@@ -30,7 +30,7 @@ Google Antigravity is an agent-first IDE built by Google using the ex-Windsurf/C
 
 ## 1. History and background
 
-The story of Antigravity is inseparable from Windsurf's. In July 2025, when OpenAI's acquisition of Windsurf collapsed over IP concerns, Google moved quickly: it paid $2.4 billion in a **talent deal** - technically not an acquisition of the company itself, but a licensing agreement plus compensation packages - that brought Windsurf's CEO Varun Mohan, co-founder Douglas Chen, and approximately 40 senior engineers into Google. The roughly 200 remaining Windsurf employees were left behind (they became part of the Cognition acquisition that created the current Windsurf, covered in [06-windsurf.md](06-windsurf.md)).
+The story of Antigravity is inseparable from Windsurf's. In July 2025, when OpenAI's acquisition of Windsurf collapsed over IP concerns, Google moved quickly: it paid $2.4 billion in a **talent deal** - technically not an acquisition of the company itself, but a licensing agreement plus compensation packages - that brought Windsurf's CEO Varun Mohan, co-founder Douglas Chen and approximately 40 senior engineers into Google. The roughly 200 remaining Windsurf employees were left behind (they became part of the Cognition acquisition that created the current Windsurf, covered in [06-windsurf.md](06-windsurf.md)).
 
 Inside Google, the ex-Windsurf team was given resources to build an IDE on top of their existing deep familiarity with VS Code forks and agentic coding systems. They shipped Antigravity in approximately four months, launching on **November 18, 2025** alongside Gemini 3 at a Google event. The name reflects Google's ambition to lift AI-assisted development beyond the gravitational pull of traditional coding approaches.
 
@@ -75,9 +75,9 @@ Everything in [01-vs-code.md](01-vs-code.md) applies to Antigravity. The **Gener
 
 Antigravity's defining UX is the toggle between two primary interfaces:
 
-**Editor view** (press `Cmd+E` on Mac or `Ctrl+E` on Windows/Linux to return to it): the standard IDE interface. A full VS Code-compatible editor with source control panel, file explorer, terminal, debugger and an AI agent sidebar similar to Cursor's Composer. This is where you write code, review diffs, and do hands-on work.
+**Editor view** (press `Cmd+E` on Mac or `Ctrl+E` on Windows/Linux to return to it): the standard IDE interface. A full VS Code-compatible editor with source control panel, file explorer, terminal, debugger and an AI agent sidebar similar to Cursor's Composer. This is where you write code, review diffs and do hands-on work.
 
-**Manager view** (press `Cmd+E` / `Ctrl+E` again to toggle, or click the grid icon in the Activity Bar): mission control for orchestrating multiple AI agents. The Manager view shows up to 5 parallel agents running simultaneously. Each agent has its own panel showing:
+**Manager view** (press `Cmd+E` / `Ctrl+E` again to toggle or click the grid icon in the Activity Bar): mission control for orchestrating multiple AI agents. The Manager view shows up to 5 parallel agents running simultaneously. Each agent has its own panel showing:
 
 - The current task description
 - A live log of actions (files read, commands run, Git operations performed)
@@ -129,7 +129,7 @@ The agent runs `git diff main...HEAD`, reads the output and produces a review Ar
 - Agent 1: "Implement the dark mode UI on feature/dark-mode"
 - Agent 2: "Write the tests for the existing login flow on fix/login-tests"
 
-Both agents work on separate branches (Antigravity uses Git worktrees for isolation) and report to the Manager view. You can monitor both, provide feedback to either, and review their Artifacts when done.
+Both agents work on separate branches (Antigravity uses Git worktrees for isolation) and report to the Manager view. You can monitor both, provide feedback to either and review their Artifacts when done.
 
 ---
 
@@ -169,7 +169,7 @@ The terminal in the Editor view is your interactive terminal for manual Git comm
 
 ## 9. Extensions in Antigravity
 
-Antigravity supports VS Code extensions. Import from VS Code during initial setup, or install from the VS Code Marketplace within the IDE.
+Antigravity supports VS Code extensions. Import from VS Code during initial setup or install from the VS Code Marketplace within the IDE.
 
 **Git extensions that work in Antigravity**:
 
@@ -257,14 +257,14 @@ Switch to the Manager view. Create a new agent task: "Look at the most recent 5 
 
 **Exercise 3 - audit an agent's Git operations**
 
-Give an agent a task that involves creating a branch and making a commit: "Create a branch called test/antigravity-demo, add a file called ANTIGRAVITY_DEMO.md explaining what this branch was for, and commit it." After the agent completes, find the `git_operations.md` Artifact and read the log of Git commands it ran. Verify with `git log` in the terminal that the commits match the Artifact.
+Give an agent a task that involves creating a branch and making a commit: "Create a branch called test/antigravity-demo, add a file called ANTIGRAVITY_DEMO.md explaining what this branch was for and commit it." After the agent completes, find the `git_operations.md` Artifact and read the log of Git commands it ran. Verify with `git log` in the terminal that the commits match the Artifact.
 
 **Exercise 4 - parallel agents on two branches**
 
 Open the Manager view and create two agent tasks simultaneously:
 
-- Task 1: "Create branch feature/readme-update, improve the README with better installation instructions, and commit."
-- Task 2: "Create branch feature/add-gitignore, add a comprehensive .gitignore for a Python project, and commit."
+- Task 1: "Create branch feature/readme-update, improve the README with better installation instructions and commit."
+- Task 2: "Create branch feature/add-gitignore, add a comprehensive .gitignore for a Python project and commit."
 
 Watch both agents work in parallel in the Manager view. Review both Artifacts when done. Check `git branch` to confirm both branches were created.
 
@@ -272,7 +272,7 @@ Watch both agents work in parallel in the Manager view. Review both Artifacts wh
 
 ## 15. Common Mistakes
 
-Treating Antigravity as production-ready because it is a Google product is a mistake. It is in public preview, has documented stability issues, and Google itself describes it as experimental. Use it for exploration, prototyping and non-critical tasks rather than production deployments until the stable release.
+Treating Antigravity as production-ready because it is a Google product is a mistake. It is in public preview, has documented stability issues and Google itself describes it as experimental. Use it for exploration, prototyping and non-critical tasks rather than production deployments until the stable release.
 
 Not reading the Artifact before accepting an agent's work means losing the main advantage Antigravity offers over Cursor and Windsurf. The `git_operations.md` Artifact is your audit trail. Read it. Verify that the branches, commits and pushes it lists are what you asked for.
 

@@ -4,7 +4,7 @@
 
 Welcome. You are in the right place.
 
-Whether you have never heard of Git before, have been struggling with it for months, or are a developer who wants to finally go beyond the basics - this course was built for you.
+Whether you have never heard of Git before, have been struggling with it for months or are a developer who wants to finally go beyond the basics - this course was built for you.
 
 ---
 
@@ -45,7 +45,7 @@ This course is for everyone.
 | A data scientist, DevOps engineer or researcher            | Show you how Git applies to your specific field                |
 | An experienced developer who wants a solid reference       | Give you a cheatsheet, glossary and advanced command reference |
 
-If you have ever copy-pasted a Git command from Stack Overflow without understanding it, avoided branching because it seemed too complicated, or deleted a repository out of frustration - this course is for you.
+If you have ever copy-pasted a Git command from Stack Overflow without understanding it, avoided branching because it seemed too complicated or deleted a repository out of frustration - this course is for you.
 
 ---
 
@@ -97,11 +97,11 @@ If you work with files that change over time - and everyone does - version contr
 
 Git has a reputation for being confusing. That reputation is earned.
 
-The single most searched Git question on Stack Overflow - with over 14 million views - is "How do I undo my last commit?" Developers with 10 years of experience still look it up. You are not behind. You are not slow. Git is genuinely unintuitive in places, and that is not your fault.
+The single most searched Git question on Stack Overflow - with over 14 million views - is "How do I undo my last commit?" Developers with 10 years of experience still look it up. You are not behind. You are not slow. Git is genuinely unintuitive in places and that is not your fault.
 
 Here is what nobody tells you: most developers use about 10 commands regularly. Everything else they look up as needed. The goal is not to memorise everything - it is to understand what Git is doing so you can figure out what you need when you need it.
 
-You will make mistakes. You might accidentally delete something. You might cause a merge conflict that looks terrifying. All of that is normal, and almost all of it is recoverable. Git is designed to protect your work - once something is committed, it is very hard to lose permanently.
+You will make mistakes. You might accidentally delete something. You might cause a merge conflict that looks terrifying. All of that is normal and almost all of it is recoverable. Git is designed to protect your work - once something is committed, it is very hard to lose permanently.
 
 Commit often. Ask questions. Keep going.
 
@@ -138,7 +138,7 @@ If you are ready to jump straight in, go to [What is Version Control?](../02-git
 
 ## About the Author
 
-This course was created by **Isaac Adjei (Zaccess)** - an electronic engineering and computer science student based in the United Kingdom, and the founder of [Zaccess](https://isaacadjei.me).
+This course was created by **Isaac Adjei (Zaccess)** - an electronic engineering and computer science student based in the United Kingdom and the founder of [Zaccess](https://isaacadjei.me).
 
 git-unlocked started as a personal Git reference and grew into something worth sharing with everyone. It is CC BY-SA 4.0 licenced, open source and built to last.
 

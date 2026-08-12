@@ -302,7 +302,7 @@ These three badges can be earned within minutes of creating a GitHub account. Yo
 
 - You are now viewing the open issue
 - Scroll down to the comment box
-- Click **Close issue** (the button at the bottom right of the comment area, or use the dropdown to select **Close as not planned**)
+- Click **Close issue** (the button at the bottom right of the comment area or use the dropdown to select **Close as not planned**)
 
 That is it. As long as you closed it within 5 minutes of opening it - which you will have done since you opened and closed it back-to-back - the Quickdraw badge is awarded. It may take a few minutes to appear on your profile.
 
@@ -315,11 +315,11 @@ That is it. As long as you closed it within 5 minutes of opening it - which you 
 
 **What it earns:** The YOLO badge.
 
-**What you need:** A repository with at least one commit on a non-default branch, and the ability to open and merge a PR with no review.
+**What you need:** A repository with at least one commit on a non-default branch and the ability to open and merge a PR with no review.
 
 **Step-by-step:**
 
-Continue in the same `quickdraw-test` repository from Badge 1, or use any repository you own.
+Continue in the same `quickdraw-test` repository from Badge 1 or use any repository you own.
 
 **Step 1.** Create a new branch on GitHub:
 

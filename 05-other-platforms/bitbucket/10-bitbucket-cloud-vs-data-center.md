@@ -2,7 +2,7 @@
 
 **Difficulty:** 🔴 Advanced | **Time:** 40 minutes
 
-Bitbucket comes in two fundamentally different deployment models. **Bitbucket Cloud** is the hosted service run by Atlassian at [bitbucket.org](https://bitbucket.org) - you pay a monthly subscription and Atlassian manages all the infrastructure, upgrades, backups and availability. **Bitbucket Data Center** is the self-hosted version - you download and install it on your own servers, manage your own infrastructure, and are responsible for uptime, security patching and upgrades.
+Bitbucket comes in two fundamentally different deployment models. **Bitbucket Cloud** is the hosted service run by Atlassian at [bitbucket.org](https://bitbucket.org) - you pay a monthly subscription and Atlassian manages all the infrastructure, upgrades, backups and availability. **Bitbucket Data Center** is the self-hosted version - you download and install it on your own servers, manage your own infrastructure and are responsible for uptime, security patching and upgrades.
 
 Choosing between them is not just a technical decision. It involves cost modelling, compliance requirements, operational capacity, infrastructure expertise and strategic alignment with your organisation's approach to software procurement. This file gives you everything you need to make or explain that decision.
 
@@ -91,7 +91,7 @@ The decision between Cloud and Data Center comes down to a few key questions:
 
 ### Feature gaps that matter most
 
-**Bitbucket Pipelines is Cloud-only.** Data Center has no built-in CI/CD. Data Center users must integrate with external CI systems: Jenkins, GitLab CI/CD (via mirrors), GitHub Actions (via mirrors), TeamCity, Bamboo Data Center (Atlassian's own CI product), or hosted services like CircleCI and Travis CI.
+**Bitbucket Pipelines is Cloud-only.** Data Center has no built-in CI/CD. Data Center users must integrate with external CI systems: Jenkins, GitLab CI/CD (via mirrors), GitHub Actions (via mirrors), TeamCity, Bamboo Data Center (Atlassian's own CI product) or hosted services like CircleCI and Travis CI.
 
 **AI features are Cloud-only.** Atlassian Intelligence (Rovo Dev), AI pull request descriptions and AI-powered search are available only on Cloud. Data Center does not receive these features.
 
@@ -509,7 +509,7 @@ Arriving mid-2026, the **Bitbucket Hybrid Licence** allows organisations to oper
 
 ### Who hybrid is for
 
-Hybrid is designed for large organisations transitioning from Data Center to Cloud who cannot move everything at once, or organisations with mixed requirements - some code can be in the cloud, some cannot.
+Hybrid is designed for large organisations transitioning from Data Center to Cloud who cannot move everything at once or organisations with mixed requirements - some code can be in the cloud, some cannot.
 
 All existing Data Center licences are expected to transition to Hybrid licences by March 2029.
 

@@ -636,7 +636,7 @@ Merge checks on Free and Standard plans are advisory. A determined developer can
 
 **Enabling IP allowlisting without preparing the team**
 
-IP allowlisting takes effect immediately. If team members are working remotely or from personal devices not on the allowlist, they are locked out the moment you enable it. Communicate the change in advance, get everyone's IPs added to the allowlist, and consider a grace period.
+IP allowlisting takes effect immediately. If team members are working remotely or from personal devices not on the allowlist, they are locked out the moment you enable it. Communicate the change in advance, get everyone's IPs added to the allowlist and consider a grace period.
 
 **Not scanning for secrets before making a repository public**
 
@@ -648,7 +648,7 @@ Before making any repository public, use `git log --all -- '*.env'`, `git log -S
 
 Bitbucket security operates across four domains: identity and access, code protection, secret protection and pipeline security.
 
-Identity security starts with strong Atlassian accounts: 2FA (enforced at workspace level), SSH keys using ed25519, and API tokens with appropriate scopes and expiry dates. App passwords are fully retired from June 2026.
+Identity security starts with strong Atlassian accounts: 2FA (enforced at workspace level), SSH keys using ed25519 and API tokens with appropriate scopes and expiry dates. App passwords are fully retired from June 2026.
 
 Code protection uses branch permissions to prevent unauthorised pushes, force pushes and deletions on important branches. Merge checks (enforced on Premium) block merges that do not meet quality and security requirements.
 

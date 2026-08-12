@@ -175,7 +175,7 @@ Navigate files with `j`/`k`, press `Enter` to see the diff.
 **Option 1 - lazygit (visual)**:
 
 1. Open `lazygit`
-2. In the Files panel, press `space` to stage files individually, or `a` to stage all
+2. In the Files panel, press `space` to stage files individually or `a` to stage all
 3. For hunk-level staging: press `Enter` on a file, navigate hunks with `j`/`k`, press `space` to stage a hunk
 4. Press `c` for an inline commit message or `Shift+C` to open your editor for a longer message
 5. Type the message and press Enter (or save and close the editor)
@@ -519,7 +519,7 @@ git stash list       # is there a stash?
 git stash pop        # apply it
 ```
 
-If not stashed, and the changes were never committed, they are gone. This is why stashing before risky operations is a habit worth building.
+If not stashed and the changes were never committed, they are gone. This is why stashing before risky operations is a habit worth building.
 
 ---
 

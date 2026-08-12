@@ -69,11 +69,11 @@ As teams grew, local-only systems were not enough. **CVS** (Concurrent Versions 
 
 This model has a serious weakness: the central server is a single point of failure. If the server goes down or the disk is lost, the entire history is gone. It also meant that every operation - viewing history, comparing versions, committing - required a network connection to the server.
 
-**Perforce** and **ClearCase** dominated the enterprise through the 1990s and 2000s, and are still used in industries like game development and defence where large binary assets are common.
+**Perforce** and **ClearCase** dominated the enterprise through the 1990s and 2000s and are still used in industries like game development and defence where large binary assets are common.
 
 ### Distributed version control (2000s-present)
 
-**BitKeeper** was a proprietary distributed VCS used by the Linux kernel project from 2002 to 2005. When the free licence was revoked, Linus Torvalds had a problem: the kernel had thousands of contributors submitting patches, and the existing free tools could not handle the volume and complexity.
+**BitKeeper** was a proprietary distributed VCS used by the Linux kernel project from 2002 to 2005. When the free licence was revoked, Linus Torvalds had a problem: the kernel had thousands of contributors submitting patches and the existing free tools could not handle the volume and complexity.
 
 His solution was to write his own. **Git was created in April 2005** and took ten days to reach a state where it could host its own development. Linus's stated goals were speed, simple design, strong support for non-linear development (branches), fully distributed operation and the ability to handle the scale of the Linux kernel.
 
@@ -83,7 +83,7 @@ His solution was to write his own. **Git was created in April 2005** and took te
 
 ## How Git is different
 
-Git makes different design choices from its predecessors, and those choices affect how you use it.
+Git makes different design choices from its predecessors and those choices affect how you use it.
 
 **Git is distributed.** Every developer has a complete copy of the entire history on their local machine. You do not need a network connection to view history, create branches, commit changes or compare versions. The remote repository (on GitHub, GitLab or elsewhere) is just one more copy - an agreed-upon reference point for collaboration, not the single source of truth.
 
@@ -180,7 +180,7 @@ This distinction trips up almost every beginner. They are not the same thing.
 
 **Git** is the version control software. It is a command-line tool that runs on your local machine. It has no web interface. It has no issue tracker. It was created by Linus Torvalds in 2005 and is developed by the open-source community. It is completely free.
 
-**GitHub** is a web platform that hosts Git repositories. It adds a web interface for browsing history, a pull request system for code review, issue tracking, project boards, CI/CD (GitHub Actions), a marketplace, and many other features. It was founded in 2008 and acquired by Microsoft in 2018.
+**GitHub** is a web platform that hosts Git repositories. It adds a web interface for browsing history, a pull request system for code review, issue tracking, project boards, CI/CD (GitHub Actions), a marketplace and many other features. It was founded in 2008 and acquired by Microsoft in 2018.
 
 **GitLab** is another web platform for hosting Git repositories. It includes similar features to GitHub plus a more integrated CI/CD pipeline (GitLab CI/CD), a container registry, security scanning and the ability to self-host the entire platform. Founded in 2011.
 
@@ -200,10 +200,10 @@ These exercises require no Git installation. They are purely conceptual.
 Look at the folder structure on your computer. Find examples of informal version control you are already doing: files named `report_final`, `report_final_v2`, `report_backup`, folders with dates in their names. Count how many you find. This is the problem version control systems solve.
 
 **Exercise 2: think about the distributed model**
-Consider: if you use GitHub to host a repository, and GitHub's servers were deleted overnight, what would happen to your project? Write down your answer. Then compare: with Git (distributed), every developer's clone contains the full history. The project could be reconstructed from any one of them.
+Consider: if you use GitHub to host a repository and GitHub's servers were deleted overnight, what would happen to your project? Write down your answer. Then compare: with Git (distributed), every developer's clone contains the full history. The project could be reconstructed from any one of them.
 
 **Exercise 3: the snapshot question**
-If Git stores a complete snapshot of every file at every commit, and a large project has 10,000 files and 5,000 commits, would the repository be enormous? Why or why not? (Hint: think about what happens when a file does not change between commits.)
+If Git stores a complete snapshot of every file at every commit and a large project has 10,000 files and 5,000 commits, would the repository be enormous? Why or why not? (Hint: think about what happens when a file does not change between commits.)
 
 ---
 

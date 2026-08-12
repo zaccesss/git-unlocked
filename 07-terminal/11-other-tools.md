@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 25 minutes
 
-This file covers the remaining tools in the modern terminal Git ecosystem: **gitui** as a Rust-written lazygit alternative for large repositories, **starship** for a Git-aware prompt that works in every shell, **zoxide** for instant navigation between repositories, and **diff-so-fancy** as a simpler delta alternative. Each tool installs in under two minutes and provides immediate value.
+This file covers the remaining tools in the modern terminal Git ecosystem: **gitui** as a Rust-written lazygit alternative for large repositories, **starship** for a Git-aware prompt that works in every shell, **zoxide** for instant navigation between repositories and **diff-so-fancy** as a simpler delta alternative. Each tool installs in under two minutes and provides immediate value.
 
 ---
 
@@ -44,7 +44,7 @@ Current version: **v0.28.1** (March 2026).
 
 **Choose gitui when**: your repository has hundreds of thousands of commits (the Linux kernel, large monorepos) and lazygit feels noticeably slow. The async architecture keeps the UI responsive while Git operations complete in the background.
 
-**Choose lazygit when**: you want interactive rebase, GitHub PR integration, cherry-pick, bisect, worktrees, or the richest overall feature set.
+**Choose lazygit when**: you want interactive rebase, GitHub PR integration, cherry-pick, bisect, worktrees or the richest overall feature set.
 
 ### Installing gitui
 
@@ -157,7 +157,7 @@ Config lives at `~/.config/gitui/` on all platforms (gitui follows XDG correctly
 ```
 
 > [!NOTE]
-> gitui uses **RON (Rusty Object Notation)** for config files, not YAML or JSON. The syntax is strict - trailing commas are required after the last field in a struct, and string colours must be quoted (`Some("White")` not `Some(White)`). Version 0.28 changed the theme colour syntax; if you are upgrading from an older config, update all colour values to the quoted string format.
+> gitui uses **RON (Rusty Object Notation)** for config files, not YAML or JSON. The syntax is strict - trailing commas are required after the last field in a struct and string colours must be quoted (`Some("White")` not `Some(White)`). Version 0.28 changed the theme colour syntax; if you are upgrading from an older config, update all colour values to the quoted string format.
 
 > [!WARNING]
 > gitui uses libgit2 rather than the system `git` binary for network operations. SSH authentication sometimes needs explicit setup: ensure your key is added to `ssh-agent` with `ssh-add ~/.ssh/id_ed25519` before using push/fetch. Some SSH config features that the `git` binary handles via OpenSSH may not translate directly through libgit2.
@@ -554,7 +554,7 @@ Configuring both delta and diff-so-fancy in `.gitconfig`. They both set `core.pa
 
 **gitui** is a Rust terminal UI for Git using libgit2's async architecture, giving it a performance edge on very large repositories. Choose it over lazygit when the codebase is large enough that lazygit's status updates feel slow. Config uses RON format; built-in syntax highlighting works on all platforms including Windows without a custom pager.
 
-**Starship** is a Rust cross-shell prompt (bash, zsh, fish, PowerShell) that shows Git branch, ahead/behind counts, staged/unstaged indicators, conflict state and more. Install once with `curl -sS https://starship.rs/install.sh | sh`, add `eval "$(starship init zsh)"` to your shell config, and configure with `~/.config/starship.toml`. Requires a Nerd Font for icons.
+**Starship** is a Rust cross-shell prompt (bash, zsh, fish, PowerShell) that shows Git branch, ahead/behind counts, staged/unstaged indicators, conflict state and more. Install once with `curl -sS https://starship.rs/install.sh | sh`, add `eval "$(starship init zsh)"` to your shell config and configure with `~/.config/starship.toml`. Requires a Nerd Font for icons.
 
 **zoxide** is a smarter `cd` that tracks directory visits by frecency. `z reponame` jumps to the highest-scored matching directory without typing the full path. Invaluable for developers who switch between many repositories throughout the day. Add `eval "$(zoxide init zsh)"` to your shell config after compinit.
 

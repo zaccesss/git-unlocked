@@ -229,7 +229,7 @@ git pull --all
 > Always pull before starting new work for the day. If your local branch is behind the remote, pulling first reduces the chance of conflicts when you push later.
 
 > [!NOTE]
-> If `git pull` fails because your local branch has diverged from the remote, you need to decide how to reconcile them. Either `git pull --rebase` to rebase your commits on top of the remote, or `git pull` followed by resolving the merge conflict if there is one.
+> If `git pull` fails because your local branch has diverged from the remote, you need to decide how to reconcile them. Either `git pull --rebase` to rebase your commits on top of the remote or `git pull` followed by resolving the merge conflict if there is one.
 
 ---
 
@@ -269,7 +269,7 @@ git push --all
 git push --tags
 ```
 
-By default, `git push` does not push tags. Use `--tags` to push all tags, or push a specific tag:
+By default, `git push` does not push tags. Use `--tags` to push all tags or push a specific tag:
 
 ```bash
 git push origin v2.0.0

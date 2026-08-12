@@ -481,7 +481,7 @@ Webhooks send HTTP POST requests to your endpoints when events occur in Gitea.
 ### Creating a webhook via the web UI
 
 1. Go to repository **Settings** > **Webhooks** > **Add Webhook**
-2. Choose the type (Gitea native, or Slack, Discord, Dingtalk, etc.)
+2. Choose the type (Gitea native or Slack, Discord, Dingtalk, etc.)
 3. Enter the **Payload URL**: your endpoint that receives events
 4. Set **Content Type**: `application/json`
 5. Optionally set a **Secret**: used to sign the payload with HMAC-SHA256

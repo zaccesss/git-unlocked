@@ -115,7 +115,7 @@ A numeric value representing the complexity or effort required. Teams using stor
 
 ### Health status
 
-Indicates whether the issue is on track: On track, Needs attention, or At risk. Set via right sidebar → **Health status** or `/health_status on_track` quick action. Visible on boards and in epic views.
+Indicates whether the issue is on track: On track, Needs attention or At risk. Set via right sidebar → **Health status** or `/health_status on_track` quick action. Visible on boards and in epic views.
 
 ### Iteration (Premium)
 
@@ -133,7 +133,7 @@ GitLab automatically tracks everyone who has interacted with the issue (commente
 
 ## Confidential Issues
 
-Confidential issues are visible only to project members with Reporter access or higher, and to the issue creator. They are invisible to Guest role members, external collaborators and the public even on public projects.
+Confidential issues are visible only to project members with Reporter access or higher and to the issue creator. They are invisible to Guest role members, external collaborators and the public even on public projects.
 
 **Create confidential**: on the issue creation form, check **This issue is confidential**. Or use the quick action `/confidential` on an existing issue.
 
@@ -385,13 +385,13 @@ Fields:
 GitLab creates these default labels in every new project:
 `bug`, `confirmed`, `critical`, `discussion`, `documentation`, `enhancement`, `suggestion`, `support`
 
-These can be edited or deleted, and additional labels can be added freely.
+These can be edited or deleted and additional labels can be added freely.
 
 ### Using labels
 
-Apply labels when creating an issue, or from the right sidebar on an existing issue. In the issue list view, click a label to filter to all issues with that label.
+Apply labels when creating an issue or from the right sidebar on an existing issue. In the issue list view, click a label to filter to all issues with that label.
 
-Labels on an MR are separate from labels on the related issue. Applying a label to the MR does not apply it to the issue, and vice versa.
+Labels on an MR are separate from labels on the related issue. Applying a label to the MR does not apply it to the issue and vice versa.
 
 ---
 
@@ -473,7 +473,7 @@ team::design
 
 ## Milestones
 
-Milestones represent a goal with a deadline - a sprint, a release version, a project phase. Issues and merge requests are assigned to milestones, and GitLab tracks progress.
+Milestones represent a goal with a deadline - a sprint, a release version, a project phase. Issues and merge requests are assigned to milestones and GitLab tracks progress.
 
 ### Creating a milestone
 
@@ -571,7 +571,7 @@ Create additional boards: Plan → Boards → the dropdown showing current board
 
 Epics are large work items that span multiple issues and potentially multiple milestones. They represent initiatives, themes or user journeys that are too large to be a single issue.
 
-**Navigate to epics**: Plan → **Work items** → filter by Type = Epic, or legacy path Plan → **Epics**.
+**Navigate to epics**: Plan → **Work items** → filter by Type = Epic or legacy path Plan → **Epics**.
 
 ### Creating an epic
 
@@ -610,7 +610,7 @@ From the epic: scroll to **Child items** → **Add** → search for issues by ti
 
 From an issue: right sidebar → **Epic** → search and select.
 
-From quick action in a comment: `/relate` then link manually, or set the parent directly.
+From quick action in a comment: `/relate` then link manually or set the parent directly.
 
 ### Epic progress
 
@@ -645,7 +645,7 @@ Filter options:
 - Filter by label: show only epics with specific labels (e.g. show only `team::frontend` epics)
 - Filter by milestone: show only epics associated with a specific milestone
 - Filter by assignee: show epics assigned to a specific user
-- Show open epics, closed epics, or all
+- Show open epics, closed epics or all
 
 ### Roadmap bars
 
@@ -817,7 +817,7 @@ When creating an issue or MR, a **Choose a template** dropdown appears above the
 
 ## Service Desk
 
-Service Desk is a built-in customer support system. Customers email a unique project address, and their emails automatically become confidential issues. Your team responds through issue comments, and the customer receives those responses by email - all without the customer needing a GitLab account.
+Service Desk is a built-in customer support system. Customers email a unique project address and their emails automatically become confidential issues. Your team responds through issue comments and the customer receives those responses by email - all without the customer needing a GitLab account.
 
 **Tier**: Free (all plans)
 
@@ -928,7 +928,7 @@ Click **New snippet** → add title, description, one or more files → set visi
 
 ### Multi-file snippets
 
-Unlike GitHub Gists which are single-file, GitLab Snippets support up to **10 files** per snippet. This is useful for sharing a config file alongside its documentation, or a short script with a requirements file.
+Unlike GitHub Gists which are single-file, GitLab Snippets support up to **10 files** per snippet. This is useful for sharing a config file alongside its documentation or a short script with a requirements file.
 
 ### Snippet features
 
@@ -976,7 +976,7 @@ Maximum 50 MB total per snippet. Maximum 10 files. Files with binary content are
 
 **Not using group labels for shared vocabulary.** Teams create duplicate labels in every project: `bug` in project A, `bug` in project B, each a different shade of red. Create labels at the group level once and they appear consistently across all projects.
 
-**Applying conflicting labels without scoped labels.** Without scoped labels, nothing prevents `priority::high` and `priority::low` coexisting on the same issue. Upgrade to scoped labels (Premium) or establish a team convention, and communicate clearly which label should replace which.
+**Applying conflicting labels without scoped labels.** Without scoped labels, nothing prevents `priority::high` and `priority::low` coexisting on the same issue. Upgrade to scoped labels (Premium) or establish a team convention and communicate clearly which label should replace which.
 
 **Creating issues in the wrong project.** In a multi-project group, issues should live in the project they are most related to. A UX issue should live in the frontend project, not in the backend project. Incorrectly placed issues break filtering, board views and milestone reporting.
 
@@ -992,7 +992,7 @@ Maximum 50 MB total per snippet. Maximum 10 files. Files with binary content are
 
 ## Summary
 
-- **Issues** are the primary work tracking unit. Create from the UI, the glab CLI, or via Service Desk. Navigate via Plan → Work items
+- **Issues** are the primary work tracking unit. Create from the UI, the glab CLI or via Service Desk. Navigate via Plan → Work items
 - **Fields**: title, description, assignees (multiple), labels, milestone, due date, weight (Premium), health status, iteration (Premium), epic (Premium)
 - **Confidential issues**: visible only to Reporter+ members. Use for security vulnerabilities and sensitive topics
 - **Sub-issues**: nest issues hierarchically; parent shows progress as percentage of closed children

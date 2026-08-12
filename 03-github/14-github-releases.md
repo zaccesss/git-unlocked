@@ -240,7 +240,7 @@ Releases can include binary files alongside the automatic source code archives. 
 
 **Attaching files:**
 
-In the release form, drag and drop files into the **Attach binaries** area, or click to browse.
+In the release form, drag and drop files into the **Attach binaries** area or click to browse.
 
 **Asset naming conventions:**
 

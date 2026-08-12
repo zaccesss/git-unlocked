@@ -286,7 +286,7 @@ Releases provide versioned snapshots of your repository with attached binary ass
 1. Go to **Releases** in the repository navigation (or **Code** > releases count)
 2. Click **Draft a new release**
 3. Fill in:
-   - **Tag**: the Git tag for this release. Type a new tag (e.g. `v1.2.0`) to create it, or select an existing tag.
+   - **Tag**: the Git tag for this release. Type a new tag (e.g. `v1.2.0`) to create it or select an existing tag.
    - **Target**: the branch or commit the tag points to
    - **Release title**: the name of the release (e.g. "v1.2.0 - Performance improvements")
    - **Description**: what changed. Supports Markdown. Include a changelog.
@@ -437,7 +437,7 @@ Gitea has three visibility levels:
 **Internal**: visible to any authenticated user on the Gitea instance. Not visible to the public internet. Useful for company internal repositories where all employees should have read access without needing individual invitations.
 
 > [!NOTE]
-> **Internal visibility** must be enabled by the instance administrator in `app.ini`. It is not available on all Gitea instances, and it does not exist in GitHub or GitLab.com equivalents. It maps conceptually to GitLab's "Internal" visibility level on self-managed instances.
+> **Internal visibility** must be enabled by the instance administrator in `app.ini`. It is not available on all Gitea instances and it does not exist in GitHub or GitLab.com equivalents. It maps conceptually to GitLab's "Internal" visibility level on self-managed instances.
 
 ---
 
@@ -575,7 +575,7 @@ Check the repository on Gitea - the image should show the LFS pointer in the fil
 
 **Creating a repository with a README when you plan to push an existing repo**
 
-If you initialise a repository with a README and then try to push your local repository, Git rejects the push because the histories diverge. Either: initialise empty (no README), or fetch and merge the README before pushing.
+If you initialise a repository with a README and then try to push your local repository, Git rejects the push because the histories diverge. Either: initialise empty (no README) or fetch and merge the README before pushing.
 
 **Not committing .gitattributes after `git lfs track`**
 

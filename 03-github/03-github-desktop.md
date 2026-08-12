@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 30 minutes
 
-GitHub Desktop is a free, official graphical application that lets you use Git and GitHub without ever typing a command. Instead of memorising `git commit`, `git push` and `git branch`, you click buttons, see your changes visually and manage your repositories through a clean interface. It is one of the best ways to get started with Git and GitHub, and many experienced developers continue using it alongside the command line for the visual diff view and streamlined commit workflow.
+GitHub Desktop is a free, official graphical application that lets you use Git and GitHub without ever typing a command. Instead of memorising `git commit`, `git push` and `git branch`, you click buttons, see your changes visually and manage your repositories through a clean interface. It is one of the best ways to get started with Git and GitHub and many experienced developers continue using it alongside the command line for the visual diff view and streamlined commit workflow.
 
 ---
 
@@ -41,7 +41,7 @@ GitHub Desktop is a free, official graphical application that lets you use Git a
 
 ## What is GitHub Desktop?
 
-GitHub Desktop is an open source, Electron-based application built by GitHub. It provides a graphical user interface for Git operations and deep integration with GitHub.com. It is written in TypeScript and React, and its source code is publicly available at `github.com/desktop/desktop`.
+GitHub Desktop is an open source, Electron-based application built by GitHub. It provides a graphical user interface for Git operations and deep integration with GitHub.com. It is written in TypeScript and React and its source code is publicly available at `github.com/desktop/desktop`.
 
 **What GitHub Desktop lets you do:**
 

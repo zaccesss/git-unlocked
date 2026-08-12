@@ -24,7 +24,7 @@ delta is a syntax-highlighting pager for `git diff`, `git log`, `git show`, `git
 
 ## 1. What delta does
 
-The default `git diff` output is functional but plain. Everything is printed as text with `+` and `-` markers. There is no syntax highlighting, no word-level diffing, and no line numbers.
+The default `git diff` output is functional but plain. Everything is printed as text with `+` and `-` markers. There is no syntax highlighting, no word-level diffing and no line numbers.
 
 delta changes this. Here is what you get after installing and configuring it:
 
@@ -313,7 +313,7 @@ Confusing delta's `dark` and `light` settings with a theme choice. `dark = true`
 
 ## 10. Summary
 
-delta is a Rust-written pager that transforms all git diff output with syntax highlighting, word-level diff detection, side-by-side view, line numbers and navigation. Install via your package manager (the package is `git-delta`), then add four lines to your `~/.gitconfig`: `core.pager = delta`, `interactive.diffFilter = delta --color-only`, and the `[delta]` section with `navigate = true`, `side-by-side = true` and your preferred theme. It works with all git commands that produce diff output, with plain `diff`, and with other patch-format tools. Custom pagers are not supported by lazygit on Windows - use delta from the terminal directly or from WSL.
+delta is a Rust-written pager that transforms all git diff output with syntax highlighting, word-level diff detection, side-by-side view, line numbers and navigation. Install via your package manager (the package is `git-delta`), then add four lines to your `~/.gitconfig`: `core.pager = delta`, `interactive.diffFilter = delta --color-only` and the `[delta]` section with `navigate = true`, `side-by-side = true` and your preferred theme. It works with all git commands that produce diff output, with plain `diff` and with other patch-format tools. Custom pagers are not supported by lazygit on Windows - use delta from the terminal directly or from WSL.
 
 ---
 

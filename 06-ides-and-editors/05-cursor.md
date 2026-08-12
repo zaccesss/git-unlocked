@@ -34,7 +34,7 @@ Cursor was created by Anysphere, founded in 2022 by MIT graduates Michael Truell
 
 By early 2026 Cursor's reported annual recurring revenue had crossed $1 billion. The editor has approximately 500,000 paying subscribers. Co-founder Arvid Lunnemark left in October 2025 to found an AI safety organisation; the remaining three founders continue to run the company.
 
-The core architectural decision was to fork VS Code rather than build a plugin. This gave Cursor access to VS Code's rendering pipeline and allowed AI to be integrated at a deeper level than an extension API permits - for example, rendering AI suggestions directly in the editor buffer with custom decorations, and building the Composer agent panel as a first-class UI element rather than a webview.
+The core architectural decision was to fork VS Code rather than build a plugin. This gave Cursor access to VS Code's rendering pipeline and allowed AI to be integrated at a deeper level than an extension API permits - for example, rendering AI suggestions directly in the editor buffer with custom decorations and building the Composer agent panel as a first-class UI element rather than a webview.
 
 ---
 
@@ -72,7 +72,7 @@ Everything covered in [01-vs-code.md](01-vs-code.md) applies directly to Cursor.
 
 Cursor generates commit messages from your staged diff using a sparkle icon in the commit message box of the Source Control panel, exactly as Copilot does in VS Code. The difference is that Cursor uses its own models (or your configured model) rather than requiring a Copilot subscription.
 
-The generated messages respect conventional commit format and can be steered by a **Cursor Rule** (see section 9) that specifies your team's commit style. For example, a rule can enforce a specific prefix list (`feat:`, `fix:`, `docs:`, `chore:`), a maximum subject line length, or a requirement to reference issue numbers.
+The generated messages respect conventional commit format and can be steered by a **Cursor Rule** (see section 9) that specifies your team's commit style. For example, a rule can enforce a specific prefix list (`feat:`, `fix:`, `docs:`, `chore:`), a maximum subject line length or a requirement to reference issue numbers.
 
 To regenerate: click the sparkle icon again. Each click produces a fresh message from the same diff.
 
@@ -80,9 +80,9 @@ To regenerate: click the sparkle icon again. Each click produces a fresh message
 
 ## 5. Cursor Blame
 
-Cursor Blame is a feature unique to Cursor, added in Cursor 2.4. It extends `git blame` with AI attribution - every line in a file is tagged not just with the commit that last modified it but with **how it was written**: human-authored, Tab-completion suggestion, or Agent-generated code.
+Cursor Blame is a feature unique to Cursor, added in Cursor 2.4. It extends `git blame` with AI attribution - every line in a file is tagged not just with the commit that last modified it but with **how it was written**: human-authored, Tab-completion suggestion or Agent-generated code.
 
-To open Cursor Blame, right-click any line and select **Cursor Blame**, or run `Cursor: Show Blame` from the Command Palette. The gutter fills with a colour-coded annotation:
+To open Cursor Blame, right-click any line and select **Cursor Blame** or run `Cursor: Show Blame` from the Command Palette. The gutter fills with a colour-coded annotation:
 
 - **Human** - written directly by a developer
 - **Tab** - accepted from a Cursor Tab (inline completion) suggestion
@@ -90,7 +90,7 @@ To open Cursor Blame, right-click any line and select **Cursor Blame**, or run `
 
 Clicking any annotation opens the associated context: for human edits, it shows the commit; for Tab completions, it shows the completion suggestion that was accepted; for Agent lines, it opens the Composer conversation that produced the change.
 
-This is useful for code review and archaeology - when you find a line that needs explaining, Cursor Blame shows you not just when it was written but whether it came from a human decision or an AI suggestion, and which conversation led to it.
+This is useful for code review and archaeology - when you find a line that needs explaining, Cursor Blame shows you not just when it was written but whether it came from a human decision or an AI suggestion and which conversation led to it.
 
 ---
 
@@ -122,7 +122,7 @@ In Agent mode, you can ask Cursor to perform complete Git workflows in natural l
 
 > "Create a branch called feature/user-authentication, implement JWT token validation in src/auth/middleware.py, write unit tests in tests/test_auth.py, commit both files with an appropriate conventional commit message and push the branch."
 
-Cursor runs `git checkout -b feature/user-authentication`, edits the files, runs your test suite, fixes any failures it can, commits with a generated message, and pushes. It reports what it did at each step.
+Cursor runs `git checkout -b feature/user-authentication`, edits the files, runs your test suite, fixes any failures it can, commits with a generated message and pushes. It reports what it did at each step.
 
 **Reviewing your changes before committing**:
 
@@ -138,7 +138,7 @@ Cursor reads the staged changes, unstages everything, then stages and commits in
 
 **Summarising a pull request**:
 
-> "Look at the diff between this branch and main and write a pull request description explaining the changes, why they were made, and what reviewers should focus on."
+> "Look at the diff between this branch and main and write a pull request description explaining the changes, why they were made and what reviewers should focus on."
 
 Cursor runs `git diff main...HEAD`, reads the output and generates a PR description you can copy into GitHub.
 
@@ -304,7 +304,7 @@ Background Agent usage and Cloud Agent tasks draw from the same credit pool. Mon
 
 **Exercise 1 - AI commit message with a custom rule**
 
-Create a `.cursor/rules/git-conventions.mdc` file in your repository with a simple rule: commit messages must use conventional commit format and be under 72 characters. Make a meaningful change to a file, stage it, and click the sparkle icon in the commit message box. Verify that the generated message follows your rule.
+Create a `.cursor/rules/git-conventions.mdc` file in your repository with a simple rule: commit messages must use conventional commit format and be under 72 characters. Make a meaningful change to a file, stage it and click the sparkle icon in the commit message box. Verify that the generated message follows your rule.
 
 **Exercise 2 - use Agent mode for a Git task**
 
@@ -330,7 +330,7 @@ Treating Agent mode Git operations as safe to ignore is a significant risk. When
 
 Using `.cursorrules` at the root instead of `.cursor/rules/*.mdc` is not wrong (it still works) but it is the older format. New projects should use the `.mdc` format in the `.cursor/rules/` directory. Teams should commit these rule files to the repository so all members get consistent AI behaviour.
 
-Over-relying on Cursor Blame for code attribution without understanding that AI attribution is not perfectly accurate. Cursor Blame tracks Tab completions and Agent runs within a specific Cursor session and repository. If you switch machines, use a different editor, or the session data is lost, the attribution may be incomplete or missing.
+Over-relying on Cursor Blame for code attribution without understanding that AI attribution is not perfectly accurate. Cursor Blame tracks Tab completions and Agent runs within a specific Cursor session and repository. If you switch machines, use a different editor or the session data is lost, the attribution may be incomplete or missing.
 
 Running out of credits mid-task without monitoring usage. Cursor's credit-based billing means a complex multi-file Agent task on a frontier model can consume a significant portion of a Pro plan's monthly allocation. Check your usage regularly and consider using a less expensive model (Claude Haiku, GPT-4o-mini) for routine tasks.
 
@@ -340,7 +340,7 @@ Forgetting that Cursor is a VS Code fork means forgetting that all VS Code Git d
 
 ## 16. Summary
 
-Cursor is a VS Code fork that inherits the complete VS Code Git experience - Source Control panel, line-level staging, 3-way merge editor, Source Control Graph, inline blame, Timeline view - and adds AI capabilities that go significantly beyond Copilot. AI commit message generation is built in. Cursor Blame extends `git blame` with AI attribution showing which lines came from human edits, Tab completions, or Agent conversations. Agent mode gives the AI access to the terminal and file system, enabling complete autonomous Git workflows: branch creation, staging, committing, pushing and pull request generation, all from natural language instructions. Background and Cloud Agents extend this to asynchronous and cloud-based execution. Cursor Rules committed to the repository enforce team Git conventions consistently across all AI interactions. The VS Code extension ecosystem works without modification. As of April 2026, Cursor is the most mature and widely adopted AI-first editor for production Git workflows.
+Cursor is a VS Code fork that inherits the complete VS Code Git experience - Source Control panel, line-level staging, 3-way merge editor, Source Control Graph, inline blame, Timeline view - and adds AI capabilities that go significantly beyond Copilot. AI commit message generation is built in. Cursor Blame extends `git blame` with AI attribution showing which lines came from human edits, Tab completions or Agent conversations. Agent mode gives the AI access to the terminal and file system, enabling complete autonomous Git workflows: branch creation, staging, committing, pushing and pull request generation, all from natural language instructions. Background and Cloud Agents extend this to asynchronous and cloud-based execution. Cursor Rules committed to the repository enforce team Git conventions consistently across all AI interactions. The VS Code extension ecosystem works without modification. As of April 2026, Cursor is the most mature and widely adopted AI-first editor for production Git workflows.
 
 ---
 

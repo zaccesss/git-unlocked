@@ -151,7 +151,7 @@ You can change a repository's visibility in **Settings → General → Danger Zo
 - If secrets were ever committed to the history, they are now exposed - even after deletion
 
 > [!CAUTION]
-> Before making a private repository public, check the **entire commit history** for secrets, API keys or personal information. Even deleted files remain in the Git history. Use `git log` and `git show` to inspect past commits, or run a secret scanning tool.
+> Before making a private repository public, check the **entire commit history** for secrets, API keys or personal information. Even deleted files remain in the Git history. Use `git log` and `git show` to inspect past commits or run a secret scanning tool.
 
 ---
 

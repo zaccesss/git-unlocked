@@ -4,7 +4,7 @@
 
 GitLab and GitHub are the two dominant platforms for hosting Git repositories and collaborating on software. From the outside they look similar: both store your code, both have issue trackers, both run automated pipelines. Underneath, they are philosophically and architecturally different products built for different kinds of teams.
 
-If you are choosing between them, migrating from one to the other, or working in an organisation that uses both, this file gives you everything you need to make an informed comparison: features, pricing, philosophy, what each does better, what each does worse and how to decide which belongs in your workflow.
+If you are choosing between them, migrating from one to the other or working in an organisation that uses both, this file gives you everything you need to make an informed comparison: features, pricing, philosophy, what each does better, what each does worse and how to decide which belongs in your workflow.
 
 ---
 
@@ -468,7 +468,7 @@ Both do the same job - define automated pipelines. Notice the structural differe
 
 **Assuming merge request approvals are free on GitLab.** This is the single biggest surprise for teams moving from GitHub. On GitHub, requiring reviews before merge is free. On GitLab, it is Premium. If your workflow depends on enforced code review, budget for Premium from day one.
 
-**Comparing only headline prices.** GitHub Team at $4/user/month looks much cheaper than GitLab Premium at $29/user/month. But add Copilot Business ($19), consider that security scanning costs extra with GitHub Advanced Security ($49/committer), and the gap narrows. Always compare the total cost of the toolchain you actually need, not just the base platform prices.
+**Comparing only headline prices.** GitHub Team at $4/user/month looks much cheaper than GitLab Premium at $29/user/month. But add Copilot Business ($19), consider that security scanning costs extra with GitHub Advanced Security ($49/committer) and the gap narrows. Always compare the total cost of the toolchain you actually need, not just the base platform prices.
 
 **Thinking GitHub is less secure because it is cheaper.** GitHub's security features are strong, particularly CodeQL for SAST and Dependabot for dependencies. The main things you cannot get from GitHub at any price are native DAST and fuzz testing. GitHub's security model is different from GitLab's, not necessarily weaker.
 
@@ -487,7 +487,7 @@ Both do the same job - define automated pipelines. Notice the structural differe
 - **Security**: GitLab includes DAST and fuzz testing that GitHub does not offer natively. GitHub Advanced Security (SAST, secret scanning, code scanning) costs $49/committer/month. GitLab's security tools are included in Ultimate.
 - **AI**: GitHub Copilot leads in individual code completion breadth; GitLab Duo leads in DevSecOps AI integration (pipeline analysis, vulnerability resolution, agentic workflows)
 - **Pricing**: GitHub Team $4; GitHub Enterprise $21. GitLab Premium $29; GitLab Ultimate ~$99. Annual only for GitLab paid plans. Add AI add-ons and security tools and the real cost gap is smaller than headline prices suggest.
-- **Controversy**: GitLab's pricing is criticised for placing merge request approvals and CODEOWNERS enforcement behind the Premium paywall, and for the 53% Premium price increase in April 2023.
+- **Controversy**: GitLab's pricing is criticised for placing merge request approvals and CODEOWNERS enforcement behind the Premium paywall and for the 53% Premium price increase in April 2023.
 - **Self-hosting**: GitLab CE is free and MIT-licensed. GitHub Enterprise Server costs $21/user/month. For organisations that must self-host, GitLab has a decisive cost advantage.
 - **Community**: GitHub has 100M+ users and dominates open source. GitLab has 40M+ users and dominates regulated enterprise.
 - **Choose GitLab for**: regulated industries, self-hosting requirements, single-vendor DevSecOps, DAST/fuzz testing, reducing tool sprawl.

@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 35 minutes
 
-The Jira integration is Bitbucket's single greatest differentiator. Every major Git platform offers some form of Jira connection via API or third-party apps - but only Bitbucket, being made by the same company, delivers a native, deep integration that works bidirectionally without setup complexity. Code activity in Bitbucket automatically surfaces in Jira. Jira actions can be triggered from Git commit messages. Developers stay in their editor while project managers stay in their issue tracker, and both see the same connected picture of what is happening.
+The Jira integration is Bitbucket's single greatest differentiator. Every major Git platform offers some form of Jira connection via API or third-party apps - but only Bitbucket, being made by the same company, delivers a native, deep integration that works bidirectionally without setup complexity. Code activity in Bitbucket automatically surfaces in Jira. Jira actions can be triggered from Git commit messages. Developers stay in their editor while project managers stay in their issue tracker and both see the same connected picture of what is happening.
 
 This file covers the complete Jira-Bitbucket integration: how to connect the two products, how the development panel works, smart commits and their full syntax, automating Jira transitions, linking branches and PRs to issues and using the integration effectively in real team workflows.
 
@@ -31,7 +31,7 @@ This file covers the complete Jira-Bitbucket integration: how to connect the two
 
 ## How the integration works architecturally
 
-Bitbucket and Jira are both Atlassian products that share the same identity layer (Atlassian accounts), the same organisation structure (Atlassian organisations containing multiple products), and the same underlying platform APIs. This shared foundation is what makes the integration deep rather than surface-level.
+Bitbucket and Jira are both Atlassian products that share the same identity layer (Atlassian accounts), the same organisation structure (Atlassian organisations containing multiple products) and the same underlying platform APIs. This shared foundation is what makes the integration deep rather than surface-level.
 
 When you connect a Bitbucket workspace to a Jira site:
 
@@ -546,7 +546,7 @@ If you have access to Jira Automation:
 
 **Committing with a different email than your Atlassian account**
 
-Smart commits and development panel links are matched by committer identity. If your Git `user.email` is `personal@gmail.com` but your Atlassian account is `work@company.com`, and the Jira site is linked to your work account, smart commits from your personal email address will not execute.
+Smart commits and development panel links are matched by committer identity. If your Git `user.email` is `personal@gmail.com` but your Atlassian account is `work@company.com` and the Jira site is linked to your work account, smart commits from your personal email address will not execute.
 
 Set your Git email for work repositories:
 

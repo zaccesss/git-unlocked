@@ -99,7 +99,7 @@ Options:
 - **Create merge request and branch**: creates a new branch named after the issue (e.g. `1-add-dark-mode`) and opens a draft MR. The branch name includes the issue number so GitLab auto-links them.
 - **Create branch**: creates the branch only, no MR yet
 
-This is the recommended workflow for issue-driven development. The MR is automatically linked to the issue, and merging the MR automatically closes the issue.
+This is the recommended workflow for issue-driven development. The MR is automatically linked to the issue and merging the MR automatically closes the issue.
 
 ### From the glab CLI
 
@@ -338,9 +338,9 @@ You can have multiple rules - for example: "2 approvals from the backend team, A
 
 ### Approving and unapproving
 
-To approve: click the **Approve** button in the MR widget on the Overview tab, or use the quick action `/approve` in a comment.
+To approve: click the **Approve** button in the MR widget on the Overview tab or use the quick action `/approve` in a comment.
 
-To remove your approval: click **Revoke approval**, or use `/unapprove`.
+To remove your approval: click **Revoke approval** or use `/unapprove`.
 
 The approval status shows who has approved, when and whether the required threshold has been met.
 
@@ -824,13 +824,13 @@ glab mr create --fill --target-branch main
 
 **Confusing assignee and reviewer.** The assignee is the person responsible for the MR - usually the author. The reviewer is who you are asking to review the code. They are different people. Many teams use assignee as "whoever is working on this" and reviewer as "whoever should approve it".
 
-**Not resolving threads before merging.** Even if your project does not require thread resolution before merge, leaving comment threads unresolved is poor hygiene. Future readers of the MR cannot tell whether the concern was addressed or forgotten. Resolve threads when you have addressed the feedback, or reply explaining why you chose a different approach.
+**Not resolving threads before merging.** Even if your project does not require thread resolution before merge, leaving comment threads unresolved is poor hygiene. Future readers of the MR cannot tell whether the concern was addressed or forgotten. Resolve threads when you have addressed the feedback or reply explaining why you chose a different approach.
 
 **Approving your own MR (Free tier).** On the Free tier, any Developer can click Approve including the MR author. This is meaningless - it just increments a number. On Premium, you can configure the project to prevent self-approval. On Free, simply do not approve your own MRs.
 
 **Force-pushing to a branch with an open MR.** Force-pushing (rewriting history on a branch that has an open MR) confuses reviewers. Their comments reference specific commit SHAs that no longer exist. GitLab handles this gracefully but it is disorienting. If you need to rebase interactively, do it before opening the MR or after communicating with reviewers.
 
-**Not understanding that issue closing only works on the default branch.** A very common confusion: you merge a branch into `develop`, expect the linked issue to close, and it does not. Issues with `Closes #N` in the MR description only close when the MR merges into the **default branch**. If your workflow uses a `develop` branch as an integration branch before `main`, issues stay open until they eventually land in `main`.
+**Not understanding that issue closing only works on the default branch.** A very common confusion: you merge a branch into `develop`, expect the linked issue to close and it does not. Issues with `Closes #N` in the MR description only close when the MR merges into the **default branch**. If your workflow uses a `develop` branch as an integration branch before `main`, issues stay open until they eventually land in `main`.
 
 **Using squash when you should not.** Squashing is excellent for cleaning up "WIP commit", "fix typo", "oops" commits. It is harmful when the individual commits tell an important story - if each commit is a meaningful, atomic change, squashing destroys that information. Use squash selectively based on whether the commit history is worth preserving.
 
@@ -838,8 +838,8 @@ glab mr create --fill --target-branch main
 
 ## Summary
 
-- A merge request is a proposal to merge one branch into another, and the complete record of code review, discussion and pipeline results
-- **Create** MRs from the terminal URL in push output, from the UI, from an issue, or with `glab mr create --fill`
+- A merge request is a proposal to merge one branch into another and the complete record of code review, discussion and pipeline results
+- **Create** MRs from the terminal URL in push output, from the UI, from an issue or with `glab mr create --fill`
 - **Draft MRs** signal work-in-progress. Prefix the title with `Draft:` or use `/draft`. Remove with **Mark as ready** or `/ready`
 - **Review** happens in the Changes tab: inline comments, batch reviews, suggested changes that can be applied with one click
 - **Suggested changes** use the `suggestion` code fence and can be batch-applied in a single commit

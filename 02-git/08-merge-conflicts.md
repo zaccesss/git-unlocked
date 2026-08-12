@@ -190,7 +190,7 @@ For a more powerful view, click **Resolve in Merge Editor** at the bottom of the
 - **Right panel** - the incoming branch version
 - **Bottom panel** - the result (editable directly)
 
-You can accept changes from either side using the checkboxes, or type freely in the result panel.
+You can accept changes from either side using the checkboxes or type freely in the result panel.
 
 ### Completing the merge in VS Code
 
@@ -290,7 +290,7 @@ The price is £12.99 per month.
 >>>>>>> feature/pricing-update
 ```
 
-Resolution: decide which price is correct, or write a new line entirely.
+Resolution: decide which price is correct or write a new line entirely.
 
 ### Delete/modify conflict
 
@@ -480,7 +480,7 @@ If `main` has new commits on the remote that you do not have locally, your merge
 
 **Running `git commit -m` instead of letting Git open the editor for the merge message.**
 
-When completing a merge with `git commit`, you can let Git open your editor and use the auto-generated merge message, or pass `-m` with your own message. Both are fine, but running `git commit -m` overwrites the pre-filled message which includes useful information about which branch was merged.
+When completing a merge with `git commit`, you can let Git open your editor and use the auto-generated merge message or pass `-m` with your own message. Both are fine, but running `git commit -m` overwrites the pre-filled message which includes useful information about which branch was merged.
 
 ---
 

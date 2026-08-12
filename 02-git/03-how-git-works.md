@@ -108,7 +108,7 @@ Git uses four types of objects:
 
 **Tree** - stores a directory listing. A tree contains pointers to blobs (for files) and other trees (for subdirectories), along with filenames and permissions. A tree represents the complete state of a directory at a specific moment.
 
-**Commit** - stores a snapshot of the entire project. A commit points to a tree (the root directory of the project at that moment), one or more parent commits, and metadata: author name, author email, committer name, committer email, timestamp and the commit message.
+**Commit** - stores a snapshot of the entire project. A commit points to a tree (the root directory of the project at that moment), one or more parent commits and metadata: author name, author email, committer name, committer email, timestamp and the commit message.
 
 **Tag** - stores a named reference to a specific commit, used for marking releases. Tags are covered in [git/16-tags-and-releases.md](16-tags-and-releases.md).
 
@@ -161,7 +161,7 @@ This is fundamentally different from older VCS tools like SVN, where creating a 
 
 HEAD is a special pointer that tells Git which branch you are currently on - or more precisely, which commit your working directory is based on.
 
-In most cases, HEAD points to a branch name, not directly to a commit. For example, if you are on the `main` branch, HEAD contains the text `ref: refs/heads/main`. When you make a new commit, the `main` pointer moves forward, and HEAD (which points to `main`) effectively moves forward too.
+In most cases, HEAD points to a branch name, not directly to a commit. For example, if you are on the `main` branch, HEAD contains the text `ref: refs/heads/main`. When you make a new commit, the `main` pointer moves forward and HEAD (which points to `main`) effectively moves forward too.
 
 When HEAD points directly to a commit rather than a branch name, you are in what Git calls **detached HEAD state**. This happens when you check out a specific commit directly. You can look around and even make commits, but those commits will not be saved to any branch - they will eventually be lost unless you create a branch from them.
 

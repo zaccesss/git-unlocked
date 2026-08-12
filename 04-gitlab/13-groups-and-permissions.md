@@ -2,9 +2,9 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 35 minutes
 
-GitLab's permission system is built around groups, roles and inheritance. Get it right and your team has exactly the access they need with no friction. Get it wrong and you end up with developers unable to push code, managers unable to read reports, or contractors with more access than they should have. Understanding how roles cascade through the group hierarchy, how access tokens scope to groups and projects and how SAML SSO locks down authentication is foundational for anyone administering a GitLab team or organisation.
+GitLab's permission system is built around groups, roles and inheritance. Get it right and your team has exactly the access they need with no friction. Get it wrong and you end up with developers unable to push code, managers unable to read reports or contractors with more access than they should have. Understanding how roles cascade through the group hierarchy, how access tokens scope to groups and projects and how SAML SSO locks down authentication is foundational for anyone administering a GitLab team or organisation.
 
-This file covers the full picture: creating and managing groups, every role and what it actually allows, the subgroup hierarchy and how access inherits through it, group and project access tokens, deploy tokens, SAML SSO and SCIM provisioning, group-level CI/CD variables and how they cascade, and how to structure a real organisation in GitLab's namespace hierarchy.
+This file covers the full picture: creating and managing groups, every role and what it actually allows, the subgroup hierarchy and how access inherits through it, group and project access tokens, deploy tokens, SAML SSO and SCIM provisioning, group-level CI/CD variables and how they cascade and how to structure a real organisation in GitLab's namespace hierarchy.
 
 ---
 
@@ -59,7 +59,7 @@ Fill in:
 - **Group name**: the display name shown in the UI. Can contain spaces and special characters. Different from the URL slug.
 - **Group URL (slug)**: the URL-safe identifier used in all project URLs within this group. Choose carefully - renaming later breaks every URL that references this group and every project inside it.
 - **Visibility level**: Public (anyone can see the group page and its public projects), Internal (self-managed only - any authenticated user on the instance), Private (only members can see anything inside)
-- **Who can create projects in this group**: Maintainer and Owner (default), Developers, or No one
+- **Who can create projects in this group**: Maintainer and Owner (default), Developers or No one
 
 After creation, the group page shows an empty projects list. The left sidebar navigation for a group is:
 
@@ -246,7 +246,7 @@ The lowest possible role, designed for users who need to be a group member for t
 - View any issues, MRs, wikis or code
 - Almost everything else
 
-Use Minimal Access for: external auditors who need to authenticate via group SSO but should not see code, or for billing compliance where a user must technically be in a group.
+Use Minimal Access for: external auditors who need to authenticate via group SSO but should not see code or for billing compliance where a user must technically be in a group.
 
 ### Security Manager
 
@@ -313,7 +313,7 @@ Group -> **Manage -> Members** -> **Invite members**
 
 Fill in:
 
-- **Username or email**: search by GitLab username, or enter an email address to invite someone who does not have a GitLab account yet
+- **Username or email**: search by GitLab username or enter an email address to invite someone who does not have a GitLab account yet
 - **Role**: the role to assign (Guest, Reporter, Developer, Maintainer, Owner, Planner)
 - **Access expiry date**: optional date after which the membership automatically expires (see below)
 
@@ -662,9 +662,9 @@ Group -> Settings -> **CI/CD** -> **Variables** -> **Add variable**
 Configure each variable:
 
 - **Key**: the variable name (e.g. `AWS_ACCESS_KEY_ID`, `DEPLOY_TOKEN`, `REGISTRY_URL`)
-- **Value**: the value (e.g. the actual AWS key, token value, or URL)
+- **Value**: the value (e.g. the actual AWS key, token value or URL)
 - **Type**: Variable (default) or File (value is written to a temp file; `$KEY` gives the file path)
-- **Environment scope**: `*` for all environments, or specific environment names for environment-restricted values
+- **Environment scope**: `*` for all environments or specific environment names for environment-restricted values
 - **Protected**: only available in pipelines running on protected branches or tags
 - **Masked**: value is hidden in all job logs. Must meet masking requirements (at least 8 chars, no newlines, specific character requirements)
 - **Expanded**: whether `$OTHER_VAR` references inside the value are substituted

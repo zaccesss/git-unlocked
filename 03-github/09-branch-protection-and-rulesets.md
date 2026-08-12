@@ -322,7 +322,7 @@ Bypass lists specify which actors can bypass a ruleset's rules. Actors can be:
 
 ## Organisation-Level Rulesets
 
-Organisation admins can create rulesets that apply across all repositories in the organisation, or to a specific subset of repositories.
+Organisation admins can create rulesets that apply across all repositories in the organisation or to a specific subset of repositories.
 
 **Create an organisation ruleset:**
 

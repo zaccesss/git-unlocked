@@ -2,7 +2,7 @@
 
 **Difficulty:** 🔴 Advanced | **Time:** 60 minutes
 
-GitHub Actions is GitHub's built-in automation and CI/CD platform. It lets you run code automatically in response to events in your repository - running tests when code is pushed, deploying when a release is tagged, sending notifications when an issue is opened, or anything else you can describe in a script. It is one of the most powerful features on GitHub and understanding it thoroughly will transform how you build, test and ship software.
+GitHub Actions is GitHub's built-in automation and CI/CD platform. It lets you run code automatically in response to events in your repository - running tests when code is pushed, deploying when a release is tagged, sending notifications when an issue is opened or anything else you can describe in a script. It is one of the most powerful features on GitHub and understanding it thoroughly will transform how you build, test and ship software.
 
 ---
 

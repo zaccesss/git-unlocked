@@ -77,7 +77,7 @@ Basic Git knowledge. No server administration required - Codeberg is a hosted se
 
 ## Note on Codeberg and Forgejo
 
-Codeberg runs Forgejo. Most features documented in the `forgejo/` folder apply directly to Codeberg. This folder focuses on Codeberg-specific aspects: the hosted service limits, Codeberg Pages (which works differently from self-hosted Forgejo), Woodpecker CI (the CI service Codeberg provides), and the community and governance aspects that make Codeberg distinct.
+Codeberg runs Forgejo. Most features documented in the `forgejo/` folder apply directly to Codeberg. This folder focuses on Codeberg-specific aspects: the hosted service limits, Codeberg Pages (which works differently from self-hosted Forgejo), Woodpecker CI (the CI service Codeberg provides) and the community and governance aspects that make Codeberg distinct.
 
 Where a feature is identical to Forgejo, this folder references the Forgejo documentation rather than repeating it.
 

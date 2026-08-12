@@ -179,7 +179,7 @@ When you press `c`, an inline message prompt appears at the bottom of the screen
 
 For a multi-line commit message with a body and trailers, press `Shift+C` to open your full editor. Write the message, save and close the editor file - lazygit creates the commit.
 
-**Copilot-style AI commit messages** are not built into lazygit. If you want AI commit message generation from the terminal, use your IDE's Source Control panel, or pipe `git diff --staged` to an LLM CLI tool.
+**Copilot-style AI commit messages** are not built into lazygit. If you want AI commit message generation from the terminal, use your IDE's Source Control panel or pipe `git diff --staged` to an LLM CLI tool.
 
 ---
 
@@ -468,7 +468,7 @@ Pressing `d` on a file in the Files panel when you meant to discard changes, but
 
 Confusing `P` (push) and `p` (pull). In lazygit, uppercase and lowercase are different actions. `P` pushes, `p` pulls. The convention is that uppercase operations are more "significant" or outward-facing. Check the help panel (`?`) if you are unsure.
 
-Running lazygit from a directory that is not inside a Git repository. lazygit exits with an error if the current directory is not in a Git repo. Navigate to your project directory first, or pass a path: `lazygit -p /path/to/repo`.
+Running lazygit from a directory that is not inside a Git repository. lazygit exits with an error if the current directory is not in a Git repo. Navigate to your project directory first or pass a path: `lazygit -p /path/to/repo`.
 
 Expecting delta's `n`/`N` navigation to work inside lazygit. The key presses are captured by lazygit's event loop, not passed to the delta pager. For navigatable diffs with delta, run `git diff` directly in the terminal.
 
@@ -478,7 +478,7 @@ Not configuring a Nerd Font when `nerdFontsVersion: "3"` is set. Without a Nerd 
 
 ## 17. Summary
 
-lazygit is a keyboard-driven terminal UI for Git with five panels: Status, Files, Branches, Commits and Stash. Press `1`-`5` to jump between panels, `?` for panel help, `q` to quit. In the Files panel, `space` stages/unstages, `Enter` opens the diff for hunk-level staging, `c` commits inline and `Shift+C` commits in your editor. In Branches, `space` checks out, `n` creates, `d` deletes and `i` starts a rebase. In Commits, `i` starts interactive rebase with visual pick/reword/squash/fixup/drop/reorder, and `Shift+C`/`Shift+V` handles cherry-pick. Global keys: `P` pushes, `p` pulls, `f` fetches. Delta integration works on Mac and Linux via the `pager:` config option but not on native Windows. For the best experience on Windows, run lazygit inside WSL2.
+lazygit is a keyboard-driven terminal UI for Git with five panels: Status, Files, Branches, Commits and Stash. Press `1`-`5` to jump between panels, `?` for panel help, `q` to quit. In the Files panel, `space` stages/unstages, `Enter` opens the diff for hunk-level staging, `c` commits inline and `Shift+C` commits in your editor. In Branches, `space` checks out, `n` creates, `d` deletes and `i` starts a rebase. In Commits, `i` starts interactive rebase with visual pick/reword/squash/fixup/drop/reorder and `Shift+C`/`Shift+V` handles cherry-pick. Global keys: `P` pushes, `p` pulls, `f` fetches. Delta integration works on Mac and Linux via the `pager:` config option but not on native Windows. For the best experience on Windows, run lazygit inside WSL2.
 
 ---
 

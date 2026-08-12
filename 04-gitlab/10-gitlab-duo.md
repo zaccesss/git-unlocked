@@ -127,7 +127,7 @@ Code Suggestions is the inline code completion and generation feature - the part
 
 ### What Code Suggestions does
 
-**Inline completions**: as you type, Duo predicts what you are about to write and shows a greyed-out suggestion. Press `Tab` to accept, `Escape` to dismiss, or keep typing to ignore and refine.
+**Inline completions**: as you type, Duo predicts what you are about to write and shows a greyed-out suggestion. Press `Tab` to accept, `Escape` to dismiss or keep typing to ignore and refine.
 
 **Multi-line generation**: Duo generates entire functions, classes or blocks when prompted. Write a comment describing what you want and Duo fills in the implementation.
 
@@ -365,7 +365,7 @@ Converts a well-described issue into a working code implementation:
 
 **Best for**: well-scoped issues with clear acceptance criteria. Works best when the issue includes technical context about how the feature should be implemented.
 
-**Not suitable for**: vague or under-specified issues ("make the app faster"), issues requiring significant architectural decisions, or frontend changes that require visual judgement.
+**Not suitable for**: vague or under-specified issues ("make the app faster"), issues requiring significant architectural decisions or frontend changes that require visual judgement.
 
 ### Convert to GitLab CI/CD Flow
 
@@ -623,7 +623,7 @@ For enterprise customers with stringent compliance requirements, this documentat
 > [!IMPORTANT]
 > Self-hosted AI models are available with **Duo Enterprise** add-on on **Ultimate** tier, for **self-managed GitLab** instances.
 
-Some organisations cannot send any data to external AI providers - data sovereignty laws, air-gapped environments, or internal security policies require that all AI processing stays on-premises.
+Some organisations cannot send any data to external AI providers - data sovereignty laws, air-gapped environments or internal security policies require that all AI processing stays on-premises.
 
 GitLab Duo Self-Hosted (GA GitLab 17.9) supports running AI models on your own infrastructure:
 
@@ -722,7 +722,7 @@ The choice comes down to whether you primarily want better code completion (Copi
 
 **Expecting perfect code generation from vague prompts.** Code Suggestions and Duo Chat produce better output with specific, detailed prompts. "Write a function to process user data" produces generic code. "Write a Python function that takes a list of user dictionaries with 'name', 'email' and 'age' fields, filters out users under 18 and returns them sorted by name" produces something immediately useful.
 
-**Not reviewing AI-generated code.** Every suggestion from Duo should be reviewed before accepting. AI-generated code can contain subtle bugs, security issues, or approaches that do not fit the codebase's conventions. The speed benefit of AI comes from faster initial generation, not from skipping review.
+**Not reviewing AI-generated code.** Every suggestion from Duo should be reviewed before accepting. AI-generated code can contain subtle bugs, security issues or approaches that do not fit the codebase's conventions. The speed benefit of AI comes from faster initial generation, not from skipping review.
 
 **Assuming chat context persists between sessions.** Duo Chat does not remember previous conversations. Each new chat session starts with no memory of past interactions. If you are continuing a discussion, paste the relevant context at the start of the session.
 

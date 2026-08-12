@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟢 Beginner | **Time:** 20 minutes
 
-This file explains exactly how Git runs when you type a command in the terminal - what the shell actually does, why your Git config applies everywhere, how IDEs tap into the same Git binary you use from the command line, and what happens when Git needs you to type text (like a commit message or a rebase todo list).
+This file explains exactly how Git runs when you type a command in the terminal - what the shell actually does, why your Git config applies everywhere, how IDEs tap into the same Git binary you use from the command line and what happens when Git needs you to type text (like a commit message or a rebase todo list).
 
 ---
 
@@ -28,7 +28,7 @@ Git is an external program, not a built-in feature of any shell. When you type `
 
 This has an important consequence: **any tool that calls the same `git` binary will pick up your Git configuration automatically**. Every alias you define in `~/.gitconfig`, every credential helper you configure, every hook in a repository - all of these apply to VS Code, JetBrains, GitHub Desktop, lazygit, the terminal and every other tool that uses your system Git.
 
-This is also why a broken Git installation affects everything at once. If `git` is not on your PATH, the terminal will say "command not found", your IDE will say "Git not found", and lazygit will refuse to open. The fix is always the same: get `git` onto your PATH.
+This is also why a broken Git installation affects everything at once. If `git` is not on your PATH, the terminal will say "command not found", your IDE will say "Git not found" and lazygit will refuse to open. The fix is always the same: get `git` onto your PATH.
 
 **Checking which Git you have**:
 
@@ -176,7 +176,7 @@ git config --global core.editor "idea --wait"
 git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
 ```
 
-**The `--wait` flag is critical for GUI editors**. Applications like VS Code, Cursor and Sublime Text are designed to open files quickly and return immediately to the command line (so you can keep using other programs). Without `--wait`, Git sees the editor "finish" instantly (because the launcher exited), reads an empty file, and aborts the commit with "Aborting commit due to empty commit message". The `--wait` flag tells the launcher to stay open until the file is closed inside the editor.
+**The `--wait` flag is critical for GUI editors**. Applications like VS Code, Cursor and Sublime Text are designed to open files quickly and return immediately to the command line (so you can keep using other programs). Without `--wait`, Git sees the editor "finish" instantly (because the launcher exited), reads an empty file and aborts the commit with "Aborting commit due to empty commit message". The `--wait` flag tells the launcher to stay open until the file is closed inside the editor.
 
 Terminal editors like `vim`, `nvim`, `nano`, `emacs -nw` and `helix` always block until you save and quit, so they do not need `--wait`.
 
@@ -235,7 +235,7 @@ Most code editors that have "Git integration" are not doing anything magical. Th
 
 ### What this means for your workflow
 
-Because most tools use the same `git` binary and the same `~/.gitconfig`, configuration is a one-time investment. Set `core.editor`, `user.email`, `user.name`, credential helper, and signing key once in `~/.gitconfig` and every tool picks it up automatically.
+Because most tools use the same `git` binary and the same `~/.gitconfig`, configuration is a one-time investment. Set `core.editor`, `user.email`, `user.name`, credential helper and signing key once in `~/.gitconfig` and every tool picks it up automatically.
 
 Git hooks in `.git/hooks/` run regardless of which tool triggered the commit or push - VS Code, the terminal, lazygit, JetBrains - if there is a `pre-commit` hook, it runs. This is why commit linting and pre-commit checks work across your whole team regardless of their preferred tool.
 
@@ -243,7 +243,7 @@ Git hooks in `.git/hooks/` run regardless of which tool triggered the commit or 
 
 ## 6. Line endings across platforms
 
-Line endings are a frequent source of invisible problems in cross-platform teams. Windows uses CRLF (`\r\n`, two bytes), Unix and macOS use LF (`\n`, one byte), and Classic Mac OS (pre-OS X) used CR (`\r`). Git stores files as blobs hashed by content - the same file with CRLF and LF endings has a different hash and is treated as different content.
+Line endings are a frequent source of invisible problems in cross-platform teams. Windows uses CRLF (`\r\n`, two bytes), Unix and macOS use LF (`\n`, one byte) and Classic Mac OS (pre-OS X) used CR (`\r`). Git stores files as blobs hashed by content - the same file with CRLF and LF endings has a different hash and is treated as different content.
 
 The most common symptom: a file shows as "modified" in Git even though you have not changed it. This happens when your editor or OS silently converts line endings when opening or saving a file.
 
@@ -305,7 +305,7 @@ git commit -m "chore: normalise line endings via .gitattributes"
 When you push to GitHub, GitLab or any remote over HTTPS, Git needs credentials. Without a credential helper, Git asks for your username and password on every push. With a credential helper, it stores credentials securely and reuses them.
 
 > [!CAUTION]
-> GitHub disabled HTTPS password authentication for Git operations in August 2021. You can no longer use your GitHub account password to push via HTTPS. Use a personal access token (PAT) instead, or switch to SSH. A credential helper stores the PAT so you only need to enter it once.
+> GitHub disabled HTTPS password authentication for Git operations in August 2021. You can no longer use your GitHub account password to push via HTTPS. Use a personal access token (PAT) instead or switch to SSH. A credential helper stores the PAT so you only need to enter it once.
 
 **Git Credential Manager (GCM)** is the modern cross-platform solution. It handles OAuth for GitHub (including two-factor auth), GitLab, Azure DevOps and Bitbucket.
 
@@ -358,7 +358,7 @@ ssh-add ~/.ssh/id_ed25519
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Then add the public key to your GitHub/GitLab account (Settings → SSH Keys), and clone using the SSH URL: `git@github.com:username/repo.git` instead of the HTTPS URL.
+Then add the public key to your GitHub/GitLab account (Settings → SSH Keys) and clone using the SSH URL: `git@github.com:username/repo.git` instead of the HTTPS URL.
 
 ---
 
@@ -402,13 +402,13 @@ Using `git clone https://user:token@github.com/...` embeds the token in both she
 
 Assuming `.gitconfig` on one machine automatically applies on another. If you work on multiple machines, your `~/.gitconfig` is local to each machine. Many developers keep their dotfiles (`.gitconfig`, `.zshrc`, `.bashrc` and so on) in a Git repository and install them with a symlink script, which is covered in [06-git-aliases.md](06-git-aliases.md).
 
-On Windows, having Git for Windows and a WSL Git that disagree about configuration. The `.gitconfig` in Windows (`C:\Users\username\.gitconfig`) and the one in WSL (`/home/username/.gitconfig`) are separate files. Configure both, or set up a symlink from WSL to point at the Windows config: `ln -s /mnt/c/Users/username/.gitconfig ~/.gitconfig`.
+On Windows, having Git for Windows and a WSL Git that disagree about configuration. The `.gitconfig` in Windows (`C:\Users\username\.gitconfig`) and the one in WSL (`/home/username/.gitconfig`) are separate files. Configure both or set up a symlink from WSL to point at the Windows config: `ln -s /mnt/c/Users/username/.gitconfig ~/.gitconfig`.
 
 ---
 
 ## 10. Summary
 
-Git is an external program that your shell finds and runs by searching PATH. When you type a git command, the shell forks a child process, runs the `git` binary, and waits for it to finish. Git reads its configuration from system, global and local config files in that order, with local overrides winning.
+Git is an external program that your shell finds and runs by searching PATH. When you type a git command, the shell forks a child process, runs the `git` binary and waits for it to finish. Git reads its configuration from system, global and local config files in that order, with local overrides winning.
 
 When Git needs you to type text - commit messages, rebase todo lists - it opens the editor defined by `GIT_EDITOR`, `core.editor`, `VISUAL` or `EDITOR`, in that priority order. GUI editors need a `--wait` flag so Git waits for you to close the file rather than reading immediately.
 

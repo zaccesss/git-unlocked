@@ -29,7 +29,7 @@ Helix is a terminal-based modal text editor written in Rust, inspired by Kakoune
 
 ## 1. History and background
 
-Helix was created by Blaž Hrastnik starting in 2021. It takes Vim's modal editing model and Kakoune's selection-first design and combines them with modern built-in features: Tree-sitter for semantic syntax highlighting and text objects, a built-in LSP client with diagnostics in the statusline, multiple selections as a first-class editing primitive, and a which-key style menu for discoverable key bindings.
+Helix was created by Blaž Hrastnik starting in 2021. It takes Vim's modal editing model and Kakoune's selection-first design and combines them with modern built-in features: Tree-sitter for semantic syntax highlighting and text objects, a built-in LSP client with diagnostics in the statusline, multiple selections as a first-class editing primitive and a which-key style menu for discoverable key bindings.
 
 The editor is written entirely in Rust. It has no scripting language, no plugin API and no extension system. Every feature in Helix is part of the core binary, which means it is fast, portable and predictable. It also means that features not built into the core cannot be added without contributing to the repository or running a fork.
 
@@ -224,7 +224,7 @@ This binds `Ctrl+G` in normal mode to open a floating tmux popup running lazygit
 C-g = [":sh lazygit", ":redraw", ":reload-all"]
 ```
 
-The `:redraw` command redraws the terminal after lazygit exits (lazygit can leave drawing artefacts in some terminals), and `:reload-all` refreshes all buffers from disk to reflect any file changes made during the Git session.
+The `:redraw` command redraws the terminal after lazygit exits (lazygit can leave drawing artefacts in some terminals) and `:reload-all` refreshes all buffers from disk to reflect any file changes made during the Git session.
 
 > [!NOTE]
 > There is a known issue where key handling (particularly the Escape key) can be disrupted after using the inline `:sh lazygit` approach in some terminals. The tmux popup approach avoids this entirely. If you experience key binding issues after closing lazygit, restart Helix.
@@ -389,7 +389,7 @@ With `core.editor = hx` configured, run `git rebase -i HEAD~3` in the terminal. 
 
 ## 14. Common Mistakes
 
-Running Helix without tmux and then trying the tmux popup integration. The tmux popup requires an active tmux session. If you launch Helix directly from a terminal without tmux, the popup command fails. Either start tmux first (`tmux new`) and then launch Helix inside it, or use the inline `:sh lazygit` approach with `:redraw` and `:reload-all` afterwards.
+Running Helix without tmux and then trying the tmux popup integration. The tmux popup requires an active tmux session. If you launch Helix directly from a terminal without tmux, the popup command fails. Either start tmux first (`tmux new`) and then launch Helix inside it or use the inline `:sh lazygit` approach with `:redraw` and `:reload-all` afterwards.
 
 Forgetting `:reload-all` after external Git operations. When lazygit stages files, creates commits or performs checkouts, the files on disk change but Helix's buffers reflect the old state. Run `:reload-all` (or the custom keybinding equivalent) to refresh all open buffers from disk. Without this, Helix shows stale content and gutter indicators.
 
@@ -403,7 +403,7 @@ Trying to use Helix as a daily driver without learning a terminal multiplexer fi
 
 ## 15. Summary
 
-Helix is a terminal modal editor that ships built-in gutter diff indicators, a branch name in the statusline and hunk navigation (`]g` / `[g`), and nothing else for Git. The absence of a staging panel, commit UI, log view and blame view is a deliberate philosophical choice: Helix does text editing, and dedicated tools do Git management better than any in-editor panel can. The standard workflow is to bind a key to open lazygit in a tmux popup or WezTerm pane: press the key, do Git work in lazygit, close lazygit, return to Helix. For one-off commands, `:sh <command>` runs any shell command inline. Setting `core.editor = hx` routes `git commit` and `git rebase -i` through Helix's editor. Helix has no plugin system yet - the Steel/Scheme system remains unmerged as of April 2026. It is the right choice for developers who want a minimal, fast terminal editor and are comfortable managing Git in a dedicated TUI rather than inside the editor itself.
+Helix is a terminal modal editor that ships built-in gutter diff indicators, a branch name in the statusline and hunk navigation (`]g` / `[g`) and nothing else for Git. The absence of a staging panel, commit UI, log view and blame view is a deliberate philosophical choice: Helix does text editing and dedicated tools do Git management better than any in-editor panel can. The standard workflow is to bind a key to open lazygit in a tmux popup or WezTerm pane: press the key, do Git work in lazygit, close lazygit, return to Helix. For one-off commands, `:sh <command>` runs any shell command inline. Setting `core.editor = hx` routes `git commit` and `git rebase -i` through Helix's editor. Helix has no plugin system yet - the Steel/Scheme system remains unmerged as of April 2026. It is the right choice for developers who want a minimal, fast terminal editor and are comfortable managing Git in a dedicated TUI rather than inside the editor itself.
 
 ---
 

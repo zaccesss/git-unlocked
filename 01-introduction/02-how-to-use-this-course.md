@@ -142,7 +142,7 @@ Callout boxes highlight information that deserves extra attention. The course us
 
 **Follow the links.** Files cross-reference each other throughout. When a concept comes from an earlier file, there is a link. Following those links builds a more complete picture than reading any single file in isolation.
 
-**Contribute back.** If you spot a mistake, find a better explanation, or want to add content - open a pull request. Read [CONTRIBUTING.md](../CONTRIBUTING.md) first. Everyone who contributes is listed in [HALL_OF_FAME.md](../HALL_OF_FAME.md).
+**Contribute back.** If you spot a mistake, find a better explanation or want to add content - open a pull request. Read [CONTRIBUTING.md](../CONTRIBUTING.md) first. Everyone who contributes is listed in [HALL_OF_FAME.md](../HALL_OF_FAME.md).
 
 ---
 

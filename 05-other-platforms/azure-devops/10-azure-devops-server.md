@@ -561,7 +561,7 @@ Azure DevOps Server is the on-premises version of Azure DevOps, the successor to
 
 Choose Server over Services for data sovereignty requirements, air-gapped networks, on-premises Active Directory integration without Azure AD, control over upgrade timing or custom plugin requirements.
 
-System requirements include Windows Server 2019+ or supported Linux, SQL Server 2019+ with Full-Text Search, and optionally Elasticsearch for code search. Single-server deployments suit teams up to 250 users; larger teams should separate the application and database tiers.
+System requirements include Windows Server 2019+ or supported Linux, SQL Server 2019+ with Full-Text Search and optionally Elasticsearch for code search. Single-server deployments suit teams up to 250 users; larger teams should separate the application and database tiers.
 
 Authentication on Server integrates directly with Active Directory (the default), Azure AD or any SAML 2.0 identity provider. No Guard add-on required for SSO.
 

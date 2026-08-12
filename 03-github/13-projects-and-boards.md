@@ -156,7 +156,7 @@ Spreadsheet-style rows and columns. Every item is a row. Every field is a column
 
 ### Roadmap view
 
-Timeline-based view showing items on a horizontal calendar. Requires date fields (start date and end date, or just a target date).
+Timeline-based view showing items on a horizontal calendar. Requires date fields (start date and end date or just a target date).
 
 **Features:**
 

@@ -66,7 +66,7 @@ Kiro uses Code-OSS as its base, which shares the same Git extension source as VS
 
 The **Generate commit message** sparkle button in the commit box uses Claude Sonnet 4.6 via AWS Bedrock by default and can be steered by your steering files.
 
-Keyboard shortcuts for Git operations are the same as VS Code: `Ctrl+Shift+G` / `Cmd+Shift+G` opens the Source Control panel, `Ctrl+Enter` / `Cmd+Enter` commits, and the Status Bar branch name opens the branch picker.
+Keyboard shortcuts for Git operations are the same as VS Code: `Ctrl+Shift+G` / `Cmd+Shift+G` opens the Source Control panel, `Ctrl+Enter` / `Cmd+Enter` commits and the Status Bar branch name opens the branch picker.
 
 ---
 
@@ -253,7 +253,7 @@ The **Kiro Autonomous Agent** (launched at re:Invent 2025 as a preview feature) 
 **Assigning an issue to Kiro**:
 
 1. Install the Kiro GitHub App on your organisation (one-time setup)
-2. Add the label `kiro` to any GitHub issue, or comment `/kiro` on any issue
+2. Add the label `kiro` to any GitHub issue or comment `/kiro` on any issue
 3. For PR review feedback, comment `/kiro fix` to ask Kiro to implement the review comment
 
 Kiro creates a spec from the issue description, requests your approval via a comment on the issue, then works in an isolated sandbox: it creates a feature branch, implements the spec, runs tests and opens a pull request.
@@ -389,7 +389,7 @@ Kiro uses the **OpenVSX** registry at [open-vsx.org](https://open-vsx.org). Most
 - GitLab Workflow - available
 - Git History - available
 
-**Not available on OpenVSX**: the GitHub Pull Requests extension is a Microsoft/GitHub-published extension that may not be on OpenVSX. Use the Kiro GitHub App integration and the web interface for PR management, or the GitHub CLI in the integrated terminal (`gh pr create`, `gh pr review`).
+**Not available on OpenVSX**: the GitHub Pull Requests extension is a Microsoft/GitHub-published extension that may not be on OpenVSX. Use the Kiro GitHub App integration and the web interface for PR management or the GitHub CLI in the integrated terminal (`gh pr create`, `gh pr review`).
 
 ---
 
