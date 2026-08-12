@@ -41,7 +41,7 @@ This approach - known informally as _folder versioning_ or _zip backup versionin
 - **No clear history.** Which version is the latest? What changed between them? Nobody knows without opening and comparing every file.
 - **Collaboration is nearly impossible.** If two people edit the same file at the same time, one person's changes will overwrite the other's when they merge the files manually.
 - **Mistakes are permanent.** If you delete something or introduce a bug, you may have no way to recover the previous working version.
-- **No accountability.** When something breaks, there is no record of who changed what, when, or why.
+- **No accountability.** When something breaks, there is no record of who changed what, when or why.
 
 These are not minor inconveniences. They cause real disasters.
 
@@ -165,7 +165,7 @@ Subversion (SVN) delivered **atomic commits** - a commit either completes fully 
 
 SVN became self-hosting on 31 August 2001, after 14 months of development. It became an Apache Software Foundation top-level project in February 2010.
 
-SVN dominated the 2000s as the CVS replacement. Major adopters included the Apache Software Foundation, FreeBSD, Python, Ruby and WordPress. However, SVN remained a **centralised** system. The central server was still a single point of failure, and most operations required a network connection.
+SVN dominated the 2000s as the CVS replacement. Major adopters included the Apache Software Foundation, FreeBSD, Python, Ruby and WordPress. However, SVN remained a **centralised** system. The central server was still a single point of failure and most operations required a network connection.
 
 ### BitKeeper: the catalyst that created Git (2000-2005)
 
@@ -173,7 +173,7 @@ SVN dominated the 2000s as the CVS replacement. Major adopters included the Apac
 
 The Linux kernel project adopted BitKeeper in 2002. Before this, Linus Torvalds was effectively the version control system himself - manually applying patches submitted as tarballs via mailing lists. BitKeeper allowed sub-groups of kernel developers to collaborate independently and merge changes upstream. Linus later described BitKeeper as "the first source control system I ever felt was worth using at all."
 
-The free community version came with restrictions: users could not participate in developing any competing VCS, and change metadata had to be stored on BitMover's servers. Many prominent developers refused to use it on principle. Richard Stallman was openly opposed.
+The free community version came with restrictions: users could not participate in developing any competing VCS and change metadata had to be stored on BitMover's servers. Many prominent developers refused to use it on principle. Richard Stallman was openly opposed.
 
 **The crisis arrived in early 2005.** Andrew Tridgell - creator of Samba and rsync - began reverse-engineering the BitKeeper protocol to create an open-source alternative client. On 23 February 2005, McVoy learned of this and demanded it stop. The Linux community refused to comply. In April 2005, BitMover announced it would end the free community licence for Linux kernel developers, effective 1 July 2005.
 
@@ -193,9 +193,9 @@ Torvalds had precise, demanding goals:
 - **Non-linear development.** Branching must be cheap, fast and core - not an afterthought.
 - **Anti-CVS design philosophy.** Torvalds described his approach as WWCVSND - "What Would CVS Not Do?" If in doubt, make the exact opposite decision from CVS.
 
-**The name "Git"** was a deliberate joke. Torvalds said: _"I'm an egotistical bastard, and I name all my projects after myself. First 'Linux', now 'git'."_ "Git" is British slang for an unpleasant or contemptible person. The official README offers multiple definitions: a random three-letter combination; "stupid, contemptible and despicable"; **"Global Information Tracker"** when it works; and something considerably more colourful when it does not.
+**The name "Git"** was a deliberate joke. Torvalds said: _"I'm an egotistical bastard and I name all my projects after myself. First 'Linux', now 'git'."_ "Git" is British slang for an unpleasant or contemptible person. The official README offers multiple definitions: a random three-letter combination; "stupid, contemptible and despicable"; **"Global Information Tracker"** when it works; and something considerably more colourful when it does not.
 
-On **26 July 2005**, Torvalds handed maintenance to **Junio C. Hamano**, who had been contributing since approximately one week after the first commit. **Junio Hamano remains Git's maintainer to this day.** Git 1.0 was released on 21 December 2005. Git 2.0 - the first intentionally backwards-incompatible release - arrived on 1 June 2014. The current stable release is **Git 2.53.0** (February 2026).
+On **26 July 2005**, Torvalds handed maintenance to **Junio C. Hamano**, who had been contributing since approximately one week after the first commit. **Junio Hamano remains Git's maintainer to this day.** Git 1.0 was released on 21 December 2005. Git 2.0 - the first intentionally backwards-incompatible release - arrived on 1 June 2014. The current stable release is **Git 2.55.0** (June 2026).
 
 ### Mercurial: the road not taken (April 2005)
 
@@ -227,7 +227,7 @@ Git's dominance is not accidental. Five factors compounded to make it effectivel
 
 ### Subversion (SVN)
 
-SVN remains the second most popular VCS at approximately 5% developer adoption. It persists in manufacturing, chip design, government and financial services - industries where centralised access control with path-based permissions matters for compliance, and where large binary files are managed more predictably. The latest release is Apache Subversion 1.14.5 (2024). SVN is maintained but development is slow.
+SVN remains the second most popular VCS at approximately 5% developer adoption. It persists in manufacturing, chip design, government and financial services - industries where centralised access control with path-based permissions matters for compliance and where large binary files are managed more predictably. The latest release is Apache Subversion 1.14.5 (2024). SVN is maintained but development is slow.
 
 **When you might still encounter SVN:** Legacy enterprise codebases, regulated industries with specific compliance requirements, organisations with very large binary assets (3D models, audio files) that predate Git LFS.
 

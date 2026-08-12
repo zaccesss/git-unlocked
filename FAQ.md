@@ -113,7 +113,7 @@ There are three main types. **Local VCS** tracks changes on a single computer - 
 
 ### What version of Git should I install?
 
-The current stable release is **Git 2.53.0** (February 2026). Always install the latest from [git-scm.com/downloads](https://git-scm.com/downloads).
+The current stable release is **Git 2.55.0** (June 2026). Always install the latest from [git-scm.com/downloads](https://git-scm.com/downloads).
 
 On Windows: `winget install --id Git.Git -e --source winget`
 
@@ -311,7 +311,7 @@ Branches let you work on a new feature or fix without touching the main codebase
 
 ### What is a merge conflict and how do I fix one?
 
-A merge conflict happens when two branches changed the same lines of the same file differently, and Git does not know which version to keep. Git pauses the merge and marks the conflicting sections:
+A merge conflict happens when two branches changed the same lines of the same file differently and Git does not know which version to keep. Git pauses the merge and marks the conflicting sections:
 
 ```
 <<<<<<< HEAD
@@ -442,11 +442,11 @@ For HTTPS, use a **fine-grained Personal Access Token** (not a classic token and
 
 ## IDEs and Editors
 
-### Do I need to use the terminal, or can I use Git entirely through VS Code?
+### Do I need to use the terminal or can I use Git entirely through VS Code?
 
 You do not need the terminal once you are set up. VS Code's Source Control panel (`Ctrl + Shift + G` / `Cmd + Shift + G`) handles staging, committing, pushing, pulling, branch switching and merge conflicts visually.
 
-However, learning terminal commands first is strongly recommended. It teaches you what is actually happening, and you will encounter situations where the terminal is the only option. This course covers both.
+However, learning terminal commands first is strongly recommended. It teaches you what is actually happening and you will encounter situations where the terminal is the only option. This course covers both.
 
 ### What is the best VS Code extension for Git?
 
@@ -496,7 +496,7 @@ Yes, significantly.
 
 ### `fatal: not a git repository`
 
-You are trying to run a Git command in a folder with no repository. Either run `git init` to create one here, or `cd` into the correct project folder.
+You are trying to run a Git command in a folder with no repository. Either run `git init` to create one here or `cd` into the correct project folder.
 
 ### `error: src refspec main does not match any`
 

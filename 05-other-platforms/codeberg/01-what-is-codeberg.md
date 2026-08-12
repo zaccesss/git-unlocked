@@ -36,7 +36,7 @@ Codeberg e.V. is funded by voluntary donations from users and supporters. There 
 
 Codeberg e.V.'s members elect the board. The board operates the organisation and makes strategic decisions. Members can vote on major decisions at general assemblies. This is meaningfully different from a company owned by shareholders or a project controlled by a single for-profit entity.
 
-Codeberg also stewards the Forgejo project - the open source software that powers the Codeberg hosting service. This creates alignment: Codeberg has a strong incentive to keep Forgejo healthy because it runs on it, and Forgejo benefits from Codeberg's infrastructure and community.
+Codeberg also stewards the Forgejo project - the open source software that powers the Codeberg hosting service. This creates alignment: Codeberg has a strong incentive to keep Forgejo healthy because it runs on it and Forgejo benefits from Codeberg's infrastructure and community.
 
 ---
 
@@ -82,6 +82,8 @@ Codeberg is sustained by donations. The free tier is the product, not a funnel. 
 ### AI features
 
 GitHub has invested heavily in AI (Copilot, code review AI, PR summaries). GitLab has Duo. Codeberg has no AI features. The Forgejo project has no current plans for AI integration. If AI tooling in your Git platform matters, Codeberg is not the right choice.
+
+In July 2026, Codeberg e.V. members went further than simply not building AI features. At the 2026 general assembly, members voted (roughly 71% in favour) to amend the Terms of Use to prohibit hosting repositories that mostly consist of code produced by generative AI/LLM tools with little human oversight ("vibe-coded" projects) and to formally commit that hosted code and metadata will never be used to train AI models. Small AI-assisted contributions to a normally maintained project are not affected - the rule targets repositories that are predominantly machine-generated and unmaintained by a human. See the [Terms of Use](https://codeberg.org/Codeberg/org/src/branch/main/TermsOfUse.md) (§2) for the exact wording.
 
 ### Scale and ecosystem
 
@@ -133,7 +135,7 @@ GitHub has Actions (native, tightly integrated). GitLab.com has native CI/CD. Co
 
 ### Free software advocates
 
-Developers and projects committed to the philosophy that software infrastructure should be community-owned and free. KDE (the desktop environment), GNOME (another major Linux desktop), and many other established free software projects host mirrors or primary repositories on Codeberg.
+Developers and projects committed to the philosophy that software infrastructure should be community-owned and free. KDE (the desktop environment), GNOME (another major Linux desktop) and many other established free software projects host mirrors or primary repositories on Codeberg.
 
 ### Privacy-conscious developers
 
@@ -145,7 +147,7 @@ German public administration projects increasingly use Codeberg as a default cho
 
 ### GitHub migration refugees
 
-Developers who left GitHub after the Microsoft acquisition (2018), after GitHub Copilot trained on their code without explicit consent (2022 controversy), or after GitHub's increasing focus on enterprise and AI rather than community.
+Developers who left GitHub after the Microsoft acquisition (2018), after GitHub Copilot trained on their code without explicit consent (2022 controversy) or after GitHub's increasing focus on enterprise and AI rather than community.
 
 ### NLnet-funded projects
 
@@ -262,6 +264,7 @@ The right audience for Codeberg: free software advocates, privacy-conscious deve
 
 - [Codeberg: About Codeberg e.V.](https://codeberg.org/Codeberg/Community/wiki/About-Codeberg)
 - [Codeberg: Terms of service](https://codeberg.org/Codeberg/org/src/branch/main/TOS.md)
+- [Codeberg: Terms of Use (AI/LLM-generated content policy)](https://codeberg.org/Codeberg/org/src/branch/main/TermsOfUse.md)
 - [Codeberg: Privacy policy](https://codeberg.org/Codeberg/org/src/branch/main/PrivacyPolicy.md)
 - [Codeberg: Community discussions](https://codeberg.org/Codeberg/Community)
 - [Forgejo: About Forgejo](https://forgejo.org/about/)

@@ -26,14 +26,14 @@ This file covers installing Git on Windows, Mac and Linux in full detail. If you
 
 ### What version should you install?
 
-Always install the latest stable release. The current stable version is **Git 2.53.0** (February 2026).
+Always install the latest stable release. The current stable version is **Git 2.55.0** (June 2026).
 
 > [!NOTE]
 > Git follows a roughly quarterly release schedule. Minor versions (2.51, 2.52, 2.53) add new features and fix bugs. You do not need to update immediately on every release, but staying within the last two or three releases is good practice. If your version is older than **2.28**, some features used in this course may not be available.
 
 ### What about Git 3.0?
 
-Git 3.0 is expected later in 2026. It will change the default hash algorithm, default branch name and default ref storage for new repositories. Your existing repositories will continue to work. This course will be updated when 3.0 releases. For now, install 2.53.0.
+Git 3.0 is expected later in 2026. It will change the default hash algorithm, default branch name and default ref storage for new repositories. Your existing repositories will continue to work. This course will be updated when 3.0 releases. For now, install the latest 2.x release.
 
 ### Do you already have Git?
 
@@ -82,7 +82,7 @@ The download starts automatically. If it does not, click the link for the **64-b
 
 **Configuring the line ending conversions** - choose **Checkout Windows-style, commit Unix-style line endings**. This automatically handles the difference between Windows (CRLF) and Unix (LF) line endings, preventing formatting issues when you share code with Mac or Linux developers.
 
-**Configuring the terminal emulator** - choose **Use Windows' default console window** to use PowerShell and CMD, or **Use MinTTY** if you prefer Git Bash's terminal. Both work fine.
+**Configuring the terminal emulator** - choose **Use Windows' default console window** to use PowerShell and CMD or **Use MinTTY** if you prefer Git Bash's terminal. Both work fine.
 
 **Choose the default behavior of `git pull`** - leave as **Default (fast-forward or merge)**.
 
@@ -215,7 +215,7 @@ brew upgrade git
 
 ### Option B - Xcode Command Line Tools
 
-The Xcode Command Line Tools include Git. This is the simplest option if you develop for Apple platforms and already have Xcode, or if you just want Git with no other tools.
+The Xcode Command Line Tools include Git. This is the simplest option if you develop for Apple platforms and already have Xcode or if you just want Git with no other tools.
 
 ```bash
 xcode-select --install
@@ -347,7 +347,7 @@ git --version
 Expected output:
 
 ```
-git version 2.53.0
+git version 2.55.0
 ```
 
 The exact number may differ slightly depending on your platform and when you installed, but it should be 2.28 or higher.
@@ -624,9 +624,9 @@ git config --global core.editor "nano"
 
 ## Summary
 
-- The current stable Git version is 2.53.0 (February 2026)
-- On **Windows**, use the Git for Windows installer from git-scm.com/install/windows, or `winget install --id Git.Git -e --source winget`
-- On **Mac**, use Homebrew (`brew install git`) for the latest version, or Xcode Command Line Tools (`xcode-select --install`) for a simpler setup
+- The current stable Git version is 2.55.0 (June 2026)
+- On **Windows**, use the Git for Windows installer from git-scm.com/install/windows or `winget install --id Git.Git -e --source winget`
+- On **Mac**, use Homebrew (`brew install git`) for the latest version or Xcode Command Line Tools (`xcode-select --install`) for a simpler setup
 - On **Linux**, use your distribution's package manager (`sudo apt install git`, `sudo dnf install git` etc.)
 - Always close and reopen your terminal after installing on Windows
 - On Apple Silicon Macs, always add Homebrew to your PATH after installing

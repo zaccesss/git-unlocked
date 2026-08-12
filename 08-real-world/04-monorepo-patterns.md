@@ -44,7 +44,7 @@ This file covers both the Git-level techniques that make monorepos fast on large
 ### Reasons to use a monorepo
 
 - **Atomic cross-cutting changes.** When you rename a function used across 20 packages, you can make the change, test it and merge it in a single PR. With separate repos, you need a choreographed sequence of PRs across many repos with version bumps at each step.
-- **Unified dependency management.** One `package.json` (or `go.mod`, or `requirements.txt`) governs all packages. Dependency drift between packages is impossible.
+- **Unified dependency management.** One `package.json` (or `go.mod` or `requirements.txt`) governs all packages. Dependency drift between packages is impossible.
 - **Consistent tooling and CI.** One linter config, one formatter, one test runner, one CI definition. No "this package uses ESLint 8 and that one uses 9 and they conflict" problems.
 - **Better code reuse.** Shared utilities are a directory away, not a versioned package with a publish-and-install cycle.
 
@@ -245,7 +245,7 @@ Before adding a task runner like Nx or Turborepo, set up **package manager works
 
 ### pnpm workspaces (recommended)
 
-pnpm is the strongest default for monorepos. Its content-addressable global store saves 50-70% disk compared to npm, and its strict isolation prevents phantom dependencies.
+pnpm is the strongest default for monorepos. Its content-addressable global store saves 50-70% disk compared to npm and its strict isolation prevents phantom dependencies.
 
 ```yaml
 # pnpm-workspace.yaml
@@ -288,13 +288,13 @@ npm run build --workspace=apps/my-app
 
 ### Yarn 4 workspaces
 
-Yarn 4 adds **workspaces** (same as before), **Plug'n'Play** (no `node_modules`), **Constraints** (enforce cross-workspace rules), and **catalogs** (centrally define dependency versions). It is the most opinionated of the three package managers and has the steepest learning curve, but the strictest isolation.
+Yarn 4 adds **workspaces** (same as before), **Plug'n'Play** (no `node_modules`), **Constraints** (enforce cross-workspace rules) and **catalogs** (centrally define dependency versions). It is the most opinionated of the three package managers and has the steepest learning curve, but the strictest isolation.
 
 ---
 
 ## The task runner tier
 
-Package manager workspaces handle installation. Task runners handle **build graph awareness**: knowing that building `app-a` requires first building `shared-utils`, caching completed builds by content hash, and running only the builds affected by a given Git diff.
+Package manager workspaces handle installation. Task runners handle **build graph awareness**: knowing that building `app-a` requires first building `shared-utils`, caching completed builds by content hash and running only the builds affected by a given Git diff.
 
 ### Nx 🟡
 
@@ -467,7 +467,7 @@ pnpm --filter "...[origin/main]" run build
 
 Google's primary codebase (**Piper**) is not Git. It holds approximately 2 billion lines of code across 86 TB, with around 40,000 commits per day. The build system is **Blaze** (internal Bazel). Developers use **CitC** (Clients in the Cloud), a FUSE-based virtual filesystem that makes the entire Piper tree appear local without downloading it. Chrome and Android are the exceptions - they use separate Git repositories.
 
-The core argument for Google's monorepo is in a 2016 ACM paper: visibility (everyone can see and use any code), unified versioning (no diamond dependency problem), and large-scale refactoring (one commit can update every caller of a function across the entire company).
+The core argument for Google's monorepo is in a 2016 ACM paper: visibility (everyone can see and use any code), unified versioning (no diamond dependency problem) and large-scale refactoring (one commit can update every caller of a function across the entire company).
 
 ### Meta
 
@@ -555,7 +555,7 @@ The whole point of a task runner like Nx or Turborepo is that only affected proj
 
 Monorepos solve the atomic-change and dependency-unification problems at the cost of Git performance degradation at scale and CI build time explosion. The solutions to both problems are well-established and freely available.
 
-At the Git level, the three tools are: **partial clone** (`--filter=blob:none`) to avoid downloading blobs you will never touch, **sparse checkout cone mode** to materialise only the directories you need, and **fsmonitor + commit-graph** to make status checks and history queries fast. **Scalar** applies all of these in one command.
+At the Git level, the three tools are: **partial clone** (`--filter=blob:none`) to avoid downloading blobs you will never touch, **sparse checkout cone mode** to materialise only the directories you need and **fsmonitor + commit-graph** to make status checks and history queries fast. **Scalar** applies all of these in one command.
 
 Above the Git level, the task runner tier (Nx, Turborepo, Bazel) provides build graph awareness and content-addressed caching so CI builds only what changed. The right tool depends on your language and scale: Nx or Turborepo for JavaScript/TypeScript, Bazel for multi-language or Google/Meta-scale hermetic builds.
 
@@ -572,7 +572,7 @@ Above the Git level, the task runner tier (Nx, Turborepo, Bazel) provides build 
 - [Nx documentation](https://nx.dev/docs)
 - [Nx: run only tasks affected by a PR](https://nx.dev/docs/features/ci-features/affected)
 - [Turborepo documentation](https://turbo.build/repo/docs)
-- [Bazel documentation](https://bazel.build/docs)
+- [Bazel documentation](https://bazel.build/)
 - [Bazel 8.0 LTS release](https://blog.bazel.build/2024/12/09/bazel-8-release.html)
 - [ACM: why Google stores billions of lines of code in a single repository](https://cacm.acm.org/research/why-google-stores-billions-of-lines-of-code-in-a-single-repository/)
 - [Meta: Sapling source control](https://engineering.fb.com/2022/11/15/open-source/sapling-source-control-scalable/)
