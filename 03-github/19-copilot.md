@@ -42,7 +42,7 @@ GitHub Copilot is an AI coding assistant built into your editor. It suggests cod
 
 ## What Copilot Actually Is
 
-GitHub Copilot is a product built on top of large language models (LLMs). The underlying models are developed by OpenAI (GPT-5.x), Anthropic (Claude Sonnet, Claude Opus, Claude Haiku) and Google (Gemini). GitHub wraps these models with editor integrations, IDE plugins, a CLI extension and a web interface.
+GitHub Copilot is a product built on top of large language models (LLMs). The underlying models are developed by OpenAI (GPT-5.x), `Anthropic` (Claude Sonnet, Claude Opus, Claude Haiku) and Google (Gemini). GitHub wraps these models with editor integrations, IDE plugins, a CLI extension and a web interface.
 
 When you type in your editor, Copilot sends a prompt to the model containing your current file up to the cursor, content from related open files (determined by imports, file names and similarity), your recent edits in the session and any comments or function signatures you have just written. The model predicts what text should come next and returns it to your editor as a suggestion. This happens over the network in milliseconds.
 

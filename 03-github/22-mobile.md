@@ -117,7 +117,7 @@ For writing code on mobile, open `github.com` in your mobile browser and go to `
 
 Search for **GitHub** in the App Store or go to `apps.apple.com` and search for GitHub. The publisher is **GitHub Inc.** Requires iOS 16.0 or later.
 
-🤖 **Android:**
+📱 **Android:**
 
 Search for **GitHub** in the Google Play Store. The publisher is **GitHub Inc.** Requires Android 8.0 or later.
 

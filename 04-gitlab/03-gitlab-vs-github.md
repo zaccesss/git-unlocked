@@ -250,7 +250,7 @@ For organisations that need comprehensive security scanning, the actual cost com
 | Vulnerability resolution           | ✗                                     | ✓ Duo Enterprise                                        |
 | Security analyst agent             | ✗                                     | ✓ Duo Agent Platform                                    |
 | Free tier AI                       | ✓ 2,000 completions/month             | ✓ (credits system; Free users get some)                 |
-| Models                             | OpenAI GPT-4 family                   | Anthropic Claude, Google Vertex AI, Fireworks Codestral |
+| Models                             | OpenAI GPT-4 family                   | `Anthropic` Claude, Google Vertex AI, Fireworks Codestral |
 | Privacy (no training on your code) | ✓ (configurable)                      | ✓ (zero-day retention)                                  |
 | Self-hosted AI models              | ✗                                     | ✓ (Duo Enterprise, 17.9+)                               |
 | IDE support                        | VS Code, JetBrains, Vim, Neovim, many | VS Code, JetBrains, Visual Studio, Neovim               |

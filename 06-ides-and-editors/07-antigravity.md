@@ -142,7 +142,7 @@ Antigravity supports multiple AI models. You switch models from the model select
 | Gemini 3.1 Pro    | Default; 1M token input, 65K output; Low/Medium/High thinking variants |
 | Gemini 3 Pro      | Launch-era model; 76.2% SWE-Bench Verified                             |
 | Gemini 3 Flash    | Faster, cheaper; suitable for routine tasks                            |
-| Claude Opus 4.6   | Anthropic's most capable model available in Antigravity                |
+| Claude Opus 4.6   | `Anthropic`'s most capable model available in Antigravity                |
 | Claude Sonnet 4.6 | Faster Claude option; Thinking variant available                       |
 | GPT-OSS-120B      | Open-source OpenAI model; available in Antigravity                     |
 

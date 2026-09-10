@@ -255,7 +255,7 @@ Issues are the primary unit of work tracking. Each issue can have assignees, lab
 
 GitLab Duo is the umbrella name for GitLab's AI capabilities, covered fully in [10-gitlab-duo.md](10-gitlab-duo.md). In brief:
 
-**Code Suggestions** provides inline code completion and generation in VS Code, JetBrains IDEs and the GitLab Web IDE. It uses models from Anthropic (Claude), Google Vertex AI and Fireworks AI.
+**Code Suggestions** provides inline code completion and generation in VS Code, JetBrains IDEs and the GitLab Web IDE. It uses models from `Anthropic` (Claude), Google Vertex AI and Fireworks AI.
 
 **Duo Chat** is a conversational AI assistant available in the IDE and on GitLab.com. You can ask it to explain code, review a diff, write tests or help debug a pipeline failure.
 

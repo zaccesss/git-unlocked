@@ -183,7 +183,7 @@ After installation:
 **Install:**
 
 - 🍎 iOS: App Store → search "GitHub"
-- 🤖 Android: Google Play → search "GitHub"
+- 📱 Android: Google Play → search "GitHub"
 
 Covered in full: `22-mobile.md`
 
