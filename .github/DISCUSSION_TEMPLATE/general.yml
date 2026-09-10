@@ -4,7 +4,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Ask anything about the course — setup help, a concept you are stuck on, a command that is not behaving as expected or anything else.
+        Ask anything about the course - setup help, a concept you are stuck on, a command that is not behaving as expected or anything else.
         For errors or mistakes in the content itself, please [open an Issue](https://github.com/zaccesss/git-unlocked/issues/new?template=bug_report.md) instead.
 
   - type: textarea

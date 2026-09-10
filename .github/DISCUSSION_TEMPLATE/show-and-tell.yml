@@ -19,7 +19,7 @@ body:
     id: section
     attributes:
       label: Which part of the course helped most? (optional)
-      description: For example — the terminal section, the GitLab CI/CD files or the first-contribution sandbox.
+      description: For example - the terminal section, the GitLab CI/CD files or the first-contribution sandbox.
 
   - type: textarea
     id: links
