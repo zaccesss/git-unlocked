@@ -52,6 +52,7 @@ jobs:
             --exclude 'nova.app'
             --exclude 'forgefed.org'
             --exclude 'gitea-open-letter.coding.social'
+            --exclude 'doi.org/10.5281/zenodo.20694984'
             --exclude 'file://'
             '**/*.md'
         env:
