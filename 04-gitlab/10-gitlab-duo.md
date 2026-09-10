@@ -445,7 +445,7 @@ GitLab Duo does not use a single AI model. Different features use different mode
 
 ### Current models (GitLab 18.10)
 
-**Anthropic Claude** (primary model):
+**`Anthropic` Claude** (primary model):
 
 - Claude Sonnet 4: used for most Duo Chat responses and code generation
 - Claude 3 Haiku: used for faster, lower-cost features
@@ -478,7 +478,7 @@ Separate model selection is available for:
 
 ### Zero-day retention
 
-GitLab has negotiated **zero-day data retention** agreements with Anthropic, Fireworks AI, AWS and Google. This means:
+GitLab has negotiated **zero-day data retention** agreements with `Anthropic`, Fireworks AI, AWS and Google. This means:
 
 - Your prompts and code are sent to the AI model provider for processing
 - The provider returns a response
@@ -593,7 +593,7 @@ GitLab Duo is built around several core privacy principles.
 
 ### What Duo does do
 
-- **Sends your code to AI providers for processing.** When you use Code Suggestions or Duo Chat in your IDE, the relevant code context is sent to the AI provider (Anthropic, Google or Fireworks). This is necessary for AI features to work.
+- **Sends your code to AI providers for processing.** When you use Code Suggestions or Duo Chat in your IDE, the relevant code context is sent to the AI provider (`Anthropic`, Google or Fireworks). This is necessary for AI features to work.
 - **Collects usage analytics.** GitLab collects aggregated, de-identified usage data (which features are used, suggestion acceptance rates, etc.) through its Snowplow analytics pipeline. This is separate from the AI provider data and is governed by GitLab's own privacy policy.
 - **Logs trace data for debugging.** When groups enable extended logging for Duo Agent Platform workflows, trace data is retained on GitLab's own infrastructure (not at AI providers) for debugging purposes.
 
@@ -666,7 +666,7 @@ The AI Gateway component handles routing between GitLab and the model servers.
 | **Security analyst agent**      | ✓ (Duo Agent Platform)                             | ✗                                                                         |
 | **Issue-to-code flows**         | ✓ (Developer Flow)                                 | Limited                                                                   |
 | **Free tier AI**                | ✓ (credits for Free users, Duo Core for Premium)   | ✓ (2,000 completions/month)                                               |
-| **Primary AI model**            | Anthropic Claude Sonnet 4                          | OpenAI GPT-4o                                                             |
+| **Primary AI model**            | `Anthropic` Claude Sonnet 4                          | OpenAI GPT-4o                                                             |
 | **Self-hosted models**          | ✓ (Duo Enterprise, self-managed)                   | ✗                                                                         |
 | **Context exclusion**           | ✓ (GitLab 18.4+)                                   | ✓ (configurable)                                                          |
 | **Zero data retention**         | ✓ (contractual)                                    | ✓ (configurable)                                                          |
@@ -748,7 +748,7 @@ The choice comes down to whether you primarily want better code completion (Copi
 - **Flows**: pre-built automated multi-step workflows. Developer Flow (issue to MR), Convert to GitLab CI/CD, Fix CI/CD Pipeline, Code Review Flow
 - **AI Catalog**: central management for agents and flows, including custom agents
 - **MCP Client**: connects Duo agents to external tools (Jira, Slack, Confluence, Grafana) via the Model Context Protocol
-- **Models**: Anthropic Claude (primary), Google Vertex AI (Codey, Gemini), Fireworks Codestral. Zero-day data retention at all providers
+- **Models**: `Anthropic` Claude (primary), Google Vertex AI (Codey, Gemini), Fireworks Codestral. Zero-day data retention at all providers
 - **Self-hosted models** (Duo Enterprise, self-managed): vLLM, AWS Bedrock, Azure OpenAI for complete data sovereignty
 - **Privacy**: no training on private code, zero-day retention, context exclusion for sensitive files, AI Transparency Center
 

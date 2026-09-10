@@ -174,7 +174,7 @@ The generated message is based on the staged diff. You can configure the model u
 }
 ```
 
-Any model configured in Zed's AI settings (Anthropic, OpenAI, Gemini, local Ollama) can generate commit messages.
+Any model configured in Zed's AI settings (`Anthropic`, OpenAI, Gemini, local Ollama) can generate commit messages.
 
 ---
 
@@ -269,7 +269,7 @@ This correctly attributes the commit to everyone who worked on it, following the
 
 Zed integrates with multiple AI providers for code assistance and commit message generation:
 
-- **Anthropic** (Claude Sonnet 4.6, Opus 4.6 and others)
+- **`Anthropic`** (Claude Sonnet 4.6, Opus 4.6 and others)
 - **OpenAI** (GPT-5 and variants)
 - **Google** (Gemini models)
 - **xAI** (Grok)
@@ -389,7 +389,7 @@ Create two branches from the same commit and edit the same line differently on e
 
 **Exercise 4 - generate an AI commit message**
 
-Configure an AI provider in Zed settings (Anthropic, OpenAI or your Copilot account). Make a meaningful change to several files. Stage them all. Click the sparkle icon in the commit box. Read the generated message. Edit it if needed and commit. Try changing the `agent.commit_message_model` setting to a different model and compare the messages generated for the same diff.
+Configure an AI provider in Zed settings (`Anthropic`, OpenAI or your Copilot account). Make a meaningful change to several files. Stage them all. Click the sparkle icon in the commit box. Read the generated message. Edit it if needed and commit. Try changing the `agent.commit_message_model` setting to a different model and compare the messages generated for the same diff.
 
 **Exercise 5 - multiplayer collaboration**
 

@@ -5,7 +5,7 @@ body:
     attributes:
       value: |
         Share an idea for new content, a new section or an improvement to an existing file.
-        Describe the problem or gap you have noticed before jumping straight to a solution — it helps evaluate whether the idea fits the direction of the course.
+        Describe the problem or gap you have noticed before jumping straight to a solution - it helps evaluate whether the idea fits the direction of the course.
 
   - type: textarea
     id: problem
