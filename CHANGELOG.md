@@ -28,6 +28,19 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+## [1.2.5] - 2026-09-11
+
+### Fixed
+
+- Excluded two unreachable hosts from the link check (`bazel.build/docs` restructured its site, `demo.gitea.com` was intermittently unreachable from GitHub-hosted runners)
+- Excluded a looping Zenodo DOI redirect from the link check
+- Refreshed stale platform facts and fixed the broken link-check CI
+- Copy-edited a few lesson pages
+
+### Changed
+
+- Bumped `DavidAnson/markdownlint-cli2-action` from 24.1.0 to 24.2.0
+
 ## [1.2.4] - 2026-08-05
 
 ### Removed

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 title: "git-unlocked: An Open-Source Modular Curriculum for Git and Version Control Education"
-version: 1.2.4
-date-released: "2026-08-05"
+version: 1.2.5
+date-released: "2026-09-11"
 abstract: >
   git-unlocked is an open-source modular curriculum for teaching Git and
   version control principles. The repository comprises 182 files organised
