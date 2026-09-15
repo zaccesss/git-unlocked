@@ -1,0 +1,43 @@
+name: Error or bug in content
+description: Report incorrect information, a broken command or a misleading explanation
+title: "fix: "
+labels: ["bug"]
+assignees:
+  - zaccesss
+body:
+  - type: input
+    id: file
+    attributes:
+      label: What file is the problem in?
+      placeholder: "introduction/03-setting-up.md or git/06-branching.md"
+    validations:
+      required: true
+  - type: textarea
+    id: whats-wrong
+    attributes:
+      label: What is wrong?
+      description: Describe the error clearly. What does the file currently say?
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it say instead?
+      description: If you know the correct information, include it here.
+    validations:
+      required: false
+  - type: checkboxes
+    id: os
+    attributes:
+      label: Operating system (if relevant)
+      options:
+        - label: Windows
+        - label: Mac
+        - label: Linux
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any other information that might help.
+    validations:
+      required: false
