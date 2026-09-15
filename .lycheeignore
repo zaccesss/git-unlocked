@@ -71,3 +71,6 @@ https://github\.com/gitui-org/gitui/blob/main/KEY_CONFIG\.md
 
 # CHANGELOG version comparison links (tags not yet created)
 zaccesss/git-unlocked@.*
+
+# Springer redirects through a cookie-consent wall CI cannot pass, loops to an error page
+https://link\.springer\.com/book/.*
