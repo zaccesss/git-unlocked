@@ -149,10 +149,10 @@ Callout boxes highlight information that deserves extra attention. The course us
 ## Getting help
 
 **Something is broken or incorrect in the course.**
-Open an issue using the [bug report template](https://github.com/zaccesss/git-unlocked/issues/new?template=bug_report.md).
+Open an issue using the [bug report template](https://github.com/zaccesss/git-unlocked/issues/new?template=bug_report.yml).
 
 **You want to suggest new content.**
-Open an issue using the [content suggestion template](https://github.com/zaccesss/git-unlocked/issues/new?template=content_suggestion.md).
+Open an issue using the [content suggestion template](https://github.com/zaccesss/git-unlocked/issues/new?template=content_suggestion.yml).
 
 **You are stuck on a Git problem.**
 The [common mistakes](../09-reference/common-mistakes.md) file covers the most frequent issues with exact fix commands. If your problem is not there, [Stack Overflow's git tag](https://stackoverflow.com/questions/tagged/git) has answers to almost every Git question ever asked. The [GitHub Community Discussions](https://github.com/orgs/community/discussions) board is also active and helpful.
