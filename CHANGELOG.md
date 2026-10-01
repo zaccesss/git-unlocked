@@ -30,6 +30,7 @@ PATCH - typo fixes, small corrections, link updates
 
 ### Changed
 
+- Tidied the contributor guide and the pull request template.
 - Issue templates converted from markdown frontmatter to YAML issue forms
 
 ## [1.2.5] - 2026-09-11
