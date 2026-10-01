@@ -11,7 +11,6 @@
 Before submitting, please confirm the following:
 
 - [ ] I have read [CONTRIBUTING.md](../CONTRIBUTING.md)
-- [ ] My changes follow the writing style guide (UK English, no Oxford commas, no em dashes)
 - [ ] Every command specifies where to type it (terminal, VS Code etc.)
 - [ ] OS-specific instructions are shown for Windows, Mac and Linux where relevant
 - [ ] I have not used emoji in body text (functional labels like 🟢🟡🔴 are fine)
