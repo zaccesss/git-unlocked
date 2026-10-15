@@ -176,6 +176,15 @@ Any repository under `~/work/` automatically uses your work email. Any repositor
 
 This applies the work config to any repository cloned from your company's GitLab server.
 
+**Conditional include based on where the files are checked out (Git 2.56+):**
+
+```ini
+[includeIf "worktree:~/work/"]
+    path = ~/.gitconfig-work
+```
+
+`gitdir:` matches the location of the `.git` directory. `worktree:` matches the folder where the files are checked out, which is different for linked worktrees created with `git worktree add`. Use it when you keep worktrees in a different place from the main repository.
+
 > [!TIP]
 > Conditional includes are invaluable for developers who contribute to both work and personal projects. They eliminate the common mistake of accidentally committing to a work repository with a personal email or vice versa.
 
@@ -343,6 +352,17 @@ git config --global core.autocrlf true
 # Mac and Linux
 git config --global core.autocrlf input
 ```
+
+**Keep `origin/HEAD` in step with the remote's default branch (Git 2.48+, with a global setting from Git 2.56):**
+
+When a project renames its default branch, for example from `master` to `main`, your local `origin/HEAD` can keep pointing at the old name. `fetch.followRemoteHEAD` controls what `git fetch` does about it:
+
+```bash
+git config --global fetch.followRemoteHEAD warn     # tell me when the remote's default branch changes
+git config --global fetch.followRemoteHEAD always   # update origin/HEAD silently
+```
+
+The default, `create`, only sets `origin/HEAD` when it does not exist yet. `never` leaves it alone.
 
 **Set the default editor:**
 

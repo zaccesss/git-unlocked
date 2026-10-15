@@ -4,6 +4,9 @@
 
 Windsurf is an AI-first code editor built on a VS Code fork, distinguished by its Cascade agent system - an agentic AI that maintains real-time awareness of your file edits, terminal commands and clipboard contents to stay in context automatically without requiring you to repeat yourself. Its ownership history in 2025 was one of the most turbulent in developer tools, passing through an attempted OpenAI acquisition, a Google talent deal and finally a Cognition AI acquisition. The product has remained under active development throughout. Windsurf 2.0, released in April 2026, brought the Agent Command Center and Devin integration. Like Cursor, Windsurf inherits the full VS Code Git experience and layers autonomous agent capabilities on top.
 
+> [!IMPORTANT]
+> **Windsurf is now Devin Desktop.** On 2 June 2026 Cognition announced Devin Desktop as "the next generation of Windsurf". It is built on the same IDE, stays fully backwards-compatible with Windsurf and makes the Agent Command Center the default view, with support for other agents through the Agent Client Protocol (ACP). windsurf.com now leads to Devin Desktop. Everything in this file about the editor, Cascade and its Git features still applies, but new downloads and documentation use the Devin Desktop name.
+
 ---
 
 ## Table of Contents
@@ -330,6 +333,7 @@ Windsurf is a VS Code fork built around Cascade, an agentic AI system that maint
 
 ## 18. Sources
 
+- [Cognition: Introducing Devin Desktop](https://cognition.ai/blog/introducing-devin-desktop) - the June 2026 announcement that Devin Desktop is the next generation of Windsurf
 - [Windsurf documentation](https://docs.windsurf.com)
 - [Windsurf changelog](https://windsurf.com/changelog)
 - [Cascade documentation](https://docs.windsurf.com/windsurf/cascade/cascade)

@@ -201,11 +201,14 @@ Microsoft manages these agents - they are provisioned fresh for each job and tor
 | Image alias | Operating system | Includes |
 |---|---|---|
 | `ubuntu-latest` | Ubuntu 24.04 LTS | Python, Node, Java, Go, Docker, Git, common tools |
-| `ubuntu-22.04` | Ubuntu 22.04 LTS | Same |
-| `windows-latest` | Windows Server 2025 | VS 2022, .NET SDK, NuGet, PowerShell, Chocolatey |
+| `ubuntu-26.04` | Ubuntu 26.04 LTS (generally available since October 2026) | Same |
+| `ubuntu-22.04` | Ubuntu 22.04 LTS (deprecated) | Same |
+| `windows-latest` | Windows Server 2025 with Visual Studio 2022 | VS 2022, .NET SDK, NuGet, PowerShell, Chocolatey |
+| `windows-2025-vs2026` | Windows Server 2025 with Visual Studio 2026 | VS 2026, .NET SDK |
 | `windows-2022` | Windows Server 2022 | VS 2022, .NET SDK |
 | `macos-latest` | macOS 15 Sequoia | Xcode, Homebrew, Python, Node, Java |
-| `macos-14` | macOS 14 Sonoma | Xcode 15, same tools |
+| `macOS-26` | macOS 26 Tahoe | Xcode, same tools |
+| `macos-14` | macOS 14 Sonoma (being deprecated) | Xcode 15, same tools |
 
 > [!WARNING]
 > **Retired agents**: Windows Server 2019 (`windows-2019`) was retired December 31, 2025. Ubuntu 20.04 was retired May 2025. macOS 13 was retired December 2025. Using retired image names causes pipelines to fail. Update to current images.

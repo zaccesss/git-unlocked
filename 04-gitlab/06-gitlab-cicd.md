@@ -598,6 +598,9 @@ deploy:
 
 `$DEPLOY_TOKEN` and `$DEPLOY_REGION` are project CI/CD variables. They are available automatically without any `.gitlab-ci.yml` definition.
 
+> [!TIP]
+> **GitLab Secrets Manager (generally available in GitLab 19.5, Premium and Ultimate):** for real credentials, a dedicated secrets store is safer than a pile of CI/CD variables. It is built on OpenBao, uses your existing group and project permissions and logs every create, read, update and delete. It is paid for with GitLab Credits.
+
 ---
 
 ## Predefined CI/CD Variables

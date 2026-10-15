@@ -102,13 +102,13 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: { fetch-depth: 0 }
-      - uses: gitleaks/gitleaks-action@cb7149a9b57195b609c63e8518d2c6ef8e62af45
+      - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
-      - uses: github/codeql-action/upload-sarif@v3
+      - uses: github/codeql-action/upload-sarif@v4
         if: always()
         with: { sarif_file: results.sarif }
 ```
@@ -186,7 +186,7 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with: { fetch-depth: 0 }
       - uses: trufflesecurity/trufflehog@main
         with:
@@ -489,9 +489,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       # ...build step produces ./dist/app...
-      - uses: actions/attest-build-provenance@v1
+      - uses: actions/attest-build-provenance@v4
         with:
           subject-path: "dist/app"
 ```
@@ -524,7 +524,7 @@ jobs:
       hashes: ${{ steps.hash.outputs.hashes }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
       - run: make build
       - id: hash
         run: |
@@ -580,7 +580,7 @@ permissions:
   contents: read
 
 steps:
-  - uses: actions/setup-node@v4
+  - uses: actions/setup-node@v7
     with:
       node-version: "22"
       registry-url: "https://registry.npmjs.org"
@@ -714,6 +714,8 @@ echo "Host *\n  UseKeychain yes\n  AddKeysToAgent yes" >> ~/.ssh/config
 ssh-keygen -t ed25519-sk -O resident -O verify-required -C "you@example.com"
 # Works with GitHub, GitLab and Bitbucket
 ```
+
+**Older RSA keys:** in September and October 2026 GitHub stopped accepting RSA signatures that use SHA-1 (the `ssh-rsa` signature type) and began requiring new RSA keys to be at least 3072 bits. It also added a post-quantum key exchange for SSH sessions. An ed25519 key avoids all of this. If you still use an RSA key, check `ssh -T git@github.com` works and replace the key with ed25519 if it does not.
 
 **Rotation:** check "last used" timestamps per key on GitHub (Settings > SSH and GPG keys). Prune keys that have not been used in 90 days. Rotate CI deploy keys at each quarterly credential review.
 
@@ -928,7 +930,7 @@ GA since October 2023, cloud-only (no ADO Server support). Pricing matches GitHu
 **Snyk Security for Bitbucket Cloud** (free Atlassian Marketplace app) provides dependency scanning, container scanning, licence compliance and auto-fix PRs via Code Insights. Bitbucket Pipelines supports OIDC federation to AWS, GCP and Azure (no stored cloud credentials) and deployment approvals.
 
 > [!CAUTION]
-> Atlassian is deprecating Bitbucket **app passwords on June 9, 2026**. Migrate all integrations to API tokens before that date.
+> Atlassian switched off Bitbucket **app passwords on 9 June 2026**. Any integration still using one fails to authenticate, so replace it with an API token.
 
 ---
 
@@ -996,10 +998,10 @@ Applied together, these five controls would have fully prevented or dramatically
 
 ```yaml
 # Wrong
-- uses: actions/checkout@v4
+- uses: actions/checkout@v7
 
 # Correct
-- uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+- uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 ```
 
 Use Dependabot with `package-ecosystem: "github-actions"` to keep SHA pins current automatically.
@@ -1018,7 +1020,7 @@ Two commands and a key upload. SSH signing on Git 2.34+ is the simplest path. En
 
 **5. Produce and verify build provenance.**
 
-One GitHub Actions step with `actions/attest-build-provenance@v1` gives SLSA Build Level 2. Verify at deploy time with `gh attestation verify`. This makes silent modification of build artifacts detectable.
+One GitHub Actions step with `actions/attest-build-provenance@v4` gives SLSA Build Level 2. Verify at deploy time with `gh attestation verify`. This makes silent modification of build artifacts detectable.
 
 ---
 
@@ -1122,6 +1124,7 @@ The incidents of 2024-2025 - tj-actions, s1ngularity, xz-utils, Internet Archive
 - [Git Credential Manager](https://github.com/git-ecosystem/git-credential-manager)
 - [GitHub: about rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets)
 - [OpenSSF: tj-actions CVE-2025-30066 analysis](https://openssf.org/blog/2025/03/18/cve-2025-30066-tj-actions-changed-files-action-is-compromised/)
+- [GitHub changelog: security improvements for SSH](https://github.blog/changelog/2026-09-22-security-improvements-for-ssh) - the removal of SHA-1 RSA signatures and the new 3072-bit minimum for RSA keys
 
 ---
 

@@ -151,7 +151,7 @@ In CI, you often only need the code for one service. Combining partial clone wit
 
 ```yaml
 # GitHub Actions example
-- uses: actions/checkout@v4
+- uses: actions/checkout@v7
   with:
     filter: blob:none
     sparse-checkout: |

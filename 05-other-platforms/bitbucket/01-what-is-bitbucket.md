@@ -81,7 +81,7 @@ As organisations grew larger and their infrastructure requirements became more c
 1. **Bitbucket Cloud** - migrate to the hosted service
 2. **Bitbucket Data Center** - stay self-hosted but move to the DC version
 
-Data Center continues active development. The current long-term support release is **Bitbucket Data Center 10.2** (shipped March 2026, supported until March 2028). Unlike some other Atlassian Data Center products which face a 2029 end-of-life sunset, Bitbucket Data Center is explicitly excluded from that sunset and continues to receive investment.
+Data Center continues active development. The current long-term support release is **Bitbucket Data Center 10.2** (shipped March 2026, supported until March 2028). Newer feature releases continue alongside it: at the time of writing (October 2026) the latest is **10.5** (September 2026). Unlike some other Atlassian Data Center products which face a 2029 end-of-life sunset, Bitbucket Data Center is explicitly excluded from that sunset and continues to receive investment.
 
 > [!IMPORTANT]
 > Despite Atlassian announcing end-of-life for Jira, Confluence and several other Data Center products in March 2029, **Bitbucket Data Center is not included in this announcement**. It has an active roadmap and Atlassian has committed to its continued development. Do not conflate the Data Center sunset with Bitbucket Data Center - they are separate decisions.
@@ -136,15 +136,15 @@ A **Bitbucket Hybrid License** is arriving mid-2026. This will allow organisatio
 
 ### Authentication: API tokens replace app passwords
 
-This is the most important change for anyone who automated Bitbucket workflows before 2025. **App passwords are being permanently retired.**
+This is the most important change for anyone who automated Bitbucket workflows before 2025. **App passwords have been permanently retired.**
 
 - **September 2025** - new app password creation blocked
-- **9 June 2026** - all existing app passwords stop working
+- **9 June 2026** - all existing app passwords stopped working
 
 The replacement is **API tokens**, which offer expiry controls, scoped permissions and admin-managed lifecycle. API tokens work the same way app passwords did in scripts and Git credential managers - you use them in place of your Atlassian password for HTTPS authentication. The migration is straightforward: create an API token, replace any stored app passwords in your tools and CI/CD systems.
 
 > [!WARNING]
-> If you have scripts, CI/CD pipelines or third-party tools that authenticate to Bitbucket using app passwords, they will break on 9 June 2026. Audit your integrations now and migrate to API tokens. The Bitbucket Cloud changelog at developer.atlassian.com tracks the exact deprecation phases.
+> Any script, CI/CD pipeline or third-party tool that still authenticates to Bitbucket with an app password has failed since 9 June 2026. If an older integration suddenly returns authentication errors, this is the likely cause: create an API token and replace the stored app password.
 
 ### Pipelines runners: the V5 overhaul
 
@@ -306,7 +306,7 @@ Bitbucket Server reached end of life on 15 February 2024. If you are reading doc
 
 **Using app passwords after June 2026**
 
-App passwords are being deprecated. If you have scripts, automation or third-party tools that use app passwords to authenticate to Bitbucket, they will break on 9 June 2026. Migrate to API tokens. The process is simple: create an API token, update your stored credentials. Do not wait until the deadline.
+App passwords no longer work: they were switched off on 9 June 2026. Scripts, automation or third-party tools that still use one get authentication errors. Create an API token and update the stored credentials.
 
 **Expecting a GitHub Pages equivalent**
 
@@ -330,7 +330,7 @@ Bitbucket is sunsetting native Issues and Wikis in Cloud. If you use these featu
 
 Bitbucket was founded in 2008 by Jesper Nøhr as a Mercurial hosting service and acquired by Atlassian in 2010. Over the following decade it gained Git support (2011), rebranded its self-hosted product from Stash to Bitbucket Server (2015), dropped Mercurial support entirely (2020) and retired the Server product in favour of Data Center (end of life February 2024).
 
-In 2026, Bitbucket Cloud offers three tiers (Free, Standard at $3.65/user/month, Premium at $7.25/user/month) with an ongoing transition from app passwords to API tokens. Bitbucket Data Center 10.2 is the current LTS self-hosted release, running on Linux with active development continuing.
+In 2026, Bitbucket Cloud offers three tiers (Free, Standard at $3.65/user/month, Premium at $7.25/user/month) and API tokens in place of the app passwords that were switched off in June 2026. Bitbucket Data Center 10.2 is the current LTS self-hosted release, running on Linux with active development continuing.
 
 Bitbucket's strongest selling point is its place inside the Atlassian ecosystem. The Jira integration - smart commits, the development panel, branch-to-issue creation - is the deepest code-to-project-management connection available on any major Git platform. This integration is the primary reason teams choose Bitbucket over GitHub or GitLab.
 

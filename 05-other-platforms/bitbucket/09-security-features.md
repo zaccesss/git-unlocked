@@ -63,7 +63,7 @@ Bitbucket authentication runs through Atlassian's identity platform. The strengt
 
 ### App passwords are gone
 
-**App passwords are permanently retired from June 2026.** New app passwords were blocked in September 2025. Anyone still using app passwords after June 2026 will lose access to HTTPS-based Git operations and the API. The replacement is API tokens (see the API token controls section below).
+**App passwords were permanently retired on 9 June 2026.** New app passwords were blocked in September 2025. An app password can no longer be used for HTTPS-based Git operations or the API. The replacement is API tokens (see the API token controls section below).
 
 ---
 

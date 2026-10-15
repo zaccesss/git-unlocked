@@ -108,7 +108,7 @@ GitHub Packages requires authentication to publish packages and to pull private 
 The `GITHUB_TOKEN` automatically has permission to push to Packages for the repository running the workflow. No additional setup needed.
 
 ```yaml
-- uses: docker/login-action@v3
+- uses: docker/login-action@v4
   with:
     registry: ghcr.io
     username: ${{ github.actor }}
@@ -495,17 +495,17 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: docker/setup-buildx-action@v3
+      - uses: docker/setup-buildx-action@v4
 
-      - uses: docker/login-action@v3
+      - uses: docker/login-action@v4
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: docker/metadata-action@v5
+      - uses: docker/metadata-action@v6
         id: meta
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
@@ -514,7 +514,7 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=raw,value=latest
 
-      - uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v7
         with:
           context: .
           push: true
@@ -542,11 +542,11 @@ jobs:
       packages: write
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: '20'
+          node-version: '24'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@YOUR_USERNAME'
 
@@ -561,9 +561,9 @@ jobs:
 Build for multiple architectures simultaneously (useful for Apple Silicon support):
 
 ```yaml
-- uses: docker/setup-qemu-action@v3    # enables ARM emulation
+- uses: docker/setup-qemu-action@v4    # enables ARM emulation
 
-- uses: docker/build-push-action@v6
+- uses: docker/build-push-action@v7
   with:
     platforms: linux/amd64,linux/arm64
     push: true

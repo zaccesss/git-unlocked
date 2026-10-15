@@ -312,6 +312,18 @@ This is the most aggressive filtering - only the commits themselves are download
 > [!NOTE]
 > Partial clones require the server to support them. GitHub and GitLab both support partial clones. Self-hosted Git servers may not.
 
+**Fill in missing contents in one go with `git backfill` (Git 2.49+):**
+
+In a blobless clone, commands such as `git blame` or `git log -p` fetch each missing file one request at a time, which can be very slow. `git backfill` downloads the missing blobs in batches, so the server can compress them together:
+
+```bash
+git backfill                 # fetch the missing blobs for the current history
+git backfill --sparse        # only the paths in your sparse-checkout
+git backfill main~100..main  # only blobs reachable from a range (Git 2.54+)
+```
+
+Run it once after a blobless clone when you know you will need most of the history, for example before investigating a bug with `git blame`.
+
 ---
 
 ## Optimising a Large Repository
@@ -489,6 +501,7 @@ LFS files in shallow clones may not download automatically depending on the serv
 - [Official git sparse-checkout documentation](https://git-scm.com/docs/git-sparse-checkout) - the complete reference
 - [GitHub - Sparse checkout](https://github.blog/open-source/git/bring-your-monorepo-down-to-size-with-sparse-checkout/) - GitHub's guide to sparse checkout in monorepos
 - [Git partial clone](https://git-scm.com/docs/partial-clone) - official documentation for partial clones
+- [Official git backfill documentation](https://git-scm.com/docs/git-backfill) - batch-downloading missing blobs in a partial clone
 - [GitLab - Reducing repository size](https://docs.gitlab.com/user/project/repository/repository_size/) - GitLab's guide to managing large repositories
 
 ---

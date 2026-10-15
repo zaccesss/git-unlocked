@@ -31,7 +31,7 @@ This is the quick-reference file for the entire `ides-and-editors/` section. Use
 | GitHub Desktop | Yes | Yes | Community | [shiftkey/desktop](https://github.com/shiftkey/desktop) fork for Linux |
 | Cursor | Yes | Yes | Yes | |
 | Windsurf | Yes | Yes | Yes | |
-| Google Antigravity | Yes | Yes | Yes | Free public preview |
+| Google Antigravity | Yes | Yes | Yes | Free plan, paid plans through Google AI Pro and Ultra |
 | AWS Kiro | Yes | Yes | Yes | |
 | Zed | Yes | Yes | Yes | Windows support added 2026 |
 | Helix | Yes | Yes | Yes | |
@@ -144,8 +144,8 @@ Key: ✅ Built-in or first-party | 🔌 Via extension/plugin | ❌ Not available
 | Neovim | Yes (full) | - | Free, open source |
 | GitHub Desktop | Yes (full) | Copilot from $10/mo for commit messages | Editor is free; Copilot subscription for AI messages |
 | Cursor | Yes (50 premium requests/mo) | Pro $20/mo | Credit-based pricing since June 2025 |
-| Windsurf | Yes (25 credits/day) | Pro $15/mo | Cheaper than Cursor Pro |
-| Google Antigravity | Yes (public preview) | AI Pro $20/mo expected | Free during preview; paid tiers coming |
+| Windsurf (now Devin Desktop) | Yes (25 credits/day) | Pro $15/mo | Cheaper than Cursor Pro; check current pricing after the rename |
+| Google Antigravity | Yes ($0 individual plan) | Through Google AI Pro or Ultra | Generally available; business plans through Google Cloud |
 | AWS Kiro | Yes (50 credits/mo) | Pro $20/mo | No AWS account required |
 | Zed | Yes (BYOK AI) | $5/mo credit | Pay-per-use AI at API cost + 10% |
 | Helix | Yes (full) | - | Free, open source |
@@ -245,7 +245,7 @@ Key: ✅ Built-in or first-party | 🔌 Via extension/plugin | ❌ Not available
 - **Android Studio** - the standard for Android development
 
 **I want an experiment with frontier agent orchestration (and accept instability)**
-- **Google Antigravity** - most ambitious architecture, free, but public preview with stability issues
+- **Google Antigravity** - most ambitious architecture, generally available with a free plan, still young with stability issues reported in preview
 
 **I work on Windows with .NET, C++ or Unity**
 - **Visual Studio** - deepest language tooling, Azure DevOps integration, Copilot built in

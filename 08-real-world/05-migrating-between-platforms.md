@@ -215,7 +215,7 @@ Docs: [docs.gitlab.com/user/project/import/github](https://docs.gitlab.com/user/
 
 ### After the import
 
-- Update any CI/CD pipeline files that reference GitHub-specific syntax (e.g. `uses: actions/checkout@v4` becomes GitLab CI `include:` or a native clone step)
+- Update any CI/CD pipeline files that reference GitHub-specific syntax (e.g. `uses: actions/checkout@v7` becomes GitLab CI `include:` or a native clone step)
 - Recreate webhooks pointing to external services
 - Recreate deploy keys and rotate the credentials
 - Set up GitLab CI/CD variables to replace GitHub Actions secrets

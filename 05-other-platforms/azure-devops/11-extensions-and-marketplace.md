@@ -270,7 +270,7 @@ Enhanced delivery plans with additional features beyond the built-in Delivery Pl
 
 **[Code Search](https://marketplace.visualstudio.com/items?itemName=ms.vss-code-search)**
 Publisher: Microsoft. Free (requires Elasticsearch on Server).
-Full-text code search across all repositories. Essential for large codebases. Included by default on Services; requires configuration on Server.
+Full-text code search across all repositories. Essential for large codebases. Since April 2026 Code Search works out of the box on Azure DevOps Services, with no extension to install. Included by default on Services; requires configuration on Server.
 
 ---
 

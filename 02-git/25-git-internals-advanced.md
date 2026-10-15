@@ -18,6 +18,7 @@ This file goes deeper into how Git works internally - packfiles, the reflog, gar
 - [Recovering lost commits](#recovering-lost-commits)
 - [Inspecting the object database](#inspecting-the-object-database)
 - [The commit graph](#the-commit-graph)
+- [Reference storage: files and reftable](#reference-storage-files-and-reftable)
 - [Try It Yourself](#try-it-yourself)
 - [Common Mistakes](#common-mistakes)
 - [Summary](#summary)
@@ -425,6 +426,40 @@ Modern Git (2.29+) writes the commit graph automatically as part of `git mainten
 
 ---
 
+## Reference Storage: Files and Reftable
+
+Branches, tags and other refs have traditionally been stored as one small file each under `.git/refs/`, with older ones packed into `.git/packed-refs`. This "files" format has known problems: two branch names that differ only in capital letters cannot both exist on Windows or macOS. Deleting a ref in a repository with many refs means rewriting the whole `packed-refs` file.
+
+The **reftable** format stores refs in a compact binary table instead. The Git project has confirmed that Git 3.0 will make reftable the default for newly created repositories.
+
+**Check which format a repository uses (Git 2.52+, experimental command):**
+
+```bash
+git repo info references.format
+```
+
+**Convert an existing repository to reftable:**
+
+```bash
+git refs migrate --ref-format=reftable --dry-run   # check first
+git refs migrate --ref-format=reftable
+```
+
+> [!WARNING]
+> Every tool that reads the repository must understand reftable. Older Git versions and some third-party tools do not, so try it on a copy before migrating a repository your team or your CI depends on.
+
+**Work with refs directly with `git refs` (Git 2.52 and 2.56):**
+
+```bash
+git refs list                            # every ref, like git for-each-ref
+git refs exists refs/heads/main          # exit code 0 if it exists
+git refs create refs/heads/backup HEAD   # Git 2.56+
+git refs rename refs/heads/backup refs/heads/archive
+git refs delete refs/heads/archive
+```
+
+---
+
 ## Try It Yourself
 
 **Step 1.** Create a repository and make several commits:
@@ -556,6 +591,8 @@ The object database uses a specific binary format. Editing files there manually 
 - [Official git gc documentation](https://git-scm.com/docs/git-gc) - garbage collection reference
 - [Official git maintenance documentation](https://git-scm.com/docs/git-maintenance) - background maintenance operations
 - [Git commit graph documentation](https://git-scm.com/docs/commit-graph) - technical details of the commit graph format
+- [Official git refs documentation](https://git-scm.com/docs/git-refs) - listing, creating, migrating and verifying refs
+- [Reftable format](https://git-scm.com/docs/reftable) - the specification of the reftable ref storage format
 
 ---
 

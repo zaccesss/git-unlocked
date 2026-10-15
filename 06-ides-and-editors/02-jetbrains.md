@@ -40,6 +40,8 @@ JetBrains was founded in Prague in 2000 by three Russian developers - Sergey Dmi
 
 IntelliJ IDEA 2025.3, released December 2025, made a significant licensing change: the Community edition was expanded to include core Java, Kotlin, SQL, JavaScript and TypeScript support for **free forever including commercial use**, removing the previous restriction that required an Ultimate subscription for commercial JavaScript/TypeScript work. Ultimate remains the paid tier with advanced framework tooling, database support and full AI Assistant integration.
 
+IntelliJ IDEA 2026.1 (March 2026) added **Git worktree support**, so you can work on several branches of one repository in separate folders at the same time without stashing. At the time of writing (October 2026) the current release is IntelliJ IDEA 2026.2 (July 2026).
+
 ---
 
 ## 2. JetBrains IDE family and pricing
@@ -453,6 +455,7 @@ JetBrains IDEs share a single, mature Git implementation that covers the full wo
 - [JetBrains interactive rebase documentation](https://www.jetbrains.com/help/idea/edit-project-history.html)
 - [JetBrains AI Assistant documentation](https://www.jetbrains.com/help/ai-assistant)
 - [JetBrains pricing](https://www.jetbrains.com/all/)
+- [What's new in IntelliJ IDEA 2026.1](https://www.jetbrains.com/idea/whatsnew/2026-1/) - including Git worktree support
 - [IntelliJ IDEA 2025.3 unified release announcement](https://blog.jetbrains.com/idea/2025/12/intellij-idea-unified-release/)
 - [GitLab plugin for JetBrains](https://plugins.jetbrains.com/plugin/22857-gitlab)
 - [Android Studio documentation](https://developer.android.com/studio)

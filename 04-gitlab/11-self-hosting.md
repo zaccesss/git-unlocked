@@ -105,8 +105,8 @@ GitLab's resource requirements depend heavily on the number of users and the vol
 | CPU | 4 vCPU | 4 vCPU |
 | RAM | 4 GB | 8 GB |
 | Storage | 10 GB (OS + GitLab) + repo storage | 50 GB+ |
-| PostgreSQL | 12.x or later | Latest supported |
-| Redis | 6.x or 7.x | Latest supported |
+| PostgreSQL | 17 (GitLab 19.x) | 17 or 18 |
+| Redis | 7.0 (or Valkey 7.2) | 7.2 |
 
 > [!IMPORTANT]
 > 4 GB RAM is genuinely the minimum and GitLab will run slowly at this level. 8 GB is the practical minimum for a responsive instance. For any team larger than a handful of people, start at 8 GB.
@@ -142,15 +142,15 @@ A rough starting point: allocate at least 2x your current total repository size,
 
 | OS | Supported versions |
 |---|---|
-| Ubuntu | 20.04 LTS, 22.04 LTS, 24.04 LTS |
-| Debian | 11, 12 |
-| Red Hat Enterprise Linux (RHEL) | 8, 9 |
-| CentOS | 8 (Stream) |
-| AlmaLinux | 8, 9 |
-| Rocky Linux | 8, 9 |
-| Amazon Linux | 2, 2023 |
-| SUSE Linux Enterprise Server | 15.5, 15.6 |
-| openSUSE Leap | 15.5, 15.6 |
+| Ubuntu | 22.04 LTS, 24.04 LTS, 26.04 LTS (from GitLab 19.3) |
+| Debian | 13 (Debian 11 and 12 are listed with GitLab 19.3 as their last proposed version) |
+| Red Hat Enterprise Linux (RHEL) | 8, 9, 10 |
+| AlmaLinux | 8, 9, 10 |
+| Oracle Linux | 8, 9, 10 |
+| Amazon Linux | 2023 |
+
+> [!WARNING]
+> GitLab 19.0 (May 2026) raised the requirements for self-managed instances: PostgreSQL 17 is now the minimum, Redis 6 support was removed and Linux packages are no longer built for Ubuntu 20.04 or SUSE distributions. GitLab 18.11 was the last release for Ubuntu 20.04. Check GitLab's [supported operating systems table](https://docs.gitlab.com/install/package/) before planning an upgrade.
 
 Architectures: `amd64` (x86-64) and `arm64` (AArch64).
 

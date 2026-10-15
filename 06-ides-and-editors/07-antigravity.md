@@ -2,7 +2,7 @@
 
 **Difficulty:** 🟡 Intermediate | **Time:** 30 minutes
 
-Google Antigravity is an agent-first IDE built by Google using the ex-Windsurf/Codeium team hired in the $2.4 billion talent deal of July 2025. It launched on November 18, 2025 alongside Gemini 3, is built on a VS Code fork and is free in public preview. Its distinguishing concept is the **Manager view** - a mission control panel for orchestrating multiple parallel AI agents, each producing verifiable Artifacts that you can audit before accepting. For Git, this means agents that commit code, open pull requests and create branches, with every action traceable through Artifacts. As of April 2026, Antigravity is a genuinely capable but still-preview tool with real stability limitations worth understanding before adopting for production work.
+Google Antigravity is an agent-first IDE built by Google using the ex-Windsurf/Codeium team hired in the $2.4 billion talent deal of July 2025. It launched on November 18, 2025 alongside Gemini 3, is built on a VS Code fork and is now generally available with a free plan for individuals. Its distinguishing concept is the **Manager view** - a mission control panel for orchestrating multiple parallel AI agents, each producing verifiable Artifacts that you can audit before accepting. For Git, this means agents that commit code, open pull requests and create branches, with every action traceable through Artifacts. As of April 2026, Antigravity is a genuinely capable but still-preview tool with real stability limitations worth understanding before adopting for production work.
 
 ---
 
@@ -34,7 +34,7 @@ The story of Antigravity is inseparable from Windsurf's. In July 2025, when Open
 
 Inside Google, the ex-Windsurf team was given resources to build an IDE on top of their existing deep familiarity with VS Code forks and agentic coding systems. They shipped Antigravity in approximately four months, launching on **November 18, 2025** alongside Gemini 3 at a Google event. The name reflects Google's ambition to lift AI-assisted development beyond the gravitational pull of traditional coding approaches.
 
-Antigravity is available free in public preview at [antigravity.google](https://antigravity.google) (or through Google's developer portal). There is no paid tier yet; Google has indicated premium tiers will be introduced in 2026 but has not announced pricing.
+Antigravity started as a free public preview and is now generally available at [antigravity.google](https://antigravity.google), with a free plan for individuals and paid plans (see [Pricing](#12-pricing)). It has also grown beyond the editor: in October 2026 Google offers an Antigravity app, the Antigravity IDE, a command-line tool, an SDK and Antigravity extensions for VS Code, Visual Studio, JetBrains IDEs, Zed and Xcode.
 
 ---
 
@@ -197,7 +197,7 @@ Antigravity processes code through Google's cloud infrastructure. This matters f
 
 ## 11. Current stability and known issues
 
-Antigravity is in public preview as of April 2026. It is a capable tool but has real stability limitations that are important to understand before using it for production-critical work.
+Antigravity was in public preview until it became generally available in 2026. The issues below were reported during the preview. Check the [Antigravity changelog](https://antigravity.google/docs/changelog) for what has been fixed since. Treat it with the same care as any fast-moving AI tool.
 
 **Known issues as of April 2026**:
 
@@ -214,18 +214,16 @@ Antigravity is in public preview as of April 2026. It is a capable tool but has 
 
 ## 12. Pricing
 
-Antigravity is **free in public preview** as of April 2026. Google has indicated it will introduce paid tiers in 2026. Based on the existing Google AI product structure, expected tiers are:
+Antigravity is generally available. At the time of writing (October 2026) Google offers:
 
-| Tier            | Estimated price | Notes                                                      |
-| --------------- | --------------- | ---------------------------------------------------------- |
-| Free            | $0              | Limited daily rate; Gemini 3 Flash + 3.1 Pro within limits |
-| Google AI Pro   | $20/month       | Higher limits, Claude access                               |
-| Google AI Ultra | $249.99/month   | Maximum limits, all models, priority                       |
+| Plan | Who it is for | What it adds |
+| --- | --- | --- |
+| Individual, $0 a month | Anyone | A range of agent models, unlimited tab completions and command requests, basic weekly rate limits |
+| Google AI Pro | Developers who use agents regularly | Higher rate limits and a flexible AI credit pool |
+| Google AI Ultra | Developers who use Antigravity all day | Even higher limits and more access to the latest Gemini models |
+| Business, through Google Cloud | Organisations | The app, the CLI and the IDE extensions under Google Cloud terms, with central admin controls and spend caps |
 
-These are projections based on Google's AI product pricing patterns. Check [antigravity.google](https://antigravity.google) for current pricing.
-
-> [!NOTE]
-> Antigravity's free tier is genuinely generous compared to Cursor's Hobby or Windsurf's Free tier in terms of model access - you get Gemini 3.1 Pro and Claude Opus 4.6 without paying. However, the rate limits tighten during peak hours and the "work done" quota system is opaque. If you need predictable access for daily professional use, wait for the paid tier or use Cursor or Windsurf in the meantime.
+Google AI Pro and Ultra are Google's general AI subscriptions, so their prices are set on Google's subscription pages rather than by Antigravity. Check [antigravity.google/pricing](https://antigravity.google/pricing) for current limits and prices.
 
 ---
 
@@ -272,7 +270,7 @@ Watch both agents work in parallel in the Manager view. Review both Artifacts wh
 
 ## 15. Common Mistakes
 
-Treating Antigravity as production-ready because it is a Google product is a mistake. It is in public preview, has documented stability issues and Google itself describes it as experimental. Use it for exploration, prototyping and non-critical tasks rather than production deployments until the stable release.
+Treating Antigravity as production-ready because it is a Google product is a mistake. It is still a young, fast-changing product with documented stability issues from its preview period. Use it for exploration, prototyping and non-critical tasks rather than production deployments until the stable release.
 
 Not reading the Artifact before accepting an agent's work means losing the main advantage Antigravity offers over Cursor and Windsurf. The `git_operations.md` Artifact is your audit trail. Read it. Verify that the branches, commits and pushes it lists are what you asked for.
 

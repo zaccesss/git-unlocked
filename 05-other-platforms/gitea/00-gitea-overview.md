@@ -87,9 +87,9 @@ Before starting this folder you should be comfortable with Git basics and have a
 
 ## Note on Gitea versions
 
-Gitea is at **v1.25.x** as of April 2026. The version numbering follows `1.MAJOR.MINOR`. New major versions (1.22, 1.23, etc.) ship roughly every 3-4 months with new features. Patch versions (1.25.1, 1.25.2) are security and bug fixes.
+At the time of writing (October 2026) Gitea is at **v28.1**. For years Gitea numbered its releases `1.MAJOR.PATCH` (1.24, 1.25, 1.26, 1.27). With the release that followed 1.27, in September 2026, Gitea dropped the leading `1.` and called it **28.0**. Major releases still arrive every few months and patch releases (28.0.1, 28.1.0) bring fixes and smaller features.
 
-The `1.x` versioning scheme distinguishes Gitea from Forgejo, which jumped to `v7.0` when it became a hard fork in February 2024. If you see version numbers above `1.x` in a Gitea context, that is likely Forgejo.
+Forgejo has used its own version numbers since it became a hard fork in February 2024 and is at v16 in October 2026. The two projects' numbers are not comparable, so check which project you are reading about before relying on a version number.
 
 ---
 

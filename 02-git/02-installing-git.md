@@ -26,14 +26,14 @@ This file covers installing Git on Windows, Mac and Linux in full detail. If you
 
 ### What version should you install?
 
-Always install the latest stable release. The current stable version is **Git 2.55.0** (June 2026).
+Always install the latest stable release. At the time of writing (October 2026) that is **Git 2.56.0**, released on 28 September 2026. Check [git-scm.com](https://git-scm.com/downloads) for the newest version.
 
 > [!NOTE]
 > Git follows a roughly quarterly release schedule. Minor versions (2.51, 2.52, 2.53) add new features and fix bugs. You do not need to update immediately on every release, but staying within the last two or three releases is good practice. If your version is older than **2.28**, some features used in this course may not be available.
 
 ### What about Git 3.0?
 
-Git 3.0 is expected later in 2026. It will change the default hash algorithm, default branch name and default ref storage for new repositories. Your existing repositories will continue to work. This course will be updated when 3.0 releases. For now, install the latest 2.x release.
+Git 3.0 does not have a release date yet. The Git project has confirmed what it will change for **newly created** repositories: SHA-256 instead of SHA-1 as the hash algorithm, the reftable format instead of loose files for references and `main` as the default branch name. Your existing repositories will keep working. Until then, install the latest 2.x release.
 
 ### Do you already have Git?
 
@@ -347,7 +347,7 @@ git --version
 Expected output:
 
 ```
-git version 2.55.0
+git version 2.56.0
 ```
 
 The exact number may differ slightly depending on your platform and when you installed, but it should be 2.28 or higher.
@@ -624,7 +624,7 @@ git config --global core.editor "nano"
 
 ## Summary
 
-- The current stable Git version is 2.55.0 (June 2026)
+- At the time of writing (October 2026) the current stable Git version is 2.56.0
 - On **Windows**, use the Git for Windows installer from git-scm.com/install/windows or `winget install --id Git.Git -e --source winget`
 - On **Mac**, use Homebrew (`brew install git`) for the latest version or Xcode Command Line Tools (`xcode-select --install`) for a simpler setup
 - On **Linux**, use your distribution's package manager (`sudo apt install git`, `sudo dnf install git` etc.)
@@ -649,6 +649,7 @@ Now that Git is installed, the next file configures it with your identity and pr
 - [Git installation documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) - the official Pro Git book chapter on installation across all platforms
 - [winget documentation](https://learn.microsoft.com/en-us/windows/package-manager/winget/) - Microsoft's official documentation for the Windows Package Manager
 - [Git release notes](https://github.com/git/git/tree/master/Documentation/RelNotes) - detailed notes for every Git release, useful for understanding what changed between versions
+- [Git 3.0 breaking changes](https://github.com/git/git/blob/master/Documentation/BreakingChanges.adoc) - the Git project's own list of what Git 3.0 will change and why
 
 ---
 

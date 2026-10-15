@@ -5,7 +5,7 @@
 [![markdownlint](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml)
 [![Check Links](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.2.6-blue.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)](CHANGELOG.md)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20695630-blue.svg)](https://doi.org/10.5281/zenodo.20695630)
 
 git-unlocked takes you from absolute zero to professional-level Git across every major platform: GitHub, GitLab, Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg. Commands are shown for Windows, Mac and Linux side by side. Nothing assumed. Nothing skipped.

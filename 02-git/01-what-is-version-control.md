@@ -195,7 +195,7 @@ Torvalds had precise, demanding goals:
 
 **The name "Git"** was a deliberate joke. Torvalds said: _"I'm an egotistical bastard and I name all my projects after myself. First 'Linux', now 'git'."_ "Git" is British slang for an unpleasant or contemptible person. The official README offers multiple definitions: a random three-letter combination; "stupid, contemptible and despicable"; **"Global Information Tracker"** when it works; and something considerably more colourful when it does not.
 
-On **26 July 2005**, Torvalds handed maintenance to **Junio C. Hamano**, who had been contributing since approximately one week after the first commit. **Junio Hamano remains Git's maintainer to this day.** Git 1.0 was released on 21 December 2005. Git 2.0 - the first intentionally backwards-incompatible release - arrived on 1 June 2014. The current stable release is **Git 2.55.0** (June 2026).
+On **26 July 2005**, Torvalds handed maintenance to **Junio C. Hamano**, who had been contributing since approximately one week after the first commit. **Junio Hamano remains Git's maintainer to this day.** Git 1.0 was released on 21 December 2005. Git 2.0 - the first intentionally backwards-incompatible release - arrived on 1 June 2014. At the time of writing (October 2026) the current stable release is **Git 2.56.0**, released on 28 September 2026.
 
 ### Mercurial: the road not taken (April 2005)
 

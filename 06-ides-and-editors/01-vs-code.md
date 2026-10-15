@@ -39,7 +39,7 @@ Microsoft released VS Code publicly in November 2015 after a preview at Build 20
 
 By 2022 VS Code had the largest share of any code editor in the Stack Overflow developer survey, a position it has held every year since. As of 2025 it has over 50,000 extensions and hundreds of millions of active users. Its influence on the industry is hard to overstate: when Cursor, Windsurf, Google Antigravity and AWS Kiro were built, their teams all chose VS Code or its open-source variant Code-OSS as the foundation, inheriting its extension API, keybindings, settings format and - crucially - its entire Git integration.
 
-VS Code's source code is at [github.com/microsoft/vscode](https://github.com/microsoft/vscode) under the MIT licence.
+VS Code's source code is at [github.com/microsoft/vscode](https://github.com/microsoft/vscode) under the MIT licence. Since March 2026 new versions have shipped every one or two weeks instead of every month, so features arrive in small steps. The [release notes](https://code.visualstudio.com/updates) list what each version changed.
 
 ---
 
@@ -167,6 +167,8 @@ Clicking on any modified file in the Source Control panel opens the diff editor.
 **Comparing arbitrary refs**: use `Git: Open Comparison` from the Command Palette to compare branches, tags or commits. You can also right-click a file in the Explorer and choose **Select for Compare**, then right-click another file and **Compare with Selected**.
 
 **Word-level diffs**: VS Code highlights changed words within lines in addition to whole lines. This is controlled by `"diffEditor.wordWrap"` and `"diffEditor.diffAlgorithm"` settings.
+
+**Recent diff improvements (2026):** VS Code 1.129 (July 2026) lets you choose a custom editor for diffs and merges. VS Code 1.130 added diff statistics for each file and a compact view for diffs that span many files. File paths in Git diff output also became clickable. VS Code 1.137 (September 2026) added a smart layout that picks side-by-side or inline depending on the width available.
 
 ---
 
@@ -475,6 +477,7 @@ VS Code ships a capable Git integration out of the box that handles staging at l
 
 ## 22. Sources
 
+- [VS Code release notes](https://code.visualstudio.com/updates) - every weekly release, including Git and diff changes
 - [VS Code Source Control documentation](https://code.visualstudio.com/docs/sourcecontrol/overview)
 - [VS Code Git quickstart](https://code.visualstudio.com/docs/sourcecontrol/quickstart)
 - [VS Code GitHub integration](https://code.visualstudio.com/docs/sourcecontrol/github)

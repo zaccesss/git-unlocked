@@ -301,7 +301,7 @@ jobs:
     if: github.event.label.name == 'bug'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v1
+      - uses: actions/add-to-project@v2
         with:
           project-url: https://github.com/orgs/YOUR_ORG/projects/1
           github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}

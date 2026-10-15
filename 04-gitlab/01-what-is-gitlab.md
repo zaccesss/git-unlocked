@@ -141,7 +141,7 @@ As of April 2026, GitLab is one of the most significant infrastructure companies
 | Q3 FY2026 revenue             | $244.4M (+25% year-over-year)                 |
 | Employees                     | ~2,000 across 60+ countries                   |
 | Open source contributors      | 3,300+                                        |
-| Current version               | GitLab 18.10 (19 March 2026)                  |
+| Current version               | GitLab 19.5 (15 October 2026)                 |
 | NASDAQ ticker                 | GTLB                                          |
 
 **Awards and recognition (2025):**
@@ -151,7 +151,7 @@ As of April 2026, GitLab is one of the most significant infrastructure companies
 
 **Notable enterprise customers**: Goldman Sachs, NVIDIA, Siemens, T-Mobile, Barclays, Ticketmaster, Jaguar Land Rover, NASDAQ, Dish Network, Comcast, Apple, Dell, IBM, the US Department of Homeland Security and the French Ministry of Education.
 
-**Current version**: GitLab **18.10** was released on **19 March 2026**. Key features in this release include SAST false positive detection via the Duo Agent Platform, credits for free tier users, passwordless sign-in with passkeys (GA), a new work items list with saved views and multiple security improvements.
+**Current version**: at the time of writing (October 2026) the latest release is GitLab **19.5**, released on **15 October 2026**. GitLab 19.0 (21 May 2026) was a major release with breaking changes for self-managed instances, including PostgreSQL 17 as the minimum version. Since then the 19.x releases have added stacked merge requests and inline blame (19.1), automatic rebase before merge and generally available fine-grained personal access tokens (19.2), enforced merge trains and secret detection across commit history (19.3) and a generally available Secrets Manager and MCP server (19.5).
 
 GitLab releases on the **third Thursday of every month**. Only the latest release is actively maintained. The previous two minor releases receive security backports.
 
@@ -416,7 +416,7 @@ Open `https://gitlab.com/gitlab-org/gitlab` and `https://github.com/torvalds/lin
 - GitLab was created by **Dmytro Zaporozhets** in Ukraine in **2011** as an open-source side project and co-founded as a company with **Sid Sijbrandij** in **2013**
 - It is a **single application for the entire DevSecOps lifecycle**: code hosting, CI/CD, security scanning, project management, container and package registries and AI in one product
 - **40M+ registered users**, more than 50% of the Fortune 100, trading on NASDAQ as **GTLB**
-- Current version: **GitLab 18.10** (March 2026). CEO: **Bill Staples**. CTO: **Siva Padisetty**
+- Current version: **GitLab 19.5** (October 2026). CEO: **Bill Staples**. CTO: **Siva Padisetty**
 - Available as **GitLab.com** (SaaS) or self-hosted **Community Edition** (free, MIT licence) or **Enterprise Edition** (proprietary but CE-equivalent without a paid licence)
 - Free tier: unlimited projects, 5 users per private group, 400 compute minutes/month, 10 GiB/project, basic security scanning
 - Premium: $29/user/month; Ultimate: contact sales (~$99) - both annual billing only
@@ -430,7 +430,8 @@ Open `https://gitlab.com/gitlab-org/gitlab` and `https://github.com/torvalds/lin
 
 - [GitLab company history](https://about.gitlab.com/company/) - official GitLab history and about page
 - [GitLab Inc. Wikipedia](https://en.wikipedia.org/wiki/GitLab_Inc.) - detailed history, funding timeline and key milestones
-- [GitLab 18.10 release post](https://about.gitlab.com/releases/2026/03/19/gitlab-18-10-released/) - latest release notes
+- [GitLab 19.5 release post](https://docs.gitlab.com/releases/19/gitlab-19-5-released/) - the latest release notes
+- [GitLab 19.0 release post](https://docs.gitlab.com/releases/19/gitlab-19-0-released/) - the major release and its breaking changes
 - [GitLab pricing](https://about.gitlab.com/pricing/) - current plan details and the feature comparison matrix
 - [GitLab for Education](https://about.gitlab.com/solutions/education/) - applying for free Ultimate
 - [GitLab for Open Source](https://about.gitlab.com/solutions/open-source/) - applying for free Ultimate as an OSS project

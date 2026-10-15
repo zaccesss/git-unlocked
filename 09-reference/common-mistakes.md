@@ -608,10 +608,10 @@ The `tj-actions/changed-files` incident (March 2025) showed that tags are mutabl
 
 ```yaml
 # Wrong - tag can be moved
-- uses: actions/checkout@v4
+- uses: actions/checkout@v7
 
 # Correct - SHA is immutable
-- uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+- uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
 ```
 
 Use Dependabot to keep SHA pins current:
@@ -637,9 +637,9 @@ permissions:
   # No token needed - OIDC handles authentication
 ```
 
-**Bitbucket: app passwords after June 2026**
+**Bitbucket: still using app passwords**
 
-Atlassian is deprecating Bitbucket app passwords on June 9, 2026. Migrate all integrations to API tokens before that date.
+Atlassian switched off Bitbucket app passwords on 9 June 2026. An integration that still uses one fails to authenticate. Replace it with an API token.
 
 ---
 

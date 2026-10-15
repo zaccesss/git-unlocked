@@ -216,6 +216,8 @@ Or in settings: Settings → Security and compliance → Secret detection push p
 > [!NOTE]
 > Push protection on GitLab.com currently requires the repository to have secret detection configured. Unlike GitHub's push protection which is a global platform feature, GitLab's push protection is opt-in per project.
 
+**Scanning a whole push (GitLab 19.3):** secret detection on the default branch now scans every commit in a push, not just the final state of the files. Before this, a secret added and removed again within the same push went unnoticed, even though it stayed in the history.
+
 ### Automatic revocation
 
 For some secret types, GitLab automatically notifies the issuing service when a secret is detected, triggering auto-revocation. This partnership reduces the window between detection and revocation. Supported providers include some major cloud and SaaS vendors (the list expands over time).

@@ -361,7 +361,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Build the project
         run: |
@@ -373,29 +373,27 @@ jobs:
           tar -czf myapp-${{ github.ref_name }}-linux.tar.gz dist/
 
       - name: Create GitHub Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           generate_release_notes: true
           files: |
             myapp-${{ github.ref_name }}-linux.tar.gz
 ```
 
-**Using GitHub's official release action:**
+**Using the GitHub CLI, which is preinstalled on GitHub-hosted runners:**
 
 ```yaml
 - name: Create Release
-  uses: actions/create-release@v1
   env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  with:
-    tag_name: ${{ github.ref_name }}
-    release_name: Release ${{ github.ref_name }}
-    body: |
-      Changes in this release:
-      - Bug fixes and improvements
-    draft: false
-    prerelease: false
+    GH_TOKEN: ${{ github.token }}
+  run: |
+    gh release create "${{ github.ref_name }}" \
+      --title "Release ${{ github.ref_name }}" \
+      --generate-notes
 ```
+
+> [!NOTE]
+> Older tutorials use `actions/create-release`. GitHub has archived that action and no longer maintains it, so use the GitHub CLI or `softprops/action-gh-release` instead.
 
 **Full automated workflow: build → test → release:**
 
@@ -411,7 +409,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: npm ci && npm test
 
   release:
@@ -421,9 +419,9 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: npm ci && npm run build
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           generate_release_notes: true
 ```

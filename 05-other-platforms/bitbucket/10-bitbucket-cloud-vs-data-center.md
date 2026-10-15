@@ -178,7 +178,7 @@ Bitbucket Pipelines is exclusive to Cloud. It runs on Atlassian's infrastructure
 
 ### Current version
 
-The current Long Term Support release is **Bitbucket Data Center 10.2** (released March 2026, supported until March 2028). LTS releases receive bugfix and security patches for approximately 2 years.
+The current Long Term Support release is **Bitbucket Data Center 10.2** (released March 2026, supported until March 2028). LTS releases receive bugfix and security patches for approximately 2 years. Feature releases continue in between: the latest at the time of writing (October 2026) is 10.5.
 
 Non-LTS versions are released more frequently with shorter support windows. For production environments, run an LTS release.
 

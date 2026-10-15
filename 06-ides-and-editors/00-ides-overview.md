@@ -62,7 +62,7 @@ One fact that matters for understanding this section: almost every Generation 3 
 | Editor | Fork base | Notes |
 |---|---|---|
 | Cursor | VS Code | Full VS Code extension compatibility |
-| Windsurf | VS Code | Full VS Code extension compatibility |
+| Windsurf (now Devin Desktop) | VS Code | Full VS Code extension compatibility |
 | Google Antigravity | VS Code / Code-OSS | Built by ex-Windsurf team, launched Nov 2025 |
 | AWS Kiro | Code-OSS | Uses OpenVSX registry, not VS Code Marketplace |
 

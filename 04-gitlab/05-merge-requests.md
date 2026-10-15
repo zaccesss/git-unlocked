@@ -21,6 +21,7 @@ But GitLab's merge requests go significantly beyond the basics. They integrate d
 - [CODEOWNERS](#codeowners)
 - [Merge methods](#merge-methods)
 - [Auto-merge](#auto-merge)
+- [Stacked merge requests](#stacked-merge-requests)
 - [Merged results pipelines](#merged-results-pipelines)
 - [Merge trains](#merge-trains)
 - [MR templates](#mr-templates)
@@ -416,6 +417,8 @@ Settings → Repository → Protected branches → your branch → enable **Requ
 
 With this enabled, any MR targeting that branch must receive approval from every applicable CODEOWNERS entry before it can merge.
 
+**Assigning Code Owners as reviewers automatically (GitLab 19.1, Premium):** go to Settings → Merge requests → **Automatic reviewer assignment** and select **Automatically assign all code owners as reviewers**. GitLab then adds every matching Code Owner as a reviewer when an MR is created ready for review and again when a draft is marked ready. If you already chose a reviewer, GitLab keeps your choice.
+
 ---
 
 ## Merge Methods
@@ -469,6 +472,8 @@ No merge commit is ever created. The target branch pointer simply advances to th
 
 GitLab rejects the merge if a fast-forward is not possible (if the target has diverged). Contributors must rebase their branch onto the latest target before merging.
 
+**Automatic rebase before merge (GitLab 19.2, all tiers):** with fast-forward or semi-linear merges, turn on **Enable automatic rebase prior to merge** in Settings → Merge requests. GitLab then rebases the source branch onto the target at merge time, so merging is one click instead of Rebase, wait, then Merge. Leave it off if you need to keep GPG signatures on individual commits, because a rebase rewrites them.
+
 **Pro**: cleanest possible history. `git log` reads like a single timeline.
 **Con**: no visual indication of when a feature branch was merged. Requires strict discipline around rebasing.
 
@@ -521,6 +526,26 @@ Once set, the MR widget shows "Auto-merge enabled" with the conditions that are 
 Click **Cancel auto-merge** in the MR widget at any time before the conditions are all met.
 
 Auto-merge is cancelled automatically if new commits are pushed to the source branch after auto-merge was set.
+
+---
+
+## Stacked Merge Requests
+
+When a change is too big to review comfortably, split it into a **stack**: a chain of small merge requests where each one targets the branch of the one below it. Since GitLab 19.1 (June 2026, all tiers) GitLab detects stacks automatically. A merge request joins a stack when it targets another open merge request's source branch. It also joins when another open merge request targets its source branch. The header then shows its position (for example **1 of 3**) and lets you jump to the others.
+
+Create and manage a stack from the terminal with `glab stack`, which is still marked experimental. Each layer is one commit on its own branch:
+
+```bash
+glab stack create add-dark-mode                    # start a stack on the current branch
+git add .
+glab stack save -m "feat: add colour variables"    # staged changes become the first layer
+git add .
+glab stack save -m "feat: add the toggle"          # the next layer, on top
+glab stack sync                                    # push each layer and open one MR per layer
+glab stack prev                                    # move down the stack (glab stack next moves up)
+```
+
+GitHub offers the same idea as stacked pull requests.
 
 ---
 
@@ -578,6 +603,8 @@ Each pipeline runs in parallel. If MR-2's pipeline passes, it merges immediately
 In the MR widget: click **Start merge train** instead of **Merge**. The MR joins the train.
 
 View all MRs in the train: Code → Merge requests → **Merge trains** tab.
+
+**Enforcing merge trains (GitLab 19.3):** a single project setting now stops anyone merging around the train, from the UI or the API. Without it, one direct merge can cancel and restart every pipeline already in the train. Owners and administrators can still override the setting when they need to.
 
 ### When to use merge trains
 
