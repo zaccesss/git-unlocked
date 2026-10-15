@@ -74,3 +74,6 @@ zaccesss/git-unlocked@.*
 
 # Springer redirects through a cookie-consent wall CI cannot pass, loops to an error page
 https://link\.springer\.com/book/.*
+
+# linusakesson.net times out from GitHub-hosted runners and elsewhere as of October 2026
+https://www\.linusakesson\.net/.*
