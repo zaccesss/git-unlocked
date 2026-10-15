@@ -2,7 +2,7 @@
 
 This roadmap tracks the development plan for git-unlocked.
 
-**Current version: v1.2.6 - Course complete**
+**Current version: v1.3.0 - Course complete**
 
 ---
 

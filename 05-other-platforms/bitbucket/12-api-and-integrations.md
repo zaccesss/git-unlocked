@@ -61,7 +61,7 @@ Atlassian publishes interactive API documentation at [developer.atlassian.com/cl
 
 ## Authentication
 
-The Bitbucket API supports three authentication methods. App passwords (the old method) are deprecated and stop working in June 2026.
+The Bitbucket API supports three authentication methods. App passwords (the old method) stopped working on 9 June 2026.
 
 ### API tokens (recommended)
 

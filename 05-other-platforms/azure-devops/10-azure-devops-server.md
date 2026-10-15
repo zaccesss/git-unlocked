@@ -46,7 +46,7 @@ Understanding the naming helps when reading documentation, searching for help or
 | Azure DevOps Server 2022          | 2022         |                                             |
 | Azure DevOps Server (no year)     | 2025-present | Modern Lifecycle Policy, continuous support |
 
-The current release is simply called **Azure DevOps Server** with no year designation, released December 2025. This reflects a shift to Microsoft's Modern Lifecycle Policy - rather than annual major releases, the server product now receives ongoing updates.
+The current release is simply called **Azure DevOps Server** with no year designation, released December 2025. This reflects a shift to Microsoft's Modern Lifecycle Policy - rather than annual major releases, the server product now receives ongoing updates. Microsoft ships it monthly patches with security fixes; at the time of writing (October 2026) the latest is Patch 9, released on 13 October 2026. Check the [Azure DevOps Server release notes](https://learn.microsoft.com/en-us/azure/devops/server/release-notes/azuredevopsserver) before upgrading.
 
 ---
 

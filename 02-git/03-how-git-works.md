@@ -90,7 +90,7 @@ You rarely need to interact with the `.git` folder directly. Git commands read f
 
 Git's internal storage is based on a simple but powerful concept: **content-addressable storage**.
 
-Every piece of data Git stores - every file version, every commit, every tree - is stored as an **object** and given a name based on a cryptographic hash (SHA-1, moving to SHA-256 in Git 3.0) of its contents. This hash is a 40-character hexadecimal string like:
+Every piece of data Git stores - every file version, every commit, every tree - is stored as an **object** and given a name based on a cryptographic hash (SHA-1 today; Git 3.0 will make SHA-256 the default for new repositories) of its contents. This hash is a 40-character hexadecimal string like:
 
 ```
 a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2

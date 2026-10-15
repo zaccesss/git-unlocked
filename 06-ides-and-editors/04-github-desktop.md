@@ -39,7 +39,7 @@ GitHub Desktop was first released in 2012 as a native Mac application called Git
 
 The rewrite made GitHub Desktop cross-platform (Windows and macOS) with a shared codebase and the open-source model allowed community contributions. The application uses a bundled Git binary rather than your system Git, so it works correctly regardless of which version of Git you have installed.
 
-GitHub Desktop v3.5.0 (June 2025) added GitHub Copilot commit message generation as a generally available feature. Version 3.5.5 (February 2026) fixed Git hooks support, which had been unreliable with version managers like nvm, pyenv and rbenv due to shell environment issues. The current stable release is v3.6 (June 2026), which added Git worktree support and deeper Copilot integration for commit authoring and merge conflict resolution.
+GitHub Desktop v3.5.0 (June 2025) added GitHub Copilot commit message generation as a generally available feature. Version 3.5.5 (February 2026) fixed Git hooks support, which had been unreliable with version managers like nvm, pyenv and rbenv due to shell environment issues. Version 3.6.0 (June 2026) added Git worktree support and deeper Copilot integration for commit authoring and merge conflict resolution. At the time of writing (October 2026) the current release is 3.6.7.
 
 ---
 
@@ -405,6 +405,7 @@ GitHub Desktop is a free, open-source, cross-platform Git client focused on clar
 - [GitHub Desktop release notes](https://desktop.github.com/release-notes/)
 - [GitHub Desktop 3.5 - Copilot commit message generation](https://github.blog/changelog/2025-06-23-github-desktop-3-5-github-copilot-commit-message-generation-now-generally-available/)
 - [GitHub Desktop 3.5.5 - Git hooks support](https://github.blog/changelog/2026-02-18-github-desktop-3-5-5-adds-git-hooks-support/)
+- [GitHub Desktop 3.6.0 release notes](https://github.com/desktop/desktop/releases/tag/release-3.6.0) - worktree support and Copilot merge conflict resolution
 - [shiftkey/desktop Linux fork](https://github.com/shiftkey/desktop)
 - [Copilot in GitHub Desktop - responsible use](https://docs.github.com/en/copilot/responsible-use/copilot-in-github-desktop)
 

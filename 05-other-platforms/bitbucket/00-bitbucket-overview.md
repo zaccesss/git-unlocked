@@ -49,7 +49,7 @@ Bitbucket shares most Git concepts with GitHub and GitLab but organises things d
 | GitHub Copilot / GitLab Duo | Rovo Dev (Atlassian Intelligence) |
 
 > [!NOTE]
-> Bitbucket is replacing app passwords with API tokens. New app password creation was blocked in September 2025 and existing app passwords stop working on 9 June 2026. Use API tokens for everything going forward.
+> Bitbucket has replaced app passwords with API tokens. New app password creation was blocked in September 2025 and every existing app password stopped working on 9 June 2026. Use API tokens for everything.
 
 ---
 

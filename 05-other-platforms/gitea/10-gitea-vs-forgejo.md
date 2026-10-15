@@ -38,8 +38,9 @@ This file explains the history of the split, maps what has diverged and gives a 
 | Nov 2023 | Forgejo becomes a **soft fork** - intentionally diverges from Gitea for the first time                                                            |
 | Feb 2024 | Forgejo becomes a **hard fork** - drops Git compatibility with Gitea releases, begins independently developing the federation (ActivityPub) stack |
 | Mar 2024 | CommitGo Inc. (US entity) launches **Gitea Enterprise** with proprietary SAML, audit logs and IP allowlist                                        |
-| Apr 2024 | Forgejo v8.0 released as the first truly independent major release                                                                                |
-| 2025     | Forgejo reaches v9.0.x; Gitea at v1.25.x; version numbers no longer meaningful to compare                                                         |
+| Apr 2024 | Forgejo v7.0 released, the first release after the hard fork, with Forgejo's own version numbers                                                  |
+| 2025     | Forgejo releases v10 to v13; Gitea releases 1.24 and 1.25                                                                                         |
+| 2026     | Forgejo releases v14 to v16; Gitea releases 1.26 and 1.27, then 28.0 after dropping the leading `1.`                                              |
 
 ---
 
@@ -174,7 +175,7 @@ Most tools that support Gitea also support Forgejo since the API is mostly compa
 
 ### Why you cannot compare version numbers
 
-Gitea is at v1.25.x. Forgejo is at v9.0.x (as of early 2026). The numbers are not comparable - Forgejo jumped its version numbering when it became a hard fork to clearly signal independence from Gitea's releases.
+In October 2026 Gitea is at v28.1 and Forgejo is at v16.0. The numbers are not comparable - Forgejo jumped its version numbering when it became a hard fork to clearly signal independence from Gitea's releases.
 
 ### API compatibility
 
@@ -316,7 +317,7 @@ Free SAML authentication is available only in Forgejo. Gitea's community edition
 
 **Comparing version numbers**
 
-Gitea v1.25 and Forgejo v14 are not meaningfully comparable. Forgejo's high version numbers reflect the fork's independent release cadence, not feature superiority or inferiority. Judge them on features, not version numbers.
+Gitea v28 and Forgejo v16 are not meaningfully comparable. Forgejo's high version numbers reflect the fork's independent release cadence, not feature superiority or inferiority. Judge them on features, not version numbers.
 
 **Not accounting for migration effort**
 

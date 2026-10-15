@@ -229,6 +229,15 @@ ignore:
 
 `bundler`, `cargo`, `composer`, `docker`, `elm`, `github-actions`, `gitsubmodule`, `gomod`, `gradle`, `maven`, `mix`, `npm`, `nuget`, `pip`, `pub`, `swift`, `terraform`.
 
+**Cooldown (on by default since July 2026):** Dependabot waits until a new release has been on its registry for at least three days before opening a version update. A broken or compromised release is often noticed within that time, so you are less likely to merge it the moment it ships. Security updates are not delayed. The `cooldown` setting changes the wait and can set different waits by update type:
+
+```yaml
+cooldown:
+  default-days: 5           # every dependency waits 5 days
+  semver-major-days: 30     # major versions wait longer
+  exclude: ["my-own-library"]
+```
+
 ---
 
 ## Secret Scanning
@@ -357,16 +366,16 @@ jobs:
         language: [javascript-typescript, python]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: github/codeql-action/init@v3
+      - uses: github/codeql-action/init@v4
         with:
           languages: ${{ matrix.language }}
           queries: security-extended # or security-and-quality
 
-      - uses: github/codeql-action/autobuild@v3
+      - uses: github/codeql-action/autobuild@v4
 
-      - uses: github/codeql-action/analyze@v3
+      - uses: github/codeql-action/analyze@v4
         with:
           category: "/language:${{ matrix.language }}"
 ```
@@ -679,6 +688,8 @@ Security tools find known patterns. A creative attacker may exploit a vulnerabil
 - [GitHub Advisory Database](https://github.com/advisories) - browse all known vulnerabilities
 - [Security advisories guide](https://docs.github.com/en/code-security/security-advisories/working-with-repository-security-advisories/about-repository-security-advisories) - creating and publishing advisories
 - [GitHub Advanced Security](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security) - GHAS features and pricing
+- [GitHub changelog: Dependabot default package cooldown](https://github.blog/changelog/2026-07-14-dependabot-version-updates-introduce-default-package-cooldown) - why version updates now wait three days
+- [Dependabot options reference: cooldown](https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference) - every cooldown setting
 
 ---
 

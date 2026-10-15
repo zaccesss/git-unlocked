@@ -4,7 +4,7 @@
 
 Your Bitbucket account is an Atlassian account. That distinction matters from the start: when you sign up for Bitbucket, you are not just creating a Bitbucket account - you are creating an identity that works across the entire Atlassian product suite. The same login gives you access to Jira, Confluence, Trello, Statuspage and every other Atlassian cloud product. This shared identity is one of Bitbucket's core advantages for teams that use multiple Atlassian tools.
 
-This file walks you through the complete account setup process: signing up, securing your account with two-factor authentication, adding SSH keys, creating API tokens (the replacement for the deprecated app passwords) and understanding the free tier limits so you know what you are working with before you start building.
+This file walks you through the complete account setup process: signing up, securing your account with two-factor authentication, adding SSH keys, creating API tokens (the replacement for app passwords, which were switched off in June 2026) and understanding the free tier limits so you know what you are working with before you start building.
 
 ---
 
@@ -288,7 +288,7 @@ git clone https://bitbucket.org/workspace/repository.git
 
 ## API tokens: the replacement for app passwords
 
-**API tokens are the way to authenticate to Bitbucket programmatically from June 2026 onwards.** App passwords are deprecated - new ones cannot be created (blocked September 2025) and existing ones stop working on 9 June 2026. If you are reading older documentation or tutorials that mention app passwords, replace "app password" with "API token" in your mental model.
+**API tokens are the way to authenticate to Bitbucket programmatically.** App passwords are gone: new ones could not be created from September 2025 and existing ones stopped working on 9 June 2026. If you are reading older documentation or tutorials that mention app passwords, replace "app password" with "API token" in your mental model.
 
 ### What API tokens are for
 
@@ -481,7 +481,7 @@ Work through this checklist after setting up your account:
 - [ ] API token created (if needed for HTTPS or API access) with minimum necessary permissions
 - [ ] Token expiry date set
 - [ ] Workspace slug chosen thoughtfully - not based on a temporary role or employer
-- [ ] No app passwords in use (migrate any existing ones to API tokens before June 2026)
+- [ ] No app passwords left in your tools (they stopped working in June 2026; replace them with API tokens)
 - [ ] Notification preferences configured to reduce noise
 - [ ] Third-party apps reviewed and unnecessary ones removed
 
@@ -547,7 +547,7 @@ ssh -T git@bitbucket.org
 
 **Using an app password after September 2025**
 
-New app passwords cannot be created from September 2025. If you are following an older tutorial that tells you to create an app password, it means API token. The functionality is the same - only the name and the security model have changed.
+App passwords cannot be created and have not worked since 9 June 2026. If you are following an older tutorial that tells you to create an app password, it means API token. The functionality is the same - only the name and the security model have changed.
 
 **Storing the API token insecurely**
 
@@ -581,7 +581,7 @@ Bitbucket accounts are Atlassian accounts - one identity across all Atlassian pr
 
 SSH keys are the preferred method for command-line Git operations. Generate an ed25519 key pair, add the public key to Bitbucket under Personal settings and test the connection with `ssh -T git@bitbucket.org`.
 
-API tokens replace the deprecated app passwords entirely from June 2026. Create tokens with the minimum permissions needed, set expiry dates and store them securely using environment variables or a password manager - never in code.
+API tokens replaced app passwords entirely in June 2026. Create tokens with the minimum permissions needed, set expiry dates and store them securely using environment variables or a password manager - never in code.
 
 The free plan supports up to 5 workspace users, 50 Pipelines minutes per month and 1 GB total storage with unlimited private repositories. Enterprise teams needing SSO require Atlassian Guard as a separate paid product at $4.20 per user per month.
 

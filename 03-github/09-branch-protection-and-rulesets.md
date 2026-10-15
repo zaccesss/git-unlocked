@@ -63,7 +63,9 @@ GitHub has two systems for protecting branches. Both work and can coexist, but r
 | Import/export                            | No                            | Yes                           |
 | Bypass with granular control             | Admins only                   | Specific roles, teams, apps   |
 
-**Recommendation:** Use rulesets for new repositories. If you have existing branch protection rules, they continue to work alongside rulesets. Migrate gradually when convenient.
+**Recommendation:** Use rulesets for new repositories. If you have existing branch protection rules, they continue to work alongside rulesets.
+
+**Converting an existing rule (since August 2026):** go to **Settings > Branches**, find the rule under **Branch protection rules** and click **Convert to ruleset**. GitHub copies its required reviews, status checks and push restrictions into an equivalent ruleset, so you do not have to rebuild it by hand. The **Rule insights** dashboard then shows which pushes and merges each ruleset allowed or blocked.
 
 ---
 
@@ -236,7 +238,7 @@ pattern: refs/tags/v[0-9]+.[0-9]+.[0-9]+
 
 ### File path restrictions
 
-Block pushes that add or modify specific file paths. Useful for preventing accidental modification of critical configuration files.
+Block pushes that add or modify specific file paths. Useful for preventing accidental modification of critical configuration files. Since August 2026 push rules can also list **path exceptions**, so a rule can block a whole folder while still allowing one file inside it.
 
 ```
 # Block modification of the main Actions workflow
@@ -408,13 +410,13 @@ jobs:
   run-tests: # <-- This name is the check name
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: npm test
 
   lint: # <-- Another check name
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: npm run lint
 ```
 
@@ -550,6 +552,7 @@ If team members leave and are no longer in the repository, their CODEOWNERS entr
 - [Creating rulesets - GitHub Docs](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/creating-rulesets-for-a-repository) - step-by-step guide
 - [Available rules for rulesets - GitHub Docs](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets) - complete reference for all ruleset options
 - [About code owners - GitHub Docs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) - CODEOWNERS syntax and requirements
+- [GitHub changelog: migrate branch protection rules to rulesets](https://github.blog/changelog/2026-08-11-automatically-migrate-branch-protection-rules-to-repository-rulesets) - the Convert to ruleset option
 
 ---
 

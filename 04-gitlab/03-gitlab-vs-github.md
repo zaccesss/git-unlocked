@@ -166,7 +166,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: npm test
 ```
 
@@ -191,7 +191,7 @@ run-tests:
 **Key differences:**
 
 - GitHub separates workflows into multiple files; GitLab uses one file with stages
-- GitHub uses community actions (`uses: actions/checkout@v4`); GitLab uses templates and components
+- GitHub uses community actions (`uses: actions/checkout@v7`); GitLab uses templates and components
 - GitHub Actions has a 10,000+ action marketplace; GitLab has a CI/CD Catalog with components
 - GitLab's DAG pipelines (`needs:` keyword) are arguably more flexible than GitHub's job dependencies
 - GitLab's `rules:` keyword for conditional job execution is more powerful than GitHub's `if:` conditions

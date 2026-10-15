@@ -96,7 +96,7 @@ The governance now operates through a **Technical Oversight Committee (TOC)** wi
 
 This open-core model - free community edition plus paid proprietary enterprise tier - is similar to GitLab's (though GitLab's split is much more transparent and the free tier more capable). Whether you view it as legitimate monetisation or as an exploitation of community contributions depends on your perspective.
 
-The key practical fact: the community **Gitea** (v1.25.x) is free, open source and MIT-licensed. The proprietary features in **Gitea Enterprise** are not available without a commercial licence. The open source project continues to receive active development.
+The key practical fact: the community **Gitea** (v28 in October 2026) is free, open source and MIT-licensed. The proprietary features in **Gitea Enterprise** are not available without a commercial licence. The open source project continues to receive active development.
 
 ---
 
@@ -104,9 +104,9 @@ The key practical fact: the community **Gitea** (v1.25.x) is free, open source a
 
 ### Version and releases
 
-Gitea's current stable version is **v1.25.5** (March 2026). The 1.25 major release shipped in October 2025. Version 1.26 is in development.
+At the time of writing (October 2026) Gitea's current stable version is **v28.1.0**, released on 6 October 2026. Releases in 2026 were 1.26 (April), 1.27 (July) and then 28.0 (September). With 28.0 Gitea dropped the leading `1.` from its version numbers, so the release after 1.27 is 28.0 rather than 1.28.
 
-The `1.x` versioning scheme is deliberate: Gitea has not bumped to `2.0` despite significant changes, partly to avoid the version-number gap with Forgejo (which jumped to `7.0` then `14.0`). The two projects' version numbers are no longer meaningful to compare.
+Forgejo numbers its releases independently (v16 in October 2026), so the two projects' version numbers are not meaningful to compare.
 
 ### Gitea Enterprise
 
@@ -119,6 +119,25 @@ Starting in Gitea v1.21 (late 2023), the frontend was rewritten from jQuery/Foma
 ### Recent features
 
 Notable additions since v1.22:
+
+**v28.0 (September 2026):**
+
+- Breaking changes: Git 2.25 or newer is required, Actions run history now expires, self-registration is off by default and workflows are evaluated more strictly
+- Required code owner reviews before merging, searching and filtering files in pull request diffs and closing pull requests through closing references
+- Repository-scoped HTTPS deploy tokens, dedicated bot accounts and audit logging
+- Actions: a view of what is running and waiting in the build queue, artifact previews in the browser, dynamic matrices and `max-parallel`
+
+**v1.27 (July 2026):**
+
+- Reusable workflows as first-class jobs, job summaries, `continue-on-error` and owner-level and global workflows
+- Release artifacts signed with Sigstore
+- Jupyter notebook rendering, several projects per issue and "follow rename" in a file's commit history
+
+**v1.26 (April 2026):**
+
+- Actions concurrency syntax, re-running only failed jobs and Actions from private repositories
+- Automatically generated release notes
+- "Go to file" and keyboard shortcuts for file and code search
 
 **v1.25 (October 2025):**
 
@@ -338,7 +357,7 @@ Gitea is a lightweight, self-hosted Git platform written in Go. It originated as
 
 In 2022, two maintainers incorporated Gitea Limited and transferred the project's domain names and trademarks to this for-profit entity without community consent. The community's response was to create Forgejo, a separate fork under Codeberg e.V.'s non-profit umbrella. CommitGo (the US successor to Gitea Limited) subsequently launched Gitea Enterprise with proprietary-only features including SAML authentication, audit logs and IP allowlisting.
 
-In 2026, Gitea community edition is at v1.25.x, MIT-licensed and actively developed. It provides Git hosting, pull requests, issues, Gitea Actions (GitHub Actions-compatible CI/CD), a package registry supporting 20+ formats and an extensive REST API. It runs on minimal hardware including Raspberry Pi.
+In October 2026, Gitea community edition is at v28.1, MIT-licensed and actively developed. It provides Git hosting, pull requests, issues, Gitea Actions (GitHub Actions-compatible CI/CD), a package registry supporting 20+ formats and an extensive REST API. It runs on minimal hardware including Raspberry Pi.
 
 Key trade-offs compared to Forgejo: Gitea is MIT-licensed (Forgejo is GPLv3+), has Windows support (Forgejo dropped it), has no federation development (Forgejo's flagship differentiator) and has a commercial enterprise tier. The choice between them involves weighing licence philosophy, required features and governance preferences.
 
@@ -348,6 +367,9 @@ Key trade-offs compared to Forgejo: Gitea is MIT-licensed (Forgejo is GPLv3+), h
 
 - [Gitea: Official website](https://about.gitea.com)
 - [Gitea: Blog - CommitGo Launches Gitea Enterprise](https://blog.gitea.com/gitea-enterprise/)
+- [Gitea: Release notes v28.0.0](https://blog.gitea.com/release-of-28.0.0/)
+- [Gitea: Release notes v1.27.0](https://blog.gitea.com/release-of-1.27.0/)
+- [Gitea: Release notes v1.26.0](https://blog.gitea.com/release-of-1.26.0/)
 - [Gitea: Release notes v1.25.0](https://blog.gitea.com/release-of-1.25.0/)
 - [Gitea: Release notes v1.24.0](https://blog.gitea.com/release-of-1.24.0/)
 - [Forgejo: First monthly report (December 2022)](https://forgejo.org/2022-12-26-monthly-update/)

@@ -1073,7 +1073,23 @@ gh issue develop 123                          # link a branch to an issue
 # Manage Copilot coding agent skills
 gh skill list
 gh skill view my-skill
+
+# Check out a pull request into its own worktree (v2.98+), so your current branch stays untouched
+gh pr checkout 32 --worktree ../review-pr-32
+
+# Upload screenshots or short videos straight into an issue, pull request or comment (v2.99+)
+gh issue create --title "Login error" --attach './login.png#The login error state'
+gh pr comment 15 --attach ./before.png --attach ./after.png
+
+# Download release assets from a public repository without signing in (v2.96+)
+gh release download --repo OWNER/REPO --pattern '*.tar.gz'
+
+# Stacked pull requests, through the official extension
+gh extension install github/gh-stack
+gh stack init
 ```
+
+At the time of writing (October 2026) the current release is **v2.102.0**. The `#text` after an attachment's file name becomes its description.
 
 Run `gh <command> --help` to check what is available on your installed version - `gh` updates frequently and new subcommands land outside of major releases. Keep `gh` itself current with `gh version` and the upgrade steps in [Upgrading GitHub CLI](#upgrading-github-cli).
 
@@ -1346,6 +1362,7 @@ gh auth setup-git
 - [jq manual](https://jqlang.github.io/jq/manual/) - full jq syntax reference for `--jq` filtering
 - [GitHub REST API](https://docs.github.com/en/rest) - all endpoints accessible via `gh api`
 - [GitHub CLI releases](https://github.com/cli/cli/releases) - download latest version
+- [gh-stack](https://github.com/github/gh-stack) - the official extension for stacked pull requests
 
 ---
 

@@ -405,6 +405,9 @@ Personal access tokens (PATs) are authentication credentials for use with the Gi
 > [!CAUTION]
 > GitLab shows the token value only at the moment of creation. There is no "view token" button later. If you lose it, delete the token and create a new one.
 
+> [!TIP]
+> **Fine-grained personal access tokens became generally available in GitLab 19.2 (July 2026).** A legacy token reaches every project and group you belong to. A fine-grained token is limited to the projects, groups and actions you choose. Prefer fine-grained tokens for scripts and integrations, so a leaked token can do as little as possible.
+
 ### Token scopes
 
 | Scope              | What it allows                                                                                                   |

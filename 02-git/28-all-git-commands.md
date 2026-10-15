@@ -456,6 +456,30 @@ Notes are stored separately from commits. They are useful for adding post-hoc in
 
 ---
 
+### git last-modified 🟡
+
+Show which commit last changed each file or folder. Added in Git 2.52 and still marked experimental.
+
+```bash
+git last-modified                   # last commit for each entry at the top level
+git last-modified src/              # entries inside one folder
+git last-modified --recursive       # every file in the repository
+git last-modified --max-depth=1     # go one level into subfolders
+```
+
+### git repo 🟡
+
+Ask Git about the repository itself. Added in Git 2.52 and still marked experimental.
+
+```bash
+git repo info --all                         # every available key and value
+git repo info --keys                        # list the keys you can ask for
+git repo info references.format             # files or reftable
+git repo info object.format                 # sha1 or sha256
+git repo info layout.bare layout.shallow    # is it bare, is it shallow
+git repo structure                          # counts and sizes of refs and objects
+```
+
 ## Stash
 
 ### git stash 🟡
@@ -630,6 +654,58 @@ git pull repo.bundle main                   # pull from a bundle
 ```
 
 Useful for transferring repositories in air-gapped environments with no network access.
+
+### git backfill 🔴
+
+Download the missing file contents of a blobless partial clone in batches, instead of one at a time as commands need them. Added in Git 2.49.
+
+```bash
+git clone --filter=blob:none https://example.com/big-repo.git
+cd big-repo
+git backfill                        # fetch missing blobs for the current history
+git backfill --sparse               # only paths in your sparse-checkout
+git backfill main~50..main          # only blobs reachable from a range (Git 2.54+)
+```
+
+### git history 🔴
+
+Rewrite specific commits without a full interactive rebase. Experimental: added in Git 2.54 and still changing. Unlike `git rebase`, it runs no hooks and updates every branch that contains the rewritten commit.
+
+```bash
+git history reword a1b2c3d          # change one commit's message
+git history fixup a1b2c3d           # fold the staged changes into an older commit (Git 2.55+)
+git history split a1b2c3d           # split one commit into two
+git history drop a1b2c3d            # remove a commit and replay its descendants (Git 2.56+)
+git history drop a1b2c3d --dry-run  # show what would change without changing anything
+```
+
+### git replay 🔴
+
+Replay commits onto a new base without touching the working tree or index. Experimental. Mostly used by tools and servers rather than by hand.
+
+```bash
+git replay --onto main topic~3..topic       # replay three commits onto main
+git replay --advance main topic~3..topic    # replay and move main forward
+git replay --revert main a1b2c3d^..a1b2c3d  # revert mode (Git 2.54+)
+git replay --linearize --onto main base..topic  # drop merge commits on the way (Git 2.56+)
+```
+
+### git refs 🔴
+
+One command for working with references. `migrate` and `verify` came first; `list` and `exists` arrived in Git 2.52 and `create`, `update`, `delete` and `rename` in Git 2.56.
+
+```bash
+git refs list                               # every ref, like git for-each-ref
+git refs exists refs/heads/main             # exit code 0 if the ref exists
+git refs create refs/heads/backup HEAD      # create a ref
+git refs update refs/heads/backup main      # point an existing ref somewhere else
+git refs rename refs/heads/old refs/heads/new
+git refs delete refs/heads/backup           # delete a ref
+git refs migrate --ref-format=reftable      # convert this repository to reftable
+git refs verify                             # check refs for problems
+```
+
+Branches are refs, so `git branch` is still the everyday way to create, rename and delete them. `git refs` works on any ref, including tags and notes, which makes it useful in scripts.
 
 ---
 

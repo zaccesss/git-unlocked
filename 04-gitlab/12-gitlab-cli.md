@@ -162,6 +162,8 @@ glab auth status
 #   - Token scopes: api, write_repository
 ```
 
+Since glab v1.111 (July 2026) the token is stored in your operating system's keyring by default, shown as `(KEYRING)` above, rather than in plain text in `config.yml`.
+
 ### Authenticate via environment variable
 
 For CI/CD or scripting contexts where interactive authentication is not possible:
@@ -246,7 +248,12 @@ glab repo list --group my-group
 glab repo list --mine                    # only your own
 glab repo list --visibility public       # only public repos
 glab repo list --per-page 50             # more results per page
+
+# Delete local branches whose merge request has been merged (v1.102+)
+glab repo prune
 ```
+
+`glab repo prune` asks GitLab which local branches have a merged merge request and deletes only those. It never deletes the default branch, protected branches or the branch you are on. It does not touch branches on GitLab.
 
 ---
 
@@ -999,7 +1006,8 @@ glab api POST /projects/:id/issues \
 
 - [glab repository](https://gitlab.com/gitlab-org/cli) - source code and issues
 - [glab documentation](https://gitlab.com/gitlab-org/cli/-/tree/main/docs/source) - full command reference
-- [glab releases](https://gitlab.com/gitlab-org/cli/-/releases) - latest version and changelog
+- [glab releases](https://gitlab.com/gitlab-org/cli/-/releases) - latest version and changelog (v1.123.0 at the time of writing, October 2026)
+- [glab stack documentation](https://gitlab.com/gitlab-org/cli/-/blob/main/docs/source/stack/_index.md) - the experimental stacked diffs commands
 - [GitLab REST API reference](https://docs.gitlab.com/api/rest/) - endpoints available via `glab api`
 - [Personal access tokens](https://docs.gitlab.com/user/profile/personal_access_tokens/) - creating tokens for authentication
 - [GitLab Duo CLI](https://docs.gitlab.com/user/gitlab_duo/gitlab_duo_chat/) - Duo Chat and CLI integration

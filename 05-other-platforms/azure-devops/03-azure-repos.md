@@ -237,6 +237,13 @@ az repos pr create \
 - **Completed** - merged
 - **Abandoned** - closed without merging
 
+**Recent improvements (2026):**
+
+- The pull request list highlights pull requests that still have unresolved comment threads (May 2026)
+- The branch compare page can compare against a specific commit, picked by SHA from the version picker (June 2026)
+- A new pull request with several commits gets a default title from the source branch name instead of an empty title (September 2026)
+- Copilot code review for Azure Repos reached public preview in September 2026
+
 ---
 
 ## Code review in pull requests

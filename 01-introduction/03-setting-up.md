@@ -90,13 +90,13 @@ git --version
 If Git is installed you will see something like:
 
 ```
-git version 2.55.0
+git version 2.56.0
 ```
 
 If you see `'git' is not recognized` (Windows) or `command not found` (Mac/Linux), Git is not installed. Continue to Step 4 after completing Steps 2 and 3.
 
 > [!NOTE]
-> The current stable release is **Git 2.55.0** (June 2026). If your version is older than 2.28, update it - some features in this course require newer Git behaviour. Git 3.0 is expected later in 2026 and will bring significant changes including defaulting to `main` as the branch name.
+> At the time of writing (October 2026) the current stable release is **Git 2.56.0**. If your version is older than 2.28, update it - some features in this course require newer Git behaviour. Git 3.0 has no release date yet. When it arrives, new repositories will default to SHA-256, the reftable format and `main` as the branch name.
 
 ---
 
@@ -145,7 +145,7 @@ If you see `'git' is not recognized` (Windows) or `command not found` (Mac/Linux
 
 GitLab is a separate platform from GitHub. Many companies - especially in enterprise, government and regulated industries - use GitLab instead of or alongside GitHub. Having an account on both is worthwhile.
 
-**What is GitLab?** GitLab is a complete DevSecOps platform that includes Git hosting, built-in CI/CD pipelines, security scanning and more - all in one place. The current version is GitLab 18.10 (March 2026). Everything about it is covered in the `gitlab/` folder.
+**What is GitLab?** GitLab is a complete DevSecOps platform that includes Git hosting, built-in CI/CD pipelines, security scanning and more - all in one place. At the time of writing (October 2026) the current version is GitLab 19.5. Everything about it is covered in the `gitlab/` folder.
 
 ### Creating your account
 
@@ -470,6 +470,9 @@ ssh-keygen -t ed25519 -C "your.email@example.com"
 
 Press **Enter** to accept the default save location. Add a passphrase for extra security (recommended).
 
+> [!NOTE]
+> Use ed25519 as shown. Since September 2026 GitHub no longer accepts RSA signatures that use SHA-1. Since 14 October 2026 any new RSA key added to GitHub must be at least 3072 bits. Older guides that use `ssh-keygen -t rsa -b 2048` will produce a key GitHub rejects.
+
 **Step 2 - Start the SSH agent and add your key:**
 
 **Windows (Git Bash):**
@@ -715,7 +718,7 @@ Run these commands one at a time to confirm your setup is complete.
 git --version
 ```
 
-Expected: `git version 2.55.0` (or similar)
+Expected: `git version 2.56.0` (or similar)
 
 **Your name is set:**
 
@@ -913,6 +916,7 @@ Head to [What is Version Control?](../02-git/01-what-is-version-control.md) to b
 - [JetBrains Git integration](https://www.jetbrains.com/help/idea/using-git-integration.html) - the official JetBrains guide
 - [Xcode developer page](https://developer.apple.com/xcode/) - Apple's official Xcode documentation
 - [GitLens extension](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) - the most popular Git extension for VS Code
+- [GitHub changelog: security improvements for SSH](https://github.blog/changelog/2026-09-22-security-improvements-for-ssh) - why new RSA keys must be at least 3072 bits
 
 ---
 

@@ -110,7 +110,7 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Run tests
         run: npm test
@@ -314,7 +314,7 @@ Steps are the individual tasks within a job. They run sequentially in order.
 steps:
   - name: Step name (shown in logs)
     id: my-step # optional ID for referencing outputs
-    uses: actions/checkout@v4 # use a pre-built action
+    uses: actions/checkout@v7 # use a pre-built action
     with: # inputs for the action
       ref: main
 
@@ -347,7 +347,7 @@ steps:
 
 `run:` executes shell commands. The default shell on Linux/Mac is `bash`. On Windows it is `pwsh` (PowerShell).
 
-`uses:` runs a pre-built action. The format is `owner/repo@ref` - for example `actions/checkout@v4`.
+`uses:` runs a pre-built action. The format is `owner/repo@ref` - for example `actions/checkout@v7`.
 
 **Setting the shell explicitly:**
 
@@ -372,16 +372,22 @@ Runners are the machines where jobs execute. GitHub provides hosted runners and 
 
 ### GitHub-hosted runners
 
-| Label                           | OS                  | CPU | RAM   |
-| ------------------------------- | ------------------- | --- | ----- |
-| `ubuntu-latest` (ubuntu-24.04)  | Ubuntu 24.04        | 4   | 16 GB |
-| `ubuntu-22.04`                  | Ubuntu 22.04        | 4   | 16 GB |
-| `ubuntu-24.04-arm`              | Ubuntu 24.04 ARM    | 4   | 16 GB |
-| `windows-latest` (windows-2025) | Windows Server 2025 | 4   | 16 GB |
-| `windows-2022`                  | Windows Server 2022 | 4   | 16 GB |
-| `macos-latest` (macos-15)       | macOS 15            | 3   | 7 GB  |
-| `macos-14`                      | macOS 14            | 3   | 7 GB  |
-| `macos-13`                      | macOS 13 (Intel)    | 3   | 14 GB |
+| Label                                       | OS                              | CPU | RAM   |
+| ------------------------------------------- | ------------------------------- | --- | ----- |
+| `ubuntu-latest` (ubuntu-24.04, moving to 26.04) | Ubuntu 24.04                | 4   | 16 GB |
+| `ubuntu-26.04`                              | Ubuntu 26.04                    | 4   | 16 GB |
+| `ubuntu-22.04`                              | Ubuntu 22.04                    | 4   | 16 GB |
+| `ubuntu-24.04-arm`, `ubuntu-26.04-arm`      | Ubuntu on ARM                   | 4   | 16 GB |
+| `ubuntu-slim`                               | Lightweight Ubuntu container    | 1   | 5 GB  |
+| `windows-latest` (windows-2025)             | Windows Server 2025             | 4   | 16 GB |
+| `windows-2022`                              | Windows Server 2022             | 4   | 16 GB |
+| `windows-11-arm`                            | Windows 11 on ARM               | 4   | 16 GB |
+| `macos-latest` (macos-26)                   | macOS 26 (Apple silicon)        | 3   | 7 GB  |
+| `macos-15`                                  | macOS 15 (Apple silicon)        | 3   | 7 GB  |
+| `macos-26-intel`, `macos-15-intel`          | macOS on Intel                  | 4   | 14 GB |
+
+> [!IMPORTANT]
+> Runner images change over time, so check the [runner-images list](https://github.com/actions/runner-images) before pinning a label. In autumn 2026 GitHub began moving `ubuntu-latest` to Ubuntu 26.04 and retiring the macOS 14 image. macOS 13 is no longer available. JavaScript actions now always run on Node 24: Node 20 was removed from the runners on 23 September 2026, so update any action that still declares `node20`.
 
 > [!NOTE]
 > Private repository jobs on standard runners get reduced resources: Linux and Windows get 2 CPU and 8 GB RAM. Public repositories always get the full specification.
@@ -433,19 +439,19 @@ Actions are the building blocks of workflows. Instead of writing every task from
 
 ```yaml
 steps:
-  - uses: actions/checkout@v4
-  - uses: actions/setup-node@v4
+  - uses: actions/checkout@v7
+  - uses: actions/setup-node@v7
     with:
-      node-version: "20"
+      node-version: "24"
       cache: "npm"
 ```
 
 **Action versioning - always pin to a version:**
 
 ```yaml
-uses: actions/checkout@v4          # semver tag (recommended for official actions)
-uses: actions/checkout@v4.1.1      # exact tag
-uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # full SHA (most secure)
+uses: actions/checkout@v7          # semver tag (recommended for official actions)
+uses: actions/checkout@v7.0.1      # exact tag
+uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # full SHA (most secure)
 ```
 
 > [!TIP]
@@ -455,22 +461,24 @@ uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # full SHA (mos
 > uses: some-org/some-action@abc1234def5678... # SHA pin
 > ```
 
+**Workflow lockfiles (public preview since October 2026):** a lockfile at `.github/workflows/actions.lock` records the exact commit of every action and reusable workflow a workflow uses, including the actions those actions use. You keep readable tags such as `@v7` in the workflow, while GitHub Actions runs the commits you locked, even if a tag later moves. The `gh actions-lock` extension for the GitHub CLI creates and updates the lockfile. Dependabot also updates it alongside version bumps. Review an action before locking it: a lockfile keeps a run consistent but does not make the action itself safe.
+
 **Commonly used official actions:**
 
 | Action                         | Purpose                                       |
 | ------------------------------ | --------------------------------------------- |
-| `actions/checkout@v4`          | Check out repository code                     |
-| `actions/setup-node@v4`        | Install Node.js and configure npm/yarn cache  |
-| `actions/setup-python@v5`      | Install Python and configure pip/poetry cache |
-| `actions/setup-java@v4`        | Install Java (multiple distributions)         |
-| `actions/setup-go@v5`          | Install Go                                    |
-| `actions/setup-dotnet@v4`      | Install .NET                                  |
-| `actions/upload-artifact@v4`   | Upload files for later jobs or download       |
-| `actions/download-artifact@v4` | Download previously uploaded artefacts        |
-| `actions/cache@v4`             | Cache dependencies between runs               |
-| `actions/github-script@v7`     | Run JavaScript using the GitHub API           |
-| `docker/login-action@v3`       | Log in to a container registry                |
-| `docker/build-push-action@v6`  | Build and push Docker images                  |
+| `actions/checkout@v7`          | Check out repository code                     |
+| `actions/setup-node@v7`        | Install Node.js and configure npm/yarn cache  |
+| `actions/setup-python@v7`      | Install Python and configure pip/poetry cache |
+| `actions/setup-java@v6`        | Install Java (multiple distributions)         |
+| `actions/setup-go@v7`          | Install Go                                    |
+| `actions/setup-dotnet@v6`      | Install .NET                                  |
+| `actions/upload-artifact@v7`   | Upload files for later jobs or download       |
+| `actions/download-artifact@v8` | Download previously uploaded artefacts        |
+| `actions/cache@v6`             | Cache dependencies between runs               |
+| `actions/github-script@v9`     | Run JavaScript using the GitHub API           |
+| `docker/login-action@v4`       | Log in to a container registry                |
+| `docker/build-push-action@v7`  | Build and push Docker images                  |
 
 ---
 
@@ -658,7 +666,7 @@ Every workflow run automatically receives a `GITHUB_TOKEN` - a short-lived token
 ```yaml
 steps:
   - name: Create a release comment
-    uses: actions/github-script@v7
+    uses: actions/github-script@v9
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
       script: |
@@ -708,7 +716,7 @@ steps:
     run: npm run build
 
   - name: Upload build output
-    uses: actions/upload-artifact@v4
+    uses: actions/upload-artifact@v7
     with:
       name: build-output
       path: dist/
@@ -722,7 +730,7 @@ steps:
 jobs:
   build:
     steps:
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: build-output
           path: dist/
@@ -730,7 +738,7 @@ jobs:
   deploy:
     needs: build
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: build-output
           path: dist/
@@ -745,7 +753,7 @@ Artefacts appear on the workflow run summary page and can be downloaded as a zip
 **Unzipped artefacts (new in 2025):**
 
 ```yaml
-- uses: actions/upload-artifact@v4
+- uses: actions/upload-artifact@v7
   with:
     name: my-file
     path: output.html
@@ -762,10 +770,10 @@ Caching stores the results of expensive operations (installing dependencies) bet
 
 ```yaml
 steps:
-  - uses: actions/checkout@v4
+  - uses: actions/checkout@v7
 
   - name: Cache node modules
-    uses: actions/cache@v4
+    uses: actions/cache@v6
     with:
       path: ~/.npm
       key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -782,18 +790,19 @@ The `key` is a hash of the lock file. When dependencies change, the hash changes
 The official setup actions support caching with a single `cache:` input:
 
 ```yaml
-- uses: actions/setup-node@v4
+- uses: actions/setup-node@v7
   with:
-    node-version: "20"
+    node-version: "24"
     cache: "npm" # automatically caches npm/yarn/pnpm
 
-- uses: actions/setup-python@v5
+- uses: actions/setup-python@v7
   with:
     python-version: "3.12"
     cache: "pip" # automatically caches pip
 
-- uses: actions/setup-java@v4
+- uses: actions/setup-java@v6
   with:
+    distribution: "temurin" # required: which Java build to install
     java-version: "21"
     cache: "maven" # automatically caches maven
 ```
@@ -812,15 +821,15 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [18, 20, 22]
+        node: [22, 24, 26]
       fail-fast: false # continue other jobs if one fails
       max-parallel: 6 # run at most 6 jobs at once
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node }}
       - run: npm test
@@ -834,13 +843,13 @@ This creates 9 jobs (3 OS × 3 Node versions), all running in parallel.
 strategy:
   matrix:
     os: [ubuntu-latest, windows-latest]
-    node: [18, 20]
+    node: [22, 24]
     include:
       - os: ubuntu-latest
-        node: 22 # add this extra combination
+        node: 26 # add this extra combination
     exclude:
       - os: windows-latest
-        node: 18 # remove this specific combination
+        node: 22 # remove this specific combination
 ```
 
 **Maximum matrix size:** 256 jobs per workflow.
@@ -950,7 +959,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-node@v4
+    - uses: actions/setup-node@v7
       with:
         node-version: ${{ inputs.node-version }}
 
@@ -970,11 +979,20 @@ runs:
 
 ```yaml
 steps:
-  - uses: actions/checkout@v4
+  - uses: actions/checkout@v7
   - uses: ./.github/actions/my-action
     with:
       node-version: "22"
 ```
+
+**Referencing your own repository with `$/` (since July 2026):** `./` needs a checkout first and resolves to whatever is in the workspace. A `uses:` value that starts with `$/` resolves to your own repository at the exact commit that is running, with no checkout needed. It works for actions and for reusable workflows:
+
+```yaml
+steps:
+  - uses: $/.github/actions/my-action
+```
+
+This keeps internal actions in step with the workflow that calls them, even when callers pin the workflow to a full commit SHA.
 
 ---
 
@@ -1149,13 +1167,13 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18, 20, 22]
+        node-version: [22, 24, 26]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
@@ -1181,9 +1199,9 @@ jobs:
         python-version: ["3.10", "3.11", "3.12"]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
           cache: "pip"
@@ -1195,7 +1213,7 @@ jobs:
         run: pytest --cov=src --cov-report=xml
 
       - name: Upload coverage
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v7
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 ```
@@ -1222,14 +1240,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
-          node-version: "20"
+          node-version: "24"
           cache: "npm"
       - run: npm ci
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
 
@@ -1241,7 +1259,7 @@ jobs:
     needs: build
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
 ```
 
 ### Docker build and push
@@ -1259,17 +1277,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: docker/setup-buildx-action@v3
+      - uses: docker/setup-buildx-action@v4
 
-      - uses: docker/login-action@v3
+      - uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: docker/metadata-action@v5
+      - uses: docker/metadata-action@v6
         id: meta
         with:
           images: ghcr.io/${{ github.repository }}
@@ -1278,7 +1296,7 @@ jobs:
             type=semver,pattern={{version}}
             type=sha
 
-      - uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v7
         with:
           context: .
           push: true
@@ -1304,7 +1322,7 @@ jobs:
   label:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/labeler@v5
+      - uses: actions/labeler@v7
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -1407,7 +1425,7 @@ Push the change. Go to Actions → Hello World → **Run workflow** → enter a 
 
 **Not pinning action versions.**
 
-Using `uses: actions/checkout@main` means any change to that action's `main` branch immediately affects your workflows. Pin to a tag (`@v4`) or ideally a full SHA for third-party actions.
+Using `uses: actions/checkout@main` means any change to that action's `main` branch immediately affects your workflows. Pin to a tag (`@v7`) or ideally a full SHA for third-party actions.
 
 **Storing secrets in the workflow file itself.**
 

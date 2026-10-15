@@ -263,6 +263,9 @@ pick e4f5g6h add: login form CSS          <- was second, now third
 
 Git applies them in the new order. This can cause conflicts if commits depend on each other - Git will pause and ask you to resolve them.
 
+> [!TIP]
+> **Changing one older commit? Try `git history` (Git 2.54+, experimental).** It does single jobs without opening an interactive rebase: `git history reword <commit>` changes a message, `git history fixup <commit>` folds your staged changes into that commit (Git 2.55+), `git history split <commit>` splits it and `git history drop <commit>` removes it (Git 2.56+). It updates every branch that contains the commit and runs no hooks. Add `--dry-run` to preview. The command is still experimental, so its behaviour may change between releases.
+
 ---
 
 ## Rebasing onto a Different Base
@@ -614,6 +617,7 @@ git reset --hard HEAD@{5}
 
 ## Sources and Further Reading
 
+- [Official git history documentation](https://git-scm.com/docs/git-history) - the experimental command for rewording, fixing up, splitting and dropping single commits
 - [Official git rebase documentation](https://git-scm.com/docs/git-rebase) - the complete reference for all rebase options
 - [Pro Git book, Chapter 3.6: Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) - the official guide to rebasing with diagrams
 - [Atlassian - Merging vs rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing) - detailed comparison with visual diagrams showing when to use each

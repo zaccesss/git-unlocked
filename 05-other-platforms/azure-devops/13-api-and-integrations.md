@@ -529,7 +529,7 @@ Microsoft offers GitHub Advanced Security features (secret scanning, code scanni
 This requires a separate GHAzDO licence per active committer. It provides the same secret scanning and CodeQL SAST that GitHub repos get with GHAS, applied to Azure Repos.
 
 > [!NOTE]
-> GHAzDO does **not** include Copilot Autofix (AI-generated fix suggestions). That feature is GitHub-only. GHAzDO gives you the alerts without the AI-powered remediation.
+> Copilot Autofix (AI-generated fixes for code scanning alerts) used to be GitHub-only. Since June 2026 it is available for GHAzDO too, first as a limited public preview: it reads a CodeQL alert, proposes a fix and opens a pull request for you to review. Since July 2026 it can be switched on for a whole organisation or project instead of one repository at a time.
 
 ### Azure Boards and GitHub
 

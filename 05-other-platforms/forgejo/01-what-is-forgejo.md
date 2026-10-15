@@ -73,7 +73,7 @@ The Forgejo team published a detailed post titled "Forking Forward" explaining t
 
 ### Phase 4: Independent development (2024-present)
 
-Forgejo continues as a fully independent platform. Version numbering jumped to reflect the independence: v7.0, v8.0, v9.0 - using semantic versioning without the legacy `1.x` prefix that Gitea maintains. In early 2026, Forgejo is at v9.0.x.
+Forgejo continues as a fully independent platform. Version numbering jumped to reflect the independence: v7.0 in April 2024, then a new major version every quarter, using semantic versioning without the legacy `1.x` prefix Gitea used at the time. In October 2026 Forgejo is at v16.
 
 ---
 
@@ -101,14 +101,30 @@ The Forgejo community deliberately chose GPLv3+ rather than AGPL (which has stro
 
 ### Version and releases
 
-Forgejo's current stable version is **v9.0.x** (April 2026). Check [codeberg.org/forgejo/forgejo/releases](https://codeberg.org/forgejo/forgejo/releases) for the exact current patch version. Forgejo follows a release cadence roughly matching major features, with patch releases for security fixes.
+At the time of writing (October 2026) Forgejo's current stable version is **v16.0** (released 16 July 2026, latest patch v16.0.6). Forgejo publishes a new major version every quarter, in January, April, July and October. v17.0 is scheduled for 15 October 2026. One release each year is a **long-term support (LTS)** release: the current one is **v15.0**, released in April 2026 and supported until July 2027. Check [codeberg.org/forgejo/forgejo/releases](https://codeberg.org/forgejo/forgejo/releases) for the exact current version.
 
-### What makes Forgejo v9.0 notable
+### Recent features
+
+**v16.0 (July 2026):**
+
+- Code search with zoekt
+- Comments on several lines at once in pull requests
+- Server-side hooks managed centrally instead of per repository plus no default Git templates in new repositories (both come with an upgrade guide)
+- Following users on other instances and seeing their federated notes, an early step towards federation that still lacks moderation tools
+- Manual prioritisation of workflow runs and new API endpoints for Actions artifacts and logs
+
+**v15.0 (April 2026, LTS):**
+
+- Access tokens that can be limited to specific repositories, applied across the whole API (a breaking change for tokens that relied on wider access)
+- Ephemeral Actions runners and a `timezone` setting for scheduled workflows
+- Secrets, inputs and outputs for reusable workflows
+- Screen reader improvements to the repository file list
+
+**Throughout:**
 
 - **SAML included**: SAML 2.0 SSO authentication is part of the core free edition
-- **Federation development ongoing**: ActivityPub federation for following repositories across instances is in active development (not yet production-ready for all use cases)
 - **Forgejo runner**: the maintained fork of act_runner for Forgejo Actions
-- **GPLv3+ codebase stabilising**: the licence transition is well-established
+- **GPLv3+ codebase**: the licence transition is well established
 
 ### Codeberg.org
 
@@ -272,7 +288,7 @@ Forgejo dropped Windows support in 2024. There are no official Windows binaries.
 
 **Comparing version numbers to Gitea**
 
-Forgejo v9.0 does not mean it has fewer features than Gitea v1.25. They use completely different versioning schemes. The numbers are not comparable. Forgejo's higher numbers reflect its independent release cadence since the hard fork.
+Forgejo v16 does not mean it has more features than Gitea v28. They use completely different versioning schemes. The numbers are not comparable. Forgejo's higher numbers reflect its independent release cadence since the hard fork.
 
 **Expecting production-ready federation today**
 
@@ -288,7 +304,7 @@ The GPLv3+ licence creates obligations when you distribute the software. Self-ho
 
 Forgejo forked from Gitea in December 2022 after two Gitea maintainers incorporated a for-profit company and transferred the project's assets without community consent. Codeberg e.V., a German non-profit, stewards Forgejo under a community governance model with no corporate controller.
 
-Forgejo became a hard fork in February 2024 when its codebase diverged beyond backward compatibility with Gitea. Version numbers are independent (v9.0.x in 2026, not comparable to Gitea's v1.25.x).
+Forgejo became a hard fork in February 2024 when its codebase diverged beyond backward compatibility with Gitea. Version numbers are independent (v16 in October 2026, not comparable to Gitea's v28).
 
 New Forgejo code is licenced GPLv3+. Existing code from the Gitea lineage remains MIT. For self-hosters, the practical impact is minimal - GPLv3 obligations only apply to software distribution, not internal use.
 
@@ -300,6 +316,9 @@ Forgejo does not support Windows. It runs on Linux and macOS.
 
 ## Sources
 
+- [Forgejo: Release schedule](https://codeberg.org/forgejo/docs/src/branch/next/docs/admin/release-schedule.md) - quarterly releases and LTS dates
+- [Forgejo: v16.0.0 release notes](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.0.md)
+- [Forgejo: v15.0.0 release notes](https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/15.0.0.md)
 - [Forgejo: About page](https://forgejo.org/about/)
 - [Forgejo: Forking Forward (hard fork announcement)](https://forgejo.org/2024-02-forking-forward/)
 - [Forgejo: First monthly update (December 2022)](https://forgejo.org/2022-12-26-monthly-update/)

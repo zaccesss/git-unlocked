@@ -28,13 +28,45 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
-### Removed
+## [1.3.0] - 2026-10-15
 
-- The unused banner image and its roadmap entry
+### Added
+
+- Git 2.49 to 2.56 commands in the command reference: `git backfill`, `git repo`, `git last-modified`, `git history`, `git replay` and `git refs`, with the experimental ones marked
+- A section on reference storage and the reftable format in Git internals
+- `includeIf "worktree:"` and `fetch.followRemoteHEAD` in advanced configuration, `git backfill` in large repositories and `git history` in rebase
+- Stacked pull requests on GitHub with the `gh stack` extension
+- Archiving a pull request
+- Stacked merge requests on GitLab with `glab stack`, automatic Code Owner reviewers, automatic rebase before merge and enforced merge trains
+- Rule insights, path exceptions and converting branch protection to a ruleset
+- Dependabot cooldown with a configuration example
+- Workflow lockfiles and the self-repository syntax in GitHub Actions
+- Recent features in GitLab 19.x, Gitea 1.26 to 28, Forgejo v15 and v16, Azure Repos and Azure DevOps Server
+- New `gh` and `glab` commands, including `gh pr checkout --worktree` and `glab repo prune`
+- Git worktree support in GitHub Desktop and JetBrains IDEs plus recent diff improvements in VS Code
+
+### Updated
+
+- Current versions across the course: Git 2.56.0, GitHub CLI 2.102.0, GitLab 19.5, glab 1.123.0, Gitea 28.1, Forgejo v16.0, GitHub Desktop 3.6.7 and forgit 26.10.0
+- Git 3.0 plans: SHA-256, reftable and `main` as defaults for new repositories, with no release date yet
+- SSH advice: GitHub no longer accepts SHA-1 RSA signatures and new RSA keys must be at least 3072 bits
+- GitHub Actions examples use the current major version of every official action, Node.js 24 and the current runner images
+- GitHub Classroom marked as retired, with a template repository and Actions workflow that replace it
+- GitLab self-managed requirements: PostgreSQL 17, Valkey and the supported operating systems
+- GitLab Duo models, Azure Pipelines images and the Antigravity pricing
+- Bitbucket app passwords described as switched off, with API tokens as the replacement
+- Windsurf noted as renamed to Devin Desktop
 
 ### Fixed
 
+- The gitleaks example pins a real commit of the action
+- The GitHub release example uses `gh release create` instead of an archived action
+- Forgejo timeline rows in the Gitea history
 - Excluded linusakesson.net from the link check while it times out
+
+### Removed
+
+- The unused banner image and its roadmap entry
 
 ## [1.2.6] - 2026-10-15
 
@@ -276,7 +308,9 @@ Practical scenarios showing Git in real professional contexts.
 
 ---
 
-[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.2.2...HEAD
+[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.2.6...HEAD
+[1.2.6]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.6
+[1.2.5]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.5
 [1.2.2]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.2
 [1.2.1]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.1
 [1.2.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.0

@@ -24,6 +24,7 @@ Pull requests are the heart of collaboration on GitHub. They are the formal proc
 - [Pull request templates](#pull-request-templates)
 - [Status checks and required reviews](#status-checks-and-required-reviews)
 - [Merge queues](#merge-queues)
+- [Stacked pull requests](#stacked-pull-requests)
 - [Reverting a merged pull request](#reverting-a-merged-pull-request)
 - [Pull requests from forks](#pull-requests-from-forks)
 - [GitHub CLI for pull requests](#github-cli-for-pull-requests)
@@ -471,6 +472,38 @@ Authors click **Merge when ready** (instead of **Merge**). The PR joins the queu
 
 ---
 
+## Stacked Pull Requests
+
+A large change is hard to review in one go. **Stacked pull requests** split it into a chain of small pull requests, where each one builds on the one below it. The bottom pull request targets `main` and each later one targets the branch beneath it. Reviewers look at one focused layer at a time, while you keep working on the next layer without waiting.
+
+```
+main
+ └── feature/models        PR 1: data model        (targets main)
+      └── feature/api      PR 2: API endpoints     (targets feature/models)
+           └── feature/ui  PR 3: user interface    (targets feature/api)
+```
+
+GitHub made stacked pull requests generally available on 6 October 2026, after a public preview from 30 July 2026. The pull request page shows the whole stack in its header, `Shift + J` and `Shift + K` move between pull requests in a stack and a stack merges through the merge queue as one group. When `main` moves ahead, **Rebase stack** updates every layer and keeps approvals on code that did not change.
+
+**Create a stack with the GitHub CLI:**
+
+```bash
+gh extension install github/gh-stack   # one-time setup
+
+gh stack init                # start a stack and its first branch
+# ...commit the first layer...
+gh stack add api-endpoints   # add the next branch on top
+# ...commit the second layer...
+gh stack push                # push every branch in the stack
+gh stack submit              # open one pull request per branch
+gh stack view                # see the stack and its status
+```
+
+> [!TIP]
+> Keep each layer small enough to review in one sitting and make sure each one builds and passes its tests on its own. GitLab offers the same idea as **stacked merge requests**, covered in the GitLab section.
+
+---
+
 ## Reverting a Merged Pull Request
 
 If a merged pull request caused a problem, you can create a revert PR directly from GitHub.
@@ -486,6 +519,8 @@ The revert creates a new commit that undoes all the changes from the original PR
 
 > [!NOTE]
 > If the original PR was merged with squash and merge, the revert undoes the single squash commit. If merged with rebase and merge, individual revert commits are created for each original commit.
+
+**Archiving a pull request (since July 2026):** repository admins can archive a pull request. Since October 2026 anyone with the triage role or higher can do it too. An archived pull request is closed, locked and hidden from everyone except repository admins, who can find it with the `is:archived` filter. It is meant for spam, abuse or legal requests where deleting is not appropriate, not as a replacement for closing.
 
 ---
 
@@ -686,6 +721,9 @@ A PR with 3,000 changed lines across 40 files is extremely difficult to review w
 - [Creating a pull request template - GitHub Docs](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) - template setup guide
 - [Merge queue - GitHub Docs](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue) - merge queue setup and usage
 - [gh pr - GitHub CLI manual](https://cli.github.com/manual/gh_pr) - complete CLI reference for pull requests
+- [GitHub changelog: stacked pull requests generally available](https://github.blog/changelog/2026-10-06-stacked-pull-requests-generally-available) - what stacks do and the improvements at general availability
+- [gh-stack](https://github.com/github/gh-stack) - the official GitHub CLI extension for creating and managing stacks
+- [GitHub changelog: archiving pull requests](https://github.blog/changelog/2026-07-16-repository-admins-can-archive-pull-requests) - who can archive a pull request and what it hides
 
 ---
 

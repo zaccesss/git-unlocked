@@ -453,7 +453,7 @@ A condensed view of the most commonly asked "which tier is this?" questions.
 
 - [GitLab feature comparison](https://about.gitlab.com/pricing/feature-comparison/) - official tier-by-tier feature breakdown
 - [GitLab documentation home](https://docs.gitlab.com) - complete reference for every feature
-- [GitLab 18.10 release post](https://about.gitlab.com/releases/2026/03/19/gitlab-18-10-released/) - latest version highlights
+- [GitLab 19.5 release post](https://docs.gitlab.com/releases/19/gitlab-19-5-released/) - latest version highlights
 - [GitLab pricing](https://about.gitlab.com/pricing/) - current plan details and limits
 - [GitLab community programmes](https://docs.gitlab.com/subscriptions/community_programs/) - Education, Open Source and Startups programmes
 - [GitLab Duo features](https://docs.gitlab.com/user/gitlab_duo/feature_summary/) - complete AI feature availability by tier

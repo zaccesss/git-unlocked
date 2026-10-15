@@ -443,27 +443,17 @@ MCP connections are configured at the group level by administrators, with access
 
 GitLab Duo does not use a single AI model. Different features use different models optimised for their specific tasks.
 
-### Current models (GitLab 18.10)
+### Current models
 
-**`Anthropic` Claude** (primary model):
+GitLab changes its default models often. The changes come from GitLab's AI Gateway, so they apply whatever GitLab version you run. Check the [GitLab Duo models page](https://docs.gitlab.com/user/gitlab_duo/model_selection/) for the current list. At the time of writing (October 2026):
 
-- Claude Sonnet 4: used for most Duo Chat responses and code generation
-- Claude 3 Haiku: used for faster, lower-cost features
-- Claude Opus: used for complex agentic reasoning tasks
-- Contract: zero-day data retention (data is not stored after the request completes)
+- **Claude Sonnet 4.6** (`Anthropic`), served through Google's Gemini Enterprise Agent Platform, is the default for most features: code generation, Duo Chat, code explanation, test generation, merge request summaries and vulnerability explanation
+- **Codestral 25.08** (Mistral AI), served through Fireworks AI, is the default for inline code completion
+- **Claude Opus 4.7** became available in the Duo Agent Platform in GitLab 19.0
+- **GPT models** can be selected for the Code Review Flow since GitLab 19.1
+- Self-managed instances can run their own models, including Gemini (GitLab 19.0) and open models such as GLM, Kimi and MiniMax (GitLab 19.4)
 
-**Google Vertex AI**:
-
-- Codey APIs for code completion (inline suggestions)
-- Gemini models for some analysis tasks
-- Contract: Google's enterprise data processing terms apply; no model training on customer data
-
-**Fireworks AI**:
-
-- Codestral (by Mistral AI): an optimised code completion model
-- Contract: zero-day data retention
-
-**OpenAI** (removed from most features in GitLab 16.6): OpenAI models were previously used but removed. As of 18.x, OpenAI is not used in the standard Duo features. GitLab Duo with Amazon Q is the exception, which uses Amazon Bedrock models.
+GitLab Duo with Amazon Q is separate and uses Amazon Bedrock models.
 
 ### Model selection (GitLab 18.4+)
 
