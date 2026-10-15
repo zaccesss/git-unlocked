@@ -308,7 +308,8 @@ Practical scenarios showing Git in real professional contexts.
 
 ---
 
-[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.2.6...HEAD
+[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.3.0...HEAD
+[1.3.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.3.0
 [1.2.6]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.6
 [1.2.5]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.5
 [1.2.2]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.2
