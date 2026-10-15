@@ -28,6 +28,10 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+### Removed
+
+- The unused banner image and its roadmap entry
+
 ## [1.2.6] - 2026-10-15
 
 ### Fixed
