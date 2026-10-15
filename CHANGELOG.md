@@ -28,6 +28,18 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+## [1.2.6] - 2026-10-15
+
+### Fixed
+
+- The roadmap gives the current version as 1.2.6 and the course as 12 sections. It also marks the banner as done
+- The README and the welcome page describe operating system coverage, exercises and common mistakes as features of the lesson files rather than of every file
+- The pull request template gives isaacadjei.me as the website
+
+### Updated
+
+- The citation file and the DOI badge use the all-versions DOIs for the release archive and the technical note, so they always resolve to the latest version
+
 ### Changed
 
 - Tidied the contributor guide and the pull request template.

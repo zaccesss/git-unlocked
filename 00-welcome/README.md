@@ -26,7 +26,7 @@ Whether you have never heard of Git before, have been struggling with it for mon
 
 git-unlocked is a free, open source, community-built course that covers everything about Git, GitHub and GitLab - from the very beginning to advanced professional use.
 
-Every topic is explained clearly in plain English. Every command is shown on Windows, Mac and Linux. Every file includes real examples, hands-on exercises, common mistakes and further reading.
+Every topic is explained clearly in plain English. Where commands differ, they are shown for Windows, Mac and Linux. Lesson files include real examples, hands-on exercises, common mistakes and further reading.
 
 Nothing is assumed. Nothing is skipped.
 
@@ -117,10 +117,10 @@ Most Git tutorials give you a list of commands to memorise. This course explains
 | Mac or Linux only        | Windows, Mac and Linux throughout                   |
 | Beginner only            | Beginner to advanced in one place                   |
 | Git only                 | Git, GitHub and GitLab all covered                  |
-| No security guidance     | Security woven throughout every file                |
+| No security guidance     | Security guidance throughout and a dedicated guide  |
 | Generic examples         | Real-world scenarios at every level                 |
-| No exercises             | Hands-on Try It Yourself sections in every file     |
-| No mistakes section      | Common mistakes and fixes in every file             |
+| No exercises             | Hands-on Try It Yourself sections in lesson files   |
+| No mistakes section      | Common mistakes and fixes in lesson files           |
 | No history               | Full history of version control from 1972           |
 | VS Code only             | VS Code, JetBrains, Visual Studio, Xcode and more   |
 

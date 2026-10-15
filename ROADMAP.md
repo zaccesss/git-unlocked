@@ -2,7 +2,7 @@
 
 This roadmap tracks the development plan for git-unlocked.
 
-**Current version: v1.2.0 - Course complete**
+**Current version: v1.2.6 - Course complete**
 
 ---
 
@@ -27,7 +27,7 @@ This roadmap tracks the development plan for git-unlocked.
 | 10-resources/                    | 1     | Complete |
 | 11-first-contribution/           | 2     | Complete |
 
-**Total: 182 files across 15 sections**
+**Total: 182 files across 12 sections**
 
 ---
 
@@ -68,7 +68,7 @@ These items are planned but have no committed timeline.
 - Animated SVG diagrams for key Git concepts
 - Cross-reference audit of all internal links
 - Accessibility review
-- Banner image and assets folder
+- ~~Banner image and assets folder~~ (done: `assets/git_unlocked_banner.svg`)
 - Codespaces dev container setup
 
 ---
