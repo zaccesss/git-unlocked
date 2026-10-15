@@ -68,7 +68,6 @@ These items are planned but have no committed timeline.
 - Animated SVG diagrams for key Git concepts
 - Cross-reference audit of all internal links
 - Accessibility review
-- ~~Banner image and assets folder~~ (done: `assets/git_unlocked_banner.svg`)
 - Codespaces dev container setup
 
 ---

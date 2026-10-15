@@ -28,6 +28,14 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+### Removed
+
+- The unused banner image and its roadmap entry
+
+### Fixed
+
+- Excluded linusakesson.net from the link check while it times out
+
 ## [1.2.6] - 2026-10-15
 
 ### Fixed
