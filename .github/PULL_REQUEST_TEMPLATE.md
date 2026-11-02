@@ -6,6 +6,20 @@
 
 <!-- List the files you changed. -->
 
+## AI use
+
+**Required.** Tick one, following the [AI policy](https://github.com/zaccesss/ai-policy). Dictation, translation and spelling tools do not count.
+
+- [ ] None
+- [ ] Assisted: I wrote it and AI helped with parts
+- [ ] Generated: AI wrote most or all of it and I reviewed and tested every part
+
+**Required.** Tick this too:
+
+- [ ] I wrote this title and description myself and I understand every change in it.
+
+If you ticked Assisted or Generated, say which parts and how you checked them:
+
 ## Checklist
 
 Before submitting, please confirm the following:

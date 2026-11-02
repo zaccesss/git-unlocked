@@ -28,6 +28,10 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+### Changed
+
+- Community files follow the [AI policy](https://github.com/zaccesss/ai-policy): pull requests declare AI use and issue forms ask whether AI helped.
+
 ## [1.3.0] - 2026-10-15
 
 ### Added

@@ -20,6 +20,10 @@ Please read this guide carefully before opening a pull request.
 
 ---
 
+## Using AI
+
+AI tools are welcome within my [AI policy](https://github.com/zaccesss/ai-policy), also [on my site](https://isaacadjei.me/ai-policy). **Every pull request must say how AI was used, even when the answer is None.** Write your own issue and pull request titles and descriptions, understand everything you submit and test it before you open it.
+
 ## Code of Conduct
 
 This project follows the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating you agree to uphold it. Be respectful, be kind and be constructive.
