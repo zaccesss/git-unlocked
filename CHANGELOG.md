@@ -28,9 +28,20 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-11-03
+
+### Added
+
+- A course map in the README showing how the twelve sections follow on from each other
+
 ### Changed
 
 - Community files follow the [AI policy](https://github.com/zaccesss/ai-policy): pull requests declare AI use and issue forms ask whether AI helped.
+- Routine tidy-up
+
+### Fixed
+
+- The FAQ link to the GitLab CI/CD lesson pointed at a file name that does not exist
 
 ## [1.3.0] - 2026-10-15
 
@@ -312,7 +323,8 @@ Practical scenarios showing Git in real professional contexts.
 
 ---
 
-[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/zaccesss/git-unlocked/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.4.0
 [1.3.0]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.3.0
 [1.2.6]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.6
 [1.2.5]: https://github.com/zaccesss/git-unlocked/releases/tag/v1.2.5

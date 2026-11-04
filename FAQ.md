@@ -291,7 +291,7 @@ Yes. GitLab Community Edition is free and open source. You can run it on your ow
 
 ### What is GitLab CI/CD?
 
-GitLab CI/CD is a built-in system for automating testing, building and deploying your code. You define your pipeline in a `.gitlab-ci.yml` file at the root of your repository. Every time you push code, GitLab runs your pipeline automatically. Full coverage is in [04-gitlab/06-gitlab-ci-cd.md](04-gitlab/06-gitlab-ci-cd.md).
+GitLab CI/CD is a built-in system for automating testing, building and deploying your code. You define your pipeline in a `.gitlab-ci.yml` file at the root of your repository. Every time you push code, GitLab runs your pipeline automatically. Full coverage is in [04-gitlab/06-gitlab-cicd.md](04-gitlab/06-gitlab-cicd.md).
 
 ---
 

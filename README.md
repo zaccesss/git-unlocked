@@ -4,8 +4,9 @@
 
 [![markdownlint](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/markdownlint.yml)
 [![Check Links](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml/badge.svg)](https://github.com/zaccesss/git-unlocked/actions/workflows/linkcheck.yml)
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-green.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)](CHANGELOG.md)
+[![Release](https://img.shields.io/github/v/release/zaccesss/git-unlocked?label=release)](https://github.com/zaccesss/git-unlocked/releases/latest)
+[![Licence: CC BY-SA 4.0](https://img.shields.io/badge/licence-CC%20BY--SA%204.0-green.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.4.0-blue.svg)](CHANGELOG.md)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20695630-blue.svg)](https://doi.org/10.5281/zenodo.20695630)
 
 git-unlocked takes you from absolute zero to professional-level Git across every major platform: GitHub, GitLab, Bitbucket, Azure DevOps, Gitea, Forgejo and Codeberg. Commands are shown for Windows, Mac and Linux side by side. Nothing assumed. Nothing skipped.
@@ -24,6 +25,49 @@ New to Git? Start at the beginning:
 4. [Setting up your environment](01-introduction/03-setting-up.md)
 
 Want to make your first open source contribution right now? Go to [11-first-contribution/](11-first-contribution/README.md). It takes less than ten minutes.
+
+---
+
+## How the course fits together
+
+```mermaid
+flowchart LR
+    subgraph START["Start here"]
+        W["00 welcome<br/>what the course is"] --> I["01 introduction<br/>concepts and setup"]
+    end
+    subgraph CORE["Git itself"]
+        G["02 git<br/>from git init to internals"]
+    end
+    subgraph PLATFORMS["Pick a platform"]
+        GH["03 github"]
+        GL["04 gitlab"]
+        OP["05 other platforms<br/>Bitbucket, Azure DevOps,<br/>Gitea, Forgejo, Codeberg"]
+    end
+    subgraph TOOLS["Daily tools"]
+        ED["06 ides and editors"]
+        TM["07 terminal"]
+    end
+    subgraph PRACTICE["Put it to work"]
+        RW["08 real world<br/>open source, GitOps, monorepos"]
+        FC["11 first contribution<br/>a real pull request in ten minutes"]
+    end
+    subgraph LOOKUP["Keep open"]
+        RF["09 reference<br/>cheatsheet, glossary, common mistakes"]
+        RS["10 resources<br/>books, videos, tools, communities"]
+    end
+    I --> G
+    G --> GH
+    G --> GL
+    G --> OP
+    GH --> ED
+    GL --> ED
+    OP --> ED
+    ED --> TM --> RW --> FC
+    G -. "look things up" .-> RF
+    RW -. "go further" .-> RS
+```
+
+Read the sections in order for the full course. If Git itself is already familiar, jump straight to a platform. The reference and resources sections are for looking things up at any point.
 
 ---
 
