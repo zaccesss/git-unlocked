@@ -13,6 +13,8 @@ git-unlocked takes you from absolute zero to professional-level Git across every
 
 **182 files. 12 sections. All free.**
 
+The design of the course is described in a technical note with its own DOI: [git-unlocked: An Open-Source Modular Curriculum for Git and Version Control Education](https://doi.org/10.5281/zenodo.20694983). The DOI badge above points to the course files themselves.
+
 ---
 
 ## Start here

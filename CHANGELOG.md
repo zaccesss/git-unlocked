@@ -28,6 +28,10 @@ PATCH - typo fixes, small corrections, link updates
 
 ## [Unreleased]
 
+### Added
+
+- A link from the README to the technical note that describes the course, which has its own DOI
+
 ## [1.4.0] - 2026-11-03
 
 ### Added
